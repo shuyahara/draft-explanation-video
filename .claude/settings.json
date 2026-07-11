@@ -1,0 +1,12 @@
+{
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Read",
+      "Write",
+      "Edit"
+    ]
+  }
+}
