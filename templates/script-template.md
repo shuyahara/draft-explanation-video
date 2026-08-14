@@ -5,6 +5,10 @@
 - **テーマ／結論**: {一言で}
 - **最終更新**: {YYYY-MM-DD}
 
+> この台本と対で、シーン YAML（`templates/scene-yaml-template.yaml` を雛形とする
+> `scripts/{同名}.yaml`）を作成する。1シーン＝script-to-video の1レンダリング単位。
+> 読み上げ文は目安として約1,000文字以内。
+
 ---
 
 ## シーン1: フック（つかみ）

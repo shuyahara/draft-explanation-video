@@ -1,0 +1,63 @@
+# シーン YAML の雛形。台本 Markdown（script-template.md）と対で作成する
+# （台本 = 人間用マスター、この YAML = script-to-video のレンダリング指示書）。
+#
+# 仕様（正）は script-to-video 側のドキュメント。ここには複製しない。
+#   ローカル: C:\Users\shuya\Projects\script-to-video\docs\schema.md
+#   GitHub:  https://github.com/shuyahara/script-to-video/blob/main/docs/schema.md
+#   サンプル: script-to-video/examples/sns-lookism-sample.yaml
+#
+# 検証:
+#   cd C:\Users\shuya\Projects\script-to-video
+#   .venv\Scripts\python.exe -m script_to_video validate <このファイル>
+#
+# 未知のフィールドはエラーになる（extra="forbid"）。仕様にない項目を書かない。
+
+video:
+  title: "{動画タイトル}"
+  speaker: "青山龍星"        # 任意。既定値のため省略可（VOICEVOX話者名）
+  resolution:                # 任意。既定 1920x1080
+    width: 1920
+    height: 1080
+  style: null                 # 任意。生成AI用の共通スタイルプロンプト（全シーン共通。シーン別 gen_prompt と連結）
+  bgm: null                   # 任意。BGMファイルのパス（ファイル自体はユーザーが配置。候補選定はテキストで報告する）
+
+scenes:
+  - id: 1                     # 必須。1から始まる連番（scenes全体で検証される）
+    title: "フック"            # 必須。シーン見出し
+    narration:                 # 必須（1件以上）。間を入れたい箇所でセグメントを分割する
+      - text: "{読み上げ文その1（日本語ダブルクォート1行。折りたたみスカラー >- は使わない）}"
+        pause_after: 0.5       # 任意。このセグメント後の無音秒数。不要なら省略（0は不可）
+      - text: "{読み上げ文その2（ポーズ不要ならpause_afterを省略）}"
+    telop: "{画面テロップ}"     # 任意
+    readings:                   # 任意。誤読しやすい語の読み修正
+      - surface: "{表記の例: 日陰}"
+        reading: "{カタカナ読みの例: ヒカゲ}"
+    search_query: "{素材検索クエリ（英語。Pixabay/Pexels/Commons向け）}"  # 任意
+    assets:                      # 任意。候補素材（シーンごと2〜4件を目安に記録）
+      # commercial-ok: Pixabay/Pexels等の商用利用可素材。source_url・attributionとも不要
+      - url: "{素材URL}"
+        kind: image                # image | video
+        license: commercial-ok     # pd | cc-by | commercial-ok | unknown
+        source_name: "Pixabay"
+      # cc-by: Wikimedia Commons等でCC-BYの場合、source_urlとattributionが必須
+      # - url: "{素材URL}"
+      #   kind: image
+      #   license: cc-by
+      #   source_url: "{出典URL}"
+      #   attribution: "{出典表記文字列（例: 著者名 / CC BY 4.0）}"
+      # unknown: 汎用検索由来でライセンス不明。source_urlが必須（権利要確認）
+      # - url: "{素材URL}"
+      #   kind: image
+      #   license: unknown
+      #   source_url: "{出典URL}"
+      #   note: "権利要確認。存命人物が写る場合は肖像権・パブリシティ権に注意"
+    gen_prompt: null             # 任意。生成AI用のシーン別プロンプト（video.styleと連結して使用）
+
+  - id: 2
+    title: "問題提起"
+    narration:
+      - text: "{読み上げ文}"
+    telop: "{画面テロップ}"
+    search_query: "{素材検索クエリ（英語）}"
+
+  # 以降、論証・反証・結論のシーンを id を連番で追加する。
