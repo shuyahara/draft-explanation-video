@@ -17,7 +17,12 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - 検証できない引用は載せないか「要確認」と明示する。捏造は厳禁。
 4. **執筆（台本 Markdown）**: `templates/script-template.md` のフォーマット（ナレーション＋画面指示）に従い、シーン単位で書く。
    1シーンの読み上げテキストは目安として **約1,000文字以内**。超えそうなら論証の区切りでシーンを分ける。
-5. **素材候補の収集**: シーンごとに、シーン YAML の `assets` に記録する候補素材を実際に検索して集める。
+   - シーンごとに、CLAUDE.md「図解スクリプト（`diagram`）」の使い分け基準に従って **図解 or 実写** を判定する。
+     論証・手順・比較・データのシーンは図解、情景描写・フック・エピソードは実写。全体の3〜5割を図解の目安にする。
+   - 図解シーンは型（`buildup` / `flow` / `comparison` / `chart`）を選び、ナレーションのセグメント分割を
+     図解の出現粒度に合わせる（「どの文で何が新しく登場するか」の切れ目で分ける。**文の途中では分けない**）。
+   - 章（論証の節）が変わるところで `key_color` を設定する（任意。同じ章のシーンには同じ色を書く）。
+5. **素材候補の収集**: シーンごとに、シーン YAML の `assets` に記録する候補素材を実際に検索して集める（図解シーンは `assets` を書かない。`diagram` と排他）。
    - シーンごとに **2〜4件**、ライセンス情報とともに記録する。
    - ストック素材は **Pixabay / Pexels**（商用利用可・クレジット不要）を優先して WebSearch で探す。`license: commercial-ok`。
    - Wikimedia Commons の候補は PD か CC-BY かを確認する。CC-BY の場合は出典表記文字列を `attribution` に記録する（`source_url` と `attribution` が必須）。
@@ -27,13 +32,17 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - プレースホルダの URL は書かない。必ず WebSearch / WebFetch で実在を確認したものだけを記録する。
 6. **BGM 候補の選定**: 商用利用可のフリー音源（例: DOVA-SYNDROME）から候補曲を WebSearch で探し、
    ライセンス確認結果と候補 URL を要約として提示する。ダウンロード・配置はユーザーが行うため、
-   YAML の `video.bgm` には（配置予定の）ファイルパスのみ記録する。
+   YAML の `video.bgm` には（配置予定の）ファイルパスのみ記録する。BGM をユーザーと確定できたら、
+   クレジット表記文字列を `video.bgm_credit` に記録する。
 7. **シーン YAML の作成**: `templates/scene-yaml-template.yaml` を雛形に、台本の内容・裏取り済み出典・
-   収集した素材候補・読み修正・ポーズ指定を反映したシーン YAML（`scripts/YYYYMMDD-{テーマの短い名前}.yaml`）を作成する。
+   収集した素材候補・読み修正・ポーズ指定・図解スクリプトを反映したシーン YAML
+   （`scripts/YYYYMMDD-{テーマの短い名前}.yaml`）を作成する。
    - 仕様は script-to-video の `docs/schema.md` が正（`C:\Users\shuya\Projects\script-to-video\docs\schema.md`）。
      未知のフィールドはエラーになるため、スキーマにない項目は書かない。
    - 誤読しやすい語は `readings`（`surface` / `reading`）に記録する。
    - 間を入れたい箇所は `narration` をセグメント分割し、直前のセグメントに `pause_after`（秒）を付ける。
+   - 図解シーンは手順4で判定した型に沿って `diagram` を書く（CLAUDE.md「図解スクリプト」の
+     チェックリストを守る）。ラベルは12文字以内・座標やアニメーションの数値は書かない。
 8. **検証**: 作成した YAML を script-to-video の `validate` サブコマンドで検証する。
    ```
    cd C:\Users\shuya\Projects\script-to-video

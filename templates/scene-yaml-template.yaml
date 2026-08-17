@@ -20,6 +20,7 @@ video:
     height: 1080
   style: null                 # 任意。生成AI用の共通スタイルプロンプト（全シーン共通。シーン別 gen_prompt と連結）
   bgm: null                   # 任意。BGMファイルのパス（ファイル自体はユーザーが配置。候補選定はテキストで報告する）
+  bgm_credit: null            # 任意。BGM確定後にクレジット表記文字列を記録（例: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"）。description.txtに自動転記される
 
 scenes:
   - id: 1                     # 必須。1から始まる連番（scenes全体で検証される）
@@ -61,3 +62,67 @@ scenes:
     search_query: "{素材検索クエリ（英語）}"
 
   # 以降、論証・反証・結論のシーンを id を連番で追加する。
+  # 論証・手順・比較・データのシーンは、実写素材の代わりに図解（diagram）を使う
+  # （CLAUDE.md「図解スクリプト」の使い分け基準を参照。1シーンでdiagramとassetsは併用不可）。
+  # 座標・サイズ・色・アニメーションの数値は書かない。書くのは型・要素・id・ラベル・
+  # 出現セグメント（at）だけ。仕様はscript-to-videoのdocs/schema.mdが正。
+
+  - id: 3                       # buildup型の例: 主張を積み上げる／原因から結果へ
+    title: "論証: ハロー効果"
+    narration:
+      - text: "外見の魅力は，第一印象に影響します。"
+      - text: "その好印象は，性格の評価にも波及します。"
+      - text: "これが，美しいものは善いという思い込みです。"
+    telop: "外見の魅力 → 好印象 → 性格評価への波及"
+    key_color: "#2E4A7D"        # 任意。章ごとに変える（省略時は既定色 #1a2233）。#RRGGBB形式。色相しか使われない
+    diagram:
+      type: buildup              # 省略可（既定値）。3〜12要素・5行まで
+      rows:
+        - items:
+            - id: face
+              icon: face          # Material Symbolsのアイコン名（スネークケース）
+              text: 魅力的な外見    # 12文字以内推奨（20文字超はエラー）
+              at: 1               # 出現するナレーションセグメント番号（1始まり）
+        - items:
+            - id: warm
+              text: 好印象
+              at: 2
+        - items:
+            - id: halo
+              text: 美しいものは善い
+              accent: true        # 強調色。1シーンに1つまで推奨
+              at: 3
+      arrows:
+        - from: face
+          to: warm                # at省略時はto側要素のatと同時に出現
+        - from: warm
+          to: halo
+          at: 3
+
+  - id: 4                       # flow型の例: 実験の手順・時間順に進む処理
+    title: "論証: 実験の手順"
+    narration:
+      - text: "実験の手順は，次の4段階です。"
+      - text: "まず，写真を提示します。"
+      - text: "次に，人物像を推測してもらいます。"
+      - text: "評価を集計し，魅力度との相関を確認します。"
+    telop: "実験の手順"
+    diagram:
+      type: flow                 # 3〜6ステップ。矢印は自動で引かれるので書かない
+      steps:
+        - id: s1
+          icon: photo_camera
+          text: 写真を提示
+          at: 2
+        - id: s2
+          icon: psychology
+          text: 人物像を推測
+          at: 3
+        - id: s3
+          icon: query_stats
+          text: 評価を集計
+          at: 4
+        - id: s4
+          icon: trending_up
+          text: 魅力度と相関
+          at: 4
