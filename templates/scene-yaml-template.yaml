@@ -11,6 +11,10 @@
 #   .venv\Scripts\python.exe -m script_to_video validate <このファイル>
 #
 # 未知のフィールドはエラーになる（extra="forbid"）。仕様にない項目を書かない。
+#
+# シーンごとに、図解・検索クエリ・生成プロンプトより先に「ビジュアル意図」（visual_intent。
+# どんな絵で見せたいか）を1〜2文で決める。画面構成は3種類（全画面実写=assetsのみ／
+# 図解のみ=diagramのみ／背景付き図解=diagram+assets併記）。詳細はCLAUDE.md「図解スクリプト」を参照。
 
 video:
   title: "{動画タイトル}"
@@ -25,6 +29,7 @@ video:
 scenes:
   - id: 1                     # 必須。1から始まる連番（scenes全体で検証される）
     title: "フック"            # 必須。シーン見出し
+    visual_intent: "{どんな絵で見せたいか。1〜2文。例: 街とスマホ画面を交互に見せ、SNSの日常への浸透を印象づける}"  # 任意。レンダリングには使わず候補ギャラリーに表示するだけ。図解/検索クエリ/生成プロンプトはここから導く
     narration:                 # 必須（1件以上）。間を入れたい箇所でセグメントを分割する
       - text: "{読み上げ文その1（日本語ダブルクォート1行。折りたたみスカラー >- は使わない）}"
         pause_after: 0.5       # 任意。このセグメント後の無音秒数。不要なら省略（0は不可）
@@ -56,6 +61,7 @@ scenes:
 
   - id: 2
     title: "問題提起"
+    visual_intent: "{どんな絵で見せたいか。1〜2文}"  # 任意
     narration:
       - text: "{読み上げ文}"
     telop: "{画面テロップ}"
@@ -69,6 +75,7 @@ scenes:
 
   - id: 3                       # buildup型の例: 主張を積み上げる／原因から結果へ
     title: "論証: ハロー効果"
+    visual_intent: "外見→好印象→性格評価という因果の連鎖を積み上げて見せる。情景の支えは不要（画面は持つ）ので無地下地の図解のみ"  # 画面構成: 図解のみ（diagramだけでassetsは書かない）
     narration:
       - text: "外見の魅力は，第一印象に影響します。"
       - text: "その好印象は，性格の評価にも波及します。"
@@ -101,6 +108,7 @@ scenes:
 
   - id: 4                       # flow型の例: 実験の手順・時間順に進む処理
     title: "論証: 実験の手順"
+    visual_intent: "実験の4手順を流れ図で見せる。無地下地の図解のみ（画面構成: 図解のみ）"
     narration:
       - text: "実験の手順は，次の4段階です。"
       - text: "まず，写真を提示します。"
@@ -126,3 +134,30 @@ scenes:
           icon: trending_up
           text: 魅力度と相関
           at: 4
+
+  - id: 5                       # 背景付き図解の例: diagramとassetsを併記（排他ではない）
+    title: "問題提起"
+    visual_intent: "定義を2つ並べて示しつつ、背景は夜の繁華街のにぎわいで受容の空気感を出す。無地下地では画面が寂しいと判断"  # 画面構成: 背景付き図解（diagram+assetsの併記）
+    narration:
+      - text: "「受け入れられている」とは，公言する人が増え，好意的に受け取られる場面が増えたことを指します。"
+      - text: "背景には，日常に浸透したSNSの気配を敷きます。"
+    telop: "「受容」とは何か／問いの定義"
+    search_query: "night city crowd neon street bokeh"  # assetsを併記する場合もsearch_queryは書く
+    diagram:
+      type: buildup
+      rows:
+        - items:
+            - id: disclose
+              text: 公言する人が増えた
+              at: 1
+            - id: accept
+              text: 好意的・中立に受容
+              at: 1
+      arrows:
+        - from: disclose
+          to: accept
+    assets:                      # diagramと併記すると「背景付き図解」（採用素材にぼかし＋暗色スクリムをかけて図解を重ねる）
+      - url: "{素材URL}"
+        kind: video
+        license: commercial-ok
+        source_name: "Pixabay"

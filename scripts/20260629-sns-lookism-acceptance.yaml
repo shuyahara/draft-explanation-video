@@ -19,6 +19,7 @@ video:
 scenes:
   - id: 1
     title: "フック"
+    visual_intent: "街の雑踏とスマートフォン越しのSNS利用を重ね、かつては偏見の対象だった仕事が今は身近に受け入れられている変化の気配でつかみを作る"
     key_color: "#2E4A7D"
     narration:
       - text: "街を歩けば、SNSを開けば、テレビをつければ。かつては「夜の世界」「日陰の職業」と呼ばれ、人前で語ることがためらわれた仕事があります。キャバクラで働く女性、いわゆるキャバ嬢。あるいは、アダルトビデオに出演する女優。ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。ところが、今はどうでしょう。彼女たちはユーチューブで人生を語り、本を出版し、ファッションのお手本として何十万人ものフォロワーを集めています。世間のまなざしは、明らかに変わりつつあります。いったい、なぜなのでしょうか。"
@@ -49,6 +50,7 @@ scenes:
 
   - id: 2
     title: "問題提起"
+    visual_intent: "「受容」の定義を2要素の図解で示しつつ、背景に街の人混み・繁華街の気配を薄く敷いて、これが実社会で起きている変化であることを伝える"
     key_color: "#2E4A7D"
     narration:
       - text: "まず、言葉の意味をはっきりさせておきましょう。ここで言う「受け入れられている」とは、これらの職業をすばらしいと全員が称賛している、という意味ではありません。"
@@ -63,6 +65,17 @@ scenes:
       - surface: "多様性"
         reading: "タヨウセイ"
     search_query: "diversity definition minimal infographic"
+    assets:
+      - url: "https://pixabay.com/photos/dignity-definition-dictionary-2724770/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "採用（build/sns-lookism-assets/scene_02.jpg）。辞書で言葉の定義を引く画。問題提起シーンの「定義」というテーマに直接合致"
+      - url: "https://pixabay.com/photos/dictionary-book-learn-learning-613910/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "予備候補。辞書のクローズアップ"
     diagram:
       rows:
         - items:
@@ -86,6 +99,7 @@ scenes:
 
   - id: 3
     title: "論証① ハロー効果（土台となる心理）"
+    visual_intent: "外見→好印象という心理実験の因果連鎖を図解で積み上げ、背景に「評価・格付け」を連想させる星評価の写真を敷いて、人物評価というテーマを支える"
     key_color: "#2E7D5B"
     narration:
       - text: "まず、土台となる人間の根深い心理から確認しましょう。心理学に「ハロー効果」という有名な現象があります。ある目立った特徴が、その人の他の評価まで引きずってしまう、という認知の偏りです。"
@@ -101,6 +115,17 @@ scenes:
       - surface: "偏り"
         reading: "カタヨリ"
     search_query: "psychology experiment photo rating illustration"
+    assets:
+      - url: "https://pixabay.com/photos/stars-rating-travel-four-hotel-1128772/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "採用（build/sns-lookism-assets/scene_03.jpg）。星による格付け・評価を連想させる画。写真から人物を「評価」する実験というテーマに合致"
+      - url: "https://pixabay.com/photos/review-opinion-feedback-stars-5207277/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "予備候補。レビュー・評価の星"
     diagram:
       rows:
         - items:
@@ -143,6 +168,7 @@ scenes:
 
   - id: 4
     title: "論証② 美の経済的プレミアムと、フィルター時代の追試"
+    visual_intent: "外見の良さ→賃金プレミアムという経済的な構造を図解で示し、背景に金融チャート・データのぼやけた画面を敷いて「数字・市場」の空気感を加える"
     key_color: "#2E7D5B"
     narration:
       - text: "この「美しいものは善い」という偏りは、心の中だけの話にとどまりません。お金、つまり労働市場にも、はっきりと表れます。"
@@ -160,6 +186,17 @@ scenes:
       - surface: "十数パーセント"
         reading: "ジュウスウパーセント"
     search_query: "income chart beauty premium bar graph"
+    assets:
+      - url: "https://pixabay.com/photos/blur-chart-computer-data-finance-1853262/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "採用（build/sns-lookism-assets/scene_04.jpg）。金融チャート・データのぼやけた画。賃金プレミアムという経済データのテーマに直接合致"
+      - url: "https://pixabay.com/photos/stock-market-chart-phone-stocks-6693060/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "予備候補。株価チャートとスマートフォン"
     diagram:
       rows:
         - items:
@@ -190,6 +227,7 @@ scenes:
 
   - id: 5
     title: "論証③ 写真SNSが整形容認を広げる（論理の橋渡し）"
+    visual_intent: "SNS写真活動→容姿比較→整形容認という橋渡しの論理を図解で積み上げ、背景に鏡越しに自撮りする女性の写真を敷いて、比較行動そのものを情景で見せる"
     key_color: "#2E7D5B"
     narration:
       - text: "そして、写真を中心としたSNSは、私たちの行動そのものを変えました。2021年に発表された、若い女性を対象とする研究があります。"
@@ -209,6 +247,22 @@ scenes:
       - surface: "容認"
         reading: "ヨウニン"
     search_query: "woman instagram selfie mirror comparison"
+    assets:
+      - url: "https://www.pexels.com/photo/female-taking-a-photo-in-front-of-a-mirror-8788701/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pexels"
+        note: "採用（build/sns-lookism-assets/scene_05.jpg に差し替え）。鏡越しに自撮りする女性。SNS写真活動→容姿比較というシーンの論理に直接合致"
+      - url: "https://pixabay.com/photos/woman-beauty-selfie-photography-6573837/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pixabay"
+        note: "予備候補。スマートフォンで自撮りする女性"
+      - url: "https://www.pexels.com/photo/a-curly-haired-woman-with-leotard-taking-selfie-using-a-mobile-phone-7928763/"
+        kind: image
+        license: commercial-ok
+        source_name: "Pexels"
+        note: "予備候補。鏡に映る姿を自撮りする女性"
     diagram:
       rows:
         - items:
@@ -245,6 +299,7 @@ scenes:
 
   - id: 6
     title: "論証④ 補強する二つの変化"
+    visual_intent: "働き方の多様化と自己決定の価値観という2つの補強要因を図解で示し、背景に動画配信・vlog撮影の映像を敷いて「個人が発信する時代」の空気感を加える"
     key_color: "#2E7D5B"
     narration:
       - text: "もちろん、ルッキズムの加速だけで、すべてが説明できるわけではありません。ほかにも、これと重なり合う変化があります。"
@@ -260,6 +315,17 @@ scenes:
       - surface: "断罪"
         reading: "ダンザイ"
     search_query: "video streaming vlogger personal brand camera"
+    assets:
+      - url: "https://www.pexels.com/video/a-woman-making-a-vlog-7514348/"
+        kind: video
+        license: commercial-ok
+        source_name: "Pexels"
+        note: "採用（build/sns-lookism-assets/scene_06.mp4）。vlog撮影の様子。個人が動画配信で発信する働き方の多様化というテーマに合致"
+      - url: "https://www.pexels.com/video/a-woman-vlogging-4110286/"
+        kind: video
+        license: commercial-ok
+        source_name: "Pexels"
+        note: "予備候補。vlog撮影の様子（別アングル）"
     diagram:
       rows:
         - items:
@@ -283,6 +349,7 @@ scenes:
 
   - id: 7
     title: "反証の検討"
+    visual_intent: "指摘と整理を左右に並べる比較図解で3つの反証を提示する。論点が密なので背景は敷かず、無地下地で図に集中させる"
     key_color: "#7D5A2E"
     narration:
       - text: "ここで、立ち止まって反論を検討しなければなりません。誠実な解説は、自分に都合の悪い見方からも、逃げないからです。"
@@ -323,6 +390,7 @@ scenes:
 
   - id: 8
     title: "結論"
+    visual_intent: "積み上げてきた論拠を一つの図解に統合し、結論として引き締まった画面にする。無地下地のまま図解に集中させる"
     key_color: "#5A2E7D"
     narration:
       - text: "では、結論です。"
@@ -388,6 +456,7 @@ scenes:
 
   - id: 9
     title: "まとめ"
+    visual_intent: "要点4点を並べて振り返る図解で締める。無地下地のまま、装飾を足さずすっきり終える"
     key_color: "#5A2E7D"
     narration:
       - text: "最後に、今日の要点を振り返ります。"
