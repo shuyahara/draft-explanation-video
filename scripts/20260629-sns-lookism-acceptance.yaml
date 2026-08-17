@@ -14,10 +14,12 @@ video:
     height: 1080
   style: "落ち着いた論説動画向けのフラットイラスト。青系の配色、テロップ用の余白を広めに取る"
   bgm: "bgm/main.mp3"
+  bgm_credit: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"
 
 scenes:
   - id: 1
     title: "フック"
+    key_color: "#2E4A7D"
     narration:
       - text: "街を歩けば、SNSを開けば、テレビをつければ。かつては「夜の世界」「日陰の職業」と呼ばれ、人前で語ることがためらわれた仕事があります。キャバクラで働く女性、いわゆるキャバ嬢。あるいは、アダルトビデオに出演する女優。ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。ところが、今はどうでしょう。彼女たちはユーチューブで人生を語り、本を出版し、ファッションのお手本として何十万人ものフォロワーを集めています。世間のまなざしは、明らかに変わりつつあります。いったい、なぜなのでしょうか。"
         pause_after: 0.5
@@ -47,91 +49,159 @@ scenes:
 
   - id: 2
     title: "問題提起"
+    key_color: "#2E4A7D"
     narration:
-      - text: "まず、言葉の意味をはっきりさせておきましょう。ここで言う「受け入れられている」とは、これらの職業をすばらしいと全員が称賛している、という意味ではありません。そうではなく、第一に、これらの職業を公言する人が増えたこと。第二に、その人たちが好意的に、あるいは少なくとも中立的に受け取られる場面が増えたこと。この二つを指しています。実際、かつては隠すものだった経歴を、自分から語る人が増えました。"
+      - text: "まず、言葉の意味をはっきりさせておきましょう。ここで言う「受け入れられている」とは、これらの職業をすばらしいと全員が称賛している、という意味ではありません。"
+      - text: "そうではなく、第一に、これらの職業を公言する人が増えたこと。"
+      - text: "第二に、その人たちが好意的に、あるいは少なくとも中立的に受け取られる場面が増えたこと。"
+      - text: "この二つを指しています。実際、かつては隠すものだった経歴を、自分から語る人が増えました。"
         pause_after: 0.5
-      - text: "では、なぜ社会のまなざしはやわらいだのか。よくある説明は「多様性の時代になったから」というものです。しかし、これでは答えになっていません。なぜ多様性が認められるようになったのか、その中身を説明していないからです。そこでこの動画では、複数の要因の中でも、とりわけ大きな柱だと考えられる一つの変化に注目します。それが、写真を中心としたSNSの広がりと、それがもたらした「外見の価値の上昇」、すなわちルッキズムの加速です。"
+      - text: "では、なぜ社会のまなざしはやわらいだのか。よくある説明は「多様性の時代になったから」というものです。しかし、これでは答えになっていません。なぜ多様性が認められるようになったのか、その中身を説明していないからです。"
+      - text: "そこでこの動画では、複数の要因の中でも、とりわけ大きな柱だと考えられる一つの変化に注目します。それが、写真を中心としたSNSの広がりと、それがもたらした「外見の価値の上昇」、すなわちルッキズムの加速です。"
     telop: "「受容」とは何か／問いの定義"
     readings:
       - surface: "多様性"
         reading: "タヨウセイ"
     search_query: "diversity definition minimal infographic"
-    assets:
-      - url: "https://pixabay.com/illustrations/diversity-people-group-silhouettes-5541062/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pixabay"
-        note: "ページURL。シルエットイラストのため人物特定なし"
-      - url: "https://pixabay.com/vectors/list-bullet-points-items-one-two-27221/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pixabay"
-        note: "ページURL。箇条書き（項目1・2）のベクター素材"
+    diagram:
+      rows:
+        - items:
+            - id: disclose
+              text: 公言する人が増えた
+              at: 2
+            - id: accept
+              text: 好意的・中立に受容
+              at: 3
+        - items:
+            - id: focus
+              text: 外見価値の上昇に注目
+              accent: true
+              at: 6
+      arrows:
+        - from: disclose
+          to: focus
+        - from: accept
+          to: focus
     gen_prompt: "minimal flat infographic, two bullet-point definitions side by side, blue tone"
 
   - id: 3
     title: "論証① ハロー効果（土台となる心理）"
+    key_color: "#2E7D5B"
     narration:
-      - text: "まず、土台となる人間の根深い心理から確認しましょう。心理学に「ハロー効果」という有名な現象があります。ある目立った特徴が、その人の他の評価まで引きずってしまう、という認知の偏りです。なかでも、見た目に関するものは古くから知られています。1972年、心理学者のカレン・ディオンらは、ある実験を行いました。参加者に、魅力の高い人、普通の人、低い人の写真を見せ、それぞれがどんな人物かを推測してもらったのです。結果は明快でした。"
+      - text: "まず、土台となる人間の根深い心理から確認しましょう。心理学に「ハロー効果」という有名な現象があります。ある目立った特徴が、その人の他の評価まで引きずってしまう、という認知の偏りです。"
+      - text: "なかでも、見た目に関するものは古くから知られています。"
+      - text: "1972年、心理学者のカレン・ディオンらは、ある実験を行いました。参加者に、魅力の高い人、普通の人、低い人の写真を見せ、それぞれがどんな人物かを推測してもらったのです。"
+      - text: "結果は明快でした。"
         pause_after: 0.5
-      - text: "人は、外見の魅力が高い人ほど、性格も温かく、社交的で、能力も高く、幸せな人生を送るだろうと推測したのです。この研究には「美しいものは善い」という象徴的な題名がつけられました。私たちは無意識のうちに、美しさを内面の良さと結びつけてしまう。これは特別に意地悪な人だけの話ではなく、人間に広く共通する傾向なのです。"
+      - text: "人は、外見の魅力が高い人ほど、性格も温かく、社交的で、能力も高く、幸せな人生を送るだろうと推測したのです。"
+      - text: "この研究には「美しいものは善い」という象徴的な題名がつけられました。"
+      - text: "私たちは無意識のうちに、美しさを内面の良さと結びつけてしまう。これは特別に意地悪な人だけの話ではなく、人間に広く共通する傾向なのです。"
     telop: "ハロー効果 ―「美しいものは善い」"
     readings:
       - surface: "偏り"
         reading: "カタヨリ"
     search_query: "psychology experiment photo rating illustration"
-    assets:
-      - url: "https://pixabay.com/en/man-portrait-face-human-male-2771640/"
-        kind: image
-        license: pd
-        source_name: "Pixabay（投稿者kalhhがCC0を明記）"
-        note: "イラスト素材（実写ではない）。投稿者が独自にCC0宣言。ページURL"
-      - url: "https://pixabay.com/illustrations/survey-feedback-poll-employee-3957027/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pixabay"
-        note: "ページURL。評価・アンケートのイラストで人物特定なし"
+    diagram:
+      rows:
+        - items:
+            - id: face
+              icon: face
+              text: 魅力的な外見
+              at: 2
+        - items:
+            - id: warm
+              text: 性格も温かい
+              at: 5
+            - id: social
+              text: 社交的
+              at: 5
+            - id: able
+              text: 能力も高い
+              at: 5
+            - id: happy
+              text: 幸せな人生
+              at: 5
+        - items:
+            - id: halo
+              text: 美しいものは善い
+              accent: true
+              at: 6
+      arrows:
+        - from: face
+          to: warm
+        - from: face
+          to: social
+        - from: face
+          to: able
+        - from: face
+          to: happy
+        - from: social
+          to: halo
+        - from: able
+          to: halo
     gen_prompt: "diagram of a photo-rating psychology experiment, arrow from attractiveness rating to inferred personality traits, blue tone"
 
   - id: 4
     title: "論証② 美の経済的プレミアムと、フィルター時代の追試"
+    key_color: "#2E7D5B"
     narration:
-      - text: "この「美しいものは善い」という偏りは、心の中だけの話にとどまりません。お金、つまり労働市場にも、はっきりと表れます。1994年、経済学者のダニエル・ハマーメッシュとジェフ・ビドルは、容姿と収入の関係を、大規模なデータで分析しました。すると、平均より見た目が良いとされた人は賃金が最大で十数パーセント高く、逆に平均より見た目が劣るとされた人は、賃金が下がる傾向がありました。これは「美の経済的プレミアム」と呼ばれます。さらに重要なのは、見た目の良い人ほど、外見が有利に働く職業に集まりやすい、という指摘です。つまり社会には、もともと「美しさが価値になる」構造があるのです。では、SNSの時代になって、この偏りは弱まったのでしょうか。"
+      - text: "この「美しいものは善い」という偏りは、心の中だけの話にとどまりません。お金、つまり労働市場にも、はっきりと表れます。"
+      - text: "1994年、経済学者のダニエル・ハマーメッシュとジェフ・ビドルは、容姿と収入の関係を、大規模なデータで分析しました。"
+      - text: "すると、平均より見た目が良いとされた人は賃金が最大で十数パーセント高く、逆に平均より見た目が劣るとされた人は、賃金が下がる傾向がありました。これは「美の経済的プレミアム」と呼ばれます。"
+      - text: "さらに重要なのは、見た目の良い人ほど、外見が有利に働く職業に集まりやすい、という指摘です。つまり社会には、もともと「美しさが価値になる」構造があるのです。"
+      - text: "では、SNSの時代になって、この偏りは弱まったのでしょうか。"
         pause_after: 0.5
       - text: "むしろ、逆かもしれません。"
         pause_after: 0.5
-      - text: "2024年、ある研究チームが、およそ二千七百人を対象に、加工する前と、美顔フィルターをかけた後の顔写真を評価させました。その結果、同じ人物でも、魅力的に見える写真のほうが、知性や信頼性まで高く評価されたのです。フィルターで誰もが美しく見せられる時代になっても、「美しいものは善い」という古い心理は、なお働き続けている。"
+      - text: "2024年、ある研究チームが、およそ二千七百人を対象に、加工する前と、美顔フィルターをかけた後の顔写真を評価させました。"
+      - text: "その結果、同じ人物でも、魅力的に見える写真のほうが、知性や信頼性まで高く評価されたのです。フィルターで誰もが美しく見せられる時代になっても、「美しいものは善い」という古い心理は、なお働き続けている。"
     telop: "美の経済的プレミアム／フィルターでも消えない偏り"
     readings:
       - surface: "十数パーセント"
         reading: "ジュウスウパーセント"
     search_query: "income chart beauty premium bar graph"
-    assets:
-      - url: "https://pixabay.com/illustrations/graph-growth-money-finance-chart-4827948/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pixabay"
-        note: "ページURL"
-      - url: "https://pixabay.com/videos/graph-income-profits-chart-5432/"
-        kind: video
-        license: commercial-ok
-        source_name: "Pixabay"
-        note: "ページURL"
-      - url: "https://www.pexels.com/photo/woman-taking-selfie-458381/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pexels（CC0）"
-        note: "ページURL。一般モデルの写真で特定の著名人ではないが、肖像権配慮のためイメージカット用途に限定"
+    diagram:
+      rows:
+        - items:
+            - id: attract
+              icon: face
+              text: 外見の良さ
+              at: 2
+        - items:
+            - id: wage
+              text: 賃金プレミアム
+              at: 3
+            - id: sort
+              text: 有利な職業に集中
+              at: 4
+        - items:
+            - id: persist
+              text: フィルターでも消えない
+              accent: true
+              at: 8
+      arrows:
+        - from: attract
+          to: wage
+        - from: attract
+          to: sort
+        - from: wage
+          to: persist
     gen_prompt: "bar chart illustration comparing income by perceived attractiveness, blue tone, minimal style"
 
   - id: 5
     title: "論証③ 写真SNSが整形容認を広げる（論理の橋渡し）"
+    key_color: "#2E7D5B"
     narration:
-      - text: "そして、写真を中心としたSNSは、私たちの行動そのものを変えました。2021年に発表された、若い女性を対象とする研究があります。インスタグラムで、有名人や自分自身の写真に関わる活動が多い人ほど、他人と自分の容姿を比べる傾向が強まり、その結果として、美容整形を受け入れる気持ちが高まっていたのです。実際、整形を望む理由として「写真や動画で自分をよりよく見せたいから」という声が増えている、という報告もあります。ここから、重要な橋渡しが見えてきます。"
+      - text: "そして、写真を中心としたSNSは、私たちの行動そのものを変えました。2021年に発表された、若い女性を対象とする研究があります。"
+      - text: "インスタグラムで、有名人や自分自身の写真に関わる活動が多い人ほど、他人と自分の容姿を比べる傾向が強まり、その結果として、美容整形を受け入れる気持ちが高まっていたのです。"
+      - text: "実際、整形を望む理由として「写真や動画で自分をよりよく見せたいから」という声が増えている、という報告もあります。"
+      - text: "ここから、重要な橋渡しが見えてきます。"
         pause_after: 0.3
-      - text: "第一に、整形を受け入れるということは、「美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ」という考え方が広がる、ということです。すると、見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます。"
+      - text: "第一に、整形を受け入れるということは、「美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ」という考え方が広がる、ということです。"
+      - text: "すると、見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます。"
         pause_after: 0.3
-      - text: "第二に、ハロー効果によって、美しい人は、その人格まで好意的に解釈されます。だから、外見が評価の中心にある職業の女性たちは、「きれいなだけでなく、きっと魅力的な人物なのだろう」と受け取られやすくなる。外見の価値が上がる社会とは、外見を職業にする人たちが、評価されやすい社会でもあるのです。"
+      - text: "第二に、ハロー効果によって、美しい人は、その人格まで好意的に解釈されます。"
+      - text: "だから、外見が評価の中心にある職業の女性たちは、「きれいなだけでなく、きっと魅力的な人物なのだろう」と受け取られやすくなる。外見の価値が上がる社会とは、外見を職業にする人たちが、評価されやすい社会でもあるのです。"
     telop: "写真SNS → 比較 → 整形容認 ／ 橋渡しの論理"
     readings:
       - surface: "整形"
@@ -139,23 +209,50 @@ scenes:
       - surface: "容認"
         reading: "ヨウニン"
     search_query: "woman instagram selfie mirror comparison"
-    assets:
-      - url: "https://www.pexels.com/photo/young-stylish-woman-using-smartphone-while-taking-mirror-selfie-6569370/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pexels"
-        note: "ページURL。一般モデルの写真。肖像権配慮のためイメージカット用途に限定"
-      - url: "https://www.pexels.com/photo/women-in-front-of-a-mirror-6236106/"
-        kind: image
-        license: commercial-ok
-        source_name: "Pexels"
-        note: "ページURL。一般モデル（2名）の写真。肖像権配慮のためイメージカット用途に限定"
+    diagram:
+      rows:
+        - items:
+            - id: insta
+              icon: photo_camera
+              text: SNSでの写真活動
+              at: 2
+        - items:
+            - id: compare
+              text: 容姿を比較
+              at: 2
+        - items:
+            - id: accept
+              text: 整形を容認
+              at: 3
+        - items:
+            - id: norm
+              text: 努力で得てよい規範
+              at: 5
+            - id: favor
+              text: 好意的に解釈される
+              accent: true
+              at: 7
+      arrows:
+        - from: insta
+          to: compare
+        - from: compare
+          to: accept
+        - from: accept
+          to: norm
+        - from: accept
+          to: favor
     gen_prompt: "flow diagram: instagram icon arrow to appearance comparison arrow to cosmetic surgery acceptance, blue tone, flat illustration"
 
   - id: 6
     title: "論証④ 補強する二つの変化"
+    key_color: "#2E7D5B"
     narration:
-      - text: "もちろん、ルッキズムの加速だけで、すべてが説明できるわけではありません。ほかにも、これと重なり合う変化があります。一つは、働き方の多様化です。動画配信やSNSによって、個人が自分の名前で発信し、収入を得られる時代になりました。すると、職業は「何をしているか」だけでなく、「どんな人物か」で見られるようになります。キャバ嬢やAV女優という肩書きの向こうにいる、一人の個人の物語が、見えるようになった。これが、偏見をやわらげます。もう一つは、自分の体や生き方は自分で決める、という価値観の広がりです。誰と、どう働くかを本人が選ぶのなら、外から一方的に断罪すべきではない。こうした考え方が、以前より共有されるようになりました。これらは、外見の価値の上昇という大きな流れと、たがいに補強し合っているのです。"
+      - text: "もちろん、ルッキズムの加速だけで、すべてが説明できるわけではありません。ほかにも、これと重なり合う変化があります。"
+      - text: "一つは、働き方の多様化です。"
+      - text: "動画配信やSNSによって、個人が自分の名前で発信し、収入を得られる時代になりました。すると、職業は「何をしているか」だけでなく、「どんな人物か」で見られるようになります。キャバ嬢やAV女優という肩書きの向こうにいる、一人の個人の物語が、見えるようになった。これが、偏見をやわらげます。"
+      - text: "もう一つは、自分の体や生き方は自分で決める、という価値観の広がりです。"
+      - text: "誰と、どう働くかを本人が選ぶのなら、外から一方的に断罪すべきではない。こうした考え方が、以前より共有されるようになりました。"
+      - text: "これらは、外見の価値の上昇という大きな流れと、たがいに補強し合っているのです。"
     telop: "補強① 働き方の多様化／補強② 自己決定の価値観"
     readings:
       - surface: "肩書き"
@@ -163,25 +260,39 @@ scenes:
       - surface: "断罪"
         reading: "ダンザイ"
     search_query: "video streaming vlogger personal brand camera"
-    assets:
-      - url: "https://www.pexels.com/video/woman-setting-up-camera-for-a-vlog-7963107/"
-        kind: video
-        license: commercial-ok
-        source_name: "Pexels（CC0相当）"
-        note: "ページURL。一般モデルの映像。肖像権配慮のためイメージカット用途に限定"
-      - url: "https://www.pexels.com/video/woman-talking-in-front-of-the-camera-8048443/"
-        kind: video
-        license: commercial-ok
-        source_name: "Pexels"
-        note: "ページURL。一般モデルの映像。肖像権配慮のためイメージカット用途に限定"
+    diagram:
+      rows:
+        - items:
+            - id: work
+              text: 働き方の多様化
+              at: 2
+            - id: self
+              text: 自己決定の価値観
+              at: 4
+        - items:
+            - id: reinforce
+              text: 外見価値上昇を補強
+              accent: true
+              at: 6
+      arrows:
+        - from: work
+          to: reinforce
+        - from: self
+          to: reinforce
     gen_prompt: "flat illustration of a person live streaming and building a personal brand, two supporting lines merging into a main arrow, blue tone"
 
   - id: 7
     title: "反証の検討"
+    key_color: "#7D5A2E"
     narration:
-      - text: "ここで、立ち止まって反論を検討しなければなりません。誠実な解説は、自分に都合の悪い見方からも、逃げないからです。第一に、因果の向きです。SNSがルッキズムを生んだのか、それとも、もともとあった傾向を、SNSが増幅しただけなのか。これは、簡単には決められません。ですから正確には、SNSは原因というより「加速装置」と言うべきでしょう。第二に、ルッキズムは諸刃の剣だ、ということです。外見を重んじる社会は、美しい人に好意を向けると同時に、人を見た目で値踏みし、外見が基準に満たない人を、厳しく裁く社会でもあります。つまり、ルッキズムの加速は、受容と排除の、両方を強めうるのです。"
+      - text: "ここで、立ち止まって反論を検討しなければなりません。誠実な解説は、自分に都合の悪い見方からも、逃げないからです。"
+      - text: "第一に、因果の向きです。SNSがルッキズムを生んだのか、それとも、もともとあった傾向を、SNSが増幅しただけなのか。これは、簡単には決められません。ですから正確には、SNSは原因というより「加速装置」と言うべきでしょう。"
+      - text: "第二に、ルッキズムは諸刃の剣だ、ということです。外見を重んじる社会は、美しい人に好意を向けると同時に、人を見た目で値踏みし、外見が基準に満たない人を、厳しく裁く社会でもあります。"
+      - text: "つまり、ルッキズムの加速は、受容と排除の、両方を強めうるのです。"
         pause_after: 0.5
-      - text: "にもかかわらず、なぜ受容の側に振れるのか。それは、これらの職業が、まさに「美しさ」を価値として提供する仕事だからです。外見が高く評価される時代において、美を体現する人は、追い風を受けやすい。第三に、整形を受け入れることと、性産業を受け入れることは、本来、別の問題です。両者を同じものとして語るのは、乱暴です。ただ、どちらも「美や性をめぐる古いタブーがゆるんでいる」という、同じ時代の空気を映している、とは言えるでしょう。"
+      - text: "にもかかわらず、なぜ受容の側に振れるのか。それは、これらの職業が、まさに「美しさ」を価値として提供する仕事だからです。外見が高く評価される時代において、美を体現する人は、追い風を受けやすい。"
+      - text: "第三に、整形を受け入れることと、性産業を受け入れることは、本来、別の問題です。両者を同じものとして語るのは、乱暴です。"
+      - text: "ただ、どちらも「美や性をめぐる古いタブーがゆるんでいる」という、同じ時代の空気を映している、とは言えるでしょう。"
     telop: "反証① 因果の向き／② 諸刃の剣／③ 整形容認≠性産業の受容"
     readings:
       - surface: "諸刃の剣"
@@ -189,14 +300,40 @@ scenes:
       - surface: "値踏み"
         reading: "ネブミ"
     search_query: "counterargument three cards debate flat icon"
+    diagram:
+      type: comparison
+      left_title: 指摘
+      right_title: 整理
+      pairs:
+        - label: 因果
+          left: SNSが原因
+          right: 加速装置が正確
+          at: 2
+        - label: 諸刃の剣
+          left: 受容を強める
+          right: 排除も強める
+          at: 4
+          accent: both
+        - label: 整形と性
+          left: 同じ問題
+          right: 別の問題
+          at: 6
+          accent: right
     gen_prompt: "three flat illustrated cards presenting counterarguments with a rebuttal overlay on each, blue tone, minimal style"
 
   - id: 8
     title: "結論"
+    key_color: "#5A2E7D"
     narration:
       - text: "では、結論です。"
         pause_after: 0.5
-      - text: "キャバ嬢やAV女優が、以前より受け入れられるようになった背景に、単一の原因はありません。けれども、その中心には、写真を中心としたSNSがもたらした「外見の価値の上昇」があります。ハロー効果によって、美しさは人格の良さと結びつけられ、美の経済的プレミアムが示すように、美しさはもともと価値を持っていました。SNSは、その価値をさらに押し上げ、整形容認という形で、「美は手に入れてよいもの」という規範を広げました。そこに、働き方の多様化と、自己決定を重んじる価値観が、重なります。こうして、外見を価値とする職業への偏見は、やわらいでいったのです。ただし、忘れてはいけません。同じルッキズムの力は、人を見た目で選別する圧力にも、なります。私たちが手にしたのは、自由であると同時に、新しい息苦しさでもあるのです。"
+      - text: "キャバ嬢やAV女優が、以前より受け入れられるようになった背景に、単一の原因はありません。けれども、その中心には、写真を中心としたSNSがもたらした「外見の価値の上昇」があります。"
+      - text: "ハロー効果によって、美しさは人格の良さと結びつけられ、美の経済的プレミアムが示すように、美しさはもともと価値を持っていました。"
+      - text: "SNSは、その価値をさらに押し上げ、整形容認という形で、「美は手に入れてよいもの」という規範を広げました。"
+      - text: "そこに、働き方の多様化と、自己決定を重んじる価値観が、重なります。"
+      - text: "こうして、外見を価値とする職業への偏見は、やわらいでいったのです。"
+      - text: "ただし、忘れてはいけません。同じルッキズムの力は、人を見た目で選別する圧力にも、なります。"
+      - text: "私たちが手にしたのは、自由であると同時に、新しい息苦しさでもあるのです。"
     telop: "結論 ― 外見価値の上昇が中心、ただし両義的"
     readings:
       - surface: "選別"
@@ -204,12 +341,90 @@ scenes:
       - surface: "息苦しさ"
         reading: "イキグルシサ"
     search_query: "conclusion structure diagram main factor supporting factors"
+    diagram:
+      rows:
+        - items:
+            - id: halo
+              icon: psychology
+              text: ハロー効果
+              at: 3
+            - id: premium
+              icon: trending_up
+              text: 経済的プレミアム
+              at: 3
+        - items:
+            - id: snsUp
+              text: SNSが価値を押し上げ
+              at: 4
+            - id: work
+              text: 働き方の多様化
+              at: 5
+            - id: self
+              text: 自己決定の価値観
+              at: 5
+        - items:
+            - id: accept
+              text: 偏見の緩和
+              at: 6
+        - items:
+            - id: dual
+              text: 自由と新しい息苦しさ
+              accent: true
+              at: 8
+      arrows:
+        - from: halo
+          to: snsUp
+        - from: premium
+          to: snsUp
+        - from: snsUp
+          to: accept
+        - from: work
+          to: accept
+        - from: self
+          to: accept
+        - from: accept
+          to: dual
     gen_prompt: "single integrated flat diagram combining a main axis and two supporting factors into one structure, blue tone"
 
   - id: 9
     title: "まとめ"
+    key_color: "#5A2E7D"
     narration:
-      - text: "最後に、今日の要点を振り返ります。第一に、人には「美しいものは善い」と感じる、根深い心理がある。第二に、写真SNSの普及が、その心理を加速させ、外見の価値と整形容認を広げた。第三に、それが、働き方の多様化や、自己決定の価値観と重なり、美を価値とする職業への偏見をやわらげた。そして第四に、その同じ力は、人を外見で選別する、新しい圧力にもなる。受容の、その裏側にあるものまで含めて見つめること。それが、この変化を考えるうえで、いちばん大切な視点なのかもしれません。"
+      - text: "最後に、今日の要点を振り返ります。"
+      - text: "第一に、人には「美しいものは善い」と感じる、根深い心理がある。"
+      - text: "第二に、写真SNSの普及が、その心理を加速させ、外見の価値と整形容認を広げた。"
+      - text: "第三に、それが、働き方の多様化や、自己決定の価値観と重なり、美を価値とする職業への偏見をやわらげた。"
+      - text: "そして第四に、その同じ力は、人を外見で選別する、新しい圧力にもなる。"
+      - text: "受容の、その裏側にあるものまで含めて見つめること。それが、この変化を考えるうえで、いちばん大切な視点なのかもしれません。"
     telop: "まとめ（4点）"
     search_query: "summary four points recap flat icon list"
+    diagram:
+      rows:
+        - items:
+            - id: p1
+              text: 美は善いという心理
+              at: 2
+            - id: p2
+              text: SNSが整形容認を加速
+              at: 3
+            - id: p3
+              text: 多様化・自己決定と重なる
+              at: 4
+            - id: p4
+              text: 選別の圧力にもなる
+              at: 5
+        - items:
+            - id: view
+              text: 受容の裏側まで見る視点
+              accent: true
+              at: 6
+      arrows:
+        - from: p1
+          to: view
+        - from: p2
+          to: view
+        - from: p3
+          to: view
+        - from: p4
+          to: view
     gen_prompt: "flat illustration summarizing four key points in sequence, ending with a question mark, blue tone"
