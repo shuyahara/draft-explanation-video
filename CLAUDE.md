@@ -260,7 +260,9 @@ YAML はレンダリングツール [script-to-video](https://github.com/shuyaha
    `docs/design-rhythm-and-illustration.md` §6.3 を参照。
    **before/after・二者比較・時系列を含む情景は生成AIに投げない**（1枚の静止画に複数時点・
    複数状態は描き分けられないため）。`diagram`（`comparison` 型）に置き換えるか、
-   単一被写体の一場面に還元してから `gen_prompt` を書く。
+   単一被写体の一場面に還元してから `gen_prompt` を書く。還元先は顔のクローズアップではなく
+   小道具・UI操作の場面を選ぶ（顔のクローズアップは写実調へ様式崩れしやすいことを
+   型検証で確認済み。`references/20260819-genprompt-type-validation.md` 参照）。
 3. ストック素材で代替できるか判断する。一般名詞的な情景（街の雑踏、スマートフォン操作、
    統計オフィスなど）や、実写であることに意味がある画（報道写真的なもの）は
    **代替できるならストックを優先**する。代替できなければ `gen_prompt` を第一候補のまま残す
