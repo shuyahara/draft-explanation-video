@@ -161,3 +161,83 @@ scenes:
         kind: video
         license: commercial-ok
         source_name: "Pixabay"
+
+  # 以降、映像リズムの新フィールド（chapter_title / emphasis / cutaways / diagrams）の例。
+  # 詳細はCLAUDE.md「映像リズムの設計」を参照。画面が10〜20秒に1回は変わるように、
+  # シーン内でも変化点を作る。効果音（SE）はツール既定で自動付与されるため書かない。
+
+  - id: 6                       # chapter_title / chapter_bgm / emphasis の例
+    title: "論証②: 見た目と社会的評価"
+    visual_intent: "外見の良さが、就職や昇進など社会的な場面の評価にも影響することを示す"
+    chapter_title: "論証2 見た目の社会的評価"  # 任意。章の先頭シーンに付ける（3秒の章カードを自動挿入。最大24文字、18文字超はvalidateが警告）
+    chapter_bgm: "bgm/argument2.mp3"            # 任意。このシーンの開始時刻から曲を切り替える（2秒クロスフェード）。パスはvideo.bgmと同じくYAMLからの相対パス
+    chapter_bgm_credit: "「歩幅」ミルアージュ（DOVA-SYNDROME）"  # 任意。省略時はファイル名ベースのフォールバック表記
+    narration:
+      - text: "見た目の良さは，就職や昇進といった社会的な場面でも，評価に影響することが分かっています。"
+      - text: "これは，容姿による格差そのものです。"
+    telop: "外見が社会的評価に影響する"
+    emphasis:                                   # 任意。決め文のセグメントに付ける（1シーン最大2件。1章に1〜2箇所が目安）
+      - at: 2                                   # 必須。このセグメントを読み終えた直後に強調カットが入る
+        text: "外見による格差"                   # 必須。1〜16文字
+
+  - id: 7                       # cutaways の例: ナレーションが具体物に触れる箇所に全画面インサートを挟む
+    title: "論証③: 実験の紹介"
+    visual_intent: "1972年の実験室で参加者が写真を見比べている場面を、具体例として一瞬だけ差し込む"
+    narration:
+      - text: "1972年，ディオンらは，顔写真の魅力度と，性格の評価との関係を調べる実験を行いました。"
+      - text: "参加者は，複数の顔写真を見比べ，それぞれの人物の性格を推測しました。"
+      - text: "結果，魅力的な顔ほど，親切で有能だと評価される傾向が見られました。"
+    telop: "ディオンら（1972）の実験"
+    search_query: "psychology experiment portrait photographs comparison"
+    cutaways:
+      - slot: 1                                 # 必須。採用素材は scene_07_cut1.* として保存される（シーン内で一意）
+        from: 1                                 # 必須。開始セグメント番号（1始まり）
+        to: 2                                    # 任意。終了セグメント番号（含む）。省略時はfromと同じ
+        visual_intent: "1972年の実験室で参加者が写真を見比べている場面"
+        gen_prompt: "participants in a 1970s psychology lab comparing portrait photographs, full-bleed composition"
+        search_query: "psychology experiment participants photographs"
+        telop: "ディオンら（1972）"
+
+  - id: 8                       # diagrams（複数図解）の例: 1シーンの中で論点が転換する場合、diagramの代わりに使う
+    title: "論証④: 背景の整理と対策"
+    visual_intent: "前半は背景の整理（buildup）、後半は対策の手順（flow）と場面が転換するので、diagramではなくdiagramsで2つに分ける"
+    narration:
+      - text: "ルッキズムが強まる背景には，SNSでの比較機会の増加があります。"
+      - text: "投稿の閲覧が増えるほど，容姿への言及も増える傾向が確認されています。"
+      - text: "対策として，まず，比較を誘発する機能を見直します。"
+      - text: "次に，容姿に関する話題の投稿指針を整備します。"
+      - text: "最後に，運用状況を定期的に点検します。"
+    telop: "背景の整理 → 対策の手順"
+    diagrams:                                   # 任意。diagram（単一）とは排他。各要素はfrom/toが必須で、範囲は重ならないこと
+      - type: buildup
+        from: 1
+        to: 2
+        rows:
+          - items:
+              - id: sns_exposure
+                icon: photo_camera
+                text: SNSでの比較機会増
+                at: 1
+          - items:
+              - id: appearance_mention
+                text: 容姿への言及増加
+                at: 2
+        arrows:
+          - from: sns_exposure
+            to: appearance_mention
+      - type: flow
+        from: 3                                 # 前のスロット（1〜2）と重ならない範囲
+        to: 5
+        steps:
+          - id: measure1
+            icon: settings
+            text: 比較機能の見直し
+            at: 3
+          - id: measure2
+            icon: policy
+            text: 投稿指針の整備
+            at: 4
+          - id: measure3
+            icon: fact_check
+            text: 運用の定期点検
+            at: 5

@@ -27,7 +27,21 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - 図解シーンは型（`buildup` / `flow` / `comparison` / `chart`）を選び、ナレーションのセグメント分割を
      図解の出現粒度に合わせる（「どの文で何が新しく登場するか」の切れ目で分ける。**文の途中では分けない**）。
    - 章（論証の節）が変わるところで `key_color` を設定する（任意。同じ章のシーンには同じ色を書く）。
+   - **映像リズムを設計する**（CLAUDE.md「映像リズムの設計」）。画面が**10〜20秒に1回**は
+     変わるように、シーンをまたぐだけでなくシーン内でも変化点を作る。
+     - 章の先頭シーンには `chapter_title` を付ける（必要なら `chapter_bgm` も併記）。
+     - 各章の決め文には `emphasis` を検討する（**1章に1〜2箇所まで**。付けすぎない）。
+     - ナレーションが具体物（実験・事例・固有の場面）に触れる箇所は `cutaways`（3〜8秒の
+       全画面インサート）を検討する。
+     - 1シーンの中で論点が転換する場合は、単一 `diagram` の代わりに `diagrams`（複数図解。
+       `from`/`to` で区切る）を検討する。
+     - 効果音はツール既定で自動付与されるため、執筆時に指定する項目はない。
 5. **素材候補の収集**: シーンごとに、シーン YAML の `assets` に記録する候補素材を実際に検索して集める。
+   - **説明イラストは「説明イラスト第一」で考える**（CLAUDE.md「素材候補収集ワークフロー」）。
+     ①`visual_intent` を決める → ②その情景の `gen_prompt` を必ず起草する（英語1〜2文。
+     `video.style` と連結される）→ ③ストックで代替できるか判断する（代替できるならストック優先、
+     できなければ `gen_prompt` を第一候補のまま残す）。`cutaways` のスロットも同じ手順で
+     `visual_intent` / `gen_prompt` / `search_query` / `assets` を用意する。
    - **全画面実写**のシーンと、**背景付き図解**にすると判定したシーンで候補を集める
      （`diagram` と `assets` の併記は背景付き図解として解釈される。排他ではない）。
    - **図解のみ（無地下地）**にしたシーンは `assets` を書かない。
@@ -52,6 +66,9 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - 間を入れたい箇所は `narration` をセグメント分割し、直前のセグメントに `pause_after`（秒）を付ける。
    - 図解シーンは手順4で判定した型に沿って `diagram` を書く（CLAUDE.md「図解スクリプト」の
      チェックリストを守る）。ラベルは12文字以内・座標やアニメーションの数値は書かない。
+   - 手順4で設計した映像リズムを反映する: `chapter_title`（＋必要なら `chapter_bgm` /
+     `chapter_bgm_credit`）、`emphasis`、`cutaways`、複数図解が必要なシーンは `diagram` の
+     代わりに `diagrams`（CLAUDE.md「映像リズムの設計」）。
 8. **検証**: 作成した YAML を script-to-video の `validate` サブコマンドで検証する。
    ```
    cd C:\Users\shuya\Projects\script-to-video
