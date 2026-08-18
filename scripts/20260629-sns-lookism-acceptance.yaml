@@ -5,6 +5,10 @@
 # assets の url は WebSearch/WebFetch で実際に検索・確認した実在の候補（Pixabay/Pexels のページURL、
 # 一部 Pixabay 投稿者が CC0 を明記したもの）。最終選択はレンダリング前の候補ギャラリーで人が行う。
 # BGM は video.bgm に配置予定パスのみ仮記入（候補曲は台本執筆側の報告を参照。ファイル自体は未配置）。
+#
+# v5（タスク17.8）: 映像リズム演出（chapter_title / emphasis / cutaways）と説明イラスト（cutaways の
+# gen_prompt）を追加。ナレーション文言は不変。cutaways/emphasis のタイミング精度のため、シーン1・
+# シーン2のみナレーションのセグメント分割を追加調整した（文言そのものは変えていない）。
 
 video:
   title: "なぜ今、キャバ嬢・AV女優は受け入れられていくのか — 写真SNSとルッキズムの社会学"
@@ -12,7 +16,7 @@ video:
   resolution:
     width: 1920
     height: 1080
-  style: "落ち着いた論説動画向けのフラットイラスト。青系の配色、テロップ用の余白を広めに取る"
+  style: "flat vector illustration, muted desaturated palette, limited color range, soft geometric shapes, consistent line weight, calm editorial tone, no text, no lettering, no watermark, generous negative space in the lower third"
   bgm: "bgm/main.mp3"
   bgm_credit: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"
 
@@ -22,7 +26,9 @@ scenes:
     visual_intent: "街の雑踏とスマートフォン越しのSNS利用を重ね、かつては偏見の対象だった仕事が今は身近に受け入れられている変化の気配でつかみを作る"
     key_color: "#2E4A7D"
     narration:
-      - text: "街を歩けば、SNSを開けば、テレビをつければ。かつては「夜の世界」「日陰の職業」と呼ばれ、人前で語ることがためらわれた仕事があります。キャバクラで働く女性、いわゆるキャバ嬢。あるいは、アダルトビデオに出演する女優。ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。ところが、今はどうでしょう。彼女たちはユーチューブで人生を語り、本を出版し、ファッションのお手本として何十万人ものフォロワーを集めています。世間のまなざしは、明らかに変わりつつあります。いったい、なぜなのでしょうか。"
+      - text: "街を歩けば、SNSを開けば、テレビをつければ。かつては「夜の世界」「日陰の職業」と呼ばれ、人前で語ることがためらわれた仕事があります。キャバクラで働く女性、いわゆるキャバ嬢。あるいは、アダルトビデオに出演する女優。ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。"
+      - text: "ところが、今はどうでしょう。彼女たちはユーチューブで人生を語り、本を出版し、ファッションのお手本として何十万人ものフォロワーを集めています。"
+      - text: "世間のまなざしは、明らかに変わりつつあります。いったい、なぜなのでしょうか。"
         pause_after: 0.5
       - text: "今日はこの問いを、単なる印象論ではなく、心理学と経済学の研究を手がかりに、ひとつずつ論拠を積み上げて考えていきます。そして見えてくるのは、私たち自身の「美しさ」との付き合い方が、ここ十数年で大きく変わったという事実です。"
     telop: "なぜ今、受け入れられていくのか"
@@ -47,16 +53,24 @@ scenes:
         source_name: "Pixabay"
         note: "ページURL。横断歩道を歩く群衆。特定個人が判別しにくい引きの画"
     gen_prompt: "flat illustration of people walking a city street looking at smartphones, blue tone, wide empty space for text overlay"
+    cutaways:
+      - slot: 1
+        from: 2
+        to: 2
+        visual_intent: "「今はどうでしょう」の場面。ユーチューブで人生を語り、本を出版する当事者の「今」を具体的な情景で見せる"
+        gen_prompt: "a woman calmly recording a video talking to a camera in a bright modern room, a published book and a smartphone visible nearby, full-bleed composition, subject fills the frame"
 
   - id: 2
     title: "問題提起"
+    chapter_title: "問題提起"
     visual_intent: "「受容」の定義を2要素の図解で示しつつ、背景に街の人混み・繁華街の気配を薄く敷いて、これが実社会で起きている変化であることを伝える"
     key_color: "#2E4A7D"
     narration:
       - text: "まず、言葉の意味をはっきりさせておきましょう。ここで言う「受け入れられている」とは、これらの職業をすばらしいと全員が称賛している、という意味ではありません。"
       - text: "そうではなく、第一に、これらの職業を公言する人が増えたこと。"
       - text: "第二に、その人たちが好意的に、あるいは少なくとも中立的に受け取られる場面が増えたこと。"
-      - text: "この二つを指しています。実際、かつては隠すものだった経歴を、自分から語る人が増えました。"
+      - text: "この二つを指しています。"
+      - text: "実際、かつては隠すものだった経歴を、自分から語る人が増えました。"
         pause_after: 0.5
       - text: "では、なぜ社会のまなざしはやわらいだのか。よくある説明は「多様性の時代になったから」というものです。しかし、これでは答えになっていません。なぜ多様性が認められるようになったのか、その中身を説明していないからです。"
       - text: "そこでこの動画では、複数の要因の中でも、とりわけ大きな柱だと考えられる一つの変化に注目します。それが、写真を中心としたSNSの広がりと、それがもたらした「外見の価値の上昇」、すなわちルッキズムの加速です。"
@@ -89,16 +103,26 @@ scenes:
             - id: focus
               text: 外見価値の上昇に注目
               accent: true
-              at: 6
+              at: 7
       arrows:
         - from: disclose
           to: focus
         - from: accept
           to: focus
     gen_prompt: "minimal flat infographic, two bullet-point definitions side by side, blue tone"
+    emphasis:
+      - at: 7
+        text: "外見の価値の上昇"
+    cutaways:
+      - slot: 1
+        from: 5
+        to: 5
+        visual_intent: "かつて隠していた経歴を自分から語るようになった人の具体的な情景"
+        gen_prompt: "a person sitting calmly in front of a camera, talking openly about their past career, warm confident expression, full-bleed composition, subject fills the frame"
 
   - id: 3
     title: "論証① ハロー効果（土台となる心理）"
+    chapter_title: "論証1 ハロー効果"
     visual_intent: "外見→好印象という心理実験の因果連鎖を図解で積み上げ、背景に「評価・格付け」を連想させる星評価の写真を敷いて、人物評価というテーマを支える"
     key_color: "#2E7D5B"
     narration:
@@ -165,9 +189,20 @@ scenes:
         - from: able
           to: halo
     gen_prompt: "diagram of a photo-rating psychology experiment, arrow from attractiveness rating to inferred personality traits, blue tone"
+    emphasis:
+      - at: 6
+        text: "美しいものは善い"
+    cutaways:
+      - slot: 1
+        from: 3
+        to: 3
+        visual_intent: "1972年のディオンらの実験（写真を見て人物像を推測する参加者）を具体的な情景で見せる"
+        gen_prompt: "participants in a 1970s psychology lab comparing portrait photographs of people with different attractiveness levels, full-bleed composition, subject fills the frame"
+        telop: "ディオンら（1972）"
 
   - id: 4
     title: "論証② 美の経済的プレミアムと、フィルター時代の追試"
+    chapter_title: "論証2 経済的プレミアム"
     visual_intent: "外見の良さ→賃金プレミアムという経済的な構造を図解で示し、背景に金融チャート・データのぼやけた画面を敷いて「数字・市場」の空気感を加える"
     key_color: "#2E7D5B"
     narration:
@@ -224,9 +259,26 @@ scenes:
         - from: wage
           to: persist
     gen_prompt: "bar chart illustration comparing income by perceived attractiveness, blue tone, minimal style"
+    emphasis:
+      - at: 3
+        text: "美の経済的プレミアム"
+    cutaways:
+      - slot: 1
+        from: 2
+        to: 2
+        visual_intent: "1994年のハマーメッシュ＆ビドルの研究（容姿と収入データを分析する経済学者）を具体的な情景で見せる"
+        gen_prompt: "two economists in a 1990s university office reviewing printed charts and data about income and appearance, full-bleed composition, subject fills the frame"
+        telop: "ハマーメッシュ＆ビドル（1994）"
+      - slot: 2
+        from: 7
+        to: 7
+        visual_intent: "2024年の研究（美顔フィルター前後の顔写真評価）を具体的な情景で見せる"
+        gen_prompt: "a smartphone screen showing a person's face before and after a beauty filter is applied, side-by-side comparison, full-bleed composition, subject fills the frame"
+        telop: "研究チーム（2024）"
 
   - id: 5
     title: "論証③ 写真SNSが整形容認を広げる（論理の橋渡し）"
+    chapter_title: "論証3 整形容認への橋渡し"
     visual_intent: "SNS写真活動→容姿比較→整形容認という橋渡しの論理を図解で積み上げ、背景に鏡越しに自撮りする女性の写真を敷いて、比較行動そのものを情景で見せる"
     key_color: "#2E7D5B"
     narration:
@@ -296,9 +348,20 @@ scenes:
         - from: accept
           to: favor
     gen_prompt: "flow diagram: instagram icon arrow to appearance comparison arrow to cosmetic surgery acceptance, blue tone, flat illustration"
+    emphasis:
+      - at: 5
+        text: "手に入れてよいもの"
+    cutaways:
+      - slot: 1
+        from: 2
+        to: 2
+        visual_intent: "インスタグラムで有名人や自分の写真と容姿を比べる、Di Gestoら（2021）の研究内容を具体的な情景で見せる"
+        gen_prompt: "a young woman comparing her own selfie with a celebrity's photo on a smartphone screen, thoughtful expression, full-bleed composition, subject fills the frame"
+        telop: "Di Gestoら（2021）"
 
   - id: 6
     title: "論証④ 補強する二つの変化"
+    chapter_title: "論証4 補強する二つの変化"
     visual_intent: "働き方の多様化と自己決定の価値観という2つの補強要因を図解で示し、背景に動画配信・vlog撮影の映像を敷いて「個人が発信する時代」の空気感を加える"
     key_color: "#2E7D5B"
     narration:
@@ -346,9 +409,16 @@ scenes:
         - from: self
           to: reinforce
     gen_prompt: "flat illustration of a person live streaming and building a personal brand, two supporting lines merging into a main arrow, blue tone"
+    cutaways:
+      - slot: 1
+        from: 5
+        to: 5
+        visual_intent: "誰とどう働くかを自分で決める、という自己決定の価値観を具体的な情景で見せる"
+        gen_prompt: "a person confidently signing a document or making a personal decision at a desk, determined calm expression, full-bleed composition, subject fills the frame"
 
   - id: 7
     title: "反証の検討"
+    chapter_title: "反証の検討"
     visual_intent: "指摘と整理を左右に並べる比較図解で3つの反証を提示する。論点が密なので背景は敷かず、無地下地で図に集中させる"
     key_color: "#7D5A2E"
     narration:
@@ -387,9 +457,19 @@ scenes:
           at: 6
           accent: right
     gen_prompt: "three flat illustrated cards presenting counterarguments with a rebuttal overlay on each, blue tone, minimal style"
+    emphasis:
+      - at: 4
+        text: "受容と排除、両方を強める"
+    cutaways:
+      - slot: 1
+        from: 3
+        to: 3
+        visual_intent: "ルッキズムが受容と排除の両方を強める「諸刃の剣」を象徴的なイラストで見せる"
+        gen_prompt: "a minimalist illustration of a double-edged sword, one edge glowing warmly and the other edge cold and sharp, symbolic composition, full-bleed composition, subject fills the frame"
 
   - id: 8
     title: "結論"
+    chapter_title: "結論"
     visual_intent: "積み上げてきた論拠を一つの図解に統合し、結論として引き締まった画面にする。無地下地のまま図解に集中させる"
     key_color: "#5A2E7D"
     narration:
@@ -409,53 +489,63 @@ scenes:
       - surface: "息苦しさ"
         reading: "イキグルシサ"
     search_query: "conclusion structure diagram main factor supporting factors"
-    diagram:
-      rows:
-        - items:
-            - id: halo
-              icon: psychology
-              text: ハロー効果
-              at: 3
-            - id: premium
-              icon: trending_up
-              text: 経済的プレミアム
-              at: 3
-        - items:
-            - id: snsUp
-              text: SNSが価値を押し上げ
-              at: 4
-            - id: work
-              text: 働き方の多様化
-              at: 5
-            - id: self
-              text: 自己決定の価値観
-              at: 5
-        - items:
-            - id: accept
-              text: 偏見の緩和
-              at: 6
-        - items:
-            - id: dual
-              text: 自由と新しい息苦しさ
-              accent: true
-              at: 8
-      arrows:
-        - from: halo
-          to: snsUp
-        - from: premium
-          to: snsUp
-        - from: snsUp
-          to: accept
-        - from: work
-          to: accept
-        - from: self
-          to: accept
-        - from: accept
-          to: dual
+    diagrams:
+      - from: 1
+        to: 4
+        rows:
+          - items:
+              - id: halo
+                icon: psychology
+                text: ハロー効果
+                at: 3
+              - id: premium
+                icon: trending_up
+                text: 経済的プレミアム
+                at: 3
+          - items:
+              - id: snsUp
+                text: SNSが価値を押し上げ
+                accent: true
+                at: 4
+        arrows:
+          - from: halo
+            to: snsUp
+          - from: premium
+            to: snsUp
+      - from: 5
+        to: 8
+        rows:
+          - items:
+              - id: work
+                text: 働き方の多様化
+                at: 5
+              - id: self
+                text: 自己決定の価値観
+                at: 5
+          - items:
+              - id: accept
+                text: 偏見の緩和
+                at: 6
+          - items:
+              - id: dual
+                text: 自由と新しい息苦しさ
+                accent: true
+                at: 8
+        arrows:
+          - from: work
+            to: accept
+          - from: self
+            to: accept
+          - from: accept
+            to: dual
     gen_prompt: "single integrated flat diagram combining a main axis and two supporting factors into one structure, blue tone"
+    emphasis:
+      - at: 8
+        text: "自由と新しい息苦しさ"
 
   - id: 9
     title: "まとめ"
+    chapter_title: "まとめ"
     visual_intent: "要点4点を並べて振り返る図解で締める。無地下地のまま、装飾を足さずすっきり終える"
     key_color: "#5A2E7D"
     narration:
