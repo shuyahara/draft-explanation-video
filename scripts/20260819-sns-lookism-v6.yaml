@@ -1,0 +1,1036 @@
+# シーン YAML（v6・ビート運用）。台本 Markdown（scripts/20260819-sns-lookism-v6.md）に対応する
+# レンダリング指示書。
+# 仕様（正）: C:\Users\shuya\Projects\script-to-video\docs\schema.md（beats[] 節）
+#             C:\Users\shuya\Projects\script-to-video\docs\design-beat-rendering.md
+# 検証: cd C:\Users\shuya\Projects\script-to-video && .venv\Scripts\python.exe -m script_to_video validate <このファイル>
+#
+# v5（scripts/20260629-sns-lookism-acceptance.yaml）からの差分:
+#   1) タイトル変更（「なぜ今〜受け入れられていくのか」→「なぜ近年〜受け入れられていく傾向にあるのか」）。
+#      シーン1の telop も同じ言い換えに合わせた。
+#   2) シーン4のナレーション1セグメントのみ事実修正（Hamermesh & Biddle 1994 の一次資料に合わせ、
+#      「賃金が最大で十数パーセント高く」→「賃金が高く／低い。その差は合わせて一割を超えていました」）。
+#      裏取り: references/20260819-beauty-premium-chart.md（男女計 +4.9% / −6.9%）。
+#      同シーンに chart 図解ビート（-6.9 / 0 / +4.9）を初投入した。
+#   3) 映像トラックを全シーン beats[] へ移行（v5 の assets/gen_prompt/diagram/cutaways は撤去）。
+#      video.style をシネマティック（R19.6 推奨文言）へ差し替え。
+#   上記以外のナレーション文言・readings・telop・key_color・emphasis・chapter_title・BGM は v5 のまま。
+#
+# シーン3・シーン8のビート割り・gen_prompt・motion は R19.12 の検証済みシーン YAML
+# （script-to-video/build/r19-12/scene38-beats.yaml）をそのまま流用した（slot 番号も同一）。
+
+video:
+  title: "なぜ近年、キャバ嬢・AV女優は受け入れられていく傾向にあるのか — 写真SNSとルッキズムの社会学"
+  speaker: "青山龍星"
+  resolution:
+    width: 1920
+    height: 1080
+  style: "cinematic film still, dramatic chiaroscuro lighting, a single warm key light cutting through deep shadow, high contrast, low saturation with amber highlights and cold blue shadows, shallow depth of field, subtle film grain, wide cinematic framing, dark moody atmosphere, large areas of near-black negative space, no text, no lettering, no watermark, no logo, no caption"
+  bgm: "bgm/main.mp3"
+  bgm_credit: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"
+
+scenes:
+  # ============================================================
+  # シーン1「フック」 キュー11本 / 推定 61秒
+  #   1 街を歩けば、SNSを開けば、テレビをつければ。
+  #   2 かつては「夜の世界」「日陰の職業」と呼ばれ、…
+  #   3 キャバクラで働く女性、いわゆるキャバ嬢。
+  #   4 あるいは、アダルトビデオに出演する女優。
+  #   5 ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。
+  #   6 ところが、今はどうでしょう。
+  #   7 彼女たちはユーチューブで人生を語り、…
+  #   8 世間のまなざしは、明らかに変わりつつあります。
+  #   9 いったい、なぜなのでしょうか。
+  #  10 今日はこの問いを、…考えていきます。
+  #  11 そして見えてくるのは、…事実です。
+  # ============================================================
+  - id: 1
+    title: "フック"
+    visual_intent: "夜の街とスマートフォンの光で開き、路地の看板・語り手のリングライト・観客のまなざしと画を継いで、変化の気配だけでつかみを作る"
+    key_color: "#2E4A7D"
+    narration:
+      - text: "街を歩けば、SNSを開けば、テレビをつければ。かつては「夜の世界」「日陰の職業」と呼ばれ、人前で語ることがためらわれた仕事があります。キャバクラで働く女性、いわゆるキャバ嬢。あるいは、アダルトビデオに出演する女優。ほんの二十年ほど前なら、これらの職業は強い偏見の対象でした。"
+      - text: "ところが、今はどうでしょう。彼女たちはユーチューブで人生を語り、本を出版し、ファッションのお手本として何十万人ものフォロワーを集めています。"
+      - text: "世間のまなざしは、明らかに変わりつつあります。いったい、なぜなのでしょうか。"
+        pause_after: 0.5
+      - text: "今日はこの問いを、単なる印象論ではなく、心理学と経済学の研究を手がかりに、ひとつずつ論拠を積み上げて考えていきます。そして見えてくるのは、私たち自身の「美しさ」との付き合い方が、ここ十数年で大きく変わったという事実です。"
+    telop: "なぜ近年、受け入れられていくのか"
+    readings:
+      - surface: "日陰"
+        reading: "ヒカゲ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        motion: parallax_left
+        visual_intent: "夜の街を歩く人々と、その手元のスマートフォンの光。街・SNS・テレビという三つの入口を一つの夜景に束ねる"
+        cut_reason: "【つかみの提示】キュー1〜2は『街でもSNSでもテレビでも見かける、かつて語りにくかった仕事』という一つの導入なので1枚で持たせる"
+        gen_prompt: "pedestrians walking along a dark city street at night, each of them holding a glowing smartphone that lights their face from below, shop windows behind them reduced to smears of amber light, no text, no lettering anywhere"
+
+      - type: image
+        from: 3
+        slot: 2
+        motion: parallax_right
+        visual_intent: "「夜の世界」「日陰の職業」と呼ばれた場所＝雨あがりの路地に灯る看板の列と、その下をうつむいて通る人影"
+        cut_reason: "【対象の名指し】キュー3〜5でキャバ嬢・AV女優と対象を名指しし、二十年前の偏見を語る。俯瞰から、その仕事が置かれていた場所へ寄る"
+        gen_prompt: "a lone woman in a long coat walking past a narrow alley lined with small nightclub entrances, the signboards above her glowing but completely blank with no text and no lettering, wet asphalt reflecting the light, the far end of the alley swallowed in blackness"
+
+      - type: image
+        from: 6
+        slot: 3
+        motion: parallax_in
+        visual_intent: "「今はどうでしょう」＝暗い部屋でリングライトを浴び、カメラに向かって自分の人生を語る女性。傍らに自著が置かれている"
+        cut_reason: "【時制の反転】キュー6『ところが、今はどうでしょう』で現在に切り替わる。シーン最大の転換なので、暗い路地から明るいリングライトへ画そのものを反転させる"
+        gen_prompt: "a woman sitting alone in a dark room talking straight into a camera on a tripod, a ring light throwing a clean circle of light onto her face, a hardcover book lying beside her with a blank unmarked cover and no readable print, the rest of the room unlit"
+
+      - type: image
+        from: 8
+        slot: 4
+        motion: parallax_left
+        visual_intent: "世間のまなざしが変わりつつある＝暗がりで一斉に同じ方向を見る観客の顔が、画面外の光にほのかに照らされる"
+        cut_reason: "【問いの提示】キュー8〜9『世間のまなざしは変わりつつある。いったい、なぜなのでしょうか』。動画全体の問いが立つ位置なので、視線そのものを画にする"
+        gen_prompt: "rows of faces in a dark audience all turned toward the same light source outside the frame, only the edges of their cheeks and eyes catching the pale glow, the seats and walls swallowed in blackness"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "心理学と経済学の研究を手がかりに＝暗い机に積まれた論文の束と、そこへ落ちる一条の光"
+        cut_reason: "【方法の宣言】キュー10『心理学と経済学の研究を手がかりに、論拠を積み上げて考えていきます』。情景から研究の机へ移り、この動画の進め方を示す"
+        gen_prompt: "a researcher's hands resting on a thick stack of academic papers on a dark desk, one narrow beam of warm light falling across the top sheet, the pages out of focus with no readable print, the room behind completely dark"
+
+      - type: image
+        from: 11
+        slot: 6
+        motion: parallax_in
+        visual_intent: "私たち自身の「美しさ」との付き合い方＝暗い洗面所で、鏡に映る顔の半分だけが小さな灯りを受けている"
+        cut_reason: "【私たちの話へ】キュー11『私たち自身の美しさとの付き合い方が、ここ十数年で大きく変わった』。社会の話から視聴者自身の話へ引き寄せてシーンを閉じる"
+        gen_prompt: "a person standing in front of a bathroom mirror in a dark room, only one half of their reflected face lit by a small warm bulb above the mirror, condensation blurring the edge of the glass"
+
+  # ============================================================
+  # シーン2「問題提起」 キュー12本 / 推定 70秒（＋章カード3秒＋強調3秒）
+  #   1 まず、言葉の意味をはっきりさせておきましょう。
+  #   2 ここで言う「受け入れられている」とは、…
+  #   3 そうではなく、第一に、これらの職業を公言する人が増えたこと。
+  #   4 第二に、その人たちが好意的に、…増えたこと。
+  #   5 この二つを指しています。
+  #   6 実際、かつては隠すものだった経歴を、自分から語る人が増えました。
+  #   7 では、なぜ社会のまなざしはやわらいだのか。
+  #   8 よくある説明は「多様性の時代になったから」というものです。
+  #   9 しかし、これでは答えになっていません。
+  #  10 なぜ多様性が認められるようになったのか、…
+  #  11 そこでこの動画では、…一つの変化に注目します。
+  #  12 それが、写真を中心としたSNSの広がりと、…ルッキズムの加速です。
+  # ============================================================
+  - id: 2
+    title: "問題提起"
+    chapter_title: "問題提起"
+    visual_intent: "辞書の紙面で「受容」を定義し、収束の図解で二つの意味を束ねたあと、行き止まりの壁と一本の柱で通説の却下と注目点の宣言をつなぐ"
+    key_color: "#2E4A7D"
+    narration:
+      - text: "まず、言葉の意味をはっきりさせておきましょう。ここで言う「受け入れられている」とは、これらの職業をすばらしいと全員が称賛している、という意味ではありません。"
+      - text: "そうではなく、第一に、これらの職業を公言する人が増えたこと。"
+      - text: "第二に、その人たちが好意的に、あるいは少なくとも中立的に受け取られる場面が増えたこと。"
+      - text: "この二つを指しています。"
+      - text: "実際、かつては隠すものだった経歴を、自分から語る人が増えました。"
+        pause_after: 0.5
+      - text: "では、なぜ社会のまなざしはやわらいだのか。よくある説明は「多様性の時代になったから」というものです。しかし、これでは答えになっていません。なぜ多様性が認められるようになったのか、その中身を説明していないからです。"
+      - text: "そこでこの動画では、複数の要因の中でも、とりわけ大きな柱だと考えられる一つの変化に注目します。それが、写真を中心としたSNSの広がりと、それがもたらした「外見の価値の上昇」、すなわちルッキズムの加速です。"
+    telop: "「受容」とは何か／問いの定義"
+    readings:
+      - surface: "多様性"
+        reading: "タヨウセイ"
+    emphasis:
+      - at: 7
+        text: "外見の価値の上昇"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。辞書のページの画を強く落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: zoom_in
+        visual_intent: "言葉の意味をはっきりさせる＝暗い机の上で開かれた分厚い辞書のページに指を置く手元"
+        cut_reason: "【定義の宣言】キュー1〜2は『まず言葉の意味をはっきりさせる』という一つの動作。紙面は平面的で視差が出ないためズームで持たせる"
+        gen_prompt: "a hand resting on the open page of a thick dictionary on a dark desk under a single lamp, the printed columns out of focus with no readable print, the rest of the room black"
+        search_query: "dictionary definition page close up"
+        assets:
+          - url: "https://pixabay.com/photos/dignity-definition-dictionary-2724770/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pixabay"
+            note: "v5 で採用実績のある候補（build/sns-lookism-assets/scene_02.jpg）。辞書で言葉の定義を引く画"
+          - url: "https://pixabay.com/photos/dictionary-book-learn-learning-613910/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pixabay"
+            note: "予備候補。辞書のクローズアップ"
+
+      - type: diagram
+        from: 3
+        cut_reason: "【定義の中身】キュー3〜5は『第一に／第二に／この二つ』という列挙と収束。語順に合わせて2つの定義が現れ、1つの結論へ束ねる"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: disclose
+              text: 公言する人が増加
+              at: 3
+              after: 公言する人が
+            - id: accept
+              text: 中立以上に受容
+              at: 4
+              after: 中立的に
+          result:
+            text: この二つを受容と呼ぶ
+            at: 5
+            after: この二つを
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "かつて隠していた経歴を自分から語る＝暗い部屋でカメラに向かい、静かに話し始める人物"
+        cut_reason: "【実例へ】キュー6『実際、かつては隠すものだった経歴を、自分から語る人が増えました』。定義の図解から具体的な人の場面へ落とす"
+        gen_prompt: "a person sitting in a dark room facing a small camera, mouth just opening to speak, a single warm lamp lighting one side of their face, their hands folded still on the table"
+
+      - type: image
+        from: 7
+        slot: 4
+        motion: parallax_right
+        visual_intent: "なぜまなざしはやわらいだのか＝夜の交差点を思い思いの方向へ渡っていく、装いのまるで違う人々"
+        cut_reason: "【問いと通説】キュー7〜8『なぜやわらいだのか』『よくある説明は多様性の時代になったから』。通説を象徴する多様な人波を出す"
+        gen_prompt: "a crowd of very different looking pedestrians crossing a wide intersection at night from every direction, their coats and bags catching scattered amber light, the buildings behind them almost black"
+
+      - type: image
+        from: 9
+        slot: 5
+        motion: parallax_in
+        visual_intent: "それでは答えになっていない＝霧の中、行き止まりの壁に突き当たって立ちつくす人影"
+        cut_reason: "【通説の却下】キュー9〜10『しかし、これでは答えになっていません』。説明がそこで止まることを行き止まりの画で受ける"
+        gen_prompt: "a person standing still in front of a blank concrete dead end wall in thick fog, a single overhead lamp lighting the top of the wall, their long shadow stretching back toward the camera"
+
+      - type: image
+        from: 11
+        slot: 6
+        visual_intent: "とりわけ大きな柱＝真っ暗な広間に一本だけ立つ太い石柱を、下から光が舐める"
+        cut_reason: "【注目点の宣言】キュー11『とりわけ大きな柱だと考えられる一つの変化に注目します』。ここから注目点が一つに絞られる"
+        gen_prompt: "a person standing at the base of one massive stone pillar in a pitch dark hall, a low warm light raking up the pillar so its full height emerges from the blackness"
+
+      - type: image
+        from: 12
+        slot: 7
+        motion: parallax_in
+        visual_intent: "写真SNSの広がりと外見の価値の上昇＝広場で自撮りする女性の光が、周囲の人々の顔まで照らし出す"
+        cut_reason: "【主題の提示】キュー12『写真SNSの広がりと、それがもたらした外見の価値の上昇』。動画の主題が置かれる位置なので、静物の柱から人の場面へ切り替える"
+        gen_prompt: "a woman raising her phone to take a selfie in a dark plaza, the light from the phone spilling outward and catching the faces of dozens of other people around her, the plaza beyond them unlit, no text, no lettering on the screen"
+
+      - type: typo
+        at: 7
+        cut_reason: "【無音3秒】主題の決め文「外見の価値の上昇」の強調カット"
+
+  # ============================================================
+  # シーン3「論証1 ハロー効果」 キュー11本 / 推定 63秒
+  # ビート割り・gen_prompt・motion は R19.12 検証済み（build/r19-12/scene38-beats.yaml のシーン1）
+  # をそのまま流用。
+  # ============================================================
+  - id: 3
+    title: "論証① ハロー効果（土台となる心理）"
+    chapter_title: "論証1 ハロー効果"
+    visual_intent: "書斎の一条の光から履歴書の光の輪（キービジュアル）へ進み、実験室の場面と放射図解で「美しいものは善い」を積み上げる"
+    key_color: "#2E7D5B"
+    narration:
+      - text: "まず、土台となる人間の根深い心理から確認しましょう。心理学に「ハロー効果」という有名な現象があります。ある目立った特徴が、その人の他の評価まで引きずってしまう、という認知の偏りです。"
+      - text: "なかでも、見た目に関するものは古くから知られています。"
+      - text: "1972年、心理学者のカレン・ディオンらは、ある実験を行いました。参加者に、魅力の高い人、普通の人、低い人の写真を見せ、それぞれがどんな人物かを推測してもらったのです。"
+      - text: "結果は明快でした。"
+        pause_after: 0.5
+      - text: "人は、外見の魅力が高い人ほど、性格も温かく、社交的で、能力も高く、幸せな人生を送るだろうと推測したのです。"
+      - text: "この研究には「美しいものは善い」という象徴的な題名がつけられました。"
+      - text: "私たちは無意識のうちに、美しさを内面の良さと結びつけてしまう。これは特別に意地悪な人だけの話ではなく、人間に広く共通する傾向なのです。"
+    telop: "ハロー効果 ―「美しいものは善い」"
+    readings:
+      - surface: "偏り"
+        reading: "カタヨリ"
+    emphasis:
+      - at: 6
+        text: "美しいものは善い"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。キービジュアル（天使の輪に照らされた履歴書）を強く落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_in
+        visual_intent: "人間の根深い心理という土台を、暗い書斎の机に置かれた古い心理学書と一条の斜光で示す"
+        cut_reason: "【学問的背景の提示】キュー1「土台となる人間の根深い心理から確認しましょう」＋キュー2「心理学にハロー効果という有名な現象があります」。どちらも『これから心理学の知見を持ち出す』という同じ動作なので1枚で持たせる"
+        gen_prompt: "a worn hardcover book lying open on a dark wooden desk in an unlit study, a single narrow shaft of warm light falling across its blank pages from a high window, dust motes drifting in the beam, the rest of the room swallowed in blackness, pages out of focus with no readable print"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: parallax_left
+        visual_intent: "★キービジュアル。ハロー効果＝暗い面接室の机で、履歴書の顔写真の部分だけが天使の輪のような光の環に照らされている"
+        cut_reason: "【名前から中身へ】キュー3で初めてハロー効果の定義（ある目立った特徴が他の評価まで引きずる）が語られる。ここがキービジュアル投入の瞬間。続くキュー4も同じ紹介ブロックの締めなので同じ画のまま保持する"
+        gen_prompt: "a single sheet of blank unmarked paper lying on a dark interview room table with a small portrait photograph clipped to its top corner, a bright glowing circular halo ring of warm light floating in the air just above that photograph and casting a pool of light down onto it, two empty chairs dissolving into the unlit background, blank paper with no writing"
+
+      - type: image
+        from: 5
+        slot: 4
+        motion: parallax_right
+        visual_intent: "1972年ディオンらの実験。白衣の研究者がクリップボードを持ち、机上に写真を並べている"
+        cut_reason: "【場面転換：論から実験室へ】「1972年、カレン・ディオンらは、ある実験を行いました」。抽象的な概念説明から具体的な研究の場面に移る、シーン中もっとも強い場面転換"
+        gen_prompt: "a researcher in a white lab coat standing at a table in a 1970s university laboratory, holding a clipboard and laying out printed photographs in a row, one desk lamp casting warm light on the table while the room behind stays dark, vintage reel-to-reel equipment barely visible in the shadows"
+
+      - type: image
+        from: 6
+        slot: 5
+        motion: parallax_in
+        visual_intent: "参加者が評価用紙に記入する手元。スタンドライトの円い光だけが机上を切り取る"
+        cut_reason: "【視点の交代：研究者から参加者へ】「参加者に…写真を見せ、それぞれがどんな人物かを推測してもらった」。実験の主語が変わり、手続きの中身に入る。手続きの説明が一続きなので分割しない"
+        gen_prompt: "a close view of a hand filling in a paper form with a pencil, a desk lamp carving a circle of warm light out of an otherwise black room, the pencil casting a long hard shadow across the form, the form blurred and unreadable"
+
+      - type: diagram
+        from: 7
+        cut_reason: "【結果の提示】「結果は明快でした」。実験の結果は列挙構造なので図解に切り替える。中心の人型から4つの推測が語と同期して放射し、最後に光の輪が灯る"
+        diagram:
+          type: narrative
+          layout: radiate
+          center:
+            text: 魅力的な外見
+            at: 7
+          items:
+            - id: warm
+              text: 性格も温かい
+              at: 8
+              after: 性格も温かく
+            - id: social
+              text: 社交的
+              at: 8
+              after: 社交的で
+            - id: able
+              text: 能力も高い
+              at: 8
+              after: 能力も高く
+            - id: happy
+              text: 幸せな人生
+              at: 8
+              after: 幸せな人生
+          turn:
+            at: 8
+            after: 送るだろう
+
+      - type: image
+        from: 9
+        slot: 6
+        motion: parallax_in
+        visual_intent: "『美しいものは善い』という題名がついた研究＝暗い机でスタンドライトの下に開かれた古い学術誌の紙面"
+        cut_reason: "【研究の名前づけ】「この研究には『美しいものは善い』という象徴的な題名が…」。図解から実写に戻す"
+        gen_prompt: "an old academic journal lying open on a dark desk under a brass reading lamp, the warm pool of light falling across the pages, the edges of the room completely black, a pair of reading glasses resting beside the pages, very shallow focus so the print is an unreadable blur"
+
+      - type: typo
+        at: 6
+        cut_reason: "【無音3秒】決め文「美しいものは善い」の強調カット"
+
+      - type: image
+        from: 10
+        slot: 7
+        motion: parallax_left
+        visual_intent: "無意識に美しさと内面を結びつける＝暗闇に浮かぶ横顔のシルエットの内側から光がにじむ"
+        cut_reason: "【結びに入る：私たち個人の話へ】「私たちは無意識のうちに、美しさを内面の良さと結びつけてしまう」。個人の内面に視点が寄る"
+        gen_prompt: "the profile silhouette of a person against a pitch black background, a soft warm glow seeping out from inside the head and shoulder edge like light through a seam, rim light tracing the outline of the face"
+
+      - type: image
+        from: 11
+        slot: 8
+        motion: parallax_right
+        visual_intent: "人間に広く共通する傾向＝夜の交差点の群衆、それぞれの頭上にかすかな光の輪が浮かぶ"
+        cut_reason: "【個人から万人へ】「特別に意地悪な人だけの話ではなく、人間に広く共通する傾向」。横顔ひとつ→群衆という画の対比がそのまま論の対比になる"
+        gen_prompt: "a crowd of pedestrians crossing a wide city intersection at night seen from a low angle, a faint warm ring of light hovering above each person's head, wet asphalt reflecting the rings, the surrounding buildings almost black"
+
+  # ============================================================
+  # シーン4「論証2 経済的プレミアム」 キュー13本 / 推定 87秒（＋章カード3秒＋強調3秒）
+  #   1 この「美しいものは善い」という偏りは、…
+  #   2 お金、つまり労働市場にも、はっきりと表れます。
+  #   3 1994年、経済学者の…分析しました。
+  #   4 すると、平均より見た目が良いとされた人は賃金が高く、…賃金が低い。   ← 事実修正
+  #   5 その差は、合わせて一割を超えていました。                            ← 事実修正
+  #   6 これは「美の経済的プレミアム」と呼ばれます。
+  #   7 さらに重要なのは、…という指摘です。
+  #   8 つまり社会には、もともと「美しさが価値になる」構造があるのです。
+  #   9 では、SNSの時代になって、この偏りは弱まったのでしょうか。
+  #  10 むしろ、逆かもしれません。
+  #  11 2024年、ある研究チームが、…評価させました。
+  #  12 その結果、同じ人物でも、…高く評価されたのです。
+  #  13 フィルターで誰もが美しく見せられる時代になっても、…働き続けている。
+  # ============================================================
+  - id: 4
+    title: "論証② 美の経済的プレミアムと、フィルター時代の追試"
+    chapter_title: "論証2 経済的プレミアム"
+    visual_intent: "顔写真と硬貨を載せた天秤で心と金銭をつなぎ、裏取り済みの棒グラフで賃金差を示したうえで、フィルター時代の追試へ運ぶ"
+    key_color: "#2E7D5B"
+    narration:
+      - text: "この「美しいものは善い」という偏りは、心の中だけの話にとどまりません。お金、つまり労働市場にも、はっきりと表れます。"
+      - text: "1994年、経済学者のダニエル・ハマーメッシュとジェフ・ビドルは、容姿と収入の関係を、大規模なデータで分析しました。"
+      - text: "すると、平均より見た目が良いとされた人は賃金が高く、逆に平均より見た目が劣るとされた人は、賃金が低い。その差は、合わせて一割を超えていました。これは「美の経済的プレミアム」と呼ばれます。"
+      - text: "さらに重要なのは、見た目の良い人ほど、外見が有利に働く職業に集まりやすい、という指摘です。つまり社会には、もともと「美しさが価値になる」構造があるのです。"
+      - text: "では、SNSの時代になって、この偏りは弱まったのでしょうか。"
+        pause_after: 0.5
+      - text: "むしろ、逆かもしれません。"
+        pause_after: 0.5
+      - text: "2024年、ある研究チームが、およそ二千七百人を対象に、加工する前と、美顔フィルターをかけた後の顔写真を評価させました。"
+      - text: "その結果、同じ人物でも、魅力的に見える写真のほうが、知性や信頼性まで高く評価されたのです。フィルターで誰もが美しく見せられる時代になっても、「美しいものは善い」という古い心理は、なお働き続けている。"
+    telop: "美の経済的プレミアム／フィルターでも消えない偏り"
+    readings:
+      - surface: "一割"
+        reading: "イチワリ"
+    emphasis:
+      - at: 3
+        text: "美の経済的プレミアム"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。顔写真と硬貨を載せた天秤の画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_in
+        visual_intent: "心の中の話がお金の話になる＝暗い机の上の小さな天秤。一方の皿に顔写真、もう一方に硬貨が載っている"
+        cut_reason: "【心からお金へ】キュー1〜2『心の中だけの話にとどまらない。お金、つまり労働市場にも表れる』。天秤は心と金銭が同じ秤に載ることを1枚で示すので分割しない"
+        gen_prompt: "a small brass balance scale standing on a dark desk, a portrait photograph lying on one pan and a short stack of coins on the other, a narrow warm light picking out the beam of the scale, the room behind it black"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: parallax_left
+        visual_intent: "1994年の経済学者二人が容姿と収入の大規模データを分析する＝90年代の研究室で印刷された集計表を広げる二人"
+        cut_reason: "【研究の場面へ】キュー3『1994年、ハマーメッシュとビドルは、容姿と収入の関係を大規模なデータで分析しました』。抽象論から具体的な研究の机へ移る"
+        gen_prompt: "two economists in a 1990s university office leaning over a long computer printout spread across a desk, a desk lamp lighting the sheets while the shelves behind them stay dark, the printout blurred and unreadable"
+
+      - type: diagram
+        from: 4
+        cut_reason: "【数値の提示】キュー4〜6は裏取り済みの数値そのものが主張。平均を0とした上下差の棒グラフで見せ、『美の経済的プレミアム』という名づけまで一つの図で持たせる"
+        diagram:
+          type: chart
+          chart: bar
+          title: 容姿による賃金プレミアム
+          unit: "%"
+          source: "Hamermesh & Biddle (1994) American Economic Review 84(5), Table 6"
+          series:
+            - color: accent
+              at: 4
+              points:
+                - {label: 容姿低い, value: -6.9}
+                - {label: 平均, value: 0.0}
+                - {label: 容姿高い, value: 4.9}
+
+      - type: typo
+        at: 3
+        cut_reason: "【無音3秒】決め文「美の経済的プレミアム」の強調カット"
+
+      - type: image
+        from: 7
+        slot: 4
+        motion: parallax_right
+        visual_intent: "外見が有利に働く職業に集まる＝明るいロビーの受付に立つ人と、その脇で闇に沈んでいく通用口の廊下"
+        cut_reason: "【構造の話へ】キュー7〜8『見た目の良い人ほど外見が有利に働く職業に集まる』『社会にはもともと美しさが価値になる構造がある』。数値から職業選択の情景へ移る"
+        gen_prompt: "a well groomed receptionist standing under bright lobby lighting at a hotel front desk, a service corridor beside them receding into darkness, no text, no lettering on the counter"
+
+      - type: image
+        from: 9
+        slot: 5
+        motion: parallax_in
+        visual_intent: "SNSの時代になって偏りは弱まったのか＝暗闇の中でスマートフォンを構える人物。画面の光が顎と頬だけを照らす"
+        cut_reason: "【問い直し】キュー9〜10『この偏りは弱まったのでしょうか』『むしろ、逆かもしれません』。前後に0.5秒の間がある一撃の区間なので短く持たせる"
+        gen_prompt: "a person holding up a smartphone in a completely dark room, the glow of the blank screen lighting only their chin and one cheek, no text, no lettering on the screen"
+
+      - type: image
+        from: 11
+        slot: 6
+        visual_intent: "2024年の研究＝薄暗い実験室で、タブレットに映る一枚の顔写真に評価をつける参加者の手元"
+        cut_reason: "【追試の場面】キュー11『2024年、およそ二千七百人を対象に、フィルター前後の顔写真を評価させた』。前後比較は1枚の静止画に描けないため、評価している一場面に還元した"
+        gen_prompt: "a participant's hand tapping a rating slider on a tablet lying on a dark table, a single portrait photograph glowing on the tablet, no text, no lettering anywhere on the screen, the lab around them unlit"
+
+      - type: image
+        from: 12
+        slot: 7
+        motion: parallax_left
+        visual_intent: "知性や信頼性まで高く評価される＝暗い面接室で、手元の顔写真つき書類にうなずく面接官"
+        cut_reason: "【結果】キュー12『魅力的に見える写真のほうが、知性や信頼性まで高く評価された』。論証1のキービジュアル（履歴書の顔写真）を意図的に再登場させ、評価する側の顔として見せる"
+        gen_prompt: "an interviewer nodding slightly while looking down at a sheet of blank unmarked paper with a small portrait photograph clipped to it, a low warm lamp lighting only their hands and the sheet, blank paper with no writing"
+
+      - type: image
+        from: 13
+        slot: 8
+        motion: zoom_in
+        visual_intent: "古い心理はなお働き続けている＝誰もいない暗い部屋で、今も動き続けている古い柱時計の振り子"
+        cut_reason: "【章の結び】キュー13『フィルターで誰もが美しく見せられる時代になっても、古い心理はなお働き続けている』。人の場面から、止まらない機械へ引いて章を閉じる"
+        gen_prompt: "the pendulum of an old wall clock still swinging in a dark deserted room, a thin band of light crossing its brass disc, the clock face turned away and unreadable, everything else in shadow"
+
+  # ============================================================
+  # シーン5「論証3 整形容認への橋渡し」 キュー10本 / 推定 83秒（＋章カード3秒＋強調3秒）
+  #   1 そして、写真を中心としたSNSは、私たちの行動そのものを変えました。
+  #   2 2021年に発表された、若い女性を対象とする研究があります。
+  #   3 インスタグラムで、有名人や自分自身の写真に…高まっていたのです。
+  #   4 実際、整形を望む理由として…報告もあります。
+  #   5 ここから、重要な橋渡しが見えてきます。
+  #   6 第一に、整形を受け入れるということは、…ということです。
+  #   7 すると、見た目を磨き、…やわらいでいきます。
+  #   8 第二に、ハロー効果によって、…好意的に解釈されます。
+  #   9 だから、外見が評価の中心にある職業の女性たちは、…受け取られやすくなる。
+  #  10 外見の価値が上がる社会とは、…社会でもあるのです。
+  # ============================================================
+  - id: 5
+    title: "論証③ 写真SNSが整形容認を広げる（論理の橋渡し）"
+    chapter_title: "論証3 整形容認への橋渡し"
+    visual_intent: "スマホの光に照らされた比較の情景から、細い橋の一拍を挟んで規範の反転を図解し、支度・光の輪・広告の光へと当事者の側へ運ぶ"
+    key_color: "#2E7D5B"
+    narration:
+      - text: "そして、写真を中心としたSNSは、私たちの行動そのものを変えました。2021年に発表された、若い女性を対象とする研究があります。"
+      - text: "インスタグラムで、有名人や自分自身の写真に関わる活動が多い人ほど、他人と自分の容姿を比べる傾向が強まり、その結果として、美容整形を受け入れる気持ちが高まっていたのです。"
+      - text: "実際、整形を望む理由として「写真や動画で自分をよりよく見せたいから」という声が増えている、という報告もあります。"
+      - text: "ここから、重要な橋渡しが見えてきます。"
+        pause_after: 0.3
+      - text: "第一に、整形を受け入れるということは、「美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ」という考え方が広がる、ということです。"
+      - text: "すると、見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます。"
+        pause_after: 0.3
+      - text: "第二に、ハロー効果によって、美しい人は、その人格まで好意的に解釈されます。"
+      - text: "だから、外見が評価の中心にある職業の女性たちは、「きれいなだけでなく、きっと魅力的な人物なのだろう」と受け取られやすくなる。外見の価値が上がる社会とは、外見を職業にする人たちが、評価されやすい社会でもあるのです。"
+    telop: "写真SNS → 比較 → 整形容認 ／ 橋渡しの論理"
+    readings:
+      - surface: "整形"
+        reading: "セイケイ"
+      - surface: "容認"
+        reading: "ヨウニン"
+    emphasis:
+      - at: 5
+        text: "手に入れてよいもの"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。スマートフォンの光に照らされた横顔を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_right
+        visual_intent: "写真SNSが行動を変えた＝暗い寝室で、スマートフォンの光だけに顔を照らされた若い女性"
+        cut_reason: "【行動の変化】キュー1〜2『写真SNSは私たちの行動そのものを変えた』『2021年の研究がある』。研究の紹介に入るまでを1枚で持たせる"
+        gen_prompt: "a young woman lying on her side in a dark bedroom scrolling a phone held close to her face, the cold light of the screen the only illumination in the room, no text, no lettering on the screen"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: parallax_in
+        visual_intent: "有名人や自分自身の写真と自分を見比べる＝暗い部屋で腕を伸ばしてスマートフォンを掲げ、背後の鏡にも自分が映っている"
+        cut_reason: "【研究の中身】キュー3は『比較の傾向が強まり、整形容認が高まる』という研究の核。84字の長い1文なので1枚で受け、寄りのカメラで内面へ寄せる"
+        gen_prompt: "a young woman sitting on the floor of a dark room holding her phone up at arm's length, her own reflection faintly visible in a mirror behind her, the phone light carving her profile out of the darkness, no text, no lettering on the screen"
+        search_query: "woman taking selfie in front of mirror"
+        assets:
+          - url: "https://www.pexels.com/photo/female-taking-a-photo-in-front-of-a-mirror-8788701/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+            note: "v5 で採用実績のある候補（build/sns-lookism-assets/scene_05.jpg）。鏡越しに自撮りする女性"
+          - url: "https://pixabay.com/photos/woman-beauty-selfie-photography-6573837/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pixabay"
+            note: "予備候補。スマートフォンで自撮りする女性"
+
+      - type: image
+        from: 4
+        slot: 4
+        visual_intent: "写真や動画で自分をよりよく見せたい＝美容クリニックの薄暗い待合で、スマートフォンを手に順番を待つ人"
+        cut_reason: "【動機の変化】キュー4『整形を望む理由として、写真や動画で自分をよりよく見せたいから、という声が増えている』。研究の話から現場の情景へ移す"
+        gen_prompt: "a woman waiting alone on a bench in a dim clinic waiting room, her hands folded over her phone, a soft light panel on the wall behind her, the corridor beyond her dark, no text, no lettering on the wall"
+
+      - type: image
+        from: 5
+        slot: 5
+        motion: parallax_right
+        visual_intent: "重要な橋渡し＝暗い谷に架かる細い橋へ、人影が一歩踏み出す"
+        cut_reason: "【論理の転換点】キュー5『ここから、重要な橋渡しが見えてきます』。3.6秒と短いのは、次の論理へ渡る一拍だけを担わせる意図"
+        gen_prompt: "a lone figure stepping onto a narrow footbridge that stretches out over a black gorge, a single shaft of light falling on the middle of the span, both ends of the bridge lost in darkness"
+
+      - type: diagram
+        from: 6
+        cut_reason: "【橋渡しの中身①】キュー6『美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ』。前提の否定から新しい規範への転換なので図解で受け、そのまま強調カットへ渡す"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: born
+              text: 生まれつきではない
+              at: 6
+            - id: effort
+              text: 努力や投資で得る
+              at: 6
+              after: 努力や投資で
+          result:
+            text: 手に入れてよいもの
+            at: 6
+            after: という考え方が
+
+      - type: typo
+        at: 5
+        cut_reason: "【無音3秒】決め文「手に入れてよいもの」の強調カット"
+
+      - type: image
+        from: 7
+        slot: 6
+        visual_intent: "見た目を磨く職業への偏見がやわらぐ＝出勤前、電球に囲まれた鏡の前で支度を整える女性の後ろ姿"
+        cut_reason: "【帰結①】キュー7『見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます』。規範の話から、その職業の当事者の支度の場面へ落とす"
+        gen_prompt: "a woman seen from behind finishing her make-up at a lit vanity mirror in an otherwise dark dressing room, the bulbs around the mirror casting a warm rim on her shoulders"
+
+      - type: image
+        from: 8
+        slot: 7
+        motion: parallax_in
+        visual_intent: "ハロー効果の再登場＝暗がりでほほえむ女性の頭上に、かすかな光の輪が浮かぶ"
+        cut_reason: "【橋渡しの中身②】キュー8『第二に、ハロー効果によって、美しい人は人格まで好意的に解釈される』。論証1のキービジュアル（光の輪）を意図的に再登場させ、論の連結を画で見せる"
+        gen_prompt: "a woman smiling faintly in near darkness, a thin ring of warm light hovering just above her head and casting a soft glow on her hair and shoulders, the background completely black"
+
+      - type: image
+        from: 9
+        slot: 8
+        visual_intent: "きっと魅力的な人物なのだろう＝暗いラウンジで、グラスを掲げる女性へ周囲の視線が集まる"
+        cut_reason: "【当事者への波及】キュー9『きれいなだけでなく、きっと魅力的な人物なのだろうと受け取られやすくなる』。評価される側の場面に切り替える"
+        gen_prompt: "a woman raising a glass at a table in a dark lounge, warm light falling only on her and the glass, the faces of the people around the table turned toward her and barely lit"
+
+      - type: image
+        from: 10
+        slot: 9
+        motion: parallax_left
+        visual_intent: "外見の価値が上がる社会＝夜の街で、巨大な広告の光を見上げる人々"
+        cut_reason: "【章の結び】キュー10『外見の価値が上がる社会とは、外見を職業にする人たちが評価されやすい社会でもある』。個人の場面から社会全体の画へ引いて章を閉じる"
+        gen_prompt: "a small crowd standing on a night street looking up at an enormous illuminated advertising panel that is entirely blank with no text and no lettering, its white light washing over their upturned faces"
+
+  # ============================================================
+  # シーン6「論証4 補強する二つの変化」 キュー11本 / 推定 60秒（＋章カード3秒）
+  #   1 もちろん、ルッキズムの加速だけで、…わけではありません。
+  #   2 ほかにも、これと重なり合う変化があります。
+  #   3 一つは、働き方の多様化です。
+  #   4 動画配信やSNSによって、…時代になりました。
+  #   5 すると、職業は「何をしているか」だけでなく、…見られるようになります。
+  #   6 キャバ嬢やAV女優という肩書きの向こうにいる、…見えるようになった。
+  #   7 これが、偏見をやわらげます。
+  #   8 もう一つは、自分の体や生き方は自分で決める、…広がりです。
+  #   9 誰と、どう働くかを本人が選ぶのなら、…すべきではない。
+  #  10 こうした考え方が、以前より共有されるようになりました。
+  #  11 これらは、外見の価値の上昇という…補強し合っているのです。
+  # ============================================================
+  - id: 6
+    title: "論証④ 補強する二つの変化"
+    chapter_title: "論証4 補強する二つの変化"
+    visual_intent: "二条の光の重なりで補強の構図を示し、深夜のカフェ・楽屋の鏡・夜の分かれ道と個人の場面を継いで、最後に収束の図解で本線へ束ねる"
+    key_color: "#2E7D5B"
+    narration:
+      - text: "もちろん、ルッキズムの加速だけで、すべてが説明できるわけではありません。ほかにも、これと重なり合う変化があります。"
+      - text: "一つは、働き方の多様化です。"
+      - text: "動画配信やSNSによって、個人が自分の名前で発信し、収入を得られる時代になりました。すると、職業は「何をしているか」だけでなく、「どんな人物か」で見られるようになります。キャバ嬢やAV女優という肩書きの向こうにいる、一人の個人の物語が、見えるようになった。これが、偏見をやわらげます。"
+      - text: "もう一つは、自分の体や生き方は自分で決める、という価値観の広がりです。"
+      - text: "誰と、どう働くかを本人が選ぶのなら、外から一方的に断罪すべきではない。こうした考え方が、以前より共有されるようになりました。"
+      - text: "これらは、外見の価値の上昇という大きな流れと、たがいに補強し合っているのです。"
+    telop: "補強① 働き方の多様化／補強② 自己決定の価値観"
+    readings:
+      - surface: "肩書き"
+        reading: "カタガキ"
+      - surface: "断罪"
+        reading: "ダンザイ"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。二条の光が床で重なる画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_in
+        visual_intent: "ルッキズムだけでは説明できない＝暗い部屋に別々の窓から差し込む二条の光が、足元で重なる"
+        cut_reason: "【留保と追加】キュー1〜2『ルッキズムの加速だけで説明できるわけではない』『これと重なり合う変化がある』。二条の光の重なりが『重なり合う変化』をそのまま示す"
+        gen_prompt: "a person standing in a dark empty room where two separate shafts of light enter from different windows and overlap on the floor at their feet, dust drifting in both beams"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: parallax_left
+        visual_intent: "働き方の多様化＝深夜のカフェで、それぞれ別のテーブルに一人で座り、自分の画面の光だけに照らされている人たち"
+        cut_reason: "【補強①の提示】キュー3〜4『一つは働き方の多様化』『個人が自分の名前で発信し、収入を得られる時代になった』。別々の人が別々の場所で一人で働く画で多様化を示す"
+        gen_prompt: "several people working alone at separate tables in a dim late night cafe, each face lit only by the glow of their own laptop, no text, no lettering on the screens, the rest of the room in darkness"
+
+      - type: image
+        from: 5
+        slot: 4
+        visual_intent: "肩書きの向こうにいる一人の個人＝楽屋の鏡の前で化粧を落とし、素顔に戻っていく女性"
+        cut_reason: "【肩書きから個人へ】キュー5〜7『職業はどんな人物かで見られる』『肩書きの向こうにいる一人の個人の物語が見えるようになった』『これが偏見をやわらげます』。同じ主張の展開なので1枚で持たせる"
+        gen_prompt: "a woman sitting alone at a backstage mirror wiping off her make-up with a cotton pad, the bulbs around the mirror the only light in the dark dressing room, her stage costume hanging behind her"
+
+      - type: image
+        from: 8
+        slot: 5
+        motion: parallax_right
+        visual_intent: "自分の体や生き方は自分で決める＝夜の分かれ道で、自分の意思で一方へ歩き出す人の後ろ姿"
+        cut_reason: "【補強②の提示】キュー8〜9『もう一つは、自分の体や生き方は自分で決めるという価値観』『誰とどう働くかを本人が選ぶのなら』。論拠が別系統に移る"
+        gen_prompt: "a person seen from behind at a night crossroads choosing one of two lit paths and walking into it, a street lamp marking each road, the road they did not take falling into darkness"
+
+      - type: diagram
+        from: 10
+        cut_reason: "【二つの補強の統合】キュー10〜11『こうした考え方が共有されるようになった』『これらは外見の価値の上昇と、たがいに補強し合っている』。二つの補強要因が本線へ収束する構造なので図解で章を締める"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: work
+              text: 働き方の多様化
+              at: 10
+            - id: self
+              text: 自己決定の価値観
+              at: 10
+              after: 以前より共有される
+          result:
+            text: 外見価値の上昇を補強
+            at: 11
+            after: 大きな流れと
+
+  # ============================================================
+  # シーン7「反証の検討」 キュー15本 / 推定 86秒（＋章カード3秒＋強調3秒）
+  #   1 ここで、立ち止まって反論を検討しなければなりません。
+  #   2 誠実な解説は、…逃げないからです。
+  #   3 第一に、因果の向きです。
+  #   4 SNSがルッキズムを生んだのか、…増幅しただけなのか。
+  #   5 これは、簡単には決められません。
+  #   6 ですから正確には、…「加速装置」と言うべきでしょう。
+  #   7 第二に、ルッキズムは諸刃の剣だ、ということです。
+  #   8 外見を重んじる社会は、…厳しく裁く社会でもあります。
+  #   9 つまり、ルッキズムの加速は、受容と排除の、両方を強めうるのです。
+  #  10 にもかかわらず、なぜ受容の側に振れるのか。
+  #  11 それは、これらの職業が、…仕事だからです。
+  #  12 外見が高く評価される時代において、…追い風を受けやすい。
+  #  13 第三に、整形を受け入れることと、…別の問題です。
+  #  14 両者を同じものとして語るのは、乱暴です。
+  #  15 ただ、どちらも「美や性をめぐる古いタブーがゆるんでいる」…でしょう。
+  # ============================================================
+  - id: 7
+    title: "反証の検討"
+    chapter_title: "反証の検討"
+    visual_intent: "振り返る人影・向かい合う椅子・フェーダー・両刃の刃と、反証ごとに象徴を切り替え、放射図解で受容と排除の両義性を見せる"
+    key_color: "#7D5A2E"
+    narration:
+      - text: "ここで、立ち止まって反論を検討しなければなりません。誠実な解説は、自分に都合の悪い見方からも、逃げないからです。"
+      - text: "第一に、因果の向きです。SNSがルッキズムを生んだのか、それとも、もともとあった傾向を、SNSが増幅しただけなのか。これは、簡単には決められません。ですから正確には、SNSは原因というより「加速装置」と言うべきでしょう。"
+      - text: "第二に、ルッキズムは諸刃の剣だ、ということです。外見を重んじる社会は、美しい人に好意を向けると同時に、人を見た目で値踏みし、外見が基準に満たない人を、厳しく裁く社会でもあります。"
+      - text: "つまり、ルッキズムの加速は、受容と排除の、両方を強めうるのです。"
+        pause_after: 0.5
+      - text: "にもかかわらず、なぜ受容の側に振れるのか。それは、これらの職業が、まさに「美しさ」を価値として提供する仕事だからです。外見が高く評価される時代において、美を体現する人は、追い風を受けやすい。"
+      - text: "第三に、整形を受け入れることと、性産業を受け入れることは、本来、別の問題です。両者を同じものとして語るのは、乱暴です。"
+      - text: "ただ、どちらも「美や性をめぐる古いタブーがゆるんでいる」という、同じ時代の空気を映している、とは言えるでしょう。"
+    telop: "反証① 因果の向き／② 諸刃の剣／③ 整形容認≠性産業の受容"
+    readings:
+      - surface: "諸刃の剣"
+        reading: "モロハノツルギ"
+      - surface: "値踏み"
+        reading: "ネブミ"
+    emphasis:
+      - at: 4
+        text: "受容と排除、両方を強める"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。暗い廊下で足を止めて振り返る画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_in
+        visual_intent: "立ち止まって反論を検討する＝暗い廊下の途中で足を止め、来た方向を振り返る人物"
+        cut_reason: "【姿勢の宣言】キュー1〜2『立ち止まって反論を検討しなければならない』『都合の悪い見方からも逃げない』。歩みを止めて振り返る画で章の姿勢を示す"
+        gen_prompt: "a person stopping halfway down a dark corridor and turning to look back the way they came, a single ceiling light directly above them, the far end of the corridor black"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: parallax_left
+        visual_intent: "因果の向き＝暗い部屋に向かい合わせに置かれた二脚の椅子。どちらが先かは決まらない"
+        cut_reason: "【反証①】キュー3〜4『第一に、因果の向き。SNSが生んだのか、もともとの傾向を増幅しただけなのか』。どちらが先か決められないことを対称の画で見せる"
+        gen_prompt: "two empty chairs facing each other in a black empty room, a single hard light from above falling exactly between them, their shadows stretching away in opposite directions"
+
+      - type: image
+        from: 5
+        slot: 4
+        visual_intent: "SNSは加速装置＝暗い調整室で、フェーダーを一気に押し上げる手"
+        cut_reason: "【反証①の整理】キュー5〜6『簡単には決められない』『SNSは原因というより加速装置と言うべき』。原因から増幅装置へ言い直す位置で、画も装置へ切り替える"
+        gen_prompt: "a hand pushing a single fader all the way up on a dark audio console, the level meters beside it glowing bright, no text, no lettering on the console, the room behind unlit"
+
+      - type: image
+        from: 7
+        slot: 5
+        motion: parallax_in
+        visual_intent: "諸刃の剣＝暗闇に垂直に立てられた両刃の刃。片方の刃に暖色、もう片方に冷たい光が乗る"
+        cut_reason: "【反証②】キュー7『第二に、ルッキズムは諸刃の剣だ』。4秒と短いのは、比喩を一撃で見せてすぐ説明へ渡すため"
+        gen_prompt: "a person's hand resting on the hilt of a double edged blade standing upright in a black void, one edge catching warm amber light and the other a cold blue reflection, nothing else visible in the frame"
+
+      - type: diagram
+        from: 8
+        cut_reason: "【値踏みと選別】キュー8〜9『好意を向けると同時に、値踏みし、厳しく裁く』『受容と排除の両方を強めうる』。一つの社会から相反する評価が同時に広がる構造なので、放射の図解で見せる"
+        diagram:
+          type: narrative
+          layout: radiate
+          center:
+            icon: groups
+            text: 外見を重んじる社会
+            at: 8
+          items:
+            - id: favor
+              text: 好意を向ける
+              at: 8
+              after: 好意を向ける
+            - id: judge
+              text: 見た目で値踏み
+              at: 8
+              after: 値踏みし
+            - id: exclude
+              text: 厳しく裁く
+              at: 8
+              after: 基準に満たない人を
+          turn:
+            at: 9
+            after: 受容と排除の
+
+      - type: typo
+        at: 4
+        cut_reason: "【無音3秒】決め文「受容と排除、両方を強める」の強調カット"
+
+      - type: image
+        from: 10
+        slot: 6
+        visual_intent: "なぜ受容の側に振れるのか＝暗いラウンジのカウンターの内側で、照明を受けて立つ女性"
+        cut_reason: "【反論への応答】キュー10〜11『にもかかわらず、なぜ受容の側に振れるのか』『美しさを価値として提供する仕事だから』。問いと答えを1枚で受ける"
+        gen_prompt: "a woman standing behind a bar counter in a dark lounge, a warm spotlight falling on her and the polished counter, the empty seats in front of her lost in shadow"
+
+      - type: image
+        from: 12
+        slot: 7
+        motion: parallax_left
+        visual_intent: "美を体現する人は追い風を受ける＝夜の街で、風に髪と衣服をなびかせ、光を背にして立つ人物"
+        cut_reason: "【追い風】キュー12『美を体現する人は、追い風を受けやすい』。応答の言い切りに合わせて、画も追い風そのものにする"
+        gen_prompt: "a woman standing on a night street with her hair and coat streaming in a strong wind, a bright light source behind her turning her into a rim lit silhouette, the street beyond her dark"
+
+      - type: image
+        from: 13
+        slot: 8
+        motion: parallax_right
+        visual_intent: "整形と性産業は本来別の問題＝暗い場所で二手に分かれる道。それぞれ別の灯りに照らされている"
+        cut_reason: "【反証③】キュー13〜14『整形と性産業は本来別の問題』『同じものとして語るのは乱暴』。二手に分かれる道で『別の問題』であることを示す"
+        gen_prompt: "a person standing where a dark path splits into two separate roads, each road lit by a lamp of a different colour, the ground between the two roads in deep shadow"
+
+      - type: image
+        from: 15
+        slot: 9
+        motion: parallax_in
+        visual_intent: "古いタブーがゆるんでいる＝古い錠前が外れかけ、扉のすきまから光が漏れている"
+        cut_reason: "【章の結び】キュー15『どちらも美や性をめぐる古いタブーがゆるんでいる、同じ時代の空気を映している』。ゆるんだ錠前で章を閉じる"
+        gen_prompt: "a person's hand lifting a heavy old padlock that has come loose on a weathered door, a thin blade of warm light escaping through the gap of the opening door, the rest of the frame black"
+
+  # ============================================================
+  # シーン8「結論」 キュー10本 / 推定 62秒（＋章カード3秒＋強調3秒）
+  # ビート割り・gen_prompt・motion は R19.12 検証済み（build/r19-12/scene38-beats.yaml のシーン2）
+  # をそのまま流用。
+  # ============================================================
+  - id: 8
+    title: "結論"
+    chapter_title: "結論"
+    visual_intent: "撚り合わさる紐で単一原因の否定を示し、光る写真の壁・立ちのぼる光・開く扉と進み、収束と選別の図解を挟んで格子の影で閉じる"
+    key_color: "#5A2E7D"
+    narration:
+      - text: "では、結論です。"
+        pause_after: 0.5
+      - text: "キャバ嬢やAV女優が、以前より受け入れられるようになった背景に、単一の原因はありません。けれども、その中心には、写真を中心としたSNSがもたらした「外見の価値の上昇」があります。"
+      - text: "ハロー効果によって、美しさは人格の良さと結びつけられ、美の経済的プレミアムが示すように、美しさはもともと価値を持っていました。"
+      - text: "SNSは、その価値をさらに押し上げ、整形容認という形で、「美は手に入れてよいもの」という規範を広げました。"
+      - text: "そこに、働き方の多様化と、自己決定を重んじる価値観が、重なります。"
+      - text: "こうして、外見を価値とする職業への偏見は、やわらいでいったのです。"
+      - text: "ただし、忘れてはいけません。同じルッキズムの力は、人を見た目で選別する圧力にも、なります。"
+      - text: "私たちが手にしたのは、自由であると同時に、新しい息苦しさでもあるのです。"
+    telop: "結論 ― 外見価値の上昇が中心、ただし両義的"
+    readings:
+      - surface: "選別"
+        reading: "センベツ"
+      - surface: "息苦しさ"
+        reading: "イキグルシサ"
+    emphasis:
+      - at: 8
+        text: "自由と新しい息苦しさ"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。夜景の俯瞰を強く落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: parallax_in
+        visual_intent: "単一の原因はない、けれども結論は一つ＝別々の細い紐が一本の太い綱に撚り合わさる一点を、細い暖色の光が舐める"
+        cut_reason: "【結論の入り】キュー1「では、結論です」＋キュー2「単一の原因はありません」。複数の紐が1本に撚り合わさる画は『原因は一つではない（筋は複数ある）』と『それでも結論は一つに束ねられる』を同時に読ませる。押し込みのドリフトで束ねを出す"
+        gen_prompt: "several separate thin ropes of different thicknesses running in from the darkness across a dark wooden table and twisting together into one single thick braided rope, a narrow warm key light raking across the exact point where the strands merge, the far ends of the ropes disappearing into blackness"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: zoom_out
+        visual_intent: "外見の価値の上昇＝壁一面を埋める無数の小さな光る写真、中央の一枚だけが強く輝く"
+        cut_reason: "【否定から中心の提示へ】「けれども、その中心には、写真を中心としたSNSがもたらした『外見の価値の上昇』があります」。逆接で論の中心が置かれる最大の節目。光る写真の壁は『写真SNS』と『価値の上昇』を1枚で兼ねるので分割しない"
+        gen_prompt: "a dark wall completely covered with countless small glowing rectangles of light arranged in a grid like a wall of photographs, one rectangle near the centre burning far brighter than the rest, the room around the wall unlit"
+
+      - type: diagram
+        from: 4
+        cut_reason: "【積み上げた論拠の統合】ここだけは列挙＋収束の構造なので図解に切り替える。2つの論拠が語と同期して現れ、最後に1つの結論へ収束する"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: halo
+              text: ハロー効果
+              at: 4
+              after: ハロー効果によって
+            - id: premium
+              text: 経済的プレミアム
+              at: 4
+              after: 経済的プレミアムが
+          result:
+            text: 美しさは価値になる
+            at: 4
+            after: 美しさはもともと
+
+      - type: image
+        from: 5
+        slot: 4
+        motion: parallax_in
+        visual_intent: "SNSが価値をさらに押し上げる＝無数のスマートフォンの光が夜空へ立ちのぼる"
+        cut_reason: "【図解の結論を受ける】図解が「美しさは価値になる」で終わった直後に「SNSは、その価値をさらに押し上げ…」が来る。立ちのぼる光が押し上げを直接受ける"
+        gen_prompt: "countless raised smartphones held up in a dark crowd at night, their screens sending thin columns of pale light upward into the black sky, the people themselves only silhouettes"
+
+      - type: image
+        from: 6
+        slot: 5
+        motion: parallax_right
+        visual_intent: "働き方の多様化と自己決定＝暗い部屋でリングライトに照らされ一人で配信する人の後ろ姿"
+        cut_reason: "【補強要因の追加】「そこに、働き方の多様化と、自己決定を重んじる価値観が、重なります」。論拠が別系統に移る"
+        gen_prompt: "seen from behind, a person sitting alone in a dark room facing a camera on a tripod, a ring light throwing a circle of cool white light onto their shoulders and the wall, the rest of the apartment unlit"
+
+      - type: image
+        from: 7
+        slot: 6
+        motion: parallax_in
+        visual_intent: "偏見がやわらいでいく＝暗い廊下の扉が開き、光が床に長く広がる"
+        cut_reason: "【帰結】「こうして、外見を価値とする職業への偏見は、やわらいでいったのです」。積み上げの帰結"
+        gen_prompt: "a heavy door standing ajar at the end of a black corridor, warm light pouring through the opening and spreading in a long wedge across the floor, the walls of the corridor barely readable in the dark"
+
+      - type: image
+        from: 8
+        slot: 7
+        motion: zoom_in
+        visual_intent: "ただし、忘れてはいけません＝黒い虚空に置かれた一脚の椅子を、真上から硬い光が射抜く"
+        cut_reason: "【最大の転換：ただし】肯定の帰結から留保へ。2.6秒と短いのは一撃の文に合わせた意図的な短さ"
+        gen_prompt: "a single empty wooden chair standing alone in a completely black void, one harsh narrow overhead light striking it from directly above and carving a small bright pool around it, the cone of light visible in haze, nothing else in the frame"
+
+      - type: diagram
+        from: 9
+        cut_reason: "【留保の中身】「人を見た目で選別する圧力」。選別は図で見せた方が速い。横並びの人型のうち2体だけが点灯し、残りは暗く沈む"
+        diagram:
+          type: narrative
+          layout: row
+          count: 8
+          select:
+            at: 9
+            lit: [3, 6]
+          caption:
+            at: 9
+            after: 選別する圧力
+            text: 選ばれる人／選ばれない人
+
+      - type: image
+        from: 10
+        slot: 8
+        motion: parallax_left
+        visual_intent: "自由であると同時に新しい息苦しさ＝大きな窓から光が差すが、窓枠の影が格子のように床に落ちる"
+        cut_reason: "【結び】「私たちが手にしたのは、自由であると同時に、新しい息苦しさでもある」。光と格子が両義性そのもの"
+        gen_prompt: "a tall window in a dark empty room letting in a single sheet of pale light, the window frame casting a hard grid of shadow bars across the bare floor, the ceiling and walls dissolving into black"
+
+      - type: typo
+        at: 8
+        cut_reason: "【無音3秒】結びの決め文「自由と新しい息苦しさ」の強調カット"
+
+  # ============================================================
+  # シーン9「まとめ」 キュー7本 / 推定 40秒（＋章カード3秒）
+  #   1 最後に、今日の要点を振り返ります。
+  #   2 第一に、人には「美しいものは善い」と感じる、根深い心理がある。
+  #   3 第二に、写真SNSの普及が、…外見の価値と整形容認を広げた。
+  #   4 第三に、それが、…偏見をやわらげた。
+  #   5 そして第四に、その同じ力は、…新しい圧力にもなる。
+  #   6 受容の、その裏側にあるものまで含めて見つめること。
+  #   7 それが、この変化を考えるうえで、いちばん大切な視点なのかもしれません。
+  # ============================================================
+  - id: 9
+    title: "まとめ"
+    chapter_title: "まとめ"
+    visual_intent: "閉じかけたノートの一拍から、4点が語順に現れて一つの視点へ収束する図解を通しで見せ、夜明けの窓辺の後ろ姿で閉じる"
+    key_color: "#5A2E7D"
+    narration:
+      - text: "最後に、今日の要点を振り返ります。"
+      - text: "第一に、人には「美しいものは善い」と感じる、根深い心理がある。"
+      - text: "第二に、写真SNSの普及が、その心理を加速させ、外見の価値と整形容認を広げた。"
+      - text: "第三に、それが、働き方の多様化や、自己決定の価値観と重なり、美を価値とする職業への偏見をやわらげた。"
+      - text: "そして第四に、その同じ力は、人を外見で選別する、新しい圧力にもなる。"
+      - text: "受容の、その裏側にあるものまで含めて見つめること。それが、この変化を考えるうえで、いちばん大切な視点なのかもしれません。"
+    telop: "まとめ（4点）"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。閉じかけたノートの画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        motion: zoom_out
+        visual_intent: "要点を振り返る＝暗い机の上、消えかけたランプの下で閉じられようとしているノート"
+        cut_reason: "【締めの入り】キュー1『最後に、今日の要点を振り返ります』。2.9秒の短い一拍で、視点を机の上へ戻す"
+        gen_prompt: "a person's hands closing a notebook on a dark desk under a dimming lamp, the pages blank with no writing, the edges of the room already dark"
+
+      - type: diagram
+        from: 2
+        cut_reason: "【4点の再構成】キュー2〜6は4つの要点の列挙と、その結び。1点ずつ語順に合わせて現れ、最後に『受容の裏側まで見る』へ収束する。列挙構造そのものが主張なので、通しで1つの図解に持たせる"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: p1
+              text: 美は善いという心理
+              at: 2
+              after: 美しいものは善い
+            - id: p2
+              text: 写真SNSの加速
+              at: 3
+              after: 写真SNSの普及が
+            - id: p3
+              text: 多様化・自己決定
+              at: 4
+              after: 自己決定の価値観と重なり
+            - id: p4
+              text: 選別の圧力にもなる
+              at: 5
+              after: 人を外見で選別する
+          result:
+            text: 受容の裏側まで見る
+            at: 6
+            after: その裏側にあるもの
+
+      - type: image
+        from: 7
+        slot: 3
+        motion: parallax_in
+        visual_intent: "いちばん大切な視点＝夜明け前の窓辺に立ち、こちらに背を向けて遠くを見ている人物"
+        cut_reason: "【結び】キュー7『それが、この変化を考えるうえで、いちばん大切な視点なのかもしれません』。図解から人の後ろ姿へ戻し、動画を閉じる"
+        gen_prompt: "a person standing alone with their back to us at a wide window before dawn, the first cold light outlining their shoulders, the room behind them still in darkness"
