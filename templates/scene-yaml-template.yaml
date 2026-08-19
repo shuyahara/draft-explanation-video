@@ -15,6 +15,11 @@
 # シーンごとに、図解・検索クエリ・生成プロンプトより先に「ビジュアル意図」（visual_intent。
 # どんな絵で見せたいか）を1〜2文で決める。画面構成は3種類（全画面実写=assetsのみ／
 # 図解のみ=diagramのみ／背景付き図解=diagram+assets併記）。詳細はCLAUDE.md「図解スクリプト」を参照。
+#
+# v6以降の標準は beats[] によるビート運用（このファイルの id: 9 参照。詳細はCLAUDE.md
+# 「ビート運用」）。beatsを使うシーンでは assets/gen_prompt/search_query/diagram/diagrams/
+# cutaways をシーン直下に書けない（エラー。すべて対応するビートが持つ）。
+# id: 1〜8 は非ビート運用（v5互換の単一主視覚構成）の型見本として残置している。
 
 video:
   title: "{動画タイトル}"
@@ -241,3 +246,49 @@ scenes:
             icon: fact_check
             text: 運用の定期点検
             at: 5
+
+  # 以降、beats（ビート運用。v6以降の標準）の例。詳細はCLAUDE.md「ビート運用」を参照。
+  # ビート境界は字幕キューの機械分割ではなく「話題・主張・場面が変わる意味の節目」に置く。
+  # 各ビートに cut_reason（なぜここで画を切り替えるか）を必ず書く。
+
+  - id: 9                        # beats の例: image / diagram(narrative) / typo / chapter
+    title: "論証⑤: ハロー効果（ビート運用）"
+    chapter_title: "論証5 ハロー効果"  # 章の先頭シーンでは chapter_title が必須（先頭chapterビートと対応）
+    narration:                    # narration・emphasis は従来どおり音声・強調カットの正本
+      - text: "これから心理学の知見を紹介します。まず学問的な背景から見ていきましょう。"
+      - text: "ハロー効果とは，ある特徴の評価が他の評価に影響する現象です。"
+        pause_after: 0.3
+      - text: "温かく，社交的で，能力も高いと推測されるのです。"
+      - text: "美しいものは善いという思い込みが働いています。"
+    emphasis:                     # 従来どおり。文言・尺の正本はここ（typoビートは文言を持たない）
+      - at: 4
+        text: "美しいものは善い"
+    beats:                        # シーンの映像トラック。from/atはナレーション本文の「。！？」区切り
+      - type: chapter              # シーンの先頭ビートとしてのみ許可（chapter_titleがあるとき必須）
+        slot: 1                    # 任意。下地に使う採用素材のスロット番号
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1                    # 字幕キュー1（このシーン内の通し番号）から
+        slot: 2
+        # motionは原則省略（既定parallax。方向はツールが自動割り当て）。意味がある時だけ明示する。
+        visual_intent: "暗い書斎の古い心理学書と一条の斜光で学問的背景を示す"
+        gen_prompt: "a worn hardcover book lying open on a dark wooden desk, pages blurred and unreadable, cinematic side light"  # 文字物（book）を描くため偽文字対策の句を必須で添える
+        cut_reason: "【学問的背景の提示】キュー1〜2はどちらも『これから心理学の知見を持ち出す』という同じ動作なので1枚で持たせる"
+
+      - type: diagram
+        from: 4                    # このビートの範囲内（次のビートのfrom-1まで）でatを付ける
+        cut_reason: "【結果の提示】結果は列挙構造なので図解に切り替える"
+        diagram:
+          type: narrative           # ビート運用でのdiagram第一候補
+          layout: radiate
+          center: {icon: person, text: "魅力的な外見", at: 4}
+          items:                    # atはセグメント番号ではなく字幕キュー番号
+            - {id: warm, text: "温かい人柄", at: 4, after: "温かく"}
+            - {id: social, text: "社交的", at: 4, after: "社交的で"}
+            - {id: able, text: "能力が高い", at: 4, after: "能力も高い"}
+          turn: {at: 4, after: "推測されるのです"}  # 任意。既出itemsがアクセント色へ転じる
+
+      - type: typo                  # 文言を持たない。atでemphasis[].atを指すだけ
+        at: 4                        # emphasis[].at と一致させる（文言はemphasis[].textが正）
+        cut_reason: "【無音3秒】決め文の強調カット"
