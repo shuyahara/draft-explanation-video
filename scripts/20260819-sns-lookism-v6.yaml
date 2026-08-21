@@ -489,26 +489,39 @@ scenes:
         gen_prompt: "the pendulum of an old wall clock still swinging in a dark deserted room, a thin band of light crossing its brass disc, the clock face turned away and unreadable, everything else in shadow"
 
   # ============================================================
-  # シーン5「論証3 整形容認への橋渡し」 キュー10本 / 推定 83秒（＋章カード3秒＋強調3秒）
+  # シーン5「論証3 整形容認への橋渡し」 キュー17本 / 推定 約113秒（＋章カード3秒＋強調3秒）
+  # Issue #12: 「評価の順序がルックス先行になる」＋ハロー効果との相乗効果の論点をキュー2〜8に追加
+  # （旧キュー2以降は+7ずれ。新規の実証的主張・出典は追加していない）。
   #   1 そして、写真を中心としたSNSは、私たちの行動そのものを変えました。
-  #   2 2021年に発表された、若い女性を対象とする研究があります。
-  #   3 インスタグラムで、有名人や自分自身の写真に…高まっていたのです。
-  #   4 実際、整形を望む理由として…報告もあります。
-  #   5 ここから、重要な橋渡しが見えてきます。
-  #   6 第一に、整形を受け入れるということは、…ということです。
-  #   7 すると、見た目を磨き、…やわらいでいきます。
-  #   8 第二に、ハロー効果によって、…好意的に解釈されます。
-  #   9 だから、外見が評価の中心にある職業の女性たちは、…受け取られやすくなる。
-  #  10 外見の価値が上がる社会とは、…社会でもあるのです。
+  #   2 考えてみてください。                                                 ← 追加（#12）
+  #   3 写真SNSの画面で最初に目に入るのは、その人の人格でも、経歴でも、肩書きでもありません。 ← 追加（#12）
+  #   4 顔と、姿です。                                                       ← 追加（#12）
+  #   5 つまり、評価の入口が、ルックスになるのです。                          ← 追加（#12）
+  #   6 そこに、先ほどのハロー効果が重なります。                              ← 追加（#12）
+  #   7 最初に目に入った外見の印象が、あとから知る人柄の評価まで染めていく。    ← 追加（#12）
+  #   8 写真SNSとハロー効果は、たがいを強め合う関係にあるのです。              ← 追加（#12）
+  #   9 2021年に発表された、若い女性を対象とする研究があります。（旧キュー2）
+  #  10 インスタグラムで、有名人や自分自身の写真に…高まっていたのです。（旧キュー3）
+  #  11 実際、整形を望む理由として…報告もあります。（旧キュー4）
+  #  12 ここから、重要な橋渡しが見えてきます。（旧キュー5）
+  #  13 第一に、整形を受け入れるということは、…ということです。（旧キュー6）
+  #  14 すると、見た目を磨き、…やわらいでいきます。（旧キュー7）
+  #  15 第二に、ハロー効果によって、…好意的に解釈されます。（旧キュー8）
+  #  16 だから、外見が評価の中心にある職業の女性たちは、…受け取られやすくなる。（旧キュー9）
+  #  17 外見の価値が上がる社会とは、…社会でもあるのです。（旧キュー10）
   # ============================================================
   - id: 5
     title: "論証③ 写真SNSが整形容認を広げる（論理の橋渡し）"
     chapter_title: "論証3 整形容認への橋渡し"
-    visual_intent: "スマホの光に照らされた比較の情景から、細い橋の一拍を挟んで規範の反転を図解し、支度・光の輪・広告の光へと当事者の側へ運ぶ"
+    visual_intent: "スマホの画面に映る顔と姿から、ルックス先行の評価順序とハロー効果が重なる相乗図解（#12）を経て、研究紹介・比較の情景から、細い橋の一拍を挟んで規範の反転を図解し、支度・光の輪・広告の光へと当事者の側へ運ぶ"
     key_color: "#2E7D5B"
     narration:
       - text: "そして、写真を中心としたSNSは、私たちの行動そのものを変えました。"
         pause_after: 0.3
+      - text: "考えてみてください。写真SNSの画面で最初に目に入るのは、その人の人格でも、経歴でも、肩書きでもありません。顔と、姿です。つまり、評価の入口が、ルックスになるのです。"
+        pause_after: 0.6
+      - text: "そこに、先ほどのハロー効果が重なります。最初に目に入った外見の印象が、あとから知る人柄の評価まで染めていく。写真SNSとハロー効果は、たがいを強め合う関係にあるのです。"
+        pause_after: 0.5
       - text: "2021年に発表された、若い女性を対象とする研究があります。"
         pause_after: 0.2
       - text: "インスタグラムで、有名人や自分自身の写真に関わる活動が多い人ほど、他人と自分の容姿を比べる傾向が強まり、その結果として、美容整形を受け入れる気持ちが高まっていたのです。"
@@ -529,8 +542,12 @@ scenes:
         reading: "セイケイ"
       - surface: "容認"
         reading: "ヨウニン"
+      - surface: "肩書き"
+        reading: "カタガキ"
+      - surface: "入口"
+        reading: "イリグチ"
     emphasis:
-      - at: 6
+      - at: 8
         text: "手に入れてよいもの"
     beats:
       - type: chapter
@@ -542,15 +559,43 @@ scenes:
         slot: 2
         motion: parallax_right
         visual_intent: "写真SNSが行動を変えた＝暗い寝室で、スマートフォンの光だけに顔を照らされた若い女性"
-        cut_reason: "【行動の変化】キュー1〜2『写真SNSは私たちの行動そのものを変えた』『2021年の研究がある』。研究の紹介に入るまでを1枚で持たせる"
+        cut_reason: "【行動の変化と画面の中身】キュー1〜4『写真SNSは私たちの行動そのものを変えた』『考えてみてください。画面で最初に目に入るのは人格でも経歴でも肩書きでもない』『顔と、姿です』。スマホの画面を覗き込む同じ画のまま、ナレーションが『画面に映るのは顔と姿』と語る中身と画がそのまま一致するので1枚で持たせる"
         gen_prompt: "a young woman lying on her side in a dark bedroom scrolling a phone held close to her face, the cold light of the screen the only illumination in the room, no text, no lettering on the screen"
 
+      - type: diagram
+        from: 5
+        cut_reason: "【新規論点：評価の順序とハロー効果の相乗（#12）】キュー5〜8は『評価の入口はルックスになる』という新しい前提に、既出のハロー効果（論証1）が重なって強め合うという主張。2つの論拠が1つの結論（相乗効果）へ収束する構造なので converge で受ける。シーン3のハロー効果図解（radiate）とは型を変え、重複を避けた"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: looks_first
+              text: 評価の入口はルックス
+              at: 5
+              after: 評価の入口が
+            - id: halo_overlap
+              text: ハロー効果が重なる
+              at: 6
+              after: ハロー効果が
+          result:
+            text: たがいに強め合う
+            at: 8
+            after: たがいを強め合う
+
       - type: image
-        from: 3
+        from: 9
+        slot: 10
+        motion: zoom_in
+        visual_intent: "2021年に発表された研究＝暗い机で、開いた学術誌のページをめくる手元"
+        cut_reason: "【新規ビート（#12）：研究の紹介に戻る】キュー9『2021年に発表された、若い女性を対象とする研究があります』。相乗効果の図解から具体的な研究の年次紹介への一拍。単独では3.6〜5秒程度の短いキューだが、直後のキュー10（84字の長い1文）と同じ画で保持すると一枚絵の尺が約20秒に達し警告が出るため、新規スロットで独立させた（$0の範囲を超える唯一のビート。生成はしていない）"
+        gen_prompt: "a researcher's hand turning a page in an open academic journal on a dark desk, a warm desk lamp illuminating only the page, the printed columns out of focus with no readable print, the rest of the room black, no text, no lettering"
+
+      - type: image
+        from: 10
         slot: 3
         motion: parallax_in
         visual_intent: "有名人や自分自身の写真と自分を見比べる＝暗い部屋で腕を伸ばしてスマートフォンを掲げ、背後の鏡にも自分が映っている"
-        cut_reason: "【研究の中身】キュー3は『比較の傾向が強まり、整形容認が高まる』という研究の核。84字の長い1文なので1枚で受け、寄りのカメラで内面へ寄せる"
+        cut_reason: "【研究の中身】キュー10は『比較の傾向が強まり、整形容認が高まる』という研究の核。84字の長い1文なので1枚で受け、寄りのカメラで内面へ寄せる"
         gen_prompt: "a young woman sitting on the floor of a dark room holding her phone up at arm's length, her own reflection faintly visible in a mirror behind her, the phone light carving her profile out of the darkness, no text, no lettering on the screen"
         search_query: "woman taking selfie in front of mirror"
         assets:
@@ -566,71 +611,71 @@ scenes:
             note: "予備候補。スマートフォンで自撮りする女性"
 
       - type: image
-        from: 4
+        from: 11
         slot: 4
         visual_intent: "写真や動画で自分をよりよく見せたい＝美容クリニックの薄暗い待合で、スマートフォンを手に順番を待つ人"
-        cut_reason: "【動機の変化】キュー4『整形を望む理由として、写真や動画で自分をよりよく見せたいから、という声が増えている』。研究の話から現場の情景へ移す"
+        cut_reason: "【動機の変化】キュー11『整形を望む理由として、写真や動画で自分をよりよく見せたいから、という声が増えている』。研究の話から現場の情景へ移す"
         gen_prompt: "a woman waiting alone on a bench in a dim clinic waiting room, her hands folded over her phone, a soft light panel on the wall behind her, the corridor beyond her dark, no text, no lettering on the wall"
 
       - type: image
-        from: 5
+        from: 12
         slot: 5
         motion: parallax_right
         visual_intent: "重要な橋渡し＝暗い谷に架かる細い橋へ、人影が一歩踏み出す"
-        cut_reason: "【論理の転換点】キュー5『ここから、重要な橋渡しが見えてきます』。3.6秒と短いのは、次の論理へ渡る一拍だけを担わせる意図"
+        cut_reason: "【論理の転換点】キュー12『ここから、重要な橋渡しが見えてきます』。3.6秒と短いのは、次の論理へ渡る一拍だけを担わせる意図"
         gen_prompt: "a lone figure stepping onto a narrow footbridge that stretches out over a black gorge, a single shaft of light falling on the middle of the span, both ends of the bridge lost in darkness"
 
       - type: diagram
-        from: 6
-        cut_reason: "【橋渡しの中身①】キュー6『美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ』。前提の否定から新しい規範への転換なので図解で受け、そのまま強調カットへ渡す"
+        from: 13
+        cut_reason: "【橋渡しの中身①】キュー13『美しさは生まれつきのものではなく、努力や投資で手に入れてよいものだ』。前提の否定から新しい規範への転換なので図解で受け、そのまま強調カットへ渡す"
         diagram:
           type: narrative
           layout: converge
           items:
             - id: born
               text: 生まれつきではない
-              at: 6
+              at: 13
             - id: effort
               text: 努力や投資で得る
-              at: 6
+              at: 13
               after: 努力や投資で
           result:
             text: 手に入れてよいもの
-            at: 6
+            at: 13
             after: という考え方が
 
       - type: typo
-        at: 6
+        at: 8
         cut_reason: "【無音3秒】決め文「手に入れてよいもの」の強調カット"
 
       - type: image
-        from: 7
+        from: 14
         slot: 6
         visual_intent: "見た目を磨く職業への偏見がやわらぐ＝出勤前、電球に囲まれた鏡の前で支度を整える女性の後ろ姿"
-        cut_reason: "【帰結①】キュー7『見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます』。規範の話から、その職業の当事者の支度の場面へ落とす"
+        cut_reason: "【帰結①】キュー14『見た目を磨き、それを武器にする職業への偏見も、当然やわらいでいきます』。規範の話から、その職業の当事者の支度の場面へ落とす"
         gen_prompt: "a woman seen from behind finishing her make-up at a lit vanity mirror in an otherwise dark dressing room, the bulbs around the mirror casting a warm rim on her shoulders"
 
       - type: image
-        from: 8
+        from: 15
         slot: 7
         motion: parallax_in
         visual_intent: "ハロー効果の再登場＝暗がりでほほえむ女性の頭上に、かすかな光の輪が浮かぶ"
-        cut_reason: "【橋渡しの中身②】キュー8『第二に、ハロー効果によって、美しい人は人格まで好意的に解釈される』。論証1のキービジュアル（光の輪）を意図的に再登場させ、論の連結を画で見せる"
+        cut_reason: "【橋渡しの中身②】キュー15『第二に、ハロー効果によって、美しい人は人格まで好意的に解釈される』。論証1のキービジュアル（光の輪）を意図的に再登場させ、論の連結を画で見せる"
         gen_prompt: "a woman smiling faintly in near darkness, a thin ring of warm light hovering just above her head and casting a soft glow on her hair and shoulders, the background completely black"
 
       - type: image
-        from: 9
+        from: 16
         slot: 8
         visual_intent: "きっと魅力的な人物なのだろう＝暗いラウンジで、グラスを掲げる女性へ周囲の視線が集まる"
-        cut_reason: "【当事者への波及】キュー9『きれいなだけでなく、きっと魅力的な人物なのだろうと受け取られやすくなる』。評価される側の場面に切り替える"
+        cut_reason: "【当事者への波及】キュー16『きれいなだけでなく、きっと魅力的な人物なのだろうと受け取られやすくなる』。評価される側の場面に切り替える"
         gen_prompt: "a woman raising a glass at a table in a dark lounge, warm light falling only on her and the glass, the faces of the people around the table turned toward her and barely lit"
 
       - type: image
-        from: 10
+        from: 17
         slot: 9
         motion: parallax_left
         visual_intent: "外見の価値が上がる社会＝夜の街で、巨大な広告の光を見上げる人々"
-        cut_reason: "【章の結び】キュー10『外見の価値が上がる社会とは、外見を職業にする人たちが評価されやすい社会でもある』。個人の場面から社会全体の画へ引いて章を閉じる"
+        cut_reason: "【章の結び】キュー17『外見の価値が上がる社会とは、外見を職業にする人たちが評価されやすい社会でもある』。個人の場面から社会全体の画へ引いて章を閉じる"
         gen_prompt: "a small crowd standing on a night street looking up at an enormous illuminated advertising panel that is entirely blank with no text and no lettering, its white light washing over their upturned faces"
 
   # ============================================================
