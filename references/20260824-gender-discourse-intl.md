@@ -168,6 +168,49 @@
 
 ---
 
+## 8. 著者所属機関の確認結果（Issue #14 追加調査、2026-08-24）
+
+台本で「どこの大学の研究か」を明示するための所属機関確認。原論文の所属表記・出版社ページ・研究者本人のCV等で裏取り。ただしPNAS/Nature本体は認証リダイレクトや403で直接WebFetchできない項目があり、その場合はWebSearchのスニペット経由の確認にとどまる（個別に確度を明記する）。
+
+### Brady et al. (2017) PNAS
+- William J. Brady・Julian A. Wills・Jay J. Van Bavel：ニューヨーク大学（NYU）心理学部
+- John T. Jost：NYU心理学部・政治学部（両所属）
+- Joshua A. Tucker：NYU政治学部・ロシア/スラブ研究学部（両所属）
+- 確認経路：NYUのCenter for Social Media, AI, and Politics（CSMaP）公式サイトの研究紹介ページ、および複数の独立した二次引用が一致。
+- 確度：高
+
+### Rathje et al. (2021) PNAS
+- Steve Rathje・Sander van der Linden：ケンブリッジ大学心理学部
+- Jay J. Van Bavel：NYU心理学部・神経科学センター
+- 確認経路：論文本文の所属住所表記（"Department of Psychology, University of Cambridge, Cambridge CB2 3RQ, United Kingdom" 等）が複数の独立したWebSearchスニペットで一致。PNASページ自体はWebFetchで403（アクセス拒否）のため原文の直接目視はできず。
+- 確度：中〜高
+
+### Robertson et al. (2023) Nature Human Behaviour
+- Claire E. Robertson：NYU心理学部
+- Stefan Feuerriegel：LMUミュンヘン（LMU Munich School of Management）
+- 確認経路：nature.comは認証リダイレクトで直接取得できず、PubMed・EconPapers等の書誌情報を経由したWebSearchスニペットで確認。
+- 確度：中（原文PDFの直接確認はできていない）
+
+### Crockett (2017) Nature Human Behaviour
+- **2017年9月18日（オンライン公開）時点でイェール大学心理学部**（所属住所: 2 Hillhouse Avenue, New Haven, CT 06520／correspondence: mj.crockett@yale.edu）。
+- 背景：Crockettはオックスフォード大学でUniversity Lecturer（実験心理学部、Jesus College Tutorial Fellow）を2014年10月〜2017年7月まで務め、2017年7月にイェール心理学部Assistant Professorとして正式着任。論文のオンライン公開（2017年9月18日）はイェール着任後のため、論文記載の所属はイェールと判断。
+- 確認経路：論文PDF自体（crockettlab.org経由）はバイナリ化されWebFetchで直接読み取れず、WebSearchのスニペットが論文本文の所属記載を引用する形で複数回一致して確認。移籍時期はCrockett本人のCV・Yale Psychology公式ニュース記事等の検索結果から確認。
+- 確度：中（一次PDFの目視はできていないが、記載内容の一致と移籍タイミングの整合性から妥当性は高い）。台本では「2017年発表時点でイェール大学」としつつ、直前までオックスフォードにいた研究者であることも背景情報として使える。
+
+### Gennaro et al. (2025/2026) Political Science Research and Methods
+- 筆頭著者 Gloria Gennaro：現在はUCL（ロンドン大学カレッジ）政治学部講師だが、**本研究実施当時はETHチューリッヒ（Immigration Policy Lab）のポスドク研究員**。
+- その他の共著者：Laura Bronner・Laurenz Derksen・Selina Kurer・Philip Grech・Dominik Hangartner（責任著者）＝ETHチューリッヒ Public Policy Group。Maël Kubli・Ana Kotarcic・Karsten Donnay・Fabrizio Gilardi＝チューリッヒ大学政治学部。
+- 確認経路：Cambridge Core論文ページ（WebFetch）およびGennaro本人のUCLプロフィールページ等のWebSearchスニペット。
+- 確度：高（研究グループの主体がチューリッヒ大学／ETHチューリッヒであることは一致）
+- 台本での書き方案：「チューリッヒ大学とETHチューリッヒの研究グループ」
+
+### 田中辰雄
+- 慶應義塾大学経済学部教授（1998〜2023年）、専攻は計量経済学。『ネット炎上の研究』刊行（2016年）時点でも同学部教授。肩書きは経済学者（計量経済学）。
+- 確認経路：WebSearch経由（複数の書誌・プロフィール情報が一致）。researchmap本人ページの直接確認はしていない。
+- 確度：中〜高
+
+---
+
 ## 参考: 動画のフックに使えそうな「意外な数値」トップ3（報告用メモ）
 
 1. **Perception Gap「約2倍の過大推定」**（More in Common 2019）: 「相手陣営の過激派は55%いると思っているが実際は30%」という具体的かつ直感に反する数字。
