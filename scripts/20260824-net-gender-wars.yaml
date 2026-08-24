@@ -1,0 +1,781 @@
+# シーン YAML（ビート運用）。台本 Markdown（scripts/20260824-net-gender-wars.md、r2）に対応する
+# レンダリング指示書。Issue #14。
+# 仕様（正）: C:\Users\shuya\Projects\script-to-video\docs\schema.md（beats[] 節）
+#             C:\Users\shuya\Projects\script-to-video\docs\design-beat-rendering.md
+# 検証: cd C:\Users\shuya\Projects\script-to-video && .venv\Scripts\python.exe -m script_to_video validate <このファイル>
+#
+# ナレーション本文は台本 Markdown から一字一句そのまま転記（文言変更なし）。
+# セグメント分割は「発音・ポーズメモ」に指定された間の位置で行い、文中（読点）での分割も
+# メモの指示がある箇所（例: シーン4の数字直後、シーン7「男は、女は、」）でのみ行っている。
+#
+# 章構成: シーン1-2（導入・章カードなし）／章1 探索I（シーン3-7、key_color #2E4A7D）／
+#         章2 中盤の反転（シーン8-10、#7D5A2E）／章3 環を閉じる（シーン11-12、#2E7D5B）／
+#         章4 回帰と結び（シーン13、#2E4A7D＝章1と同色で「回帰」を示す）
+#
+# emphasis（強調カット）は各章1箇所、計4箇所: シーン5・8・11・13（理由は制作報告を参照）。
+# chart はシーン5の1箇所のみ（CLAUDE.md規約）。
+
+video:
+  title: "男女論はなぜネット上で盛り上がるのか"
+  speaker: "青山龍星"
+  resolution:
+    width: 1920
+    height: 1080
+  style: "cinematic film still, dramatic chiaroscuro lighting, a single warm key light cutting through deep shadow, high contrast, low saturation with amber highlights and cold blue shadows, shallow depth of field, subtle film grain, wide cinematic framing, dark moody atmosphere, large areas of near-black negative space, no text, no lettering, no watermark, no logo, no caption"
+  bgm: "bgm/kousatsu.mp3"
+  bgm_credit: "「考察」shimtone（DOVA-SYNDROME）"
+
+scenes:
+  # ============================================================
+  # シーン1「フック」 キュー8本
+  #  1 夜中、布団の中でスマートフォンを開く。
+  #  2 眠る前の、ほんの数分のつもりだった。
+  #  3 指がタイムラインをなぞるたびに、男か女か、どちらかを一方的に責める投稿が流れてくる。
+  #  4 誰かの一言に、何百件もの怒りのコメントがぶら下がっている。
+  #  5 既視感がある。
+  #  6 似たような言い争いを、もう何度も見た気がする。
+  #  7 それでも、指は止まらない。
+  #  8 あなたにも、覚えがあるかもしれない。
+  # ============================================================
+  - id: 1
+    title: "フック（つかみ）"
+    visual_intent: "暗い寝室で布団にくるまり、スマートフォンの光だけが手元と親指を照らす。顔にも身体全体にも寄らない構図で、スクロールする指が途中で止まる変化を見せる"
+    narration:
+      - text: "夜中、布団の中でスマートフォンを開く。眠る前の、ほんの数分のつもりだった。指がタイムラインをなぞるたびに、男か女か、どちらかを一方的に責める投稿が流れてくる。誰かの一言に、何百件もの怒りのコメントがぶら下がっている。"
+        pause_after: 0.3
+      - text: "既視感がある。似たような言い争いを、もう何度も見た気がする。それでも、指は止まらない。あなたにも、覚えがあるかもしれない。"
+        pause_after: 1.0
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "暗い寝室でスマホをスクロールする親指のクローズアップ。眠る前の数分のつもりが始まる"
+        cut_reason: "【つかみの導入①】キュー1〜2『夜、布団の中でスマホを開く。眠る前の、ほんの数分のつもりだった』という導入の一続き"
+        gen_prompt: "a thumb scrolling a smartphone in a dark bedroom at night, close-up on the glowing screen and hand only, face and body kept out of frame, blurred illegible text on the screen, low-key cinematic lighting, no lettering"
+        search_query: "hand scrolling smartphone dark bedroom night close up"
+        assets:
+          - url: "https://www.pexels.com/photo/crop-person-using-smartphone-in-dark-room-3348724/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+            note: "手元クローズアップのみで顔が写らない候補。冒頭は静止画優先の規約に合致"
+          - url: "https://pixabay.com/videos/smart-phone-mobile-phone-scrolling-169445/"
+            kind: video
+            license: commercial-ok
+            source_name: "Pixabay"
+            note: "暗い部屋でスマホをスクロールする手元の動画。冒頭は静止画優先のため予備候補扱い"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "同じ手元のまま、対立を煽る投稿が次々流れてくる。指の動きが速まる"
+        cut_reason: "【つかみの導入②】キュー3〜4『指がタイムラインをなぞるたびに対立を煽る投稿が流れてくる』『何百件もの怒りのコメントがぶら下がっている』。一枚絵の保持が20秒を超えないよう、投稿が流れ始める瞬間で1枚に分ける（R19.12）"
+        gen_prompt: "a thumb scrolling faster across a smartphone screen in a dark bedroom at night, close-up on the glowing screen and hand only, face and body kept out of frame, blurred illegible post text streaming past on the screen, low-key cinematic lighting, no lettering"
+
+      - type: image
+        from: 5
+        slot: 3
+        motion: zoom_in
+        visual_intent: "同じ手元の構図のまま、指の動きが止まる。既視感と内省への転換"
+        cut_reason: "【内面の反応への転換】キュー5〜8『既視感がある、指が止まる、あなたにも覚えがあるかもしれない』で、スクロールから静止・内省へ転じる。動きの止まりをズームで際立たせる"
+        gen_prompt: "a thumb frozen mid-scroll above a smartphone screen in a dark bedroom at night, close-up on the glowing screen and hand only, face and body kept out of frame, blurred illegible text on the screen, low-key cinematic lighting, a sense of hesitation, no lettering"
+
+  # ============================================================
+  # シーン2「問題提起（問いへの変換）」 キュー12本
+  # ============================================================
+  - id: 2
+    title: "問題提起（問いへの変換）"
+    visual_intent: "無地下地の図解（narrative・converge）。日常のどこにでもある対立の種が、際限なく続く炎上として積み重なり、中央の問い『本当に憎み合っているのか』へ収束する"
+    narration:
+      - text: "男女のどちらが得をしているか、どちらが被害者なのか。おごるべきか、割り勘か。家事は誰の仕事か。賃金の差は、誰のせいか。入り口は、日常のどこにでもある。そしてこの手の話題は、投稿するたびに反応が押し寄せ、際限なく続いていくように見える。似たようなやり取りが、毎日どこかのタイムラインで繰り返されている。コメント欄を閉じても、また別の投稿が同じ話題で燃えている。だが、少し立ち止まって考えてみてほしい。"
+        pause_after: 0.3
+      - text: "世の中は、本当にこんなに憎み合っているのだろうか。"
+        pause_after: 0.7
+      - text: "あなたも、そんな違和感を覚えたことがあるかもしれない。だとしたら、何がこの対立を、ここまで燃え上がらせているのだろうか。"
+    telop: "世の中は、本当にこんなに憎み合っているのか"
+    beats:
+      - type: diagram
+        from: 1
+        cut_reason: "【問いへの収束】シーン全体が『日常の対立の種→際限なく続く→本当に憎み合っているのか』という一つの収束構造。引き締めたい導入場面のため無地下地の図解のみで通す"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: trigger
+              text: 入り口はどこにでも
+              at: 5
+              after: 日常のどこにでもある
+            - id: spread
+              text: 際限なく続く
+              at: 6
+              after: 際限なく続いていくように見える
+            - id: repeat
+              text: 毎日繰り返される
+              at: 7
+              after: 繰り返されている
+          result:
+            text: 本当に憎み合っているのか
+            at: 10
+            after: 憎み合っているのだろうか
+
+  # ============================================================
+  # 章1「探索I」 シーン3-7（key_color #2E4A7D）
+  # ============================================================
+
+  # シーン3「燃える仕組み・理論的枠組み」 キュー5本
+  - id: 3
+    title: "探索I① 燃える仕組み（Crockett・理論的枠組み）"
+    chapter_title: "何が対立を燃え上がらせているのか"
+    key_color: "#2E4A7D"
+    visual_intent: "学問的背景の提示から、ふいごで火を煽るメタファーへ。理論の紹介から『データはどう裏付けるか』という問いへつなぐ"
+    narration:
+      - text: "手がかりは、感情を研究する心理学にある。イェール大学の心理学者クロケットは、ネット空間には道徳的な怒りを煽る仕掛けが備わっていると指摘した。"
+        pause_after: 0.3
+      - text: "怒りの引き金を増やし、怒りを表明するコストを下げ、怒ることで得られる満足感を増幅する。対面なら気まずくなるような発言も、画面の向こうでは驚くほど気軽に投稿できてしまう。"
+        pause_after: 0.3
+      - text: "これは理論として提示された枠組みだが、実際のデータはこれをどう裏付けているのだろうか。"
+    telop: "怒りの「引き金」を増幅する設計"
+    readings:
+      - surface: "クロケット"
+        reading: "クロケット"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。ふいごで火を煽る画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "学問的背景の提示。クロケットの理論を暗示する静物"
+        cut_reason: "【学問的背景の提示】キュー1〜2はどちらも『心理学の知見を持ち出す』という同じ動作なので1枚で持たせる"
+        gen_prompt: "a worn hardcover psychology book lying open on a dark wooden desk under a single narrow shaft of warm light, dust motes drifting in the beam, the rest of the room swallowed in blackness, pages out of focus with no readable print, no lettering"
+
+      - type: image
+        from: 3
+        slot: 3
+        visual_intent: "★キービジュアル。ふいごで小さな炎に風を送る静物。引き金を増やし・コストを下げ・満足感を増幅するメカニズムのメタファー"
+        cut_reason: "【メカニズムの提示】キュー3〜4『引き金を増やし、コストを下げ、満足感を増幅する』『対面なら気まずい発言も画面越しなら気軽にできる』。理論の中身を静物のメタファーで見せる"
+        gen_prompt: "a small flame being fanned by an old bellows on a dark wooden table, macro shot, glowing embers scattering into the darkness, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 5
+        slot: 4
+        motion: zoom_in
+        visual_intent: "データはこれを裏付けるのかという問い。灯る前の一つの燠火"
+        cut_reason: "【次章への橋渡し】キュー5『理論として提示された枠組みだが、データはどう裏付けているのだろうか』。まだ答えの出ていない緊張を、燃え始める前の燠火で示す"
+        gen_prompt: "a single glowing ember pulsing in complete darkness on a bed of ash, no flame yet visible, faint smoke curling upward, cinematic minimal lighting, no lettering"
+
+  # シーン4「Brady 2017・数字先出し」 キュー6本
+  - id: 4
+    title: "探索I② 感情語の拡散効果（Brady 2017）"
+    key_color: "#2E4A7D"
+    visual_intent: "大規模データの分析風景から、テーマ別の数字が同じ傾向へ収束する図解へ"
+    narration:
+      - text: "ある大規模な分析が、数字で示している。投稿に道徳や感情に関わる言葉を一語加えるだけで、拡散される確率はおよそ二割上がる。"
+        pause_after: 0.3
+      - text: "銃規制や気候変動、同性婚といった主張の強いテーマで、五十六万件を超える投稿を分析した、"
+        pause_after: 0.4
+      - text: "ニューヨーク大学の研究グループが導き出した数字だ。銃規制でおよそ19パーセント、同性婚でおよそ17パーセント、気候変動でおよそ24パーセント。テーマが変わっても、同じ傾向が確認された。怒りや義憤を込めた一言が、投稿の運命を左右している。"
+    telop: "感情の言葉ひとつで拡散+20%"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "大規模なSNS投稿データを分析する研究者の手元"
+        cut_reason: "【分析の提示】キュー1〜2『大規模な分析が数字で示している』『感情語を一語加えるだけで拡散確率が二割上がる』という導入の一続き"
+        gen_prompt: "a researcher's hand scrolling through rows of social media analytics on a glowing monitor in a dark office, the charts and text on screen reduced to an unreadable blur, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "五十六万件を超える投稿カードが壁一面に並ぶ研究資料"
+        cut_reason: "【調査規模の提示】キュー3『五十六万件を超える投稿を分析した、ニューヨーク大学の研究グループ』。規模の大きさを画で示す"
+        gen_prompt: "a corkboard covered edge to edge with hundreds of small printed social media post cards pinned in dense rows in a dim office, each card blurred with no readable text, a researcher's hand pointing at one cluster, no lettering, cinematic minimal lighting"
+
+      - type: diagram
+        from: 5
+        cut_reason: "【数値の提示】キュー5〜7は3テーマの数字とその一致という主張そのものが図。3つのテーマが同じ傾向という結論へ収束する構造なのでconvergeで見せる"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: guns
+              text: 銃規制+19%
+              at: 5
+              after: 銃規制でおよそ19パーセント
+            - id: marriage
+              text: 同性婚+17%
+              at: 5
+              after: 同性婚でおよそ17パーセント
+            - id: climate
+              text: 気候変動+24%
+              at: 5
+              after: 気候変動でおよそ24パーセント
+          result:
+            text: どのテーマでも同傾向
+            at: 6
+            after: 同じ傾向が確認された
+
+  # シーン5「Rathje 2021・結論先出し／chart使用」 キュー6本
+  - id: 5
+    title: "探索I③ 敵対語の拡散効果（Rathje 2021）"
+    key_color: "#2E4A7D"
+    visual_intent: "『誰を敵と呼ぶか』という着眼への転換から、感情語効果との倍率比較を裏取り済みの棒グラフで見せる"
+    narration:
+      - text: "実は、怒りの言葉そのものより、もっと効くものがある。相手陣営を名指しする言葉だ。ケンブリッジ大学とニューヨーク大学の共同研究によれば、敵対する側を指す言葉を一語加えるだけで、シェアされる確率はおよそ67パーセント上がる。"
+        pause_after: 0.4
+      - text: "ニュースメディアや政治家のアカウント、あわせて270万件以上の投稿を対象にした分析だ。これは、先ほどの道徳や感情の言葉が生む効果のおよそ六点七倍にあたる。感情を煽るだけでなく、誰を敵として名指しするかが、拡散の強さを決めている。"
+    telop: "「誰を敵と呼ぶか」が拡散を左右する"
+    emphasis:
+      - at: 2
+        text: "誰を敵と呼ぶかが拡散を左右"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "相手陣営を名指しする言葉。無地の名札に狙いを定めるような赤い照準の光"
+        cut_reason: "【着眼の転換】キュー1〜2『怒りの言葉よりもっと効くものがある。相手陣営を名指しする言葉だ』。名指しという行為そのものを静物のメタファーで示す"
+        gen_prompt: "a small red circular target mark of light projected onto a blank unmarked nameplate card on a dark wooden table, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "ニュースメディアや政治家アカウント、270万件以上の投稿を分析する研究の場面"
+        cut_reason: "【研究の提示】キュー3〜4『ケンブリッジ大学とニューヨーク大学の共同研究』『270万件以上の投稿を対象にした分析』。研究の規模を画で示す"
+        gen_prompt: "two researchers silhouetted against a wall of monitors displaying blurred social media feeds in a dark research lab, no readable text or lettering on the screens, cinematic minimal lighting"
+
+      - type: diagram
+        from: 5
+        cut_reason: "【倍率の提示】キュー5〜6は裏取り済みの数値（感情語効果を基準にした6.7倍）そのものが主張。本動画で唯一のchart使用箇所"
+        diagram:
+          type: chart
+          chart: bar
+          title: 拡散への影響倍率
+          unit: "倍"
+          source: "Rathje et al. (2021), PNAS 118(26)"
+          series:
+            - color: accent
+              at: 5
+              points:
+                - {label: 道徳感情語, value: 1.0}
+                - {label: ネガティブ感情語, value: 1.4}
+                - {label: 敵対語, value: 6.7}
+
+      - type: typo
+        at: 2
+        cut_reason: "【無音3秒】決め文「誰を敵と呼ぶかが拡散を左右」の強調カット（章1の強調・1箇所目）"
+
+  # シーン6「Robertson 2023・意外性の転回」 キュー10本
+  - id: 6
+    title: "探索I④ 意外な転回（Robertson 2023・怒りではなく悲しみ）"
+    key_color: "#2E4A7D"
+    visual_intent: "見出し比較実験の紹介から、怒りは無関係・効くのは悲しみという意外な結果への収束。二人称の呼びかけと、政治・宗教と男女論を分ける問いで章を閉じる"
+    narration:
+      - text: "では、怒りという感情そのものはどうなのか。ここで意外な結果が出てくる。あるニュースサイトは、同じ記事の見出しの言葉だけを変えて配信する比較実験を、日々繰り返していた。その記録、五百七十万回分のクリックを、ニューヨーク大学などの研究チームが分析している。見出しにネガティブな言葉が一語増えるごとに、クリック率はおよそ二点三パーセント上がっていた。ただし、怒りという感情単体には、統計的に見て有意な効果がなかった。効いていたのは、むしろ悲しみの表現だったという。"
+        pause_after: 0.3
+      - text: "あなたが思わずクリックしてしまった見出しにも、同じ仕掛けが隠れていたかもしれない。"
+        pause_after: 0.4
+      - text: "だが、燃える仕組みが同じなら、政治も宗教も、同じように燃えるはずだ。なぜ、男と女の話だけが、これほど特別に燃え続けるのだろうか。"
+        pause_after: 1.0
+    telop: "効くのは「怒り」ではなく「悲しみ」だった"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "見出しの比較実験を始める前の一瞬。手元でスマホの画面をためらう"
+        cut_reason: "【問いの転換】キュー1〜2『怒りという感情そのものはどうなのか』『ここで意外な結果が出てくる』。次の意外な展開を予告する導入"
+        gen_prompt: "a hand hovering hesitantly over a smartphone displaying a blurred news headline in a dim room, no readable text or lettering on the screen, cinematic minimal lighting"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "見出しのA/B比較実験と、五百七十万回分のクリックデータを分析する研究チーム"
+        cut_reason: "【実験の提示】キュー3〜4『同じ記事の見出しの言葉だけを変えて配信する比較実験』『五百七十万回分のクリックを分析している』。一つの状態の画（複数見出しの併記は避ける）で示す"
+        gen_prompt: "a hand adjusting a headline preview on a glowing screen, a stack of printed click-through reports beside it on a dark desk showing rows of blurred numbers, no readable text or lettering, cinematic minimal lighting"
+
+      - type: diagram
+        from: 5
+        cut_reason: "【結果の提示】キュー5〜7『クリック率+2.3%』『怒りは有意差なし』『効くのは悲しみ』という3段階の意外な結果。converge型で時系列順に見せる"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: negative
+              text: ネガティブ語で反応増
+              at: 5
+              after: クリック率はおよそ二点三パーセント上がっていた
+            - id: anger_null
+              text: 怒りは無関係
+              at: 6
+              after: 有意な効果がなかった
+          result:
+            text: 効くのは悲しみ
+            at: 7
+            after: 悲しみの表現だった
+
+      - type: image
+        from: 8
+        slot: 3
+        visual_intent: "二人称の呼びかけ。視聴者自身の手元でスマホを構えるPOV"
+        cut_reason: "【視聴者への呼びかけ】キュー8『あなたが思わずクリックしてしまった見出しにも、同じ仕掛けが隠れていたかもしれない』。一人称視点で自分ごと化させる"
+        gen_prompt: "a first-person point of view of a hand holding a smartphone close to the camera in a dark room, a blurred headline glowing on the screen with no readable text, intimate framing, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "章末の問い。複数の小さな焚き火の中で一つだけ際立って大きく燃える炎"
+        cut_reason: "【章末の問いへの橋渡し】キュー9〜10『燃える仕組みが同じなら政治も宗教も燃えるはず』『なぜ男女の話だけが特別に燃え続けるのか』。他の話題と男女論の燃え方の違いを一枚で示し、次シーンへ問いを渡す"
+        gen_prompt: "several small campfires burning at different distances across a vast dark field, one fire in the foreground burning noticeably larger and brighter than the rest, no lettering, cinematic wide framing"
+
+  # シーン7「なぜ男女論は特別に燃えるのか」 キュー10本
+  - id: 7
+    title: "探索I⑤ なぜ男女論は特別に燃えるのか（瀬地山角）"
+    key_color: "#2E4A7D"
+    visual_intent: "距離を置ける対立と、当事者になってしまう男女論の対比から、薪の山にマッチが近づく『燃える条件が揃っている』というメタファーへ。誰が火をつけているのかという問いで章を閉じる"
+    narration:
+      - text: "理由の一つは、話題の性質そのものにある。政治の対立なら、距離を置ける人がいる。宗教の論争なら、無関係でいられる人も多い。だが男女の話題は、ほぼすべての人が、どちらかの当事者だ。先ほどの、敵を名指しする言葉の効果を思い出してほしい。"
+        pause_after: 0.3
+      - text: "男は、"
+        pause_after: 0.25
+      - text: "女は、"
+        pause_after: 0.25
+      - text: "という大きな主語が使われた瞬間、タイムラインの半分にとって、それは自分への攻撃になる。残りの半分にとっては、代弁になる。東京大学でジェンダー論を教える瀬地山角氏は、広告の炎上を分析し、性役割や容姿をめぐって、同じ型の炎上が何度も繰り返されていることを示した。つまり男女論は、燃えるための条件が、最初からすべて揃っている話題なのだ。"
+        pause_after: 0.3
+      - text: "では、その燃えやすい話題に、実際に火をつけているのは、一体どんな人たちなのだろうか。"
+        pause_after: 1.0
+    telop: "ほぼ全員が「当事者」になる話題"
+    readings:
+      - surface: "瀬地山角"
+        reading: "セチヤマカク"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "距離を置いて小さな言い争いを遠くから眺める人物"
+        cut_reason: "【対比①：距離を置ける対立】キュー1〜3『政治の対立なら距離を置ける人がいる。宗教の論争なら無関係でいられる人も多い』"
+        gen_prompt: "a person standing at a safe distance in the dark, arms crossed, watching a small heated argument between blurred silhouettes far off, unable to be drawn in, no lettering, cinematic lighting"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "対比②：ほぼ全員が当事者になる、密集した群衆の中の一人"
+        cut_reason: "【対比②：当事者にされる男女論】キュー4〜5『だが男女の話題は、ほぼすべての人がどちらかの当事者だ』。距離を置けない状況へ画を反転させる"
+        gen_prompt: "a person standing shoulder to shoulder inside a dense crowd at night, unable to step back, faces indistinct in the low light, no lettering, cinematic wide framing"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "大きな主語で名指しされた瞬間、光と影で半分ずつに分かれる一人の顔"
+        cut_reason: "【名指しの一撃】キュー6〜9『男は、女は、という大きな主語が使われた瞬間、半分にとって攻撃、残り半分にとって代弁になる』。一人の人物の半身を光と影に分けて『どちらか』の分断を示す"
+        gen_prompt: "a person flinching slightly as if struck by an invisible word, half of their face lit and half in deep shadow, dark empty room, no lettering, cinematic lighting"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "瀬地山角氏の研究。広告の炎上事例の切り抜きを机に広げる研究者"
+        cut_reason: "【研究の提示】キュー10『瀬地山角氏は、広告の炎上を分析し、同じ型の炎上が何度も繰り返されていることを示した』"
+        gen_prompt: "a scholar in a dim office reviewing a stack of printed advertisement clippings spread across a desk, a lamp casting warm light, the clippings blurred with no readable print, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "★キービジュアル。よく乾いた薪の山に、火のついたマッチが近づく静物"
+        cut_reason: "【燃える条件のメタファー】キュー11『男女論は、燃えるための条件が最初からすべて揃っている話題なのだ』"
+        gen_prompt: "a single lit match approaching a neatly stacked pile of dry kindling on a dark wooden table, warm glow on the wood, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 12
+        slot: 6
+        visual_intent: "章末の問い。薪が小さく燃え始め、火をつけた者の輪郭だけが端に見える"
+        cut_reason: "【次章への橋渡し】キュー12『実際に火をつけているのは、一体どんな人たちなのだろうか』。誰が火をつけたのかという謎を残して章2『では、誰がその声をあげているのか』へ渡す"
+        gen_prompt: "the same pile of dry kindling now catching a small flame at its base in the dark, thin smoke rising, a shadowy figure just visible at the edge of the frame holding the match, no lettering, cinematic lighting"
+
+  # ============================================================
+  # 章2「中盤の反転」 シーン8-10（key_color #7D5A2E）
+  # ============================================================
+
+  # シーン8「山口真一・田中辰雄、日本の実態」 キュー8本
+  - id: 8
+    title: "中盤の反転① 書き込むのはわずか0.5%（山口・田中）"
+    chapter_title: "では、誰がその声をあげているのか"
+    key_color: "#7D5A2E"
+    visual_intent: "六万人規模調査の紹介から、ごくわずかな粒だけが下に落ちる『ふるい』のメタファーで少数派の実態を示す"
+    narration:
+      - text: "国際大学の山口真一氏と、慶應義塾大学の経済学者、田中辰雄氏は、2014年と2016年の二回、合計六万人規模の調査を行った。あわせてツイッターの分析も組み合わせ、炎上に実際に書き込む人の割合を調べている。対象は、50回以上リツイートされ、まとめサイトができるほど広がった炎上だ。結果は意外なものだった。"
+        pause_after: 0.3
+      - text: "一年以内に書き込んだ人は、ネットユーザーの"
+        pause_after: 0.3
+      - text: "およそ0.5パーセント。"
+        pause_after: 0.3
+      - text: "過去に一度でも書き込んだことがある人まで含めても、"
+        pause_after: 0.3
+      - text: "1.1パーセントにとどまる。"
+        pause_after: 0.3
+      - text: "書き込む動機の六割から七割は正義感で、属性としては男性、それも主任や係長クラス以上の人が多かった。荒れているように見える議論の裏側には、ごく限られた書き手しかいない。"
+    telop: "書き込んでいるのは、わずか0.5%"
+    readings:
+      - surface: "主任"
+        reading: "シュニン"
+      - surface: "係長"
+        reading: "カカリチョウ"
+    emphasis:
+      - at: 3
+        text: "書き込みはわずか0.5%"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。人の粒をふるいにかける画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "六万人規模の調査データを分析する研究者"
+        cut_reason: "【調査の提示】キュー1『山口真一氏と田中辰雄氏が2014年と2016年の二回、合計六万人規模の調査を行った』"
+        gen_prompt: "two researchers reviewing a thick stack of survey printouts spread across a dark desk lamp-lit table, the columns blurred with no readable print, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 2
+        slot: 3
+        visual_intent: "ツイッター分析と、リツイートで広がる炎上の可視化"
+        cut_reason: "【分析手法の提示】キュー2〜3『ツイッターの分析も組み合わせ、書き込む人の割合を調べている』『対象は50回以上リツイートされ広がった炎上』"
+        gen_prompt: "a researcher's hands sorting printed social media analytics sheets on a dark table, a monitor behind them showing blurred spreading network diagrams with no readable text, no lettering, cinematic minimal lighting"
+
+      - type: diagram
+        from: 4
+        cut_reason: "【結果の提示】キュー4〜8は『結果は意外なものだった』に続く核心の数字。10粒のうちごくわずかだけが点灯する構図で、書き込む人のわずかさを示す"
+        diagram:
+          type: narrative
+          layout: row
+          count: 10
+          icon: person
+          select:
+            at: 6
+            lit: [1]
+          caption:
+            at: 8
+            after: 1.1パーセントにとどまる
+            text: 書き込むのは1%未満
+
+      - type: typo
+        at: 3
+        cut_reason: "【無音3秒】決め文「書き込みはわずか0.5%」の強調カット（章2の強調・1箇所目）"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "書き込む人の属性。深夜、オフィスで一人PCに向かう男性"
+        cut_reason: "【属性の提示】キュー9『動機の六割から七割は正義感で、属性としては男性、主任や係長クラス以上が多かった』"
+        gen_prompt: "a man in a business shirt typing intently on a laptop at a dark office desk late at night, his face lit only by the screen's glow, the screen blank and unreadable, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 10
+        slot: 5
+        motion: zoom_out
+        visual_intent: "書き手の少なさ。オフィスの窓明かりが一つだけ灯る夜のビル外観へ引く"
+        cut_reason: "【章末の締め】キュー10『荒れているように見える議論の裏側には、ごく限られた書き手しかいない』。一枚絵の保持が20秒を超えないよう分割し（R19.12）、個人の机から夜のビル全体へ引いて『限られた書き手』の少なさを俯瞰で見せる"
+        gen_prompt: "a wide view of a dark office building at night with only a single lit window among dozens of dark ones, no lettering on the building, cinematic wide framing"
+
+  # シーン9「Pew・Gennaro、海外での再現」 キュー9本（数字直後ポーズのため文中分割あり）
+  - id: 9
+    title: "中盤の反転② 海外での再現（Pew・Gennaro）"
+    key_color: "#7D5A2E"
+    visual_intent: "拡声器を持つ1人と、黙って並ぶ大勢。アメリカの国政ツイートとスイスのヘイトスピーチ、いずれも少数の書き手に集中する調査データが同じ結論へ収束する"
+    narration:
+      - text: "日本だけの現象ではない。アメリカでは、国政に関する投稿の97パーセントが、わずか10パーセントのユーザーから発信されているという調査結果がある。2019年、ピュー・リサーチ・センターが、無作為に抽出したおよそ2400人のアカウントと、110万件を超える投稿を分析して報告した数字だ。ヘイトスピーチについても、同じような偏りが見つかっている。チューリッヒ大学とスイス連邦工科大学の研究グループが、スイスの投稿データを調べたのだ。"
+        pause_after: 0.3
+      - text: "上位1パーセントの投稿者がヘイトスピーチ全体の"
+        pause_after: 0.25
+      - text: "46パーセントを、上位5パーセントの投稿者が"
+        pause_after: 0.25
+      - text: "83パーセントを生み出していた。国や話題が変わっても、対立を煽る声の大半は、ごく一部の書き手から出ている。"
+    telop: "国政ツイートの97%は上位10%から"
+    readings:
+      - surface: "ピュー・リサーチ・センター"
+        reading: "ピューリサーチセンター"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "拡声器を持つ1人と、黙って並ぶ大勢。国政投稿の集中を示す"
+        cut_reason: "【日本以外での再現①】キュー1〜2『日本だけの現象ではない』『国政に関する投稿の97%が、わずか10%のユーザーから発信されている』"
+        gen_prompt: "a single person holding a megaphone standing on a small platform above a vast silent crowd in the dark, faint rippling light waves spreading outward from the megaphone, no lettering, cinematic wide framing"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "ピュー・リサーチ・センターの調査データを分析する研究者"
+        cut_reason: "【調査①の提示】キュー3『2019年、ピュー・リサーチ・センターが、およそ2400人のアカウントと110万件を超える投稿を分析して報告した』"
+        gen_prompt: "a researcher's hands sorting through printed data tables spread across a dark desk, a single desk lamp illuminating the sheets, the columns blurred with no readable print, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 4
+        slot: 3
+        visual_intent: "チューリッヒ大学とスイス連邦工科大学の研究チームがヘイトスピーチデータを調べる"
+        cut_reason: "【調査②の提示】キュー4〜5『ヘイトスピーチについても同じような偏りが見つかっている』『チューリッヒ大学とスイス連邦工科大学の研究グループがスイスの投稿データを調べた』"
+        gen_prompt: "a small team of researchers gathered around a glowing monitor displaying blurred data charts in a dim university office at night, no readable text or lettering on the screen, cinematic lighting"
+
+      - type: diagram
+        from: 6
+        cut_reason: "【数値の提示】キュー6〜9『上位1%が46%、上位5%が83%を生み出す』という偏りの数字が、国や話題を越えて同じ結論に収束する"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: top1
+              text: 上位1%が46%
+              at: 7
+              after: 46パーセントを
+            - id: top5
+              text: 上位5%が83%
+              at: 8
+              after: 83パーセントを生み出していた
+          result:
+            text: 少数が生み出す偏り
+            at: 9
+            after: ごく一部の書き手から出ている
+
+  # シーン10「Perception Gap」 キュー9本
+  - id: 10
+    title: "中盤の反転③ 認識のずれ（Perception Gap）"
+    key_color: "#7D5A2E"
+    visual_intent: "相手側は攻撃的に見えるという感覚のずれを『思っていた過激派の割合55%』対『実際の割合30%』の比較で示し、視聴者自身の思い込みへ二人称で呼びかける"
+    narration:
+      - text: "それでも、相手側は攻撃的な人ばかりに見えることがある。なぜだろうか。アメリカの政治的分断を対象にした調査機関、モア・イン・コモンが2019年に行った調査は、この感覚のずれを数字にしている。2018年の中間選挙の直後、およそ2100人のアメリカの成人を対象に行われた調査だ。人々は、対立する陣営のおよそ55パーセントが過激な意見を持っていると考えていた。だが、実際に過激な意見を持つ人は、およそ30パーセントに過ぎなかった。"
+        pause_after: 0.4
+      - text: "あなたが相手側を思い浮かべるとき、その印象は実態よりずっと過激に膨らんでいないだろうか。これはアメリカの政治的対立を対象にした調査だが、男女をめぐる対立にも同じ歪みが起きていると考えるのは、それほど不自然ではないはずだ。"
+        pause_after: 0.3
+      - text: "では、なぜこれほど少数の声が、社会全体を覆っているかのように見えてしまうのだろうか。"
+        pause_after: 1.0
+    telop: "「相手は55%が過激」→実際は30%"
+    readings:
+      - surface: "モア・イン・コモン"
+        reading: "モアインコモン"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "相手側を警戒して見る人物。攻撃的に見えることへの違和感"
+        cut_reason: "【感覚のずれの提起】キュー1〜2『相手側は攻撃的な人ばかりに見えることがある。なぜだろうか』"
+        gen_prompt: "a person peering warily from behind a doorway at a distant blurred crowd across a dark street, their expression tense, no lettering, cinematic lighting"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "モア・イン・コモンによる大規模世論調査の実施風景"
+        cut_reason: "【調査の提示】キュー3〜4『モア・イン・コモンが2019年に行った調査』『2018年の中間選挙の直後、およそ2100人を対象に行われた調査』"
+        gen_prompt: "a researcher checking off responses on a clipboard survey form at a dark polling station table, a line of blurred figures waiting in the background, the form blurred and unreadable, no lettering, cinematic lighting"
+
+      - type: diagram
+        from: 5
+        cut_reason: "【対比の提示】キュー5〜6『思っていた過激派の割合55%』対『実際の割合30%』。認識と実態のずれそのものが主張なのでcomparison型で見せる（narrativeでは対比の値そのものを示せないため型を検討した上で選択）"
+        diagram:
+          type: comparison
+          left_title: 思っていた割合
+          right_title: 実際の割合
+          pairs:
+            - label: 過激な意見
+              left: "55%"
+              right: "30%"
+              at: 6
+              accent: right
+
+      - type: image
+        from: 7
+        slot: 3
+        visual_intent: "二人称の呼びかけ。実物より膨らんで見える人影の影"
+        cut_reason: "【視聴者への呼びかけ】キュー7〜8『あなたが相手側を思い浮かべるとき、その印象は実態よりずっと過激に膨らんでいないだろうか』『男女をめぐる対立にも同じ歪みが起きていると考えるのは不自然ではない』"
+        gen_prompt: "a person's silhouette casting a distorted, larger-than-life shadow on a wall in a dark room, the shadow's proportions exaggerated beyond the person's real size, no lettering, cinematic lighting"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "章末の問い。小さな人影が壁全体を覆う巨大な影を落とす"
+        cut_reason: "【次章への橋渡し】キュー9『なぜこれほど少数の声が、社会全体を覆っているかのように見えてしまうのだろうか』。影のモチーフを引き継ぎつつ、次章『なぜ少数の声があんなに大きく見えるのか』へ問いを渡す"
+        gen_prompt: "a single small silhouette casting an enormous shadow across an entire dark wall, dwarfing the space around it, no lettering, cinematic wide framing"
+
+  # ============================================================
+  # 章3「環を閉じる」 シーン11-12（key_color #2E7D5B）
+  # ============================================================
+
+  # シーン11「メカニズムの接続」 キュー9本
+  - id: 11
+    title: "環を閉じる① メカニズムの接続（注意経済）"
+    chapter_title: "なぜ少数の声が大きく見えるのか"
+    key_color: "#2E7D5B"
+    visual_intent: "拡散されやすい投稿と、それを書く少数の人という二つの事実がつながる。注意経済の仕組みを通って、小さな声が画面いっぱいに増幅される拡声器のメタファー"
+    narration:
+      - text: "答えは、ここまで見てきた二つの事実をつなげると見えてくる。怒りや敵対の言葉を含む投稿は拡散されやすい。そして、そうした投稿を書いているのは、ごく一部の人たちだ。多くのプラットフォームは、画面を見てもらう時間を長くすることで収益を得る仕組みで動いている。注意を引きつけることそのものが、利益に直結する。いわゆる注意経済と呼ばれる仕組みだ。だから、拡散されやすい投稿ほど、より多くの人の目に触れる場所へ押し上げられていく。結果として、少数の声が、実際の数よりもずっと大きな声として画面に映し出される。"
+        pause_after: 0.4
+      - text: "あなたが日々目にしている対立的な投稿も、この仕組みに押し上げられた、ごく一部の声かもしれない。"
+        pause_after: 0.3
+    telop: "少数の声が、拡声器で増幅される"
+    emphasis:
+      - at: 1
+        text: "少数の声が大きく見える"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。拡声器の画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "二つの事実がつながる。二条の光る糸が暗闇の中で一点に収束していく"
+        cut_reason: "【二つの事実の接続】キュー1〜3『二つの事実をつなげると見えてくる。拡散されやすい投稿。書いているのはごく一部の人たち』を、二つの光の糸が合流する画で示す"
+        gen_prompt: "two glowing filament threads slowly converging toward a single point in complete darkness, sparking faintly where they meet, no lettering, cinematic minimal lighting"
+
+      - type: diagram
+        from: 4
+        cut_reason: "【増幅メカニズムの提示】キュー4〜8はプラットフォームの収益構造・注意経済・押し上げの仕組みという因果の流れ。中心から要素が広がるradiateで見せる"
+        diagram:
+          type: narrative
+          layout: radiate
+          center:
+            text: 収益を得る仕組み
+            at: 4
+            after: 収益を得る仕組みで動いている
+          items:
+            - id: economy
+              text: 注意経済
+              at: 6
+              after: 注意経済と呼ばれる仕組みだ
+            - id: push
+              text: 多くの目に触れる
+              at: 7
+              after: より多くの人の目に触れる場所へ押し上げられていく
+            - id: amplified
+              text: 大きな声に見える
+              at: 8
+              after: 大きな声として
+          turn:
+            at: 8
+            after: 画面に映し出される
+
+      - type: typo
+        at: 1
+        cut_reason: "【無音3秒】決め文「少数の声が大きく見える」の強調カット（章3の強調・1箇所目）"
+
+      - type: image
+        from: 9
+        slot: 3
+        visual_intent: "二人称の呼びかけ。視聴者自身のスマホから波紋のように光が広がる"
+        cut_reason: "【視聴者への接続】キュー9『あなたが日々目にしている対立的な投稿も、この仕組みに押し上げられた、ごく一部の声かもしれない』。シーン1・2の手元モチーフに戻し、視聴者自身の画面に接続する"
+        gen_prompt: "a hand holding a smartphone in a dark room, the glow illuminating just the fingers and edge of the screen, faint ripples of light emanating outward from the screen into the darkness like sound waves, the screen blank and unreadable, no lettering, cinematic lighting"
+
+  # シーン12「日本の実例・留保」 キュー10本
+  - id: 12
+    title: "環を閉じる② 日本での実例と留保（Tonami et al. 2022）"
+    key_color: "#2E7D5B"
+    visual_intent: "日本の男女論での実例を三層構造の図解で示したあと、盛り上がり方が作られたものでも問題自体は消えないという留保を、静かなトーンで示す"
+    narration:
+      - text: "この増幅の連鎖は、日本の男女論でも実際に観察されている。ある女性ジャーナリストに向けられた誹謗中傷、二千八百件あまりの返信を分析した研究がある。攻撃の中心にいたのは、ごく少数のインフルエンサーだった。その投稿が引用されて広まると、呼応するユーザーが続き、最後に荒らしが群がる。研究チームはこれを、三つの層からなる構造として描き出した。少数の声が、仕組みによって増幅されていく流れが、そのまま観察された形だ。"
+        pause_after: 0.7
+      - text: "ただし、間違えてはいけない。盛り上がり方が作られたものだとしても、そこで議論されている問題そのものが消えるわけではない。賃金の差や、見えにくい不公平は、対立の演出とは関係なく、現実として残り続けている。"
+        pause_after: 0.3
+      - text: "だとしたら、私たちはこの画面の向こうの熱量と、どう付き合えばいいのだろうか。"
+        pause_after: 1.0
+    telop: "拡散の中心は、少数のインフルエンサー"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "日本の男女論でも同じ連鎖が起きている。通知バッジが急速に増えるスマホ画面"
+        cut_reason: "【日本での実例へ】キュー1『この増幅の連鎖は、日本の男女論でも実際に観察されている』"
+        gen_prompt: "a smartphone screen glowing in a dark room, a single reply notification badge multiplying rapidly into dozens as the screen is watched, the screen blank and unreadable, no lettering, cinematic minimal lighting"
+
+      - type: diagram
+        from: 2
+        cut_reason: "【実例の構造提示】キュー2〜6は誹謗中傷の三層構造（引用拡散・呼応ユーザー・荒らし）という具体的な観察結果。中心の発信源から波及するradiateで示す"
+        diagram:
+          type: narrative
+          layout: radiate
+          center:
+            text: 女性ジャーナリスト
+            at: 2
+            after: 女性ジャーナリスト
+          items:
+            - id: quote
+              text: 引用で拡散
+              at: 4
+              after: 引用されて広まると
+            - id: echo
+              text: 呼応するユーザー
+              at: 4
+              after: 呼応するユーザーが続き
+            - id: troll
+              text: 最後に荒らし
+              at: 4
+              after: 最後に荒らしが群がる
+          turn:
+            at: 6
+            after: そのまま観察された形だ
+
+      - type: image
+        from: 7
+        slot: 2
+        visual_intent: "留保の始まり。静かな部屋で揺らがず灯り続ける一本のろうそくの炎"
+        cut_reason: "【留保①：静かなトーンへ】キュー7〜8『ただし、間違えてはいけない』『盛り上がり方が作られたものだとしても、問題そのものが消えるわけではない』。図解の追加要素を出さず、画面を静かに保つ指示に沿って落ち着いた静物に切り替える"
+        gen_prompt: "a single steady candle flame standing still in a dark room, undisturbed, its light constant and calm, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 9
+        slot: 3
+        visual_intent: "留保②：賃金の差や見えにくい不公平という、現実に残り続けるもの"
+        cut_reason: "【留保②：現実として残るもの】キュー9〜10『賃金の差や、見えにくい不公平は、現実として残り続けている』『この熱量とどう付き合えばいいのだろうか』。章末の問いで章4へ渡す"
+        gen_prompt: "a pair of pay slips lying side by side on a dark table, one slightly thicker than the other, both blurred with no readable numbers, a single lamp casting quiet even light, no lettering, cinematic minimal lighting"
+
+  # ============================================================
+  # 章4「回帰と結び」 シーン13（key_color #2E4A7D＝章1と同色で回帰を示す）
+  # ============================================================
+  - id: 13
+    title: "回帰と結び"
+    chapter_title: "その声の大きさは、正しさなのか"
+    key_color: "#2E4A7D"
+    visual_intent: "シーン1への回帰。同じ暗い部屋・スマートフォンの光の構図だが、指の動きが止まり、画面をそっと伏せる変化を見せる。顔には寄らない"
+    narration:
+      - text: "もう一度、あの夜のことを思い出してほしい。布団の中でタイムラインをなぞっていたときの、あの感覚を。世の中は、本当にこんなに憎み合っているのだろうか。データは、一つの答えを返してきた。国も文化も違う、いくつもの調査が、同じ結論にたどり着いていた。憎み合っているように見せていたのは、ごく少数の声だった。あなたが感じていた静かな違和感のほうが、統計の示す現実に近かったのかもしれない。騒がしいタイムラインの向こうにも、同じように静かな違和感を抱えている人が、きっといるはずだ。"
+        pause_after: 0.4
+      - text: "だから、画面の中の激しさに、あなたの世界観を明け渡さないでほしい。"
+        pause_after: 1.1
+      - text: "声の大きさは、正しさでもなければ、多数でもないのだから。"
+        pause_after: 1.2
+    telop: "声の大きさは、正しさでも多数でもない"
+    emphasis:
+      - at: 3
+        text: "正しさでも多数でもない"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。暗い寝室でスマホを見つめる指の画を落として章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "★回帰。シーン1と同じ暗い寝室・スマホの光の構図だが、指は動かず止まっている"
+        cut_reason: "【冒頭への回帰】キュー1〜4『もう一度、あの夜のことを思い出してほしい』『世の中は本当にこんなに憎み合っているのだろうか』『データは一つの答えを返してきた』。シーン1のキービジュアルへ意図的に回帰させる"
+        gen_prompt: "a thumb resting motionless above a smartphone screen in a dark bedroom at night, close-up on the glowing screen and hand only, face and body kept out of frame, blurred illegible text on the screen, low-key cinematic lighting, no lettering"
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "国も文化も違う調査が同じ結論に収束する。暗闇の中で複数の光の糸が一点に集まる"
+        cut_reason: "【裏取りの一致】キュー5〜6『国も文化も違う、いくつもの調査が同じ結論にたどり着いていた』『憎み合っているように見せていたのは、ごく少数の声だった』"
+        gen_prompt: "faint glowing threads of light converging from multiple distant points across a pitch black surface toward a single bright point, no lettering, cinematic minimal lighting"
+
+      - type: image
+        from: 7
+        slot: 4
+        visual_intent: "二人称の呼びかけ。遠く離れた場所で同じように静かにスマホの光を見つめる人々"
+        cut_reason: "【視聴者への接続】キュー7〜8『あなたが感じていた静かな違和感のほうが、統計の示す現実に近かったのかもしれない』『同じように静かな違和感を抱えている人が、きっといるはずだ』"
+        gen_prompt: "several separate smartphone screens glowing softly in the darkness at a distance from each other, like scattered quiet lights in the night, no readable text on the screens, no lettering, cinematic wide framing"
+
+      - type: image
+        from: 9
+        slot: 5
+        visual_intent: "画面をそっと伏せる。決め文が流れる間、画面の光が静かに消えていく"
+        cut_reason: "【結びへの静止】キュー9〜10『画面の中の激しさに、世界観を明け渡さないでほしい』『声の大きさは、正しさでもなければ、多数でもないのだから』。手が画面をそっと伏せ、決め文の間も同じ画のまま光が消えていく"
+        gen_prompt: "a hand gently placing a smartphone face-down on a nightstand in a dark bedroom, the blank unreadable screen's glow fading as it turns away, no lettering, cinematic minimal lighting"
+
+      - type: typo
+        at: 3
+        cut_reason: "【無音3秒】動画全体の結び。決め文「正しさでも多数でもない」の強調カット（章4の強調・1箇所目）"
