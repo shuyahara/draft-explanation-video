@@ -181,9 +181,9 @@ scenes:
       - type: image
         from: 1
         slot: 1
-        visual_intent: "大規模なSNS投稿データを分析する研究者の手元"
+        visual_intent: "大規模なSNS投稿データを分析する女性研究者の横顔（モニターの光）"
         cut_reason: "【分析の提示】キュー1〜2『大規模な分析が数字で示している』『感情語を一語加えるだけで拡散確率が二割上がる』という導入の一続き"
-        gen_prompt: "a researcher's hand scrolling through rows of social media analytics on a glowing monitor in a dark office, the charts and text on screen reduced to an unreadable blur, no lettering, cinematic minimal lighting"
+        gen_prompt: "a female researcher seen in profile, her face lit by the glow of a monitor showing blurred social media analytics in a dark office, the charts and text on screen reduced to an unreadable blur, no lettering, cinematic minimal lighting"
 
       - type: image
         from: 3
@@ -365,9 +365,9 @@ scenes:
       - type: image
         from: 6
         slot: 3
-        visual_intent: "大きな主語で名指しされた瞬間、光と影で半分ずつに分かれる一人の顔"
+        visual_intent: "大きな主語で名指しされた瞬間、光と影で半分ずつに分かれる一人の顔（女性。前ビートの男性と対にする）"
         cut_reason: "【名指しの一撃】キュー6〜9『男は、女は、という大きな主語が使われた瞬間、半分にとって攻撃、残り半分にとって代弁になる』。一人の人物の半身を光と影に分けて『どちらか』の分断を示す"
-        gen_prompt: "a person flinching slightly as if struck by an invisible word, half of their face lit and half in deep shadow, dark empty room, no lettering, cinematic lighting"
+        gen_prompt: "a young woman flinching slightly as if struck by an invisible word, half of her face lit and half in deep shadow, dark empty room, no lettering, cinematic lighting"
 
       - type: image
         from: 10
@@ -717,12 +717,25 @@ scenes:
         cut_reason: "【留保①：静かなトーンへ】キュー7〜8『ただし、間違えてはいけない』『盛り上がり方が作られたものだとしても、問題そのものが消えるわけではない』。図解の追加要素を出さず、画面を静かに保つ指示に沿って落ち着いた静物に切り替える"
         gen_prompt: "a single steady candle flame standing still in a dark room, undisturbed, its light constant and calm, no lettering, cinematic minimal lighting"
 
-      - type: image
+      - type: diagram
         from: 9
-        slot: 3
-        visual_intent: "留保②：賃金の差や見えにくい不公平という、現実に残り続けるもの"
-        cut_reason: "【留保②：現実として残るもの】キュー9〜10『賃金の差や、見えにくい不公平は、現実として残り続けている』『この熱量とどう付き合えばいいのだろうか』。章末の問いで章4へ渡す"
-        gen_prompt: "a pair of pay slips lying side by side on a dark table, one slightly thicker than the other, both blurred with no readable numbers, a single lamp casting quiet even light, no lettering, cinematic minimal lighting"
+        cut_reason: "【留保②：現実として残るもの】キュー9〜10『賃金の差や、見えにくい不公平は、現実として残り続けている』『この熱量とどう付き合えばいいのだろうか』。比較静物の生成が2回不合格（硬貨の刻印＝偽文字）となったため、規約に従い図解へ切替。静かな converge で章末の問いへ渡す"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: wage_gap
+              text: 賃金の差
+              at: 9
+              after: 賃金の差
+            - id: unfairness
+              text: 見えにくい不公平
+              at: 9
+              after: 見えにくい不公平
+          result:
+            text: 現実として残る
+            at: 9
+            after: 現実として
 
   # ============================================================
   # 章4「回帰と結び」 シーン13（key_color #2E4A7D＝章1と同色で回帰を示す）
