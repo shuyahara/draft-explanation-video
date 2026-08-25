@@ -90,7 +90,7 @@ scenes:
   # ============================================================
   - id: 2
     title: "問題提起（問いへの変換）"
-    visual_intent: "無地下地の図解（narrative・converge）。日常のどこにでもある対立の種が、際限なく続く炎上として積み重なり、中央の問い『男女論はなぜ炎上しがちなのか』へ収束する"
+    visual_intent: "対立の入り口→押し寄せる反応→毎日の反復を直接描写の一枚絵3枚で見せ、最後に無地図解で問い『男女論はなぜ炎上しがちなのか』へ収束させる"
     narration:
       - text: "男女のどちらが得をしているか、どちらが被害者なのか。おごるべきか、割り勘か。家事は誰の仕事か。賃金の差は、誰のせいか。入り口は、日常のどこにでもある。そしてこの手の話題は、投稿するたびに反応が押し寄せ、際限なく続いていくように見える。似たようなやり取りが、毎日どこかのタイムラインで繰り返されている。コメント欄を閉じても、また別の投稿が同じ話題で燃えている。だが、少し立ち止まって考えてみてほしい。"
         pause_after: 0.3
@@ -99,25 +99,43 @@ scenes:
       - text: "あなたも、そんな違和感を覚えたことがあるかもしれない。だとしたら、何がこの対立を、ここまで燃え上がらせているのだろうか。"
     telop: "男女論はなぜ炎上しがちなのか"
     beats:
-      - type: diagram
+      - type: image
         from: 1
-        cut_reason: "【問いへの収束】シーン全体が『日常の対立の種→際限なく続く→男女論はなぜ炎上しがちなのか』という一つの収束構造。引き締めたい導入場面のため無地下地の図解のみで通す"
+        slot: 1
+        cut_reason: "【対立の入り口】キュー1〜4は日常の言い争いの列挙。文字列挙で持たせず、男女対立そのものの直接描写で見せる（2026-08-25 試写FB）"
+        visual_intent: "深夜のキッチンで向き合って言い争う男女。どちらか一方を悪者にしない対等な構図"
+        gen_prompt: "a man and a woman arguing across a small kitchen table late at night, facing each other, both mid-gesture at the same time, tense posture, a single overhead lamp, their faces half in shadow, no text, no lettering"
+      - type: image
+        from: 5
+        slot: 2
+        cut_reason: "【際限なく押し寄せる】キュー5〜6『入り口はどこにでも』『反応が押し寄せ際限なく続く』。通知が噴き出すスマホの直接描写"
+        visual_intent: "暗いテーブルのスマホから、ぼやけた返信の泡が火の粉のように噴き上がる"
+        gen_prompt: "a smartphone lying on a dark table at night, its glowing screen erupting into a swarm of blurred reply bubbles drifting upward like embers, no readable text, no lettering"
+      - type: image
+        from: 7
+        slot: 3
+        cut_reason: "【毎日繰り返される】キュー7〜8『毎日どこかのタイムラインで』『また別の投稿が燃えている』。同じ論争が無数の画面で反復される画"
+        visual_intent: "闇の中に並ぶ無数のスマホ画面。どれも同じぼやけた論争スレッドが映る"
+        gen_prompt: "endless rows of glowing smartphone screens receding into darkness, each showing the same blurred heated comment thread, repetition fading into the distance, no readable text, no lettering"
+      - type: diagram
+        from: 9
+        cut_reason: "【問いへの収束】キュー9『立ち止まって考えてみてほしい』で情景から引き締めの無地図解へ転換し、キュー10の問いで『男女論はなぜ炎上しがちなのか』を大きく出す（2026-08-25 試写FB: 列挙は画像・問いは大きな文字）"
         diagram:
           type: narrative
           layout: converge
           items:
             - id: trigger
               text: 入り口はどこにでも
-              at: 5
-              after: 日常のどこにでもある
+              at: 9
+              after: だが
             - id: spread
               text: 際限なく続く
-              at: 6
-              after: 際限なく続いていくように見える
+              at: 9
+              after: 立ち止まって
             - id: repeat
               text: 毎日繰り返される
-              at: 7
-              after: 繰り返されている
+              at: 9
+              after: 考えてみてほしい
           result:
             text: 男女論はなぜ炎上しがちなのか
             at: 10
@@ -783,9 +801,6 @@ scenes:
       - text: "声の大きさは、正しさでもなければ、多数でもないのだから。"
         pause_after: 1.2
     telop: "声の大きさは、正しさでも多数でもない"
-    emphasis:
-      - at: 3
-        text: "正しさでも多数でもない"
     beats:
       - type: chapter
         slot: 1
@@ -819,6 +834,3 @@ scenes:
         cut_reason: "【結びへの静止】キュー9〜10『画面の中の激しさに、世界観を明け渡さないでほしい』『声の大きさは、正しさでもなければ、多数でもないのだから』。手が画面をそっと伏せ、決め文の間も同じ画のまま光が消えていく"
         gen_prompt: "a hand gently placing a smartphone face-down on a nightstand in a dark bedroom, the blank unreadable screen's glow fading as it turns away, no lettering, cinematic minimal lighting"
 
-      - type: typo
-        at: 3
-        cut_reason: "【無音3秒】動画全体の結び。決め文「正しさでも多数でもない」の強調カット（章4の強調・1箇所目）"
