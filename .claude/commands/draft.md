@@ -78,7 +78,7 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    クレジット表記文字列を `video.bgm_credit` に記録する。
 8. **シーン YAML の作成**: `templates/scene-yaml-template.yaml` を雛形に、台本の内容・裏取り済み出典・
    収集した素材候補・読み修正・ポーズ指定・図解スクリプト・ビート設計を反映したシーン YAML
-   （`scripts/YYYYMMDD-{テーマの短い名前}.yaml`）を作成する。
+   （`scripts/YYYYMMDD-{テーマの短い名前}/{同名}.yaml`）を作成する。
    - 各シーンの `visual_intent` に、手順4で決めたビジュアル意図をそのまま書く。
    - 仕様は script-to-video の `docs/schema.md` が正（`C:\Users\shuya\Projects\script-to-video\docs\schema.md`）。
      未知のフィールドはエラーになるため、スキーマにない項目は書かない。
@@ -103,8 +103,8 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    エラーが出た場合は YAML を修正し、`OK: ...` が出るまで繰り返す。ビート運用のシーンは
    `validate` が出すビート採番表・リズム警告（一枚絵20秒超・偽文字対策の欠落等）も確認する。
 10. **保存**:
-   - 台本（マスター）: `scripts/YYYYMMDD-{テーマの短い名前}.md`
-   - シーン YAML: `scripts/YYYYMMDD-{テーマの短い名前}.yaml`
+   - 台本（マスター）: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.md`
+   - シーン YAML: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.yaml`
    - 出典リストは台本末尾と `references/` にまとめる。
 
 ## 厳守事項

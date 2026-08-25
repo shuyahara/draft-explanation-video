@@ -22,7 +22,7 @@ video:
     width: 1920
     height: 1080
   style: "cinematic film still, dramatic chiaroscuro lighting, a single warm key light cutting through deep shadow, high contrast, low saturation with amber highlights and cold blue shadows, shallow depth of field, subtle film grain, wide cinematic framing, dark moody atmosphere, large areas of near-black negative space, no text, no lettering, no watermark, no logo, no caption"
-  bgm: "bgm/kousatsu.mp3"
+  bgm: "../bgm/kousatsu.mp3"
   bgm_credit: "「考察」shimtone（DOVA-SYNDROME）"
 
 scenes:

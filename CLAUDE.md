@@ -147,7 +147,7 @@ YAML はレンダリングツール [script-to-video](https://github.com/shuyaha
   - サンプル: `script-to-video/examples/sns-lookism-sample.yaml`
   - ビート運用（`beats[]`。v6 以降の標準）の設計判断は同リポジトリの
     `docs/design-beat-rendering.md` が正。詳細は後述「ビート運用」。
-- **保存先**: `scripts/{台本と同名}.yaml`。雛形は `templates/scene-yaml-template.yaml`。
+- **保存先**: `scripts/{YYYYMMDD-テーマ}/{台本と同名}.yaml`。雛形は `templates/scene-yaml-template.yaml`。
 - 未知のフィールドはツール側でエラーになる（`extra="forbid"`）。仕様にない項目は書かない。
   仕様に不足を感じた場合は独自拡張せず、まずユーザーに相談する。
 - 完成した YAML は script-to-video の `validate` サブコマンドで検証する。
@@ -500,7 +500,7 @@ v6 以降、シーンの映像トラックは `beats[]`（ビート＝画面が�
 
 ## ディレクトリ構成
 
-- `scripts/` — 台本マスター（`YYYYMMDD-{テーマ}.md`）とシーン YAML（`{同名}.yaml`）。
+- `scripts/` — 動画1本につき1フォルダ（`scripts/YYYYMMDD-{テーマ}/`）。中に台本マスター（`YYYYMMDD-{テーマ}.md`）とシーン YAML（`{同名}.yaml`）を置く。YAML の `video.bgm` は `../bgm/{曲名}.mp3`（`scripts/bgm/` は全動画共有）。
   凍結中の HeyGen 期の台本には、代わりに取り込み用 CSV（`{同名}.heygen.csv`）が付随する。
 - `references/` — 調査メモ・出典リスト・裏取り結果。
 - `templates/` — 台本の雛形（`script-template.md`）とシーン YAML の雛形
