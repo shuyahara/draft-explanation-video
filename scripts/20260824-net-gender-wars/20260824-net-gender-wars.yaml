@@ -481,9 +481,10 @@ scenes:
             at: 6
             lit: [1]
           caption:
-            at: 8
-            after: 1.1パーセントにとどまる
+            at: 6
+            after: 0.5パーセント
             text: 書き込むのは1%未満
+            # 決め文(typo)がキュー6直後にビート列を分割するため、captionは分割前に出す(2026-08-26)
 
       - type: typo
         at: 3
