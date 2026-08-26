@@ -472,8 +472,7 @@ scenes:
             at: 6
             lit: [1]
           caption:
-            at: 8
-            after: 1.1パーセントにとどまる
+            at: 7  # 早出し表示。キュー7頭から約7秒見せる（終端語after同期は一瞬で消えるため廃止。2026-08-26 試写FB）
             text: 書き込むのは1%未満
 
 
@@ -642,7 +641,7 @@ scenes:
       - type: diagram
         from: 4
         slot: 4  # 背景 = scene_11_beat2（二条の光る糸）の流用コピー。背景付き化（2026-08-25 試写FB）
-        cut_reason: "【増幅メカニズムの提示】キュー4〜8は因果の一本鎖（収益→注意経済→押し上げ→拡大されて映る）。本編唯一のメカニズム説明なので絵に逃げず、因果の順序を担うflowで見せる（beatsでは非推奨型だが一本鎖の正しい語彙のため採用。R25-4 chain 実装後に差替予定）。最終ラベルは直後のtypoとの同文重複を避けて言い換え"
+        cut_reason: "【増幅メカニズムの提示】キュー4〜8は因果の一本鎖（収益→注意経済→押し上げ→拡大されて映る）。本編唯一のメカニズム説明なので絵に逃げず、因果の順序を担うflowで見せる（beatsでは非推奨型だが一本鎖の正しい語彙のため採用。chain 実装済みだが直後シーン12がchainのため同型隣接を避け今作はflow維持）。最終ラベルは直後のtypoとの同文重複を避けて言い換え"
         diagram:
           type: flow
           steps:
@@ -700,32 +699,32 @@ scenes:
         gen_prompt: "a smartphone screen glowing in a dark room, a single reply notification badge multiplying rapidly into dozens as the screen is watched, the screen blank and unreadable, no lettering, cinematic minimal lighting"
 
       - type: diagram
-        from: 2
+        from: 3
         slot: 4  # 背景 = scene_02_beat3（無数の画面）の流用コピー。背景付き化（2026-08-25 試写FB）
-        cut_reason: "【実例の構造提示】キュー2〜6は三層構造（引用拡散・呼応・荒らし）の観察結果。層の波及=構造を担うradiate。論争画面のボケを下地に敷く"
+        cut_reason: "【実例の構造提示】キュー3〜6は三層構造の観察結果。ナレーション『3つの層からなる構造』に合わせ、層を縦に積み下向き矢印で流れを見せるchain=層の順序を担う（R26-2。radiateから差替。2026-08-26 試写FB）。論争画面のボケを下地に敷く"
         diagram:
           type: narrative
-          layout: radiate
-          center:
-            text: 女性ジャーナリスト
-            at: 2
-            after: 女性ジャーナリスト
+          layout: chain
           items:
-            - id: quote
-              text: 引用で拡散
-              at: 4
-              after: 引用されて広まると
+            - id: influencer
+              text: 少数のインフルエンサー
+              icon: record_voice_over
+              at: 3
+              after: ごく少数
             - id: echo
               text: 呼応するユーザー
+              icon: groups
               at: 4
-              after: 呼応するユーザーが続き
+              after: 呼応するユーザー
             - id: troll
-              text: 最後に荒らし
+              text: 群がる荒らし
+              icon: local_fire_department
               at: 4
-              after: 最後に荒らしが群がる
-          turn:
-            at: 6
-            after: そのまま観察された形だ
+              after: 最後に
+          caption:
+            at: 5
+            after: 3つの層
+            text: 増幅の3つの層
 
       - type: image
         from: 7
