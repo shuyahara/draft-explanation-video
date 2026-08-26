@@ -23,11 +23,11 @@
 
 video:
   title: "{動画タイトル}"
-  speaker: "青山龍星"        # 任意。既定値のため省略可（VOICEVOX話者名）
+  speaker: "青山龍星"        # 任意。VOICEVOX バックエンド時の話者名。現行標準は GCP Enceladus（レンダ時 --tts-backend gcp で指定。本欄は無視される）
   resolution:                # 任意。既定 1920x1080
     width: 1920
     height: 1080
-  style: null                 # 任意。生成AI用の共通スタイルプロンプト（全シーン共通。シーン別 gen_prompt と連結）
+  style: null                 # 任意。生成AI用の共通スタイルプロンプト（全シーン共通。シーン別 gen_prompt と連結）。台本冒頭の「トーン設計」の画風をここに反映する
   bgm: null                   # 任意。BGMファイルのパス（ファイル自体はユーザーが配置。候補選定はテキストで報告する）
   bgm_credit: null            # 任意。BGM確定後にクレジット表記文字列を記録（例: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"）。description.txtに自動転記される
 
