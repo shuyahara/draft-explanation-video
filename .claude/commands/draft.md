@@ -106,6 +106,7 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - 台本（マスター）: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.md`
    - シーン YAML: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.yaml`
    - 出典リストは台本末尾と `references/` にまとめる。
+11. **レビュー**: 最後に `/review` 相当（`tools/review/review_script.py`）を実行し、GPT の指摘を採否付きで提示する。
 
 ## 厳守事項
 
