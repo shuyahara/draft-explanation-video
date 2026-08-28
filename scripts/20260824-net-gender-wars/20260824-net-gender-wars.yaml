@@ -22,7 +22,7 @@ video:
     width: 1920
     height: 1080
   style: "cinematic film still, dramatic chiaroscuro lighting, a single warm key light cutting through deep shadow, high contrast, low saturation with amber highlights and cold blue shadows, shallow depth of field, subtle film grain, wide cinematic framing, dark moody atmosphere, large areas of near-black negative space, no text, no lettering, no watermark, no logo, no caption"
-  bgm: "bgm/kousatsu.mp3"
+  bgm: "../bgm/kousatsu.mp3"
   bgm_credit: "「考察」shimtone（DOVA-SYNDROME）"
 
 scenes:
@@ -45,6 +45,11 @@ scenes:
         pause_after: 0.3
       - text: "既視感がある。似たような言い争いを、もう何度も見た気がする。それでも、指は止まらない。あなたにも、覚えがあるかもしれない。"
         pause_after: 1.0
+    readings:
+      - surface: "怒り"
+        reading: "イカリ"
+      - surface: "何百件"
+        reading: "ナンビャッケン"
     beats:
       - type: image
         from: 1
@@ -85,38 +90,39 @@ scenes:
   # ============================================================
   - id: 2
     title: "問題提起（問いへの変換）"
-    visual_intent: "無地下地の図解（narrative・converge）。日常のどこにでもある対立の種が、際限なく続く炎上として積み重なり、中央の問い『本当に憎み合っているのか』へ収束する"
+    visual_intent: "対立の入り口→押し寄せる反応→毎日の反復を直接描写の一枚絵3枚で見せ、最後に無地図解で問い『男女論はなぜ炎上しがちなのか』へ収束させる"
     narration:
       - text: "男女のどちらが得をしているか、どちらが被害者なのか。おごるべきか、割り勘か。家事は誰の仕事か。賃金の差は、誰のせいか。入り口は、日常のどこにでもある。そしてこの手の話題は、投稿するたびに反応が押し寄せ、際限なく続いていくように見える。似たようなやり取りが、毎日どこかのタイムラインで繰り返されている。コメント欄を閉じても、また別の投稿が同じ話題で燃えている。だが、少し立ち止まって考えてみてほしい。"
         pause_after: 0.3
       - text: "世の中は、本当にこんなに憎み合っているのだろうか。"
         pause_after: 0.7
       - text: "あなたも、そんな違和感を覚えたことがあるかもしれない。だとしたら、何がこの対立を、ここまで燃え上がらせているのだろうか。"
-    telop: "世の中は、本当にこんなに憎み合っているのか"
     beats:
-      - type: diagram
+      - type: image
         from: 1
-        cut_reason: "【問いへの収束】シーン全体が『日常の対立の種→際限なく続く→本当に憎み合っているのか』という一つの収束構造。引き締めたい導入場面のため無地下地の図解のみで通す"
-        diagram:
-          type: narrative
-          layout: converge
-          items:
-            - id: trigger
-              text: 入り口はどこにでも
-              at: 5
-              after: 日常のどこにでもある
-            - id: spread
-              text: 際限なく続く
-              at: 6
-              after: 際限なく続いていくように見える
-            - id: repeat
-              text: 毎日繰り返される
-              at: 7
-              after: 繰り返されている
-          result:
-            text: 本当に憎み合っているのか
-            at: 10
-            after: 憎み合っているのだろうか
+        slot: 1
+        cut_reason: "【対立の入り口】キュー1〜4は日常の言い争いの列挙。文字列挙で持たせず、男女対立そのものの直接描写で見せる（2026-08-25 試写FB）"
+        visual_intent: "深夜のキッチンで向き合って言い争う男女。どちらか一方を悪者にしない対等な構図"
+        gen_prompt: "a man and a woman arguing across a small kitchen table late at night, facing each other, both mid-gesture at the same time, tense posture, a single overhead lamp, their faces half in shadow, no text, no lettering"
+      - type: image
+        from: 5
+        slot: 2
+        cut_reason: "【際限なく押し寄せる】キュー5〜6『入り口はどこにでも』『反応が押し寄せ際限なく続く』。通知が噴き出すスマホの直接描写"
+        visual_intent: "暗いテーブルのスマホから、ぼやけた返信の泡が火の粉のように噴き上がる"
+        gen_prompt: "a smartphone lying on a dark table at night, its glowing screen erupting into a swarm of blurred reply bubbles drifting upward like embers, no readable text, no lettering"
+      - type: image
+        from: 7
+        slot: 3
+        cut_reason: "【毎日繰り返される】キュー7〜8『毎日どこかのタイムラインで』『また別の投稿が燃えている』。同じ論争が無数の画面で反復される画"
+        visual_intent: "闇の中に並ぶ無数のスマホ画面。どれも同じぼやけた論争スレッドが映る"
+        gen_prompt: "endless rows of glowing smartphone screens receding into darkness, each showing the same blurred heated comment thread, repetition fading into the distance, no readable text, no lettering"
+      - type: image
+        from: 9
+        slot: 4
+        telop: "男女論はなぜ炎上しがちなのか"
+        visual_intent: "無数の画面が順に消灯し、1枚だけが灯り続ける。問いのテロップを重ねる"
+        cut_reason: "【問いへの転換】キュー9〜12。文字再掲のconverge図解を廃止（2026-08-25 試写FB: 見ても情報が増えない）。消灯していく画面群の一枚絵で静けさへ転じ、問いはtelopが担う"
+        gen_prompt: "rows of glowing smartphone screens in darkness switching off one after another, only a single screen remaining lit near the center of the dark field, all screens blank with no text, no readable text, no lettering"
 
   # ============================================================
   # 章1「探索I」 シーン3-7（key_color #2E4A7D）
@@ -136,6 +142,8 @@ scenes:
       - text: "これは理論として提示された枠組みだが、実際のデータはこれをどう裏付けているのだろうか。"
     telop: "怒りの「引き金」を増幅する設計"
     readings:
+      - surface: "怒り"
+        reading: "イカリ"
       - surface: "クロケット"
         reading: "クロケット"
     beats:
@@ -171,12 +179,17 @@ scenes:
     key_color: "#2E4A7D"
     visual_intent: "大規模データの分析風景から、テーマ別の数字が同じ傾向へ収束する図解へ"
     narration:
-      - text: "ある大規模な分析が、数字で示している。投稿に道徳や感情に関わる言葉を一語加えるだけで、拡散される確率はおよそ二割上がる。"
+      - text: "ある大規模な分析が、数字で示している。投稿に道徳や感情に関わる言葉を一語加えるだけで、拡散される確率はおよそ2割上がる。"
         pause_after: 0.3
-      - text: "銃規制や気候変動、同性婚といった主張の強いテーマで、五十六万件を超える投稿を分析した、"
+      - text: "銃規制や気候変動、同性婚といった主張の強いテーマで、56万件を超える投稿を分析した、"
         pause_after: 0.4
       - text: "ニューヨーク大学の研究グループが導き出した数字だ。銃規制でおよそ19パーセント、同性婚でおよそ17パーセント、気候変動でおよそ24パーセント。テーマが変わっても、同じ傾向が確認された。怒りや義憤を込めた一言が、投稿の運命を左右している。"
     telop: "感情の言葉ひとつで拡散+20%"
+    readings:
+      - surface: "怒り"
+        reading: "イカリ"
+      - surface: "56万件"
+        reading: "ゴジュウロクマンケン"
     beats:
       - type: image
         from: 1
@@ -188,13 +201,14 @@ scenes:
       - type: image
         from: 3
         slot: 2
-        visual_intent: "五十六万件を超える投稿カードが壁一面に並ぶ研究資料"
-        cut_reason: "【調査規模の提示】キュー3『五十六万件を超える投稿を分析した、ニューヨーク大学の研究グループ』。規模の大きさを画で示す"
+        visual_intent: "56万件を超える投稿カードが壁一面に並ぶ研究資料"
+        cut_reason: "【調査規模の提示】キュー3『56万件を超える投稿を分析した、ニューヨーク大学の研究グループ』。規模の大きさを画で示す"
         gen_prompt: "a corkboard covered edge to edge with hundreds of small printed social media post cards pinned in dense rows in a dim office, each card blurred with no readable text, a researcher's hand pointing at one cluster, no lettering, cinematic minimal lighting"
 
       - type: diagram
         from: 5
-        cut_reason: "【数値の提示】キュー5〜7は3テーマの数字とその一致という主張そのものが図。3つのテーマが同じ傾向という結論へ収束する構造なのでconvergeで見せる"
+        slot: 3  # 背景 = scene_04_beat1（モニタ前の研究者）の流用コピー。背景付き化（2026-08-25 試写FB）
+        cut_reason: "【数値の提示・本動画唯一のconverge】キュー5〜7は3テーマの数字の一致という主張そのものが図。構造情報=独立な3論拠の収束を担う。背景付きで無地感を消す"
         diagram:
           type: narrative
           layout: converge
@@ -212,7 +226,7 @@ scenes:
               at: 5
               after: 気候変動でおよそ24パーセント
           result:
-            text: どのテーマでも同傾向
+            text: テーマを問わず拡散増
             at: 6
             after: 同じ傾向が確認された
 
@@ -224,11 +238,16 @@ scenes:
     narration:
       - text: "実は、怒りの言葉そのものより、もっと効くものがある。相手陣営を名指しする言葉だ。ケンブリッジ大学とニューヨーク大学の共同研究によれば、敵対する側を指す言葉を一語加えるだけで、シェアされる確率はおよそ67パーセント上がる。"
         pause_after: 0.4
-      - text: "ニュースメディアや政治家のアカウント、あわせて270万件以上の投稿を対象にした分析だ。これは、先ほどの道徳や感情の言葉が生む効果のおよそ六点七倍にあたる。感情を煽るだけでなく、誰を敵として名指しするかが、拡散の強さを決めている。"
+      - text: "ニュースメディアや政治家のアカウント、あわせて270万件以上の投稿を対象にした分析だ。これは、先ほどの道徳や感情の言葉が生む効果のおよそ6.7倍にあたる。感情を煽るだけでなく、誰を敵として名指しするかが、拡散の強さを決めている。"
+        pause_after: 2.5  # 決め文の間（文字カットは使わず、画面保持+無音で取る。2026-08-26 試写FB）
     telop: "「誰を敵と呼ぶか」が拡散を左右する"
-    emphasis:
-      - at: 2
-        text: "誰を敵と呼ぶかが拡散を左右"
+    readings:
+      - surface: "怒り"
+        reading: "イカリ"
+      - surface: "270万件"
+        reading: "ニヒャクナナジュウマンケン"
+      - surface: "6.7倍"
+        reading: "ロクテンナナバイ"
     beats:
       - type: image
         from: 1
@@ -261,9 +280,6 @@ scenes:
                 - {label: ネガティブ感情語, value: 1.4}
                 - {label: 敵対語, value: 6.7}
 
-      - type: typo
-        at: 2
-        cut_reason: "【無音3秒】決め文「誰を敵と呼ぶかが拡散を左右」の強調カット（章1の強調・1箇所目）"
 
   # シーン6「Robertson 2023・意外性の転回」 キュー10本
   - id: 6
@@ -271,13 +287,16 @@ scenes:
     key_color: "#2E4A7D"
     visual_intent: "見出し比較実験の紹介から、怒りは無関係・効くのは悲しみという意外な結果への収束。二人称の呼びかけと、政治・宗教と男女論を分ける問いで章を閉じる"
     narration:
-      - text: "では、怒りという感情そのものはどうなのか。ここで意外な結果が出てくる。あるニュースサイトは、同じ記事の見出しの言葉だけを変えて配信する比較実験を、日々繰り返していた。その記録、五百七十万回分のクリックを、ニューヨーク大学などの研究チームが分析している。見出しにネガティブな言葉が一語増えるごとに、クリック率はおよそ二点三パーセント上がっていた。ただし、怒りという感情単体には、統計的に見て有意な効果がなかった。効いていたのは、むしろ悲しみの表現だったという。"
+      - text: "では、怒りという感情そのものはどうなのか。ここで意外な結果が出てくる。あるニュースサイトは、同じ記事の見出しの言葉だけを変えて配信する比較実験を、日々繰り返していた。その記録、570万回分のクリックを、ニューヨーク大学などの研究チームが分析している。見出しにネガティブな言葉が一語増えるごとに、クリック率はおよそ2.3パーセント上がっていた。ただし、怒りという感情単体には、統計的に見て有意な効果がなかった。効いていたのは、むしろ悲しみの表現だったという。"
         pause_after: 0.3
       - text: "あなたが思わずクリックしてしまった見出しにも、同じ仕掛けが隠れていたかもしれない。"
         pause_after: 0.4
       - text: "だが、燃える仕組みが同じなら、政治も宗教も、同じように燃えるはずだ。なぜ、男と女の話だけが、これほど特別に燃え続けるのだろうか。"
         pause_after: 1.0
     telop: "効くのは「怒り」ではなく「悲しみ」だった"
+    readings:
+      - surface: "怒り"
+        reading: "イカリ"
     beats:
       - type: image
         from: 1
@@ -289,29 +308,32 @@ scenes:
       - type: image
         from: 3
         slot: 2
-        visual_intent: "見出しのA/B比較実験と、五百七十万回分のクリックデータを分析する研究チーム"
-        cut_reason: "【実験の提示】キュー3〜4『同じ記事の見出しの言葉だけを変えて配信する比較実験』『五百七十万回分のクリックを分析している』。一つの状態の画（複数見出しの併記は避ける）で示す"
+        visual_intent: "見出しのA/B比較実験と、570万回分のクリックデータを分析する研究チーム"
+        cut_reason: "【実験の提示】キュー3〜4『同じ記事の見出しの言葉だけを変えて配信する比較実験』『570万回分のクリックを分析している』。一つの状態の画（複数見出しの併記は避ける）で示す"
         gen_prompt: "a hand adjusting a headline preview on a glowing screen, a stack of printed click-through reports beside it on a dark desk showing rows of blurred numbers, no readable text or lettering, cinematic minimal lighting"
 
-      - type: diagram
+      - type: image
         from: 5
-        cut_reason: "【結果の提示】キュー5〜7『クリック率+2.3%』『怒りは有意差なし』『効くのは悲しみ』という3段階の意外な結果。converge型で時系列順に見せる"
-        diagram:
-          type: narrative
-          layout: converge
-          items:
-            - id: negative
-              text: ネガティブ語で反応増
-              at: 5
-              after: クリック率はおよそ二点三パーセント上がっていた
-            - id: anger_null
-              text: 怒りは無関係
-              at: 6
-              after: 有意な効果がなかった
-          result:
-            text: 効くのは悲しみ
-            at: 7
-            after: 悲しみの表現だった
+        slot: 5
+        motion: zoom_out
+        telop: "ネガティブ語で反応 +2.3%"
+        visual_intent: "夜の机上の新聞。見出しはぼけて読めない"
+        cut_reason: "【結果①】キュー5『ネガティブな言葉でクリック率+2.3%』。時系列の転回をconvergeで見せるのは型の誤用のため廃止（2026-08-25 試写FB）。数字はtelopが担い、紙面の画がトーンを担う"
+        gen_prompt: "a folded newspaper lying on a dark wooden table under a single warm lamp, its headline area out of focus and unreadable, deep shadows around, blank margins, no readable print, no lettering"
+      - type: image
+        from: 6
+        slot: 6
+        motion: zoom_in
+        telop: "怒り単体では有意差なし"
+        visual_intent: "同じ新聞の画に寄り、話題の焦点を『怒り』の検証へ切り替える"
+        cut_reason: "【結果②】キュー6『怒り単体には有意な効果がなかった』。同一画像の再提示+zoom_inで焦点の転換を見せる（注目誘導の近似パターン）。素材はslot5と同一ファイルのコピー"
+      - type: image
+        from: 7
+        slot: 7
+        telop: "効くのは「悲しみ」だった"
+        visual_intent: "夜の窓を伝う雨粒。悲しみのトーンへ転じる"
+        cut_reason: "【結果③・転回の着地】キュー7『効いていたのは悲しみの表現』。意外な結末を画のトーン変化（雨の窓）で見せる"
+        gen_prompt: "raindrops running down a dark window pane at night, soft blurred city lights beyond the glass, melancholic quiet mood, no lettering"
 
       - type: image
         from: 8
@@ -399,28 +421,25 @@ scenes:
     title: "中盤の反転① 書き込むのはわずか0.5%（山口・田中）"
     chapter_title: "では、誰がその声をあげているのか"
     key_color: "#7D5A2E"
-    visual_intent: "六万人規模調査の紹介から、ごくわずかな粒だけが下に落ちる『ふるい』のメタファーで少数派の実態を示す"
+    visual_intent: "6万人規模調査の紹介から、ごくわずかな粒だけが下に落ちる『ふるい』のメタファーで少数派の実態を示す"
     narration:
-      - text: "国際大学の山口真一氏と、慶應義塾大学の経済学者、田中辰雄氏は、2014年と2016年の二回、合計六万人規模の調査を行った。あわせてツイッターの分析も組み合わせ、炎上に実際に書き込む人の割合を調べている。対象は、50回以上リツイートされ、まとめサイトができるほど広がった炎上だ。結果は意外なものだった。"
+      - text: "国際大学の山口真一氏と、慶應義塾大学の経済学者、田中辰雄氏は、2014年と2016年の2回、合計6万人規模の調査を行った。あわせてツイッターの分析も組み合わせ、炎上に実際に書き込む人の割合を調べている。対象は、50回以上リツイートされ、まとめサイトができるほど広がった炎上だ。結果は意外なものだった。"
         pause_after: 0.3
-      - text: "一年以内に書き込んだ人は、ネットユーザーの"
+      - text: "1年以内に書き込んだ人は、ネットユーザーの"
         pause_after: 0.3
       - text: "およそ0.5パーセント。"
-        pause_after: 0.3
+        pause_after: 2.5  # 決め文の間（row 図解を保持したまま無音。2026-08-26 試写FB）
       - text: "過去に一度でも書き込んだことがある人まで含めても、"
         pause_after: 0.3
       - text: "1.1パーセントにとどまる。"
         pause_after: 0.3
-      - text: "書き込む動機の六割から七割は正義感で、属性としては男性、それも主任や係長クラス以上の人が多かった。荒れているように見える議論の裏側には、ごく限られた書き手しかいない。"
+      - text: "書き込む動機の6割から7割は正義感で、属性としては男性、それも主任や係長クラス以上の人が多かった。荒れているように見える議論の裏側には、ごく限られた書き手しかいない。"
     telop: "書き込んでいるのは、わずか0.5%"
     readings:
       - surface: "主任"
         reading: "シュニン"
       - surface: "係長"
         reading: "カカリチョウ"
-    emphasis:
-      - at: 3
-        text: "書き込みはわずか0.5%"
     beats:
       - type: chapter
         slot: 1
@@ -429,8 +448,8 @@ scenes:
       - type: image
         from: 1
         slot: 2
-        visual_intent: "六万人規模の調査データを分析する研究者"
-        cut_reason: "【調査の提示】キュー1『山口真一氏と田中辰雄氏が2014年と2016年の二回、合計六万人規模の調査を行った』"
+        visual_intent: "6万人規模の調査データを分析する研究者"
+        cut_reason: "【調査の提示】キュー1『山口真一氏と田中辰雄氏が2014年と2016年の2回、合計6万人規模の調査を行った』"
         gen_prompt: "two researchers reviewing a thick stack of survey printouts spread across a dark desk lamp-lit table, the columns blurred with no readable print, no lettering, cinematic minimal lighting"
 
       - type: image
@@ -442,7 +461,8 @@ scenes:
 
       - type: diagram
         from: 4
-        cut_reason: "【結果の提示】キュー4〜8は『結果は意外なものだった』に続く核心の数字。10粒のうちごくわずかだけが点灯する構図で、書き込む人のわずかさを示す"
+        slot: 6  # 背景 = scene_07_beat2（夜の群衆）の流用コピー。背景付き化（2026-08-25 試写FB）
+        cut_reason: "【結果の提示】キュー4〜8は核心の数字。10粒中1粒の点灯で書き込む人のわずかさ=比率を担う。群衆ボケを下地に敷く (要・比率表現100グリッド)"
         diagram:
           type: narrative
           layout: row
@@ -452,19 +472,15 @@ scenes:
             at: 6
             lit: [1]
           caption:
-            at: 8
-            after: 1.1パーセントにとどまる
+            at: 7  # 早出し表示。キュー7頭から約7秒見せる（終端語after同期は一瞬で消えるため廃止。2026-08-26 試写FB）
             text: 書き込むのは1%未満
 
-      - type: typo
-        at: 3
-        cut_reason: "【無音3秒】決め文「書き込みはわずか0.5%」の強調カット（章2の強調・1箇所目）"
 
       - type: image
         from: 9
         slot: 4
         visual_intent: "書き込む人の属性。深夜、オフィスで一人PCに向かう男性"
-        cut_reason: "【属性の提示】キュー9『動機の六割から七割は正義感で、属性としては男性、主任や係長クラス以上が多かった』"
+        cut_reason: "【属性の提示】キュー9『動機の6割から7割は正義感で、属性としては男性、主任や係長クラス以上が多かった』"
         gen_prompt: "a man in a business shirt typing intently on a laptop at a dark office desk late at night, his face lit only by the screen's glow, the screen blank and unreadable, no lettering, cinematic minimal lighting"
 
       - type: image
@@ -490,6 +506,8 @@ scenes:
       - text: "83パーセントを生み出していた。国や話題が変わっても、対立を煽る声の大半は、ごく一部の書き手から出ている。"
     telop: "国政ツイートの97%は上位10%から"
     readings:
+      - surface: "110万件"
+        reading: "ヒャクジュウマンケン"
       - surface: "ピュー・リサーチ・センター"
         reading: "ピューリサーチセンター"
     beats:
@@ -514,25 +532,20 @@ scenes:
         cut_reason: "【調査②の提示】キュー4〜5『ヘイトスピーチについても同じような偏りが見つかっている』『チューリッヒ大学とスイス連邦工科大学の研究グループがスイスの投稿データを調べた』"
         gen_prompt: "a small team of researchers gathered around a glowing monitor displaying blurred data charts in a dim university office at night, no readable text or lettering on the screen, cinematic lighting"
 
-      - type: diagram
+      - type: image
         from: 6
-        cut_reason: "【数値の提示】キュー6〜9『上位1%が46%、上位5%が83%を生み出す』という偏りの数字が、国や話題を越えて同じ結論に収束する"
-        diagram:
-          type: narrative
-          layout: converge
-          items:
-            - id: top1
-              text: 上位1%が46%
-              at: 7
-              after: 46パーセントを
-            - id: top5
-              text: 上位5%が83%
-              at: 8
-              after: 83パーセントを生み出していた
-          result:
-            text: 少数が生み出す偏り
-            at: 9
-            after: ごく一部の書き手から出ている
+        slot: 4
+        motion: parallax_in
+        telop: "ヘイト投稿の46%は、上位1%から"
+        visual_intent: "拡声器の一人と沈黙の群衆（beat1の再提示）。少数と大半の構造は画が既に担っている"
+        cut_reason: "【数値①】キュー6〜8。文字convergeを廃止し（2026-08-25 試写FB）、冒頭の拡声器の画をparallax_inで再提示。数字はtelopが担う。素材はslot1と同一ファイルのコピー"
+      - type: image
+        from: 9
+        slot: 5
+        motion: zoom_in
+        telop: "上位5%までで、83%"
+        visual_intent: "同じ画に寄り、偏りの大きさを畳みかける"
+        cut_reason: "【数値②】キュー9『83%を生み出していた』。同一画像へのzoom_inで焦点を強める（注目誘導の近似）。素材はslot1と同一ファイルのコピー"
 
   # シーン10「Perception Gap」 キュー9本
   - id: 10
@@ -567,7 +580,8 @@ scenes:
 
       - type: diagram
         from: 5
-        cut_reason: "【対比の提示】キュー5〜6『思っていた過激派の割合55%』対『実際の割合30%』。認識と実態のずれそのものが主張なのでcomparison型で見せる（narrativeでは対比の値そのものを示せないため型を検討した上で選択）"
+        slot: 5  # 背景 = scene_10_beat1（扉から覗く顔）の流用コピー。背景付き化（2026-08-25 試写FB）
+        cut_reason: "【対比の提示】キュー5〜6『思っていた55%』対『実際30%』。認識と実態のずれ=対比を担うためcomparison型。警戒する人物のボケを下地に敷く"
         diagram:
           type: comparison
           left_title: 思っていた割合
@@ -602,16 +616,16 @@ scenes:
     title: "環を閉じる① メカニズムの接続（注意経済）"
     chapter_title: "なぜ少数の声が大きく見えるのか"
     key_color: "#2E7D5B"
-    visual_intent: "拡散されやすい投稿と、それを書く少数の人という二つの事実がつながる。注意経済の仕組みを通って、小さな声が画面いっぱいに増幅される拡声器のメタファー"
+    visual_intent: "拡散されやすい投稿と、それを書く少数の人という2つの事実がつながる。注意経済の仕組みを通って、小さな声が画面いっぱいに増幅される拡声器のメタファー"
     narration:
-      - text: "答えは、ここまで見てきた二つの事実をつなげると見えてくる。怒りや敵対の言葉を含む投稿は拡散されやすい。そして、そうした投稿を書いているのは、ごく一部の人たちだ。多くのプラットフォームは、画面を見てもらう時間を長くすることで収益を得る仕組みで動いている。注意を引きつけることそのものが、利益に直結する。いわゆる注意経済と呼ばれる仕組みだ。だから、拡散されやすい投稿ほど、より多くの人の目に触れる場所へ押し上げられていく。結果として、少数の声が、実際の数よりもずっと大きな声として画面に映し出される。"
-        pause_after: 0.4
+      - text: "答えは、ここまで見てきた2つの事実をつなげると見えてくる。怒りや敵対の言葉を含む投稿は拡散されやすい。そして、そうした投稿を書いているのは、ごく一部の人たちだ。多くのプラットフォームは、画面を見てもらう時間を長くすることで収益を得る仕組みで動いている。注意を引きつけることそのものが、利益に直結する。いわゆる注意経済と呼ばれる仕組みだ。だから、拡散されやすい投稿ほど、より多くの人の目に触れる場所へ押し上げられていく。結果として、少数の声が、実際の数よりもずっと大きな声として画面に映し出される。"
+        pause_after: 2.5  # 決め文の間（flow 図解を保持したまま無音。2026-08-26 試写FB）
       - text: "あなたが日々目にしている対立的な投稿も、この仕組みに押し上げられた、ごく一部の声かもしれない。"
         pause_after: 0.3
     telop: "少数の声が、拡声器で増幅される"
-    emphasis:
-      - at: 1
-        text: "少数の声が大きく見える"
+    readings:
+      - surface: "怒り"
+        reading: "イカリ"
     beats:
       - type: chapter
         slot: 1
@@ -620,40 +634,38 @@ scenes:
       - type: image
         from: 1
         slot: 2
-        visual_intent: "二つの事実がつながる。二条の光る糸が暗闇の中で一点に収束していく"
-        cut_reason: "【二つの事実の接続】キュー1〜3『二つの事実をつなげると見えてくる。拡散されやすい投稿。書いているのはごく一部の人たち』を、二つの光の糸が合流する画で示す"
+        visual_intent: "2つの事実がつながる。二条の光る糸が暗闇の中で一点に収束していく"
+        cut_reason: "【2つの事実の接続】キュー1〜3『2つの事実をつなげると見えてくる。拡散されやすい投稿。書いているのはごく一部の人たち』を、二つの光の糸が合流する画で示す"
         gen_prompt: "two glowing filament threads slowly converging toward a single point in complete darkness, sparking faintly where they meet, no lettering, cinematic minimal lighting"
 
       - type: diagram
         from: 4
-        cut_reason: "【増幅メカニズムの提示】キュー4〜8はプラットフォームの収益構造・注意経済・押し上げの仕組みという因果の流れ。中心から要素が広がるradiateで見せる"
+        slot: 4  # 背景 = scene_11_beat2（二条の光る糸）の流用コピー。背景付き化（2026-08-25 試写FB）
+        cut_reason: "【増幅メカニズムの提示】キュー4〜8は因果の一本鎖（収益→注意経済→押し上げ→拡大されて映る）。本編唯一のメカニズム説明なので絵に逃げず、因果の順序を担うflowで見せる（beatsでは非推奨型だが一本鎖の正しい語彙のため採用。chain 実装済みだが直後シーン12がchainのため同型隣接を避け今作はflow維持）。最終ラベルは直後のtypoとの同文重複を避けて言い換え"
         diagram:
-          type: narrative
-          layout: radiate
-          center:
-            text: 収益を得る仕組み
-            at: 4
-            after: 収益を得る仕組みで動いている
-          items:
+          type: flow
+          steps:
+            - id: profit
+              text: 収益の仕組み
+              icon: paid
+              at: 4
+              after: 収益を得る仕組みで動いている
             - id: economy
               text: 注意経済
+              icon: visibility
               at: 6
               after: 注意経済と呼ばれる仕組みだ
             - id: push
-              text: 多くの目に触れる
+              text: 上位へ押し上げ
+              icon: trending_up
               at: 7
-              after: より多くの人の目に触れる場所へ押し上げられていく
+              after: 押し上げられていく
             - id: amplified
-              text: 大きな声に見える
+              text: 拡大されて映る
+              icon: campaign
               at: 8
               after: 大きな声として
-          turn:
-            at: 8
-            after: 画面に映し出される
 
-      - type: typo
-        at: 1
-        cut_reason: "【無音3秒】決め文「少数の声が大きく見える」の強調カット（章3の強調・1箇所目）"
 
       - type: image
         from: 9
@@ -668,13 +680,16 @@ scenes:
     key_color: "#2E7D5B"
     visual_intent: "日本の男女論での実例を三層構造の図解で示したあと、盛り上がり方が作られたものでも問題自体は消えないという留保を、静かなトーンで示す"
     narration:
-      - text: "この増幅の連鎖は、日本の男女論でも実際に観察されている。ある女性ジャーナリストに向けられた誹謗中傷、二千八百件あまりの返信を分析した研究がある。攻撃の中心にいたのは、ごく少数のインフルエンサーだった。その投稿が引用されて広まると、呼応するユーザーが続き、最後に荒らしが群がる。研究チームはこれを、三つの層からなる構造として描き出した。少数の声が、仕組みによって増幅されていく流れが、そのまま観察された形だ。"
+      - text: "この増幅の連鎖は、日本の男女論でも実際に観察されている。ある女性ジャーナリストに向けられた誹謗中傷、2800件あまりの返信を分析した研究がある。攻撃の中心にいたのは、ごく少数のインフルエンサーだった。その投稿が引用されて広まると、呼応するユーザーが続き、最後に荒らしが群がる。研究チームはこれを、3つの層からなる構造として描き出した。少数の声が、仕組みによって増幅されていく流れが、そのまま観察された形だ。"
         pause_after: 0.7
       - text: "ただし、間違えてはいけない。盛り上がり方が作られたものだとしても、そこで議論されている問題そのものが消えるわけではない。賃金の差や、見えにくい不公平は、対立の演出とは関係なく、現実として残り続けている。"
         pause_after: 0.3
       - text: "だとしたら、私たちはこの画面の向こうの熱量と、どう付き合えばいいのだろうか。"
         pause_after: 1.0
     telop: "拡散の中心は、少数のインフルエンサー"
+    readings:
+      - surface: "2800件"
+        reading: "ニセンハッピャクケン"
     beats:
       - type: image
         from: 1
@@ -684,31 +699,32 @@ scenes:
         gen_prompt: "a smartphone screen glowing in a dark room, a single reply notification badge multiplying rapidly into dozens as the screen is watched, the screen blank and unreadable, no lettering, cinematic minimal lighting"
 
       - type: diagram
-        from: 2
-        cut_reason: "【実例の構造提示】キュー2〜6は誹謗中傷の三層構造（引用拡散・呼応ユーザー・荒らし）という具体的な観察結果。中心の発信源から波及するradiateで示す"
+        from: 3
+        slot: 4  # 背景 = scene_02_beat3（無数の画面）の流用コピー。背景付き化（2026-08-25 試写FB）
+        cut_reason: "【実例の構造提示】キュー3〜6は三層構造の観察結果。ナレーション『3つの層からなる構造』に合わせ、層を縦に積み下向き矢印で流れを見せるchain=層の順序を担う（R26-2。radiateから差替。2026-08-26 試写FB）。論争画面のボケを下地に敷く"
         diagram:
           type: narrative
-          layout: radiate
-          center:
-            text: 女性ジャーナリスト
-            at: 2
-            after: 女性ジャーナリスト
+          layout: chain
           items:
-            - id: quote
-              text: 引用で拡散
-              at: 4
-              after: 引用されて広まると
+            - id: influencer
+              text: 少数のインフルエンサー
+              icon: record_voice_over
+              at: 3
+              after: ごく少数
             - id: echo
               text: 呼応するユーザー
+              icon: groups
               at: 4
-              after: 呼応するユーザーが続き
+              after: 呼応するユーザー
             - id: troll
-              text: 最後に荒らし
+              text: 群がる荒らし
+              icon: local_fire_department
               at: 4
-              after: 最後に荒らしが群がる
-          turn:
-            at: 6
-            after: そのまま観察された形だ
+              after: 最後に
+          caption:
+            at: 5
+            after: 3つの層
+            text: 増幅の3つの層
 
       - type: image
         from: 7
@@ -717,25 +733,13 @@ scenes:
         cut_reason: "【留保①：静かなトーンへ】キュー7〜8『ただし、間違えてはいけない』『盛り上がり方が作られたものだとしても、問題そのものが消えるわけではない』。図解の追加要素を出さず、画面を静かに保つ指示に沿って落ち着いた静物に切り替える"
         gen_prompt: "a single steady candle flame standing still in a dark room, undisturbed, its light constant and calm, no lettering, cinematic minimal lighting"
 
-      - type: diagram
+      - type: image
         from: 9
-        cut_reason: "【留保②：現実として残るもの】キュー9〜10『賃金の差や、見えにくい不公平は、現実として残り続けている』『この熱量とどう付き合えばいいのだろうか』。比較静物の生成が2回不合格（硬貨の刻印＝偽文字）となったため、規約に従い図解へ切替。静かな converge で章末の問いへ渡す"
-        diagram:
-          type: narrative
-          layout: converge
-          items:
-            - id: wage_gap
-              text: 賃金の差
-              at: 9
-              after: 賃金の差
-            - id: unfairness
-              text: 見えにくい不公平
-              at: 9
-              after: 見えにくい不公平
-          result:
-            text: 現実として残る
-            at: 9
-            after: 現実として
+        slot: 5
+        telop: "賃金の差は、現実として残る"
+        visual_intent: "高さの違う2つの木の積み木と、机に伸びる長い影。不均衡の静物"
+        cut_reason: "【留保②：現実として残るもの】キュー9〜10。生成2回失敗のフォールバックだったconvergeを廃止（2026-08-25 試写FB）し、偽文字リスクゼロの別モチーフ静物（積み木と影）で再挑戦。直前のろうそくとトーン連続。数字を伴わない主張のためtelopが言葉を担う"
+        gen_prompt: "two wooden blocks of clearly different heights standing side by side on a dark wooden table, long shadows stretching across the surface, a single warm low side light, quiet still-life mood, no lettering"
 
   # ============================================================
   # 章4「回帰と結び」 シーン13（key_color #2E4A7D＝章1と同色で回帰を示す）
@@ -753,9 +757,6 @@ scenes:
       - text: "声の大きさは、正しさでもなければ、多数でもないのだから。"
         pause_after: 1.2
     telop: "声の大きさは、正しさでも多数でもない"
-    emphasis:
-      - at: 3
-        text: "正しさでも多数でもない"
     beats:
       - type: chapter
         slot: 1
@@ -789,6 +790,3 @@ scenes:
         cut_reason: "【結びへの静止】キュー9〜10『画面の中の激しさに、世界観を明け渡さないでほしい』『声の大きさは、正しさでもなければ、多数でもないのだから』。手が画面をそっと伏せ、決め文の間も同じ画のまま光が消えていく"
         gen_prompt: "a hand gently placing a smartphone face-down on a nightstand in a dark bedroom, the blank unreadable screen's glow fading as it turns away, no lettering, cinematic minimal lighting"
 
-      - type: typo
-        at: 3
-        cut_reason: "【無音3秒】動画全体の結び。決め文「正しさでも多数でもない」の強調カット（章4の強調・1箇所目）"

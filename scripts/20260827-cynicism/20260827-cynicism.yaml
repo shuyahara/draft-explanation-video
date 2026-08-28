@@ -1,0 +1,1522 @@
+# シーン YAML（ビート運用）。台本 Markdown（scripts/20260827-cynicism/20260827-cynicism.md、
+# ドラフトv1）に対応するレンダリング指示書。
+# 仕様（正）: C:\Users\shuya\Projects\script-to-video\docs\schema.md（beats[] 節）
+#             C:\Users\shuya\Projects\script-to-video\docs\design-beat-rendering.md
+# 検証: cd C:\Users\shuya\Projects\script-to-video && .venv\Scripts\python.exe -m script_to_video validate <このファイル>
+#
+# ナレーション本文は台本 Markdown から一字一句そのまま転記（文言変更なし）。
+# セグメント分割は句点「。」の位置のみで行う（文中分割は台本の発音・ポーズメモが「〜の前に
+# n秒」と指定した箇所のみ）。指定のない文境界にも 0.2〜0.5 秒のポーズを明示している。
+#
+# トーン設計（台本冒頭より）: 「時間を跨ぐ静かな考察」。古代パート＝石・砂・油灯の温かい光、
+# 低コントラストの絵画的質感。現代パート＝昼の電車・オフィスの白い光と画面の冷たい光。
+# 生成画像はナレーションが述べる場面・人物・行為の直接描写を既定とし、擬物化静物は
+# ナレーション自身が口にする比喩（狐と葡萄＝シーン7、芥子＝シーン9）のみ例外で使う。
+#
+# 章構成（章カードは4枚。演出セットの非対称のためシーン13は章カードなしとした）:
+#   シーン3「犬は、何に吠えていたのか」／シーン5「現代で冷笑が広がる理由① ― 冷笑は、安い」／
+#   シーン7「現代で冷笑が広がる理由② ― 何を守るのか」／シーン11「安い知性の請求書は、誰が払うのか」
+#
+# 図解（4箇所。台本指定の箇所のみ。chart は使わない＝数字は telop で示す）:
+#   シーン7「三つの防衛・1つ目」: schema の narrative 各型は最少件数が row=4/radiate=3/
+#     converge=2 で、「3枠中1つだけ点灯・残り2つは伏せる」という部分点灯を満たす型が無い
+#     （row は3枠を表現できず、radiate/converge は最少3件・2件を満たすには存在しない項目を
+#     埋めることになり事実と異なる）。診断のうえ、シーン7では図解を使わずtelopで「1つ目の
+#     答え：無力感」を示し、3つが揃うシーン10でのみ narrative/radiate として図解化する
+#     判断とした（詳細は完了報告）。
+#   シーン8: narrative/chain「善行者への貶め」
+#   シーン10: narrative/radiate「三つの防衛」（中心＝冷笑という防衛、items 3件＝無力感／
+#     責められる予期／不当だという感覚。items 3〜6件の下限に一致）／comparison「温かさ×
+#     有能さ」（判断: 2軸2値の対比は schema に2×2型が無く、narrative 4レイアウトのいずれも
+#     構造が合わない。2列比較として最も近い comparison を採用。詳細は完了報告）
+#   シーン11: narrative/converge「安い知性の請求書」（判断: 台本は row を提案していたが、
+#     row は最少4枠のため3項目の請求書には合わない。独立した3つの知見が1つの結論
+#     ［安いものは後で高くつく］へ収束する構造として converge を採用。詳細は完了報告）
+#
+# 同一型・layout の重複は無し（radiate/chain/comparison/converge を1回ずつ使用）。
+#
+# シーン2の「問い2つの収束表示」は前作（20260824-net-gender-wars）YAMLのシーン2と同じ処理を
+# 踏襲: converge図解は使わず、image ビート＋telopで問いを提示する。
+
+video:
+  title: "なぜ人は冷笑してしまうのか——犬は権力に吠え、冷笑は本気に吠える"
+  speaker: "青山龍星"
+  resolution:
+    width: 1920
+    height: 1080
+  style: "cinematic documentary still, natural light, muted low-contrast palette, shallow depth of field, painterly warm stone tones only when the scene itself is ancient Greece, cool white daylight and screen glow for present-day scenes, no text, no lettering"
+  bgm: "../bgm/kousatsu.mp3"
+  bgm_credit: "「考察」shimtone（DOVA-SYNDROME）"
+  # 古代パート向けの弦ドローン系候補（商用可フリー音源。ダウンロードは未実施。候補のみ）:
+  #   - 「静かなる決意」武田菜々子（DOVA-SYNDROME）
+  #   - 「暁の残響」しゃろう（DOVA-SYNDROME）
+  #   - 「悠久」MoppySound（DOVA-SYNDROME）
+
+scenes:
+  # ============================================================
+  # シーン1「フック（現代の場面）」
+  # ============================================================
+  - id: 1
+    title: "フック（現代の場面）"
+    visual_intent: "全画面実写。昼の電車内、吊り革を握る手ともう片方の手のスマートフォン。画面は白飛び気味で文字は読めない。顔は写さない。指が一瞬止まる→滑る、という変化を見せる"
+    narration:
+      - text: "昼の電車。"
+        pause_after: 0.3
+      - text: "誰かのスマートフォンの画面に、ひとつの投稿が流れてくる。"
+        pause_after: 0.3
+      - text: "海岸の清掃に参加しませんか、という呼びかけだ。"
+        pause_after: 0.4
+      - text: "その下に、返信が並んでいる。"
+        pause_after: 0.3
+      - text: "意識高いね。"
+        pause_after: 0.3
+      - text: "どうせ売名でしょ。"
+        pause_after: 0.3
+      - text: "はいはい。"
+        pause_after: 0.5
+      - text: "呼びかけについた反応は、数えるほどしかない。"
+        pause_after: 0.3
+      - text: "それを嗤った返信のほうが、何倍も広がっている。"
+        pause_after: 0.6
+      - text: "画面の上の指は、何事もなかったように、次の投稿へ滑っていく。"
+        pause_after: 0.6
+      - text: "こういう反応を、冷笑と呼ぶ。"
+        pause_after: 0.4
+      - text: "本気で何かをしようとする人を、一段高いところから、鼻で笑って済ませる態度のことだ。"
+        pause_after: 1.0
+    readings:
+      - surface: "嗤った"
+        reading: "ワラッタ"
+      - surface: "冷笑"
+        reading: "レイショウ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "昼の電車。誰かのスマートフォンの画面に投稿が流れてくる（三人称。画面を眺める視点）"
+        cut_reason: "【冒頭の場面・三人称】キュー1〜3『昼の電車』『誰かのスマートフォンの画面に投稿が流れてくる』『海岸の清掃に参加しませんか』。前作の一人称（自分の指）ではなく、他人の画面で起きている冷笑を眺める画で開く"
+        gen_prompt: "present-day scene, over-the-shoulder view on a bright daytime commuter train of a stranger's hand holding a smartphone, the screen showing a social feed layout with one post at the top, all text blurred and unreadable, no faces, soft window light, documentary still, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "投稿の下に並ぶ短い返信。文字は読めないが、短い一行が三つ並んでいることは分かる"
+        cut_reason: "【並ぶ返信】キュー4〜7『その下に返信が並んでいる』『意識高いね』『どうせ売名でしょ』『はいはい』。返信欄に寄り、三つの短い返信が並ぶ画で嗤いの言葉を受ける"
+        gen_prompt: "present-day scene, close-up of a smartphone screen showing a social media post with three short one-line replies stacked beneath it, every word blurred and unreadable, thumb at the edge of the frame, cool screen light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 8
+        slot: 3
+        visual_intent: "呼びかけの投稿についた小さな反応の数と、嗤った返信についた大きな反応の数の対比（数字は読めない）"
+        cut_reason: "【反応の数の対比】キュー8〜9『呼びかけについた反応は数えるほど』『嗤った返信のほうが何倍も広がっている』。同じ画面の中で、上の投稿には反応アイコンが数個、下の返信には反応アイコンが密集している画"
+        gen_prompt: "present-day scene, close-up of a smartphone screen: a post at the top with only two or three tiny reaction icons, and a short reply beneath it crowded with a dense row of reaction icons, numerals and text blurred and unreadable, cool screen light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 4
+        motion: zoom_out
+        visual_intent: "画面の上の指が、何事もなかったように次の投稿へ滑っていく"
+        cut_reason: "【指が滑る】キュー10『画面の上の指は、何事もなかったように次の投稿へ滑っていく』。返信欄から引いて、親指がスクロールする手元の画に戻る"
+        gen_prompt: "present-day scene, a stranger's thumb scrolling upward across a smartphone screen on a bright commuter train, screen content blurred and unreadable, hand and phone only, no faces, soft daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "冷笑の定義。本気で何かをしようとする人を、一段高いところから鼻で笑って済ませる態度。スマホを下ろした人の後ろ姿"
+        cut_reason: "【冷笑の定義】キュー11〜12『こういう反応を冷笑と呼ぶ』『本気で何かをしようとする人を一段高いところから鼻で笑って済ませる態度』。画面から離れ、車内でスマホを少し下ろした人の後ろ姿で定義文を受ける"
+        gen_prompt: "present-day scene, seen from directly behind on a daytime commuter train: the back of a person lowering a smartphone slightly, shoulders relaxed, the screen a plain glowing white rectangle, blurred passengers beyond, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン2「問いへの変換」
+  # ============================================================
+  - id: 2
+    title: "問いへの変換"
+    visual_intent: "前半は現代（返信欄に並ぶ短い言葉、読めない）。『2400年前のギリシャ』で画を切り替え、白い石と砂の色調へ。問い2つは前作シーン2と同じ処理（image＋telopでの収束表示）"
+    narration:
+      - text: "この態度は近ごろ、ネットでは冷笑系と呼ばれるようになった。"
+        pause_after: 0.4
+      - text: "だが、冷笑そのものは、新しいものではない。"
+        pause_after: 0.4
+      - text: "英語では、こうした態度をシニシズムと呼ぶ。"
+        pause_after: 0.3
+      - text: "そしてこの言葉のもとになったのは、およそ2400年前、古代ギリシャにいた哲学者たちだ。"
+        pause_after: 0.4
+      - text: "ところが彼らは、今の冷笑とは、まるで反対のことをしていた。"
+        pause_after: 0.9
+      - text: "なぜ人は、冷笑をしてしまうのか。"
+        pause_after: 1.0
+      - text: "この動画では、古代の哲学者の逸話から、現代の心理学の実験まで、その道筋をたどっていく。"
+        pause_after: 0.5
+    readings:
+      - surface: "冷笑系"
+        reading: "レイショウケイ"
+      - surface: "冷笑"
+        reading: "レイショウ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "ネットの返信欄に並ぶ短い言葉（読めない）。冷笑系というラベル"
+        cut_reason: "【冷笑系というラベル】キュー1〜2『この態度は近ごろネットでは冷笑系と呼ばれる』『冷笑そのものは新しいものではない』。シーン1の返信欄の画を別角度で引き継ぐ"
+        gen_prompt: "present-day scene, a smartphone lying on a cafe table, its screen showing rows of short blurred unreadable reply comments under a post, cool daylight, hand resting beside it, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "冷笑＝シニシズム。言葉のもとになった古代ギリシャの哲学者たち。画面が現代から古代の市場へ切り替わる"
+        cut_reason: "【シニシズムという言葉の来歴】キュー3〜4『冷笑は英語でシニシズムという』『この言葉のもとになったのは2400年前の古代ギリシャの哲学者たち』。ここで光の温度を暖色へ切り替える"
+        gen_prompt: "an empty sunlit ancient Greek marketplace at noon, pale stone paving and sand-colored walls, market stalls with clay pots, warm painterly light, no people, no text, no lettering"
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "『彼らは今の冷笑とはまるで反対のことをしていた』。同じ古代の市場を保持し、粗末な衣の男の後ろ姿を遠景に置く"
+        cut_reason: "【反対のことをしていた】キュー5『ところが彼らは、今の冷笑とはまるで反対のことをしていた』。次章の主人公を遠景で予告する"
+        gen_prompt: "a sunlit ancient Greek marketplace at noon seen from a distance, a single small figure in a rough cloak standing alone in the open square among market stalls, seen from behind, warm stone tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 6
+        slot: 4
+        telop: "なぜ人は、冷笑をしてしまうのか"
+        visual_intent: "問いの提示。同じ古代の市場を静止したまま保持し、問いをtelopで大きく示す"
+        cut_reason: "【問いの提示】キュー6〜7『なぜ人は冷笑をしてしまうのか』『この動画では古代の哲学者の逸話から現代の心理学の実験までその道筋をたどる』。画は動かさず、問いの文言はtelopが担う"
+        gen_prompt: "a sunlit ancient Greek marketplace at noon seen from a distance, a single small figure in a rough cloak standing alone in the open square among market stalls, seen from behind, warm stone tones, painterly, no faces, no lettering"
+
+  # ============================================================
+  # シーン3「古代① ディオゲネスの逸話」（章1）
+  # ============================================================
+  - id: 3
+    title: "古代① ディオゲネスの逸話"
+    chapter_title: "犬は、何に吠えていたのか"
+    key_color: "#241F1A"
+    visual_intent: "逸話ごとに一枚絵（ランプ／甕／アレクサンドロスの影が落ちる地面／犬）。人物は後ろ姿・遠景・影で顔を描かない"
+    narration:
+      - text: "紀元前4世紀、アテナイ。"
+        pause_after: 0.3
+      - text: "真昼の市場に、火のついたランプを掲げて歩く男がいた。"
+        pause_after: 0.3
+      - text: "何をしているのかと問われ、男は答える。"
+        pause_after: 0.2
+      - text: "人間を探している、と。"
+        pause_after: 0.5
+      - text: "男の名は、ディオゲネス。"
+        pause_after: 0.4
+      - text: "家を持たず、神殿のそばに置かれた、大きな素焼きの甕の中で寝起きした。夏は熱い砂の上を転がり、冬は雪をかぶった彫像を抱いて、自分の体を鍛えたと伝えられる。"
+        pause_after: 0.4
+      - text: "ある日、アレクサンドロス大王が彼の前に立ち、何か望みはないかと尋ねた。"
+        pause_after: 0.3
+      - text: "ディオゲネスの答えは、こうだった。"
+        pause_after: 0.4
+      - text: "そこをどいてくれ、日陰になる。"
+        pause_after: 0.8
+      - text: "人々は彼を、犬と呼んだ。"
+        pause_after: 0.3
+      - text: "彼はそれを誇りにした。"
+        pause_after: 0.3
+      - text: "くれる者には尾を振り、くれない者には吠え、悪党には噛みつくからだ、と。"
+        pause_after: 0.5
+      - text: "もうひとつ、彼の出発点を語る逸話がある。"
+        pause_after: 0.3
+      - text: "若い頃、通貨の偽造に関わって故郷を追われた彼は、デルフォイの神託で、通貨を変造せよ、と告げられたという。"
+        pause_after: 0.3
+      - text: "ギリシャ語で通貨を意味する言葉は、同時に、慣習も意味した。"
+        pause_after: 0.3
+      - text: "彼はそれを、世の中の慣習を作り変えよ、という使命として受け取った。"
+        pause_after: 0.4
+      - text: "これらの逸話は、紀元3世紀の伝記作家ディオゲネス・ラエルティオスが書き残したもので、どこまでが事実かは分からない。"
+        pause_after: 0.4
+      - text: "だが、ひとつだけ確かなことがある。"
+        pause_after: 0.4
+      - text: "この、犬という呼び名こそが、シニシズムという言葉の語源だということだ。"
+        pause_after: 1.2
+    readings:
+      - surface: "犬"
+        reading: "イヌ"
+      - surface: "ディオゲネス"
+        reading: "ディオゲネス"
+      - surface: "アテナイ"
+        reading: "アテナイ"
+      - surface: "ラエルティオス"
+        reading: "ラエルティオス"
+      - surface: "甕"
+        reading: "カメ"
+      - surface: "日陰"
+        reading: "ヒカゲ"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。次ビートのランプの男の画を下地に流用して章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "真昼の市場をランプを掲げて歩く男。何をしているのかと問われ『人間を探している』と答える"
+        cut_reason: "【ランプの逸話】キュー1〜4『紀元前4世紀、アテナイ』『火のついたランプを掲げて歩く男』『何をしているのかと問われ答える』『人間を探している、と』という一つの逸話の一続き。telopはこの場面のみ"
+        gen_prompt: "seen from behind: an old bearded man with short grey hair, barefoot, wearing a rough patched cloak, walking through a sunlit ancient Greek marketplace at noon, holding a small lit clay oil lamp up in his raised hand, warm stone and sand tones, painterly, no faces, no text, no lettering"
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "男の名はディオゲネス。神殿のそばの大きな甕で寝起きする暮らし"
+        cut_reason: "【甕の逸話】キュー5〜6『男の名はディオゲネス』『甕の中で寝起きし、砂の上を転がり、彫像を抱いて体を鍛えた』という暮らしぶりの一続き"
+        gen_prompt: "a large clay storage jar lying on its side beside a temple wall in warm afternoon light, worn cloth inside, no people, no text, no lettering"
+
+      - type: image
+        from: 7
+        slot: 4
+        visual_intent: "アレクサンドロス大王が彼の前に立ち、望みを尋ねる。ディオゲネスは『日陰になる、どいてくれ』と答える"
+        cut_reason: "【アレクサンドロスの逸話・決め台詞】キュー7〜9『アレクサンドロス大王が前に立ち望みを尋ねた』『ディオゲネスの答えはこうだった』『そこをどいてくれ、日陰になる』。決め台詞のキュー9まで同じ画を保持する"
+        gen_prompt: "ancient Greece, 4th century BC: a tall Macedonian king in a bronze cuirass and red cloak with a plumed helmet, seen from behind, standing so that his long shadow falls across sunlit paving stones onto a seated beggar in rags, no medieval armor, low angle from behind the king, warm stone tones, painterly, no faces, no text, no lettering"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "人々が彼を犬と呼んだ。それを誇りとする逸話。市場の片隅で日を浴びる痩せた野良犬"
+        cut_reason: "【犬という呼び名】キュー10〜12『人々は彼を犬と呼んだ』『彼はそれを誇りにした』『くれる者には尾を振り、くれない者には吠え、悪党には噛みつく』。『犬』という呼び名そのものを直接描写する"
+        gen_prompt: "a lean stray dog resting on sunlit stone steps at the edge of the ancient marketplace, warm stone and sand tones, painterly, no people, no text, no lettering"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "もうひとつの逸話。通貨の偽造とデルフォイの神託。手のひらの上の古いコイン"
+        cut_reason: "【通貨と神託の逸話・発端】キュー13〜14『出発点を語る逸話がある』『通貨の偽造で故郷を追われ、神託で通貨を変造せよと告げられた』"
+        gen_prompt: "ancient Greece, 4th century BC: a hand holding an old worn coin up to sunlight at a temple threshold, the coin's markings blurred and illegible with age, warm stone tones, painterly, no faces, no text, no lettering"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "通貨は慣習も意味した。世の中の慣習を作り変えよという使命として受け取った"
+        cut_reason: "【通貨と神託の逸話・使命】キュー15〜16『通貨を意味する言葉は同時に慣習も意味した』『世の中の慣習を作り変えよという使命として受け取った』。20秒超を避けビート6から分割し、寄りの別ショットへ切り替える"
+        gen_prompt: "ancient Greece, 4th century BC: a close-up detail of an old worn coin resting in an open palm at a temple threshold, sunlight catching its blurred illegible markings, warm stone tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "3世紀の伝記作家ラエルティオスが書き残した逸話。どこまでが事実かは分からない"
+        cut_reason: "【記録者への留保】キュー17『これらの逸話は3世紀の伝記作家ディオゲネス・ラエルティオスが書き残したもので、どこまでが事実かは分からない』"
+        gen_prompt: "an old parchment scroll being written by an unseen hand in warm lamplight at a writing desk, the script blurred and unreadable, no faces, painterly warm tones, no lettering"
+
+      - type: image
+        from: 18
+        slot: 9
+        visual_intent: "決め文。この犬こそがシニシズムの語源。甕のそばで日を浴びる犬に戻る"
+        cut_reason: "【決め文・章の結び】キュー18〜19『だが、ひとつだけ確かなことがある』『この犬こそが、シニシズムという言葉の語源だということだ』。ビート5の犬の画に戻り、決め文を画面保持のまま落とす"
+        gen_prompt: "a lean stray dog resting beside a large clay storage jar in the sunlit ancient marketplace, warm stone and sand tones, painterly, no people, no text, no lettering"
+
+  # ============================================================
+  # シーン4「古代② 反転」
+  # ============================================================
+  - id: 4
+    title: "古代② 反転"
+    key_color: "#241F1A"
+    visual_intent: "前半は古代の色調のまま、身なりの良い市民の前に座り込む男の直接描写。『意味を変える』で画面の温度が徐々に冷たくなり、決め文『今の冷笑は、本気に吠えている』で現代の白い光へ完全に切り替わる"
+    narration:
+      - text: "ギリシャ語で犬は、キュオーン。"
+        pause_after: 0.3
+      - text: "そこから、ディオゲネスたちの一派は、キュニコス、犬のような者たちと呼ばれた。"
+        pause_after: 0.3
+      - text: "英語のシニック、シニシズムは、この犬に由来する。"
+        pause_after: 0.4
+      - text: "では彼らは、何を嗤っていたのか。"
+        pause_after: 0.3
+      - text: "富と、権力と、慣習だ。"
+        pause_after: 0.3
+      - text: "人はもっと少ないもので生きられるはずだと考え、それを言葉ではなく、自分の暮らしそのもので示した。"
+        pause_after: 0.4
+      - text: "フランスの哲学者ミシェル・フーコーは晩年の講義で、彼らを、真理を語る勇気を生き方そのもので体現した人々と評している。"
+        pause_after: 0.4
+      - text: "つまり最初のシニシズムとは、力を持たない側から権力へ向かう、下から上への嗤いだった。"
+        pause_after: 0.4
+      - text: "ところが、この言葉はやがて意味を変える。"
+        pause_after: 0.3
+      - text: "英語のシニックが、哲学の一派ではなく、人の動機を疑って鼻で笑う性格を指すようになったのは、19世紀半ばのことだとされる。"
+        pause_after: 0.4
+      - text: "文学研究者のデイヴィッド・マゼラは、これを弱まりではなく、反転と呼んだ。"
+        pause_after: 0.6
+      - text: "かつては欲望を抑える鍛錬を意味した言葉が、いまや無関心と受動性を意味している、と。"
+        pause_after: 0.4
+      - text: "ドイツの哲学者ペーター・スローターダイクは1983年、この二つを、綴りで分けた。"
+        pause_after: 0.3
+      - text: "古代の、身体で示す嗤いをキュニシズム。"
+        pause_after: 0.3
+      - text: "近代の、知っていながら何もしない態度をシニシズム。"
+        pause_after: 0.4
+      - text: "彼はそれを、啓蒙された偽りの意識と呼んだ。"
+        pause_after: 0.4
+      - text: "世の中の仕組みは、すべて見抜いている。"
+        pause_after: 0.2
+      - text: "だからこそ、何もしない。"
+        pause_after: 0.3
+      - text: "暴かれても、傷つかない。"
+        pause_after: 0.3
+      - text: "どうせそういうものだ、という自分の前提が裏付けられただけだからだ。"
+        pause_after: 0.4
+      - text: "哲学者のスラヴォイ・ジジェクは、この態度を一行にまとめた。"
+        pause_after: 0.3
+      - text: "彼らは、それが欺瞞だと知っている。"
+        pause_after: 0.2
+      - text: "それでも、そうする。"
+        pause_after: 0.5
+      - text: "犬は、権力に吠えていた。"
+        pause_after: 0.5
+      - text: "今の冷笑は、本気に吠えている。"
+        pause_after: 2.0
+      - text: "矛先は、いつの間にか反転していた。"
+        pause_after: 0.3
+      - text: "では、なぜ人は今、本気を嗤うのだろうか。"
+        pause_after: 1.0
+    readings:
+      - surface: "犬"
+        reading: "イヌ"
+      - surface: "いつの間にか"
+        reading: "イツノマニカ"
+      - surface: "一行"
+        reading: "イチギョウ"
+      - surface: "身体"
+        reading: "カラダ"
+      - surface: "キュオーン"
+        reading: "キュオーン"
+      - surface: "キュニコス"
+        reading: "キュニコス"
+      - surface: "スローターダイク"
+        reading: "スローターダイク"
+      - surface: "マゼラ"
+        reading: "マゼラ"
+      - surface: "嗤っていた"
+        reading: "ワラッテイタ"
+      - surface: "嗤い"
+        reading: "ワライ"
+      - surface: "嗤う"
+        reading: "ワラウ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "身なりの良い市民たちの前に、粗末な衣で座り込む男（後ろ姿）。犬の由来から、彼らが何を嗤っていたのかへの問い"
+        cut_reason: "【犬の語源】キュー1〜4『ギリシャ語で犬はキュオーン』『キュニコスと呼ばれた』『シニックはこの犬に由来する』『では彼らは何を嗤っていたのか』という語源の一続き"
+        gen_prompt: "ancient Greece, 4th century BC: a man in a rough cloak sitting on the ground of a sunlit market in front of well-dressed citizens, a lean stray dog lying beside him, seen from behind, warm stone tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 5
+        slot: 2
+        visual_intent: "裸足の足元と、そばを通る装飾された靴。富・権力・慣習を、暮らしそのもので嗤っていたことの直接描写"
+        cut_reason: "【暮らしで示す嗤い】キュー5〜6『富と、権力と、慣習だ』『言葉ではなく自分の暮らしそのもので示した』"
+        gen_prompt: "bare dusty feet of a seated figure beside ornately sandaled feet passing by on sunlit ancient stone, warm tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 7
+        slot: 3
+        visual_intent: "フーコーの評『下から上へ向かう嗤い』。同じ座り込む男を、市民たちを見上げる角度で見せる"
+        cut_reason: "【フーコーの評・最初のシニシズムの定義】キュー7〜8『フーコーは真理を語る勇気を生き方で体現した人々と評した』『最初のシニシズムとは下から上へ向かう嗤いだった』"
+        gen_prompt: "a seated cloaked figure seen from a low angle looking up past well-dressed citizens standing above him, sunlit ancient stone, warm tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "言葉の意味が変わり始める。古い辞書・語彙集のページ（読めない）に、わずかに冷たさが差し込む光"
+        cut_reason: "【意味の変化の始まり】キュー9〜10『この言葉はやがて意味を変える』『19世紀半ば、鼻で笑う性格を指すようになった』。ここから画の温度を徐々に冷やしていく"
+        gen_prompt: "present-day scene, an old lexicon book lying open on a wooden desk, pages out of focus with no readable print, warm lamplight beginning to mix with a cool draft of daylight from a window, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "文学研究者マゼラの評『反転』。同じ書物の画に、より冷たい光が差す書斎"
+        cut_reason: "【マゼラの評・反転】キュー11〜12『マゼラはこれを反転と呼んだ』『自己否定と鍛錬を意味した言葉が、いまや無関心と受動性を意味している』"
+        gen_prompt: "present-day scene, an open book on a wooden desk in a quiet study, cool daylight from a window now dominant over a fading warm lamp, pages blurred with no readable print, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 13
+        slot: 6
+        telop: "Kynismus（古代）／Zynismus（近代）"
+        visual_intent: "スローターダイクが綴りで分けた古代と近代。ビート3と同じ座り込む男の別ショット（古代側）を保持し、telopで綴りを示す"
+        cut_reason: "【スローターダイクの綴り分け】キュー13〜14『スローターダイクは1983年、二つを綴りで分けた』『古代の身体で示す嗤いをキュニシズム』。直接描写のまま、ビート3の座り込む男に寄った別ショットへ切り替え、telopで実際の綴りを示す"
+        gen_prompt: "close view framed below the neck: the weathered hands of a man in a rough grey cloak resting on his knees as he sits on the stone ground of an ancient Greek market, only the sandaled feet and robe hems of well-dressed citizens standing nearby, no heads in frame, warm stone tones, painterly, no lettering"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "近代のシニシズム『啓蒙された偽りの意識』。ぼかしたニュース記事の映るノートPCの前で、腕を組んで椅子にもたれる人（顔なし、冷たい光）"
+        cut_reason: "【啓蒙された偽りの意識】キュー15〜16『近代の、知っていながら何もしない態度をシニシズム』『彼はそれを啓蒙された偽りの意識と呼んだ』。比喩画ではなく現代の直接描写に差し替え"
+        gen_prompt: "present-day scene, shot from directly behind an office chair: the back of a person's head and shoulders leaning back with arms crossed, facing a laptop whose screen shows a blurred unreadable news page, cool office light, no face visible, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "すべてを見抜いている。だからこそ何もしない。暴かれても傷つかない。腕を組み、離れて立つ人物"
+        cut_reason: "【見抜いているから動かない】キュー17〜20『すべてを見抜いている』『だからこそ何もしない』『暴かれても傷つかない』『自分の前提が裏付けられただけだから』。無関心な傍観者の姿を直接描写する"
+        gen_prompt: "present-day scene, seen from directly behind: the back of a person standing with arms crossed at a distance from a small gathering of blurred silhouettes, cool blue evening city light, no faces visible anywhere, unmoved posture, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 21
+        slot: 9
+        visual_intent: "ジジェクの一行『彼らはそれを知っている。それでも、そうする。』。同じ人物の傍観を保持する"
+        cut_reason: "【ジジェクの一行】キュー21〜23『ジジェクはこの態度を一行にまとめた』『彼らはそれを知っている』『それでも、そうする』。ビート8と同じ傍観者だが、寄りの別ショットに切り替える"
+        gen_prompt: "present-day scene, close view framed from the shoulders down: crossed arms and a guarded posture of a person seen from behind, blurred evening city lights beyond, no head in frame, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 24
+        slot: 10
+        visual_intent: "決め文2文。犬は権力に吠えていた／今の冷笑は本気に吠えている。ここで画面は現代の白い光へ完全に切り替わる"
+        cut_reason: "【決め文・完全な現代化】キュー24〜25『犬は、権力に吠えていた』『今の冷笑は、本気に吠えている』。決め文2文を画面保持のまま、現代の白い光へ完全に切り替えて落とす"
+        gen_prompt: "present-day scene, seen from directly behind: the back of a person standing still in the middle of a busy daytime city street while motion-blurred pedestrians stream past on both sides, cool white daylight, no faces visible, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 26
+        slot: 11
+        visual_intent: "矛先の反転と、章末の問い『では、なぜ人は今、本気を嗤うのだろうか』"
+        cut_reason: "【次章への橋渡し】キュー26〜27『矛先はいつの間にか反転していた』『なぜ人は今、本気を嗤うのだろうか』。ビート10と同じ人物・場面だが、引きの別ショットに切り替えて次章『冷笑はなぜこんなに安いのか』へ問いを渡す"
+        gen_prompt: "present-day scene, a wider view of the crowded daytime city street, the same unmoved figure now small within the moving crowd, cool white daylight, faces out of frame, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン5「探索① 第一の安さ（考えなくて済む）」（章2）
+  # ============================================================
+  - id: 5
+    title: "探索① 第一の安さ（考えなくて済む・津田正太郎）"
+    chapter_title: "現代で冷笑が広がる理由① ― 冷笑は、安い"
+    key_color: "#262A31"
+    visual_intent: "①昼休みのデスクで投稿を読まず次へ送る指 ②街頭募金の人の横を素通りする通行人 ③批判する側も擁護する側も同じポスターの前で背を向け合う二人の後ろ姿"
+    narration:
+      - text: "現代で冷笑が広がる理由の、最初の手がかりは、冷笑が驚くほど安上がりだという事実にある。"
+        pause_after: 0.3
+      - text: "メディア論を研究する、慶應義塾大学の津田正太郎氏は、現代のシニシズムを、他人の言動をつねに利己的な動機で解釈しようとする態度と定義した。"
+        pause_after: 0.4
+      - text: "あの人はカネのためにやっている。"
+        pause_after: 0.3
+      - text: "売名だ。"
+        pause_after: 0.2
+      - text: "ポーズだ。"
+        pause_after: 0.4
+      - text: "こう決めてしまえば、相手の主張の中身を吟味する手間は、丸ごと省ける。"
+        pause_after: 0.3
+      - text: "情報が多すぎる時代に、これほど効率のいい処理はない。"
+        pause_after: 0.4
+      - text: "津田氏が例に挙げたのは、アニメ調の女性キャラクターを使った献血ポスターをめぐる論争だった。"
+        pause_after: 0.3
+      - text: "批判する側も、擁護する側も、相手には邪悪な動機がある、と決めつけ合っていた。"
+        pause_after: 0.3
+      - text: "どちらの側にいても、動機を疑えば、考えずに済む。"
+        pause_after: 0.4
+      - text: "しかもこの疑いは、中身に反論しなくても相手を黙らせられるうえ、正義を掲げる相手ほど、よく効く。"
+        pause_after: 0.3
+      - text: "理想を語る人ほど、動機を疑われたときの傷が深いからだ。"
+        pause_after: 0.4
+      - text: "冷笑の第一の安さは、考えなくて済むことにある。"
+        pause_after: 1.0
+    telop: "第一の安さ：考えなくて済む"
+    readings:
+      - surface: "津田正太郎"
+        reading: "ツダショウタロウ"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。次ビートのデスクの画を下地に流用して章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "昼休みのデスクで、誰かの募金・活動の投稿を読まずに次へ送る指"
+        cut_reason: "【手がかり・定義の提示】キュー1〜2『冷笑が驚くほど安上がりだという事実にある』『津田正太郎氏は現代のシニシズムを利己的な動機で解釈する態度と定義した』"
+        gen_prompt: "present-day scene, an office desk at lunch, a hand scrolling past a charity fundraising post on a phone without reading it, screen text blurred and unreadable, no faces, cool daylight, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 3
+        motion: zoom_in
+        visual_intent: "カネのため・売名・ポーズ、と決めつけて次々に流していく指"
+        cut_reason: "【決めつけの列挙】キュー3〜5『あの人はカネのためにやっている』『売名だ』『ポーズだ』という3つの決めつけの一続き"
+        gen_prompt: "present-day scene, a street volunteer in a bright vest standing upright and holding a small collection box with a coin slot, passers-by walking past without looking, all seen from behind, no faces, daytime city street, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 6
+        slot: 4
+        visual_intent: "吟味する手間が省ける効率。街頭で募金を呼びかける人の横を、視線を向けずに通り過ぎる通行人"
+        cut_reason: "【手間が省ける効率】キュー6〜7『相手の主張の中身を吟味する手間は丸ごと省ける』『情報が多すぎる時代にこれほど効率のいい処理はない』"
+        gen_prompt: "present-day scene, people walking past a street fundraiser without looking, seen from behind, no faces, daytime city street, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 8
+        slot: 5
+        visual_intent: "広告ポスターをめぐる論争。批判する側も擁護する側も、同じポスターの前で背を向け合う二人の後ろ姿"
+        cut_reason: "【広告ポスター論争】キュー8〜9『津田氏が例に挙げたのは広告ポスターをめぐる論争だった』『批判する側も擁護する側も相手には邪悪な動機があると決めつけ合っていた』"
+        gen_prompt: "present-day scene, two people standing with their backs to each other in front of the same street poster, neither looking at it, daytime city street, no faces, poster blurred and illegible, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 6
+        visual_intent: "どちらの側でも考えずに済む。正義を掲げる相手ほど疑いがよく効く"
+        cut_reason: "【疑いの効き目】キュー10〜12『どちらの側にいても動機を疑えば考えずに済む』『正義を掲げる相手ほどよく効く』『理想を語る人ほど傷が深いから』。ビート4と同じ構図だが、一方の人物の背中に寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, two people standing strictly back to back in the middle of a city sidewalk, each facing away from the other and away from a blank white poster on a wall behind them, seen from the side, no faces, daytime, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 13
+        slot: 7
+        motion: zoom_out
+        visual_intent: "決め文。冷笑の第一の安さは、考えなくて済むことにある"
+        cut_reason: "【決め文・章の第一の答え】キュー13『冷笑の第一の安さは、考えなくて済むことにある』。背を向け合う二人と街の距離感が見える引きの別ショットで落とす"
+        gen_prompt: "present-day scene, a wide view of the street with the two people still standing back-to-back in front of the same poster, passersby moving around them at a distance, daytime, no faces, poster blurred and illegible, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン6「探索② 第二の安さ（賢く見える・スタヴロヴァ）」
+  # ============================================================
+  - id: 6
+    title: "探索② 第二の安さ（賢く見える・スタヴロヴァ）"
+    key_color: "#262A31"
+    visual_intent: "会議室で、発言する一人と、腕を組んで椅子にもたれる一人。腕を組む側に光が当たる（『賢そうに見える』の視覚化）。顔は写さない"
+    narration:
+      - text: "第二の安さは、賢く見えることだ。"
+        pause_after: 0.3
+      - text: "オランダのティルブルフ大学の心理学者、オルガ・スタヴロヴァらの研究チームは、アメリカ、ドイツ、イギリスで、あわせて674人に、こう尋ねた。"
+        pause_after: 0.4
+      - text: "皮肉屋、つまり、人はどうせ利己的だと考える人と、そうでない人、どちらが認知課題の成績が良いと思うか。"
+        pause_after: 0.3
+      - text: "調査によって、"
+        pause_after: 0.3
+      - text: "56パーセントから70パーセントの人が、皮肉屋の方が賢いと答えた。"
+        pause_after: 0.4
+      - text: "人を信じない態度は、世の中を見抜いている証しに見える。"
+        pause_after: 0.3
+      - text: "何かを信じて動く人より、腕を組んで見ている人の方が、賢そうに見える。"
+        pause_after: 0.4
+      - text: "この見え方の利益は、ほとんどタダで手に入る。"
+        pause_after: 0.3
+      - text: "冷笑の第二の安さは、何もしなくても、賢い側に立てることだ。"
+        pause_after: 0.4
+      - text: "だがこの研究には、続きがある。"
+        pause_after: 0.6
+      - text: "それは後で見ることにして、先に、三つ目の安さを見ておきたい。"
+        pause_after: 0.3
+      - text: "それは、自分を守るための安さだ。"
+        pause_after: 0.5
+    readings:
+      - surface: "の方が"
+        reading: "ノホウガ"
+      - surface: "スタヴロヴァ"
+        reading: "スタヴロヴァ"
+      - surface: "ティルブルフ"
+        reading: "ティルブルフ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "第二の安さ＝賢く見えること。会議室全体の引きの画で構図を確立する"
+        cut_reason: "【第二の安さの提示】キュー1『第二の安さは賢く見えることだ』。会議室全体を見せる引きのショットで開く"
+        gen_prompt: "present-day scene, a wide view of a meeting room seen from behind, one person leaning forward speaking, another leaning back with crossed arms across the table, light falling on the reclined figure, no faces visible, muted cool tones, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 2
+        slot: 2
+        visual_intent: "研究チームが674人に、皮肉屋の方が賢いと思うか尋ねた。話す人物の背中に寄る"
+        cut_reason: "【調査の提示】キュー2〜3『スタヴロヴァらが674人に尋ねた』『皮肉屋とそうでない人、どちらが認知課題の成績が良いと思うか』。20秒超を避けビート1から分割し、発言する側の背中越しの別ショットへ切り替える"
+        gen_prompt: "present-day scene, a closer over-the-shoulder view of the person leaning forward speaking at the meeting table, the reclined listener blurred in the background, no faces visible, muted cool tones, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 4
+        slot: 3
+        telop: "「皮肉屋の方が賢い」と答えた人 56〜70%（米・独・英の4調査）"
+        visual_intent: "56〜70%が皮肉屋の方が賢いと答えた、という結果の提示。腕を組む手元へ寄る"
+        cut_reason: "【結果の数字】キュー4〜5『調査によって』『56パーセントから70パーセントの人が皮肉屋の方が賢いと答えた』。単発数値なのでchartは使わずtelopに載せ、腕を組む手元のディテールへ寄る"
+        gen_prompt: "present-day scene, a close-up on a pair of crossed arms resting on a meeting table, light falling across the folded hands, the rest of the room out of focus, no faces visible, muted cool tones, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 6
+        slot: 4
+        visual_intent: "人を信じない態度は見抜いている証しに見える。腕を組む人の方が賢そうに見える、タダで手に入る利益。反対側からの構図"
+        cut_reason: "【見え方の利益】キュー6〜8『人を信じない態度は見抜いている証しに見える』『腕を組んで見ている人の方が賢そうに見える』『この見え方の利益はほとんどタダで手に入る』。反対側から会議室を見る別アングルに切り替える"
+        gen_prompt: "present-day scene, a meeting room seen from the opposite side, the reclined figure with crossed arms now in the foreground catching the light, the speaking figure blurred beyond, no faces visible, muted cool tones, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 9
+        slot: 5
+        motion: zoom_out
+        visual_intent: "決め文。何もしなくても賢い側に立てる。研究には続きがあり、三つ目の安さへ話が移る。会議室全体へ引く"
+        cut_reason: "【決め文・次章への布石】キュー9〜12『冷笑の第二の安さは何もしなくても賢い側に立てることだ』『この研究には続きがある』『三つ目の安さを見ておきたい』『自分を守るための安さだ』。ビート1の引きの構図へ戻り、次の話題へつなぐ"
+        gen_prompt: "present-day scene, a wide view of the meeting room seen from behind, both figures now still and quiet at the table, muted cool light settling over the room, no faces visible, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン7「探索③ 第三の安さ（防衛）と、ひとつ目の答え（無力感）」（章3）
+  # ============================================================
+  - id: 7
+    title: "探索③ 第三の安さ（防衛）とひとつ目の答え（無力感）"
+    chapter_title: "現代で冷笑が広がる理由② ― 何を守るのか"
+    key_color: "#262A31"
+    visual_intent: "防衛の安さを直接描写。日本の若者は選挙ポスター掲示板の前を足を止めずに通り過ぎる姿。エルスターの箇所のみ、ナレーションが口にする比喩どおり『高い枝の葡萄を見上げてから背を向ける狐』を許容される例外として描く"
+    narration:
+      - text: "第三の安さは、防衛の安さだ。"
+        pause_after: 0.3
+      - text: "期待しなければ、失望しない。"
+        pause_after: 0.2
+      - text: "動かなければ、負けない。"
+        pause_after: 0.2
+      - text: "嗤う側にいれば、嗤われない。"
+        pause_after: 0.8
+      - text: "だとすれば、冷笑は、何かから自分を守っている。"
+        pause_after: 0.4
+      - text: "では、何から守っているのか。"
+        pause_after: 0.3
+      - text: "調べていくと、守っているものが、少なくとも三つ見えてくる。"
+        pause_after: 0.3
+      - text: "ひとつ目は、無力感だ。"
+        pause_after: 0.5
+      - text: "日本財団が2019年に行った18歳意識調査では、自分で国や社会を変えられると思う、と答えた日本の若者は、18.3パーセントだった。"
+        pause_after: 0.4
+      - text: "9カ国の中で最下位で、2番目に低い韓国の39.6パーセントの、半分にも満たない。"
+        pause_after: 0.4
+      - text: "どうせ変わらない。"
+        pause_after: 0.3
+      - text: "この前提に立つと、変えようとする人は、無駄なことをしている愚か者に見える。"
+        pause_after: 0.4
+      - text: "哲学者のヤン・エルスターは、手に入らないものの価値を人が切り下げてしまう仕組みを、イソップの狐になぞらえて、酸っぱい葡萄と呼んだ。"
+        pause_after: 0.4
+      - text: "届かない葡萄は、酸っぱいことにすればいい。"
+        pause_after: 0.3
+      - text: "そうすれば、届かない自分を責めずに済む。"
+        pause_after: 0.4
+      - text: "変えられない社会なら、変えようとする人を嗤えばいい。"
+        pause_after: 0.3
+      - text: "そうすれば、動かない自分を責めずに済む。"
+        pause_after: 0.4
+      - text: "これは私の推論だが、無力感が冷笑の土壌になっている、という仮説は、ここから立てられる。"
+        pause_after: 1.0
+    readings:
+      - surface: "エルスター"
+        reading: "エルスター"
+      - surface: "嗤う"
+        reading: "ワラウ"
+      - surface: "嗤われない"
+        reading: "ワラワレナイ"
+      - surface: "嗤えば"
+        reading: "ワラエバ"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。次ビートの防衛姿勢の画を下地に流用して章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "防衛の安さ。期待しない・動かない・嗤う側にいる、という自己防衛の姿勢"
+        cut_reason: "【防衛の安さ】キュー1〜4『第三の安さは防衛の安さだ』『期待しなければ失望しない』『動かなければ負けない』『嗤う側にいれば嗤われない』という3拍子の一続き"
+        gen_prompt: "present-day city sidewalk with modern glass buildings: seen from directly behind, the back of a person in a modern jacket with arms crossed standing at the edge of a small crowd of blurred silhouettes, stepping slightly back, cool daylight, no ancient ruins, no faces visible anywhere, no lettering"
+
+      - type: image
+        from: 5
+        slot: 3
+        telop: "1つ目の答え：無力感"
+        visual_intent: "冷笑は何かから自分を守っている。三つの答えのうち、ひとつ目は無力感"
+        cut_reason: "【何から守っているか・1つ目の答え】キュー5〜8『冷笑は何かから自分を守っている』『何から守っているのか』『少なくとも三つの答えが出てくる』『ひとつ目は無力感だ』。telopで1つ目の答えのみを示す（3つ揃うのはシーン10）。ビート2と同じ人物へ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, close view framed from the shoulders down: crossed arms and a guarded stance of a person seen from behind at the edge of a blurred crowd, cool daylight, no head in frame, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 9
+        slot: 4
+        telop: "「自分で国や社会を変えられる」日本18.3%（9カ国中最下位）"
+        visual_intent: "選挙ポスター掲示板の前を足を止めずに通り過ぎる日本の若者たち"
+        cut_reason: "【日本財団調査・18.3%】キュー9『日本財団の18歳意識調査で、自分で国や社会を変えられると思う日本の若者は18.3パーセントだった』"
+        gen_prompt: "present-day scene, seen from behind: young people walking past an outdoor notice board on a Japanese street without stopping, the board holds only empty plain white sheets of paper, absolutely no photos, no faces, no print, overcast daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "9カ国中最下位、韓国39.6%の半分未満。どうせ変わらないという前提"
+        cut_reason: "【最下位という位置づけ】キュー10〜12『9カ国の中で最下位、韓国の半分にも満たない』『どうせ変わらない』『変えようとする人は無駄なことをしている愚か者に見える』。ビート3と同じ街頭だが、掲示板に寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, close view of an outdoor notice board holding rows of completely blank white sheets of paper, no photos, no portraits, no print at all, the back of one passer-by blurred in the foreground, overcast daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "エルスターの酸っぱい葡萄。高い枝の葡萄を見上げてから背を向ける狐（ナレーションの比喩どおりの許容例外）"
+        cut_reason: "【酸っぱい葡萄の比喩】キュー13〜15『エルスターは手に入らないものの価値を切り下げる仕組みを酸っぱい葡萄と呼んだ』『届かない葡萄は酸っぱいことにすればいい』『届かない自分を責めずに済む』。ナレーション自身が口にする比喩なので直接描写の例外として使う"
+        gen_prompt: "a red fox standing on its hind legs beneath a rustic grapevine trellis, looking up at a bunch of dark grapes hanging just out of reach, seen from the side, soft late-afternoon light in a quiet orchard, no people, no text, no lettering"
+
+      - type: image
+        from: 16
+        slot: 7
+        visual_intent: "変えようとする人を嗤えばいい。抗議する人の横を、視線を外して足早に通り過ぎる"
+        cut_reason: "【嗤って自分を守る・章の結び】キュー16〜18『変えられない社会なら、変えようとする人を嗤えばいい』『動かない自分を責めずに済む』『これは私の推論だが、無力感が冷笑の土壌になっている』"
+        gen_prompt: "present-day scene, seen from behind: a pedestrian walking briskly past a lone person who holds up a completely blank white placard on a city street, both seen from the back, daytime, no faces visible, no print on the placard, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン8「ふたつ目の答え（責められる予期）——中盤の反転①」
+  # ============================================================
+  - id: 8
+    title: "ふたつ目の答え（責められる予期）——中盤の反転①"
+    key_color: "#2C3038"
+    visual_intent: "①実験室で同じ部屋にいた人 ②ガラス越しに見ている人、という2008年実験の非対称を直接描写。冒頭回帰の部分はシーン1の車内カットを短く再掲する"
+    narration:
+      - text: "ふたつ目の答えは、もっと意外だ。"
+        pause_after: 0.4
+      - text: "スタンフォード大学の心理学者、ブノワ・モナンらの研究チームは2012年、肉を食べる人に、ベジタリアンについて自由に連想してもらった。"
+        pause_after: 0.3
+      - text: "47パーセントの人が、否定的な言葉を連想した。"
+        pause_after: 0.4
+      - text: "そして、否定が強い人ほど、ある予期を抱いていた。"
+        pause_after: 0.3
+      - text: "ベジタリアンは、自分たちを道徳的に見下しているだろう、という予期だ。"
+        pause_after: 0.4
+      - text: "実際に見下されたわけではない。"
+        pause_after: 0.3
+      - text: "そう思われるだろう、と予期しただけで、人は相手を貶める。"
+        pause_after: 0.4
+      - text: "研究チームはこれを、善行者への貶め、と名付けた。"
+        pause_after: 0.5
+      - text: "さらに2008年の実験では、こんな非対称も見つかっている。"
+        pause_after: 0.3
+      - text: "差別的な内容の課題を拒否した人がいたとき、同じ課題を言われるまま実行してしまった参加者は、その拒否した人を嫌った。"
+        pause_after: 0.4
+      - text: "だが、無関係な第三者は、むしろその人を好んだ。"
+        pause_after: 0.4
+      - text: "つまり、正しいことをした人を嫌うのは、その正しさに自分が巻き込まれている人だけだった。"
+        pause_after: 1.0
+      - text: "ここで、冒頭の画面に一度戻ってほしい。"
+        pause_after: 0.4
+      - text: "意識高いね、と返した人は、あの呼びかけに責められていただろうか。"
+        pause_after: 0.3
+      - text: "おそらく、責められてはいない。"
+        pause_after: 0.4
+      - text: "だが、自分も責められるのではないか、と、その人の中の何かが予期した。"
+        pause_after: 0.5
+      - text: "この実験で標的になったのは、優れた人だからではない。"
+        pause_after: 0.3
+      - text: "自分を責めそうな人なのだ。"
+        pause_after: 2.5
+    telop: "善行者への貶め（do-gooder derogation）"
+    readings:
+      - surface: "モナン"
+        reading: "モナン"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "ふたつ目の答えは意外だ。モナンらの研究チームが、肉を食べる人にベジタリアンを自由に連想してもらった"
+        cut_reason: "【モナンらの研究・導入】キュー1〜2『ふたつ目の答えはもっと意外だ』『モナンらは肉を食べる人にベジタリアンを自由に連想してもらった』"
+        gen_prompt: "present-day scene, overhead view of two cafeteria trays on a table: one with a meat dish, the neighboring one a plain vegetable dish, only hands and forearms holding chopsticks visible, no heads in frame, cool daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "47%が否定的な言葉を連想した。否定の強さはある予期と比例していた"
+        cut_reason: "【47%・予期との比例】キュー3〜4『47%の人が否定的な言葉を連想した』『否定の強さはある予期と比例していた』。20秒超を避けビート1から分割し、料理そのものへ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a closer view of the vegetarian dish on the neighboring table, the meat-eater's hand pausing mid-bite in the blurred foreground, no faces, cool daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: diagram
+        from: 5
+        slot: 3
+        cut_reason: "【善行者への貶め・因果の一本鎖】キュー5〜8は『道徳的な相手→責められる予期→相手を貶める』という因果の順序そのものが主張。narrative/chainで層の順序を担う。背景はビート1・2とは反対側から見たカフェテリア全体の別ショット。決め要素の同期は句の終端語を避け『予期しただけで』の直前語に合わせた"
+        gen_prompt: "present-day scene, a wide view of the office cafeteria from the opposite side, both tables visible at a distance, muted cool daylight, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+        diagram:
+          type: narrative
+          layout: chain
+          items:
+            - id: moral
+              text: 道徳的な相手
+              icon: diversity_3
+              at: 5
+              after: 道徳的に見下している
+            - id: expect
+              text: 責められる予期
+              icon: psychology
+              at: 7
+              after: と予期しただけ
+            - id: derogate
+              text: 相手を貶める
+              icon: block
+              at: 7
+              after: 人は相手を貶める
+          caption:
+            at: 8
+            after: 善行者への貶め
+            text: 善行者への貶め
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "2008年の実験。差別的な課題を拒否した人がいたとき、同じ課題をこなした当事者はその人を嫌った"
+        cut_reason: "【2008年実験・当事者の反応】キュー9〜10『2008年の実験ではこんな非対称も見つかっている』『同じ課題をこなしてしまった当事者は、その人を嫌った』"
+        gen_prompt: "present-day scene, two participants seated at a table in a small psychology lab room, one having just declined a task while the other completed it, seen from behind, neutral lighting, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "無関係な第三者は、むしろその人を好んだ。ガラス越しに見ている第三者"
+        cut_reason: "【2008年実験・第三者の反応】キュー11〜12『無関係な第三者はむしろその人を好んだ』『正しいことをした人を嫌うのは、正しさに自分が巻き込まれている人だけだった』"
+        gen_prompt: "present-day scene, a third person observing the same scene from behind a one-way observation window, seen from behind, neutral lighting, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "冒頭の場面への回帰。昼の電車、スマホをなぞる手"
+        cut_reason: "【冒頭への回帰】キュー13〜14『冒頭の場面に一度戻ってほしい』『指が一瞬止まった投稿はあなたを責めていただろうか』。シーン1の車内カットを短く再掲する"
+        gen_prompt: "present-day scene, close-up of a smartphone screen showing a social media post with three short one-line replies stacked beneath it, every word blurred and unreadable, thumb at the edge of the frame, cool screen light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "決め文。冷笑の標的は自分を責めそうな人。指が止まったままの手を保持する"
+        cut_reason: "【決め文・章の結び】キュー15〜18『おそらく、責めてはいない』『だが、責められるかもしれないと予期した』『冷笑の標的は優れた人ではない』『自分を責めそうな人なのだ』。指が止まった手の画を保持したまま決め文を落とす"
+        gen_prompt: "present-day scene, over-the-shoulder view on a bright daytime commuter train of a stranger's hand holding a smartphone, thumb resting still on a screen of blurred unreadable replies, no faces, soft window light, documentary still, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン9「三つ目の答え（嫉妬）——B版で確定」
+  # ============================================================
+  - id: 9
+    title: "三つ目の答え（嫉妬）——B版"
+    key_color: "#2C3038"
+    visual_intent: "①実験室の小部屋でモニターの学生インタビュー映像を見る参加者（後ろ姿）②掲示板の成績上位者の貼り出しを見上げる学生（後ろ姿）③『高く伸びた芥子は刈り取られる』はナレーションが口にする比喩どおり一面の芥子畑で一本だけ高い花（許容される例外）"
+    narration:
+      - text: "三つ目の答えは、嫉妬だ。"
+        pause_after: 0.4
+      - text: "ケンタッキー大学の心理学者、リチャード・スミスらは1996年、優秀な学生のインタビュー映像を人々に見せたあとで、その学生が挫折した、と伝える実験を行った。"
+        pause_after: 0.3
+      - text: "優秀さへの嫉妬を感じていた人ほど、その挫折を喜んだ。"
+        pause_after: 0.4
+      - text: "オーストラリアのフリンダース大学のノーマン・フェザーは、自尊心の低い人ほど、高く昇った人の転落を望むことを、繰り返し確かめている。"
+        pause_after: 0.3
+      - text: "オーストラリアには、高く伸びた芥子は刈り取られる、という言い回しがある。"
+        pause_after: 0.8
+      - text: "自分と似た立場の誰かが、先に行った。"
+        pause_after: 0.3
+      - text: "認めたくないその痛みを、人は、笑いに変える。"
+        pause_after: 0.4
+      - text: "意識が高い、という言葉に含まれている棘は、ここから来ている。"
+        pause_after: 0.4
+      - text: "ただし、"
+        pause_after: 0.6
+      - text: "付け加えておかなければならない。"
+        pause_after: 0.3
+      - text: "フェザーが2002年に行った実験では、転落を喜ぶ気持ちを直接に予測したのは、嫉妬そのものよりも、あの評価は不当だ、という憤りだった。"
+        pause_after: 0.4
+      - text: "嫉妬は、しばしば、冷笑の奥にある。"
+        pause_after: 0.4
+      - text: "それが表に出るときは、不当だ、という言葉の形を取る。"
+        pause_after: 2.0
+    telop: "高く伸びた芥子は刈り取られる（Tall Poppy）"
+    readings:
+      - surface: "スミス"
+        reading: "スミス"
+      - surface: "ケンタッキー"
+        reading: "ケンタッキー"
+      - surface: "芥子"
+        reading: "ケシ"
+      - surface: "憤り"
+        reading: "イキドオリ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "三つ目の答えは嫉妬だ。スミスらの実験、優秀な学生のインタビュー映像を見せたあと挫折を伝える"
+        cut_reason: "【スミスの実験・導入】キュー1〜2『三つ目の答えは嫉妬だ』『スミスらは優秀な学生のインタビュー映像を見せたあと挫折したと伝えた』"
+        gen_prompt: "present-day scene, a participant watching a recorded interview of a student on a monitor in a small lab room, seen from behind, screen blurred and unreadable, neutral light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "優秀さへの嫉妬を感じていた人ほど、その挫折を喜んだ"
+        cut_reason: "【実験結果】キュー3『優秀さへの嫉妬を感じていた人ほど、その挫折を喜んだ』。20秒超を避けビート1から分割し、モニター画面へ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a participant watching a monitor in a small lab room, seen from behind, the monitor shows only the blurred back and shoulders of an interviewee, no faces anywhere, neutral light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 4
+        slot: 3
+        visual_intent: "フェザーの確認研究。自尊心の低い人ほど、高く昇った人の転落を望む"
+        cut_reason: "【フェザーの確認研究】キュー4『フェザーは自尊心の低い人ほど高く昇った人の転落を望むことを繰り返し確かめている』"
+        gen_prompt: "present-day scene, a student looking up at a bulletin board of posted top exam results, names illegible, seen from behind, neutral daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 5
+        slot: 4
+        visual_intent: "高く伸びた芥子は刈り取られる。似た誰かが先に行った、という比喩"
+        cut_reason: "【芥子の比喩】キュー5〜6『高く伸びた芥子は刈り取られる』『似た誰かが先に行った』。ナレーション自身が口にする比喩なので直接描写の例外として使う"
+        gen_prompt: "a field of red poppies with one poppy standing taller than the rest, soft morning light, no text, no people, no lettering"
+
+      - type: image
+        from: 7
+        slot: 5
+        motion: zoom_out
+        visual_intent: "認めたくない痛みを笑いに変える。意識が高いという言葉に含まれる棘。芥子畑全体へ引く"
+        cut_reason: "【痛みが笑いに変わる】キュー7〜8『認めたくないその痛みを、人は笑いに変える』『意識が高いという言葉に含まれている棘は、ここから来ている』。芥子畑の画から引いて場面を保持する"
+        gen_prompt: "a wide view of the full field of red poppies stretching to a flat empty horizon, the one taller poppy now small within the larger field, soft morning light, open countryside with no buildings, no ruins, no ancient architecture, no text, no people, no lettering"
+
+      - type: image
+        from: 9
+        slot: 6
+        visual_intent: "留保への転換。ただし、付け加えておかなければならない。タール系の花に寄った別ショット"
+        cut_reason: "【留保への転換】キュー9〜10『ただし』『付け加えておかなければならない』。同じ芥子畑だが、花弁に寄った別ショットで留保のトーンへ間を置く"
+        gen_prompt: "a close-up on the petals of the single taller poppy swaying gently, the rest of the field soft and out of focus, morning light, no text, no people, no lettering"
+
+      - type: image
+        from: 11
+        slot: 7
+        visual_intent: "フェザー2002年の実験では、転落を喜ぶ気持ちを予測したのは憤りだった"
+        cut_reason: "【2002年実験の留保】キュー11『フェザー2002年の実験では、憤りが転落を喜ぶ気持ちを予測した』。掲示板を見上げる学生の画に戻る"
+        gen_prompt: "present-day scene, a student looking up at a bulletin board of posted top exam results, names illegible, seen from behind, neutral daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 12
+        slot: 8
+        visual_intent: "決め文。嫉妬は冷笑の奥にあり、不当だという言葉の形を取る"
+        cut_reason: "【決め文・章の結び】キュー12〜13『嫉妬は冷笑の奥にある』『不当だという言葉の形を取る』。20秒超を避けビート7から分割し、掲示板の紙面へ寄った別ショットで決め文を落とす"
+        gen_prompt: "present-day scene, a close-up on the posted exam result sheets on the bulletin board, names blurred and illegible, the student's shoulder just visible at the frame edge, neutral daylight, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン10「三つの標的（図解でまとめる）」
+  # ============================================================
+  - id: 10
+    title: "三つの標的（図解でまとめる）"
+    key_color: "#2C3038"
+    visual_intent: "三つの防衛（無力感／責められる予期／不当だという感覚）をnarrative/radiateで揃って示し、フィスクの温かさ×有能さの二軸をcomparisonで示す。この動画での図解はここまでで3箇所"
+    narration:
+      - text: "三つの答えは、冷笑の向かう相手も変える。"
+        pause_after: 0.3
+      - text: "プリンストン大学の心理学者、スーザン・フィスクらは、人が他の集団に向ける感情を、温かさと有能さの二つの軸で整理した。"
+        pause_after: 0.4
+      - text: "有能だが冷たい、と見なした相手には、妬みが向く。"
+        pause_after: 0.4
+      - text: "無能で冷たい、と見なした相手には、軽蔑が向く。"
+        pause_after: 0.4
+      - text: "同じ人でも、有能だと見られれば妬まれ、無能だと見られれば見下される。意識が高い、と呼ばれる人は、しばしば前者に置かれる。"
+        pause_after: 0.3
+      - text: "本気で何かを変えようとする人は、成果が見えにくいぶん、しばしば後者に置かれる。"
+        pause_after: 0.4
+      - text: "だから、成功者は妬まれ、ボランティアは見下されやすい。"
+        pause_after: 0.4
+      - text: "標的は違っても、三つの答えには共通点がある。"
+        pause_after: 0.3
+      - text: "どれも、自分を守るための反応だ、ということだ。"
+        pause_after: 0.4
+      - text: "では、その防衛は、本当に自分を守っているのだろうか。"
+        pause_after: 1.0
+    readings:
+      - surface: "フィスク"
+        reading: "フィスク"
+    beats:
+      - type: diagram
+        from: 1
+        slot: 1
+        cut_reason: "【三つの防衛が揃う】キュー1『三つの答えは標的が違う』の直前に、ここまでの三つの答え（無力感・責められる予期・不当だという感覚）をnarrative/radiateで揃えて示す。中心＝冷笑という防衛から3つの答えが広がる構造情報を担う。背景は防衛姿勢の画を流用"
+        gen_prompt: "present-day scene, seen from directly behind: the back of a person with arms crossed standing at the edge of a small crowd of blurred silhouettes, guarded posture, cool daylight, no faces visible anywhere, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+        diagram:
+          type: narrative
+          layout: radiate
+          center: {icon: shield, text: 冷笑という防衛, at: 1}
+          items:
+            - {id: helpless, text: 無力感, at: 1}
+            - {id: blamed, text: 責められる予期, at: 1}
+            - {id: unfair, text: 不当だという感覚, at: 1}
+
+      - type: diagram
+        from: 2
+        slot: 2
+        cut_reason: "【温かさ×有能さの二軸】キュー2〜4はフィスクの研究知見そのもの＝2軸上の位置が妬み/軽蔑を分ける構造情報。schemaに2×2型が無いため、2列比較として最も近いcomparisonを採用（判断の詳細は完了報告）。背景は集団を眺める場面を流用"
+        gen_prompt: "present-day scene, two distinct groups of blurred people seen at a distance in a public plaza, cool daylight, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+        diagram:
+          type: comparison
+          left_title: 妬みの対象
+          right_title: 軽蔑の対象
+          pairs:
+            - label: 有能さ
+              left: 高い
+              right: 低い
+              at: 3
+              accent: left
+            - label: 温かさ
+              left: 低い
+              right: 低い
+              at: 4
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "意識が高い人は妬みの対象。身なりの良い人物に向く横目の視線（顔なし）"
+        cut_reason: "【妬みの標的】キュー5『意識が高い人は、しばしば前者に置かれる』。二者比較を1枚に描かず、妬みの標的のみを直接描写する"
+        gen_prompt: "present-day scene, on a daytime city street a well-dressed successful-looking person walks past, other passersby giving envious sidelong glances toward them, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 6
+        slot: 4
+        visual_intent: "本気で変えようとする人は軽蔑の対象。成功者は妬まれ、ボランティアは見下される。ベスト姿のボランティアの横を素通りする通行人（後ろ姿）"
+        cut_reason: "【軽蔑の標的】キュー6〜7『本気で何かを変えようとする人は、しばしば後者に置かれる』『成功者は妬まれ、ボランティアは見下される』。ビート3と対になる別ショットで軽蔑の標的を直接描写する"
+        gen_prompt: "present-day scene, seen from behind: a street volunteer in a bright vest holding a collection box with a visible coin slot, an armband on the sleeve, while blurred passers-by walk past without looking, no faces, daytime city street, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 8
+        slot: 5
+        motion: zoom_out
+        visual_intent: "標的は違っても共通点がある。どれも自分を守るための反応。防衛は本当に自分を守っているのか、という章末の問い"
+        cut_reason: "【次章への橋渡し】キュー8〜10『標的は違っても三つの答えには共通点がある』『どれも自分を守るための反応だ』『その防衛は本当に自分を守っているのだろうか』。防衛姿勢の画に戻り、次章『安い知性の請求書は誰が払うのか』へ問いを渡す"
+        gen_prompt: "present-day scene, seen from directly behind: the back of a person with arms crossed standing at the edge of a small crowd of blurred silhouettes, guarded posture, cool daylight, no faces visible anywhere, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン11「安い知性の請求書——中盤の反転②」（章4）
+  # ============================================================
+  - id: 11
+    title: "安い知性の請求書——中盤の反転②"
+    chapter_title: "安い知性の請求書は、誰が払うのか"
+    key_color: "#2C3038"
+    visual_intent: "『9年後の収入』『リーダーに選ばれない』『共感が回復しない』を3つの独立した知見として示し、1つの結論（安さの代償）へ収束させる。ヴァイラントの箇所は会議で誰かの皮肉の直後に資料を持つ手が止まる場（顔なし）"
+    narration:
+      - text: "ここで、スタヴロヴァの研究の続きに戻る。"
+        pause_after: 0.3
+      - text: "皮肉屋の方が賢い、と、56パーセントから70パーセントの人が答えた。"
+        pause_after: 0.3
+      - text: "では、実際はどうだったのか。"
+        pause_after: 0.4
+      - text: "研究チームは、ドイツの成人9000人あまりと、30カ国およそ20万人のデータで、皮肉の強さと認知能力の関係を調べた。"
+        pause_after: 0.4
+      - text: "結果は、逆だった。"
+        pause_after: 1.0
+      - text: "皮肉の強い人ほど、読解や数学の成績は低かった。"
+        pause_after: 0.3
+      - text: "相関は弱いが、30カ国で、ほぼ一貫していた。"
+        pause_after: 0.3
+      - text: "研究チームはこれを、皮肉屋の天才幻想と名付けている。"
+        pause_after: 0.5
+      - text: "話は、これで終わらない。"
+        pause_after: 0.4
+      - text: "同じチームがアメリカの全国調査を追跡したところ、人を信じない度合いが強い人は、9年後の収入が低かった。"
+        pause_after: 0.5
+      - text: "研究チームはその理由を、信じないために協力の機会を逃し、警戒に力を使いすぎるからだ、と説明している。"
+        pause_after: 0.3
+      - text: "さらに2024年の研究では、シニカルな人ほど権力を欲しがるのに、実際にリーダーに選ばれることは少なかった。"
+        pause_after: 0.4
+      - text: "約9000人を、最長10年追った結果だ。"
+        pause_after: 0.3
+      - text: "そして、シンガポール経営大学の研究チームが行った実験では、仲間はずれにされたあと、普通の人は他者への共感が高まり、つながり直そうとしたが、シニシズムの強い人には、その反応が起きなかった。"
+        pause_after: 0.4
+      - text: "傷つく前に切り捨てるから、つながり直す動きが起きにくいのだ。"
+        pause_after: 0.4
+      - text: "精神科医のジョージ・ヴァイラントは、心の防衛を成熟度で並べたとき、ユーモアを最も成熟した防衛に置き、直接ぶつからずに相手を傷つける受動攻撃を、未成熟な防衛に分類した。"
+        pause_after: 0.4
+      - text: "冗談だった、と言い逃れできる皮肉は、この未成熟な側に近い。"
+        pause_after: 0.4
+      - text: "冷笑は安い。"
+        pause_after: 0.5
+      - text: "安いから、広がる。"
+        pause_after: 0.5
+      - text: "だが、安いものはたいてい、後で高くつく。"
+        pause_after: 2.5
+    readings:
+      - surface: "の方が"
+        reading: "ノホウガ"
+      - surface: "ヴァイラント"
+        reading: "ヴァイラント"
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭。次ビートの研究再検討の画を下地に流用して章名を重ねる"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "スタヴロヴァの研究の続きに戻る。56〜70%が皮肉屋の方が賢いと答えたが、実際はどうだったのか"
+        cut_reason: "【研究の続きへ】キュー1〜3『スタヴロヴァの研究の続きに戻る』『56〜70%の人が皮肉屋の方が賢いと答えた』『実際はどうだったのか』。シーン6の会議室の構図を再掲する"
+        gen_prompt: "present-day scene, a meeting room seen from behind, one person leaning forward speaking, another leaning back with crossed arms, light falling on the reclined figure, no faces visible, muted cool tones, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 4
+        slot: 3
+        visual_intent: "ドイツ成人9000人あまりと30カ国20万人のデータで、皮肉の強さと認知能力の関係を調べる"
+        cut_reason: "【大規模データの再検証】キュー4『研究チームはドイツの成人9000人あまりと30カ国20万人のデータで皮肉の強さと認知能力の関係を調べた』"
+        gen_prompt: "present-day scene, a researcher reviewing stacks of survey data printouts spread across a desk, columns of numbers blurred and illegible, no faces, cool light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 5
+        slot: 4
+        telop: "皮肉屋の天才幻想（cynical genius illusion）"
+        visual_intent: "結果は逆だった。皮肉の強い人ほど成績が低く、30カ国でほぼ一貫していた"
+        cut_reason: "【結果は逆・天才幻想】キュー5〜9『結果は逆だった』『皮肉の強い人ほど読解や数学の成績は低かった』『30カ国でほぼ一貫していた』『皮肉屋の天才幻想と名付けている』『話はこれで終わらない』"
+        gen_prompt: "present-day scene, a hand grading a stack of comprehension test papers under a desk lamp at night, marks visible but illegible, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "9年後の収入が低かった。給与明細を見る手"
+        cut_reason: "【1つ目の項目・収入】キュー10〜11『同じチームがアメリカの全国調査を追跡したところ、人を信じない度合いが強い人は9年後の収入が低かった』『信じないために協力の機会を逃し、警戒に力を使いすぎるから』。列挙部分はimageビートで見せ、図解は収束部だけに絞る"
+        gen_prompt: "present-day scene, a hand holding a payslip at a kitchen table in the evening, the printed figures blurred and unreadable, no faces, muted light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 12
+        slot: 6
+        visual_intent: "実際にリーダーに選ばれることは少なかった。会議で末席に座る後ろ姿"
+        cut_reason: "【2つ目の項目・リーダー】キュー12〜13『2024年の研究では、シニカルな人ほど権力を欲しがるのに実際にリーダーに選ばれることは少なかった』『約9000人を最長10年追った結果だ』"
+        gen_prompt: "present-day scene, a long conference table seen from behind the far end: a person of indeterminate gender sits at the very end seat at the edge of the frame while another person at the head of the table leads the meeting, all seen from behind, no faces, cool office light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: diagram
+        from: 14
+        slot: 7
+        cut_reason: "【安い知性の請求書・収束部のみ】キュー14〜15は、ビート5・6で列挙した2項目に3つ目（共感が回復しない）を加え、独立した3つの知見が『安さの代償』という1つの結論へ収束する構造そのものが主張。narrative/convergeでその収束構造を担う。列挙は前2ビートのimageに委ね、図解は収束部（約12秒）だけに絞った。背景はビート6の会議室の別ショット"
+        gen_prompt: "present-day scene, a wide view of the same meeting room from behind, the long table now empty and still, cool office light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: income
+              text: 9年後の収入減
+              at: 14
+            - id: leader
+              text: リーダーになれない
+              at: 14
+            - id: empathy
+              text: 共感が高まらない
+              at: 14
+              after: シニシズムの強い人には
+          result:
+            text: 静かな代償
+            at: 15
+            after: つながり直す動きが
+
+      - type: image
+        from: 16
+        slot: 8
+        visual_intent: "精神科医ヴァイラントの防衛階層。ユーモアは成熟した防衛、皮肉は未成熟な受動攻撃。会議で誰かの皮肉の直後に資料を持つ手が止まる"
+        cut_reason: "【ヴァイラントの防衛階層】キュー16〜17『ヴァイラントはユーモアを最も成熟した防衛に置き、皮肉を未成熟な受動攻撃に分類した』『冗談だったと言い逃れできる攻撃だから』"
+        gen_prompt: "present-day scene, a hand pausing over paperwork in a meeting room right after an unseen sarcastic remark, cool office light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 18
+        slot: 9
+        visual_intent: "決め文3文。冷笑は安い。安いから、広がる。だが、安いものはたいてい、後で高くつく。手元に寄った別ショットで保持する"
+        cut_reason: "【決め文3文・章の結び】キュー18〜20『冷笑は安い』『安いから、広がる』『だが、安いものはたいてい、後で高くつく』。ビート8と同じ場面だが、静止した手元へ寄った別ショットで3文を画面保持で落とす"
+        gen_prompt: "present-day scene, a close-up on the paused hand resting on the paperwork, fingers still, cool office light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン12「環境が育てる（個人に還元しない）」
+  # ============================================================
+  - id: 12
+    title: "環境が育てる（個人に還元しない）"
+    key_color: "#303A48"
+    visual_intent: "前半は実写ストック（テレビスタジオの照明・空の司会席、顔なし）。日本のくだりは対人信頼＝並んで座る人々の手元／制度＝閉じた庁舎の扉。三無主義は白黒調の一枚絵（1970年代の学生街の遠景、顔なし）。北田は書影を出さずtelopで書名を示す"
+    narration:
+      - text: "ただし、これを個人の性格の話で終わらせてはいけない。"
+        pause_after: 0.4
+      - text: "冷笑は、環境が育てる。"
+        pause_after: 0.3
+      - text: "ペンシルベニア大学のジョセフ・カペラとキャスリーン・ジェイミソンは1997年、政治を、政策の中身ではなく勝ち負けの駆け引きとして描く報道が、視聴者のシニシズムを高めることを、実験で示した。"
+        pause_after: 0.4
+      - text: "のちに32の研究、およそ3万9000人分の結果をまとめたメタ分析も、この効果が一貫して存在することを確かめている。"
+        pause_after: 0.4
+      - text: "SNSには、別の経路がある。"
+        pause_after: 0.3
+      - text: "2020年のアメリカ大統領選挙の期間に約1800人を追跡した調査では、政治的な攻撃投稿に触れるほど怒りが高まり、その怒りが、シニシズムを高めていた。"
+        pause_after: 0.4
+      - text: "画面を開くたびに、どうせみんな利己的だ、という前提が補給される。"
+        pause_after: 0.4
+      - text: "冷笑は、個人の性格である前に、毎日浴びている環境の産物でもある。"
+        pause_after: 0.5
+      - text: "では、日本はどうか。"
+        pause_after: 0.3
+      - text: "日本は、人を信じない国ではない。"
+        pause_after: 0.4
+      - text: "世界価値観調査で、たいていの人は信頼できると答える割合は、世界の中で際立って低いわけではない。"
+        pause_after: 0.4
+      - text: "だが、政府への信頼は、2021年のOECDの調査で24パーセント。自分で社会を変えられると思う若者は、先ほどの18.3パーセントだった。"
+        pause_after: 0.4
+      - text: "日本で目立つのは、不信よりも、無力感なのだ。"
+        pause_after: 1.5
+      - text: "そして、この無力感には歴史がある。"
+        pause_after: 0.4
+      - text: "1972年の連合赤軍事件と、翌年のオイルショックを経て、学生運動の熱は急速に冷め、若者の無気力、無関心、無責任が、三無主義と呼ばれた。"
+        pause_after: 0.4
+      - text: "社会学者の北田暁大氏は2005年、2ちゃんねるに生まれたコミュニケーションを、嗤いながら、同時に本気の感情を分かち合う、皮肉な共同体と分析している。"
+        pause_after: 0.4
+      - text: "冷笑には、形を変えながら続いてきた、半世紀の系譜がある。"
+        pause_after: 1.0
+    readings:
+      - surface: "カペラ"
+        reading: "カペラ"
+      - surface: "ジェイミソン"
+        reading: "ジェイミソン"
+      - surface: "北田暁大"
+        reading: "キタダアキヒロ"
+      - surface: "嗤いながら"
+        reading: "ワライナガラ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "個人の性格の話で終わらせない。冷笑は環境が育てる。空のテレビスタジオ全体の引きの画"
+        cut_reason: "【個人から環境へ】キュー1〜2『これを個人の性格の話で終わらせてはいけない』『冷笑は環境が育てる』。スタジオ全体を見せる引きのショットで開く"
+        gen_prompt: "present-day scene, a modern television news studio with an empty anchor desk and chairs, clean minimal set, cool blue-white studio lighting, no people, no historical decor, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "カペラとジェイミソンの1997年の実験。政治を勝ち負けの駆け引きとして描く報道がシニシズムを高める。空の椅子に寄る"
+        cut_reason: "【戦略報道の実験】キュー3『カペラとジェイミソンは政治を勝ち負けの駆け引きとして描く報道がシニシズムを高めることを実験で示した』。スタジオの空の椅子へ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a closer view of the empty host chair under a cool studio spotlight, out-of-focus camera equipment in the background, no people, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 4
+        slot: 3
+        telop: "戦略報道→シニシズム（メタ分析 2021・32研究・38,658人）"
+        visual_intent: "のちのメタ分析32研究・3万9000人分の結果が、この効果の一貫性を確かめている。天井の照明機材へ引く"
+        cut_reason: "【メタ分析】キュー4『のちに32の研究、およそ3万9000人分の結果をまとめたメタ分析も、この効果が一貫して存在することを確かめている』（台本修正済み・構文反復対策）。20秒超を避けビート2から分割し、天井のライティングリグへ引いた別ショットに切り替える。telopに調査年を明記"
+        gen_prompt: "present-day scene, a view looking up at the studio lighting rig and cameras suspended above the empty set, cool studio light, no people, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 5
+        slot: 4
+        visual_intent: "SNSでも同じ。2020年米大統領選の攻撃投稿と怒り"
+        cut_reason: "【SNSでの再現】キュー5〜6『SNSでも同じだ』『2020年米大統領選期に攻撃投稿に触れるほど怒りが高まりシニシズムを高めていた』"
+        gen_prompt: "present-day scene, a hand scrolling through a feed of heated political posts on a phone, screen text blurred and unreadable, cool light, face out of frame, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 7
+        slot: 5
+        visual_intent: "画面を開くたびに、どうせみんな利己的だという前提が補給される"
+        cut_reason: "【前提の補給】キュー7『画面を開くたびに前提が補給される』。20秒超を避けビート4から分割し、画面のディテールへ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a close-up on the glowing phone screen itself, rows of blurred unreadable post text scrolling past, cool light, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 8
+        slot: 6
+        visual_intent: "冷笑は環境の産物でもある。では日本はどうか、という問い。手元から引く"
+        cut_reason: "【環境の産物・日本への転換】キュー8〜9『冷笑は個人の性格である前に環境の産物でもある』『では、日本はどうか』。画面から引いて場面全体を見せる別ショットに切り替える"
+        gen_prompt: "present-day scene, a wider view pulling back from the phone to show the hand and dim room around it, the screen blurred and unreadable, its glow the only light source, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 7
+        visual_intent: "日本は人を信じない国ではない。世界価値観調査で対人信頼は際立って低くない。並んで座る人々の手元"
+        cut_reason: "【対人信頼は低くない】キュー10〜11『日本は人を信じない国ではない』『世界価値観調査で対人信頼の割合は世界の中で際立って低いわけではない』"
+        gen_prompt: "present-day scene, the hands of several people sitting side by side on a bench, relaxed and close together, daytime, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 12
+        slot: 8
+        telop: "不信よりも、無力感"
+        visual_intent: "政府への信頼は24%にとどまる。決め文『不信の国ではなく無力感の国』。閉じた庁舎の扉"
+        cut_reason: "【決め文・制度への不信】キュー12〜13『政府への信頼は2021年OECD調査で24パーセントにとどまった』『日本は不信の国ではなく無力感の国なのだ』。決め文を画面保持で落とす"
+        gen_prompt: "present-day scene, the closed front doors of a government office building, empty steps, overcast daylight, no people, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 14
+        slot: 9
+        visual_intent: "無力感には歴史がある。1972年連合赤軍事件と翌年のオイルショック、三無主義。白黒調の1970年代学生街の遠景"
+        cut_reason: "【無力感の歴史・三無主義】キュー14〜15『この無力感には歴史がある』『連合赤軍事件とオイルショックを経て、若者の無気力・無関心・無責任が三無主義と呼ばれた』"
+        gen_prompt: "a distant black-and-white view of a 1970s Japanese student district street at dusk, shop signs plain and out of focus with no readable characters, only tiny distant silhouettes, grainy documentary still, no lettering"
+
+      - type: image
+        from: 16
+        slot: 10
+        telop: "北田暁大『嗤う日本の「ナショナリズム」』(2005)"
+        visual_intent: "北田暁大氏の分析。2ちゃんねるに生まれた、嗤いながら本気の感情を分かち合う皮肉な共同体。冷笑には半世紀の系譜がある"
+        cut_reason: "【北田暁大の分析・章の結び】キュー16〜17『北田暁大氏は2ちゃんねるのコミュニケーションを嗤いながら本気の感情を分かち合う皮肉な共同体と分析している』『冷笑には半世紀の系譜がある』。書影は出さずtelopで書名のみ示す"
+        gen_prompt: "present-day scene, an old CRT computer monitor glowing in a dim room at night, a blurred unreadable internet forum page on the screen, early 2000s setting, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 17
+        slot: 11
+        visual_intent: "1970年代の学生街の遠景（半世紀の系譜）"
+        cut_reason: "【半世紀の系譜】キュー17。北田の分析から系譜の総括へ戻るため、1970年代の街の画を再掲する"
+        gen_prompt: "a distant black-and-white view of a 1970s Japanese student district street at dusk, shop signs plain and out of focus with no readable characters, only tiny distant silhouettes, grainy documentary still, no lettering"
+
+  # ============================================================
+  # シーン13「疑うことと、嗤うことは違う」（章カードなし＝演出セットの非対称）
+  # ============================================================
+  - id: 13
+    title: "疑うことと、嗤うことは違う"
+    key_color: "#303A48"
+    visual_intent: "直接描写で道具／癖を対比。懐疑＝印刷した資料を読み込み、付箋を貼り、出典を確かめる手。冷笑（癖）＝見出しだけ見てノートPCを閉じる手。章カードなしの静かなシーン扱い（演出セットの非対称）"
+    narration:
+      - text: "では、疑うこと自体が悪いのだろうか。"
+        pause_after: 0.4
+      - text: "そうではない。"
+        pause_after: 0.3
+      - text: "政治学者のジャック・シトリンとローラ・ストーカーは、不信を二つに分けた。"
+        pause_after: 0.3
+      - text: "制度を批判的に見張る懐疑と、制度そのものを見放すシニシズムだ。"
+        pause_after: 0.4
+      - text: "前者は民主主義に必要な機能で、問題は、後者への転化だという。"
+        pause_after: 0.4
+      - text: "スタヴロヴァの研究にも、これと重なる結果がある。"
+        pause_after: 0.3
+      - text: "認知能力の高い人は、腐敗の多い社会でだけ、シニシズムを強めていた。"
+        pause_after: 0.4
+      - text: "つまり、疑うべきときに、疑っていた。"
+        pause_after: 0.3
+      - text: "一方、認知能力の低い人は、環境にかかわらず、いつもシニカルだった。"
+        pause_after: 0.4
+      - text: "疑いが、状況を見て使う道具ではなく、癖になっていたのだ。"
+        pause_after: 0.4
+      - text: "あなたが何かを疑うとき、それは道具だろうか。"
+        pause_after: 0.3
+      - text: "それとも、癖だろうか。"
+        pause_after: 1.0
+      - text: "スタンフォード大学の心理学者、ジャミール・ザキは、この二つの間にある構えを、希望を持った懐疑と呼んでいる。"
+        pause_after: 0.4
+      - text: "主張は疑う。"
+        pause_after: 0.2
+      - text: "だが、人が変わる力までは、疑わない。"
+        pause_after: 0.4
+      - text: "冷笑をやめることは、疑うのをやめることではない。"
+        pause_after: 0.4
+      - text: "疑ったあとに、何をするかだ。"
+        pause_after: 2.0
+    readings:
+      - surface: "シトリン"
+        reading: "シトリン"
+      - surface: "ストーカー"
+        reading: "ストーカー"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "疑うこと自体が悪いのか、そうではない、という前置き。資料を読み込む手全体の画"
+        cut_reason: "【問いの提示】キュー1〜2『疑うこと自体が悪いのだろうか』『そうではない』。机全体を見せる画で開く"
+        gen_prompt: "present-day scene, a wide view of a desk under a lamp, hands reading a printed report closely with sticky notes and a pen, no faces, the printed text blurred and unreadable, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "シトリンとストーカーの区別。制度を見張る懐疑は民主主義に必要な機能。付箋に寄る"
+        cut_reason: "【懐疑とシニシズムの区別】キュー3〜5『シトリンとストーカーは不信を二つに分けた』『制度を批判的に見張る懐疑と、制度そのものを見放すシニシズムだ』『前者は民主主義に必要な機能』。付箋を貼る手元へ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a close-up on a hand placing a sticky note onto a printed report page, the text blurred and unreadable, desk lamp light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "スタヴロヴァの研究。能力の高い人は腐敗の多い社会でだけシニシズムを強めた＝疑うべきときに疑っていた。出典を確かめるペン先へ寄る"
+        cut_reason: "【疑うべきときに疑う】キュー6〜8『スタヴロヴァの研究にも同じ区別がある』『能力の高い人は腐敗の多い社会でだけシニシズムを強めていた』『疑うべきときに疑っていた』。ビート1・2と同じ『道具としての懐疑』だが、ペン先で出典を確かめる別ショットに切り替える"
+        gen_prompt: "present-day scene, a close-up on a pen tip underlining a line in the printed report, the text blurred and unreadable, desk lamp light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 9
+        slot: 4
+        telop: "懐疑（道具）／冷笑（癖）"
+        visual_intent: "能力の低い人は環境にかかわらずいつもシニカル。疑いが癖になっていた。見出しだけ見てノートPCを閉じる手"
+        cut_reason: "【癖になった疑い】キュー9〜10『能力の低い人は環境にかかわらずいつもシニカルだった』『疑いが道具ではなく癖になっていた』。画を『道具』から『癖』へ切り替える"
+        gen_prompt: "present-day scene, a hand closing a laptop after glancing at a headline, screen text blurred and unreadable, cool light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "あなたが何かを疑うとき、それは道具か、癖か、という二人称の問い"
+        cut_reason: "【二人称の問い】キュー11〜12『あなたが何かを疑うとき、それは道具だろうか』『それとも、癖だろうか』。ビート4と同じノートPCだが、画面のヘッドラインへ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, a close-up on the laptop screen's blurred unreadable headline just before the lid closes over it, cool light, no faces, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "ザキの『希望を持った懐疑』。主張は疑うが人が変わる力までは疑わない。資料を読み込む手に戻る"
+        cut_reason: "【希望を持った懐疑】キュー13〜15『ザキはこの二つの間にある構えを希望を持った懐疑と呼んでいる』『主張は疑う』『人が変わる力までは疑わない』。ビート1の机全体の画に戻る"
+        gen_prompt: "present-day scene, a wide view of a desk under a lamp, hands reading a printed report closely with sticky notes and a pen, no faces, the printed text blurred and unreadable, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 16
+        slot: 7
+        visual_intent: "決め文。冷笑をやめることは疑うのをやめることではない。疑ったあとに何をするかだ。ページをめくる手へ寄る"
+        cut_reason: "【決め文・シーンの結び】キュー16〜17『冷笑をやめることは疑うのをやめることではない』『疑ったあとに、何をするかだ』。ビート6と同じ机だが、ページをめくる手元へ寄った別ショットで決め文を落とす"
+        gen_prompt: "present-day scene, a close-up on a hand turning to the next page of the printed report, sticky notes visible along the margin, desk lamp light, no faces, the text blurred and unreadable, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+  # ============================================================
+  # シーン14「回帰と結び」
+  # ============================================================
+  - id: 14
+    title: "回帰と結び"
+    key_color: "#241F1A"
+    visual_intent: "シーン3のランプの男（後ろ姿）へ回帰→シーン1の車内の手へ回帰。最後の一枚絵は、車内で指が止まったまま画面を見つめる手（冒頭場面の再現）。決め文の文字カットは置かない。アウトロは --outro-seconds 8"
+    narration:
+      - text: "もう一度、あの真昼のアテナイに戻ろう。"
+        pause_after: 0.4
+      - text: "ランプを掲げた男は、人間を探していた。"
+        pause_after: 0.4
+      - text: "彼は権力を嗤い、慣習を嗤ったが、その嗤いには、賭けているものがあった。"
+        pause_after: 0.5
+      - text: "自分の暮らしと、自分の体だ。"
+        pause_after: 0.4
+      - text: "嗤われる側に回ることを、彼は恐れなかった。"
+        pause_after: 0.5
+      - text: "犬は、権力に吠えた。"
+        pause_after: 0.4
+      - text: "今の冷笑は、本気に吠える。"
+        pause_after: 0.5
+      - text: "反転したのは、矛先だけではない。"
+        pause_after: 0.4
+      - text: "賭けているものが、なくなったのだ。"
+        pause_after: 1.5
+      - text: "安全な場所から、何も賭けずに嗤うとき、その嗤いは、あなたを守っているように見えて、あなたから少しずつ、何かを削っている。"
+        pause_after: 0.5
+      - text: "信じる力と、つながり直す力と、いつか動き出す力を。"
+        pause_after: 0.6
+      - text: "昼の電車の、あの画面を思い出してほしい。"
+        pause_after: 0.5
+      - text: "意識高いね、と返したその一瞬に、その人は何かから、自分を守っていた。"
+        pause_after: 0.5
+      - text: "無力感か。"
+        pause_after: 0.5
+      - text: "責められる予期か。"
+        pause_after: 0.5
+      - text: "嫉妬から来る、不当だ、という感覚か。"
+        pause_after: 0.5
+      - text: "そして同じものは、たぶん、あなたの中にもある。"
+        pause_after: 0.5
+      - text: "それが分かれば、次に嗤いたくなったとき、少し違う選択ができるかもしれない。"
+        pause_after: 0.6
+      - text: "冷笑は安い。"
+        pause_after: 0.6
+      - text: "だから、広がる。"
+        pause_after: 0.6
+      - text: "だが、安いものはたいてい、後で高くつく。"
+        pause_after: 1.0
+      - text: "そして、冷笑が守ろうとしているのは、あなたの正しさではなく、傷つきたくない、という気持ちなのだ。"
+        pause_after: 2.5
+    readings:
+      - surface: "犬"
+        reading: "イヌ"
+      - surface: "嗤い"
+        reading: "ワライ"
+      - surface: "嗤った"
+        reading: "ワラッタ"
+      - surface: "嗤われる"
+        reading: "ワラワレル"
+      - surface: "嗤う"
+        reading: "ワラウ"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "回帰。もう一度、あの真昼のアテナイへ。ランプを掲げた男は人間を探していた"
+        cut_reason: "【アテナイへの回帰】キュー1〜2『もう一度あの真昼のアテナイに戻ろう』『ランプを掲げた男は人間を探していた』。シーン3ビート1のランプの男の画へ回帰する"
+        gen_prompt: "seen from behind: an old bearded man with short grey hair, barefoot, wearing a rough patched cloak, walking through a sunlit ancient Greek marketplace at noon, holding a small lit clay oil lamp up in his raised hand, warm stone and sand tones, painterly, no faces, no text, no lettering"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "権力と慣習を嗤ったが、賭けていたものがあった。自分の暮らしと体。嗤われる側に回ることを恐れなかった"
+        cut_reason: "【賭けていたもの】キュー3〜5『彼は権力を嗤い慣習を嗤ったが、その嗤いには賭けているものがあった』『自分の暮らしと自分の体だ』『嗤われる側に回ることを彼は恐れなかった』。シーン4ビート1の座り込む男の画へ回帰する"
+        gen_prompt: "a man in a rough cloak sitting on the ground of an ancient Greek market in front of well-dressed citizens, seen from behind, warm stone tones, painterly, no faces, no lettering"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "決め文。犬は権力に吠えた、今の冷笑は本気に吠える。反転したのは矛先だけでなく、賭けているものがなくなった。ここで画面は現代の白い光へ切り替わる"
+        cut_reason: "【決め文・現代への切り替え】キュー6〜9『犬は権力に吠えた』『今の冷笑は本気に吠える』『反転したのは矛先だけではない』『賭けているものがなくなったのだ』。シーン4の決め文と対応させ、現代の白い光へ切り替える"
+        gen_prompt: "present-day scene, seen from directly behind: the back of a person standing still in the middle of a busy daytime city street while motion-blurred pedestrians stream past on both sides, cool white daylight, no faces visible, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "安全な場所から何も賭けずに嗤うとき、守っているように見えて何かを削っている。信じる力・つながり直す力・動き出す力"
+        cut_reason: "【何かが削られていく】キュー10〜11『安全な場所から何も賭けずに嗤うとき、その嗤いはあなたを守っているように見えて何かを削っている』『信じる力とつながり直す力といつか動き出す力を』。ビート3と同じ人物へ寄った別ショットに切り替える"
+        gen_prompt: "present-day scene, close view framed from the shoulders down, seen from behind: a person standing still while motion-blurred pedestrians pass on both sides, cool white daylight, no head in frame, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 12
+        slot: 5
+        visual_intent: "冒頭への回帰。昼の電車で指が一瞬止まった、あの投稿を思い出してほしい"
+        cut_reason: "【冒頭への回帰・二人称】キュー12〜13『昼の電車で指が一瞬止まった、あの投稿を思い出してほしい』『あの一瞬に、あなたは何かから自分を守っていた』。シーン1・8で使った車内の手の画へ回帰する"
+        gen_prompt: "present-day scene, over-the-shoulder view on a bright daytime commuter train of a stranger's hand holding a smartphone, the screen showing a post with short blurred unreadable replies beneath it, no faces, soft window light, documentary still, no lettering, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 14
+        slot: 6
+        visual_intent: "無力感か。責められる予期か。不当だという感覚か。3つの問いを同じ車内の手の画で保持する"
+        cut_reason: "【3つの答えへの問いかけ】キュー14〜17『無力感か』『責められる予期か』『不当だという感覚か』『それが分かれば次の一瞬は少し違うものになるかもしれない』。ビート5と同じ手だが、画面の光へ寄った別ショットで3つの答えを順に問う"
+        gen_prompt: "present-day scene, a close-up on the smartphone screen's blurred illegible glow beneath the still thumb, overexposed daylight, a sense of quiet hesitation, documentary still, the phone screen is a plain glowing white rectangle with no visible content, no photos and no text on the screen, no other people in the background, no ancient architecture, no columns, no ruins, no historical costume"
+
+      - type: image
+        from: 19
+        slot: 7
+        visual_intent: "決め文4文＋最終の象徴的な一枚絵。冷笑は安い。だから広がる。だが安いものは後で高くつく。そして冷笑が守っているのは正しさでなく無力感。車内で指が止まったまま画面を見つめる手（冒頭場面の再現）でアウトロへ"
+        cut_reason: "【結び・冒頭場面の再現】キュー18〜21『冷笑は安い』『だから、広がる』『だが、安いものはたいてい、後で高くつく』『冷笑が守っているのは、あなたの正しさではなく、あなたの無力感なのだ』。文字カットは置かず、冒頭場面の再現一枚絵を画面保持したままアウトロ（--outro-seconds 8）へつなぐ"
+        gen_prompt: "present-day scene, a hand holding a smartphone on a daytime train, thumb resting still on the screen, soft screen glow, text blurred and unreadable, no faces, documentary still, the phone screen is a plain glowing white rectangle with no visible content, no photos and no text on the screen, no other people in the background, no ancient architecture, no columns, no ruins, no historical costume"

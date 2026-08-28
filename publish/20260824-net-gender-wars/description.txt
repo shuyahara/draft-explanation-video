@@ -1,0 +1,28 @@
+深夜のタイムラインで見かける、男女をめぐる激しい対立。世の中は本当に、こんなに憎み合っているのだろうか——。
+拡散の仕組み・日本の6万人規模調査・海外での再現データから、「ネットの男女論が盛り上がって見える理由」を検証します。
+
+■ チャプター
+0:00 導入 あの夜の違和感
+1:23 何が対立を燃え上がらせているのか
+5:22 では、誰がその声をあげているのか
+8:21 なぜ少数の声が大きく見えるのか
+10:18 その声の大きさは、正しさなのか
+
+■ 主な出典
+・Brady et al. (2017) PNAS — 道徳感情語と拡散 https://doi.org/10.1073/pnas.1618923114
+・Rathje et al. (2021) PNAS — 外集団への敵対と拡散（6.7倍） https://doi.org/10.1073/pnas.2024292118
+・Robertson et al. (2023) Nature Human Behaviour — ネガティブ語とクリック https://doi.org/10.1038/s41562-023-01538-4
+・Crockett (2017) Nature Human Behaviour — デジタル時代の道徳的怒り https://doi.org/10.1038/s41562-017-0213-3
+・山口真一・田中辰雄『ネット炎上の研究』勁草書房（2016）
+・Pew Research Center (2019) — 国政ツイートの集中 https://www.pewresearch.org/politics/2019/10/23/national-politics-on-twitter-small-share-of-u-s-adults-produce-majority-of-tweets/
+・Gennaro et al. (2025) Political Science Research and Methods — ヘイトスピーチの集中 https://doi.org/10.1017/psrm.2025.10063
+・Yudkin, Hawkins & Dixon (2019) The Perception Gap. More in Common — 認識ギャップ（米国調査） https://www.moreincommon.com/media/0fmblxb3/the-perception-gap.pdf
+・瀬地山角『炎上CMでよみとくジェンダー論』光文社新書（2020）
+・Tonami, Yoshida & Sano (2022) F1000Research — 誹謗中傷の三層構造 https://pmc.ncbi.nlm.nih.gov/articles/PMC8861472/
+
+■ クレジット
+ナレーション: Google Cloud Text-to-Speech
+BGM: 「考察」shimtone（DOVA-SYNDROME）
+映像素材: Pixabay / Pexels（一部の画像はAIによる生成）
+
+#SNS #炎上 #社会心理学 #ジェンダー #メディアリテラシー

@@ -17,7 +17,7 @@ video:
     width: 1920
     height: 1080
   style: "flat vector illustration, muted desaturated palette, limited color range, soft geometric shapes, consistent line weight, calm editorial tone, no text, no lettering, no watermark, generous negative space in the lower third"
-  bgm: "bgm/main.mp3"
+  bgm: "../bgm/main.mp3"
   bgm_credit: "「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"
 
 scenes:
