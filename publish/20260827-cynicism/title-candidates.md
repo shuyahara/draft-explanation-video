@@ -28,3 +28,8 @@
 - 短1（本編圧縮版）: https://youtu.be/Av1y838DlUk（タイトル「なぜ人は冷笑してしまうのか ― 冷笑は安い。だが後で高くつく #Shorts」、サムネ short1-thumb.png）
 - 短2（犬と冷笑の反転）: https://youtu.be/_omOK5qlinQ（タイトル「犬は権力に吠え、冷笑は本気に吠える ― シニシズムの語源 #Shorts」、サムネ short2-thumb.png）
 - ショートの概要欄には本編 URL（sWA35PY2rgg）を記載済み。本編公開後も ID は不変。
+
+## v8 再アップロード（2026-08-29）
+- **v8（公開版候補）**: https://youtu.be/g4CIjYTNB_Y（動画ID g4CIjYTNB_Y。20:44、−14.2 LUFS。シーン 4 キュー 16〜19 の橋渡し（主語・目的語を補う）を反映。チャプター 0:00 / 1:23 / 5:23 / 7:47 / 13:14）
+- 旧 v7（sWA35PY2rgg）・v6（zXm8CSf61T0）は削除対象。
+- ショート 2 本の概要欄の本編 URL を g4CIjYTNB_Y に更新（API で videos.update 済み）。
