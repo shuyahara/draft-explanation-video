@@ -33,3 +33,8 @@
 - **v8（公開版候補）**: https://youtu.be/g4CIjYTNB_Y（動画ID g4CIjYTNB_Y。20:44、−14.2 LUFS。シーン 4 キュー 16〜19 の橋渡し（主語・目的語を補う）を反映。チャプター 0:00 / 1:23 / 5:23 / 7:47 / 13:14）
 - 旧 v7（sWA35PY2rgg）・v6（zXm8CSf61T0）は削除対象。
 - ショート 2 本の概要欄の本編 URL を g4CIjYTNB_Y に更新（API で videos.update 済み）。
+
+## 未完了（2026-08-29）
+- 短1 改稿版（`script-to-video/build/cynicism-short1/short.mp4`、62.0 秒）の YouTube アップロードは **OAuth トークン失効（テストモード 7 日）** のため保留。次回、在宅時にブラウザ認可のうえ実行する:
+  `python -m script_to_video upload "build/cynicism-short1/short.mp4" --title "なぜ人は冷笑してしまうのか #Shorts" --description-file ".../publish/20260827-cynicism/short1-description.txt" --tags "冷笑,シニシズム,社会心理学,Shorts" --privacy private --thumbnail ".../publish/20260827-cynicism/short1-thumb.png"`
+- 成功後: 旧短1（Av1y838DlUk）を削除、本記録に新 ID を追記。
