@@ -31,6 +31,7 @@ allowed-tools: Bash(PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/
    動画1本フルで回すと時間がかかるため、シーン数が多い場合は `--scenes` で分割して実行してよい。
    出力（`<レンダ出力dir>/review/video-review.md`）を読む。
    **読み上げレビュー**（同じく `--video` 時。TTS の誤読候補）: `tools/review/review_reading.py --yaml <YAMLパス> --audio-dir <TTS 出力dir> --out references/{実行日}-{台本フォルダ名}-reading-check.md` を実行する（faster-whisper で文字起こし→かな化して台本と比較。約 5 分/20 分動画。要確認は候補なので該当音声を聴いて判断する）。
+   **ショート動画の場合**: `--video` 指定時、`tools/review/review_short.py` でキュー単位の GPT 検品も回す（通常尺の映像レビューとは別に、ショート特有の短尺キュー構成を検品する）。
 4. **採否の提示**: 台本レビュー・映像レビューそれぞれの指摘を1件ずつ検討し、各指摘に
    **「採用／不採用／要判断」と根拠**を付けてユーザーに提示する。判断基準:
    - 事実誤認・論理の飛躍・誤帰属につながる指摘は原則採用。
