@@ -1,8 +1,8 @@
 video:
   title: "なぜ現代人はドパガキになってしまうのか"
   style: "soft warm illustrated style contrasting deep night blues with warm amber lamp and phone glow, gentle diffused lighting, calm non-gritty texture with minimal grain, muted engraving-like tones for historical scenes, no text, no lettering, no watermark, no logo, no caption"
-  bgm: "../bgm/tbd.mp3"
-  bgm_credit: null
+  bgm: "../bgm/kimito-odayakana-gogo.mp3"
+  bgm_credit: "BGM: 君と穏やかな午後 / のる（DOVA-SYNDROME）"
 
 scenes:
   - id: 1
@@ -203,15 +203,14 @@ scenes:
         from: 11
         slot: 5
         visual_intent: "SNSのデトックス体験談とドパガキという俗語の由来を、書店の情景を保ったまま語る"
-        gen_prompt: "the same bookstore display of stacked books, covers blank and unreadable, soft warm ambient light"
+        gen_prompt: "a present-day smartphone held in a hand showing a scrolling social media feed, all screen content blurred and unreadable, warm evening light, modern interior background"
         cut_reason: "【SNSのデトックス体験談とドパガキの由来】書店の情景を保ったままSNS・俗語との接続を語る"
 
       - type: image
         from: 14
         slot: 6
         visual_intent: "スマホを離れた場所に置いて座る人物（デトックス）の情景を保持したまま、決め文『ドーパミンは快楽物質ではない』の言い切りとポーズを支える"
-        gen_prompt: "a person sitting calmly at a table with their smartphone placed at a distance, natural daylight, quiet deliberate stillness"
-        telop: "ドーパミンは、快楽物質ではない"
+        gen_prompt: "a person sitting calmly at a table in a present-day modern room wearing contemporary casual clothing, their smartphone placed at a distance, natural daylight, quiet deliberate stillness, no period furniture"
         cut_reason: "【筋書きは崩れる、決め文】デトックスする人物の情景を保持したまま、決め文の言い切りとポーズを支える"
 
   - id: 3
@@ -704,7 +703,7 @@ scenes:
         from: 3
         slot: 2
         visual_intent: "診断データを根拠にした告発の結果、漫画本が積まれ検閲される様子を描く"
-        gen_prompt: "a black-and-white archival-style stack of old comic books, covers blank and unreadable, dim documentary lighting evoking a 1950s controversy"
+        gen_prompt: "a black-and-white archival-style pile of 1950s comic books with illustrated cartoon cover artwork clearly visible but all text blurred and unreadable, a rubber stamp and inspection desk beside them suggesting censorship, dim documentary lighting"
         cut_reason: "【業界への処分】診断データを根拠にした告発の結果、漫画本が積まれ検閲される様子を描く"
 
       - type: image
@@ -733,7 +732,7 @@ scenes:
         from: 11
         slot: 6
         visual_intent: "ゆとり教育をめぐる騒ぎを教室の情景で示す"
-        gen_prompt: "a black-and-white archival-style photograph of an empty school classroom with rows of desks, distant documentary framing, quiet contemplative mood"
+        gen_prompt: "a black-and-white archival-style photograph of a 2000s Japanese school classroom with rows of desks and a chalkboard, distant documentary framing, quiet contemplative mood, no readable writing"
         search_query: "classroom students desks"
         assets:
           - url: "https://www.pexels.com/photo/students-concentrating-in-a-classroom-setting-37812750/"
@@ -744,14 +743,15 @@ scenes:
             kind: image
             license: commercial-ok
             source_name: "Pexels"
-        telop: "PISA読解力: 2003年14位 → 2022年3位"
+        telop: "PISA読解力 2003年: 8位→14位"
         cut_reason: "【日本の学力パニック】ゆとり教育をめぐる騒ぎを教室の情景で示す"
 
       - type: image
         from: 14
         slot: 7
         visual_intent: "学力回復という反転を同じ教室のトーン変化で示す"
-        gen_prompt: "the same black-and-white archival-style classroom, softer lighting suggesting a quiet reversal, empty desks bathed in gentle daylight"
+        gen_prompt: "a present-day Japanese school classroom, bright gentle daylight through large windows, empty desks and a clean chalkboard, hopeful quiet tone, no readable writing"
+        telop: "PISA読解力 2022年: 81か国・地域中3位"
         cut_reason: "【データが単純な物語を裏切った】学力回復という反転を同じ教室のトーン変化で示す"
 
       - type: image
@@ -834,8 +834,9 @@ scenes:
         from: 1
         slot: 1
         visual_intent: "ただのパニックかという視聴者の懐疑に寄り添う場面から始める"
-        gen_prompt: "a person pausing mid-thought with a slightly skeptical expression, soft neutral lighting, contemplative mood, no readable text"
+        gen_prompt: "a person seen from behind pausing mid-thought by a window, face not visible, soft neutral lighting, contemplative mood, no readable text"
         cut_reason: "【ただのパニックかという疑問】視聴者の懐疑に寄り添う場面から始める"
+        telop: "Nguyen et al., Psychological Bulletin (2025)"
 
       - type: diagram
         from: 4
@@ -861,8 +862,8 @@ scenes:
         from: 10
         slot: 2
         visual_intent: "OECD平均点の下落に話題が移る導入"
-        gen_prompt: "a quiet classroom or study desk scene, soft daylight, subtle sense of decline, no readable text on any papers"
-        telop: "Nguyen et al., Psychological Bulletin (2025)：71研究・98,299人"
+        gen_prompt: "an empty quiet study desk with closed books and blank papers, no people, soft fading daylight, subtle sense of decline, no readable text on any papers"
+        telop: "OECD PISA 2022 Results (Volume I)"
         cut_reason: "【学力の低下という動き】OECD平均点の下落に話題が移る導入"
 
       - type: image
@@ -1159,14 +1160,13 @@ scenes:
         slot: 3
         visual_intent: "画面を保持したまま決め文を言い切り、ポーズで受け止める"
         gen_prompt: "a close-up of a smartphone resting on a nightstand in a dark bedroom, its glow softening, symbolizing a quiet turning point"
-        telop: "あなたが弱くなったのではない。相手が、強くなったのだ"
         cut_reason: "【相手が強くなった、決め文】画面を保持したまま決め文を言い切り、ポーズで受け止める"
 
       - type: image
         from: 9
         slot: 4
         visual_intent: "呼びかけの内容に合わせ、静かな内省の情景を続ける"
-        gen_prompt: "a quiet dark bedroom scene, soft ambient light, contemplative mood evoking gentle self-reflection"
+        gen_prompt: "a quiet dark empty bedroom with no people, a smartphone lying face down on the bed, soft ambient light, contemplative mood evoking gentle self-reflection"
         cut_reason: "【ドパガキという言葉自体を疑う】呼びかけの内容に合わせ、静かな内省の情景を続ける"
 
       - type: image
