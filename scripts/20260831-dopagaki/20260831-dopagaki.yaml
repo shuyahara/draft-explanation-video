@@ -834,7 +834,7 @@ scenes:
         from: 1
         slot: 1
         visual_intent: "ただのパニックかという視聴者の懐疑に寄り添う場面から始める"
-        gen_prompt: "a person seen from behind pausing mid-thought by a window, face not visible, soft neutral lighting, contemplative mood, no readable text"
+        gen_prompt: "a person seen from behind in a present-day modern apartment interior, pausing mid-thought by a large window overlooking a contemporary city skyline at dusk, face not visible, contemporary clothing and furniture, no antique lamps or period objects, soft neutral lighting, contemplative mood, no readable text"
         cut_reason: "【ただのパニックかという疑問】視聴者の懐疑に寄り添う場面から始める"
         telop: "Nguyen et al., Psychological Bulletin (2025)"
 
