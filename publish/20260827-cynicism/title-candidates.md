@@ -38,3 +38,7 @@
 - 短1 改稿版（`script-to-video/build/cynicism-short1/short.mp4`、62.0 秒）の YouTube アップロードは **OAuth トークン失効（テストモード 7 日）** のため保留。次回、在宅時にブラウザ認可のうえ実行する:
   `python -m script_to_video upload "build/cynicism-short1/short.mp4" --title "なぜ人は冷笑してしまうのか #Shorts" --description-file ".../publish/20260827-cynicism/short1-description.txt" --tags "冷笑,シニシズム,社会心理学,Shorts" --privacy private --thumbnail ".../publish/20260827-cynicism/short1-thumb.png"`
 - 成功後: 旧短1（Av1y838DlUk）を削除、本記録に新 ID を追記。
+
+## 短1 改稿版アップロード（2026-09-01）
+- 新短1: https://youtu.be/MiADYaUL2ec（62.0秒・cue4差し替え済み改稿版。サムネ short1-thumb.png 設定済み・非公開）
+- 旧短1（Av1y838DlUk）は新IDの再生確認後に削除する（削除運用: docs/decisions.md 2026-09-01。API削除は自動モードでブロックされたため Studio での削除または権限許可が必要）
