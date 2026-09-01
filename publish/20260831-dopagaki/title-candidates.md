@@ -24,3 +24,4 @@
 - 2026-09-01 切り出しショートA アップロード: `o-3DLiSLlIU`（非公開。「「集中力は47秒」の本当の意味 #Shorts」53.5秒、dopagaki-short2）
 - 2026-09-01 ショート体制の確定: 切り出し4本（A〜D）で運用。総合版v3 `XhHq00_T1vg` は置き換えにつき、v1 `Zhtq-UCt0EU`・v2 `-on6OFdo29A` と合わせて削除対象（再生確認後にStudioで削除）。
 - 2026-09-02 状態確認（YouTube Data API videos.list）: 本編v5 `UO-RU_iLRBg` は公開済み。旧v4 `niZOX309m6E` は削除済み。切り出しショートA〜D（`o-3DLiSLlIU` / `OdFftAUN3uE` / `XCSYmhDXuDs` / `WDs8KIUnVvg`）は処理完了・非公開。旧ショート v1 `Zhtq-UCt0EU`・v2 `-on6OFdo29A`・v3 `XhHq00_T1vg` は未削除（3本とも非公開のまま残存。削除待ち）。
+- 2026-09-02 旧ショート3本を削除（YouTube Data API videos.delete。ユーザー指示）: v1 `Zhtq-UCt0EU`・v2 `-on6OFdo29A`・v3 `XhHq00_T1vg`。削除後の videos.list で3本とも消失を確認。これで削除対象は残っていない。
