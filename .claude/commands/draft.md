@@ -106,7 +106,9 @@ allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Glob, Grep, Bash(cd C:\Us
    - 台本（マスター）: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.md`
    - シーン YAML: `scripts/YYYYMMDD-{テーマの短い名前}/{同名}.yaml`
    - 出典リストは台本末尾と `references/` にまとめる。
-11. **レビュー**: 最後に `/review` 相当（`tools/review/review_script.py`）を実行し、GPT の指摘を採否付きで提示する。
+11. **レビュー**: 最後に `/review` 相当を実行する。`tools/review/review_script.py`（7観点の
+    分かりやすさレビュー）→指摘を反映→`tools/review/review_holistic.py`（面白さ・視聴維持・
+    見やすさ・タイトルの総合レビュー）の順に実行し、それぞれ GPT の指摘を採否付きで提示する。
 
 ## 厳守事項
 
