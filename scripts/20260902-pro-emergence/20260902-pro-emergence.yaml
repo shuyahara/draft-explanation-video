@@ -1,0 +1,1708 @@
+video:
+  title: "なぜ将棋やスポーツには「プロ」が生まれるのか"
+  style: "muted illustrated style evoking aged engravings and sepia archival photographs, fine paper grain, restrained warm lamplight for historical scenes, cool natural light and soft screen glow for present-day scenes, figures shown at a distance without facial close-ups, no text, no lettering, no watermark, no logo, no caption"
+  bgm: "../bgm/tooku-inori-no-hate.mp3"
+
+scenes:
+  - id: 1
+    title: "フック（深夜の配信者 → 将棋のくっきりした線 → 問い）"
+    readings:
+      - surface: "奨励会"
+        reading: "ショウレイカイ"
+      - surface: "四段"
+        reading: "ヨダン"
+      - surface: "数十人"
+        reading: "スウジュウニン"
+    narration:
+      - text: "深夜2時。"
+        pause_after: 0.2
+      - text: "画面の中で、誰かがゲームをしている。"
+        pause_after: 0.2
+      - text: "見ている人は、数十人。"
+        pause_after: 0.2
+      - text: "画面の端に、500円の投げ銭が流れる。"
+        pause_after: 0.2
+      - text: "この人は、プロだろうか。"
+        pause_after: 1.0
+      - text: "ゲームがうまいから、というだけでは、答えは出ない。"
+        pause_after: 0.2
+      - text: "この人より上手な人は、いくらでもいる。"
+        pause_after: 0.2
+      - text: "金をもらっているから、というなら、月にいくらからがプロなのか。"
+        pause_after: 0.2
+      - text: "誰が、それを決めるのか。"
+        pause_after: 0.2
+      - text: "一方で、将棋の世界には、はっきりした線がある。"
+        pause_after: 0.2
+      - text: "奨励会という養成機関で四段に上がった人だけが、プロ棋士と呼ばれる。"
+        pause_after: 0.2
+      - text: "線は、くっきりしている。"
+        pause_after: 0.2
+      - text: "なぜある競技には、こんなにはっきりしたプロがいて、ある遊びには、いないのか。"
+        pause_after: 0.2
+      - text: "そもそもプロというものは、なぜ生まれるのか。"
+        pause_after: 0.2
+      - text: "この動画が答えたい問いは、これだ。"
+        pause_after: 0.7
+      - text: "素朴な答えは、こうだろう。"
+        pause_after: 0.2
+      - text: "強い人がいるから。"
+        pause_after: 0.2
+      - text: "うまい人がいるから。"
+        pause_after: 0.2
+      - text: "だが、この答えには、はっきりした反例がある。"
+        pause_after: 1.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "暗い部屋、モニターの光に照らされてゲームをする配信者の後ろ姿。画面の内容は読めない"
+        gen_prompt: "a person seen from behind playing a video game late at night in a dark room, lit only by the monitor glow, a small webcam on the desk, screen contents blurred and unreadable, cool blue light"
+        search_query: "person streaming video game dark room night"
+        assets:
+          - url: "https://www.pexels.com/photo/side-view-of-a-gamer-wearing-a-cap-and-headphones-10350851/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/young-man-focused-on-gaming-with-headset-sitting-at-a-computer-9072271/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/man-in-plaid-shirt-playing-a-video-game-7046699/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【配信の場面】キュー1〜3は同じ深夜の配信という場面なので1枚で持たせる。冒頭の実写を使う場合は静止画。問い「この人は、プロだろうか。」が開始15秒以内に来るよう情景描写は3文に絞った"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "配信画面の端に流れる通知の手元。文字は読めない"
+        gen_prompt: "a close-up of a computer monitor edge in a dark room showing a small glowing notification popup with unreadable blurred text, a hand resting on a mouse"
+        search_query: "computer screen notification popup dark room close up"
+        cut_reason: "【投げ銭の通知】具体物（通知）にナレーションが触れる瞬間なので寄る"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "同じ配信者が椅子にもたれて画面を見ている、少し引いた構図"
+        gen_prompt: "the same dark room from a wider angle, a person leaning back in a chair looking at a glowing monitor, headphones around the neck, quiet late-night mood"
+        search_query: "man leaning back chair looking at monitor night"
+        assets:
+          - url: "https://www.pexels.com/photo/from-above-side-view-of-thoughtful-ethnic-man-watching-photos-on-desktop-computer-while-sitting-at-table-leaned-on-hand-at-home-at-night-4327409/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/man-holding-his-headphones-while-playing-on-a-computer-7858761/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【プロかどうかの問い】問いの検討に入るので配信の手元から人物の全体へ引く"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "将棋の対局室。和室、盤と駒、二人の対局者を引きで"
+        gen_prompt: "two players facing each other over a shogi board in a quiet traditional Japanese tatami room, soft daylight from a paper window, seen from a distance, no text, no lettering"
+        search_query: "shogi players tatami room traditional"
+        cut_reason: "【将棋の線】場面が配信から将棋へ転換する"
+
+      - type: image
+        from: 13
+        slot: 5
+        visual_intent: "空の将棋盤と、暗い部屋の配信機材を対比させない。問いの提示は将棋盤のクローズアップ（駒の文字は読めない角度）で保持"
+        gen_prompt: "a shogi board with pieces seen from a low angle in warm lamplight, shallow depth of field so the piece characters are blurred and unreadable, still and quiet"
+        search_query: "shogi board pieces close up lamplight"
+        cut_reason: "【問いの提示】この動画の問いを言語化する箇所なので静かな一枚で保持する"
+
+      - type: image
+        from: 16
+        slot: 6
+        visual_intent: "素朴な答え（強い人がいるから）を、盤に向かう熟達した手つきで直接描写する"
+        gen_prompt: "a skilled shogi player's hand confidently moving a piece across the board, quiet focus, warm lamplight, seen close, no readable text"
+        search_query: "hand moving shogi piece confidently close up"
+        cut_reason: "【分割】元ビート5の20秒超を節目で分割。「素朴な答えは、こうだろう。強い人がいるから。」を語る場面を、熟達した手つきの直接描写で受け、最後の「反例がある。」の後の間まで持たせる"
+
+  - id: 2
+    title: "問題提起（強さとプロは別物 → 三つの説の提示）"
+    readings:
+      - surface: "将棋指し"
+        reading: "ショウギサシ"
+    narration:
+      - text: "1868年。"
+        pause_after: 0.2
+      - text: "江戸幕府が消えた年。"
+        pause_after: 0.2
+      - text: "日本でいちばん強い将棋指したちは、その年に、収入を失った。"
+        pause_after: 0.2
+      - text: "腕が落ちたわけではない。"
+        pause_after: 0.2
+      - text: "前の年と同じように、強い。"
+        pause_after: 0.2
+      - text: "それなのに、将棋で食うという職業のほうが、消えたのだ。"
+        pause_after: 0.7
+      - text: "反対の例もある。"
+        pause_after: 0.2
+      - text: "1880年代のイングランド。"
+        pause_after: 0.2
+      - text: "フットボール協会は、まだプロを認めていなかった。"
+        pause_after: 0.2
+      - text: "けれど北部の工業都市では、観客席がすでに労働者で埋まり、クラブは選手に、こっそり金を払っていた。"
+        pause_after: 0.2
+      - text: "プロは、認められる前から、いた。"
+        pause_after: 0.7
+      - text: "強さがあってもプロは消える。"
+        pause_after: 0.2
+      - text: "認められる前からプロはいる。"
+        pause_after: 0.2
+      - text: "つまり、プロを生むのは、強さでも、肩書きでもない、別の何かだ。"
+        pause_after: 0.8
+      - text: "その何かについて、考えられる説は、大きく三つある。"
+        pause_after: 0.2
+      - text: "ひとつ。"
+        pause_after: 0.4
+      - text: "その技に金を払う仕組みがあるから。"
+        pause_after: 0.2
+      - text: "ふたつ。"
+        pause_after: 0.4
+      - text: "本物を認定して、他を締め出す装置があるから。"
+        pause_after: 0.2
+      - text: "みっつ。"
+        pause_after: 0.4
+      - text: "技を複製して、大勢に届ける技術があるから。"
+        pause_after: 0.2
+      - text: "今日はこの三つの説を、将棋、スポーツ、そして音楽と美術の歴史に当てて、比較検討していく。"
+        pause_after: 0.2
+      - text: "あなたなら、どれに賭けるだろうか。"
+        pause_after: 1.5
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "明治初年、荒れた屋敷の縁側で盤に向かう和装の将棋指し。扶持を失った静けさ"
+        gen_prompt: "a man in worn Edo-period kimono sitting alone before a shogi board on the veranda of a dilapidated Japanese house, overcast light, muted sepia tones like an old woodblock print, no readable text"
+        search_query: "man traditional kimono shogi board veranda old house"
+        cut_reason: "【幕府消滅の年】キュー1〜6は同じ「収入を失った将棋指し」の場面"
+
+      - type: image
+        from: 7
+        slot: 2
+        visual_intent: "反対の例の導入。フットボール協会がまだプロを認めていなかった制度的な段階を直接描写"
+        gen_prompt: "a Victorian FA committee meeting room, gentlemen in formal dress seated around a table with a formal minute book, unanimous solemn mood, papers blank and unreadable, gaslight"
+        search_query: "victorian committee meeting room formal minute book"
+        cut_reason: "【分割】元ビート2の20秒超を節目で分割。「反対の例もある。1880年代のイングランド。フットボール協会は、まだプロを認めていなかった。」を委員会の場面で受ける"
+
+      - type: image
+        from: 10
+        slot: 3
+        visual_intent: "1880年代イングランド北部、工場の煙突を背景にしたフットボールの観客席、労働者の群衆"
+        gen_prompt: "a crowd of working-class men in flat caps packed along the rope of a football pitch in an 1880s northern English industrial town, factory chimneys behind, engraving-like muted tones, no readable text"
+        search_query: "victorian football crowd factory town"
+        cut_reason: "【分割】場面が日本からイングランドへ転換。「観客席がすでに労働者で埋まり」「プロは、認められる前から、いた。」を観客席の画で受ける"
+
+      - type: image
+        from: 12
+        slot: 4
+        visual_intent: "主張の整理。前ビートの観客席を保持せず、無人の将棋盤とボールを描かない。1枚の静物：古い帳簿の上に置かれた駒（文字は読めない）"
+        gen_prompt: "a single shogi piece resting on a closed antique ledger book on a dark wooden desk, warm lamplight, book cover and piece characters blurred and unreadable"
+        search_query: "shogi piece antique ledger book desk"
+        cut_reason: "【中間の結論】主張の整理に入るので、人物のいない静物で一段落ち着かせる"
+
+      - type: image
+        from: 15
+        slot: 5
+        visual_intent: "三つの説の提示の導入。机上に広げた古地図と資料を前に考える人物の手元（文字は読めない）"
+        gen_prompt: "a person's hands resting on a desk covered with old documents, maps and a magnifying glass in a study, papers blurred and unreadable, warm lamp light, seen from above at an angle"
+        search_query: "hands desk old documents maps study"
+        cut_reason: "【三つの説の導入】キュー「その何かについて、」の1文だけ"
+
+      - type: image
+        from: 16
+        slot: 6
+        visual_intent: "説①の直接描写: 入場口の小窓で硬貨を渡す手元（19世紀）"
+        gen_prompt: "a close-up of a hand passing coins through the small window of a wooden ticket booth at a 19th-century sports ground, another hand receiving them, sepia tones, no readable text"
+        search_query: "ticket booth coins hand 19th century sports ground"
+        telop: "説① 金を払う仕組み"
+        cut_reason: "【説①・金を払う仕組み】「ひとつ。」のリズムに合わせて画を切る。telop「説① 金を払う仕組み」"
+
+      - type: image
+        from: 18
+        slot: 7
+        visual_intent: "説②の直接描写: 封蝋と印章の押された免状を手にする人物の手元（文字は読めない）"
+        gen_prompt: "hands holding an old certificate with a red wax seal and a stamped emblem, the text blurred and unreadable, warm lamplight, close on the document"
+        search_query: "hands holding old certificate wax seal"
+        telop: "説② 認定と排除の装置"
+        cut_reason: "【説②・認定と排除の装置】列挙の2つ目で画を切る。telop「説② 認定と排除の装置」。文字物なので偽文字対策の句を添える"
+
+      - type: image
+        from: 20
+        slot: 8
+        visual_intent: "説③の直接描写: 手動の印刷機から刷り上がった紙が重なる（文字は読めない）"
+        gen_prompt: "a 19th-century hand printing press with freshly printed sheets stacking up beside it, the print blurred and unreadable, warm workshop light, no people"
+        search_query: "19th century hand printing press stacking sheets"
+        telop: "説③ 複製技術"
+        cut_reason: "【説③・複製技術】列挙の3つ目で画を切る。telop「説③ 複製技術」"
+
+      - type: image
+        from: 22
+        slot: 9
+        visual_intent: "三つの説を持って歴史へ向かう。ビート4と同じ机上資料の画を再提示"
+        gen_prompt: "a person's hands resting on a desk covered with old documents, maps and a magnifying glass in a study, papers blurred and unreadable, warm lamp light, seen from above at an angle"
+        search_query: "hands desk old documents maps study"
+        cut_reason: "【歴史への出発】列挙が終わったので机上へ戻し、「どれに賭けるだろうか。」の後の間まで保持"
+
+  - id: 3
+    title: "説①の検証・将棋の起源（章「将棋のプロは、誰が作ったのか」）"
+    chapter_title: "将棋のプロは、誰が作ったのか"
+    readings:
+      - surface: "慶長"
+        reading: "ケイチョウ"
+      - surface: "大橋宗桂"
+        reading: "オオハシソウケイ"
+      - surface: "五十石五人扶持"
+        reading: "ゴジッコクゴニンブチ"
+      - surface: "将棋所"
+        reading: "ショウギドコロ"
+      - surface: "幕臣"
+        reading: "バクシン"
+      - surface: "御城将棋"
+        reading: "オシロショウギ"
+      - surface: "吉宗"
+        reading: "ヨシムネ"
+    narration:
+      - text: "最初の説から見ていこう。"
+        pause_after: 0.2
+      - text: "金を払う仕組みが、プロを生む。"
+        pause_after: 0.2
+      - text: "この説をいちばん素直に確かめられるのが、将棋だ。"
+        pause_after: 0.2
+      - text: "日本で将棋が職業になった瞬間は、はっきりしている。"
+        pause_after: 0.2
+      - text: "1612年、慶長17年。"
+        pause_after: 0.2
+      - text: "徳川家康が、大橋宗桂という将棋指しに、五十石五人扶持を与えた。"
+        pause_after: 0.2
+      - text: "米で払う俸禄と、家来を養う手当。"
+        pause_after: 0.2
+      - text: "将棋の指南役としての、給料だ。"
+        pause_after: 0.2
+      - text: "これによって将棋所という、将棋界を束ねる役職が生まれ、大橋家は、幕府に仕える武士に近い身分を得た。"
+        pause_after: 0.2
+      - text: "以後、大橋本家、大橋分家、伊藤家の三つの家が、家元、つまり技と称号を世襲で管理する家として、将棋を継いでいく。"
+        pause_after: 0.2
+      - text: "年に一度、旧暦の11月17日には、江戸城で将軍の前で対局する御城将棋が行われた。"
+        pause_after: 0.2
+      - text: "8代将軍吉宗の時代、1716年からのことだ。"
+        pause_after: 0.2
+      - text: "ここで注意してほしいのは、順序だ。"
+        pause_after: 0.2
+      - text: "強い将棋指しが現れたから幕府が雇ったのではなく、幕府が雇ったから、将棋指しが職業になった。"
+        pause_after: 0.2
+      - text: "もちろん宗桂は強かった。"
+        pause_after: 0.2
+      - text: "だが強い人なら、その前にも後にもいる。"
+        pause_after: 0.2
+      - text: "将棋のプロは、強さではなく、幕府が作った。"
+        pause_after: 2.2
+      - text: "そして幕府が作ったものは、幕府と一緒に消える。"
+        pause_after: 1.2
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "江戸初期の城内、将棋盤を挟んで対局する二人と上座から見る人物を引きで（顔は描き込まない）"
+        gen_prompt: "an early Edo-period Japanese castle interior, two men playing shogi on the tatami while a lord watches from a raised seat, gold folding screens, candlelight, seen from a distance, no readable text"
+        search_query: "edo castle interior shogi players lord watching"
+        telop: "1612年 大橋宗桂に五十石五人扶持（日本将棋連盟の史料による）"
+        cut_reason: "【説①の導入】キュー1〜5は「最初の説から見ていこう」の導入場面"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "家康が大橋宗桂に扶持を与える場面を直接描写"
+        gen_prompt: "an Edo-period lord seated on a raised dais handing a folded document of stipend to a kneeling shogi player before him, gold folding screens behind, candlelight, seen from a respectful distance, no text, no lettering"
+        search_query: "edo period lord handing document to kneeling man"
+        cut_reason: "【分割】元ビート1の20秒超を節目で分割。「徳川家康が、大橋宗桂という将棋指しに、五十石五人扶持を与えた。」以下、家康の扶持授与の具体的な場面を受ける"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "三つの家元が世襲で将棋を継いでいく場面を直接描写"
+        gen_prompt: "three generations of an Edo-period family kneeling together before a shogi board in a modest formal room, an elder passing a wooden name plaque to a younger man, muted ink-wash tones, no readable text"
+        search_query: "edo period family generations shogi board succession"
+        cut_reason: "【分割】三つの家が家元として将棋を世襲していく場面を直接描写する"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "御城将棋の場面。江戸城の広間、居並ぶ家臣と中央の盤"
+        gen_prompt: "a formal ceremony in a large Edo castle hall, rows of samurai seated in silence, a shogi board at the center under the gaze of the shogun on a dais, muted ink-wash and gold tones, wide shot"
+        search_query: "edo castle hall ceremony shogi board samurai"
+        telop: "御城将棋 旧暦11月17日・1716年から年1回"
+        cut_reason: "【御城将棋】年中行事へ場面が広がる"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "幕府が将棋指しを選んで雇ったという順序を、選抜の場面で直接描写"
+        gen_prompt: "an Edo-period lord's attendant presenting several kneeling men before the lord, one man distinguished by being handed a document while the others remain still, candlelight, seen from a distance, no text, no lettering"
+        search_query: "edo period lord attendant presenting kneeling men"
+        cut_reason: "【分割】元ビート3の20秒超を節目で分割。「ここで注意してほしいのは、順序だ。幕府が雇ったから、将棋指しが職業になった。」を選抜の場面で受ける"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "順序の主張。前ビートの広間を保持せず、家康から扶持を受ける将棋指しの手元（書状と駒。文字は読めない）"
+        gen_prompt: "a kneeling man in Edo-period dress receiving a folded document from an attendant, a shogi piece and the document on the tatami before him, paper blank and unreadable, soft lamplight, close on hands"
+        search_query: "edo period man receiving document hands close up"
+        cut_reason: "「もちろん宗桂は強かった。だが強い人なら、その前にも後にもいる。」の決め文へ向けて具体物に寄る。決め文「幕府が作った。」で画面保持"
+
+      - type: image
+        from: 18
+        slot: 8
+        visual_intent: "予告。夕暮れの江戸城の石垣と堀、人はいない"
+        gen_prompt: "the stone walls and moat of Edo Castle at dusk with no people, long shadows, muted sepia tones, quiet and foreboding"
+        search_query: "edo castle stone walls moat dusk empty"
+        cut_reason: "【次章への予告】幕府の消滅を暗示する無人の城で章を閉じる"
+
+  - id: 4
+    title: "断絶と再生（幕府 → 新聞）"
+    readings:
+      - surface: "十一世"
+        reading: "ジュウイッセイ"
+      - surface: "伊藤宗印"
+        reading: "イトウソウイン"
+      - surface: "萬朝報"
+        reading: "ヨロズチョウホウ"
+      - surface: "棋譜"
+        reading: "キフ"
+      - surface: "一局"
+        reading: "イッキョク"
+      - surface: "木村義雄"
+        reading: "キムラヨシオ"
+    narration:
+      - text: "1868年に幕府が倒れると、三家は扶持を失った。"
+        pause_after: 0.2
+      - text: "家元の制度は名目だけになり、1893年、十一世名人の伊藤宗印が亡くなったあと、名人の座は6年間、空いたままになった。"
+        pause_after: 0.2
+      - text: "強い人がいなくなったのではない。"
+        pause_after: 0.2
+      - text: "座る人を養う仕組みが、なくなったのだ。"
+        pause_after: 0.8
+      - text: "将棋を職業として作り直したのは、新聞だった。"
+        pause_after: 0.2
+      - text: "ただし、一夜にしてではない。"
+        pause_after: 0.2
+      - text: "1881年に棋士たちが、対局の記録である棋譜の小冊子を出し、1906年には神戸新聞が将棋の欄を作る。"
+        pause_after: 0.2
+      - text: "そして1908年、萬朝報という新聞が、公式の対局、つまり棋戦を主催して、対局のたびに一局2円の対局料を払い始めた。"
+        pause_after: 0.2
+      - text: "将棋を指すこと自体で金が入る仕組みが、ここで復活した。"
+        pause_after: 0.6
+      - text: "新聞は、棋譜を紙面に載せて部数を伸ばしたかった。"
+        pause_after: 0.2
+      - text: "棋士は、指す場所と対局料が欲しかった。"
+        pause_after: 0.2
+      - text: "この取引が、家元の世襲まで壊していく。"
+        pause_after: 0.2
+      - text: "1935年、東京日日新聞と大阪毎日新聞の主催で、名人を実力で決める名人戦が始まる。"
+        pause_after: 0.2
+      - text: "1937年、木村義雄が、初めての実力制名人になった。"
+        pause_after: 0.2
+      - text: "今の将棋界も、新聞社が資金を出す、この構造の上にある。"
+        pause_after: 0.2
+      - text: "竜王戦は読売新聞、名人戦は毎日新聞と朝日新聞が主催している。"
+        pause_after: 0.2
+      - text: "幕府の扶持が、新聞社の契約金に置き換わった。"
+        pause_after: 0.2
+      - text: "パトロンの名前が変わっただけで、金を払う誰かが技を職業に変える、という構造は、400年、同じだ。"
+        pause_after: 2.0
+      - text: "ここまでは、第一の説の圧勝に見える。"
+        pause_after: 0.2
+      - text: "だが、将棋が特殊なだけかもしれない。"
+        pause_after: 0.2
+      - text: "では、スポーツではどうか。"
+        pause_after: 1.5
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "1868年、幕府が倒れ将棋三家が扶持を失う場面を直接描写"
+        gen_prompt: "a distant view of Edo Castle's gate with a few samurai walking away carrying belongings, the gate left open behind them, overcast light, muted sepia tones"
+        search_query: "edo castle gate samurai leaving overcast"
+        cut_reason: "【分割】20秒超を節目で分割。「1868年に幕府が倒れると、三家は扶持を失った。」を幕府崩壊の場面で受ける"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "明治初期、空の上座と置き去りの将棋盤。名人不在"
+        gen_prompt: "an empty raised seat in a dim Meiji-era Japanese room with a shogi board left untouched on the tatami, dust in a shaft of light, muted sepia, no people"
+        search_query: "empty seat meiji era room shogi board dust"
+        telop: "1893年 伊藤宗印没後、名人不在6年"
+        cut_reason: "「強い人がいなくなったのではない。座る人を養う仕組みが、なくなったのだ。」を空席で受ける"
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "明治後期の新聞社の印刷所、輪転機と紙の束（紙面の文字は読めない）"
+        gen_prompt: "a late Meiji-era newspaper printing room with a large rotary press and stacks of freshly printed papers, workers in the background, newsprint text blurred and unreadable, warm gaslight"
+        search_query: "meiji era newspaper printing press workers"
+        cut_reason: "【新聞の登場】主体が幕府から新聞へ転換する"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "新聞社の一室での対局。記者が棋譜を書き取る手元（紙は白紙）"
+        gen_prompt: "two men playing shogi at a low table in a Meiji-era newspaper office while a reporter beside them writes on a blank sheet, ink brush and paper, papers unreadable, warm lamplight"
+        search_query: "meiji era newspaper office shogi match reporter"
+        telop: "1908年 萬朝報が棋戦を主催・一局2円"
+        cut_reason: "【対局料の復活】「一局2円」の具体的場面に寄る"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "新聞社と棋士の取引（指す場所と対局料）を握手の場面で直接描写"
+        gen_prompt: "a Meiji-era newspaper editor and a shogi player shaking hands over a desk in a newspaper office, contracts and papers blurred and unreadable, warm lamplight"
+        search_query: "meiji era newspaper editor handshake desk"
+        cut_reason: "【分割】20秒超を節目で分割。「新聞は、棋譜を紙面に載せて部数を伸ばしたかった。棋士は、指す場所と対局料が欲しかった。この取引が、家元の世襲まで壊していく。」を握手の場面で受ける"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "昭和初期の名人戦の対局場。旅館の広間、記録係、新聞社の腕章"
+        gen_prompt: "a 1930s Japanese inn hall set up for a shogi title match, two players at the board, a scorekeeper and newspaper staff seated along the wall, soft daylight through shoji, no text, no lettering"
+        search_query: "1930s japanese inn hall shogi title match"
+        telop: "1937年 木村義雄が初の実力制名人"
+        cut_reason: "「1935年、東京日日新聞と大阪毎日新聞の主催で、名人を実力で決める名人戦が始まる。1937年、木村義雄が、初めての実力制名人になった。」を旅館の名人戦の広間で受ける"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "現代のタイトル戦の対局室。和室、盤、スポンサー看板は描かない（文字回避）。引きの構図"
+        gen_prompt: "a present-day professional shogi title match in a quiet traditional Japanese room, two players in kimono facing the board, a recorder seated nearby, clean natural light, wide shot, no signage, no readable text"
+        search_query: "modern shogi title match traditional room"
+        telop: "竜王戦＝読売新聞／名人戦＝毎日新聞・朝日新聞"
+        cut_reason: "【現代への接続】新聞社が資金を出す現代の構造を現代の画で受ける"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "新聞社の契約金という現代の資金源を、契約書と将棋盤で直接描写"
+        gen_prompt: "a present-day newspaper company's sponsorship contract lying on a low table beside a shogi board, pen and rolled document, contract blurred and unreadable, clean modern light, no people"
+        search_query: "sponsorship contract document shogi board modern"
+        cut_reason: "【分割】20秒超を節目で分割。「幕府の扶持が、新聞社の契約金に置き換わった。」以下、決め文「400年、同じだ。」を契約書の画で受け、画面保持"
+
+      - type: image
+        from: 19
+        slot: 9
+        visual_intent: "次章への橋渡し。将棋盤から離れ、霧のかかったイングランドの競技場の遠景（無人）"
+        gen_prompt: "a distant view of an empty Victorian football ground in morning mist, wooden stands and a muddy pitch, industrial town rooftops behind, muted engraving tones"
+        search_query: "empty victorian football ground morning mist"
+        cut_reason: "【次章への問い】場面をイングランドへ先回りさせて章を閉じる"
+
+  - id: 5
+    title: "フットボールのプロ容認（章「スポーツでも、同じことが起きたのか」）"
+    chapter_title: "スポーツでも、同じことが起きたのか"
+    readings:
+      - surface: "FA"
+        reading: "エフエー"
+    narration:
+      - text: "19世紀のイングランドに飛ぶ。"
+        pause_after: 0.2
+      - text: "フットボール協会、FAが設立されたのは1863年。"
+        pause_after: 0.2
+      - text: "ロンドンの紳士たちのクラブが集まって、ルールを統一するためだった。"
+        pause_after: 0.2
+      - text: "この人たちにとって、フットボールは金のためにやるものではなかった。"
+        pause_after: 0.6
+      - text: "ところが1880年代、様子が変わる。"
+        pause_after: 0.2
+      - text: "北部や中部の工業都市、プレストン、アストン・ヴィラ、サンダーランドといったクラブで、選手への支払いが常態化する。"
+        pause_after: 0.2
+      - text: "観客席には、土曜の半休を得た労働者が集まり、入場料を払っていた。"
+        pause_after: 0.2
+      - text: "1882年には、鉄道会社がFAカップの決勝に向けて、北部から千人単位の観客を運ぶ特別列車を走らせている。"
+        pause_after: 0.2
+      - text: "ただし、鉄道が観客を作ったのではない。"
+        pause_after: 0.2
+      - text: "すでにあった流れを鉄道が後押しした、というのが歴史家の慎重な見方だ。"
+        pause_after: 0.2
+      - text: "1884年、プレストンがロンドンのクラブから、プロを使っていると告発された。"
+        pause_after: 0.2
+      - text: "会長は支払いの事実を認め、プレストンは大会から締め出された。"
+        pause_after: 0.2
+      - text: "だが締め出された側は、引き下がらなかった。"
+        pause_after: 0.2
+      - text: "金を払っているクラブが集まって、別の協会を作ると言い出したのだ。"
+        pause_after: 0.6
+      - text: "FAは折れた。"
+        pause_after: 0.2
+      - text: "1885年7月20日、一定の条件のもとでプロ選手を認めると発表する。"
+        pause_after: 0.2
+      - text: "告発から、わずか1年半。"
+        pause_after: 0.2
+      - text: "3年後の1888年には、定期的な対戦を保証するフットボールリーグが発足した。"
+        pause_after: 0.2
+      - text: "順序を見てほしい。"
+        pause_after: 0.2
+      - text: "金を払う観客が先にいて、その金で選手を雇うクラブが次にできて、協会の規則は、いちばん最後に、しぶしぶ追いついた。"
+        pause_after: 0.8
+      - text: "ただし、FAは抵抗した。"
+        pause_after: 0.2
+      - text: "規則は自動的には変わらない。"
+        pause_after: 0.2
+      - text: "押し切るには、綱引きが必要だった。"
+        pause_after: 0.2
+      - text: "では、抵抗した側は、何を守ろうとしていたのか。"
+        pause_after: 1.5
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "1863年、ロンドンの酒場の一室で会合するフロックコートの紳士たち。書類は白紙"
+        gen_prompt: "a group of Victorian gentlemen in frock coats gathered around a table in a wood-panelled London tavern room in 1863, papers and inkwells on the table, papers blank and unreadable, gaslight"
+        search_query: "victorian gentlemen meeting tavern room 1860s"
+        telop: "1863年 FA設立"
+        cut_reason: "【FAの設立】キュー1〜4は紳士たちの協会という同じ場面"
+
+      - type: image
+        from: 5
+        slot: 3
+        visual_intent: "北部の工業都市の試合。満員の観客、煙突、泥のピッチ。実写ストックがあればそれを優先"
+        gen_prompt: "a packed crowd of working men in flat caps watching a football match in a northern English industrial town in the 1880s, smoke from factory chimneys, muddy pitch, engraving-like tones, no readable text"
+        search_query: "victorian football crowd industrial town chimneys"
+        cut_reason: "【観客と入場料】場面がロンドンの紳士から北部の労働者へ転換する"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "蒸気機関車の特別列車から降りるサポーターの群衆"
+        gen_prompt: "a Victorian steam train at a busy station platform with a crowd of football supporters in caps and scarves pouring out of the carriages, steam and soot, sepia tones, no readable signage"
+        search_query: "victorian steam train platform crowd supporters"
+        telop: "1882年 FAカップに北部から特別列車（鉄道は観客を「作った」のではなく「後押し」）"
+        cut_reason: "【特別列車と留保】鉄道の1文と、その留保の2文をこの画で持たせる"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "告発と除名。委員会室で対峙する二人の男（顔は描き込まない）"
+        gen_prompt: "two Victorian men in dark suits facing each other across a committee table in a dim office, one holding a document, papers blank and unreadable, tense atmosphere, seen from the side"
+        search_query: "victorian men committee room confrontation document"
+        telop: "1884年 プレストン、プロ使用で告発・除名"
+        cut_reason: "【告発と対抗】事件の場面に転換する"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "締め出された側が別の協会を作ると言い出す場面を直接描写"
+        gen_prompt: "a group of Victorian club officials gathered around a table signing a joint letter, resolute posture, papers blank and unreadable, dim office light"
+        search_query: "victorian club officials signing letter table"
+        cut_reason: "【分割】20秒超を節目で分割。「だが締め出された側は、引き下がらなかった。金を払っているクラブが集まって、別の協会を作ると言い出したのだ。」を受ける"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "1885年、協会の発表。掲示板に貼られた告示の前に集まる人々（告示の文字は読めない）"
+        gen_prompt: "a small crowd of Victorian men gathered before a notice pinned to a wooden board outside a club house, the notice text blurred and unreadable, overcast daylight"
+        search_query: "victorian men crowd notice board club house"
+        telop: "1885年7月20日 FAがプロを容認／1888年 フットボールリーグ発足"
+        cut_reason: "【プロ容認】決定の場面へ。「フットボールリーグが発足した。」まで保持"
+
+      - type: image
+        from: 19
+        slot: 8
+        visual_intent: "順序の整理。観客席→選手→規則。ターンスタイル（回転式入場口）を通る労働者の列"
+        gen_prompt: "a line of working-class men in flat caps passing through an iron turnstile into a Victorian football ground, coins changing hands at a small booth, muted sepia, no readable text"
+        search_query: "victorian turnstile football ground entrance queue"
+        cut_reason: "「順序を見てほしい。金を払う観客が先にいて…しぶしぶ追いついた。」を入場口の画で受ける"
+
+      - type: image
+        from: 21
+        slot: 9
+        visual_intent: "FAが抵抗する場面を委員会の様子で直接描写"
+        gen_prompt: "a group of Victorian FA committee members sitting stiffly around a table, arms crossed, papers pushed aside with blank unreadable pages, a single gas lamp overhead, tense reluctant mood"
+        search_query: "victorian committee members arms crossed reluctant"
+        cut_reason: "【分割】20秒超を節目で分割。「ただし、FAは抵抗した。規則は自動的には変わらない。押し切るには、綱引きが必要だった。」を委員会の抵抗の様子で受ける"
+
+      - type: image
+        from: 24
+        slot: 10
+        visual_intent: "次章の問い。漕艇クラブの艇庫に並ぶボートと、白いブレザーの紳士の後ろ姿"
+        gen_prompt: "the interior of a Victorian rowing club boathouse with long wooden racing shells on racks, a gentleman in a white blazer seen from behind looking out at the river, soft morning light"
+        search_query: "victorian rowing club boathouse racing shells"
+        cut_reason: "【次章への問い】抵抗した側＝紳士のアマチュアリズムを暗示して閉じる"
+
+  - id: 6
+    title: "反転（アマチュアリズムの正体 → 説②の登場）"
+    readings:
+      - surface: "ローイング"
+        reading: "ローイング"
+      - surface: "職工"
+        reading: "ショッコウ"
+      - surface: "8人全員"
+        reading: "ハチニンゼンイン"
+      - surface: "剥奪"
+        reading: "ハクダツ"
+    narration:
+      - text: "アマチュア、という言葉を、あなたはどんな意味で使っているだろうか。"
+        pause_after: 0.2
+      - text: "金をもらわずに、純粋に競技を愛する人。"
+        pause_after: 0.2
+      - text: "たぶん、そんな意味だろう。"
+        pause_after: 0.2
+      - text: "だが19世紀のイギリスで、この言葉は、まったく別の役目を負っていた。"
+        pause_after: 0.8
+      - text: "ボート競技を見てみよう。"
+        pause_after: 0.2
+      - text: "アマチュア・ローイング協会は、1880年代に、アマチュアではない者の定義を明文化した。"
+        pause_after: 0.2
+      - text: "賞金のために競技した者。"
+        pause_after: 0.2
+      - text: "プロと知りながら対戦した者。"
+        pause_after: 0.2
+      - text: "そして、賃金のために職工、職人、労働者として働いたことのある者。"
+        pause_after: 0.2
+      - text: "つまり肉体労働者は、金をもらっていなくても、アマチュアではなかった。"
+        pause_after: 0.7
+      - text: "この条項は、1937年まで残る。"
+        pause_after: 0.2
+      - text: "廃止のきっかけは、その前年の事件だ。"
+        pause_after: 0.2
+      - text: "1936年、ヘンリー・レガッタに、8人で漕ぐ種目、エイトのオーストラリア代表が出場しようとした。"
+        pause_after: 0.2
+      - text: "その8人全員が、警察官だった。"
+        pause_after: 0.2
+      - text: "彼らは肉体労働者とみなされ、出場を拒否された。"
+        pause_after: 0.2
+      - text: "国際的な非難を浴びて、条項はようやく消えた。"
+        pause_after: 0.7
+      - text: "表向きは、金を受け取らないことが条件に見える。"
+        pause_after: 0.2
+      - text: "だが実際に、金を受け取らずに競技を続けられるのは、金を必要としない人だけだ。"
+        pause_after: 0.2
+      - text: "アマチュアという線引きは、純粋さの基準に見えて、実際には、誰がその競技の主役になれるかを決める、階級の壁だった。"
+        pause_after: 2.3
+      - text: "オリンピックも、この壁の上に建てられた。"
+        pause_after: 0.2
+      - text: "1894年、クーベルタンが各国に会議を呼びかけたとき、招集状に掲げた主題は、オリンピックの復興ではなかった。"
+        pause_after: 0.2
+      - text: "アマチュアリズムの原則を、考察し、普及すること。"
+        pause_after: 0.2
+      - text: "それが表題だった。"
+        pause_after: 0.2
+      - text: "1912年の金メダリスト、ジム・ソープは、大会前にマイナーリーグの野球で週25ドルを受け取っていたことを理由に、翌年メダルを剥奪されている。"
+        pause_after: 0.8
+      - text: "ここで、第二の説が姿を現す。"
+        pause_after: 0.2
+      - text: "プロを生むのは、金そのものではなく、誰が本物かを認定し、他を締め出す装置ではないのか。"
+        pause_after: 1.5
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "現代、休日の河川敷で草野球をする人々（アマチュアの素朴なイメージ）。実写ストック優先・静止画"
+        gen_prompt: "amateur baseball players in mismatched uniforms on a riverside field on a weekend afternoon, families watching from the grass, warm natural light, candid wide shot"
+        search_query: "amateur baseball players riverside field weekend"
+        assets:
+          - url: "https://www.pexels.com/photo/group-of-athletes-playing-baseball-in-a-sunny-park-with-trees-in-the-background-14673576/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/an-exciting-amateur-baseball-game-with-players-in-action-on-a-sunny-day-perfect-for-sports-enthusiasts-37743529/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【素朴な意味のアマチュア】キュー1〜3は視聴者の常識を確認する場面"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "反転の予告。ヴィクトリア朝のボートレース、河岸の紳士淑女と白いブレザーの漕手"
+        gen_prompt: "a Victorian-era rowing regatta on the Thames, gentlemen in straw boaters and ladies with parasols on the bank, a crew in white blazers carrying a shell, engraving-like muted tones"
+        search_query: "victorian rowing regatta thames spectators"
+        cut_reason: "【反転の入口】時代がヴィクトリア朝へ転換する"
+
+      - type: diagram
+        from: 5
+        slot: 3
+        gen_prompt: "an overcast Victorian boathouse dock with racing shells in the water, no people, muted tones"
+        search_query: "victorian boathouse dock racing shells overcast"
+        cut_reason: "【アマチュア規定の選別】三つの除外条件を語る間、列の一部が沈む row で「金をもらっていなくても除外」の構造を見せる。決め要素は「労働者として働いたことのある者」の1〜2秒手前「職人」に同期"
+        diagram:
+          type: narrative
+          layout: row
+          count: 8
+          select:
+            at: 9
+            lit: [1, 2, 3, 4, 5, 6, 7]
+            after: "職人"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "アマチュア・ローイング協会の規定が1937年まで残っていたことを、規約書の直接描写で示す"
+        gen_prompt: "an open 1880s rowing club rulebook with handwritten amendments lying on a boathouse table, oars leaning against the wall nearby, the text blurred and unreadable, overcast daylight, no people"
+        search_query: "open rulebook boathouse table oars"
+        telop: "アマチュア・ローイング協会の規定（1880年代）：職工・職人・労働者は除外"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「つまり肉体労働者は、金をもらっていなくても、アマチュアではなかった。この条項は、1937年まで残る。廃止のきっかけは、その前年の事件だ。」を規約書の画で受ける"
+
+      - type: image
+        from: 13
+        slot: 5
+        visual_intent: "1936年、ヘンリー・レガッタ。艇庫の前で締め出されるオーストラリアの8人（顔は描き込まない・引き）"
+        gen_prompt: "eight athletic men in matching 1930s rowing kit standing together on a riverside dock beside their racing shell while officials in blazers turn away, overcast English summer light, seen from a distance"
+        search_query: "1930s rowing crew dock officials turning away"
+        telop: "1936年 全員警察官の豪州代表エイトが出場拒否 → 1937年 条項廃止"
+        cut_reason: "【1936年の事件】具体的な事件へ転換。「条項はようやく消えた。」まで保持"
+
+      - type: image
+        from: 17
+        slot: 6
+        visual_intent: "表向きの規定と、実際に競技を続けられる人の違いを、規約を読む労働者の姿で直接描写"
+        gen_prompt: "a working-class rower standing outside a boathouse gate looking at a posted club notice, his weathered hands and simple clothes visible, the notice blurred and unreadable, overcast light"
+        search_query: "working class man reading notice boathouse gate"
+        cut_reason: "【分割】20秒超を節目で分割。「表向きは、金を受け取らないことが条件に見える。だが実際に、金を受け取らずに競技を続けられるのは、金を必要としない人だけだ。」を受ける"
+
+      - type: image
+        from: 19
+        slot: 7
+        visual_intent: "決め文へ向けた静止。豪華な邸宅の庭でテニスやボートを楽しむ紳士階級の遠景"
+        gen_prompt: "a distant view of Edwardian gentlemen in white flannels playing on the lawn of a grand country house, a lake with a rowing boat beyond, late afternoon light, muted tones"
+        search_query: "edwardian gentlemen country house lawn lake"
+        cut_reason: "決め文「階級の壁だった。」で画面保持"
+
+      - type: image
+        from: 20
+        slot: 8
+        visual_intent: "1894年、ソルボンヌの会議室。長机と各国の代表、招集状の紙（白紙）"
+        gen_prompt: "a grand 1890s Parisian lecture hall with delegates in formal dress seated at long tables during an international congress, a printed invitation lying on the table with blank unreadable text, warm gaslight"
+        search_query: "1890s parisian lecture hall delegates congress"
+        telop: "1894年 クーベルタンの招集状の表題「アマチュアリズムの原則に関する考察と普及」"
+        cut_reason: "【オリンピック】場面がパリの会議へ転換"
+
+      - type: image
+        from: 24
+        slot: 9
+        visual_intent: "1912年の競技場、表彰台に立つ十種競技の選手を後ろから（実在人物の顔は描かない）"
+        gen_prompt: "a 1912 Olympic stadium seen from behind an athlete standing on the winner's podium, crowd in period dress in the stands, flags on tall poles, sepia photographic tone, athlete's face not visible"
+        search_query: "1912 olympic stadium podium crowd flags"
+        telop: "ジム・ソープ：1912年金メダル → 1913年剥奪（名誉回復は1983年）"
+        cut_reason: "【ジム・ソープ】剥奪の1文だけ表彰台の画で受ける"
+
+      - type: image
+        from: 26
+        slot: 10
+        visual_intent: "説②の登場。閉じられた鉄の門と、その向こうの競技場"
+        gen_prompt: "a tall wrought-iron gate closed and locked in front of a sports ground, seen from outside at dusk, the field visible through the bars, muted tones, no people"
+        search_query: "locked iron gate sports ground dusk"
+        cut_reason: "【説②の修正】「認定と排除の装置はプロが生まれたあとに作られる」を、シーン6で装置を導入した閉じた門の画の再提示で受ける（分割で追加したビート。工房の証書案はナレーションにない場面のため差し替え）"
+
+  - id: 7
+    title: "説②の検討（ウィレンスキーの順序 → 装置は固めるが生まない）"
+    readings:
+      - surface: "二人"
+        reading: "フタリ"
+      - surface: "ウィレンスキー"
+        reading: "ウィレンスキー"
+      - surface: "倫理綱領"
+        reading: "リンリコウリョウ"
+    narration:
+      - text: "確かに、プロのいる世界には、必ずこの装置がある。"
+        pause_after: 0.2
+      - text: "将棋には家元があり、今は奨励会がある。"
+        pause_after: 0.2
+      - text: "四段への昇段をプロ入りの条件にする、養成機関だ。"
+        pause_after: 0.2
+      - text: "上がれるのは、半年に二人。"
+        pause_after: 0.2
+      - text: "26歳までに上がれなければ、退会だ。"
+        pause_after: 0.2
+      - text: "フットボールにはFAの規則があった。"
+        pause_after: 0.2
+      - text: "美術にはアカデミーがあった。"
+        pause_after: 0.2
+      - text: "1648年にパリで生まれた王立絵画彫刻アカデミーは、150年以上、展覧会と教育をほぼ独占し、1669年には、歴史画を頂点とするジャンルの序列まで定めている。"
+        pause_after: 0.7
+      - text: "カリフォルニア大学バークレー校の社会学者ハロルド・ウィレンスキーは、1964年、18の職業の歴史を調べて、職業が専門職になっていく典型的な順序を示した。"
+        pause_after: 0.2
+      - text: "要約すると、こうなる。"
+        pause_after: 0.2
+      - text: "まず、その仕事がフルタイムの職業になる。"
+        pause_after: 0.2
+      - text: "次に、養成機関ができる。"
+        pause_after: 0.2
+      - text: "職業団体ができる。"
+        pause_after: 0.2
+      - text: "免許や資格ができる。"
+        pause_after: 0.2
+      - text: "最後に、倫理綱領ができる。"
+        pause_after: 0.6
+      - text: "注目してほしいのは、いちばん最初の段階だ。"
+        pause_after: 0.2
+      - text: "フルタイムの職業になる。"
+        pause_after: 0.2
+      - text: "つまり、その仕事だけで食えるようになること。"
+        pause_after: 0.2
+      - text: "養成機関も、資格も、そのあとに来る。"
+        pause_after: 0.2
+      - text: "将棋の家元が、装置だけではプロを保てないことを証明している。"
+        pause_after: 0.2
+      - text: "明治の将棋三家は、家元という認定装置を持ったままだった。"
+        pause_after: 0.2
+      - text: "段位も、名人の称号も、残っていた。"
+        pause_after: 0.2
+      - text: "それでも、食えなくなった。"
+        pause_after: 0.2
+      - text: "装置は、プロを固めることはできても、プロを生むことはできない。"
+        pause_after: 2.2
+      - text: "第二の説は、こう修正すべきだろう。"
+        pause_after: 0.2
+      - text: "認定と排除の装置は、プロが生まれたあとに、その地位を守るために作られる。"
+        pause_after: 0.2
+      - text: "金が先で、壁があと。"
+        pause_after: 1.0
+      - text: "とすると、やはり第一の説が正しいのか。"
+        pause_after: 0.2
+      - text: "だが、第一の説だけでは説明できないことがある。"
+        pause_after: 0.2
+      - text: "なぜ、トップの数人だけが、桁違いに稼ぐのか。"
+        pause_after: 1.5
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "現代の奨励会の対局室。若い対局者が並ぶ長い部屋、引き"
+        gen_prompt: "a long quiet room with rows of young players facing each other over shogi boards in a present-day Japanese training league, fluorescent light, seen from the end of the room, no readable text"
+        search_query: "shogi training hall young players rows"
+        telop: "奨励会：三段リーグ上位2名が四段（プロ）・26歳の年齢制限"
+        cut_reason: "【装置の実例・奨励会】キュー1〜4は将棋の装置"
+
+      - type: image
+        from: 6
+        slot: 2
+        visual_intent: "17世紀パリのアカデミー。石膏像とイーゼルの並ぶ画室で学ぶ画家たち"
+        gen_prompt: "a 17th-century Parisian academy drawing hall with students at easels sketching plaster casts of classical statues, tall windows, warm daylight, muted tones, no readable text"
+        search_query: "17th century art academy students plaster casts"
+        telop: "1648年 王立絵画彫刻アカデミー設立／1669年 ジャンルの序列"
+        cut_reason: "【装置の実例・アカデミー】主体が美術へ転換"
+
+      - type: diagram
+        from: 9
+        slot: 3
+        gen_prompt: "a 1960s university library reading room with long wooden tables and green lamps, no people, muted tones"
+        search_query: "1960s university library reading room green lamps"
+        cut_reason: "【職業化の順序】5段階の順序そのものが知見。chain で縦に積む"
+        diagram:
+          type: narrative
+          layout: chain
+          items:
+            - {id: fulltime, text: "フルタイムの職業", at: 11, after: "フルタイムの"}
+            - {id: training, text: "養成機関", at: 12, after: "養成機関が"}
+            - {id: assoc, text: "職業団体", at: 13, after: "職業団体が"}
+            - {id: license, text: "免許・資格", at: 14, after: "免許や資格が"}
+            - {id: ethics, text: "倫理綱領", at: 15, after: "倫理綱領が"}
+
+      - type: image
+        from: 16
+        slot: 4
+        visual_intent: "フルタイムの職業になることがまず最初に来る、という主張を、生計を立てる棋士の日常で直接描写"
+        gen_prompt: "a present-day shogi player at a quiet desk reviewing games alone, focused and unhurried, natural daylight, no readable text"
+        search_query: "shogi player reviewing games alone desk"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「注目してほしいのは、いちばん最初の段階だ。フルタイムの職業になる。つまり、その仕事だけで食えるようになること。養成機関も、資格も、そのあとに来る。」を受ける"
+
+      - type: image
+        from: 20
+        slot: 5
+        visual_intent: "明治の将棋三家が家元という認定装置を持ったままだったことを直接描写"
+        gen_prompt: "a Meiji-era shogi family head kneeling formally before a household shrine displaying an old certificate of hereditary rank, faded but intact, muted sepia, no text, no lettering"
+        search_query: "meiji era man kneeling household shrine certificate"
+        telop: "Wilensky, \"The Professionalization of Everyone?\" AJS (1964)"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「将棋の家元が、装置だけではプロを保てないことを証明している。明治の将棋三家は、家元という認定装置を持ったままだった。」を受ける。図解ビート（DiagramBeat）に telop フィールドが無いため、直前のchain図解が担うはずだった Wilensky の書誌テロップをこの直後の image ビートへ合流させた"
+
+      - type: image
+        from: 22
+        slot: 6
+        visual_intent: "明治の将棋三家の当主が、称号だけを残して困窮する屋敷。掛け軸と空の膳（掛け軸の文字は読めない）"
+        gen_prompt: "a dim Meiji-era Japanese room with a faded hanging scroll, an empty low table and a shogi board, a man in worn kimono sitting with his back to the viewer, scroll characters blurred and unreadable, muted sepia"
+        search_query: "meiji era room hanging scroll man back turned"
+        cut_reason: "「段位も、名人の称号も、残っていた。それでも、食えなくなった。」を受け、決め文「プロを生むことはできない。」で画面保持"
+
+      - type: image
+        from: 25
+        slot: 8
+        visual_intent: "装置はプロが生まれたあとに地位を守るために作られる、を稼働中の工房に後から証書を掲げる場面で直接描写"
+        gen_prompt: "a tall wrought-iron gate closed and locked in front of a sports ground, seen from outside at dusk, the field visible through the bars, muted tones, no people"
+        search_query: "certificate nailed wall busy workshop craftsmen"
+        cut_reason: "【分割】20秒超を節目で分割。「第二の説は、こう修正すべきだろう。認定と排除の装置は、プロが生まれたあとに、その地位を守るために作られる。金が先で、壁があと。」を受ける"
+
+      - type: image
+        from: 28
+        slot: 9
+        visual_intent: "修正の整理と次章への問い。ラジオの前に集まる家族の1930年代の場面はまだ出さず、コンサートホールの空の客席（次章の予告）"
+        gen_prompt: "an empty 18th-century concert hall with rows of gilded seats and a grand chandelier, a single lit candelabra on the stage, warm tones, no people"
+        search_query: "empty 18th century concert hall gilded seats chandelier"
+        cut_reason: "「とすると、やはり第一の説が正しいのか。」以下、次章の音楽への橋渡し"
+
+  - id: 8
+    title: "音楽家の移動（章「音楽家は、いつ使用人でなくなったのか」）"
+    chapter_title: "音楽家は、いつ使用人でなくなったのか"
+    readings:
+      - surface: "エステルハージ"
+        reading: "エステルハージ"
+      - surface: "副楽長"
+        reading: "フクガクチョウ"
+      - surface: "日に二度"
+        reading: "ヒニニド"
+      - surface: "四旬節"
+        reading: "シジュンセツ"
+      - surface: "ザロモン"
+        reading: "ザロモン"
+    narration:
+      - text: "その答えを探すために、競技の外へ出る。"
+        pause_after: 0.2
+      - text: "音楽と美術は、競技より一足早く、同じ道を歩いていた。"
+        pause_after: 0.2
+      - text: "1761年、ヨーゼフ・ハイドンは、ハンガリーの大貴族エステルハージ家に、宮廷の副楽長として雇われた。"
+        pause_after: 0.2
+      - text: "ハイドンは侯爵家の制服を着て、他の使用人と一緒に食事をし、日に二度、侯爵の前に出て指示を仰いだ。"
+        pause_after: 0.2
+      - text: "作曲家は、料理人や庭師と同じ、屋敷の使用人だった。"
+        pause_after: 0.2
+      - text: "当時の音楽家にとって、これはむしろ、恵まれた地位だ。"
+        pause_after: 0.7
+      - text: "同じころ、ウィーンでは別の稼ぎ方が試されていた。"
+        pause_after: 0.2
+      - text: "モーツァルトは、貴族に雇われる代わりに、自分で演奏会を興行した。"
+        pause_after: 0.2
+      - text: "1784年の四旬節、予約制の演奏会に、174人の予約者を集めている。"
+        pause_after: 0.2
+      - text: "聴衆から直接、金を集める。"
+        pause_after: 0.2
+      - text: "宮廷ではなく、市場に向けて演奏する音楽家の姿だ。"
+        pause_after: 0.7
+      - text: "1790年、ハイドンの主人だった侯爵が亡くなり、ハイドンは自由の身になる。"
+        pause_after: 0.2
+      - text: "翌年、興行師ザロモンに招かれてロンドンへ渡り、公開演奏会で新作の交響曲を発表した。"
+        pause_after: 0.2
+      - text: "チケットの売上で報酬を得る、興行としての音楽。"
+        pause_after: 0.2
+      - text: "29年間、制服を着ていた男が、最後に市場を経験した。"
+        pause_after: 0.8
+      - text: "貴族の使用人から、興行で報酬を得る音楽家へ。"
+        pause_after: 0.2
+      - text: "これは、将棋の家元が新聞の棋戦に変わったのと、同じ移動だ。"
+        pause_after: 0.2
+      - text: "だが音楽には、将棋にはない、もうひとつの稼ぎ方があった。"
+        pause_after: 1.2
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "導入。18世紀の宮殿の音楽室、楽器が並び人はいない"
+        gen_prompt: "an 18th-century palace music room with a harpsichord, music stands and gilded chairs, morning light through tall windows, no people, muted warm tones"
+        search_query: "18th century palace music room harpsichord empty"
+        cut_reason: "【競技の外へ】キュー1〜2は転換の宣言"
+
+      - type: image
+        from: 3
+        slot: 3
+        visual_intent: "制服姿の楽長が使用人たちと同じ食堂で食事をしている場面（顔は描き込まない・引き）"
+        gen_prompt: "an 18th-century servants' dining hall in a Hungarian palace, a man in the household's blue livery uniform seated among cooks and footmen at a long table, candlelight, seen from the end of the table, faces not detailed"
+        search_query: "18th century servants dining hall palace livery"
+        telop: "1761年 ハイドン、エステルハージ家の副楽長に（制服着用・日に二度伺候）"
+        cut_reason: "「1761年、ヨーゼフ・ハイドンは、宮廷の副楽長として雇われた。ハイドンは侯爵家の制服を着て、他の使用人と一緒に食事をし、日に二度、侯爵の前に出て指示を仰いだ。」を受ける"
+
+      - type: image
+        from: 5
+        slot: 4
+        visual_intent: "作曲家が料理人や庭師と同じ使用人だったことを、勢揃いした使用人の列で直接描写"
+        gen_prompt: "a line of household staff in an 18th-century Hungarian palace corridor — a cook, a gardener, and a musician in matching livery — standing at attention for morning inspection, soft daylight, faces not detailed"
+        search_query: "household staff line livery palace corridor inspection"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「作曲家は、料理人や庭師と同じ、屋敷の使用人だった。当時の音楽家にとって、これはむしろ、恵まれた地位だ。」を受ける"
+
+      - type: image
+        from: 7
+        slot: 5
+        visual_intent: "モーツァルトが貴族に雇われる代わりに自分で演奏会を興行する決意を、書き物机の場面で直接描写"
+        gen_prompt: "Mozart-era composer seated at a writing desk composing a concert announcement by candlelight in a modest Vienna apartment, manuscript paper covered in notation blurred and unreadable, warm light, no readable text"
+        search_query: "composer writing desk candlelight vienna apartment"
+        cut_reason: "【分割】20秒超を節目で分割。「同じころ、ウィーンでは別の稼ぎ方が試されていた。モーツァルトは、貴族に雇われる代わりに、自分で演奏会を興行した。」を受ける"
+
+      - type: image
+        from: 9
+        slot: 6
+        visual_intent: "ウィーンの予約演奏会。広間に集まる聴衆と、ピアノに向かう小さな人物を引きで"
+        gen_prompt: "a crowded 1780s Viennese concert hall with an audience in powdered wigs and silk gowns seated in rows, a fortepiano at the front under chandeliers, seen from the back of the hall"
+        search_query: "18th century viennese concert hall audience fortepiano"
+        telop: "1784年 モーツァルトの予約演奏会 予約者174人"
+        cut_reason: "【モーツァルトの興行】「1784年の四旬節、予約制の演奏会に、174人の予約者を集めている。」を受ける"
+
+      - type: image
+        from: 12
+        slot: 7
+        visual_intent: "ロンドンの公開演奏会。チケット売り場に並ぶ群衆（掲示の文字は読めない）"
+        gen_prompt: "a crowd of Londoners in 1790s dress queuing at a lamplit ticket booth outside a concert hall on a foggy evening, playbills on the wall blurred and unreadable, warm gaslight"
+        search_query: "18th century london ticket booth queue foggy evening"
+        cut_reason: "「1790年、ハイドンの主人だった侯爵が亡くなり、ハイドンは自由の身になる。翌年、興行師ザロモンに招かれてロンドンへ渡り、公開演奏会で新作の交響曲を発表した。」を受ける"
+
+      - type: image
+        from: 14
+        slot: 8
+        visual_intent: "チケットの売上で報酬を得る興行としての音楽を、楽屋で売上を数える場面で直接描写"
+        gen_prompt: "an older man in plain formal dress standing backstage counting a stack of ticket stubs and coins after a concert, warm gaslight, no readable text, faces not detailed"
+        search_query: "backstage counting ticket stubs coins concert"
+        telop: "1791年 ハイドン、ロンドンの公開演奏会へ"
+        cut_reason: "【分割】20秒超を節目で分割。「チケットの売上で報酬を得る、興行としての音楽。29年間、制服を着ていた男が、最後に市場を経験した。」を受ける"
+
+      - type: image
+        from: 16
+        slot: 9
+        visual_intent: "二つの世界の橋渡し。制服の上着が椅子に掛けられ、机には楽譜の束（音符は読めない）"
+        gen_prompt: "a livery coat draped over a chair beside a desk stacked with handwritten music manuscripts in an 18th-century room, manuscript notes blurred and unreadable, warm candlelight, no people"
+        search_query: "18th century livery coat chair desk music manuscripts"
+        cut_reason: "【移動の整理と次の予告】「もうひとつの稼ぎ方」＝楽譜を机上に置いて章を閉じる"
+
+  - id: 9
+    title: "楽譜・著作権・画商（複製が開いた道と、その不安定さ）"
+    readings:
+      - surface: "アン法"
+        reading: "アンホウ"
+      - surface: "大バッハ"
+        reading: "ダイバッハ"
+      - surface: "献呈"
+        reading: "ケンテイ"
+      - surface: "デュラン・リュエル"
+        reading: "デュランリュエル"
+    narration:
+      - text: "楽譜だ。"
+        pause_after: 0.2
+      - text: "演奏は一度きりだが、楽譜は印刷して、何度でも売れる。"
+        pause_after: 0.2
+      - text: "ただし、それで作曲家に金が入るには、法律が要る。"
+        pause_after: 0.2
+      - text: "1710年、イギリスでアン法という、世界初の著作権法ができた。"
+        pause_after: 0.2
+      - text: "だが、この法律が楽譜に及ぶのかは、長く曖昧だった。"
+        pause_after: 0.2
+      - text: "1777年、ヨハン・クリスティアン・バッハ、大バッハの末の息子が、無断で楽譜を出版した業者を訴える。"
+        pause_after: 0.2
+      - text: "裁判所は、楽譜も著作物だと認めた。"
+        pause_after: 0.2
+      - text: "楽譜が複製されるたびに作曲家に金が入る道が、ここで開いた。"
+        pause_after: 0.8
+      - text: "ベートーヴェンは、この時代の産物だ。"
+        pause_after: 0.2
+      - text: "1809年、大公ルドルフと二人の侯爵が連名で、年に4000フロリンの終身年金を約束した。"
+        pause_after: 0.2
+      - text: "条件は、ウィーンに住み続けること。"
+        pause_after: 0.2
+      - text: "特定の主人に仕える契約ではない。"
+        pause_after: 0.2
+      - text: "あわせて、出版社に作品を売り、有力者に曲を献呈して謝礼を受け取る。"
+        pause_after: 0.2
+      - text: "ベートーヴェン・ハウス・ボンは、これを、フリーランスの芸術家の発明と呼んでいる。"
+        pause_after: 0.6
+      - text: "美術でも、同じことが起きた。"
+        pause_after: 0.2
+      - text: "1874年、アカデミーのサロンに落選し続けた画家たちが、審査なしの自主展覧会を開く。"
+        pause_after: 0.2
+      - text: "第1回印象派展だ。"
+        pause_after: 0.2
+      - text: "画商のデュラン・リュエルが彼らの絵を買い取り、個展を開いて、海外の買い手にまで売った。"
+        pause_after: 0.2
+      - text: "アカデミーの認定を通さずに、絵を金に変える市場が生まれた。"
+        pause_after: 0.6
+      - text: "ただし、市場は優しくない。"
+        pause_after: 0.2
+      - text: "ベートーヴェンの年金は、1811年の通貨の切り下げで実質的に目減りし、侯爵の一人は支払いを渋って、訴訟になった。"
+        pause_after: 0.2
+      - text: "デュラン・リュエルは、1876年の印象派展の不振で、破産寸前まで追い込まれている。"
+        pause_after: 0.2
+      - text: "パトロンを離れた自由は、不安定と引き換えだった。"
+        pause_after: 1.0
+      - text: "それでも、複製という道が開いたことで、音楽家の収入には、それまでなかった性質が加わった。"
+        pause_after: 0.2
+      - text: "上限が、なくなったのだ。"
+        pause_after: 2.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "18世紀の楽譜印刷工房。版と刷り上がった楽譜の束（音符は読めない）"
+        gen_prompt: "an 18th-century music engraving workshop with a printer pulling sheets from a hand press, stacks of printed sheet music with notation blurred and unreadable, warm lamplight"
+        search_query: "18th century music engraving workshop printing press"
+        cut_reason: "【楽譜という複製】キュー1〜3は「楽譜は何度でも売れる」"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "1710年のアン法という法律の存在を、法令集の直接描写で示す（楽譜に及ぶかは曖昧なまま）"
+        gen_prompt: "a printed 18th-century legal statute book lying open on a wooden desk in a London office, the printed text blurred and unreadable, a quill pen beside it, warm candlelight"
+        search_query: "18th century legal statute book open desk"
+        telop: "1710年 アン法（世界初の著作権法）／1777年 Bach v Longman：楽譜も著作物"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「1710年、イギリスでアン法という、世界初の著作権法ができた。だが、この法律が楽譜に及ぶのかは、長く曖昧だった。」を受ける"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "1777年の法廷。判事席と、書類を掲げる弁護士（書類は白紙）"
+        gen_prompt: "a Georgian-era London courtroom with a judge in a white wig on the bench and a barrister holding up a document, papers blank and unreadable, wood panelling and candlelight, seen from the gallery"
+        search_query: "georgian era courtroom judge barrister document"
+        cut_reason: "「1777年、ヨハン・クリスティアン・バッハ、大バッハの末の息子が、無断で楽譜を出版した業者を訴える。」を受け、「ここで開いた。」まで保持"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "1809年、ウィーンの書斎。机の上の年金契約書（白紙）と封蝋、窓の外の街"
+        gen_prompt: "a composer's cluttered study in 1809 Vienna, a signed contract with wax seals lying on the desk beside a quill, the document text blurred and unreadable, a window looking onto rooftops, warm afternoon light, no people"
+        search_query: "composer study desk contract wax seal 19th century"
+        telop: "1809年 ベートーヴェンの年金契約 年4,000フロリン（大公ルドルフ・キンスキー侯・ロプコヴィッツ侯）"
+        cut_reason: "【年金契約】主体がベートーヴェンへ転換"
+
+      - type: image
+        from: 13
+        slot: 5
+        visual_intent: "出版社に作品を売り、有力者に曲を献呈して謝礼を受け取る、を出版社への手渡しで直接描写"
+        gen_prompt: "a composer's hand placing a bound manuscript score into the hands of a publisher in a Vienna print shop doorway, warm afternoon light, manuscript cover blurred and unreadable, no readable text"
+        search_query: "composer handing manuscript score publisher doorway"
+        cut_reason: "【分割】20秒超を節目で分割。「あわせて、出版社に作品を売り、有力者に曲を献呈して謝礼を受け取る。ベートーヴェン・ハウス・ボンは、これを、フリーランスの芸術家の発明と呼んでいる。」を受ける"
+
+      - type: image
+        from: 15
+        slot: 6
+        visual_intent: "1874年、パリの写真スタジオを借りた展覧会。壁一面の絵と少数の観客（絵の内容はぼかす）"
+        gen_prompt: "a small 1874 Parisian exhibition room in a former photography studio, paintings hung closely on the walls, a few visitors in top hats and long dresses looking at them, paintings blurred and indistinct, warm daylight"
+        search_query: "1870s parisian art exhibition room visitors"
+        telop: "1874年 第1回印象派展／画商デュラン＝リュエル"
+        cut_reason: "【印象派展】美術へ転換"
+
+      - type: image
+        from: 18
+        slot: 7
+        visual_intent: "画商デュラン・リュエルが絵を買い取り海外へ売る、を画廊での商談として直接描写"
+        gen_prompt: "a 19th-century Parisian art dealer's gallery interior, a well-dressed dealer showing a painting to a foreign buyer in a top hat, paintings blurred and indistinct on the walls, warm daylight"
+        search_query: "art dealer showing painting buyer gallery 19th century"
+        cut_reason: "【分割】20秒超を節目で分割。「画商のデュラン・リュエルが彼らの絵を買い取り、個展を開いて、海外の買い手にまで売った。アカデミーの認定を通さずに、絵を金に変える市場が生まれた。」を受ける"
+
+      - type: image
+        from: 20
+        slot: 8
+        visual_intent: "1811年の通貨切り下げでベートーヴェンの年金が目減りする様子を直接描写"
+        gen_prompt: "a composer's study in 1811 Vienna, devalued paper currency notes scattered beside an unpaid bill on the desk, quill pen resting, muted afternoon light, notes blurred and unreadable"
+        search_query: "devalued currency notes unpaid bill desk 19th century"
+        cut_reason: "【分割】20秒超を節目で分割。「ただし、市場は優しくない。ベートーヴェンの年金は、1811年の通貨の切り下げで実質的に目減りし、侯爵の一人は支払いを渋って、訴訟になった。」を受ける"
+
+      - type: image
+        from: 22
+        slot: 9
+        visual_intent: "反証。売れ残った絵が積まれた画商の倉庫、帳簿を前に頭を抱える男の後ろ姿（帳簿は白紙）"
+        gen_prompt: "a dim Parisian art dealer's storeroom in the 1870s with unsold canvases stacked against the walls, a man seen from behind sitting at a desk with an open ledger, ledger pages blank and unreadable, single lamp"
+        search_query: "art dealer storeroom unsold canvases 19th century"
+        cut_reason: "「デュラン・リュエルは、1876年の印象派展の不振で、破産寸前まで追い込まれている。」を受け、「不安定と引き換えだった。」で保持"
+
+      - type: image
+        from: 24
+        slot: 10
+        visual_intent: "「上限がなくなった」の予告。印刷された楽譜が積み上がって天井近くまで届く倉庫（音符は読めない）"
+        gen_prompt: "a tall warehouse filled with towering stacks of printed sheet music reaching toward the ceiling, notation blurred and unreadable, dust in shafts of light, no people"
+        search_query: "warehouse stacks printed sheet music towering"
+        cut_reason: "【上限の消失】決め文「上限が、なくなったのだ。」で画面保持"
+
+  - id: 10
+    title: "説③の検討（ローゼンとアドラー → 複製技術は増幅する力）"
+    readings:
+      - surface: "シャーウィン・ローゼン"
+        reading: "シャーウィンローゼン"
+      - surface: "モシェ・アドラー"
+        reading: "モシェアドラー"
+      - surface: "十人"
+        reading: "ジュウニン"
+      - surface: "一回分"
+        reading: "イッカイブン"
+      - surface: "二番目"
+        reading: "ニバンメ"
+    narration:
+      - text: "シカゴ大学の経済学者シャーウィン・ローゼンは、1981年、アメリカン・エコノミック・レビューに、スーパースターの経済学という論文を書いた。"
+        pause_after: 0.2
+      - text: "問いはこうだ。"
+        pause_after: 0.2
+      - text: "なぜ、才能のわずかな差が、収入の巨大な差になるのか。"
+        pause_after: 0.7
+      - text: "ローゼンの答えは、条件が二つ重なったときにそれが起きる、というものだった。"
+        pause_after: 0.2
+      - text: "ひとつは、代わりが効かないこと。"
+        pause_after: 0.2
+      - text: "並の歌手を十人続けて聴いても、一人の傑出した歌手の一回分にはならない。"
+        pause_after: 0.2
+      - text: "もうひとつは、一人の演奏を、追加の費用なしに大勢へ届けられること。"
+        pause_after: 0.2
+      - text: "録音、放送、そして今なら、配信だ。"
+        pause_after: 0.5
+      - text: "この二つが重なると、市場は一人に集中する。"
+        pause_after: 0.2
+      - text: "かつて歌手の市場は、会場に入れる人数が上限だった。"
+        pause_after: 0.2
+      - text: "レコードとラジオが、その上限を外した。"
+        pause_after: 0.2
+      - text: "すると、多くの人が最上位の歌手を選べるようになり、需要はトップへ集中していく。"
+        pause_after: 0.8
+      - text: "ただし、才能だけの話ではない。"
+        pause_after: 0.2
+      - text: "1985年、経済学者モシェ・アドラーは、同じ雑誌で反論した。"
+        pause_after: 0.2
+      - text: "人は、みんなが知っている演奏家について語り合いたいから、すでに人気のある人を選ぶ。"
+        pause_after: 0.2
+      - text: "才能に差がなくても、人気が、人気を呼ぶ。"
+        pause_after: 0.5
+      - text: "その後の実証研究では、才能と人気の両方が効く、というのが大方の結論だ。"
+        pause_after: 0.7
+      - text: "どちらにせよ、鍵は複製技術だ。"
+        pause_after: 0.2
+      - text: "新聞は棋譜を複製した。"
+        pause_after: 0.2
+      - text: "テレビは試合を複製した。"
+        pause_after: 0.2
+      - text: "複製が観客の上限を外したとき、トップの数人だけが、それまで不可能だった規模で稼ぎ始める。"
+        pause_after: 0.2
+      - text: "これが、第三の説の正体だ。"
+        pause_after: 0.2
+      - text: "複製技術は、プロを生むというより、プロの規模を増幅する。"
+        pause_after: 2.0
+      - text: "では、規模さえ増えれば、プロは自分の足で立てるのか。"
+        pause_after: 0.2
+      - text: "ここに、意外な事実がある。"
+        pause_after: 1.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "1980年代の大学の研究室、論文の山とタイプライター（文字は読めない）"
+        gen_prompt: "a 1980s university office with stacks of papers, a typewriter and a chalkboard with faint unreadable marks, afternoon light through blinds, no people"
+        search_query: "1980s university office papers typewriter"
+        telop: "Rosen, \"The Economics of Superstars\" AER 71(5), 1981"
+        cut_reason: "【論文の提示】キュー1〜3は研究の紹介"
+
+      - type: diagram
+        from: 4
+        slot: 2
+        gen_prompt: "a 1930s living room with a family gathered around a large wooden radio, warm lamplight, seen from behind, faces not visible"
+        search_query: "1930s family living room radio warm lamplight"
+        cut_reason: "【ローゼンの二条件】二つの条件が合わさって初めて起きる、という構造が知見そのもの。「集中していく。」まで保持"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - {id: irreplaceable, text: "代わりが効かない", at: 5, after: "代わりが効かない"}
+            - {id: reach, text: "追加費用なしで届く", at: 7, after: "大勢へ届けられる"}
+          result:
+            text: "市場は一人に集中"
+            at: 9
+            after: "重なると"
+
+      - type: image
+        from: 13
+        slot: 3
+        visual_intent: "モシェ・アドラーが同じ雑誌で反論した、を論文の校正刷りで直接描写"
+        gen_prompt: "a 1980s academic journal office, a page proof of a printed article lying on a desk with a red pen correction mark, blurred and unreadable text, warm desk lamp"
+        search_query: "academic journal page proof desk red pen"
+        telop: "Adler, \"Stardom and Talent\" AER 75(1), 1985"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「ただし、才能だけの話ではない。1985年、経済学者モシェ・アドラーは、同じ雑誌で反論した。」を受ける"
+
+      - type: image
+        from: 15
+        slot: 4
+        visual_intent: "反論。レコード店で同じ一枚を手に取る大勢の客の列（ジャケットは無地）"
+        gen_prompt: "a crowded 1950s record shop with many customers reaching for copies of the same record from a display, record sleeves plain and unreadable, warm tungsten light"
+        search_query: "1950s record shop crowd customers display"
+        cut_reason: "「人は、みんなが知っている演奏家について語り合いたいから、すでに人気のある人を選ぶ。才能に差がなくても、人気が、人気を呼ぶ。」を同じ一枚を選ぶ群衆で受ける"
+
+      - type: image
+        from: 18
+        slot: 5
+        visual_intent: "複製の系譜。新聞の将棋欄を読む人々→テレビの試合中継、を1枚に混ぜず、昭和の街頭テレビに集まる群衆を描く（画面の内容はぼかす）"
+        gen_prompt: "a crowd of people in 1950s Japanese street clothes gathered at night around a television set mounted on a pole outdoors, the screen glowing but blurred and unreadable, wide shot from behind the crowd"
+        search_query: "1950s japan street television crowd outdoors night"
+        cut_reason: "【複製が上限を外す】テレビが試合を複製した場面"
+
+      - type: image
+        from: 22
+        slot: 6
+        visual_intent: "説③の結論。スタジアムの巨大スクリーンと満員の観客（実写ストック優先）"
+        gen_prompt: "a packed modern stadium at night with a giant screen glowing above the crowd, seen from high in the stands, screen content blurred, sea of lights"
+        search_query: "packed stadium night giant screen crowd"
+        assets:
+          - url: "https://www.pexels.com/photo/a-crowded-soccer-stadium-under-bright-lights-at-night-capturing-the-excitement-of-a-live-sports-event-30651230/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/vibrant-football-stadium-packed-with-enthusiastic-fans-28571788/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【説③の結論】「プロの規模を増幅する。」で画面保持"
+
+      - type: image
+        from: 24
+        slot: 7
+        visual_intent: "次シーンの問い。無人の演奏会場のステージに置かれた四つの椅子と譜面台"
+        gen_prompt: "four empty chairs and music stands arranged for a string quartet on a dim concert stage, a single spotlight, no people, muted warm tones"
+        search_query: "empty concert stage chairs music stands spotlight"
+        cut_reason: "【次への問い】弦楽四重奏の椅子でコスト病の場面を予告"
+
+  - id: 11
+    title: "反証と留保（ボーモルのコスト病 → プロは状態である）"
+    readings:
+      - surface: "ボーモル"
+        reading: "ボーモル"
+      - surface: "ボウエン"
+        reading: "ボウエン"
+      - surface: "弦楽四重奏"
+        reading: "ゲンガクシジュウソウ"
+      - surface: "二人"
+        reading: "フタリ"
+    narration:
+      - text: "プリンストン大学の経済学者、ウィリアム・ボーモルとウィリアム・ボウエンは、1966年、舞台芸術の経済を調べた本の中で、奇妙な構造を指摘した。"
+        pause_after: 0.2
+      - text: "弦楽四重奏を演奏するのに必要な人数と時間は、200年前から変わらない。"
+        pause_after: 0.2
+      - text: "一方、工場の生産性は上がり続ける。"
+        pause_after: 0.2
+      - text: "すると、生産性の上がらない仕事の費用は、他の分野の賃金上昇に引きずられて、上がり続ける。"
+        pause_after: 0.2
+      - text: "生身の人間が演じる限り、効率化では逃げられない。"
+        pause_after: 0.6
+      - text: "のちに、ボーモルのコスト病と呼ばれる考え方だ。"
+        pause_after: 0.2
+      - text: "これは、そのまま競技にも当てはまる。"
+        pause_after: 0.2
+      - text: "将棋の一局に必要な棋士は、江戸時代から二人のままだ。"
+        pause_after: 0.2
+      - text: "人件費は下げられず、客席の数にも上限がある。"
+        pause_after: 0.2
+      - text: "だからプロの世界は、興行収入だけでは支えにくく、常に、スポンサーか、協会か、賞金の出し手を必要とする。"
+        pause_after: 0.8
+      - text: "将棋界の主な収入は、今も新聞社の契約金だ。"
+        pause_after: 0.2
+      - text: "そしてその新聞は、部数を減らし続けている。"
+        pause_after: 0.2
+      - text: "幕府が消えたとき将棋のプロが消えたように、払う誰かが消えれば、プロもまた、消えうる。"
+        pause_after: 0.8
+      - text: "プロは、一度生まれれば終わりの身分ではない。"
+        pause_after: 0.2
+      - text: "払う仕組みが続いている間だけ存在する、状態なのだ。"
+        pause_after: 2.3
+      - text: "では、三つの説は、結局、どういう関係にあるのか。"
+        pause_after: 1.5
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "弦楽四重奏の演奏。四人の奏者を引きで、18世紀でも現代でもない中立の舞台"
+        gen_prompt: "a string quartet performing on a small stage, four musicians with violins, viola and cello seen from the audience, warm stage light, timeless setting, faces not detailed"
+        search_query: "string quartet four musicians performing stage"
+        assets:
+          - url: "https://www.pexels.com/photo/group-of-female-musicians-playing-classical-music-with-violins-and-cello-indoors-7097458/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/a-group-of-women-playing-musical-instruments-7095832/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        telop: "Baumol & Bowen, Performing Arts: The Economic Dilemma (1966)"
+        cut_reason: "【コスト病の説明】キュー1〜7は弦楽四重奏の比喩で運ぶ"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "対比。自動化された現代の工場のライン、人はほとんどいない"
+        gen_prompt: "a modern automated factory floor with robotic arms assembling products along a conveyor line, few people, cool industrial light, wide shot"
+        search_query: "automated factory robotic arms assembly line"
+        assets:
+          - url: "https://www.pexels.com/photo/high-tech-robots-assembling-a-car-in-a-modern-factory-setting-showcasing-automation-19233057/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/close-up-of-a-yellow-industrial-robotic-arm-in-action-at-a-modern-manufacturing-facility-34207359/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        telop: "弦楽四重奏に必要な人数は200年変わらない ＝ ボーモルのコスト病"
+        cut_reason: "【生産性の対比】工場へ転換し、「逃げられない。」の後で戻す"
+
+      - type: image
+        from: 7
+        slot: 3
+        visual_intent: "将棋の一局。二人の棋士と盤、江戸でも現代でもない静かな構図"
+        gen_prompt: "two shogi players facing each other over a board in a quiet room, the board between them lit by a single window, seen from the side at a distance, no readable text"
+        search_query: "two shogi players quiet room window light"
+        cut_reason: "【競技への適用】二人のまま、を盤の画で受ける"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "客席の上限とスポンサーの必要性を、小さな観客席とスポンサー掲示で直接描写"
+        gen_prompt: "an empty spectator gallery beside a shogi match with only a handful of seats, a small donation or sponsor plaque on the wall, quiet room, no readable text"
+        search_query: "small spectator gallery empty seats sponsor plaque"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「人件費は下げられず、客席の数にも上限がある。だからプロの世界は、興行収入だけでは支えにくく、常に、スポンサーか、協会か、賞金の出し手を必要とする。」を受ける"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "新聞の衰退。早朝の配達所に積まれた新聞の束と、減った配達員（紙面は読めない）"
+        gen_prompt: "a nearly empty newspaper delivery depot at dawn with a few bundles of papers on the floor and a single delivery bicycle, newsprint blurred and unreadable, cold morning light"
+        search_query: "newspaper delivery depot dawn empty bicycle"
+        cut_reason: "【新聞の衰退】「将棋界の主な収入は、今も新聞社の契約金だ。そしてその新聞は、部数を減らし続けている。」を受ける"
+
+      - type: image
+        from: 13
+        slot: 6
+        visual_intent: "幕府が消えたとき将棋のプロが消えたように、を空席の再提示で直接描写"
+        gen_prompt: "an empty raised seat in a dim Meiji-era Japanese room with a shogi board left untouched on the tatami, dust in a shaft of light, muted sepia, no people"
+        search_query: "empty seat meiji era room shogi board dust"
+        cut_reason: "【分割】元ビートの20秒超を節目で分割。「幕府が消えたとき将棋のプロが消えたように、払う誰かが消えれば、プロもまた、消えうる。」を受ける"
+
+      - type: image
+        from: 15
+        slot: 7
+        visual_intent: "払う仕組みが消えればプロも消えうる、という「状態」の不安定さを、灯りの点いた無人の対局室で直接描写"
+        gen_prompt: "a present-day shogi board left on a low table in an empty room, a single light left on, evening approaching, quiet and uncertain, no readable text"
+        search_query: "empty room shogi board single light evening"
+        cut_reason: "「プロは、一度生まれれば終わりの身分ではない。」以下、決め文「状態なのだ。」で画面保持し、最後の問いまで持たせる"
+
+  - id: 12
+    title: "三説の決着（章「三つの説の、どれが正しいのか」）"
+    chapter_title: "三つの説の、どれが正しいのか"
+    readings:
+      - surface: "三つの層"
+        reading: "ミッツノソウ"
+    narration:
+      - text: "三つの説を、並べ直そう。"
+        pause_after: 0.2
+      - text: "第一の説、金を払う仕組み。"
+        pause_after: 0.2
+      - text: "将棋では幕府の扶持と、新聞の対局料。"
+        pause_after: 0.2
+      - text: "フットボールでは、入場料。"
+        pause_after: 0.2
+      - text: "音楽では、興行と楽譜。"
+        pause_after: 0.2
+      - text: "どの事例でも、これがいちばん先に来た。"
+        pause_after: 0.2
+      - text: "そして、コスト病が示したように、これが続く間だけ、プロは存在する。"
+        pause_after: 0.2
+      - text: "プロを生み、支えるのは、この仕組みだ。"
+        pause_after: 0.6
+      - text: "第二の説、認定と排除の装置。"
+        pause_after: 0.2
+      - text: "家元、協会の規則、アカデミー、アマチュア規定。"
+        pause_after: 0.2
+      - text: "これらはプロが生まれたあとに、その地位を固め、参入を絞るために作られた。"
+        pause_after: 0.2
+      - text: "生む力ではなく、固める力。"
+        pause_after: 0.5
+      - text: "第三の説、複製技術。"
+        pause_after: 0.2
+      - text: "楽譜、新聞、放送、配信。"
+        pause_after: 0.2
+      - text: "これは観客の上限を外して、収入を一部に集中させる。"
+        pause_after: 0.2
+      - text: "生む力ではなく、規模を増やす力。"
+        pause_after: 0.6
+      - text: "つまり三つは、対立する説ではなかった。"
+        pause_after: 0.2
+      - text: "順番の違う、三つの層だ。"
+        pause_after: 0.2
+      - text: "払う仕組みが生み、装置が固め、複製が増幅する。"
+        pause_after: 2.2
+      - text: "ひとつだけ、付け加えておく。"
+        pause_after: 0.2
+      - text: "払う仕組みは、需要がすでに芽生えている場所でしか、働かない。"
+        pause_after: 0.2
+      - text: "金が、見たい気持ちを作るのではない。"
+        pause_after: 0.2
+      - text: "見たい気持ちに、金が形を与えるのだ。"
+        pause_after: 0.8
+      - text: "では、この三層を、冒頭の配信者に当ててみよう。"
+        pause_after: 1.2
+    beats:
+      - type: chapter
+        slot: 1
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 2
+        visual_intent: "整理の導入。机の上に三つの資料の束を並べる手元（文字は読めない）"
+        gen_prompt: "three neat stacks of old documents arranged side by side on a dark desk, a hand resting beside them, papers blurred and unreadable, warm lamp light, seen from above"
+        search_query: "three stacks old documents desk hand"
+        cut_reason: "【三説の整理】キュー1〜2は導入"
+
+      - type: diagram
+        from: 2
+        slot: 3
+        gen_prompt: "an old hand-drawn map with three roads converging on a town, ink on aged paper, no text, no lettering"
+        search_query: "old hand drawn map three roads converging"
+        cut_reason: "【三層の収束】三説が層として並ぶ配置が結論そのもの。シーン7の chain と同じ layout だが、間にシーン10の converge を挟むため隣接しない（意図的な対句ではなく順序の再提示）。「複製が増幅する。」の決め文まで保持"
+        diagram:
+          type: narrative
+          layout: chain
+          items:
+            - {id: pay, text: "払う仕組み→生む", at: 6, after: "先に来た"}
+            - {id: cert, text: "認定と排除→固める", at: 12, after: "固める力"}
+            - {id: copy, text: "複製技術→増やす", at: 16, after: "増やす力"}
+
+      - type: image
+        from: 20
+        slot: 4
+        visual_intent: "需要が先、を受ける。試合前からすでに満員の観客席の遠景（1880年代）"
+        gen_prompt: "a distant view of a Victorian football ground already full of spectators before kick-off, overcast light, engraving tones, no readable text"
+        search_query: "victorian football ground full spectators before kickoff"
+        cut_reason: "【需要が先】「見たい気持ちに、金が形を与える」を満員の観客席で受ける"
+
+      - type: image
+        from: 24
+        slot: 5
+        visual_intent: "結論への橋渡し。深夜の配信者の部屋を廊下から見た遠景、ドアの隙間からモニターの光"
+        gen_prompt: "a dark apartment hallway at night with a door ajar, cool monitor light spilling out from the room beyond, quiet and still, no people visible"
+        search_query: "dark apartment hallway night door ajar light"
+        cut_reason: "【結論への橋渡し】冒頭の場面へ戻ることを予告して章を閉じる"
+
+  - id: 13
+    title: "結論（冒頭の配信者へ戻る → 問いに答える）"
+    readings:
+      - surface: "数十人"
+        reading: "スウジュウニン"
+    narration:
+      - text: "冒頭の配信者に戻ろう。"
+        pause_after: 0.2
+      - text: "深夜2時、数十人の視聴者、500円の投げ銭。"
+        pause_after: 0.2
+      - text: "この人は、プロなのか。"
+        pause_after: 0.8
+      - text: "三つの層で見ると、答えははっきりする。"
+        pause_after: 0.2
+      - text: "払う仕組みは、ある。"
+        pause_after: 0.2
+      - text: "投げ銭と、広告収入だ。"
+        pause_after: 0.2
+      - text: "複製技術も、ある。"
+        pause_after: 0.2
+      - text: "配信そのものが、観客の上限を外している。"
+        pause_after: 0.2
+      - text: "だが、認定と排除の装置だけが、まだない。"
+        pause_after: 0.2
+      - text: "四段も、協会も、アマチュア規定もない。"
+        pause_after: 0.2
+      - text: "だから、この人がプロかどうかは、曖昧に見える。"
+        pause_after: 0.2
+      - text: "経済的には、プロは生まれ始めている。"
+        pause_after: 0.2
+      - text: "ただ、それをプロと呼ぶ社会の側の装置が、まだ追いついていない。"
+        pause_after: 0.6
+      - text: "1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。"
+        pause_after: 1.0
+      - text: "この動画の問いに、答えよう。"
+        pause_after: 0.2
+      - text: "なぜ競技にはプロが生まれるのか。"
+        pause_after: 0.2
+      - text: "強い人がいるからではない。"
+        pause_after: 0.2
+      - text: "その技に金を払う仕組みを、社会が持ったからだ。"
+        pause_after: 0.2
+      - text: "装置はあとから地位を固め、複製技術はあとから規模を増やす。"
+        pause_after: 0.8
+      - text: "プロとは、腕前の証明書ではない。"
+        pause_after: 0.2
+      - text: "あなたの技に、誰かが金を払い続ける仕組みができた、という事実の名前だ。"
+        pause_after: 2.5
+      - text: "あなたが今、金にならないと思いながら続けている何かも、払い続ける誰かが現れ、それが仕組みになったとき、職業になる。"
+        pause_after: 0.2
+      - text: "400年前の将棋が、そうだったように。"
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "シーン1と同じ深夜の配信部屋（同じ素材の再提示可）"
+        gen_prompt: "a person seen from behind playing a video game late at night in a dark room, lit only by the monitor glow, a small webcam on the desk, screen contents blurred and unreadable, cool blue light"
+        search_query: "person streaming video game dark room night"
+        assets:
+          - url: "https://www.pexels.com/photo/side-view-of-a-gamer-wearing-a-cap-and-headphones-10350851/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/young-man-focused-on-gaming-with-headset-sitting-at-a-computer-9072271/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【冒頭への回帰】キュー1〜3で場面を戻す。シーン1ビート1と同じ画の再提示"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "配信画面の端の通知と、机の上の何もない場所（装置がない）。手元"
+        gen_prompt: "a close-up of a streamer's desk at night: a glowing monitor edge with an unreadable notification, a microphone, and an empty space on the desk where nothing sits, cool blue light"
+        search_query: "streamer desk night monitor notification microphone"
+        telop: "① 払う仕組み：ある ／ ② 認定と排除の装置：まだない ／ ③ 複製技術：ある"
+        cut_reason: "【三層の当てはめ・その1】telop で三層の答え合わせを出す。「三つの層で見ると、答えははっきりする。払う仕組みは、ある。投げ銭と、広告収入だ。複製技術も、ある。配信そのものが、観客の上限を外している。」を受ける"
+
+      - type: image
+        from: 9
+        slot: 3
+        visual_intent: "認定と排除の装置がまだない、を壁の何もない空間で直接描写"
+        gen_prompt: "a close-up of an empty corner of a streamer's desk at night, bare wall behind in monitor glow, no certificate, no badge, no framed license, cool blue light"
+        search_query: "empty bare wall desk corner monitor glow night"
+        cut_reason: "【分割】元ビート2の40秒超を節目で分割。「だが、認定と排除の装置だけが、まだない。四段も、協会も、アマチュア規定もない。だから、この人がプロかどうかは、曖昧に見える。」を受ける"
+
+      - type: image
+        from: 12
+        slot: 4
+        visual_intent: "社会の装置が追いついていない、という「まだ」を、手が止まった静止で直接描写"
+        gen_prompt: "the same streamer's desk at night, a hand paused over the keyboard, monitor still glowing, contemplative stillness, cool blue light"
+        search_query: "hand paused keyboard streamer desk night stillness"
+        cut_reason: "【分割】「経済的には、プロは生まれ始めている。ただ、それをプロと呼ぶ社会の側の装置が、まだ追いついていない。1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。」を受け、「同じ段階にいる。」まで保持"
+
+      - type: image
+        from: 15
+        slot: 5
+        visual_intent: "問いへの答え。将棋・フットボール・音楽の三場面を1枚に混ぜず、江戸城の対局（シーン3ビート1）を再提示"
+        gen_prompt: "an early Edo-period Japanese castle interior, two men playing shogi on the tatami while a lord watches from a raised seat, gold folding screens, candlelight, seen from a distance, no readable text"
+        search_query: "edo castle interior shogi players lord watching"
+        cut_reason: "【問いへの答え】問いへの答えを、最初の歴史場面で受ける。シーン3ビート1と同じ画の再提示"
+
+      - type: image
+        from: 20
+        slot: 6
+        visual_intent: "決め文。配信者の部屋、モニターを消して静かに座る人物の後ろ姿"
+        gen_prompt: "a person sitting quietly in a dark room after turning off the monitor, only a faint blue afterglow on the desk, headphones set down, seen from behind, calm and still"
+        search_query: "person sitting quietly dark room monitor off"
+        assets:
+          - url: "https://www.pexels.com/photo/silhouette-of-a-person-working-on-computers-in-a-dimly-lit-office-environment-1334093/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/silhouette-of-a-man-using-a-smartphone-in-a-dark-room-with-computer-screen-lighting-17486595/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【決め文】「事実の名前だ。」で画面保持＋長い間"
+
+      - type: image
+        from: 22
+        slot: 7
+        visual_intent: "最後の象徴的な一枚絵。夜明け前の窓辺、将棋盤と、その隣に置かれたヘッドホン"
+        gen_prompt: "a shogi board by a window before dawn with a pair of modern headphones resting beside it, first pale light on the wood, piece characters blurred and unreadable, no people"
+        search_query: "shogi board window dawn headphones"
+        cut_reason: "【結び】400年前の将棋と現代の配信を同じ窓辺に静かに置いて終える。アウトロ 8 秒"
