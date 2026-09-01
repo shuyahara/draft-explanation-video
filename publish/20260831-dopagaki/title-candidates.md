@@ -15,3 +15,4 @@
 | 日付 | 内容 | 動画ID | 状態 |
 |---|---|---|---|
 | 2026-09-01 | ショート1（本編圧縮版・43.8秒・CTA付き） | Zhtq-UCt0EU | 非公開 https://youtu.be/Zhtq-UCt0EU サムネ short1-thumb.png 設定済み |
+| 2026-09-01 | v5（総合レビュー小改稿・最終） | UO-RU_iLRBg | 非公開 | https://youtu.be/UO-RU_iLRBg ／ 18分28秒・-14.1 LUFS・サムネA・改稿版概要欄 ／ 旧v4 niZOX309m6E は削除対象（Studio で削除） |
