@@ -2,6 +2,7 @@ video:
   title: "なぜ将棋やスポーツには「プロ」が生まれるのか"
   style: "muted illustrated style evoking aged engravings and sepia archival photographs, fine paper grain, restrained warm lamplight for historical scenes, cool natural light and soft screen glow for present-day scenes, figures shown at a distance without facial close-ups, no text, no lettering, no watermark, no logo, no caption"
   bgm: "../bgm/tooku-inori-no-hate.mp3"
+  bgm_credit: "BGM: 遠く、祈りの果て / のる（DOVA-SYNDROME）"
 
 scenes:
   - id: 1
