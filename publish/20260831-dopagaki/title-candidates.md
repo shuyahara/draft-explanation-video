@@ -16,3 +16,4 @@
 |---|---|---|---|
 | 2026-09-01 | ショート1（本編圧縮版・43.8秒・CTA付き） | Zhtq-UCt0EU | 非公開 https://youtu.be/Zhtq-UCt0EU サムネ short1-thumb.png 設定済み |
 | 2026-09-01 | v5（総合レビュー小改稿・最終） | UO-RU_iLRBg | 非公開 | https://youtu.be/UO-RU_iLRBg ／ 18分28秒・-14.1 LUFS・サムネA・改稿版概要欄 ／ 旧v4 niZOX309m6E は削除対象（Studio で削除） |
+- 2026-09-01 ショートv2アップロード: `-on6OFdo29A`（非公開。字幕・CTA位置修正 MarginV560 ＋ 面白さレビューS①S②反映の反転先出し構成、46.8秒）。旧ショート `Zhtq-UCt0EU`（v1）は新IDの再生確認後に削除対象（削除方針 2026-09-01）。
