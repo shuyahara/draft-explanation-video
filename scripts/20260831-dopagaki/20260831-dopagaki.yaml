@@ -16,8 +16,6 @@ scenes:
         pause_after: 0.2
       - text: "もう寝よう、と思ったのは、40分前だ。"
         pause_after: 0.2
-      - text: "部屋は暗く、顔のあたりだけが、スマホの光でぼんやり照らされている。"
-        pause_after: 0.2
       - text: "動画は15秒で終わり、次の動画が、勝手に始まる。"
         pause_after: 0.2
       - text: "面白いかどうかは、正直、もう分かっていない。"
@@ -46,7 +44,9 @@ scenes:
         pause_after: 0.2
       - text: "先に言っておくと、答えは、あなたの脳の弱さの中にはない。"
         pause_after: 0.2
-      - text: "そして、世間で流通しているドーパミン中毒という説明にも、実は大きな間違いが含まれている。"
+      - text: "犯人は、ポケットの中の画面の、その設計のほうにいる。"
+        pause_after: 0.4
+      - text: "そして、世間で流通しているドーパミン中毒という説明には、実は大きな間違いが含まれている。"
         pause_after: 0.2
       - text: "今夜は、その二つを、順番にほどいていく。"
         pause_after: 1.2
@@ -70,49 +70,56 @@ scenes:
             kind: image
             license: commercial-ok
             source_name: "Pexels"
-        cut_reason: "【夜、布団の中でスマホを見る人】フックとなる情景を最初の4文で保持する"
+        cut_reason: "【夜、布団の中でスマホを見る人】フックとなる情景を最初の3文で保持する"
 
       - type: image
-        from: 5
+        from: 4
         slot: 2
         visual_intent: "スマホを持つ手元のクローズアップ。画面の文字は読めない"
         gen_prompt: "an extreme close-up of a thumb scrolling a smartphone screen in the dark, the screen content abstract and unreadable, warm glow against a dark background"
         cut_reason: "【親指だけが動き続ける手元】面白さを感じていないのに指が止まらない様子へ寄る"
 
       - type: image
-        from: 8
+        from: 7
         slot: 3
         visual_intent: "スマホ画面に浮かぶコメント欄の一言（文字は読めない）"
         gen_prompt: "a close-up of a smartphone screen showing a blurred comment section with unreadable text, held in the dark by a person's hand, soft screen glow"
         cut_reason: "【コメント欄の一言が浮かぶ】名指しの言葉が出てくる瞬間を手元のまま見せる"
 
       - type: image
-        from: 11
+        from: 10
         slot: 4
         visual_intent: "同じ画面を保持したまま、用語の定義を説明する間つなぐ"
         gen_prompt: "the same close-up of a glowing smartphone screen in the dark, unreadable blurred text, held steady"
         cut_reason: "【ドパガキの定義】用語の意味を説明する間、同じ画に留まる"
 
       - type: image
-        from: 14
+        from: 13
         slot: 5
         visual_intent: "少し笑って刺さる表情の余韻から、問いへの導入として引きの画に転換する"
         gen_prompt: "a wide shot of a dark bedroom at night, a person sitting up in bed looking thoughtfully at their glowing phone, soft ambient blue light"
         cut_reason: "【笑いながらも刺さる感覚】問いへの導入として引きの画に転換"
 
       - type: image
-        from: 16
+        from: 15
         slot: 6
         visual_intent: "このシーンの核心の問いを画面いっぱいに保持する"
         gen_prompt: "a still, quiet dark bedroom scene, a person's silhouette by phone glow, calm held frame emphasizing a pause of thought"
         cut_reason: "【中心の問いを言い切る】このシーンの核心の問いを画面いっぱいに保持"
 
       - type: image
-        from: 17
+        from: 16
         slot: 7
-        visual_intent: "結びの断定を、同じ静かな寝室で保持して章転換の間へつなぐ"
+        visual_intent: "「答えは弱さの中にない」という否定の宣言を、同じ静かな寝室で保持する"
         gen_prompt: "a still dark bedroom at night, a person's phone-lit face partly turned away, calm and contemplative, cinematic blue tones fading to black"
-        cut_reason: "【答えは弱さの中にない、と宣言する】結びの断定を保持したまま章転換の間へつなぐ"
+        cut_reason: "【答えは弱さの中にない、と宣言する】否定の宣言を保持したまま、次の「犯人は」の予告へ渡す"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "ポケットの中で光るスマホで、犯人の所在の予告を画にする"
+        gen_prompt: "a present-day smartphone glowing faintly from inside a jacket pocket in a dark room, soft mysterious warm light from the pocket, no people's faces, no readable text"
+        cut_reason: "【犯人はポケットの中】予告の一文に合わせて、画面の在処を映す"
 
   - id: 2
     title: "通説の提示"
@@ -567,8 +574,6 @@ scenes:
         pause_after: 0.2
       - text: "1795年には、読書熱は疫病だ、と断じる本まで出ている。"
         pause_after: 0.2
-      - text: "今の目には冗談のように見えるが、当時の知識人は本気だった。"
-        pause_after: 0.2
       - text: "刺激の強い物語が感受性を鈍らせ、義務を怠らせ、社会を不安定にする、と。"
         pause_after: 0.7
       - text: "どこかで聞いた筋書きではないだろうか。"
@@ -623,7 +628,7 @@ scenes:
         cut_reason: "【疫病だと断じる本】当時のパニックの深刻さを積み上がった古書の情景で示す"
 
       - type: image
-        from: 13
+        from: 12
         slot: 6
         visual_intent: "同じ筋書きが現代に重なることを示す一枚で締める"
         gen_prompt: "an engraving-style illustration of an antique stack of books with spines blank and unreadable, softly dissolving at the edge into a faint modern blue glow, symbolizing an old pattern echoing into the present"
@@ -772,9 +777,6 @@ scenes:
   - id: 8
     title: "反証の検討"
     chapter_title: "本当に、何も起きていないのか"
-    readings:
-      - surface: "55.7パーセント"
-        reading: "ゴジュウゴテンナナパーセント"
     narration:
       - text: "ここまで聞いて、なんだ、今回もただのパニックか、と思わなかっただろうか。"
         pause_after: 0.2
@@ -799,8 +801,6 @@ scenes:
       - text: "日本は3位に上がったと言ったが、OECD全体の平均点は、2022年の調査で大きく下がった。"
         pause_after: 0.2
       - text: "しかも、この低下はコロナ禍の前から始まっていたと、OECD自身が分析している。"
-        pause_after: 0.2
-      - text: "日本国内でも、1か月に本を1冊も読まなかった高校生は、2025年の調査で55.7パーセントにのぼった。"
         pause_after: 0.2
       - text: "プラットフォームの内側からも、声が出ている。"
         pause_after: 0.2
@@ -871,11 +871,10 @@ scenes:
         slot: 3
         visual_intent: "コロナ前からの傾向と、本を読まない高校生の割合を同じ静かな情景で示す（数値はテロップで）"
         gen_prompt: "the same quiet classroom or study desk scene, softer dimmer light suggesting an ongoing decline, no readable text"
-        telop: "不読率55.7%（学校読書調査 2025）"
-        cut_reason: "【不読率55.7%】コロナ前からの傾向と、本を読まない高校生の割合を同じ静かな情景で示す（数値はテロップで）"
+        cut_reason: "【コロナ前からの下降】OECDの分析を静かな机の情景で受ける"
 
       - type: image
-        from: 14
+        from: 13
         slot: 4
         visual_intent: "プラットフォーム内部からの告発を議場の引きの画で示す"
         gen_prompt: "a black-and-white archival-style wide shot of a legislative hearing chamber with a witness seated at a table facing committee members, distant framing avoiding any identifiable individual, documentary tone"
@@ -892,21 +891,21 @@ scenes:
         cut_reason: "【ハウゲンの議会証言】プラットフォーム内部からの告発を議場の引きの画で示す"
 
       - type: image
-        from: 17
+        from: 16
         slot: 5
         visual_intent: "反証を認める短い間として同じ議場の情景を保持する"
         gen_prompt: "the same black-and-white archival-style hearing chamber, distant framing, quiet documentary mood"
         cut_reason: "【何も起きていないとは言えない】反証を認める短い間として同じ議場の情景を保持する"
 
       - type: image
-        from: 19
+        from: 18
         slot: 6
         visual_intent: "メタ分析の著者自身が書いた留保点へ焦点を移す"
         gen_prompt: "a quiet library reading room at night, soft warm lamp light, empty tables evoking careful reflection"
         cut_reason: "【研究チーム自身の留保】メタ分析の著者自身が書いた留保点へ焦点を移す"
 
       - type: image
-        from: 20
+        from: 19
         slot: 7
         visual_intent: "相関と因果を取り違えない留保を、静かな図書室の情景でじっくり見せる"
         gen_prompt: "a quiet library reading room at night, soft warm lamp light, empty tables evoking careful uncertain reflection"
@@ -923,14 +922,14 @@ scenes:
         cut_reason: "【方向は決められないという限界】相関と因果を取り違えない留保を、静かな図書室の情景でじっくり見せる"
 
       - type: image
-        from: 21
+        from: 20
         slot: 8
         visual_intent: "35万人規模の別の研究を紹介する"
         gen_prompt: "a quiet academic office desk with a computer showing abstract data visualizations, unreadable blurred content, calm analytical mood"
         cut_reason: "【オーベンとプシビルスキの研究】35万人規模の別の研究を紹介する"
 
       - type: image
-        from: 23
+        from: 22
         slot: 9
         visual_intent: "幸福度への影響がごくわずかだったという数値を、同じ静かな情景で受け止める（数値はテロップで）"
         gen_prompt: "the same quiet academic office desk, dimmer more contemplative light, abstract unreadable data on screen"
@@ -938,7 +937,7 @@ scenes:
         cut_reason: "【影響は0.4%】幸福度への影響がごくわずかだったという数値を、同じ静かな情景で受け止める（数値はテロップで）"
 
       - type: image
-        from: 24
+        from: 23
         slot: 10
         visual_intent: "何かは起きている、しかし証拠は不十分という結論を保持したまま長い間で次章へつなぐ"
         gen_prompt: "a quiet dim room at dusk, a single soft light, evoking an unresolved but honest conclusion, calm contemplative mood"
@@ -1185,10 +1184,17 @@ scenes:
 
       - type: image
         from: 18
+        slot: 11
+        visual_intent: "対策の列挙に合わせ、通知をオフに切り替える手元の情景を具体的に描く"
+        gen_prompt: "a close-up of hands holding a present-day smartphone, a finger switching off a notification toggle in a settings screen, all screen text blurred and unreadable, warm dim evening light"
+        cut_reason: "【段差を自分の側に戻す】対策の列挙を具体的な手元の動作で見せる"
+
+      - type: image
+        from: 19
         slot: 7
-        visual_intent: "通知を切り、寝室の外で充電する具体策を手元の情景で見せる"
+        visual_intent: "アプリをしまい、寝室の外で充電する具体策を手元の情景で見せる"
         gen_prompt: "a hand turning off a phone notification toggle on a blank unreadable screen, then the phone placed on a hallway table outside a bedroom door, soft warm light"
-        cut_reason: "【具体的な段差の作り方】通知を切り、寝室の外で充電する具体策を手元の情景で見せる"
+        cut_reason: "【具体的な段差の作り方】アプリをしまい、寝室の外で充電する具体策を手元の情景で見せる"
 
       - type: image
         from: 21
