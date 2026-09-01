@@ -25,3 +25,4 @@
 | 2026-09-01 | 非公開動画の修正アップロード運用: 新バージョンのアップロード後、新IDの再生確認が取れ次第、修正前の非公開動画は YouTube 上から削除する（旧IDと削除の記録は publish/{動画}/title-candidates.md に残す。ローカル mp4 は build/ に保持） | ユーザー方針（非公開版の氾濫防止） | #20 | publish/ 運用 |
 | 2026-09-01 | 本編字幕・章カードの折り返しを budoux による文節単位＋禁則処理に変更（行頭の句読点・語句途中の改行を解消。折り返しロジックは `text_wrap.py` に一本化） | 試写で句読点の行頭落ち・単語分断が視認性を損なうというユーザー指摘 | — | script-to-video 4082536, 973e9ea |
 | 2026-09-01 | 素材収集は「まずストック検索（`tools/stock_search.py`、Pixabay/Pexels API）→ 実写で足りればストック採用、足りなければ生成」を可とする。Codex への検索委譲は不採用（`codex exec` が検索非対応・ライセンス転記の確実性が低い） | 生成コストと検品の手間を削減。API 応答が一次情報でライセンス保証が確実 | — | docs/asset-workflow.md, script-to-video tools/stock_search.py |
+| 2026-09-01 | ショートの焼き込み字幕・末尾CTAの縦位置は MarginV 560（1080×1920・下中央揃え）を標準とする | YouTube Shorts の下部UI帯（タイトル・チャンネル名等、下端約480px）と字幕が被った試写FB。CTA（旧MarginV 90）は共有バーの下でほぼ不可視だった | — | build/{ショート}/gen_ass.py（踏襲元: dopagaki-short1） |
