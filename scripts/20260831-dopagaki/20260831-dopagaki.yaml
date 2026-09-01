@@ -1,0 +1,1228 @@
+video:
+  title: "なぜ現代人はドパガキになってしまうのか"
+  style: "soft warm illustrated style contrasting deep night blues with warm amber lamp and phone glow, gentle diffused lighting, calm non-gritty texture with minimal grain, muted engraving-like tones for historical scenes, no text, no lettering, no watermark, no logo, no caption"
+  bgm: "../bgm/kimito-odayakana-gogo.mp3"
+  bgm_credit: "BGM: 君と穏やかな午後 / のる（DOVA-SYNDROME）"
+
+scenes:
+  - id: 1
+    title: "フック"
+    telop: "ドパガキ＝ドーパミン中毒のガキ（ネットスラング）"
+    readings:
+      - surface: "一言"
+        reading: "ヒトコト"
+    narration:
+      - text: "夜。"
+        pause_after: 0.2
+      - text: "もう寝よう、と思ったのは、40分前だ。"
+        pause_after: 0.2
+      - text: "動画は15秒で終わり、次の動画が、勝手に始まる。"
+        pause_after: 0.2
+      - text: "面白いかどうかは、正直、もう分かっていない。"
+        pause_after: 0.2
+      - text: "ただ、親指だけが動き続けている。"
+        pause_after: 0.2
+      - text: "あなたにも、覚えはないだろうか。"
+        pause_after: 0.7
+      - text: "ある夜、そんな動画のコメント欄に、こんな一言があった。"
+        pause_after: 0.2
+      - text: "おれはドパガキだから、集中とか無理。"
+        pause_after: 0.2
+      - text: "ドパガキ。"
+        pause_after: 0.2
+      - text: "ドーパミン中毒のガキ、という意味のネットスラングだ。"
+        pause_after: 0.2
+      - text: "ショート動画やゲームの強い刺激に慣れて、集中力が続かなくなった人のこと。"
+        pause_after: 0.2
+      - text: "若い世代が、他人ではなく自分を笑うために使い始めた言葉だ。"
+        pause_after: 0.7
+      - text: "少し笑って、少し、刺さらなかっただろうか。"
+        pause_after: 0.2
+      - text: "この動画が答えたい問いは、ひとつ。"
+        pause_after: 0.2
+      - text: "なぜ現代人は、ドパガキになってしまうのか。"
+        pause_after: 0.2
+      - text: "先に言っておくと、答えは、あなたの脳の弱さの中にはない。"
+        pause_after: 0.2
+      - text: "犯人は、ポケットの中の画面の、その設計のほうにいる。"
+        pause_after: 0.4
+      - text: "そして、世間で流通しているドーパミン中毒という説明には、実は大きな間違いが含まれている。"
+        pause_after: 0.2
+      - text: "今夜は、その二つを、順番にほどいていく。"
+        pause_after: 1.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "夜の寝室、布団の中でスマホの光だけに照らされる人物の情景（顔は伏せ気味・クローズアップ回避）"
+        gen_prompt: "a person half-hidden under a blanket in a dark bedroom at night, only their lowered face faintly lit by a smartphone screen glow, cinematic soft blue light, no readable text"
+        search_query: "person phone dark bedroom night"
+        assets:
+          - url: "https://www.pexels.com/photo/a-man-lying-in-the-dark-room-using-a-phone-6943430/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/a-woman-using-a-mobile-phone-while-on-lying-on-the-bed-8036934/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/a-man-lying-on-the-bed-while-using-his-mobile-phone-6943426/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【夜、布団の中でスマホを見る人】フックとなる情景を最初の3文で保持する"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "スマホを持つ手元のクローズアップ。画面の文字は読めない"
+        gen_prompt: "an extreme close-up of a thumb scrolling a smartphone screen in the dark, the screen content abstract and unreadable, warm glow against a dark background"
+        cut_reason: "【親指だけが動き続ける手元】面白さを感じていないのに指が止まらない様子へ寄る"
+
+      - type: image
+        from: 7
+        slot: 3
+        visual_intent: "スマホ画面に浮かぶコメント欄の一言（文字は読めない）"
+        gen_prompt: "a close-up of a smartphone screen showing a blurred comment section with unreadable text, held in the dark by a person's hand, soft screen glow"
+        cut_reason: "【コメント欄の一言が浮かぶ】名指しの言葉が出てくる瞬間を手元のまま見せる"
+
+      - type: image
+        from: 10
+        slot: 4
+        visual_intent: "同じ画面を保持したまま、用語の定義を説明する間つなぐ"
+        gen_prompt: "the same close-up of a glowing smartphone screen in the dark, unreadable blurred text, held steady"
+        cut_reason: "【ドパガキの定義】用語の意味を説明する間、同じ画に留まる"
+
+      - type: image
+        from: 13
+        slot: 5
+        visual_intent: "少し笑って刺さる表情の余韻から、問いへの導入として引きの画に転換する"
+        gen_prompt: "a wide shot of a dark bedroom at night, a person sitting up in bed looking thoughtfully at their glowing phone, soft ambient blue light"
+        cut_reason: "【笑いながらも刺さる感覚】問いへの導入として引きの画に転換"
+
+      - type: image
+        from: 15
+        slot: 6
+        visual_intent: "このシーンの核心の問いを画面いっぱいに保持する"
+        gen_prompt: "a still, quiet dark bedroom scene, a person's silhouette by phone glow, calm held frame emphasizing a pause of thought"
+        cut_reason: "【中心の問いを言い切る】このシーンの核心の問いを画面いっぱいに保持"
+
+      - type: image
+        from: 16
+        slot: 7
+        visual_intent: "「答えは弱さの中にない」という否定の宣言を、同じ静かな寝室で保持する"
+        gen_prompt: "a still dark bedroom at night, a person's phone-lit face partly turned away, calm and contemplative, cinematic blue tones fading to black"
+        cut_reason: "【答えは弱さの中にない、と宣言する】否定の宣言を保持したまま、次の「犯人は」の予告へ渡す"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "ポケットの中で光るスマホで、犯人の所在の予告を画にする"
+        gen_prompt: "a present-day smartphone glowing faintly from inside a jacket pocket in a dark room, soft mysterious warm light from the pocket, no people's faces, no readable text"
+        cut_reason: "【犯人はポケットの中】予告の一文に合わせて、画面の在処を映す"
+
+  - id: 2
+    title: "通説の提示"
+    narration:
+      - text: "まず、いま世間に流通している説明を確認しておこう。"
+        pause_after: 0.2
+      - text: "あなたも、どこかで聞いたことがないだろうか。"
+        pause_after: 0.2
+      - text: "筋書きは、だいたいこうだ。"
+        pause_after: 0.2
+      - text: "ショート動画やスマホゲームは、刺激が強い。"
+        pause_after: 0.2
+      - text: "強い刺激を受けると、脳の中でドーパミンという快楽物質が大量に出る。"
+        pause_after: 0.2
+      - text: "脳が快楽に慣れると、より強い刺激がないと満足できなくなる。"
+        pause_after: 0.2
+      - text: "こうして脳は薬物依存に似た状態になり、集中力が壊れていく。"
+        pause_after: 0.2
+      - text: "だから、ドーパミン断ち、いわゆるドーパミンデトックスで脳をリセットしよう。"
+        pause_after: 0.7
+      - text: "この筋書きは、世界的に広まっている。"
+        pause_after: 0.2
+      - text: "スタンフォード大学の依存症臨床医、アンナ・レンブケが2021年に出した本、ドーパミン・ネイションは世界的なベストセラーになった。"
+        pause_after: 0.2
+      - text: "SNSには、デトックスの体験談があふれている。"
+        pause_after: 0.2
+      - text: "ドパガキという言葉も、この筋書きを土台にしている。"
+        pause_after: 0.2
+      - text: "ドーパミンが出すぎて、中毒になったガキ、というわけだ。"
+        pause_after: 0.7
+      - text: "筋書きとしては、よくできている。"
+        pause_after: 0.2
+      - text: "原因があり、メカニズムがあり、対策まである。"
+        pause_after: 0.2
+      - text: "ただ、この説明には問題がある。"
+        pause_after: 0.2
+      - text: "出発点の一文が、すでに科学的には正しくないのだ。"
+        pause_after: 0.2
+      - text: "ドーパミンは、快楽物質ではない。"
+        pause_after: 2.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "昼の電車でスマホを見る人々の情景で、まず通説を確認する語りを開く"
+        gen_prompt: "commuters on a daytime train looking at their smartphones, natural daylight, ordinary everyday commute atmosphere"
+        search_query: "commuters smartphone train daytime"
+        assets:
+          - url: "https://www.pexels.com/photo/metro-train-full-of-people-during-busy-day-2741671/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/black-man-using-mobile-while-commuting-by-train-4559759/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【通説の導入】まず一般に流通する説明を確認する語りに合わせ電車の情景で開く"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "電車内でスマホの画面に見入る手元のクローズアップで、刺激とドーパミンの説明を支える"
+        gen_prompt: "a close-up of a hand holding a smartphone on a train, screen glow visible but content abstract and unreadable, focused absorbed mood"
+        search_query: "person smartphone train close up"
+        assets:
+          - url: "https://www.pexels.com/photo/person-using-a-smartphone-while-riding-a-train-7251087/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【刺激とドーパミンの説明】同じ電車内の情景を保ちながら本題のメカニズム説明に入る"
+
+      - type: image
+        from: 7
+        slot: 3
+        visual_intent: "薬物依存に似た状態、デトックスへの言及に合わせ電車の情景を保つ"
+        gen_prompt: "the same daytime train commute scene, a passenger gazing at their phone with a slightly weary expression, natural light"
+        cut_reason: "【薬物依存への例え】デトックスという対策への言及へ橋渡しする"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "レンブケの著作の言及に合わせ、書店に積まれた本の情景で言及を裏付ける（表紙は白紙・読めない）"
+        gen_prompt: "a stack of hardcover books displayed at a bookstore, covers blank with no writing, warm bookstore lighting, out of focus enough that no text is readable"
+        telop: "Anna Lembke, Dopamine Nation (2021)"
+        cut_reason: "【レンブケの著作の言及】書店に積まれた本の情景で言及を裏付ける"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "SNSのデトックス体験談とドパガキという俗語の由来を、書店の情景を保ったまま語る"
+        gen_prompt: "a present-day smartphone held in a hand showing a scrolling social media feed, all screen content blurred and unreadable, warm evening light, modern interior background"
+        cut_reason: "【SNSのデトックス体験談とドパガキの由来】書店の情景を保ったままSNS・俗語との接続を語る"
+
+      - type: image
+        from: 14
+        slot: 6
+        visual_intent: "スマホを離れた場所に置いて座る人物（デトックス）の情景を保持したまま、決め文『ドーパミンは快楽物質ではない』の言い切りとポーズを支える"
+        gen_prompt: "a person sitting calmly at a table in a present-day modern room wearing contemporary casual clothing, their smartphone placed at a distance, natural daylight, quiet deliberate stillness, no period furniture"
+        cut_reason: "【筋書きは崩れる、決め文】デトックスする人物の情景を保持したまま、決め文の言い切りとポーズを支える"
+
+  - id: 3
+    title: "反転1前半: 報酬予測誤差"
+    chapter_title: "ドーパミンは、快楽の物質なのか"
+    readings:
+      - surface: "報酬予測誤差"
+        reading: "ホウシュウヨソクゴサ"
+    narration:
+      - text: "1997年、ケンブリッジ大学の神経科学者ウォルフラム・シュルツらが、科学誌サイエンスに、ある実験の結果を発表した。"
+        pause_after: 0.2
+      - text: "サルの脳で、ドーパミン神経の活動を、ひとつずつ記録したのだ。"
+        pause_after: 0.2
+      - text: "サルにジュースを与えると、ドーパミン神経は確かに活動を強める。"
+        pause_after: 0.2
+      - text: "これを、発火と呼ぶ。"
+        pause_after: 0.2
+      - text: "ここまでは、快楽物質のイメージ通りだ。"
+        pause_after: 0.2
+      - text: "ところが、光の合図のあとに必ずジュースが出る、と学習させると、奇妙なことが起きる。"
+        pause_after: 0.2
+      - text: "ジュースをもらった瞬間の発火が、消えるのだ。"
+        pause_after: 0.2
+      - text: "代わりに、合図の瞬間に発火するようになる。"
+        pause_after: 0.2
+      - text: "そして、合図があったのにジュースが出ないと、ドーパミン神経の活動は、むしろ沈み込む。"
+        pause_after: 0.7
+      - text: "つまり、この神経が伝えているのは、気持ちよさの量ではない。"
+        pause_after: 0.2
+      - text: "予想と現実のズレだ。"
+        pause_after: 0.2
+      - text: "予想より良ければ発火し、予想通りなら沈黙し、予想より悪ければ落ち込む。"
+        pause_after: 0.2
+      - text: "研究者たちはこれを、報酬予測誤差と呼ぶ。"
+        pause_after: 0.2
+      - text: "ドーパミンは、快楽を運ぶ物質というより、次はどうなる、という予測の答え合わせをする信号なのだ。"
+        pause_after: 0.7
+      - text: "では、快楽でないのなら、私たちがやめられない、あの感じは、いったい何なのか。"
+        pause_after: 0.7
+    beats:
+      - type: chapter
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "研究者がモニターに向かう後ろ姿で、1997年の学術的な発表を導入として示す"
+        gen_prompt: "a researcher viewed from behind, silhouetted against a glowing monitor displaying abstract brainwave-like traces in a dim laboratory, cinematic side light, no readable text"
+        cut_reason: "【1997年の発表】研究者がモニターに向かう後ろ姿で学術的な導入を示す"
+
+      - type: image
+        from: 2
+        slot: 2
+        visual_intent: "サルとジュース、発火の定義を直接描写する"
+        gen_prompt: "a macaque monkey in a primate research lab reaching for a small cup of juice, a researcher's hand nearby, warm laboratory lighting, no readable text or labels"
+        cut_reason: "【サルの実験と発火の定義】記録実験とジュースへの発火反応を直接描写する"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "学習後、ジュース到達時の発火が消える転換を示す"
+        gen_prompt: "a macaque monkey pausing calmly as a juice reward arrives after a learned soft light cue, quiet laboratory setting, no readable text"
+        cut_reason: "【学習後に発火が消える】光の合図学習後、ジュース到達時の発火が消える転換を見せる"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "発火のタイミングが合図へ移り、裏切られると沈み込む様子を描く"
+        gen_prompt: "a dim laboratory scene with a soft light cue glowing above an empty tray where an expected juice reward fails to appear, quiet contemplative mood"
+        cut_reason: "【合図で発火・裏切りで沈む】発火のタイミングが合図へ移り、裏切られると沈み込む様子まで描く"
+
+      - type: diagram
+        from: 10
+        cut_reason: "【予想と現実のズレの構造】3つの反応パターンが知見そのものなので、ここだけ図解に切り替える"
+        diagram:
+          type: narrative
+          layout: chain
+          items:
+            - id: unexpected
+              text: "予想外の報酬"
+              icon: bolt
+              at: 12
+              after: "発火し"
+            - id: expected
+              text: "予想通りは沈黙"
+              icon: pause_circle
+              at: 12
+              after: "沈黙し"
+            - id: betrayed
+              text: "裏切られた報酬"
+              icon: trending_down
+              at: 12
+              after: "落ち込む"
+          caption:
+            text: "報酬予測誤差"
+            at: 13
+
+      - type: image
+        from: 15
+        slot: 5
+        visual_intent: "次のwanting/likingへの橋渡しとして静かな一枚に戻す"
+        gen_prompt: "a quiet dim room with a single soft light source, a contemplative empty desk, cinematic mood evoking an unanswered question"
+        telop: "報酬予測誤差＝予想と現実のズレ"
+        cut_reason: "【問いの投げかけ】次のwanting/likingへの橋渡しとして静かな一枚に戻す"
+
+  - id: 4
+    title: "反転1後半: wanting/liking"
+    telop: "wanting（欲しい）／ liking（好き）"
+    narration:
+      - text: "欲しい、と、好き。"
+        pause_after: 0.2
+      - text: "この二つは同じもののように見えて、脳の中では別々に処理されている。"
+        pause_after: 0.2
+      - text: "そう実証してきたのが、ミシガン大学の神経科学者ケント・ベリッジの研究室だ。"
+        pause_after: 0.2
+      - text: "実験で、ラットの脳からドーパミンをほとんど取り除いても、甘い味への、おいしい、という反応は消えなかった。"
+        pause_after: 0.2
+      - text: "逆にドーパミン系を強く働かせると、対象を求める行動だけが跳ね上がる。"
+        pause_after: 0.2
+      - text: "好きの度合いは、変わらないのにだ。"
+        pause_after: 0.7
+      - text: "ベリッジはこの二つを、ウォンティングとライキングと呼び分けた。"
+        pause_after: 0.2
+      - text: "ウォンティングは、欲しくてたまらない、という欲求の強さ。"
+        pause_after: 0.2
+      - text: "ライキングは、実際に味わったときの、いいなあ、という快感の強さ。"
+        pause_after: 0.2
+      - text: "ドーパミンが強く動かしているのは、ウォンティングの側だ。"
+        pause_after: 0.2
+      - text: "さきほどの、予測の答え合わせをするあの信号は、快感を作る回路ではなく、次を求める力の側で働いている。"
+        pause_after: 0.7
+      - text: "この区別は、依存症の治療の場で、患者がしばしば口にする言葉と重なる。"
+        pause_after: 0.2
+      - text: "もう楽しくないんです。"
+        pause_after: 0.2
+      - text: "楽しくないのに、やめられないんです。"
+        pause_after: 0.2
+      - text: "快楽に溺れているのではない。"
+        pause_after: 0.2
+      - text: "快楽はとっくに薄れているのに、欲しい、という信号だけが空回りし続けている。"
+        pause_after: 0.7
+      - text: "ここで、冒頭の夜を思い出してほしい。"
+        pause_after: 0.2
+      - text: "面白いかどうか、もう分かっていないのに、親指だけが動いていた。"
+        pause_after: 0.2
+      - text: "あれは、快楽に負けている状態ではない。"
+        pause_after: 0.2
+      - text: "ウォンティングだけが回り続けている状態だ。"
+        pause_after: 0.7
+      - text: "だとすれば、ドーパミン中毒でバカになった、という自虐は、言葉の使い方として、すでにずれていることになる。"
+        pause_after: 0.7
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "欲しいと好きの分離を示すベリッジの研究室を学術的な情景で導入する"
+        gen_prompt: "a calm neuroscience laboratory desk with observation notes and equipment, cinematic soft light, no readable text on any documents"
+        cut_reason: "【欲しいと好きの分離】ベリッジの研究室を示す学術的な情景で導入する"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "ドーパミンを除いても『おいしい』反応は消えない実験結果を示す"
+        gen_prompt: "a laboratory rat near a small dish in a calm clinical setting, soft warm lighting, no readable text, gentle scientific mood"
+        cut_reason: "【実験結果】ドーパミンを除いても「おいしい」反応は消えない実験結果を一枚で保持する"
+
+      - type: diagram
+        from: 7
+        cut_reason: "【wantingへの一方向の伸び】欲しさの3つの側面だけがドーパミンから伸びる構造を図解にする（likingは意図的に描かない＝二系統分離の知見）"
+        diagram:
+          type: narrative
+          layout: radiate
+          center:
+            icon: bolt
+            text: "ドーパミン信号"
+            at: 10
+          items:
+            - id: want1
+              text: "欲しくてたまらない"
+              at: 8
+              after: "欲しくてたまらない"
+            - id: want2
+              text: "欲求の強さ"
+              at: 8
+              after: "欲求の強さ"
+            - id: want3
+              text: "次を求める力"
+              at: 11
+              after: "次を求める力"
+          turn:
+            at: 10
+            after: "ウォンティングの側だ"
+
+      - type: image
+        from: 12
+        slot: 3
+        visual_intent: "依存症の治療の場を思わせる静かな情景の中で、患者の言葉を引用する"
+        gen_prompt: "a quiet counseling room setting, soft empathetic lighting, an empty chair suggesting a therapy conversation, calm mood, no visible faces"
+        telop: "Berridge & Robinson (2016)"
+        cut_reason: "【依存症の患者の言葉】治療の場面を思わせる静かな情景の中で、患者の言葉を引用する"
+
+      - type: image
+        from: 15
+        slot: 4
+        visual_intent: "快楽ではなく欲求だけが空回りするという核心の説明に入る"
+        gen_prompt: "a close-up of hands resting quietly on a table in a calm room, evoking a sense of restlessness beneath stillness, soft warm light"
+        cut_reason: "【快楽ではなく欲求が空回りする】同じ情景を保ちながら、欲求だけが空回りする核心の説明に入る"
+
+      - type: image
+        from: 17
+        slot: 5
+        visual_intent: "冒頭の夜のスマホの手元を再演し、ウォンティングの実感と結びつける"
+        gen_prompt: "the same extreme close-up of a thumb scrolling a smartphone screen in the dark from the opening scene, unreadable blurred screen content, warm glow in darkness"
+        cut_reason: "【冒頭の夜の再演】親指が動き続けていたあの手元を再び見せ、ウォンティングの実感と結びつける"
+
+      - type: image
+        from: 20
+        slot: 6
+        visual_intent: "ウォンティングだけが回り続けているという結論から、自虐の言葉自体のズレへ話をつなぐ"
+        gen_prompt: "the same dark smartphone close-up, a thumb pausing mid-scroll, contemplative stillness"
+        cut_reason: "【自虐のズレ】ウォンティングだけが回り続けているという結論から、自虐の言葉自体のズレへ話をつなぐ"
+
+  - id: 5
+    title: "47秒の誤読"
+    telop: "Gloria Mark（UC Irvine）『Attention Span』(2023)"
+    narration:
+      - text: "とはいえ、こう思ったかもしれない。"
+        pause_after: 0.2
+      - text: "理屈はどうあれ、実際に集中力は落ちているじゃないか、と。"
+        pause_after: 0.2
+      - text: "よく引用される数字がある。"
+        pause_after: 0.2
+      - text: "現代人の集中力は、47秒しか続かない、というものだ。"
+        pause_after: 0.7
+      - text: "この数字には、ちゃんとした出どころがある。"
+        pause_after: 0.2
+      - text: "カリフォルニア大学アーバイン校のグロリア・マークは、20年以上にわたって、働く人がパソコンの画面をどれくらいで切り替えるかを計測し続けてきた。"
+        pause_after: 0.2
+      - text: "マーク自身の振り返りによれば、2004年の調査では、人がひとつの画面に向かう時間は、平均でおよそ2分半あった。"
+        pause_after: 0.2
+      - text: "それが近年の計測では、平均47秒。"
+        pause_after: 0.2
+      - text: "中央値、つまり全体のちょうど真ん中の値で見ても、40秒だ。"
+        pause_after: 0.2
+      - text: "あなたは今日、何回、画面を切り替えただろうか。"
+        pause_after: 0.2
+      - text: "確かに、画面の上の私たちは、どんどんせわしなくなっている。"
+        pause_after: 0.7
+      - text: "ただし、この数字の意味は、正確に受け取る必要がある。"
+        pause_after: 0.2
+      - text: "計測されているのは、ひとつの画面から別の画面へ切り替えるまでの時間であって、人間の脳が47秒しか集中できなくなった、という測定ではない。"
+        pause_after: 0.2
+      - text: "実際、私たちは今でも、好きな映画なら2時間見続けられるし、面白い本なら1時間読み続けられる。"
+        pause_after: 0.2
+      - text: "集中する力そのものが、一律に47秒へ縮んだわけではない。"
+        pause_after: 0.2
+      - text: "測られているのは、脳の性能ではなく、画面の前での行動の変化なのだ。"
+        pause_after: 0.7
+      - text: "この数字は、脳が壊れた証拠には、なっていない。"
+        pause_after: 0.2
+      - text: "それなのに、なぜ私たちは、若者の脳が壊れた、という話にこれほど説得力を感じてしまうのだろうか。"
+        pause_after: 0.2
+      - text: "実は、この不安には、長い長い前例がある。"
+        pause_after: 1.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "通説を疑う視聴者の気持ちに寄り添う場面を挟む"
+        gen_prompt: "a person pausing thoughtfully while looking at a smartphone, a subtle question in their expression, soft daylight, contemplative setting, no readable text"
+        cut_reason: "【47秒という数字への疑問】通説を疑う視聴者の気持ちに寄り添う場面を挟む"
+
+      - type: image
+        from: 5
+        slot: 2
+        visual_intent: "20年におよぶ計測研究の背景を一枚で示す"
+        gen_prompt: "a researcher's desk with a computer monitor and notes, evoking two decades of workplace-attention research, calm academic office setting, no readable text on any documents"
+        cut_reason: "【グロリア・マークの調査の紹介】20年におよぶ計測研究の背景を一枚で示す"
+
+      - type: diagram
+        from: 7
+        cut_reason: "【裏取り済み数値2点+中央値】本動画唯一のchartで2004年→近年の変化を正確な数値で見せる"
+        diagram:
+          type: chart
+          chart: bar
+          title: "画面滞在時間の変化"
+          unit: "秒"
+          source: "Gloria Mark, Attention Span (2023) / UC Irvine (2023-01-26)"
+          series:
+            - color: accent
+              at: 8
+              points:
+                - {label: "2004年", value: 150}
+                - {label: "近年 平均", value: 47}
+                - {label: "近年 中央値", value: 40}
+
+      - type: image
+        from: 12
+        slot: 3
+        visual_intent: "切り替え時間の測定であって集中力の限界ではないと説明する、複数ウィンドウを行き来する手元の情景"
+        gen_prompt: "a close-up of hands switching between multiple overlapping windows on a computer screen in an office, screen content abstract and unreadable, focused work atmosphere"
+        search_query: "office desk multiple computer monitors screens"
+        assets:
+          - url: "https://www.pexels.com/photo/photo-of-workspace-with-two-monitors-and-keyboard-on-table-8353774/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【数字の意味を正確に】切り替え時間の測定であって集中力の限界ではないと説明する、複数ウィンドウを行き来する手元の情景"
+
+      - type: image
+        from: 14
+        slot: 4
+        visual_intent: "映画や読書に没頭できる様子を見せ、集中力そのものは健在だと示す"
+        gen_prompt: "a person relaxed and fully absorbed watching a film in a cozy dim room, or reading a book with its pages blurred and unreadable, calm focused atmosphere, warm ambient light"
+        cut_reason: "【脳は壊れていない】映画や読書に没頭できる様子を見せ、集中力そのものは健在だと示す"
+
+      - type: image
+        from: 17
+        slot: 5
+        visual_intent: "不安の根深さへの問いを保持したまま次章への長い間につなぐ"
+        gen_prompt: "a calm quiet interior scene at dusk, evoking a lingering unanswered question, soft fading light"
+        cut_reason: "【脳は壊れていないという結論、章転換への間】不安の根深さへの問いを保持したまま次章への長い間につなぐ"
+
+  - id: 6
+    title: "反転2前半: 文字批判と読書熱"
+    chapter_title: "この不安は、いつから続いているのか"
+    readings:
+      - surface: "対話篇"
+        reading: "タイワヘン"
+      - surface: "二百年前"
+        reading: "ニヒャクネンマエ"
+    narration:
+      - text: "紀元前4世紀に、プラトンが書いた対話篇、パイドロスに、こんな場面がある。"
+        pause_after: 0.2
+      - text: "文字の発明をめぐって、エジプトの神と王が議論するのだ。"
+        pause_after: 0.2
+      - text: "文字は記憶と知恵の秘薬になる、と誇る神に、王はこう答える。"
+        pause_after: 0.2
+      - text: "これを学んだ者は、記憶の訓練をしなくなり、魂に忘却が生まれるだろう。"
+        pause_after: 0.2
+      - text: "自分の内側から思い出すのではなく、外側の印に頼るようになるからだ。"
+        pause_after: 0.7
+      - text: "新しいメディアが、人間の知的な力を衰えさせる。"
+        pause_after: 0.2
+      - text: "この不安の、記録に残る最も古い標的は、文字そのものだった。"
+        pause_after: 0.7
+      - text: "18世紀の末には、小説がやり玉に挙がった。"
+        pause_after: 0.2
+      - text: "当時のドイツでは、若者や女性が小説を読みふけることが、読書熱、読書中毒と呼ばれ、社会問題として真剣に論じられた。"
+        pause_after: 0.2
+      - text: "1795年には、読書熱は疫病だ、と断じる本まで出ている。"
+        pause_after: 0.2
+      - text: "刺激の強い物語が感受性を鈍らせ、義務を怠らせ、社会を不安定にする、と。"
+        pause_after: 0.7
+      - text: "どこかで聞いた筋書きではないだろうか。"
+        pause_after: 0.2
+      - text: "刺激が強い。"
+        pause_after: 0.2
+      - text: "慣れる。"
+        pause_after: 0.2
+      - text: "堕落する。"
+        pause_after: 0.2
+      - text: "対象が小説からショート動画に変わっただけで、文法は二百年前と、ほとんど同じだ。"
+        pause_after: 0.7
+    beats:
+      - type: chapter
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "文字の発明をめぐる神話的な対話の場面を版画調で描く"
+        gen_prompt: "an engraving-style illustration of an ancient Egyptian god and king facing each other across a papyrus scroll, the scroll blank and unreadable, muted sepia tones evoking an old woodcut print"
+        telop: "プラトン『パイドロス』274-275"
+        cut_reason: "【パイドロスの神話】文字の発明をめぐる神話的な対話の場面を版画調で描く"
+
+      - type: image
+        from: 4
+        slot: 2
+        visual_intent: "王の返答部分を同じ版画調の一枚で保持する"
+        gen_prompt: "the same engraving-style scene of an ancient king speaking with a solemn warning gesture, muted sepia woodcut tones"
+        cut_reason: "【忘却への警告】王の返答部分を同じ版画調の一枚で保持する"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "文字そのものへの不安という要約に合わせ、巻物の情景で間をつなぐ"
+        gen_prompt: "an old woodcut-style illustration of an open scroll fading into shadow, symbolizing the oldest recorded fear about new media, unreadable ancient script"
+        cut_reason: "【最古の標的という要約】文字そのものへの不安という要約に合わせ、巻物の情景で間をつなぐ"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "18世紀の読書熱、小説にふける女性の情景へ場面転換する"
+        gen_prompt: "an engraving-style illustration of an 18th-century woman absorbed in reading a book by candlelight, the book pages blurred and unreadable, warm candle glow, muted period tones"
+        telop: "Lesewut（読書熱）18世紀末ドイツ"
+        cut_reason: "【読書熱の18世紀】小説にふける女性の情景へ場面転換する"
+
+      - type: image
+        from: 10
+        slot: 5
+        visual_intent: "当時のパニックの深刻さを積み上がった古書の情景で示す"
+        gen_prompt: "an engraving-style illustration of a stack of old leather-bound books, spines blank and unreadable, dim candlelight, muted period tones evoking 18th-century moral panic literature"
+        cut_reason: "【疫病だと断じる本】当時のパニックの深刻さを積み上がった古書の情景で示す"
+
+      - type: image
+        from: 12
+        slot: 6
+        visual_intent: "同じ筋書きが現代に重なることを示す一枚で締める"
+        gen_prompt: "an engraving-style illustration of an antique stack of books with spines blank and unreadable, softly dissolving at the edge into a faint modern blue glow, symbolizing an old pattern echoing into the present"
+        cut_reason: "【二百年前とほとんど同じという結び】同じ筋書きが現代に重なることを示す一枚で締める"
+
+  - id: 7
+    title: "反転2後半: モラルパニック"
+    readings:
+      - surface: "捏造"
+        reading: "ネツゾウ"
+      - surface: "OECD"
+        reading: "オーイーシーディー"
+    narration:
+      - text: "そして20世紀には、この不安がデータ付きで社会を動かした事件がある。"
+        pause_after: 0.2
+      - text: "1954年、アメリカの精神科医フレドリック・ワーサムが、漫画は少年犯罪の温床だ、と告発する本を出版した。"
+        pause_after: 0.2
+      - text: "根拠は、彼が診てきた非行少年たちの臨床データ。"
+        pause_after: 0.2
+      - text: "世論は沸騰し、上院で公聴会が開かれ、その年のうちに出版社が続々と廃業した。"
+        pause_after: 0.2
+      - text: "業界は、自主規制の検閲機関を作らされた。"
+        pause_after: 0.7
+      - text: "この話には、後日談がある。"
+        pause_after: 0.2
+      - text: "2012年、イリノイ大学の図書館情報学者キャロル・ティリーが、公開されたワーサムの研究資料を精査した。"
+        pause_after: 0.2
+      - text: "そして、根拠とされた臨床データが、改変され、誇張され、一部は捏造されていたことを突き止めた。"
+        pause_after: 0.2
+      - text: "子供の年齢は書き換えられ、発言は歪められ、家庭環境という別の要因は無視されていた。"
+        pause_after: 0.2
+      - text: "社会を動かしたパニックの土台は、偽物だったのだ。"
+        pause_after: 0.7
+      - text: "日本にも、覚えがある。"
+        pause_after: 0.2
+      - text: "2004年、OECDの国際学力調査で日本の読解力の順位が8位から14位に急落し、学力低下と活字離れが大騒ぎになった。"
+        pause_after: 0.2
+      - text: "ゆとり教育が戦犯とされ、教育政策は転換された。"
+        pause_after: 0.2
+      - text: "では、その後どうなったか。"
+        pause_after: 0.2
+      - text: "日本の読解力は回復を続け、2022年の調査では、81の国と地域の中で3位。"
+        pause_after: 0.2
+      - text: "少なくとも、若者の読む力が下がり続けている、という単純な物語は、データのほうが裏切ったのだ。"
+        pause_after: 0.7
+      - text: "社会学には、この繰り返しを指す言葉がある。"
+        pause_after: 0.2
+      - text: "モラルパニック。"
+        pause_after: 0.2
+      - text: "1972年に、社会学者スタンリー・コーエンが名付けた。"
+        pause_after: 0.2
+      - text: "何かが社会への脅威として祭り上げられ、メディアが誇張し、世論が恐れ、規制が動く。"
+        pause_after: 0.2
+      - text: "若者の新しい楽しみは、いつの時代も、その格好の標的だった。"
+        pause_after: 0.7
+      - text: "では、今回もまた、ただの騒ぎなのだろうか。"
+        pause_after: 1.2
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "公聴会の議場を白黒調の引きの画で示し、20世紀の事件の始まりを描く"
+        gen_prompt: "a black-and-white archival-style wide shot of an empty legislative hearing chamber with rows of desks and microphones, distant framing avoiding any identifiable individual, solemn documentary mood, no readable text"
+        search_query: "government hearing chamber rows of desks microphones"
+        assets:
+          - url: "https://www.pexels.com/photo/empty-government-chamber-with-desk-rows-and-microphones-32266781/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/monitors-and-microphone-on-a-wooden-conference-table-6949364/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【ワーサムの告発】公聴会の議場を白黒調の引きの画で示し、20世紀の事件の始まりを描く"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "診断データを根拠にした告発の結果、漫画本が積まれ検閲される様子を描く"
+        gen_prompt: "a black-and-white archival-style pile of 1950s comic books with illustrated cartoon cover artwork clearly visible but all text blurred and unreadable, a rubber stamp and inspection desk beside them suggesting censorship, dim documentary lighting"
+        cut_reason: "【業界への処分】診断データを根拠にした告発の結果、漫画本が積まれ検閲される様子を描く"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "ティリーが資料を精査し始める場面へ転換する"
+        gen_prompt: "a black-and-white archival-style close-up of hands sorting through a pile of old research documents, pages blurred and unreadable, quiet investigative mood"
+        telop: "Tilley, Information & Culture (2012)"
+        cut_reason: "【2012年の後日談】ティリーが資料を精査し始める場面へ転換する"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "改変・誇張・捏造という核心の発見を、資料を精査する手元の同じ情景で見せる"
+        gen_prompt: "the same black-and-white archival-style close-up of hands sorting through old research documents, pages blurred and unreadable, quiet investigative mood"
+        cut_reason: "【捏造の発覚】改変・誇張・捏造という核心の発見を、資料を精査する手元の同じ情景で見せる"
+
+      - type: image
+        from: 9
+        slot: 5
+        visual_intent: "書き換えられた事実が積み重なり、パニックの土台が崩れる結論を示す"
+        gen_prompt: "a black-and-white archival-style close-up of scattered research papers with handwritten marks, unreadable blurred text, dim investigative lighting"
+        cut_reason: "【土台は偽物だった】書き換えられた事実が積み重なり、パニックの土台が崩れる結論を示す"
+
+      - type: image
+        from: 11
+        slot: 6
+        visual_intent: "ゆとり教育をめぐる騒ぎを教室の情景で示す"
+        gen_prompt: "a black-and-white archival-style photograph of a 2000s Japanese school classroom with rows of desks and a chalkboard, distant documentary framing, quiet contemplative mood, no readable writing"
+        search_query: "classroom students desks"
+        assets:
+          - url: "https://www.pexels.com/photo/students-concentrating-in-a-classroom-setting-37812750/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/sunlit-classroom-with-empty-desks-and-chairs-34052441/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        telop: "PISA読解力 2003年: 8位→14位"
+        cut_reason: "【日本の学力パニック】ゆとり教育をめぐる騒ぎを教室の情景で示す"
+
+      - type: image
+        from: 14
+        slot: 7
+        visual_intent: "学力回復という反転を同じ教室のトーン変化で示す"
+        gen_prompt: "a present-day Japanese school classroom, bright gentle daylight through large windows, empty desks and a clean chalkboard, hopeful quiet tone, no readable writing"
+        telop: "PISA読解力 2022年: 81か国・地域中3位"
+        cut_reason: "【データが単純な物語を裏切った】学力回復という反転を同じ教室のトーン変化で示す"
+
+      - type: image
+        from: 17
+        slot: 8
+        visual_intent: "社会学の用語が生まれた背景を白黒調のまま示す"
+        gen_prompt: "a black-and-white archival-style image of an old academic lecture hall or seminar room, distant framing, no identifiable faces, documentary tone"
+        telop: "moral panic（Cohen, 1972）"
+        cut_reason: "【モラルパニックの命名】社会学の用語が生まれた背景を白黒調のまま示す"
+
+      - type: image
+        from: 20
+        slot: 9
+        visual_intent: "若者の新しい楽しみが繰り返し標的にされてきたと結び、長い間で次章へつなぐ"
+        gen_prompt: "a black-and-white archival-style scene of an empty theater or gathering hall, fading into shadow, quiet documentary mood"
+        cut_reason: "【いつの時代も標的にされる、章転換】若者の新しい楽しみが繰り返し標的にされてきたと結び、長い間で次章へつなぐ"
+
+  - id: 8
+    title: "反証の検討"
+    chapter_title: "本当に、何も起きていないのか"
+    narration:
+      - text: "ここまで聞いて、なんだ、今回もただのパニックか、と思わなかっただろうか。"
+        pause_after: 0.2
+      - text: "だが、この動画は、そこで終わるわけにはいかない。"
+        pause_after: 0.2
+      - text: "今回は、無視できないデータも存在するからだ。"
+        pause_after: 0.7
+      - text: "グリフィス大学のグエンらの研究チームは2025年、たくさんの研究結果をまとめて分析する、メタ分析という手法の結果を、心理学の主要誌に発表した。"
+        pause_after: 0.2
+      - text: "対象は、ショート動画と心の状態についての71の研究、のべおよそ9万8千人分。"
+        pause_after: 0.2
+      - text: "結論はこうだ。"
+        pause_after: 0.2
+      - text: "ショート動画の利用が多い人ほど、注意力や、衝動を抑える力が低く、不安や抑うつも強い傾向がある。"
+        pause_after: 0.2
+      - text: "関連の強さは中程度。"
+        pause_after: 0.2
+      - text: "無視できる大きさではないが、すべてを説明するほど強くもない。"
+        pause_after: 0.7
+      - text: "学力の側にも、動きはある。"
+        pause_after: 0.2
+      - text: "日本は3位に上がったと言ったが、OECD全体の平均点は、2022年の調査で大きく下がった。"
+        pause_after: 0.2
+      - text: "しかも、この低下はコロナ禍の前から始まっていたと、OECD自身が分析している。"
+        pause_after: 0.2
+      - text: "プラットフォームの内側からも、声が出ている。"
+        pause_after: 0.2
+      - text: "2021年、フェイスブックの元社員フランシス・ハウゲンが、内部文書を持って議会で証言した。"
+        pause_after: 0.2
+      - text: "アルゴリズムが10代の心の健康を害しうると、会社は社内調査で知っていた、と。"
+        pause_after: 0.7
+      - text: "だから、何も起きていない、とは言えない。"
+        pause_after: 0.2
+      - text: "ただし、だ。"
+        pause_after: 0.2
+      - text: "さきほどのメタ分析の研究チーム自身が、はっきり書いていることがある。"
+        pause_after: 0.2
+      - text: "これらの大半は、ある一時点の相関を見た研究であり、ショート動画のせいで注意力が下がったのか、もともと注意や気分に課題のある人がショート動画に引き寄せられるのか、方向は決められない、と。"
+        pause_after: 0.2
+      - text: "もうひとつ、規模の大きな数字がある。"
+        pause_after: 0.2
+      - text: "オックスフォード大学のオーベンとプシビルスキが、35万人分のデータを解析した研究だ。"
+        pause_after: 0.2
+      - text: "対象はショート動画に限らない、デジタル機器の利用全般だが、それが若者の幸福度に与える影響は、あったとしても、幸福度の変動のわずか0.4パーセントほどだった。"
+        pause_after: 0.7
+      - text: "何かは、起きている。"
+        pause_after: 0.2
+      - text: "しかし、若者の脳が壊れた、という強い物語を支えるほどの証拠は、今回も、まだ見つかっていない。"
+        pause_after: 1.2
+    beats:
+      - type: chapter
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "ただのパニックかという視聴者の懐疑に寄り添う場面から始める"
+        gen_prompt: "a person seen from behind in a present-day modern apartment interior, pausing mid-thought by a large window overlooking a contemporary city skyline at dusk, face not visible, contemporary clothing and furniture, no antique lamps or period objects, soft neutral lighting, contemplative mood, no readable text"
+        cut_reason: "【ただのパニックかという疑問】視聴者の懐疑に寄り添う場面から始める"
+        telop: "Nguyen et al., Psychological Bulletin (2025)"
+
+      - type: diagram
+        from: 4
+        cut_reason: "【71研究・9.8万人の分析】メタ分析の規模と結論を裏取り済み数値付きで図解にする"
+        diagram:
+          type: narrative
+          layout: converge
+          items:
+            - id: scope
+              text: "71研究・9.8万人"
+              at: 5
+              after: "のべおよそ9万8千人分"
+            - id: finding
+              text: "注意力・気分に影響"
+              at: 7
+              after: "注意力や、衝動を抑える力が低く"
+          result:
+            text: "関連は中程度"
+            at: 8
+            after: "関連の強さは中程度"
+
+      - type: image
+        from: 10
+        slot: 2
+        visual_intent: "OECD平均点の下落に話題が移る導入"
+        gen_prompt: "an empty quiet study desk with closed books and blank papers, no people, soft fading daylight, subtle sense of decline, no readable text on any papers"
+        telop: "OECD PISA 2022 Results (Volume I)"
+        cut_reason: "【学力の低下という動き】OECD平均点の下落に話題が移る導入"
+
+      - type: image
+        from: 12
+        slot: 3
+        visual_intent: "コロナ前からの傾向と、本を読まない高校生の割合を同じ静かな情景で示す（数値はテロップで）"
+        gen_prompt: "the same quiet classroom or study desk scene, softer dimmer light suggesting an ongoing decline, no readable text"
+        cut_reason: "【コロナ前からの下降】OECDの分析を静かな机の情景で受ける"
+
+      - type: image
+        from: 13
+        slot: 4
+        visual_intent: "プラットフォーム内部からの告発を議場の引きの画で示す"
+        gen_prompt: "a black-and-white archival-style wide shot of a legislative hearing chamber with a witness seated at a table facing committee members, distant framing avoiding any identifiable individual, documentary tone"
+        search_query: "government hearing chamber witness testimony"
+        assets:
+          - url: "https://www.pexels.com/photo/empty-government-chamber-with-desk-rows-and-microphones-32266781/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/a-man-talking-using-microphone-in-the-conference-room-8345978/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【ハウゲンの議会証言】プラットフォーム内部からの告発を議場の引きの画で示す"
+
+      - type: image
+        from: 16
+        slot: 5
+        visual_intent: "反証を認める短い間として同じ議場の情景を保持する"
+        gen_prompt: "the same black-and-white archival-style hearing chamber, distant framing, quiet documentary mood"
+        cut_reason: "【何も起きていないとは言えない】反証を認める短い間として同じ議場の情景を保持する"
+
+      - type: image
+        from: 18
+        slot: 6
+        visual_intent: "メタ分析の著者自身が書いた留保点へ焦点を移す"
+        gen_prompt: "a quiet library reading room at night, soft warm lamp light, empty tables evoking careful reflection"
+        cut_reason: "【研究チーム自身の留保】メタ分析の著者自身が書いた留保点へ焦点を移す"
+
+      - type: image
+        from: 19
+        slot: 7
+        visual_intent: "相関と因果を取り違えない留保を、静かな図書室の情景でじっくり見せる"
+        gen_prompt: "a quiet library reading room at night, soft warm lamp light, empty tables evoking careful uncertain reflection"
+        search_query: "library reading room bookshelves quiet night"
+        assets:
+          - url: "https://www.pexels.com/photo/people-reading-in-library-15361558/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/cozy-public-library-and-potted-tree-in-classic-style-interior-3952086/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【方向は決められないという限界】相関と因果を取り違えない留保を、静かな図書室の情景でじっくり見せる"
+
+      - type: image
+        from: 20
+        slot: 8
+        visual_intent: "35万人規模の別の研究を紹介する"
+        gen_prompt: "a quiet academic office desk with a computer showing abstract data visualizations, unreadable blurred content, calm analytical mood"
+        cut_reason: "【オーベンとプシビルスキの研究】35万人規模の別の研究を紹介する"
+
+      - type: image
+        from: 22
+        slot: 9
+        visual_intent: "幸福度への影響がごくわずかだったという数値を、同じ静かな情景で受け止める（数値はテロップで）"
+        gen_prompt: "the same quiet academic office desk, dimmer more contemplative light, abstract unreadable data on screen"
+        telop: "Orben & Przybylski, Nature Human Behaviour (2019)：影響は最大0.4%"
+        cut_reason: "【影響は0.4%】幸福度への影響がごくわずかだったという数値を、同じ静かな情景で受け止める（数値はテロップで）"
+
+      - type: image
+        from: 23
+        slot: 10
+        visual_intent: "何かは起きている、しかし証拠は不十分という結論を保持したまま長い間で次章へつなぐ"
+        gen_prompt: "a quiet dim room at dusk, a single soft light, evoking an unresolved but honest conclusion, calm contemplative mood"
+        cut_reason: "【何かは起きている、しかし証拠は不十分、章転換】結論を保持したまま長い間で次章へつなぐ"
+
+  - id: 9
+    title: "真因: wantingを突く設計"
+    chapter_title: "わたしたちは、何に負けているのか"
+    readings:
+      - surface: "執拗"
+        reading: "シツヨウ"
+      - surface: "公の場"
+        reading: "オオヤケノバ"
+    narration:
+      - text: "では、本当の原因は、どこにあるのか。"
+        pause_after: 0.2
+      - text: "鍵は、さきほどのウォンティングに戻る。"
+        pause_after: 0.7
+      - text: "1950年代、ハーバード大学の心理学者スキナーは、ハトやネズミの実験で、行動が最も止まらなくなる報酬の与え方を突き止めていた。"
+        pause_after: 0.2
+      - text: "毎回エサが出るレバーでも、決まった回数で出るレバーでもない。"
+        pause_after: 0.2
+      - text: "何回押せば出るか分からないレバーだ。"
+        pause_after: 0.2
+      - text: "報酬が予測できないとき、動物は最も速く、最も執拗にレバーを押し続け、報酬が止まっても、なかなかやめない。"
+        pause_after: 0.2
+      - text: "可変比率強化と呼ばれるこの仕組みは、スロットマシンが人を離さない理由の説明として、長く使われてきた。"
+        pause_after: 0.7
+      - text: "思い出してほしい。"
+        pause_after: 0.2
+      - text: "ドーパミンは、予想と現実のズレに反応する信号だった。"
+        pause_after: 0.2
+      - text: "次に何が出るか分からない、という構造は、この信号を、絶え間なく鳴らし続けやすい構造でもある。"
+        pause_after: 0.7
+      - text: "そして、あなたのスマホの画面。"
+        pause_after: 0.2
+      - text: "指で払うたびに、次に何が出るか分からないフィード。"
+        pause_after: 0.2
+      - text: "当たりの動画もあれば、外れもある。"
+        pause_after: 0.2
+      - text: "何回めくれば当たりが出るか、あなたに分かるだろうか。"
+        pause_after: 0.2
+      - text: "誰にも分からない。"
+        pause_after: 0.2
+      - text: "そう設計されているからだ。"
+        pause_after: 0.2
+      - text: "ブリティッシュコロンビア大学でギャンブルを研究するクラークらは2023年、こうした報酬の変動性が、ギャンブルだけでなく、SNSなどのデジタル製品への依存的な行動にも共通する条件になりうる、と論じている。"
+        pause_after: 0.7
+      - text: "しかもこの機械からは、やめるための段差が、ていねいに取り除かれている。"
+        pause_after: 0.2
+      - text: "ページの終わりは無限スクロールで消され、動画の切れ目は自動再生で埋められた。"
+        pause_after: 0.2
+      - text: "無限スクロールを考案したと語るデザイナー、アザ・ラスキンは、後年、その設計を公の場で悔いている。"
+        pause_after: 0.2
+      - text: "使いやすさの最適化が、人にとっての最善とは限らなかった、と。"
+        pause_after: 0.7
+      - text: "ドパガキという言葉は、負けたのは自分の脳だ、という前提に立っている。"
+        pause_after: 0.2
+      - text: "だが、あなたの目の前にあるのは、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる画面なのだ。"
+        pause_after: 2.2
+    beats:
+      - type: chapter
+        cut_reason: "章の頭"
+
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "ウォンティングへ話を戻す短い導入"
+        gen_prompt: "a quiet dim room with a single soft light, evoking a return to an earlier idea, contemplative calm mood"
+        cut_reason: "【本当の原因への回帰】ウォンティングへ話を戻す短い導入"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "ハトがレバーをつつく古典的な実験装置を直接描写する"
+        gen_prompt: "a vintage-style illustration of a pigeon inside a Skinner box pecking at a lever, muted scientific laboratory tones, mid-20th-century experimental apparatus, no readable text or labels"
+        cut_reason: "【スキナーの実験】ハトがレバーをつつく古典的な実験装置を直接描写する"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "予測できない報酬がやめられなさを生む仕組みをスロットマシンの情景で示す"
+        gen_prompt: "a dimly lit casino slot machine glowing in the dark, vintage mid-20th-century style, evoking unpredictable reward, no readable text"
+        search_query: "casino slot machines dim light"
+        assets:
+          - url: "https://www.pexels.com/photo/slot-machines-in-close-up-photography-7594251/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/a-row-of-slot-machines-in-a-casino-27977516/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        telop: "可変比率強化（Ferster & Skinner, 1957）"
+        cut_reason: "【可変比率強化とスロットマシン】予測できない報酬がやめられなさを生む仕組みをスロットマシンの情景で示す"
+
+      - type: image
+        from: 8
+        slot: 4
+        visual_intent: "次に何が出るか分からない構造を再び手元の情景で示す"
+        gen_prompt: "an extreme close-up of a thumb hovering over a smartphone screen in the dark, screen glow abstract and unreadable, tense anticipatory mood"
+        cut_reason: "【ドーパミン信号を鳴らし続ける構造】次に何が出るか分からない構造を再び手元の情景で示す"
+
+      - type: image
+        from: 11
+        slot: 5
+        visual_intent: "当たり外れの分からなさをフィードを払う手元で見せる"
+        gen_prompt: "a close-up of a thumb swiping up on a smartphone feed in the dark, the screen content abstract and unreadable, rapid unpredictable glow"
+        cut_reason: "【指で払うたびに分からないフィード】当たり外れの分からなさをフィードを払う手元で見せる"
+
+      - type: image
+        from: 15
+        slot: 6
+        visual_intent: "誰にも分からない、そう設計されているという短い断定で緊張を保つ"
+        gen_prompt: "the same close-up smartphone feed in the dark, a brief pause mid-swipe, tense stillness"
+        cut_reason: "【誰にも分からない、そう設計されている】短い断定で緊張を保つ"
+
+      - type: image
+        from: 17
+        slot: 7
+        visual_intent: "ギャンブル研究者による指摘を裏付ける学術的な情景に転換する"
+        gen_prompt: "a research desk with notes evoking analysis of unpredictable reward patterns in digital products, calm academic setting, no readable text"
+        telop: "Clark & Zack, University of British Columbia, Addictive Behaviors (2023)"
+        cut_reason: "【クラークらの2023年の指摘】ギャンブル研究者による指摘を裏付ける学術的な情景に転換する"
+
+      - type: image
+        from: 18
+        slot: 8
+        visual_intent: "無限スクロールと自動再生の切れ目のなさを描く"
+        gen_prompt: "a close-up of a smartphone screen showing an endless scrolling feed with no visible end, abstract unreadable content, seamless continuous motion implied"
+        cut_reason: "【段差が取り除かれた設計】無限スクロールと自動再生の切れ目のなさを描く"
+
+      - type: image
+        from: 20
+        slot: 9
+        visual_intent: "無限スクロールを考案したデザイナーが公の場で悔いる場面を引きの画で示す"
+        gen_prompt: "a wide distant shot of a person speaking at a podium in a public conference setting, face not clearly visible, contemplative documentary mood"
+        cut_reason: "【ラスキンの後悔】無限スクロールを考案したデザイナーが公の場で悔いる場面を引きの画で示す"
+
+      - type: image
+        from: 22
+        slot: 10
+        visual_intent: "ドパガキという言葉の前提を覆す結びを、同じ手元の情景を保持したままポーズで受け止める"
+        gen_prompt: "a close-up of a smartphone with an unreadable, blurred glowing screen in the dark, held steady, a quiet tense stillness suggesting a precisely designed trap"
+        cut_reason: "【正確に突いてくる画面、決め文】ドパガキという言葉の前提を覆す結びを、同じ手元の情景を保持したままポーズで受け止める"
+
+  - id: 10
+    title: "結論"
+    narration:
+      - text: "冒頭の問いに、答えを出そう。"
+        pause_after: 0.2
+      - text: "なぜ現代人は、ドパガキになってしまうのか。"
+        pause_after: 0.7
+      - text: "それは、現代人の脳が弱くなったからでも、ドーパミンの快楽に溺れているからでもない。"
+        pause_after: 0.2
+      - text: "欲しい、を作り出す脳の仕組みは、大昔から変わっていない。"
+        pause_after: 0.2
+      - text: "変わったのは、環境の側だ。"
+        pause_after: 0.2
+      - text: "予測できない報酬を無限に流し込み、やめる段差を取り除いた画面が、ポケットの中に入った。"
+        pause_after: 0.2
+      - text: "あなたが弱くなったのではない。"
+        pause_after: 0.2
+      - text: "相手が、強くなったのだ。"
+        pause_after: 2.2
+      - text: "そして、もうひとつ。"
+        pause_after: 0.2
+      - text: "ドパガキという言葉そのものも、少しだけ疑ってほしい。"
+        pause_after: 0.2
+      - text: "この言葉は、原因を個人の脳に置き、しかも、若者に置く。"
+        pause_after: 0.2
+      - text: "だが、見てきたとおりだ。"
+        pause_after: 0.2
+      - text: "ドーパミン中毒という説明は科学的に不正確で、若者が堕落したという物語は、二千年以上前から、繰り返されては崩れてきた。"
+        pause_after: 0.2
+      - text: "そして、画面の前でせわしなくなっているのは、統計を見る限り、若者だけではない。"
+        pause_after: 0.7
+      - text: "もし対策を考えるなら、方向はひとつだけ、覚えておけばいい。"
+        pause_after: 0.2
+      - text: "意志の力で刺激と殴り合わないこと。"
+        pause_after: 0.2
+      - text: "段差を、自分の側に戻すことだ。"
+        pause_after: 0.2
+      - text: "通知をひとつ切る。"
+        pause_after: 0.2
+      - text: "アプリをホーム画面の奥にしまう。"
+        pause_after: 0.2
+      - text: "スマホを寝室の外で充電する。"
+        pause_after: 0.2
+      - text: "設計されたものには、設計で返す。"
+        pause_after: 0.2
+      - text: "それだけで、勝負の場所が変わる。"
+        pause_after: 0.7
+      - text: "今夜もまた、寝ようと思ったあとで、親指が勝手に動き出すかもしれない。"
+        pause_after: 0.2
+      - text: "そのときは、自分を責める代わりに、思い出してほしい。"
+        pause_after: 0.2
+      - text: "あなたは、中毒のガキなんかじゃない。"
+        pause_after: 0.2
+      - text: "二千年前から続く古い不安と、最新の設計とに挟まれながら、それでも自分の時間を取り返そうとしている、ふつうの人間だ。"
+        pause_after: 1.4
+    beats:
+      - type: image
+        from: 1
+        slot: 1
+        visual_intent: "同じ寝室の情景で結論部への導入とする"
+        gen_prompt: "the same dark bedroom from the opening scene, now viewed from a slightly wider angle, quiet stillness, soft blue night light"
+        cut_reason: "【冒頭の問いに戻る】同じ寝室の情景で結論部への導入とする"
+
+      - type: image
+        from: 3
+        slot: 2
+        visual_intent: "脳ではなく環境が変わったという説明を静かな寝室の情景で支える"
+        gen_prompt: "a quiet dark bedroom, a smartphone glowing softly on a nightstand, calm contemplative mood emphasizing the environment rather than the person"
+        cut_reason: "【原因は環境の側】脳ではなく環境が変わったという説明を静かな寝室の情景で支える"
+
+      - type: image
+        from: 6
+        slot: 3
+        visual_intent: "画面を保持したまま決め文を言い切り、ポーズで受け止める"
+        gen_prompt: "a close-up of a smartphone resting on a nightstand in a dark bedroom, its glow softening, symbolizing a quiet turning point"
+        cut_reason: "【相手が強くなった、決め文】画面を保持したまま決め文を言い切り、ポーズで受け止める"
+
+      - type: image
+        from: 9
+        slot: 4
+        visual_intent: "呼びかけの内容に合わせ、静かな内省の情景を続ける"
+        gen_prompt: "a quiet dark empty bedroom with no people, a smartphone lying face down on the bed, soft ambient light, contemplative mood evoking gentle self-reflection"
+        cut_reason: "【ドパガキという言葉自体を疑う】呼びかけの内容に合わせ、静かな内省の情景を続ける"
+
+      - type: image
+        from: 12
+        slot: 5
+        visual_intent: "モラルパニックの反復と対象の広がりを同じ静かな情景でまとめる"
+        gen_prompt: "a calm quiet interior at night, soft ambient glow, evoking a broad reflective statement beyond any single generation"
+        cut_reason: "【二千年の反復、若者だけではない】モラルパニックの反復と対象の広がりを同じ静かな情景でまとめる"
+
+      - type: image
+        from: 15
+        slot: 6
+        visual_intent: "意志ではなく段差を変える、という提案の導入"
+        gen_prompt: "a hand adjusting a smartphone's settings screen in soft light, screen content abstract and unreadable, calm deliberate mood"
+        cut_reason: "【対策の方向】意志ではなく段差を変える、という提案の導入"
+
+      - type: image
+        from: 18
+        slot: 11
+        visual_intent: "対策の列挙に合わせ、通知をオフに切り替える手元の情景を具体的に描く"
+        gen_prompt: "a close-up of hands holding a present-day smartphone, a finger switching off a notification toggle in a settings screen, all screen text blurred and unreadable, warm dim evening light"
+        cut_reason: "【段差を自分の側に戻す】対策の列挙を具体的な手元の動作で見せる"
+
+      - type: image
+        from: 19
+        slot: 7
+        visual_intent: "アプリをしまい、寝室の外で充電する具体策を手元の情景で見せる"
+        gen_prompt: "a hand turning off a phone notification toggle on a blank unreadable screen, then the phone placed on a hallway table outside a bedroom door, soft warm light"
+        cut_reason: "【具体的な段差の作り方】アプリをしまい、寝室の外で充電する具体策を手元の情景で見せる"
+
+      - type: image
+        from: 21
+        slot: 8
+        visual_intent: "設計には設計で返す、という結びへの短い間"
+        gen_prompt: "a calm tidy nightstand without a phone, soft light, quiet sense of reclaimed space"
+        cut_reason: "【設計には設計で返す】勝負の場所が変わるという結びへの短い間"
+
+      - type: image
+        from: 23
+        slot: 9
+        visual_intent: "自分を責めない語りかけへの情景の橋渡し"
+        gen_prompt: "the same dark bedroom at night, a phone glowing faintly beside a resting hand, gentle non-judgmental mood"
+        cut_reason: "【今夜もまた動き出すかもしれない】自分を責めない語りかけへの情景の橋渡し"
+
+      - type: image
+        from: 25
+        slot: 10
+        visual_intent: "朝の光と静かな眠りで動画を締める象徴的な一枚（アウトロへつなぐ）"
+        gen_prompt: "a peaceful bedroom at dawn, soft morning light gently entering through a window, a person sleeping calmly with the phone face-down and forgotten on the nightstand, warm serene atmosphere, symbolic closing image"
+        search_query: "peaceful bedroom morning light sleeping"
+        assets:
+          - url: "https://www.pexels.com/photo/man-bed-bedroom-morning-9615241/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+          - url: "https://www.pexels.com/photo/man-bed-bedroom-adult-9615245/"
+            kind: image
+            license: commercial-ok
+            source_name: "Pexels"
+        cut_reason: "【象徴的な結びの一枚】朝の光と静かな眠りで動画を締め、アウトロへつなぐ"

@@ -130,7 +130,9 @@
 
 1. シーンごとに素材候補を **2〜4件**、ライセンス情報とともに YAML の `assets` に記録する。
 2. ストック素材は **Pixabay / Pexels**（商用利用可・クレジット表記不要）に限定して探す
-   （YAML では `license: commercial-ok`）。
+   （YAML では `license: commercial-ok`）。検索には script-to-video の
+   `tools/stock_search.py`（Pixabay/Pexels 公式 API を叩く CLI。`.env` のキーを使用）を用いてよい。
+   出力 JSON は `assets` にそのまま転記できる（`preview_url` 等の表示専用フィールドは転記しない）。
 3. Wikimedia Commons の候補は PD か CC の別を確認する。CC の場合は出典表記文字列を
    `attribution` に記録する（`license: cc-by` の場合、`source_url` と `attribution` が必須）。
 4. ライセンス不明（汎用画像検索由来）の候補は `license: unknown` とし、`source_url` を
