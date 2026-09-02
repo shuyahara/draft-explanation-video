@@ -37,6 +37,44 @@ def load_base(name: str) -> Image.Image:
     return img.convert("RGBA")
 
 
+def load_fill(name: str, w: int, h: int) -> Image.Image:
+    """load_base の汎用版。指定サイズ (w, h) を維持したまま中央クロップ+リサイズする
+    （コラージュ用にパネル幅がキャンバス全幅でない場合に使う）。"""
+    img = Image.open(ASSETS / name).convert("RGB")
+    target_ratio = w / h
+    iw, ih = img.size
+    cur_ratio = iw / ih
+    if cur_ratio > target_ratio:
+        new_w = round(ih * target_ratio)
+        x0 = (iw - new_w) // 2
+        img = img.crop((x0, 0, x0 + new_w, ih))
+    else:
+        new_h = round(iw / target_ratio)
+        y0 = (ih - new_h) // 2
+        img = img.crop((0, y0, iw, y0 + new_h))
+    img = img.resize((w, h), Image.LANCZOS)
+    return img.convert("RGBA")
+
+
+def make_collage(names: list[str], divider_color: tuple = (194, 169, 112, 255), divider_w: int = 4) -> Image.Image:
+    """複数の背景画像を縦の細い金ラインで区切って横に並べたコラージュ（1280x720）を作る。"""
+    n = len(names)
+    canvas = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    col_w = W // n
+    x = 0
+    for i, name in enumerate(names):
+        w = col_w if i < n - 1 else (W - x)  # 最後の列で端数を吸収
+        panel = load_fill(name, w, H)
+        canvas.paste(panel, (x, 0))
+        x += w
+    draw = ImageDraw.Draw(canvas)
+    x = 0
+    for i in range(n - 1):
+        x += col_w
+        draw.rectangle([x - divider_w // 2, 0, x + divider_w // 2, H], fill=divider_color)
+    return canvas
+
+
 def _font(size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_BOLD), size)
 
@@ -101,6 +139,40 @@ def draw_panel_caption(img: Image.Image, lines: list[tuple[str, tuple]], center:
     return (cx - block_w / 2 - pad, top - pad, cx + block_w / 2 + pad, top + total_h + pad), font.size
 
 
+def draw_mixed_panel_line(img: Image.Image, parts: list[tuple[str, tuple]], center: tuple[int, int],
+                           max_width: int, max_height: int, pad: int = 18):
+    """1行の中で部分ごとに色を変える版（例: 「プロ」だけ金、残り白）。
+    draw_panel_caption と同じパネル・縁取り演出を1行分だけに適用する。"""
+    draw = ImageDraw.Draw(img)
+    full_text = "".join(t for t, _ in parts)
+    font = fit_font_for_lines([full_text], max_width, max_height)
+
+    widths = [draw.textlength(t, font=font) for t, _ in parts]
+    total_w = sum(widths)
+    bbox_full = draw.textbbox((0, 0), full_text, font=font)
+    h = bbox_full[3] - bbox_full[1]
+
+    cx, cy = center
+    top = cy - h / 2
+
+    panel = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    pdraw = ImageDraw.Draw(panel)
+    pdraw.rounded_rectangle(
+        [cx - total_w / 2 - pad, top - pad, cx + total_w / 2 + pad, top + h + pad],
+        radius=14, fill=(5, 5, 8, 175),
+    )
+    img.alpha_composite(panel)
+
+    x = cx - total_w / 2
+    y = top - bbox_full[1]
+    for (text, color), w in zip(parts, widths):
+        draw.text((x + 3, y + 3), text, font=font, fill=SHADOW)
+        draw.text((x, y), text, font=font, fill=color)
+        x += w
+
+    return (cx - total_w / 2 - pad, top - pad, cx + total_w / 2 + pad, top + h + pad), font.size
+
+
 def save(img: Image.Image, out_name: str) -> Path:
     out = img.convert("RGB")
     path = OUT / out_name
@@ -155,6 +227,49 @@ if __name__ == "__main__":
     )
     print("C panel bbox", bbox, "font", font_size)
     outputs.append(save(img, "thumb-C.png"))
+
+    # thumb-D: 左右2分割コラージュ（左: 江戸城の対局 scene_03_beat2 / 右: 1880年代フットボールの試合
+    # scene_05_beat3、泥だらけの選手と観客）+ 上下2行「プロという職業は」「なぜ発生した？」
+    img = make_collage(["scene_03_beat2.png", "scene_05_beat3.png"])
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("プロ", GOLD), ("という職業は", WHITE)],
+        center=(640, 110),
+        max_width=1180,
+        max_height=130,
+    )
+    print("D top bbox", bbox, "font", font_size)
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("なぜ", GOLD), ("発生した？", WHITE)],
+        center=(640, 610),
+        max_width=1180,
+        max_height=130,
+    )
+    print("D bottom bbox", bbox, "font", font_size)
+    outputs.append(save(img, "thumb-D.png"))
+
+    # thumb-D2: D の構図違い（3分割コラージュ。左: 将棋の駒を動かす手元 scene_01_beat6 / 中央:
+    # 1880年代フットボールの試合 scene_05_beat3 / 右: 現代の満員スタジアム夜景 scene_10_beat6）
+    # + 同じ上下2行。将棋→歴史スポーツ→現代スポーツと時代を横断する構成に変える
+    img = make_collage(["scene_01_beat6.png", "scene_05_beat3.png", "scene_10_beat6.png"])
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("プロ", GOLD), ("という職業は", WHITE)],
+        center=(640, 110),
+        max_width=1180,
+        max_height=130,
+    )
+    print("D2 top bbox", bbox, "font", font_size)
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("なぜ", GOLD), ("発生した？", WHITE)],
+        center=(640, 610),
+        max_width=1180,
+        max_height=130,
+    )
+    print("D2 bottom bbox", bbox, "font", font_size)
+    outputs.append(save(img, "thumb-D2.png"))
 
     for p in outputs:
         make_check(p)
