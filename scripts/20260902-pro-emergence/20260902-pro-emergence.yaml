@@ -727,7 +727,7 @@ scenes:
         from: 4
         slot: 2
         visual_intent: "反転の予告。ヴィクトリア朝のボートレース、河岸の紳士淑女と白いブレザーの漕手"
-        gen_prompt: "a Victorian-era rowing regatta on the Thames, gentlemen in straw boaters and ladies with parasols on the bank, a crew in white blazers carrying a shell, engraving-like muted tones"
+        gen_prompt: "a Victorian-era rowing regatta on the Thames in England, gentlemen in straw boaters and ladies with parasols on the bank, a crew in white blazers carrying a shell, no flags anywhere, engraving-like muted tones, no text, no lettering"
         search_query: "victorian rowing regatta thames spectators"
         cut_reason: "【反転の入口】時代がヴィクトリア朝へ転換する"
 
@@ -793,7 +793,7 @@ scenes:
         from: 24
         slot: 9
         visual_intent: "1912年の競技場、表彰台に立つ十種競技の選手を後ろから（実在人物の顔は描かない）"
-        gen_prompt: "a 1912 Olympic stadium seen from behind an athlete standing on the winner's podium, crowd in period dress in the stands, flags on tall poles, sepia photographic tone, athlete's face not visible"
+        gen_prompt: "a 1912 Olympic stadium seen from behind an athlete in a plain white period athletic vest standing on the winner's podium, no jewelry or ornaments, crowd in period dress in the stands, sepia photographic tone, athlete's face not visible, no text, no lettering"
         search_query: "1912 olympic stadium podium crowd flags"
         telop: "ジム・ソープ：1912年金メダル → 1913年剥奪（名誉回復は1983年）"
         cut_reason: "【ジム・ソープ】剥奪の1文だけ表彰台の画で受ける"
@@ -1071,7 +1071,7 @@ scenes:
         from: 16
         slot: 9
         visual_intent: "二つの世界の橋渡し。制服の上着が椅子に掛けられ、机には楽譜の束（音符は読めない）"
-        gen_prompt: "a livery coat draped over a chair beside a desk stacked with handwritten music manuscripts in an 18th-century room, manuscript notes blurred and unreadable, warm candlelight, no people"
+        gen_prompt: "a desk stacked with handwritten music manuscripts in an 18th-century room, manuscript notes blurred and unreadable, a quill and inkwell beside them, warm candlelight, no people, no text, no lettering"
         search_query: "18th century livery coat chair desk music manuscripts"
         cut_reason: "【移動の整理と次の予告】「もうひとつの稼ぎ方」＝楽譜を机上に置いて章を閉じる"
 
