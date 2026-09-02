@@ -35,7 +35,7 @@ scenes:
         pause_after: 0.2
       - text: "一方で、将棋の世界には、はっきりした線がある。"
         pause_after: 0.2
-      - text: "奨励会という養成機関で四段に上がった人だけが、プロ棋士と呼ばれる。"
+      - text: "四段という段位を認められた人だけが、プロ棋士と呼ばれる。"
         pause_after: 0.2
       - text: "線は、くっきりしている。"
         pause_after: 0.2
@@ -388,7 +388,7 @@ scenes:
     narration:
       - text: "1868年に幕府が倒れると、三家は扶持を失った。"
         pause_after: 0.2
-      - text: "家元の制度は名目だけになり、1893年、十一世名人の伊藤宗印が亡くなったあと、名人の座は6年間、空いたままになった。"
+      - text: "家元の制度は名目だけになり、1893年、十一世名人の伊藤宗印が亡くなったあと、名人の座は、5年以上、空いたままになった。"
         pause_after: 0.2
       - text: "強い人がいなくなったのではない。"
         pause_after: 0.2
@@ -443,7 +443,7 @@ scenes:
         visual_intent: "明治初期、空の上座と置き去りの将棋盤。名人不在"
         gen_prompt: "an empty raised seat in a dim Meiji-era Japanese room with a shogi board left untouched on the tatami, dust in a shaft of light, muted sepia, no people"
         search_query: "empty seat meiji era room shogi board dust"
-        telop: "1893年 伊藤宗印没後、名人不在6年"
+        telop: "1893年 伊藤宗印没後、名人不在5年余"
         cut_reason: "「強い人がいなくなったのではない。座る人を養う仕組みが、なくなったのだ。」を空席で受ける"
 
       - type: image
@@ -822,9 +822,9 @@ scenes:
         pause_after: 0.2
       - text: "四段への昇段をプロ入りの条件にする、養成機関だ。"
         pause_after: 0.2
-      - text: "上がれるのは、半年に二人。"
+      - text: "上がれるのは、原則として半年に二人。"
         pause_after: 0.2
-      - text: "26歳までに上がれなければ、退会だ。"
+      - text: "年齢の上限もあり、26歳までに上がれなければ、原則として退会だ。"
         pause_after: 0.2
       - text: "フットボールにはFAの規則があった。"
         pause_after: 0.2
@@ -883,7 +883,7 @@ scenes:
         visual_intent: "現代の奨励会の対局室。若い対局者が並ぶ長い部屋、引き"
         gen_prompt: "a long quiet room with rows of young players facing each other over shogi boards in a present-day Japanese training league, fluorescent light, seen from the end of the room, no readable text"
         search_query: "shogi training hall young players rows"
-        telop: "奨励会：三段リーグ上位2名が四段（プロ）・26歳の年齢制限"
+        telop: "奨励会：三段リーグ上位2名が四段（プロ）・年齢制限26歳（勝ち越しで最長29歳）"
         cut_reason: "【装置の実例・奨励会】キュー1〜4は将棋の装置"
 
       - type: image
@@ -1101,7 +1101,7 @@ scenes:
         pause_after: 0.2
       - text: "裁判所は、楽譜も著作物だと認めた。"
         pause_after: 0.2
-      - text: "楽譜が複製されるたびに作曲家に金が入る道が、ここで開いた。"
+      - text: "楽譜を勝手に刷らせない権利、つまり複製を作曲家の収入に結びつける道が、ここで開いた。"
         pause_after: 0.8
       - text: "ベートーヴェンは、この時代の産物だ。"
         pause_after: 0.2
@@ -1117,7 +1117,7 @@ scenes:
         pause_after: 0.6
       - text: "美術でも、同じことが起きた。"
         pause_after: 0.2
-      - text: "1874年、アカデミーのサロンに落選し続けた画家たちが、審査なしの自主展覧会を開く。"
+      - text: "1874年、アカデミーのサロンの審査に見切りをつけた画家たちが、審査なしの自主展覧会を開く。"
         pause_after: 0.2
       - text: "第1回印象派展だ。"
         pause_after: 0.2
@@ -1129,7 +1129,7 @@ scenes:
         pause_after: 0.2
       - text: "ベートーヴェンの年金は、1811年の通貨の切り下げで実質的に目減りし、侯爵の一人は支払いを渋って、訴訟になった。"
         pause_after: 0.2
-      - text: "デュラン・リュエルは、1876年の印象派展の不振で、破産寸前まで追い込まれている。"
+      - text: "デュラン・リュエルも、印象派の絵が思うように売れず、何度も破産寸前まで追い込まれている。"
         pause_after: 0.2
       - text: "パトロンを離れた自由は、不安定と引き換えだった。"
         pause_after: 1.0
@@ -1247,7 +1247,7 @@ scenes:
         pause_after: 0.2
       - text: "並の歌手を十人続けて聴いても、一人の傑出した歌手の一回分にはならない。"
         pause_after: 0.2
-      - text: "もうひとつは、一人の演奏を、追加の費用なしに大勢へ届けられること。"
+      - text: "もうひとつは、一人の演奏を、費用をほとんど増やさずに大勢へ届けられること。"
         pause_after: 0.2
       - text: "録音、放送、そして今なら、配信だ。"
         pause_after: 0.5
@@ -1306,7 +1306,7 @@ scenes:
           layout: converge
           items:
             - {id: irreplaceable, text: "代わりが効かない", at: 5, after: "代わりが効かない"}
-            - {id: reach, text: "追加費用なしで届く", at: 7, after: "大勢へ届けられる"}
+            - {id: reach, text: "費用を増やさず届く", at: 7, after: "大勢へ届けられる"}
           result:
             text: "市場は一人に集中"
             at: 9
@@ -1392,7 +1392,7 @@ scenes:
         pause_after: 0.2
       - text: "人件費は下げられず、客席の数にも上限がある。"
         pause_after: 0.2
-      - text: "だからプロの世界は、興行収入だけでは支えにくく、常に、スポンサーか、協会か、賞金の出し手を必要とする。"
+      - text: "だからプロの世界は、興行収入だけでは支えにくく、スポンサーか、協会か、賞金の出し手を、必要とし続ける。"
         pause_after: 0.8
       - text: "将棋界の主な収入は、今も新聞社の契約金だ。"
         pause_after: 0.2
