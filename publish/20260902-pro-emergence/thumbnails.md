@@ -37,7 +37,28 @@
 - 文言の色分けは1行内で部分ごとに色を変える新規関数 `draw_mixed_panel_line`（`draw_panel_caption` と同じパネル・縁取り演出を1行に適用したもの）を追加して実現した。既存の A/B/C 生成コードとその出力（パネル座標・フォントサイズ）は変更していない。
 - コラージュ生成には新規ヘルパー `load_fill`（任意サイズへの中央クロップ＋リサイズ）と `make_collage`（複数画像を金ラインで区切って横に並べる）を追加した。
 
+## E案: thumb-E.png（D2 の将棋側を維持し、スポーツ側を寄り画に差し替え・2分割）
+- 背景: 左右2分割コラージュ（D/D2 と同じ幅4pxの金ライン）。
+  - 左: `scene_01_beat6.png`（D2 と同じ、将棋の駒を動かす手元のクローズアップ）
+  - 右: `thumb-src-sport-1.png`（新規生成。サッカーのスパイクがボールを捉える瞬間、芝と泥が飛ぶ低アングルのクローズアップ）
+- 文言: D/D2 と同じ上下2行「プロという職業は」「なぜ発生した？」
+- 狙い: ユーザーからの反応（「D2 がイメージに近いが、スポーツ側は何のスポーツか分かる寄り画にしてほしい」）を受け、将棋側はそのまま、スポーツ側だけを「一目でサッカーと分かる決定的瞬間」に差し替えた本命案。将棋の手元とサッカーのシュートという、同じ「一瞬の動作へのクローズアップ」同士を対にすることで、D2 より画としての統一感が上がった。
+
+## E2案: thumb-E2.png（E のスポーツ側の別案・野球）
+- 背景: 左右2分割コラージュ。左は E と同じ `scene_01_beat6.png`。
+  - 右: `thumb-src-sport-2.png`（新規生成。野球のバットにボールが当たる瞬間、ナイター照明を背景にしたクローズアップ）
+- 文言: E と同じ上下2行。
+- 狙い: 野球はバット・グローブ・照明という記号だけで競技が伝わりやすく、サッカー案（E）と球種の異なる対抗案として用意した。
+
+### E/E2 新規生成画像について
+- ツール: `script-to-video/tools/codex_imagegen/codex_imagegen.py`（Codex CLI 経由、ChatGPT Plus クォータ）の `gen` サブコマンドで1枚ずつ生成。両方とも初回で成功（レート制限・リトライは発生せず）。
+  - 案1（サッカー、本命）: `a dynamic close-up of a soccer player's boot striking a soccer ball on green grass at the moment of the kick, grass and mud flying, low camera angle, natural daylight colors, sharp and vivid, no text, no lettering, no logo, no watermark` → `thumb-src-sport-1.png`（約62秒、約2.5MB）
+  - 案2（野球）: `a close-up of a baseball batter's hands on the bat at the instant the bat meets the ball, ballpark lights behind, dynamic motion blur on the ball, natural colors, no text, no lettering, no logo, no watermark` → `thumb-src-sport-2.png`（約57秒、約2.3MB）
+- 目視確認: 両方とも偽文字・ロゴ・ウォーターマークなし、顔のクローズアップなし（案1は足元とボールのみ、案2は前腕〜グローブとバット・ボールのみで顔は写っていない）。再生成は不要だった。
+- 保存先はレンダ用素材フォルダ（`script-to-video/build/pro-emergence-assets-codex/`）ではなく、このサムネ専用フォルダ直下（`publish/20260902-pro-emergence/thumb-src-sport-*.png`）。動画本編の素材には使わない、サムネ限定のソース画像として扱う。
+- `make_thumbs.py` 側は `load_fill`/`make_collage` の引数をファイル名からフルパス（`Path`）に変更し、`ASSETS`（レンダ素材）と `OUT`（このフォルダ＝サムネ生成画像）の両方から読み込めるようにした。A〜D2 の出力（パネル座標・フォントサイズ）は再実行後も完全一致しており、変更していない。
+
 ## 制作メモ（A〜C共通）
 - A〜C は1280×720。文言はいずれも2行以内。
 - パネル位置は主被写体（顔・対局者・硬貨の受け渡し）を避けて配置（A・C は上部帯、B は右上）。
-- 縮小プレビューは `thumb-A_check.png` / `thumb-B_check.png` / `thumb-C_check.png` / `thumb-D_check.png` / `thumb-D2_check.png`（320×180）。
+- 縮小プレビューは `thumb-A_check.png` / `thumb-B_check.png` / `thumb-C_check.png` / `thumb-D_check.png` / `thumb-D2_check.png` / `thumb-E_check.png` / `thumb-E2_check.png`（320×180）。

@@ -37,10 +37,10 @@ def load_base(name: str) -> Image.Image:
     return img.convert("RGBA")
 
 
-def load_fill(name: str, w: int, h: int) -> Image.Image:
+def load_fill(path: Path, w: int, h: int) -> Image.Image:
     """load_base の汎用版。指定サイズ (w, h) を維持したまま中央クロップ+リサイズする
-    （コラージュ用にパネル幅がキャンバス全幅でない場合に使う）。"""
-    img = Image.open(ASSETS / name).convert("RGB")
+    （コラージュ用にパネル幅がキャンバス全幅でない場合に使う）。path はフルパス。"""
+    img = Image.open(path).convert("RGB")
     target_ratio = w / h
     iw, ih = img.size
     cur_ratio = iw / ih
@@ -56,15 +56,15 @@ def load_fill(name: str, w: int, h: int) -> Image.Image:
     return img.convert("RGBA")
 
 
-def make_collage(names: list[str], divider_color: tuple = (194, 169, 112, 255), divider_w: int = 4) -> Image.Image:
-    """複数の背景画像を縦の細い金ラインで区切って横に並べたコラージュ（1280x720）を作る。"""
-    n = len(names)
+def make_collage(paths: list[Path], divider_color: tuple = (194, 169, 112, 255), divider_w: int = 4) -> Image.Image:
+    """複数の背景画像（フルパス）を縦の細い金ラインで区切って横に並べたコラージュ（1280x720）を作る。"""
+    n = len(paths)
     canvas = Image.new("RGBA", (W, H), (0, 0, 0, 255))
     col_w = W // n
     x = 0
-    for i, name in enumerate(names):
+    for i, path in enumerate(paths):
         w = col_w if i < n - 1 else (W - x)  # 最後の列で端数を吸収
-        panel = load_fill(name, w, H)
+        panel = load_fill(path, w, H)
         canvas.paste(panel, (x, 0))
         x += w
     draw = ImageDraw.Draw(canvas)
@@ -230,7 +230,7 @@ if __name__ == "__main__":
 
     # thumb-D: 左右2分割コラージュ（左: 江戸城の対局 scene_03_beat2 / 右: 1880年代フットボールの試合
     # scene_05_beat3、泥だらけの選手と観客）+ 上下2行「プロという職業は」「なぜ発生した？」
-    img = make_collage(["scene_03_beat2.png", "scene_05_beat3.png"])
+    img = make_collage([ASSETS / "scene_03_beat2.png", ASSETS / "scene_05_beat3.png"])
     bbox, font_size = draw_mixed_panel_line(
         img,
         [("プロ", GOLD), ("という職業は", WHITE)],
@@ -252,7 +252,7 @@ if __name__ == "__main__":
     # thumb-D2: D の構図違い（3分割コラージュ。左: 将棋の駒を動かす手元 scene_01_beat6 / 中央:
     # 1880年代フットボールの試合 scene_05_beat3 / 右: 現代の満員スタジアム夜景 scene_10_beat6）
     # + 同じ上下2行。将棋→歴史スポーツ→現代スポーツと時代を横断する構成に変える
-    img = make_collage(["scene_01_beat6.png", "scene_05_beat3.png", "scene_10_beat6.png"])
+    img = make_collage([ASSETS / "scene_01_beat6.png", ASSETS / "scene_05_beat3.png", ASSETS / "scene_10_beat6.png"])
     bbox, font_size = draw_mixed_panel_line(
         img,
         [("プロ", GOLD), ("という職業は", WHITE)],
@@ -270,6 +270,49 @@ if __name__ == "__main__":
     )
     print("D2 bottom bbox", bbox, "font", font_size)
     outputs.append(save(img, "thumb-D2.png"))
+
+    # thumb-E: D2 の将棋側（左）をそのまま流用し、スポーツ側を「何のスポーツか分かる寄り画」に
+    # 差し替えた左右2分割。左: scene_01_beat6（将棋の駒を動かす手元）
+    # 右: thumb-src-sport-1.png（Codex生成・サッカーのシュート、スパイクがボールを捉える瞬間）
+    img = make_collage([ASSETS / "scene_01_beat6.png", OUT / "thumb-src-sport-1.png"])
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("プロ", GOLD), ("という職業は", WHITE)],
+        center=(640, 110),
+        max_width=1180,
+        max_height=130,
+    )
+    print("E top bbox", bbox, "font", font_size)
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("なぜ", GOLD), ("発生した？", WHITE)],
+        center=(640, 610),
+        max_width=1180,
+        max_height=130,
+    )
+    print("E bottom bbox", bbox, "font", font_size)
+    outputs.append(save(img, "thumb-E.png"))
+
+    # thumb-E2: E のスポーツ側の別案（野球）。左は同じ scene_01_beat6。
+    # 右: thumb-src-sport-2.png（Codex生成・野球のバットとボールが当たる瞬間、ナイター照明）
+    img = make_collage([ASSETS / "scene_01_beat6.png", OUT / "thumb-src-sport-2.png"])
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("プロ", GOLD), ("という職業は", WHITE)],
+        center=(640, 110),
+        max_width=1180,
+        max_height=130,
+    )
+    print("E2 top bbox", bbox, "font", font_size)
+    bbox, font_size = draw_mixed_panel_line(
+        img,
+        [("なぜ", GOLD), ("発生した？", WHITE)],
+        center=(640, 610),
+        max_width=1180,
+        max_height=130,
+    )
+    print("E2 bottom bbox", bbox, "font", font_size)
+    outputs.append(save(img, "thumb-E2.png"))
 
     for p in outputs:
         make_check(p)
