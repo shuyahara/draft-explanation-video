@@ -17,3 +17,9 @@
 | 2026-09-03 | v3（ファクトチェック反映版・台本 v4） | BqCE_79xw30 | 非公開 | https://youtu.be/BqCE_79xw30 ／ 24分16秒・-14.1 LUFS・サムネ E（将棋の手元×サッカー）・字幕 ja 添付・概要欄 description.txt ／ 削除対象の旧版なし |
 
 - 修正アップロード時は新IDの再生確認後に旧IDを削除し、この表に「削除日」を追記する（削除方針 2026-09-01）。
+
+## 試写室（Artifact）
+- パート1（シーン1〜5）: https://claude.ai/code/artifact/73d4e93b-6043-49b2-a074-f87fdca624d4
+- パート2（シーン6〜8）: https://claude.ai/code/artifact/828bf27b-a681-4a5d-b44f-290d805ab87e
+- パート3（シーン9〜13）: https://claude.ai/code/artifact/162d4fde-db5f-471e-b174-91dab9cead65
+- 生成: `make_shisha.py --build <build名> --label <版> --links <3URL>`（軽量エンコードの mp4 を base64 埋め込み。html は git 管理外）
