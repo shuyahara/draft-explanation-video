@@ -840,7 +840,7 @@ scenes:
       - surface: "倫理綱領"
         reading: "リンリコウリョウ"
     narration:
-      - text: "確かに、プロのいる世界には、必ずこの装置がある。"
+      - text: "確かに、成熟したプロの世界には、たいていこの装置がある。"
         pause_after: 0.2
       - text: "将棋には家元があり、今は奨励会がある。"
         pause_after: 0.2
@@ -1574,7 +1574,7 @@ scenes:
         pause_after: 0.2
       - text: "見たい気持ちに、金が形を与えるのだ。"
         pause_after: 0.8
-      - text: "では、この三層を、冒頭の配信者に当ててみよう。"
+      - text: "では、いちばん下の層、払う仕組みそのものは、なぜ生まれるのか。"
         pause_after: 1.2
     beats:
       - type: chapter
@@ -1620,130 +1620,274 @@ scenes:
         cut_reason: "【結論への橋渡し】冒頭の場面へ戻ることを予告して章を閉じる"
 
   - id: 13
-    title: "結論（冒頭の配信者へ戻る → 問いに答える）"
+    title: 払う仕組みは、なぜ生まれるのか（注目の換金）
+    chapter_title: 払う仕組みは、なぜ生まれるのか
+    visual_intent: 御城将棋・新聞の印刷所・特別列車という既出の三場面を再提示し、払う側の動機（権威・部数・乗客）を並べる。中盤で「見たい人が集まる」と「注目を換える誰か」が「払う仕組み」へ収束する図解。終盤は観客・レコード店・投げ銭の通知の再提示で「注目の対価」を受ける。
+    telop: Elias & Dunning, Quest for Excitement (1986)／Adler (1985)
     readings:
-      - surface: "金"
-        reading: "カネ"
-      - surface: "数十人"
-        reading: "スウジュウニン"
+    - surface: 御城将棋
+      reading: オシロショウギ
+    - surface: 家康
+      reading: イエヤス
+    - surface: 扶持
+      reading: フチ
+    - surface: 棋譜
+      reading: キフ
+    - surface: 部数
+      reading: ブスウ
+    - surface: 金
+      reading: カネ
     narration:
-      - text: "冒頭の配信者に戻ろう。"
-        pause_after: 0.2
-      - text: "深夜2時、数十人の視聴者、500円の投げ銭。"
-        pause_after: 0.2
-      - text: "この人は、プロなのか。"
-        pause_after: 0.8
-      - text: "三つの層で見ると、答えははっきりする。"
-        pause_after: 0.2
-      - text: "払う仕組みは、ある。"
-        pause_after: 0.2
-      - text: "投げ銭と、広告収入だ。"
-        pause_after: 0.2
-      - text: "複製技術も、ある。"
-        pause_after: 0.2
-      - text: "配信そのものが、観客の上限を外している。"
-        pause_after: 0.2
-      - text: "だが、認定と排除の装置だけが、まだない。"
-        pause_after: 0.2
-      - text: "四段も、協会も、アマチュア規定もない。"
-        pause_after: 0.2
-      - text: "だから、この人がプロかどうかは、曖昧に見える。"
-        pause_after: 0.2
-      - text: "経済的には、プロは生まれ始めている。"
-        pause_after: 0.2
-      - text: "ただ、それをプロと呼ぶ社会の側の装置が、まだ追いついていない。"
-        pause_after: 0.6
-      - text: "1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。"
-        pause_after: 1.0
-      - text: "この動画の問いに、答えよう。"
-        pause_after: 0.2
-      - text: "なぜ競技にはプロが生まれるのか。"
-        pause_after: 0.2
-      - text: "強い人がいるからではない。"
-        pause_after: 0.2
-      - text: "その技に金を払う仕組みを、社会が持ったからだ。"
-        pause_after: 0.2
-      - text: "装置はあとから地位を固め、複製技術はあとから規模を増やす。"
-        pause_after: 0.8
-      - text: "プロとは、腕前の証明書ではない。"
-        pause_after: 0.2
-      - text: "あなたの技に、誰かが金を払い続ける仕組みができた、という事実の名前だ。"
-        pause_after: 2.5
-      - text: "あなたが今、金にならないと思いながら続けている何かも、払い続ける誰かが現れ、それが仕組みになったとき、職業になる。"
-        pause_after: 0.2
-      - text: "400年前の将棋が、そうだったように。"
+    - text: では、その払う仕組みは、なぜ生まれるのか。
+      pause_after: 0.8
+    - text: 三つの事例で、金を出した側の動機を、見てほしい。
+      pause_after: 0.5
+    - text: 家康は、将棋が好きだったから扶持を出したのではない。
+      pause_after: 0.2
+    - text: 御城将棋は、将軍の前で技を競わせる、年中行事だった。
+      pause_after: 0.2
+    - text: 幕府が観客であり、評価者である。
+      pause_after: 0.2
+    - text: 技を城の中に囲い込むことは、権威を目に見える形にすることだった。
+      pause_after: 0.7
+    - text: 新聞は、将棋への愛で棋戦を主催したのではない。
+      pause_after: 0.2
+    - text: 棋譜が紙面に載れば、部数が伸びるからだ。
+      pause_after: 0.5
+    - text: 鉄道会社が特別列車を走らせたのは、乗客が欲しかったからだ。
+      pause_after: 0.7
+    - text: つまり、払う側は、技そのものに払っているのではない。
+      pause_after: 0.2
+    - text: 技が集める、人々の注目に払っている。
+      pause_after: 0.7
+    - text: 見たい人が集まる。
+      pause_after: 0.3
+    - text: その注目を、権威や部数や広告に換えられる誰かが現れる。
+      pause_after: 0.3
+    - text: そのとき、払う仕組みができる。
+      pause_after: 2.0
+    - text: では、なぜ人は、見たいのか。
+      pause_after: 0.6
+    - text: レスター大学の社会学者ノルベルト・エリアスとエリック・ダニングは、1986年の著書で、近代社会でスポーツが求められる理由を、興奮の探求、という言葉で説明した。
+      pause_after: 0.2
+    - text: 暴力を抑えた社会で、安全に興奮できる場。
+      pause_after: 0.2
+    - text: 勝敗の行方が分からない緊張が、その興奮の中心にある。
+      pause_after: 0.6
+    - text: そして、経済学者アドラーが言ったように、人は、みんなが知っている勝負について、語り合いたい。
+      pause_after: 0.2
+    - text: 見たい気持ちは、一人の中で完結しない。
+      pause_after: 0.2
+    - text: 語り合う相手がいるほど、強くなる。
+      pause_after: 0.7
+    - text: プロに払われている金は、技の対価というより、技が集める注目の対価だ。
+      pause_after: 2.2
+    - text: この視点で見ると、配信者の投げ銭も、幕府の扶持も、同じものに見えてくる。
+      pause_after: 0.8
+    - text: では、冒頭の配信者に、三層を当ててみよう。
+      pause_after: 1.2
     beats:
-      - type: image
-        from: 1
-        slot: 1
-        visual_intent: "シーン1と同じ深夜の配信部屋（同じ素材の再提示可）"
-        gen_prompt: "a person seen from behind playing a video game late at night in a dark room, lit only by the monitor glow, a small webcam on the desk, screen contents blurred and unreadable, cool blue light"
-        search_query: "person streaming video game dark room night"
-        assets:
-          - url: "https://www.pexels.com/photo/side-view-of-a-gamer-wearing-a-cap-and-headphones-10350851/"
-            kind: image
-            license: commercial-ok
-            source_name: "Pexels"
-          - url: "https://www.pexels.com/photo/young-man-focused-on-gaming-with-headset-sitting-at-a-computer-9072271/"
-            kind: image
-            license: commercial-ok
-            source_name: "Pexels"
-        cut_reason: "【冒頭への回帰】キュー1〜3で場面を戻す。シーン1ビート1と同じ画の再提示"
-
-      - type: image
-        from: 4
-        slot: 2
-        visual_intent: "配信画面の端の通知と、机の上の何もない場所（装置がない）。手元"
-        gen_prompt: "a close-up of a streamer's desk at night: a glowing monitor edge with an unreadable notification, a microphone, and an empty space on the desk where nothing sits, cool blue light"
-        search_query: "streamer desk night monitor notification microphone"
-        telop: "① 払う仕組み：ある ／ ② 認定と排除の装置：まだない ／ ③ 複製技術：ある"
-        cut_reason: "【三層の当てはめ・その1】telop で三層の答え合わせを出す。「三つの層で見ると、答えははっきりする。払う仕組みは、ある。投げ銭と、広告収入だ。複製技術も、ある。配信そのものが、観客の上限を外している。」を受ける"
-
-      - type: image
-        from: 9
-        slot: 3
-        visual_intent: "認定と排除の装置がまだない、を壁の何もない空間で直接描写"
-        gen_prompt: "a close-up of an empty corner of a streamer's desk at night, bare wall behind in monitor glow, no certificate, no badge, no framed license, cool blue light"
-        search_query: "empty bare wall desk corner monitor glow night"
-        cut_reason: "【分割】元ビート2の40秒超を節目で分割。「だが、認定と排除の装置だけが、まだない。四段も、協会も、アマチュア規定もない。だから、この人がプロかどうかは、曖昧に見える。」を受ける"
-
-      - type: image
-        from: 12
-        slot: 4
-        visual_intent: "社会の装置が追いついていない、という「まだ」を、手が止まった静止で直接描写"
-        gen_prompt: "the same streamer's desk at night, a hand paused over the keyboard, monitor still glowing, contemplative stillness, cool blue light"
-        search_query: "hand paused keyboard streamer desk night stillness"
-        cut_reason: "【分割】「経済的には、プロは生まれ始めている。ただ、それをプロと呼ぶ社会の側の装置が、まだ追いついていない。1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。」を受け、「同じ段階にいる。」まで保持"
-
-      - type: image
-        from: 15
-        slot: 5
-        visual_intent: "問いへの答え。将棋・フットボール・音楽の三場面を1枚に混ぜず、江戸城の対局（シーン3ビート1）を再提示"
-        gen_prompt: "an early Edo-period Japanese castle interior, two men playing shogi on the tatami while a lord watches from a raised seat, gold folding screens, candlelight, seen from a distance, no readable text"
-        search_query: "edo castle interior shogi players lord watching"
-        cut_reason: "【問いへの答え】問いへの答えを、最初の歴史場面で受ける。シーン3ビート1と同じ画の再提示"
-
-      - type: image
-        from: 20
-        slot: 6
-        visual_intent: "決め文。配信者の部屋、モニターを消して静かに座る人物の後ろ姿"
-        gen_prompt: "a person sitting quietly in a dark room after turning off the monitor, only a faint blue afterglow on the desk, headphones set down, seen from behind, calm and still"
-        search_query: "person sitting quietly dark room monitor off"
-        assets:
-          - url: "https://www.pexels.com/photo/silhouette-of-a-person-working-on-computers-in-a-dimly-lit-office-environment-1334093/"
-            kind: image
-            license: commercial-ok
-            source_name: "Pexels"
-          - url: "https://www.pexels.com/photo/silhouette-of-a-man-using-a-smartphone-in-a-dark-room-with-computer-screen-lighting-17486595/"
-            kind: image
-            license: commercial-ok
-            source_name: "Pexels"
-        cut_reason: "【決め文】「事実の名前だ。」で画面保持＋長い間"
-
-      - type: image
-        from: 22
-        slot: 7
-        visual_intent: "最後の象徴的な一枚絵。夜明け前の窓辺、将棋盤と、その隣に置かれたヘッドホン"
-        gen_prompt: "a shogi board by a window before dawn with a pair of modern headphones resting beside it, first pale light on the wood, piece characters blurred and unreadable, no people"
-        search_query: "shogi board window dawn headphones"
-        cut_reason: "【結び】400年前の将棋と現代の配信を同じ窓辺に静かに置いて終える。アウトロ 8 秒"
+    - type: chapter
+      slot: 1
+      cut_reason: 章の頭
+    - type: image
+      from: 1
+      slot: 2
+      visual_intent: 家康が大橋宗桂に扶持を与える場面（シーン3ビート3の再提示）。払う側＝幕府の動機の導入
+      gen_prompt: an Edo-period lord seated on a raised dais handing a folded document of stipend to a kneeling shogi player before him, gold folding screens behind, candlelight, seen from a respectful distance, no text, no lettering
+      search_query: edo lord granting stipend shogi
+      cut_reason: 【払う側の動機・幕府】キュー1〜3は家康の扶持の場面（シーン3ビートの再提示）
+    - type: image
+      from: 4
+      slot: 9
+      visual_intent: 御城将棋の広間（シーン3ビート5の再提示）。幕府が観客であり評価者である場面
+      gen_prompt: a formal ceremony in a large Edo castle hall, rows of samurai seated in silence, a shogi board at the center under the gaze of the shogun on a dais, muted ink-wash and gold tones, wide shot
+      search_query: edo castle hall shogi ceremony
+      cut_reason: 【分割】御城将棋の年中行事へ場面が広がる（シーン3ビートの再提示）。キュー4〜6
+    - type: image
+      from: 7
+      slot: 3
+      visual_intent: 明治後期の新聞社の印刷所（シーン4の再提示）。新聞の動機＝部数
+      gen_prompt: a late Meiji-era newspaper printing room with a large rotary press and stacks of freshly printed papers, workers in the background, newsprint text blurred and unreadable, warm gaslight
+      search_query: meiji newspaper printing press
+      cut_reason: 【払う側の動機・新聞】主体が幕府から新聞へ転換（シーン4ビートの再提示）
+    - type: image
+      from: 9
+      slot: 4
+      visual_intent: 特別列車から降りるサポーターの群衆（シーン5の再提示）。鉄道の動機＝乗客
+      gen_prompt: a Victorian steam train at a busy station platform with a crowd of football supporters in caps and scarves pouring out of the carriages, steam and soot, sepia tones, no readable signage
+      search_query: victorian steam train football supporters
+      cut_reason: 【払う側の動機・鉄道】1文だけ特別列車の画で受ける（シーン5ビートの再提示）
+    - type: diagram
+      from: 10
+      slot: 5
+      gen_prompt: a packed crowd of working men in flat caps watching a football match in a northern English industrial town in the 1880s, smoke from factory chimneys, muddy pitch, engraving-like tones, no readable text
+      cut_reason: 【払う仕組みの成立条件】「見たい人が集まる」と「注目を利益に換える誰か」の二条件が合流して初めて仕組みができる、という構造が知見そのもの。背景は1880年代の観客席（シーン5ビートの再提示）。決め文「払う仕組みができる。」で保持
+      diagram:
+        type: narrative
+        layout: converge
+        items:
+        - id: want
+          text: 見たい人が集まる
+          at: 12
+          after: 見たい人が
+        - id: broker
+          text: 注目を換える誰か
+          at: 13
+          after: 換えられる
+        result:
+          text: 払う仕組みができる
+          at: 14
+          after: そのとき
+    - type: image
+      from: 15
+      slot: 6
+      visual_intent: 満員のスタジアムと巨大スクリーン（シーン10の再提示）。なぜ人は見たいのか
+      gen_prompt: a packed modern stadium at night with a giant screen glowing above the crowd, seen from high in the stands, screen content blurred, sea of lights
+      search_query: packed stadium night crowd
+      cut_reason: 【なぜ見たいのか】観客側の欲求の話へ転換（シーン10ビートの再提示）。エリアスとダニングの説明まで保持
+    - type: image
+      from: 17
+      slot: 10
+      visual_intent: 1880年代の工業都市の観客席、労働者の群衆（シーン2ビート3の再提示）。安全に興奮できる場
+      gen_prompt: a crowd of working-class men in flat caps packed along the rope of a football pitch in an 1880s northern English industrial town, factory chimneys behind, engraving-like muted tones, no readable text
+      search_query: 1880s football crowd industrial town
+      cut_reason: 【分割】「安全に興奮できる場」「勝敗の行方が分からない緊張」を観客の群衆で受ける（シーン2ビートの再提示）。キュー17〜18
+    - type: image
+      from: 19
+      slot: 7
+      visual_intent: レコード店で同じ一枚を手に取る客の列（シーン10の再提示）。語り合いたい欲求
+      gen_prompt: a crowded 1950s record shop with many customers reaching for copies of the same record from a display, record sleeves plain and unreadable, warm tungsten light
+      search_query: 1950s record shop crowd
+      cut_reason: 【語り合いたい】アドラーの消費資本の話を同じ一枚を選ぶ群衆で受ける（シーン10ビートの再提示）
+    - type: image
+      from: 22
+      slot: 8
+      visual_intent: 配信画面の端に流れる投げ銭の通知（シーン1の再提示）。注目の対価、を現代で受ける
+      gen_prompt: a close-up of a computer monitor edge in a dark room showing a small glowing notification popup with unreadable blurred text, a hand resting on a mouse
+      search_query: streamer monitor notification night
+      cut_reason: 【注目の対価】決め文「注目の対価だ。」で保持し、投げ銭と扶持を同じものとして見せて章を閉じる（シーン1ビートの再提示）
+  - id: 14
+    title: 結論（冒頭の配信者へ戻る → 問いに答える）
+    readings:
+    - surface: 金
+      reading: カネ
+    - surface: 数十人
+      reading: スウジュウニン
+    narration:
+    - text: 冒頭の配信者に戻ろう。
+      pause_after: 0.2
+    - text: 深夜2時、数十人の視聴者、500円の投げ銭。
+      pause_after: 0.2
+    - text: この人は、プロなのか。
+      pause_after: 0.8
+    - text: 三つの層で見ると、答えははっきりする。
+      pause_after: 0.2
+    - text: 払う仕組みは、ある。
+      pause_after: 0.2
+    - text: 投げ銭と、広告収入だ。
+      pause_after: 0.2
+    - text: 複製技術も、ある。
+      pause_after: 0.2
+    - text: 配信そのものが、観客の上限を外している。
+      pause_after: 0.2
+    - text: だが、認定と排除の装置だけが、まだない。
+      pause_after: 0.2
+    - text: 四段も、協会も、アマチュア規定もない。
+      pause_after: 0.2
+    - text: 曖昧なのは、この人がプロかどうかではない。
+      pause_after: 0.2
+    - text: プロと呼ぶかどうか、のほうだ。
+      pause_after: 0.2
+    - text: 経済的には、プロはもう生まれている。
+      pause_after: 0.6
+    - text: 資格がないからプロではない、という考えは、順序が逆だ。
+      pause_after: 2.0
+    - text: 1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。
+      pause_after: 1.0
+    - text: この動画の問いに、答えよう。
+      pause_after: 0.2
+    - text: なぜ競技にはプロが生まれるのか。
+      pause_after: 0.2
+    - text: 強い人がいるからではない。
+      pause_after: 0.2
+    - text: その技が集める注目に、誰かが払い始め、それが仕組みになったからだ。
+      pause_after: 0.2
+    - text: 装置はあとから地位を固め、複製技術はあとから規模を増やす。
+      pause_after: 0.8
+    - text: プロとは、腕前の証明書ではない。
+      pause_after: 0.2
+    - text: あなたの技に、誰かが金を払い続ける仕組みができた、という事実の名前だ。
+      pause_after: 2.5
+    - text: あなたが今、金にならないと思いながら続けている何かも、払い続ける誰かが現れ、それが仕組みになったとき、職業になる。
+      pause_after: 0.2
+    - text: 400年前の将棋が、そうだったように。
+    beats:
+    - type: image
+      from: 1
+      slot: 1
+      visual_intent: シーン1と同じ深夜の配信部屋（同じ素材の再提示可）
+      gen_prompt: a person seen from behind playing a video game late at night in a dark room, lit only by the monitor glow, a small webcam on the desk, screen contents blurred and unreadable, cool blue light
+      search_query: person streaming video game dark room night
+      assets:
+      - url: https://www.pexels.com/photo/side-view-of-a-gamer-wearing-a-cap-and-headphones-10350851/
+        kind: image
+        license: commercial-ok
+        source_name: Pexels
+      - url: https://www.pexels.com/photo/young-man-focused-on-gaming-with-headset-sitting-at-a-computer-9072271/
+        kind: image
+        license: commercial-ok
+        source_name: Pexels
+      cut_reason: 【冒頭への回帰】キュー1〜3で場面を戻す。シーン1ビート1と同じ画の再提示
+    - type: image
+      from: 4
+      slot: 2
+      visual_intent: 配信画面の端の通知と、机の上の何もない場所（装置がない）。手元
+      gen_prompt: 'a close-up of a streamer''s desk at night: a glowing monitor edge with an unreadable notification, a microphone, and an empty space on the desk where nothing sits, cool blue light'
+      search_query: streamer desk night monitor notification microphone
+      telop: ① 払う仕組み：ある ／ ② 認定と排除の装置：まだない ／ ③ 複製技術：ある
+      cut_reason: 【三層の当てはめ・その1】telop で三層の答え合わせを出す。「三つの層で見ると、答えははっきりする。払う仕組みは、ある。投げ銭と、広告収入だ。複製技術も、ある。配信そのものが、観客の上限を外している。」を受ける
+    - type: image
+      from: 9
+      slot: 3
+      visual_intent: 認定と排除の装置がまだない、を壁の何もない空間で直接描写
+      gen_prompt: a close-up of an empty corner of a streamer's desk at night, bare wall behind in monitor glow, no certificate, no badge, no framed license, cool blue light
+      search_query: empty bare wall desk corner monitor glow night
+      cut_reason: 【分割】元ビート2の40秒超を節目で分割。「だが、認定と排除の装置だけが、まだない。四段も、協会も、アマチュア規定もない。だから、この人がプロかどうかは、曖昧に見える。」を受ける
+    - type: image
+      from: 12
+      slot: 4
+      visual_intent: 社会の装置が追いついていない、という「まだ」を、手が止まった静止で直接描写
+      gen_prompt: the same streamer's desk at night, a hand paused over the keyboard, monitor still glowing, contemplative stillness, cool blue light
+      search_query: hand paused keyboard streamer desk night stillness
+      cut_reason: 【分割】「経済的には、プロは生まれ始めている。ただ、それをプロと呼ぶ社会の側の装置が、まだ追いついていない。1885年のフットボール協会が、しぶしぶプロを認めたときと、同じ段階にいる。」を受け、「同じ段階にいる。」まで保持
+    - type: image
+      from: 16
+      slot: 5
+      visual_intent: 問いへの答え。将棋・フットボール・音楽の三場面を1枚に混ぜず、江戸城の対局（シーン3ビート1）を再提示
+      gen_prompt: an early Edo-period Japanese castle interior, two men playing shogi on the tatami while a lord watches from a raised seat, gold folding screens, candlelight, seen from a distance, no readable text
+      search_query: edo castle interior shogi players lord watching
+      cut_reason: 【問いへの答え】問いへの答えを、最初の歴史場面で受ける。シーン3ビート1と同じ画の再提示
+    - type: image
+      from: 21
+      slot: 6
+      visual_intent: 決め文。配信者の部屋、モニターを消して静かに座る人物の後ろ姿
+      gen_prompt: a person sitting quietly in a dark room after turning off the monitor, only a faint blue afterglow on the desk, headphones set down, seen from behind, calm and still
+      search_query: person sitting quietly dark room monitor off
+      assets:
+      - url: https://www.pexels.com/photo/silhouette-of-a-person-working-on-computers-in-a-dimly-lit-office-environment-1334093/
+        kind: image
+        license: commercial-ok
+        source_name: Pexels
+      - url: https://www.pexels.com/photo/silhouette-of-a-man-using-a-smartphone-in-a-dark-room-with-computer-screen-lighting-17486595/
+        kind: image
+        license: commercial-ok
+        source_name: Pexels
+      cut_reason: 【決め文】「事実の名前だ。」で画面保持＋長い間
+    - type: image
+      from: 23
+      slot: 7
+      visual_intent: 最後の象徴的な一枚絵。夜明け前の窓辺、将棋盤と、その隣に置かれたヘッドホン
+      gen_prompt: a shogi board by a window before dawn with a pair of modern headphones resting beside it, first pale light on the wood, piece characters blurred and unreadable, no people
+      search_query: shogi board window dawn headphones
+      cut_reason: 【結び】400年前の将棋と現代の配信を同じ窓辺に静かに置いて終える。アウトロ 8 秒
