@@ -42,6 +42,6 @@
 ■ クレジット
 ナレーション: Google Cloud Text-to-Speech
 BGM: 「遠く、祈りの果て」のる（DOVA-SYNDROME）
-映像: AIによる生成画像（一部 Pixabay / Pexels）
+映像: AIによる生成画像
 
 #将棋 #プロフェッショナル #スポーツ史 #経済学 #歴史
