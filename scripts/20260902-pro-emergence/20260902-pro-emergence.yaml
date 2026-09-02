@@ -8,6 +8,8 @@ scenes:
   - id: 1
     title: "フック（深夜の配信者 → 将棋のくっきりした線 → 問い）"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "奨励会"
         reading: "ショウレイカイ"
       - surface: "四段"
@@ -127,6 +129,8 @@ scenes:
   - id: 2
     title: "問題提起（強さとプロは別物 → 三つの説の提示）"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "将棋指し"
         reading: "ショウギサシ"
     narration:
@@ -256,6 +260,8 @@ scenes:
     title: "説①の検証・将棋の起源（章「将棋のプロは、誰が作ったのか」）"
     chapter_title: "将棋のプロは、誰が作ったのか"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "慶長"
         reading: "ケイチョウ"
       - surface: "大橋宗桂"
@@ -373,6 +379,12 @@ scenes:
   - id: 4
     title: "断絶と再生（幕府 → 新聞）"
     readings:
+      - surface: "契約金"
+        reading: "ケイヤクキン"
+      - surface: "資金"
+        reading: "シキン"
+      - surface: "金"
+        reading: "カネ"
       - surface: "十一世"
         reading: "ジュウイッセイ"
       - surface: "伊藤宗印"
@@ -509,6 +521,8 @@ scenes:
     title: "フットボールのプロ容認（章「スポーツでも、同じことが起きたのか」）"
     chapter_title: "スポーツでも、同じことが起きたのか"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "FA"
         reading: "エフエー"
     narration:
@@ -644,6 +658,14 @@ scenes:
   - id: 6
     title: "反転（アマチュアリズムの正体 → 説②の登場）"
     readings:
+      - surface: "賞金"
+        reading: "ショウキン"
+      - surface: "賃金"
+        reading: "チンギン"
+      - surface: "金メダリスト"
+        reading: "キンメダリスト"
+      - surface: "金"
+        reading: "カネ"
       - surface: "ローイング"
         reading: "ローイング"
       - surface: "職工"
@@ -809,6 +831,8 @@ scenes:
   - id: 7
     title: "説②の検討（ウィレンスキーの順序 → 装置は固めるが生まない）"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "二人"
         reading: "フタリ"
       - surface: "ウィレンスキー"
@@ -956,6 +980,8 @@ scenes:
     title: "音楽家の移動（章「音楽家は、いつ使用人でなくなったのか」）"
     chapter_title: "音楽家は、いつ使用人でなくなったのか"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "エステルハージ"
         reading: "エステルハージ"
       - surface: "副楽長"
@@ -1078,6 +1104,10 @@ scenes:
   - id: 9
     title: "楽譜・著作権・画商（複製が開いた道と、その不安定さ）"
     readings:
+      - surface: "年金"
+        reading: "ネンキン"
+      - surface: "金"
+        reading: "カネ"
       - surface: "アン法"
         reading: "アンホウ"
       - surface: "大バッハ"
@@ -1365,6 +1395,12 @@ scenes:
   - id: 11
     title: "反証と留保（ボーモルのコスト病 → プロは状態である）"
     readings:
+      - surface: "契約金"
+        reading: "ケイヤクキン"
+      - surface: "賞金"
+        reading: "ショウキン"
+      - surface: "賃金"
+        reading: "チンギン"
       - surface: "ボーモル"
         reading: "ボーモル"
       - surface: "ボウエン"
@@ -1487,6 +1523,8 @@ scenes:
     title: "三説の決着（章「三つの説の、どれが正しいのか」）"
     chapter_title: "三つの説の、どれが正しいのか"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "三つの層"
         reading: "ミッツノソウ"
     narration:
@@ -1584,6 +1622,8 @@ scenes:
   - id: 13
     title: "結論（冒頭の配信者へ戻る → 問いに答える）"
     readings:
+      - surface: "金"
+        reading: "カネ"
       - surface: "数十人"
         reading: "スウジュウニン"
     narration:
