@@ -23,7 +23,7 @@
 - 「（間 2.0）」は決め文の後の保持。
 - 立ち絵の表情:
   - ずんだもん: normal / smile / delighted / surprised / confused / thinking / angry / sad / sleepy / shy / smug / point / whisper
-  - めたん: normal / explain（指差し） / smile / delighted / surprised / confused / thinking / angry / sad / sleepy / shy / smug / whisper
+  - めたん: normal / explain（指差し・口開き） / point（指差し・口閉じ） / serious（引き締めた顔） / smile / delighted / surprised / confused / thinking / angry / sad / sleepy / shy / smug / whisper
 
 > 対になるシーン YAML: `scripts/20260904-dopagaki-kamishibai/20260904-dopagaki-kamishibai.yaml`（紙芝居モードのスキーマ確定後に作成）
 
