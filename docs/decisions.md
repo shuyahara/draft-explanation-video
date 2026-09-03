@@ -26,3 +26,4 @@
 | 2026-09-01 | 本編字幕・章カードの折り返しを budoux による文節単位＋禁則処理に変更（行頭の句読点・語句途中の改行を解消。折り返しロジックは `text_wrap.py` に一本化） | 試写で句読点の行頭落ち・単語分断が視認性を損なうというユーザー指摘 | — | script-to-video 4082536, 973e9ea |
 | 2026-09-01 | 素材収集は「まずストック検索（`tools/stock_search.py`、Pixabay/Pexels API）→ 実写で足りればストック採用、足りなければ生成」を可とする。Codex への検索委譲は不採用（`codex exec` が検索非対応・ライセンス転記の確実性が低い） | 生成コストと検品の手間を削減。API 応答が一次情報でライセンス保証が確実 | — | docs/asset-workflow.md, script-to-video tools/stock_search.py |
 | 2026-09-01 | ショートの焼き込み字幕・末尾CTAの縦位置は MarginV 560（1080×1920・下中央揃え）を標準とする | YouTube Shorts の下部UI帯（タイトル・チャンネル名等、下端約480px）と字幕が被った試写FB。CTA（旧MarginV 90）は共有バーの下でほぼ不可視だった | — | build/{ショート}/gen_ass.py（踏襲元: dopagaki-short1） |
+| 2026-09-03 | 読み上げは GCP の話速 1.1（`--tts-rate 1.1`、script-to-video 14b6a38）を標準にし、`pause_after` は一段長く設計する（文境界 0.35・段落 0.8〜1.0・決め文 2.5〜3.0・章転換 1.8〜2.0・問いかけ後 1.0 以上） | 「プロ発生論」v5 試写FB: 1.1倍で読みは良くなったが呼吸の間が短い。speakingRate は読点の間も縮め、`pause_after` は縮まないため間の設計で補う（GCP では `pause_scale` は無効） | #22 | docs/narration-style.md |
