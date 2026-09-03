@@ -232,8 +232,9 @@ scenes:
     credit: 'Photo: Tima Miroshnichenko / Pexels'
     telop: Schultz et al., Science (1997)
   - type: board
-    cut_reason: 【奇妙なこと】写真をはずし、話に集中させる（合図→ジュースの説明）
+    cut_reason: 【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す
     from: 9
+    telop: 合図 → ジュース ／ 発火は「合図」の瞬間へ移る
   - type: board
     cut_reason: 【報酬予測誤差】黒板に用語を書く
     from: 17
