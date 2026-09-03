@@ -5,14 +5,15 @@
 
 ■ チャプター
 0:00 深夜の配信者、この人はプロなのか
-1:06 強さとプロは別物 三つの説
-2:32 将棋のプロは、誰が作ったのか
-6:13 スポーツでも、同じことが起きたのか
-8:23 反転 アマチュアリズムの正体
-12:57 音楽家は、いつ使用人でなくなったのか
-19:14 反証と留保 プロは状態である
-20:50 三つの説の、どれが正しいのか
-22:26 結論 冒頭の配信者へ戻る
+0:57 強さとプロは別物 三つの説
+2:12 将棋のプロは、誰が作ったのか
+5:31 スポーツでも、同じことが起きたのか
+7:29 反転 アマチュアリズムの正体
+11:42 音楽家は、いつ使用人でなくなったのか
+17:21 反証と留保 プロは状態である
+18:45 三つの説の、どれが正しいのか
+20:15 払う仕組みは、なぜ生まれるのか
+22:13 結論 冒頭の配信者へ戻る
 
 ■ 主な出典
 ・日本将棋連盟「将棋の歴史」「日本将棋の歴史（3）（20）」 https://www.shogi.or.jp/history/story/
@@ -38,6 +39,7 @@
 ・Adler, M. (1985). Stardom and Talent. American Economic Review, 75(1), 208–212.
 ・Baumol, W. J., & Bowen, W. G. (1966). Performing Arts: The Economic Dilemma. Twentieth Century Fund.
 ・Wilensky, H. L. (1964). The Professionalization of Everyone? American Journal of Sociology, 70(2), 137–158.
+・Elias, N., & Dunning, E. (1986). Quest for Excitement: Sport and Leisure in the Civilizing Process. Basil Blackwell.
 
 ■ クレジット
 ナレーション: Google Cloud Text-to-Speech
