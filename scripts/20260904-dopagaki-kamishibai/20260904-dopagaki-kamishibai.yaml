@@ -195,7 +195,7 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.4
-  - text: 消える？ ジュースはもらってるのに、なのだ？
+  - text: 消えるのだ？ ジュースは、ちゃんともらってるのに？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -365,7 +365,7 @@ scenes:
     pause_after: 0.4
   - text: ずんだもんの脳、壊れてないのだ。
     speaker: ずんだもん
-    expression: smile
+    expression: delighted
     pause_after: 0.4
   - text: 少なくとも、この数字だけでは、「脳が壊れた」証拠にはならないわ。……それでも、どうして私たちは、「若者の脳が壊れた」という話を信じたくなるのかしら。
     speaker: めたん
@@ -549,9 +549,17 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: こういう繰り返しには、社会学の名前があるの。モラルパニック。1972年に、社会学者スタンリー・コーエンが名付けた言葉よ。何かを社会の脅威として祭り上げて、メディアがあおって、世論が恐れて、規制まで動く。若者の新しい楽しみは、いつの時代も、その標的になりやすかったの。
+  - text: こういう繰り返しには、社会学の名前があるの。モラルパニック。1972年に、社会学者スタンリー・コーエンが名付けた言葉よ。
     speaker: めたん
     expression: explain
+    pause_after: 0.4
+  - text: モラル、パニック。……みんなで慌てる、って感じなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.4
+  - text: 近いわ。何かを社会の脅威として祭り上げて、メディアがあおって、世論が恐れて、規制まで動く。若者の新しい楽しみは、いつの時代も、その標的になりやすかったの。
+    speaker: めたん
+    expression: point
     pause_after: 0.4
   - text: 文字、小説、漫画、そしてショート動画。……じゃあ今回もまた、ただの騒ぎなのだ？
     speaker: ずんだもん
@@ -597,7 +605,7 @@ scenes:
     telop: moral panic（Cohen, 1972）
   - type: board
     cut_reason: 【系譜が伸びる】文字→小説→漫画→学力
-    from: 30
+    from: 33
     telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？'
 - id: 8
   title: 反証の検討（何かは起きている。しかし）
@@ -631,9 +639,17 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: プラットフォームの内側からも、警告は出ている。2021年、フェイスブックの元社員、フランシス・ハウゲンが、内部文書を持って議会で証言したの。表示する内容を自動で選ぶ仕組み、アルゴリズムが10代の心の健康を害しうると、会社は社内調査で知っていた、という内容よ。SNS全般の話で、ショート動画そのものの証拠ではないけれどね。
+  - text: プラットフォームの内側からも、警告は出ている。2021年、フェイスブックの元社員、フランシス・ハウゲンが、内部文書を持って議会で証言したの。
     speaker: めたん
     expression: serious
+    pause_after: 0.4
+  - text: 中の人が、なのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.4
+  - text: そう。表示する内容を自動で選ぶ仕組み、アルゴリズムが10代の心の健康を害しうると、会社は社内調査で知っていた、という内容よ。SNS全般の話で、ショート動画そのものの証拠ではないけれどね。
+    speaker: めたん
+    expression: explain
     pause_after: 0.4
   - text: じゃあ、何も起きていない、とは言えないのだ。
     speaker: ずんだもん
@@ -647,13 +663,21 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
-  - text: もうひとつ、規模を考える手がかりがあるわ。オックスフォード大学のオーベンとプシビルスキは、35万人分のデータを解析したの。ショート動画に限らない、デジタル機器全般の研究だから直接の比較はできないけれど、若者の幸福度への影響は、あったとしても、変動のわずか0.4パーセントほどだった。
+  - text: もうひとつ、規模を考える手がかりがあるわ。オックスフォード大学のオーベンとプシビルスキは、35万人分のデータを解析したの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.4
+  - text: 35万人！
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.4
+  - text: ショート動画に限らない、デジタル機器全般の研究だから、直接の比較はできないけれど。若者の幸福度への影響は、あったとしても、変動のわずか0.4パーセントほどだった。
     speaker: めたん
     expression: explain
     pause_after: 0.4
   - text: 0.4パーセント……。
     speaker: ずんだもん
-    expression: surprised
+    expression: confused
     pause_after: 0.4
   - text: ここで一度、整理するわ。関連は、ある。因果の向きは、決められない。規模も、大きいとは言えない。
     speaker: めたん
@@ -696,15 +720,15 @@ scenes:
     telop: 米上院 商務委員会 公聴会 (2021)
   - type: board
     cut_reason: 【ただし】因果の向きは決められない
-    from: 23
+    from: 25
     telop: 関連：ある（中程度）／ 因果：決められない
   - type: board
     cut_reason: 【規模の数字】0.4%
-    from: 29
+    from: 31
     telop: Orben & Przybylski (2019)：影響は最大 0.4%
   - type: board
     cut_reason: 【整理】判定ボード3行そろう。決め文まで保持
-    from: 33
+    from: 37
     telop: 関連：ある（中程度）／ 因果：決められない ／ 規模：大きくない
 - id: 9
   title: 真因（wanting を突く設計）
@@ -722,9 +746,17 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
-  - text: 何回押せば出るか分からないレバー。報酬が予測できないと、動物はいちばん速く、いちばんしつこくレバーを押し続ける。報酬が止まっても、なかなかやめないの。これを可変比率強化と呼ぶわ。スロットマシンが人を離さない理由の説明として、長く使われてきた仕組みよ。
+  - text: 何回押せば出るか分からないレバー。報酬が予測できないと、動物はいちばん速く、いちばんしつこくレバーを押し続ける。報酬が止まっても、なかなかやめないの。
     speaker: めたん
     expression: point
+    pause_after: 0.4
+  - text: 出ないのに、押し続けるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.4
+  - text: そう。これを可変比率強化と呼ぶわ。スロットマシンが人を離さない理由の説明として、長く使われてきた仕組みよ。
+    speaker: めたん
+    expression: explain
     pause_after: 0.4
   - text: 何回引けば当たるか分からない……ガチャなのだ。
     speaker: ずんだもん
@@ -746,9 +778,13 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: 誰にも分からない。そう設計されているから。2023年には、ブリティッシュコロンビア大学でギャンブルを研究するクラークたちも、報酬の予測できなさが、ギャンブルだけでなく、SNSなどへの依存的な行動にも共通する条件になりうる、と論じているわ。
+  - text: 誰にも分からない。そう設計されているから。
     speaker: めたん
     expression: serious
+    pause_after: 0.35
+  - text: 2023年には、ブリティッシュコロンビア大学でギャンブルを研究するクラークたちも、報酬の予測できなさが、ギャンブルだけでなく、SNSなどへの依存的な行動にも共通する条件になりうる、と論じているわ。
+    speaker: めたん
+    expression: explain
     pause_after: 0.35
   - text: しかもスマホの画面は、やめるきっかけになる段差まで、減らしているの。ページの終わりは無限スクロールで消えて、動画の切れ目も、自動再生で埋まる。
     speaker: めたん
@@ -784,26 +820,26 @@ scenes:
     telop: 可変比率強化（Ferster & Skinner, 1957）
   - type: image
     cut_reason: 【スロットマシン】カジノ
-    from: 10
+    from: 12
     slot: 2
     credit: 'Photo: Vanessa V. / Pexels'
   - type: image
     cut_reason: 【あなたのスマホ】フィードを親指で払う手元
-    from: 18
+    from: 20
     slot: 3
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
   - type: board
     cut_reason: 【設計】写真をはずし、出典を黒板に
-    from: 24
+    from: 26
     telop: Clark & Zack, Addictive Behaviors (2023)
   - type: image
     cut_reason: 【段差の除去】無限スクロールの手元（再掲）
-    from: 27
+    from: 29
     slot: 4
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
   - type: board
     cut_reason: 【決め文】長い決め文をチョークで短く残す
-    from: 33
+    from: 35
     telop: 急所を、正確に突く画面
 - id: 10
   title: 結論（問いに答え、冒頭に戻る）
@@ -857,7 +893,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: スマホを、寝室の外で充電する、なのだ。
+  - text: スマホは、寝室の外で充電するのだ。
     speaker: ずんだもん
     expression: point
     pause_after: 0.4
@@ -879,7 +915,7 @@ scenes:
     pause_after: 0.4
   - text: ……今夜は、スマホを居間で充電するのだ。
     speaker: ずんだもん
-    expression: smile
+    expression: shy
     pause_after: 0.4
   - text: おやすみ、ずんだもん。
     speaker: めたん
