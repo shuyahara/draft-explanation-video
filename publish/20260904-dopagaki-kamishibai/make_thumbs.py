@@ -394,6 +394,35 @@ def make_thumb_f() -> tuple[Image.Image, dict]:
     return bg, info
 
 
+# ============================================================
+# G: E の写真＋A と同じ堂々とした人形配置（ユーザーFB）
+# ============================================================
+
+def make_thumb_g() -> tuple[Image.Image, dict]:
+    """G: 背景は E と同じ写真・暗幕。人形は D/E の「角に小さく」ではなく、A と同じ配置・大きさ
+    （画面高の75〜85%、堂々と立つ）。見出しは人形の体には重なってよいが顔には掛けない位置まで
+    下げる。"""
+
+    bg = cover_fit(Image.open(PHOTO_E), W, H)
+    darken(bg, 0.42)
+
+    # A と同じ大きさ・左右比率（A の board 幅はキャンバス幅の92.7%とほぼ全面なので、比率は
+    # そのままキャンバス幅基準で流用できる）。足元は指示通り画面下端（D/E と同じ0マージン）。
+    metan_h = round(H * 0.83)
+    zun_h = round(H * 0.78)
+    metan = load_puppet("metan", "explain", metan_h)
+    zun = load_puppet("zundamon", "confused", zun_h)
+    metan_cx = round(W * 0.255)
+    zun_cx = round(W * 0.745)
+    paste(bg, metan, metan_cx - metan.width / 2, H - metan.height)
+    paste(bg, zun, zun_cx - zun.width / 2, H - zun.height)
+
+    # 見出しは顔（人形上部）を避けて下寄りに置く。A の人形は上半身の上に顔があるため、
+    # block_top が顔の下端より下に来るよう block_center_y を高めに取る。
+    info = fit_and_draw_headline(bg, W // 2, round(H * 0.665))
+    return bg, info
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
@@ -401,12 +430,14 @@ if __name__ == "__main__":
     d, info_d = make_thumb_d()
     e, info_e = make_thumb_e()
     f, info_f = make_thumb_f()
+    g, info_g = make_thumb_g()
 
     for img, name in ((a, "thumb-A.png"), (b, "thumb-B.png"), (c, "thumb-C.png"),
-                       (d, "thumb-D.png"), (e, "thumb-E.png"), (f, "thumb-F.png")):
+                       (d, "thumb-D.png"), (e, "thumb-E.png"), (f, "thumb-F.png"),
+                       (g, "thumb-G.png")):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
         print(f"{path}: {img.size} mode={img.mode} -> {size_kb:.1f} KB")
 
-    for name, info in (("D", info_d), ("E", info_e), ("F", info_f)):
+    for name, info in (("D", info_d), ("E", info_e), ("F", info_f), ("G", info_g)):
         print(f"{name} headline: {info}")

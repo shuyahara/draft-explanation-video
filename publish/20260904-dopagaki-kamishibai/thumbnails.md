@@ -1,7 +1,8 @@
 # サムネイル候補（ドパガキ・紙芝居版）
 
-`make_thumbs.py` で生成。1280x720 PNG、A〜F の6案（D/E/F はユーザーFB反映で追加。黒板を
-使わず「象徴する写真を画面いっぱい」に敷く案）。
+`make_thumbs.py` で生成。1280x720 PNG、A〜G の7案（D/E/F はユーザーFB反映で追加。黒板を
+使わず「象徴する写真を画面いっぱい」に敷く案。G はさらに「E の写真＋A の人形配置」の
+組み合わせ案）。
 
 | 案 | ファイル | 狙い | 使用素材 | 文言 |
 |---|---|---|---|---|
@@ -11,6 +12,7 @@
 | D | `thumb-D.png` | 写真全面＋大見出し。夜ふかしでスマホを見る場面（動画冒頭のフック場面）を画面いっぱいに敷き、黒板を使わない直球構図。 | `photos/candidates-v4/bed/bed-woman-lamp-nightside.jpg`、metan/thinking.png、zundamon/sleepy.png | 「なぜ**ドパガキ**に」／「になってしまうのか？」（「ドパガキ」だけ黄・特大、他は白） |
 | E | `thumb-E.png` | 写真全面＋大見出し。明るいフィードを親指操作する手元（ショート動画そのもの）を敷く構図。写真が明るいぶん暗幕を強め。 | `photos/candidates-v4/thumb/thumb-photogrid-laptop-bright.jpg`、metan/point.png、zundamon/confused.png | 同上 |
 | F | `thumb-F.png` | D と同じ写真・暗幕で人形なし（比較用）。 | `photos/candidates-v4/bed/bed-woman-lamp-nightside.jpg` | 同上 |
+| G | `thumb-G.png` | E の写真＋暗幕はそのまま、人形だけ A と同じ堂々とした立ち姿（画面高75〜83%）に差し替えた案。見出しは顔にかからない位置まで下げてある。 | `photos/candidates-v4/thumb/thumb-photogrid-laptop-bright.jpg`、metan/explain.png、zundamon/confused.png | 同上 |
 
 ## 背景・演出
 
@@ -28,6 +30,12 @@
   下揃えで並べる。フォントサイズは横幅（左右マージン40px＝最大幅1200px）と2行合計の高さ
   （画面高の45〜55%）の両方に収まる最大値を二分探索で決めている（実測: 大文字201px・
   小文字111px、2行合計346px＝画面高の48.1%、左右マージン実測41.5px）。
+- G は D/E/F と同じ `fit_and_draw_headline` を使うが、人形が A と同じ大きさ（画面高83%/78%）
+  で顔の位置が高いため、見出しの縦中心（`block_center_y`）を D/E の 0.47H から 0.665H まで
+  下げ、見出しブロックの上端（≒305px）が両者の顔の下端より下に来るようにして、顔に文字が
+  掛からないようにした。人形の左右中心は A の黒板幅比（左23.5%・右76.5%相当）をキャンバス幅
+  にそのまま流用（A の黒板は元々キャンバス幅の92.7%を占めるため誤差は小さい）。足元は
+  D/E と同じく画面下端ぴったり（指示通り）。
 
 ## 妥協した点
 
