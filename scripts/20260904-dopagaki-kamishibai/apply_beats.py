@@ -144,9 +144,14 @@ BEATS = {
 
 
 def cues_of(scene) -> list[str]:
+    """字幕キューの本文列。分割規則は script-to-video の `text_cues.split_into_sentences` と
+    必ず同じものを使う（括弧内の 。！？ では切らない。ここがずれるとビート位置が全部ずれる）。"""
+    sys.path.insert(0, "C:/Users/shuya/Projects/script-to-video/src")
+    from script_to_video.text_cues import split_into_sentences
+
     out = []
     for seg in scene["narration"]:
-        out.extend(p for p in re.split(r"(?<=[。！？])", seg["text"]) if p.strip())
+        out.extend(p for p in split_into_sentences(seg["text"]) if p.strip())
     return out
 
 

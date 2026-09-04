@@ -154,18 +154,18 @@ scenes:
     credit: 'Photo: Muhamad Guruh Budi Hartono / Pexels'
   - type: image
     cut_reason: 【世界的な広がり】書影（実物）を貼る
-    from: 10
+    from: 8
     slot: 2
     credit: 'Book cover: Dopamine Nation, Anna Lembke (Dutton, 2021)'
     telop: Anna Lembke『Dopamine Nation』2021
   - type: image
     cut_reason: 【デトックス】スマホを引き出しにしまう手
-    from: 15
+    from: 13
     slot: 3
     credit: 'Photo: Eren Li / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずして間。反転の一撃
-    from: 19
+    from: 17
     telop: ドーパミン ≠ 快楽物質
 - id: 3
   title: 反転①前半（シュルツの報酬予測誤差）
@@ -320,12 +320,12 @@ scenes:
     telop: wanting（欲しい）／ liking（好き）
   - type: image
     cut_reason: 【冒頭の再演】昨夜のずんだもん＝冒頭の写真を再掲
-    from: 21
+    from: 20
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
   - type: board
     cut_reason: 【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる。章末の問いまで保持
-    from: 28
+    from: 27
     telop: 「溺れている」のではなく「空回りしている」
 - id: 5
   title: 「47秒」の誤読（グロリア・マーク）
@@ -416,17 +416,17 @@ scenes:
     telop: '2004年: 約2分半 → 近年: 平均47秒（中央値 40秒）'
   - type: image
     cut_reason: 【映画は2時間見られる】映画館
-    from: 20
+    from: 19
     slot: 2
     credit: 'Photo: Bence Szemerey / Pexels'
   - type: image
     cut_reason: 【本は1時間読める】読書の場面
-    from: 21
+    from: 20
     slot: 3
     credit: 'Photo: Ayşenur / Pexels'
   - type: board
     cut_reason: 【誤読の修正】写真をはずし、出典を残す
-    from: 26
+    from: 25
     telop: Gloria Mark『Attention Span』(2023)
 - id: 6
   title: 反転②前半（文字批判と読書熱）
@@ -492,22 +492,22 @@ scenes:
     telop: プラトン『パイドロス』274-275
   - type: board
     cut_reason: 【系譜の始まり】黒板に系譜の一本線を書き始める
-    from: 12
+    from: 11
     telop: '不安の系譜: 文字 →'
   - type: image
     cut_reason: 【読書熱】18世紀の読書する女性（絵画）
-    from: 15
+    from: 14
     slot: 2
     credit: Wikimedia Commons, Public Domain（Fragonard, The Reader, c.1770）
     telop: Lesewut（読書熱）18世紀末ドイツ
   - type: image
     cut_reason: 【疫病だと断じる本】古書の山
-    from: 18
+    from: 17
     slot: 3
     credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【同じ筋書き】写真をはずし、系譜を伸ばす
-    from: 22
+    from: 21
     telop: '不安の系譜: 文字 → 小説 →'
 - id: 7
   title: 反転②後半（ワーサムの捏造・日本の学力パニック・モラルパニック）
@@ -608,24 +608,24 @@ scenes:
     telop: Tilley, Information & Culture (2012)
   - type: board
     cut_reason: 【捏造の中身】写真をはずして聞かせる
-    from: 13
+    from: 12
   - type: image
     cut_reason: 【学力パニック】試験を受ける生徒たちの教室
-    from: 16
+    from: 15
     slot: 3
     credit: 'Photo: Kari Alfonso / Pexels'
     telop: 'PISA 読解力（OECD）2003年: 8位 → 14位'
   - type: board
     cut_reason: 【順位の上下】写真をはずし、黒板に順位の推移を一本で書く（犯人だけが入れ替わる型を見せる）
-    from: 21
+    from: 20
     telop: 'PISA 読解力 2003: 14位 → 2012: 4位 → 2018: 15位 → 2022: 3位'
   - type: board
     cut_reason: 【モラルパニック】用語を黒板に
-    from: 32
+    from: 31
     telop: moral panic（Cohen, 1972）
   - type: board
     cut_reason: 【系譜が伸びる】文字→小説→漫画→学力
-    from: 40
+    from: 39
     telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？'
 - id: 8
   title: 反証の検討（何かは起きている。しかし）
@@ -724,31 +724,31 @@ scenes:
     telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ショート動画？'
   - type: image
     cut_reason: 【メタ分析】学術誌の書架
-    from: 5
+    from: 4
     slot: 1
     credit: 'Photo: Pixabay'
     telop: Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人
   - type: board
     cut_reason: 【判定ボード1行目】関連：ある
-    from: 9
+    from: 8
     telop: 関連：ある（中程度）
   - type: image
     cut_reason: 【内部告発の証言】議会の建物
-    from: 19
+    from: 18
     slot: 2
     credit: 'Photo: Guohua Song / Pexels'
     telop: 米上院 商務委員会 公聴会 (2021)
   - type: board
     cut_reason: 【ただし】因果の向きは決められない
-    from: 28
+    from: 27
     telop: 関連：ある（中程度）／ 因果：決められない
   - type: board
     cut_reason: 【規模の数字】0.4%
-    from: 35
+    from: 34
     telop: Orben & Przybylski (2019)：影響は最大 0.4%
   - type: board
     cut_reason: 【整理】判定ボード3行そろう。決め文まで保持
-    from: 41
+    from: 40
     telop: 関連：ある（中程度）／ 因果：決められない ／ 規模：大きくない
 - id: 9
   title: 真因（wanting を突く設計）
