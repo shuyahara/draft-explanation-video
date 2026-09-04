@@ -585,7 +585,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
-  - text: そう言い切れたら、楽なんだけどね。
+  - text: ただ、そうも言い切れないところもあるのよ。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -643,7 +643,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 9万8千人。
+  - text: 9万8千人！すごいのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -699,7 +699,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: ここで一度、整理するわ。関連は、ある。因果の向きは、決められない。規模も、大きいとは言えない。
+  - text: ここで一度整理するわ。関連は、ある。でも、因果の向きは、決められない。規模も、大きいとは言えないのよ。
     speaker: めたん
     expression: point
     pause_after: 0.4
@@ -707,7 +707,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
-  - text: 何かは、起きている。しかし、若者の脳が壊れた、という強い物語を支えるほどの証拠は、今回も、まだ見つかっていない。
+  - text: 何かは起きているわ。でも、若者の脳が壊れた、という強い物語を支えるほどの証拠は、今回もまだ見つかっていないのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -730,25 +730,25 @@ scenes:
     telop: Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人
   - type: board
     cut_reason: 【判定ボード1行目】関連：ある
-    from: 8
+    from: 9
     telop: 関連：ある（中程度）
   - type: image
     cut_reason: 【内部告発の証言】議会の建物
-    from: 17
+    from: 18
     slot: 2
     credit: 'Photo: Guohua Song / Pexels'
     telop: 米上院 商務委員会 公聴会 (2021)
   - type: board
     cut_reason: 【ただし】因果の向きは決められない
-    from: 25
+    from: 26
     telop: 関連：ある（中程度）／ 因果：決められない
   - type: board
     cut_reason: 【規模の数字】0.4%
-    from: 31
+    from: 32
     telop: Orben & Przybylski (2019)：影響は最大 0.4%
   - type: board
     cut_reason: 【整理】判定ボード3行そろう。決め文まで保持
-    from: 37
+    from: 38
     telop: 関連：ある（中程度）／ 因果：決められない ／ 規模：大きくない
 - id: 9
   title: 真因（wanting を突く設計）
@@ -790,7 +790,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
-  - text: ずんだもんのスマホのフィードにも、似たところがあるわ。スロットとまったく同じ機械、とは言わない。でも指で払うたびに、次に何が出るか分からない。当たりの動画もあれば、外れもある。何回めくれば当たりが出るか、分かる？
+  - text: ずんだもんのスマホのフィードにも、似たところがあるわ。スロットとまったく同じ機械、とは言わないわ。でも指で払うたびに、次に何が出るか分からない。当たりの動画もあれば、外れもある。何回めくれば当たりが出るか、分かる？
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -798,7 +798,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: 誰にも分からない。そう設計されているから。
+  - text: 誰にも分からないわ。それはそう設計されているからなのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -806,11 +806,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: しかもスマホの画面は、やめるきっかけになる段差まで、減らしているの。ページの終わりは無限スクロールで消えて、動画の切れ目も、自動再生で埋まる。
+  - text: しかもスマホの画面は、やめるきっかけになる段差まで減らしているの。ページの終わりは無限スクロールで消えて、動画の切れ目も、自動再生で埋まる。
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 段差が消えるように、設計されてるのだ……。
+  - text: やめられないように、設計されてるのだ……。
     speaker: ずんだもん
     expression: angry
     pause_after: 0.4
@@ -818,11 +818,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.4
-  - text: ずんだもんは、負けたのは自分の脳だと思ってたのだ。
+  - text: 僕は、自分の脳が壊れたと思ってたのだ。悪いのは脳じゃなくて、画面設計の方なのだ？
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
-  - text: ドパガキという言葉は、その前提に立っている。でも、ずんだもんの目の前にあるのは、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる画面なのよ。
+  - text: その通り。ずんだもんが依存してるショート動画は、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる装置なのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -859,8 +859,8 @@ scenes:
     credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
     cut_reason: 【決め文】長い決め文をチョークで短く残す
-    from: 35
-    telop: 急所を、正確に突く画面
+    from: 37
+    telop: 急所を、正確に突く装置
 - id: 10
   title: 結論（問いに答え、冒頭に戻る）
   chapter_title: null
@@ -873,11 +873,11 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: 現代人の脳が弱くなったからではないし、ドーパミンの快楽に溺れているからでもないわ。「欲しい」を生む脳の仕組みは、大昔から変わっていない。はっきり変わったと言えるのは、環境のほう。予測できない報酬を無限に流して、やめる段差まで取り除いた画面が、ポケットに入ったの。
+  - text: 現代人の脳が弱くなったからではないし、ドーパミンの快楽に溺れているからでもないわ。「欲しい」を生む脳の仕組みは、大昔から変わっていない。はっきり変わったと言えるのは、環境のほう。予測できない報酬を無限に流して、やめる段差まで取り除いた画面が、ポケットに入ってしまったのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 弱くなったのは、あなたじゃない。強くなったのは、相手のほう。
+  - text: ずんだもんの脳が弱くなったんじゃないのよ。相手の方が強くなったのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -901,15 +901,15 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: 方向はひとつだけ、覚えておけばいいわ。意志の力だけで、刺激に勝とうとしないこと。段差を、自分の側に戻すこと。
+  - text: 方向はひとつだけ覚えておけばいいわ。意志の力だけで、刺激に勝とうとしないこと。段差を、自分の側に戻すこと。
     speaker: めたん
     expression: point
     pause_after: 0.4
-  - text: 段差を、戻す。
+  - text: 段差を、戻す。どういうことなのだ？
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: 通知をひとつ切る。アプリを、ホーム画面の奥にしまう。
+  - text: 通知をひとつ切る。アプリを、ホーム画面の奥にしまう。画面設計や仕組みの方から変えていくのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -952,19 +952,19 @@ scenes:
     from: 8
   - type: image
     cut_reason: 【対策】通知を切る手元
-    from: 25
+    from: 26
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【寝室の外で充電】置かれたスマホ
-    from: 27
+    from: 29
     slot: 3
     credit: 'Photo: Valentin Ilas / Pexels'
   - type: board
     cut_reason: 【救済の一文】写真をはずし、二人だけ
-    from: 33
+    from: 35
   - type: image
     cut_reason: 【朝】窓の外が明るむ寝室。アウトロで保持
-    from: 36
+    from: 38
     slot: 4
     credit: 'Photo: Chris Alo / Pexels'
