@@ -40,7 +40,7 @@ scenes:
     pause_after: 0.4
   - text: ショート動画を見ていたのだ。すぐ終わるのに、次が勝手に始まるから、延々と見ちゃうのだ〜。
     speaker: ずんだもん
-    expression: normal
+    expression: shy
     pause_after: 0.4
   - text: なるほどね。一度見始めると、止まらないわよね。
     speaker: めたん
@@ -56,11 +56,11 @@ scenes:
     pause_after: 0.4
   - text: 笑えるけど、ちょっと刺さるのだ。
     speaker: ずんだもん
-    expression: confused
+    expression: shy
     pause_after: 0.4
   - text: じゃあ今日は、その言葉を紐解いてみましょう。「なぜ現代人は、ドパガキになってしまうのか」について解説してあげるわ。
     speaker: めたん
-    expression: explain
+    expression: smug
     pause_after: 0.4
   - text: 答えは……僕の脳が弱いせい、なのだ？
     speaker: ずんだもん
@@ -333,7 +333,7 @@ scenes:
   narration:
   - text: でも、めたん。理屈はどうあれ、実際に集中力は落ちてるのだ。現代人の集中力は47秒しか続かないって、聞いたことがあるのだ。
     speaker: ずんだもん
-    expression: normal
+    expression: point
     pause_after: 0.4
   - text: その数字、ちゃんとした出どころがあるのよ。カリフォルニア大学アーバイン校のグロリア・マークは、20年以上、働く人がパソコンの画面をどれくらいで切り替えるか、調べてきたの。
     speaker: めたん
@@ -438,7 +438,7 @@ scenes:
     pause_after: 0.4
   - text: 文字まで心配されてたのだ？
     speaker: ずんだもん
-    expression: surprised
+    expression: confused
     pause_after: 0.4
   - text: 神は、「文字があれば、記憶も知恵も助けられる」と誇ったの。でも王は、こう答える。文字に頼れば、自分の頭で覚えようとしなくなって、忘れっぽくなる。内側から思い出すのではなく、外側の印に頼るようになる、と。
     speaker: めたん
@@ -563,7 +563,7 @@ scenes:
     pause_after: 0.4
   - text: スマホと、読書離れ。そして2022年、今度は3位に上がった。このときは、誰も「スマホのおかげ」とは言わなかったわね。
     speaker: めたん
-    expression: smile
+    expression: smug
     pause_after: 0.35
   - text: 順位は、調査のやり方や参加国の数でも動くもの。でも落ちるたびに犯人が用意されて、上がると忘れられる。この型のほうが、問題なのよ。
     speaker: めたん
@@ -645,7 +645,7 @@ scenes:
     pause_after: 0.4
   - text: 9万8千人！すごいのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: delighted
     pause_after: 0.4
   - text: 結論はこう。ショート動画をよく使う人ほど、注意力や、衝動を抑える力が低くて、不安や抑うつも強い傾向があった。関連の強さは中程度。無視できるほど小さくはないけれど、これだけですべてを説明できるほど強くもないわ。
     speaker: めたん
@@ -820,7 +820,7 @@ scenes:
     pause_after: 0.4
   - text: 僕は、自分の脳が壊れたと思ってたのだ。悪いのは脳じゃなくて、画面設計の方なのだ？
     speaker: ずんだもん
-    expression: sad
+    expression: thinking
     pause_after: 0.4
   - text: その通り。ずんだもんが依存してるショート動画は、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる装置なのよ。
     speaker: めたん
@@ -907,7 +907,7 @@ scenes:
     pause_after: 0.4
   - text: 段差を、戻す。どういうことなのだ？
     speaker: ずんだもん
-    expression: normal
+    expression: confused
     pause_after: 0.4
   - text: 通知をひとつ切る。アプリを、ホーム画面の奥にしまう。画面設計や仕組みの方から変えていくのよ。
     speaker: めたん
