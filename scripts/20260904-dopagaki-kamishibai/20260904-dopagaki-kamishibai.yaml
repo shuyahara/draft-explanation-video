@@ -14,8 +14,8 @@ video:
     side: right
     subtitle_color: '#8FCF7A'
     default_expression: normal
-  bgm: ../bgm/aozora-ni-kuchibue.mp3
-  bgm_credit: 「青空に口笛」のる（DOVA-SYNDROME）
+  bgm: null
+  bgm_credit: null
   sfx: chic
 scenes:
 - id: 1
@@ -30,31 +30,27 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.4
-  - text: 寝ようと思ったのは、夜中の1時なのだ。でも気づいたら、2時だったのだ。
+  - text: 寝ようと思ったのは、夜中の12時なのだ。でも気づいたら、3時だったのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: 1時間も。何をしていたの？
+  - text: 3時間も。何をしていたの？
     speaker: めたん
     expression: thinking
     pause_after: 0.4
-  - text: ショート動画なのだ。15秒で終わるのに、次が勝手に始まるのだ。もう面白いかどうかも分からないのに……親指だけ、ずっと動いてたのだ。
+  - text: ショート動画を見ていたのだ。すぐ終わるのに、次が勝手に始まるから、延々と見ちゃうのだ〜。
     speaker: ずんだもん
     expression: normal
-    pause_after: 0.35
-  - text: 親指だけ、夜勤してたのだ。
-    speaker: ずんだもん
-    expression: sleepy
     pause_after: 0.4
   - text: それ、ずんだもんだけじゃないと思うわ。
     speaker: めたん
     expression: smile
     pause_after: 0.4
-  - text: そのとき、コメント欄にこう書いてあったのだ。おれはドパガキだから、集中とか無理。……ずんだもんも、たぶんドパガキなのだ。
+  - text: そういえば、この前「ドパガキ」という言葉を見たのだ。僕もたぶんドパガキなのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
-  - text: ドパガキ。「ドーパミン中毒のガキ」を縮めたネットスラングね。強い刺激に慣れて、集中が続かない。そんな自分を、若い人たちが自虐っぽく呼び始めた言葉よ。
+  - text: ドパガキ。「ドーパミン中毒のガキ」を縮めたネットスラングね。強い刺激に慣れて、集中が続かないことを揶揄した言葉ね。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -62,7 +58,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: じゃあ今日は、その言葉をほどいてみましょう。ずんだもんと考えたいのは、ひとつだけ。なぜ現代人は、ドパガキになってしまうのか。
+  - text: じゃあ今日は、その言葉を紐解いてみましょう。「なぜ現代人は、ドパガキになってしまうのか」について解説してあげるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -70,7 +66,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
-  - text: 先に言っておくわ。ずんだもんの脳が弱いせいじゃないの。犯人は、ポケットの中の画面。その設計のほうよ。
+  - text: 先に言っておくわ。ずんだもんの脳が弱いせいじゃないの。犯人は、ずんだもんが持っているスマホ。その中の設計のほうよ。
     speaker: めたん
     expression: serious
     pause_after: 0.4
@@ -78,7 +74,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
-  - text: それともうひとつ。「ドーパミン中毒」っていう説明にも、大きな勘違いが混じっているの。画面の設計と、その勘違い。この二つを、順番にほどいていきましょう。
+  - text: それともうひとつ。「ドーパミン中毒」っていう説明にも、大きな勘違いが混じっているの。画面の設計と、その勘違い。この二つを、順番に紐解いていきましょう。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -89,24 +85,24 @@ scenes:
     slot: 1
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
-    cut_reason: 【ドパガキという言葉】コメント欄を見た手元。命名の場面へ
-    from: 14
+    cut_reason: 【ドパガキという言葉】スマホの画面を見る手元。命名の場面へ
+    from: 12
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
     telop: ドパガキ＝ドーパミン中毒のガキ（ネットスラング）
   - type: board
     cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
-    from: 22
+    from: 18
     telop: なぜ現代人は、ドパガキになってしまうのか
   - type: board
     cut_reason: 【冒頭の約束】犯人＝画面の設計、を黒板に大きく
-    from: 26
+    from: 21
     telop: 犯人＝画面の設計
 - id: 2
   title: 通説の提示（ドーパミン中毒という筋書き）
   chapter_title: null
   narration:
-  - text: まずは、よく聞く説明から。ショート動画やスマホゲームは、刺激が強い。強い刺激を受けると、脳の中で、ドーパミンという「快楽物質」がたくさん出る。
+  - text: まずは、よく聞く通説から見てみましょう。「ショート動画やスマホゲームは、刺激が強い。強い刺激を受けると、脳の中でドーパミンという「快楽物質」がたくさん出る」。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -114,7 +110,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: 脳が快楽に慣れると、もっと強い刺激がないと満足できなくなる。最後には薬物依存みたいになって、集中もできなくなる。そういう筋書きよ。
+  - text: 「脳が快楽に慣れると、もっと強い刺激がないと満足できなくなる。最後には薬物依存みたいになって、集中もできなくなる」。そういう筋書きよ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -122,7 +118,7 @@ scenes:
     speaker: ずんだもん
     expression: point
     pause_after: 0.4
-  - text: よく知ってるわね。この考え方は、世界中に広まっているの。スタンフォード大学の依存症臨床医、アンナ・レンブケが2021年に出した「ドーパミン・ネイション」は、世界的なベストセラーになったわ。SNSにも、デトックスの体験談があふれてる。
+  - text: よく知ってるわね。この考え方は、世界中に広まっているの。スタンフォード大学の依存症臨床医、アンナ・レンブケが2021年に出した「ドーパミン・ネイション」は、世界的なベストセラーになったわ。SNSにも、デトックスの体験談があふれているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -283,7 +279,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
-  - text: そうね。面白いかどうかも分からないのに、親指だけが動いていた。あれは、快楽に負けていたわけじゃないのよ。面白さはもう薄れていた。それでも「次が欲しい」という信号だけが、空回りしていたの。
+  - text: そうね。面白いかどうかも分からないのに、親指だけは動いて動画を見てた。あれは、快楽に負けていたわけじゃないのよ。面白さはもう薄れていた。それでも「次が欲しい」という信号だけが、空回りしていたの。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -291,10 +287,26 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
-  - text: ええ。言葉の使い方から、もうずれているのよ。
+  - text: 半分は当たっているのよ。ドーパミンが深く関わっているのは、本当。ただ、その言葉が想像させる筋書きが違うの。
     speaker: めたん
-    expression: normal
-    pause_after: 1.0
+    expression: thinking
+    pause_after: 0.35
+  - text: 「快楽に溺れて、自分がだらしなくなった」という話ではなくて、「楽しくもないのに、欲しいの信号だけが空回りしている」という話。快楽の問題ではなく、予想のズレに反応する仕組みの問題なのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: それに、この仕組みは誰の脳にもあるものよ。ずんだもんの弱さが犯人なわけじゃない。
+    speaker: めたん
+    expression: point
+    pause_after: 0.4
+  - text: 溺れてるんじゃなくて、空回りしてるだけなのだ……。でも、「バカになった」のほうは？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.4
+  - text: それは別の問いね。次に、確かめましょう。
+    speaker: めたん
+    expression: smile
+    pause_after: 2.0
   beats:
   - type: image
     cut_reason: 【ラットの実験】実験動物の写真
@@ -311,6 +323,10 @@ scenes:
     from: 21
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
+  - type: board
+    cut_reason: 【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる。章末の問いまで保持
+    from: 28
+    telop: 「溺れている」のではなく「空回りしている」
 - id: 5
   title: 「47秒」の誤読（グロリア・マーク）
   chapter_title: null
