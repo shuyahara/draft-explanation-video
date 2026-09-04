@@ -215,7 +215,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.4
-  - text: でも、快楽じゃないなら。ずんだもんがやめられない、あの感じは、いったい何なのだ？
+  - text: でも、快楽じゃないなら。僕がやめられない、あの感じは、いったい何なのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.0
@@ -267,7 +267,7 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.4
-  - text: ふむ……。それ、昨夜のずんだもんにも関係あるのだ？
+  - text: ふむ……。それ、昨夜の僕にも関係あるのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
@@ -275,7 +275,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.4
-  - text: ……それ、そのまんま、昨夜のずんだもんなのだ。
+  - text: ……それ、そのまんま、昨夜の僕なのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
@@ -651,7 +651,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: ……やっぱり、ずんだもんの集中力は落ちてるのだ？
+  - text: ……やっぱり、僕の集中力は落ちてるのだ？
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
@@ -881,7 +881,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: ……ずんだもん、ドパガキじゃなかったのだ？
+  - text: ……僕、ドパガキじゃなかったのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -921,7 +921,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.4
-  - text: ホーム画面の奥は、ずんだもんにとって、ほぼ異界なのだ。
+  - text: ホーム画面の奥は、僕にとって、ほぼ異界なのだ。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.35
