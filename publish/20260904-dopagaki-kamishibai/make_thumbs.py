@@ -423,6 +423,43 @@ def make_thumb_g() -> tuple[Image.Image, dict]:
     return bg, info
 
 
+# ============================================================
+# H: E の写真＋C と同じ「下からニュッと顔だけ」の人形配置（ユーザーFB）
+# ============================================================
+
+def make_thumb_h() -> tuple[Image.Image, dict]:
+    """H: 背景は E/G と同じ写真・暗幕。人形は C と同じ方式（画面下端から顔＋肩の上あたりだけ
+    見せる半身クリップ）をそのまま流用。見出しは画面上半分（C の2行テキストと同じくらいの
+    縦位置）に置き、顔と重ならないようにする。"""
+
+    bg = cover_fit(Image.open(PHOTO_E), W, H)
+    darken(bg, 0.42)
+
+    # C と全く同じスケール・位置（C の board_rect を計算し直して同じ比率で使う）。
+    stage = compute_stage(W, 900, CFG)
+    bl, _bt, br, _bb = stage.board_rect
+    board_w = br - bl
+
+    metan_h = round(H * 1.30)
+    zun_h = round(H * 1.30)
+    metan = load_puppet("metan", "serious", metan_h)
+    zun = load_puppet("zundamon", "surprised", zun_h)
+
+    visible_h = round(H * 0.40)  # 画面下端から見せたい高さ（C と同じ＝顔＋肩まで）
+    metan_cx = bl + round(board_w * 0.22)
+    zun_cx = br - round(board_w * 0.22)
+    top_y = H - visible_h
+
+    paste(bg, metan, metan_cx - metan.width / 2, top_y)
+    paste(bg, zun, zun_cx - zun.width / 2, top_y)
+
+    # 見出しは画面上半分（C の line1 center=0.30H・line2 center=0.545H相当の帯）に置く。
+    # 人形の可視範囲は top_y (=H-visible_h) から画面下端までなので、見出しブロック下端が
+    # そこより上に収まるようにする。
+    info = fit_and_draw_headline(bg, W // 2, round(H * 0.32))
+    return bg, info
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
@@ -431,13 +468,14 @@ if __name__ == "__main__":
     e, info_e = make_thumb_e()
     f, info_f = make_thumb_f()
     g, info_g = make_thumb_g()
+    h, info_h = make_thumb_h()
 
     for img, name in ((a, "thumb-A.png"), (b, "thumb-B.png"), (c, "thumb-C.png"),
                        (d, "thumb-D.png"), (e, "thumb-E.png"), (f, "thumb-F.png"),
-                       (g, "thumb-G.png")):
+                       (g, "thumb-G.png"), (h, "thumb-H.png")):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
         print(f"{path}: {img.size} mode={img.mode} -> {size_kb:.1f} KB")
 
-    for name, info in (("D", info_d), ("E", info_e), ("F", info_f), ("G", info_g)):
+    for name, info in (("D", info_d), ("E", info_e), ("F", info_f), ("G", info_g), ("H", info_h)):
         print(f"{name} headline: {info}")

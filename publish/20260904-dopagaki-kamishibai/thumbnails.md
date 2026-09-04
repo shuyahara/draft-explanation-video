@@ -1,8 +1,8 @@
 # サムネイル候補（ドパガキ・紙芝居版）
 
-`make_thumbs.py` で生成。1280x720 PNG、A〜G の7案（D/E/F はユーザーFB反映で追加。黒板を
-使わず「象徴する写真を画面いっぱい」に敷く案。G はさらに「E の写真＋A の人形配置」の
-組み合わせ案）。
+`make_thumbs.py` で生成。1280x720 PNG、A〜H の8案（D/E/F はユーザーFB反映で追加。黒板を
+使わず「象徴する写真を画面いっぱい」に敷く案。G は「E の写真＋A の人形配置」、H は
+「E の写真＋C の人形配置（下からニュッと顔だけ）」の組み合わせ案）。
 
 | 案 | ファイル | 狙い | 使用素材 | 文言 |
 |---|---|---|---|---|
@@ -13,6 +13,7 @@
 | E | `thumb-E.png` | 写真全面＋大見出し。明るいフィードを親指操作する手元（ショート動画そのもの）を敷く構図。写真が明るいぶん暗幕を強め。 | `photos/candidates-v4/thumb/thumb-photogrid-laptop-bright.jpg`、metan/point.png、zundamon/confused.png | 同上 |
 | F | `thumb-F.png` | D と同じ写真・暗幕で人形なし（比較用）。 | `photos/candidates-v4/bed/bed-woman-lamp-nightside.jpg` | 同上 |
 | G | `thumb-G.png` | E の写真＋暗幕はそのまま、人形だけ A と同じ堂々とした立ち姿（画面高75〜83%）に差し替えた案。見出しは顔にかからない位置まで下げてある。 | `photos/candidates-v4/thumb/thumb-photogrid-laptop-bright.jpg`、metan/explain.png、zundamon/confused.png | 同上 |
+| H | `thumb-H.png` | E の写真＋暗幕はそのまま、人形は C と同じ「画面下端から顔と肩の上あたりまでニュッと覗く」半身クリップ。見出しは画面上半分に置き、C と似た構図（下に人形の顔、上に文字）にした案。 | `photos/candidates-v4/thumb/thumb-photogrid-laptop-bright.jpg`、metan/serious.png、zundamon/surprised.png | 同上 |
 
 ## 背景・演出
 
@@ -36,6 +37,11 @@
   掛からないようにした。人形の左右中心は A の黒板幅比（左23.5%・右76.5%相当）をキャンバス幅
   にそのまま流用（A の黒板は元々キャンバス幅の92.7%を占めるため誤差は小さい）。足元は
   D/E と同じく画面下端ぴったり（指示通り）。
+- H は人形の合成コードを C と完全に同一（`compute_stage` で board_rect を再計算し、同じ
+  比率・同じ表情・同じ `visible_h`=0.40H で画面下端クリップ）にし、背景だけ黒板から E の
+  写真＋42%暗幕に差し替えた。見出しは `block_center_y=0.32H`（C の line1/line2 中心
+  0.30H/0.545H と同程度の帯）に置いており、実測で見出しブロック下端（403px）と人形の可視
+  範囲の上端（432px＝H-0.40H）のあいだに29pxの余白があり、顔（目・口とも）に文字は掛からない。
 
 ## 妥協した点
 
