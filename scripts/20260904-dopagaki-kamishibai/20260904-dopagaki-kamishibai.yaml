@@ -42,7 +42,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: それ、ずんだもんだけじゃないと思うわ。
+  - text: なるほどね。一度見始めると、止まらないわよね。
     speaker: めたん
     expression: smile
     pause_after: 0.4
@@ -62,7 +62,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 答えは……ずんだもんの脳が弱いせい、なのだ？
+  - text: 答えは……僕の脳が弱いせい、なのだ？
     speaker: ずんだもん
     expression: sad
     pause_after: 0.4
@@ -86,17 +86,17 @@ scenes:
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【ドパガキという言葉】スマホの画面を見る手元。命名の場面へ
-    from: 12
+    from: 13
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
     telop: ドパガキ＝ドーパミン中毒のガキ（ネットスラング）
   - type: board
     cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
-    from: 18
+    from: 19
     telop: なぜ現代人は、ドパガキになってしまうのか
   - type: board
     cut_reason: 【冒頭の約束】犯人＝画面の設計、を黒板に大きく
-    from: 21
+    from: 22
     telop: 犯人＝画面の設計
 - id: 2
   title: 通説の提示（ドーパミン中毒という筋書き）
@@ -106,7 +106,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: それ、ずんだもんも聞いたことあるのだ。
+  - text: それ、僕も聞いたことあるのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
@@ -134,7 +134,7 @@ scenes:
     speaker: ずんだもん
     expression: smug
     pause_after: 0.4
-  - text: ただ、この説明には問題があるの。いちばん最初の前提が、科学的には正しくない。
+  - text: ただ、この説明には問題があるの。いちばん最初の前提が、科学的には正しくないのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -331,7 +331,7 @@ scenes:
   title: 「47秒」の誤読（グロリア・マーク）
   chapter_title: null
   narration:
-  - text: でも、めたん。理屈はどうあれ、実際に集中力は落ちてるのだ。現代人の集中力は47秒しか続かないって、聞いたのだ。
+  - text: でも、めたん。理屈はどうあれ、実際に集中力は落ちてるのだ。現代人の集中力は47秒しか続かないって、聞いたことがあるのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
@@ -339,19 +339,19 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: マーク自身の振り返りだと、2004年には、ひとつの画面に向かう時間が、平均でおよそ2分半あったそうよ。それが近年では、平均47秒。
+  - text: マーク自身の振り返りだと、2004年には、ひとつの画面に向かう時間が、平均でおよそ2分半あったそうよ。それが近年では、平均47秒になっているのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 2分半が、47秒。
+  - text: 2分半が、47秒に！？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
-  - text: 平均は極端な人に引っぱられやすいでしょう？ だから真ん中の値、中央値で見ても、40秒なの。
+  - text: 平均値だけじゃないわ。真ん中の値、中央値で見ても、40秒なの。
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: ずんだもん、今日もう何回画面を切り替えたか、数えたくないのだ。
+  - text: 僕も、今日もう何回画面を切り替えたか、数えたくないのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.35
@@ -367,11 +367,11 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: ここで測っているのは、別の画面へ切り替えるまでの時間。「人間の脳は47秒しか集中できない」と測ったわけじゃないのよ。
+  - text: ここで測っているのは、別の画面へ切り替えるまでの時間。「人間の脳は47秒しか集中できない」と結論付けられるわけじゃないのよ。
     speaker: めたん
     expression: point
     pause_after: 0.4
-  - text: あ。ずんだもん、好きな映画なら2時間見続けられるのだ。面白い本なら、1時間読めるのだ。
+  - text: あ。僕も、好きな映画なら2時間見続けられるのだ。面白い本なら、1時間は読めるのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
@@ -379,11 +379,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.4
-  - text: ずんだもんの脳、壊れてないのだ。
+  - text: 僕の脳、壊れてないのだ。
     speaker: ずんだもん
     expression: delighted
     pause_after: 0.4
-  - text: 少なくとも、この数字だけでは、「脳が壊れた」証拠にはならないわ。……それでも、どうして私たちは、「若者の脳が壊れた」という話を信じたくなるのかしら。
+  - text: 少なくともこの数字だけでは、「脳が壊れた」証拠にはならないわ。……それでも、どうして私たちは、「若者の脳が壊れた」という話を信じたくなるのかしら。
     speaker: めたん
     expression: thinking
     pause_after: 0.4
@@ -416,17 +416,17 @@ scenes:
     telop: '2004年: 約2分半 → 近年: 平均47秒（中央値 40秒）'
   - type: image
     cut_reason: 【映画は2時間見られる】映画館
-    from: 19
+    from: 20
     slot: 2
     credit: 'Photo: Bence Szemerey / Pexels'
   - type: image
     cut_reason: 【本は1時間読める】読書の場面
-    from: 20
+    from: 21
     slot: 3
     credit: 'Photo: Ayşenur / Pexels'
   - type: board
     cut_reason: 【誤読の修正】写真をはずし、出典を残す
-    from: 25
+    from: 26
     telop: Gloria Mark『Attention Span』(2023)
 - id: 6
   title: 反転②前半（文字批判と読書熱）
@@ -436,7 +436,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 文字まで、心配されてたのだ？
+  - text: 文字まで心配されてたのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -460,7 +460,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 本を読むだけで、中毒扱いなのだ？
+  - text: 本を読むだけで、中毒や病気扱いなのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
@@ -541,11 +541,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.4
-  - text: ひどいのだ。
+  - text: ひどい話なのだ。
     speaker: ずんだもん
     expression: angry
     pause_after: 0.4
-  - text: 日本にも、似た騒ぎがあったわ。2004年、OECDの国際学力調査で、日本の読解力の順位が、8位から14位に下がったの。学力低下だ、活字離れだ、と大騒ぎになって、ゆとり教育が戦犯にされて、教育政策まで転換された。
+  - text: 日本にも、似た繰り返しがあるわ。2004年、OECDの国際学力調査で、日本の読解力の順位が8位から14位に下がったの。学力低下だと大騒ぎになって、ゆとり教育が戦犯にされた。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -553,15 +553,19 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.4
-  - text: その後、日本の読解力は同じ調査で回復を続けて、2022年には、81の国と地域の中で3位になったの。
+  - text: 2012年には4位まで戻った。教育政策を変えた効果もあったのかもしれない。ところが2018年に、また15位まで落ちたの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.4
+  - text: また落ちたのだ？ 今度は何が犯人にされたのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.4
+  - text: スマホと、読書離れ。そして2022年、今度は3位に上がった。このときは、誰も「スマホのおかげ」とは言わなかったわね。
     speaker: めたん
     expression: smile
-    pause_after: 0.4
-  - text: 3位！
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.4
-  - text: もちろん、順位は参加国の数にも左右されるから、慎重に見ないといけない。でも少なくとも日本では、「若者の読む力が下がり続けている」という単純な話は、データのほうが裏切ったのよ。
+    pause_after: 0.35
+  - text: 順位は、調査のやり方や参加国の数でも動くもの。でも落ちるたびに犯人が用意されて、上がると忘れられる。この型のほうが、問題なのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -610,18 +614,18 @@ scenes:
     from: 16
     slot: 3
     credit: 'Photo: Kari Alfonso / Pexels'
-    telop: 'PISA 読解力 2003年: 8位 → 14位'
+    telop: 'PISA 読解力（OECD）2003年: 8位 → 14位'
   - type: board
-    cut_reason: 【回復】黒板に順位を書き足す
+    cut_reason: 【順位の上下】写真をはずし、黒板に順位の推移を一本で書く（犯人だけが入れ替わる型を見せる）
     from: 21
-    telop: 'PISA 読解力 2022年: 81か国・地域中 3位'
+    telop: 'PISA 読解力 2003: 14位 → 2012: 4位 → 2018: 15位 → 2022: 3位'
   - type: board
     cut_reason: 【モラルパニック】用語を黒板に
-    from: 25
+    from: 32
     telop: moral panic（Cohen, 1972）
   - type: board
     cut_reason: 【系譜が伸びる】文字→小説→漫画→学力
-    from: 33
+    from: 40
     telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？'
 - id: 8
   title: 反証の検討（何かは起きている。しかし）

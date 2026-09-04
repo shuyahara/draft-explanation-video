@@ -46,7 +46,7 @@ BGM：（確定後に記載）
 - Gloria Mark, Attention Span (2023) / González & Mark, CHI 2004
 - Plato, Phaedrus 274–275
 - Tilley, Information & Culture 47(4) (2012)
-- OECD, PISA 2022 Results (Volume I) / 国立教育政策研究所「PISA2022のポイント」
+- OECD, PISA 2022 Results (Volume I) / 国立教育政策研究所「PISA2018のポイント」「PISA2022のポイント」
 - Nguyen et al., Psychological Bulletin (2025)
 - Orben & Przybylski, Nature Human Behaviour 3 (2019)
 - Ferster & Skinner, Schedules of Reinforcement (1957)
