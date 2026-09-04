@@ -14,8 +14,8 @@ video:
     side: right
     subtitle_color: '#8FCF7A'
     default_expression: normal
-  bgm: null
-  bgm_credit: null
+  bgm: ../bgm/aozora-ni-kuchibue.mp3
+  bgm_credit: 「青空に口笛」のる（DOVA-SYNDROME）
   sfx: chic
 scenes:
 - id: 1
@@ -84,7 +84,7 @@ scenes:
     pause_after: 1.0
   beats:
   - type: image
-    cut_reason: 【夜ふかしの自白】布団の中のスマホの光。冒頭の場面をそのまま見せる
+    cut_reason: 【夜ふかしの自白】ベッドで横になりスマホを見る人。枕元の明かり。冒頭の場面をそのまま見せる
     from: 1
     slot: 1
     credit: 'Photo: cottonbro studio / Pexels'
@@ -163,10 +163,10 @@ scenes:
     credit: 'Book cover: Dopamine Nation, Anna Lembke (Dutton, 2021)'
     telop: Anna Lembke『Dopamine Nation』2021
   - type: image
-    cut_reason: 【デトックス】スマホを離れた場所に置く
+    cut_reason: 【デトックス】スマホを引き出しにしまう手
     from: 14
     slot: 3
-    credit: 'Photo: Barbara Olsen / Pexels'
+    credit: 'Photo: Eren Li / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずして間。反転の一撃
     from: 19
@@ -230,10 +230,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【1997年の実験】研究室でモニターに向かう研究者
+    cut_reason: 【1997年の実験】脳波キャップを付けた被験者の後ろ姿（脳の実験と一目で分かる絵）
     from: 1
     slot: 1
-    credit: 'Photo: Tima Miroshnichenko / Pexels'
+    credit: 'Photo: Pixabay'
     telop: Schultz et al., Science (1997)
   - type: board
     cut_reason: 【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す
@@ -389,10 +389,10 @@ scenes:
     pause_after: 1.0
   beats:
   - type: image
-    cut_reason: 【47秒】複数ウィンドウを行き来するオフィスの手元
+    cut_reason: 【47秒】ノート・スマホ・PC を同時に扱う手元（注意の分散）
     from: 1
     slot: 1
-    credit: 'Photo: Christina Morillo / Pexels'
+    credit: 'Photo: David Kwewum / Pexels'
     telop: Gloria Mark（UC Irvine）
   - type: board
     cut_reason: 【数字】黒板に 2分半 → 47秒
@@ -590,10 +590,10 @@ scenes:
     cut_reason: 【捏造の中身】写真をはずして聞かせる
     from: 13
   - type: image
-    cut_reason: 【日本の学力パニック】教室
+    cut_reason: 【学力パニック】試験を受ける生徒たちの教室
     from: 16
     slot: 3
-    credit: 'Photo: YU HSIU CHOU / Pexels'
+    credit: 'Photo: Kari Alfonso / Pexels'
     telop: 'PISA 読解力 2003年: 8位 → 14位'
   - type: board
     cut_reason: 【回復】黒板に順位を書き足す
@@ -813,10 +813,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【スキナーの実験】スキナー箱（装置）
+    cut_reason: 【スキナーの実験】研究者の手のひらの実験用マウス（装置写真は判読しづらく差し替え）
     from: 1
     slot: 1
-    credit: Wikimedia Commons, Public Domain, Luis Dantas
+    credit: 'Photo: Pixabay / Pexels'
     telop: 可変比率強化（Ferster & Skinner, 1957）
   - type: image
     cut_reason: 【スロットマシン】カジノ
@@ -827,7 +827,7 @@ scenes:
     cut_reason: 【あなたのスマホ】フィードを親指で払う手元
     from: 20
     slot: 3
-    credit: 'Photo: Towfiqu barbhuiya / Pexels'
+    credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
     cut_reason: 【設計】写真をはずし、出典を黒板に
     from: 26
@@ -836,7 +836,7 @@ scenes:
     cut_reason: 【段差の除去】無限スクロールの手元（再掲）
     from: 29
     slot: 4
-    credit: 'Photo: Towfiqu barbhuiya / Pexels'
+    credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
     cut_reason: 【決め文】長い決め文をチョークで短く残す
     from: 35

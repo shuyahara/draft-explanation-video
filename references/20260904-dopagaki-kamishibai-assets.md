@@ -133,3 +133,19 @@
 2. **当時のコミック（Crime SuspenStories, 証拠品22番）**: 上院の記録としての写真自体はパブリックドメイン相当だが、コミック表紙の意匠（EC Comicsの著作物）自体の著作権は別途存続している可能性がある。歴史的資料としての引用的な使用にとどめ、表紙を大きく単体で見せる演出は避けることを推奨。
 3. **Dopamine Nationの書影**: 出版社（Penguin Random House / Dutton）の著作物。実物紹介として最小限（他の要素と組み合わせた画面構成、単独で大写しにしない）の使用を想定。
 4. **18世紀の読書する女性の絵画（Marguerite Gérard代替候補）**: ライセンスページを未フェッチのため、パブリックドメインである可能性が高いものの未確認。採用前に確認が必要。
+
+## v4 差し替え（2026-09-04。試写 v3 の指摘「パッと見て何の写真か分からない」）
+
+候補は `assets-kamishibai/photos/candidates-v4/`（manifest.json に出典）。旧写真は `photos/replaced-v3/` に退避。
+
+| key | 旧 | 新 | 出典 |
+|---|---|---|---|
+| bed（S1-1 / S4-2 / S10-1） | 暗い布団の中のスマホの光 | ベッドで横になりスマホを見る人、枕元の明かり | Pexels, cottonbro studio https://www.pexels.com/photo/woman-lying-on-the-bed-6940878/ |
+| stairs（S2-3） | 石段のスマホ＋青い布 | スマホを引き出しにしまう手 | Pexels, Eren Li https://www.pexels.com/photo/unrecognizable-person-taking-smartphone-from-windowsill-7241274/ |
+| lab（S3-1） | 白衣の人が小さい検査室 | 脳波キャップの被験者の後ろ姿 | Pixabay https://pixabay.com/photos/eeg-integration-2680957/ |
+| office（S5-1） | コード画面のデスク | ノート・スマホ・PC を同時に扱う手元 | Pexels, David Kwewum https://www.pexels.com/photo/top-view-of-a-man-holding-a-smartphone-and-writing-in-a-notebook-17794504/ |
+| classroom（S7-3） | 小さな黒板と棚 | 試験を受ける生徒たちの教室 | Pexels, Kari Alfonso https://www.pexels.com/photo/students-taking-a-test-in-classroom-37812751/ |
+| skinner（S9-1） | スキナー箱の装置（機械にしか見えない） | 手袋の手のひらの実験用マウス | Pexels, Pixabay https://www.pexels.com/photo/white-baby-mouse-159483/ |
+| thumb（S9-3 / S9-4） | 暗い手元のクロップ | 明るい画面のフィードを親指で操作 | Pexels, Lisa Fotios https://www.pexels.com/photo/person-holding-midnight-black-samsung-galaxy-s8-turn-on-near-macbook-pro-1092671/ |
+
+BGM: 「青空に口笛」のる（DOVA-SYNDROME） https://dova-s.jp/bgm/detail/20385 → `scripts/bgm/aozora-ni-kuchibue.mp3`（1:53、ループ）。取得は配布ページに埋め込まれた署名付き音源 URL（`dova-worker.tracks-cid.workers.dev`、有効期限付き）を curl で保存（2026-09-04）。
