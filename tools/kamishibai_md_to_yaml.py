@@ -15,7 +15,7 @@ import argparse
 
 PAUSE_PRESETS = {
     "1.0": {"speaker_change": 0.4, "sentence": 0.35, "scene_end": 1.0, "explicit_scale": 1.0},
-    "1.1": {"speaker_change": 0.45, "sentence": 0.35, "scene_end": 1.2, "explicit_scale": 1.25},
+    "1.1": {"speaker_change": 0.45, "sentence": 0.35, "scene_end": 1.2, "explicit_scale": 1.0},
 }
 PAUSES = PAUSE_PRESETS["1.0"]
 import re
@@ -242,7 +242,7 @@ def main() -> int:
         "--tempo",
         choices=["1.0", "1.1"],
         default="1.0",
-        help="想定話速。1.1 のときは間を一段長くする（話者交代 0.45・文境界 0.35・章末 1.2・（間 N）は 1.25 倍。docs/narration-style.md の 1.1 倍速ルール）",
+        help="想定話速。1.1 のときは間を一段長くする（話者交代 0.45・文境界 0.35・章末 1.2・（間 N）は台本の値どおり（決め文は 2.0 を推奨、間レビュー 2026-09-05）。docs/narration-style.md の 1.1 倍速ルール）",
     )
     args = ap.parse_args()
 
