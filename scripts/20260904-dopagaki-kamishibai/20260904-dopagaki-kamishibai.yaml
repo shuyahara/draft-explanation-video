@@ -237,10 +237,28 @@ scenes:
     from: 5
     slot: 2
     credit: 'Photo: Pixabay / Pexels'
-  - type: board
-    cut_reason: 【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す
-    from: 10
-    telop: 合図 → ジュース ／ 発火は「合図」の瞬間へ移る
+  - type: diagram
+    cut_reason: '【図解: 実験の鎖】合図→ジュース→発火を黒板に書き、発火が合図の瞬間へ移ることを見せる（配置が知見そのもの）'
+    from: 11
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: cue
+        text: 光の合図
+        icon: notifications
+        at: 11
+      - id: juice
+        text: ジュース
+        icon: local_drink
+        at: 12
+      - id: fire
+        text: 発火は合図の瞬間へ
+        icon: bolt
+        at: 15
+      caption:
+        at: 16
+        text: ジュースが出ないと、沈み込む
   - type: board
     cut_reason: 【報酬予測誤差】黒板に用語を書く
     from: 18
@@ -320,10 +338,22 @@ scenes:
     slot: 1
     credit: 'Photo: Nikolett Emmert / Pexels'
     telop: Berridge & Robinson (2016)
-  - type: board
-    cut_reason: 【二つの言葉】黒板に wanting / liking
+  - type: diagram
+    cut_reason: '【図解: 二つの言葉】欲しい／好きの二項が「ドーパミンは欲しいを動かす」へ収束する'
     from: 10
-    telop: wanting（欲しい）／ liking（好き）
+    diagram:
+      type: narrative
+      layout: converge
+      items:
+      - id: wanting
+        text: 欲しい（wanting）
+        at: 11
+      - id: liking
+        text: 好き（liking）
+        at: 12
+      result:
+        text: ドーパミンは欲しいを動かす
+        at: 13
   - type: image
     cut_reason: 【冒頭の再演】昨夜のずんだもん＝冒頭の写真を再掲
     from: 20
@@ -627,10 +657,29 @@ scenes:
     slot: 3
     credit: 'Photo: Kari Alfonso / Pexels'
     telop: 'PISA 読解力（OECD）2003年: 8位 → 14位'
-  - type: board
-    cut_reason: 【順位の上下】写真をはずし、黒板に順位の推移を一本で書く（犯人だけが入れ替わる型を見せる）
+  - type: diagram
+    cut_reason: '【図解: 順位の上下】PISA 読解力の順位を折れ線で。上下を繰り返す形そのものが「犯人が入れ替わる」の土台'
     from: 20
-    telop: 'PISA 読解力 2003: 14位 → 2012: 4位 → 2018: 15位 → 2022: 3位'
+    diagram:
+      type: chart
+      chart: line
+      title: PISA 読解力 日本の順位（数字が小さいほど上位）
+      unit: 位
+      source: 国立教育政策研究所「PISA2018 / PISA2022 のポイント」
+      series:
+      - color: accent
+        at: 20
+        points:
+        - label: '2000'
+          value: 8
+        - label: '2003'
+          value: 14
+        - label: '2012'
+          value: 4
+        - label: '2018'
+          value: 15
+        - label: '2022'
+          value: 3
   - type: board
     cut_reason: 【モラルパニック】用語を黒板に
     from: 31
@@ -730,10 +779,33 @@ scenes:
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
-  - type: board
-    cut_reason: 【系譜の終点】ショート動画？ を書き足す
+  - type: diagram
+    cut_reason: '【図解: 不安の系譜】文字→小説→漫画→学力→ショート動画？ の一本鎖。章頭で系譜の終点を書き足す'
     from: 1
-    telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ショート動画？'
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: moji
+        text: 文字
+        icon: history_edu
+        at: 1
+      - id: novel
+        text: 小説
+        icon: menu_book
+        at: 1
+      - id: comic
+        text: 漫画
+        icon: auto_stories
+        at: 1
+      - id: pisa
+        text: 学力
+        icon: school
+        at: 1
+      - id: short
+        text: ショート動画？
+        icon: smartphone
+        at: 1
   - type: image
     cut_reason: 【メタ分析】学術誌の書架
     from: 4
@@ -968,6 +1040,22 @@ scenes:
   - type: board
     cut_reason: 【最大の決め文】写真をはずして間だけ
     from: 8
+  - type: diagram
+    cut_reason: '【図解: 言葉の中身】中毒説明の不正確さ・若者堕落物語の反復が「個人の脳を責める言葉」へ収束する'
+    from: 11
+    diagram:
+      type: narrative
+      layout: converge
+      items:
+      - id: dopa
+        text: 中毒説明は不正確
+        at: 13
+      - id: youth
+        text: 若者堕落は二千年の反復
+        at: 14
+      result:
+        text: 個人の脳を責める言葉
+        at: 14
   - type: image
     cut_reason: 【対策】通知を切る手元
     from: 26

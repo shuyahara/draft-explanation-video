@@ -63,6 +63,11 @@ def chapter():
     return ("chapter", None, None, None, "【章の入口】黒板に問いを書いて本題へ", None)
 
 
+def diagram(anchor, why, spec):
+    """チョーク図解（紙芝居モード v8）。spec 内の `at` は文字列アンカーで書き、実行時にキュー番号へ解決する。"""
+    return ("diagram", anchor, None, None, why, spec)
+
+
 BEATS = {
     1: [
         img(None, 1, "bed", "【夜ふかしの自白】ベッドで横になりスマホを見る人。枕元の明かり。冒頭の場面をそのまま見せる"),
@@ -81,13 +86,25 @@ BEATS = {
         chapter(),
         img(None, 1, "lab", "【1997年の実験】実験に使われる種のサル（マカク）。v7 で脳波写真から差し替え", telop="Schultz et al., Science (1997)"),
         img("サルにジュースをあげると", 2, "juice", "【ジュースで発火】ジュースのグラス。報酬そのものを見せる"),
-        board("でもね", "【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す",
-              telop="合図 → ジュース ／ 発火は「合図」の瞬間へ移る"),
+        diagram("光の合図のあとに", "【図解: 実験の鎖】合図→ジュース→発火を黒板に書き、発火が合図の瞬間へ移ることを見せる（配置が知見そのもの）",
+                {"type": "narrative", "layout": "chain",
+                 "items": [
+                     {"id": "cue", "text": "光の合図", "icon": "notifications", "at": "光の合図のあとに"},
+                     {"id": "juice", "text": "ジュース", "icon": "local_drink", "at": "ジュースをもらった瞬間"},
+                     {"id": "fire", "text": "発火は合図の瞬間へ", "icon": "bolt", "at": "合図が出た瞬間に発火"},
+                 ],
+                 "caption": {"at": "それなのにジュースが出ないと", "text": "ジュースが出ないと、沈み込む"}}),
         board("そのとおり", "【報酬予測誤差】黒板に用語を書く", telop="報酬予測誤差 ＝ 予想と現実のズレ"),
     ],
     4: [
         img(None, 1, "rat", "【ラットの実験】実験動物の写真", telop="Berridge & Robinson (2016)"),
-        board("ベリッジは、この二つを", "【二つの言葉】黒板に wanting / liking", telop="wanting（欲しい）／ liking（好き）"),
+        diagram("ベリッジは、この二つを", "【図解: 二つの言葉】欲しい／好きの二項が「ドーパミンは欲しいを動かす」へ収束する",
+                {"type": "narrative", "layout": "converge",
+                 "items": [
+                     {"id": "wanting", "text": "欲しい（wanting）", "at": "ウォンティングは、「欲しくてたまらない」"},
+                     {"id": "liking", "text": "好き（liking）", "at": "ライキングは、味わったときの"},
+                 ],
+                 "result": {"text": "ドーパミンは欲しいを動かす", "at": "ドーパミンが強く動かすのは"}}),
         img("それ、そのまんま", 2, "bed", "【冒頭の再演】昨夜のずんだもん＝冒頭の写真を再掲"),
         board("半分は当たっている", "【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる。章末の問いまで保持",
               telop="「溺れている」のではなく「空回りしている」"),
@@ -112,14 +129,27 @@ BEATS = {
         img("この話には、後日談", 2, "paper", "【後日談】資料を精査する手元", telop="Tilley, Information & Culture (2012)"),
         board("子供の年齢は", "【捏造の中身】写真をはずして聞かせる"),
         img("日本にも、似た繰り返し", 3, "classroom", "【学力パニック】試験を受ける生徒たちの教室", telop="PISA 読解力（OECD）2003年: 8位 → 14位"),
-        board("2012年には4位まで戻った", "【順位の上下】写真をはずし、黒板に順位の推移を一本で書く（犯人だけが入れ替わる型を見せる）",
-              telop="PISA 読解力 2003: 14位 → 2012: 4位 → 2018: 15位 → 2022: 3位"),
+        diagram("2012年には4位まで戻った", "【図解: 順位の上下】PISA 読解力の順位を折れ線で。上下を繰り返す形そのものが「犯人が入れ替わる」の土台",
+                {"type": "chart", "chart": "line", "title": "PISA 読解力 日本の順位（数字が小さいほど上位）", "unit": "位",
+                 "source": "国立教育政策研究所「PISA2018 / PISA2022 のポイント」",
+                 "series": [{"color": "accent", "at": "2012年には4位まで戻った",
+                             "points": [{"label": "2000", "value": 8}, {"label": "2003", "value": 14},
+                                        {"label": "2012", "value": 4}, {"label": "2018", "value": 15},
+                                        {"label": "2022", "value": 3}]}]}),
         board("こういう繰り返しには", "【モラルパニック】用語を黒板に", telop="moral panic（Cohen, 1972）"),
         board("文字、小説、漫画", "【系譜が伸びる】文字→小説→漫画→学力", telop="不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？"),
     ],
     8: [
         chapter(),
-        board(None, "【系譜の終点】ショート動画？ を書き足す", telop=KEIFU),
+        diagram(None, "【図解: 不安の系譜】文字→小説→漫画→学力→ショート動画？ の一本鎖。章頭で系譜の終点を書き足す",
+                {"type": "narrative", "layout": "chain",
+                 "items": [
+                     {"id": "moji", "text": "文字", "icon": "history_edu", "at": 1},
+                     {"id": "novel", "text": "小説", "icon": "menu_book", "at": 1},
+                     {"id": "comic", "text": "漫画", "icon": "auto_stories", "at": 1},
+                     {"id": "pisa", "text": "学力", "icon": "school", "at": 1},
+                     {"id": "short", "text": "ショート動画？", "icon": "smartphone", "at": "今回もただのパニックじゃないの"},
+                 ]}),
         img("グリフィス大学", 1, "library", "【メタ分析】学術誌の書架", telop="Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人"),
         board("結論はこう", "【判定ボード1行目】関連：ある", telop="関連：ある（中程度）"),
         img("運営企業の内側", 2, "capitol", "【内部告発の証言】議会の建物", telop="米上院 商務委員会 公聴会 (2021)"),
@@ -139,6 +169,13 @@ BEATS = {
     10: [
         img(None, 1, "bed", "【冒頭に戻る】同じ寝室の写真"),
         board("脳が弱くなったんじゃない", "【最大の決め文】写真をはずして間だけ"),
+        diagram("「ドパガキ」という言葉そのものも", "【図解: 言葉の中身】中毒説明の不正確さ・若者堕落物語の反復が「個人の脳を責める言葉」へ収束する",
+                {"type": "narrative", "layout": "converge",
+                 "items": [
+                     {"id": "dopa", "text": "中毒説明は不正確", "at": "でも、ドーパミン中毒という説明は"},
+                     {"id": "youth", "text": "若者堕落は二千年の反復", "at": "若者が堕落したという物語も"},
+                 ],
+                 "result": {"text": "個人の脳を責める言葉", "at": "若者が堕落したという物語も"}}),
         img("通知をひとつ切る", 2, "notif", "【対策】通知を切る手元"),
         img("寝室の外で充電", 3, "facedown", "【寝室の外で充電】置かれたスマホ"),
         board("そのときは、自分を責める", "【救済の一文】写真をはずし、二人だけ"),
@@ -157,6 +194,26 @@ def cues_of(scene) -> list[str]:
     for seg in scene["narration"]:
         out.extend(p for p in split_into_sentences(seg["text"]) if p.strip())
     return out
+
+
+def resolve_ats(spec, cues: list[str], scene_id: int):
+    """spec 内の文字列 `at` をキュー番号へ解決した新しい dict を返す。"""
+    import copy
+
+    def walk(node):
+        if isinstance(node, dict):
+            out = {}
+            for k, v in node.items():
+                if k == "at" and isinstance(v, str):
+                    out[k] = resolve(cues, v, scene_id)
+                else:
+                    out[k] = walk(v)
+            return out
+        if isinstance(node, list):
+            return [walk(v) for v in node]
+        return copy.deepcopy(node)
+
+    return walk(spec)
 
 
 def resolve(cues: list[str], anchor: str | None, scene_id: int) -> int:
@@ -187,7 +244,9 @@ def main() -> None:
             if kind == "image":
                 b["slot"] = slot
                 b["credit"] = CREDIT[ckey]
-            if telop:
+            if kind == "diagram":
+                b["diagram"] = resolve_ats(telop, cues, scene["id"])  # telop 引数の位置に spec が入っている
+            elif telop:
                 b["telop"] = telop
             beats.append(b)
         scene["beats"] = beats
