@@ -149,3 +149,14 @@
 | thumb（S9-3 / S9-4） | 暗い手元のクロップ | 明るい画面のフィードを親指で操作 | Pexels, Lisa Fotios https://www.pexels.com/photo/person-holding-midnight-black-samsung-galaxy-s8-turn-on-near-macbook-pro-1092671/ |
 
 BGM: 「青空に口笛」のる（DOVA-SYNDROME） https://dova-s.jp/bgm/detail/20385 → `scripts/bgm/aozora-ni-kuchibue.mp3`（1:53、ループ）。取得は配布ページに埋め込まれた署名付き音源 URL（`dova-worker.tracks-cid.workers.dev`、有効期限付き）を curl で保存（2026-09-04）。
+
+## v7 追加・差し替え（2026-09-05。映像レビュー「中央が空の時間が長い」「サルの実験なのに人間の脳波写真」）
+
+候補は `assets-kamishibai/photos/candidates-v7/`（manifest.json）。旧 S3-1 は `photos/replaced-v6/`。
+
+| ビート | 新 | 出典 |
+|---|---|---|
+| S3-1（差し替え） | 水辺のマカク | Pexels, Rámon van Raaij https://www.pexels.com/photo/portrait-of-a-macaque-feeding-on-a-lakeshore-21656509/ |
+| S3-2（追加） | オレンジジュースのグラス | Pexels, Pixabay https://www.pexels.com/photo/selective-focus-photography-of-pure-orange-juice-158053/ |
+| S5-4（追加） | 機械式ストップウォッチ | Pexels, William Warby https://www.pexels.com/photo/close-up-of-a-heuer-mechanical-stopwatch-19730401/ |
+| S8-3（追加） | グラフが映るノート PC | Pexels, Pixabay https://www.pexels.com/photo/gray-and-black-laptop-computer-265087/ |

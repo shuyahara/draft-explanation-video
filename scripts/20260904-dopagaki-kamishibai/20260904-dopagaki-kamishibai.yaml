@@ -226,11 +226,16 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【1997年の実験】脳波キャップを付けた被験者の後ろ姿（脳の実験と一目で分かる絵）
+    cut_reason: 【1997年の実験】実験に使われる種のサル（マカク）。v7 で脳波写真から差し替え
     from: 1
     slot: 1
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Rámon van Raaij / Pexels'
     telop: Schultz et al., Science (1997)
+  - type: image
+    cut_reason: 【ジュースで発火】ジュースのグラス。報酬そのものを見せる
+    from: 5
+    slot: 2
+    credit: 'Photo: Pixabay / Pexels'
   - type: board
     cut_reason: 【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す
     from: 10
@@ -410,9 +415,11 @@ scenes:
     slot: 1
     credit: 'Photo: David Kwewum / Pexels'
     telop: Gloria Mark（UC Irvine）
-  - type: board
-    cut_reason: 【数字】黒板に 2分半 → 47秒
+  - type: image
+    cut_reason: 【数字】ストップウォッチ＝画面を切り替えるまでの時間の計測。v7 で板だけから写真付きに
     from: 6
+    slot: 4
+    credit: 'Photo: William Warby / Pexels'
     telop: '2004年: 約2分半 → 近年: 平均47秒（中央値 40秒）'
   - type: image
     cut_reason: 【映画は2時間見られる】映画館
@@ -742,10 +749,12 @@ scenes:
     cut_reason: 【ただし】因果の向きは決められない
     from: 27
     telop: 関連：ある（中程度）／ 因果：決められない
-  - type: board
-    cut_reason: 【規模の数字】0.4%
+  - type: image
+    cut_reason: 【規模の数字】データ解析の画面（35万人分）。v7 で板だけから写真付きに
     from: 34
-    telop: Orben & Przybylski (2019)：影響は最大 0.4%
+    slot: 3
+    credit: 'Photo: Pixabay / Pexels'
+    telop: Orben & Przybylski (2019)：説明できた個人差は 0.4%
   - type: board
     cut_reason: 【整理】判定ボード3行そろう。決め文まで保持
     from: 40
