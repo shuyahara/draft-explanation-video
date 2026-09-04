@@ -62,14 +62,19 @@ MUSTACHE_TARGET = (v1.FACE_CX, v1.MOUTH[1] - 20)
 MUSTACHE_SCALE = 210 / 611
 
 
-def compose_character(expr: str) -> tuple[Image.Image, tuple[int, int], tuple[int, int]]:
+def compose_character(
+    expr: str,
+    *,
+    cap_scale: float = CAP_SCALE,
+    cap_target: tuple[float, float] = CAP_TARGET,
+) -> tuple[Image.Image, tuple[int, int], tuple[int, int]]:
     sprite = v1.load_sprite(expr)
     ext_size = (sprite.width, sprite.height + TOP_MARGIN)
     extended = Image.new("RGBA", ext_size, (0, 0, 0, 0))
     extended.alpha_composite(sprite, (0, TOP_MARGIN))
 
     cap_img = load_part(CAP_SRC)
-    v2.place_part(extended, cap_img, CAP_ANCHOR, CAP_TARGET, CAP_SCALE)
+    v2.place_part(extended, cap_img, CAP_ANCHOR, cap_target, cap_scale)
 
     glasses_img = load_part(GLASSES_SRC)
     v2.place_part(extended, glasses_img, GLASSES_ANCHOR, GLASSES_TARGET, GLASSES_SCALE)
@@ -81,8 +86,15 @@ def compose_character(expr: str) -> tuple[Image.Image, tuple[int, int], tuple[in
     return outlined, extended.size, outlined.size
 
 
-def build_icon(name: str, expr: str, bg: Image.Image) -> Image.Image:
-    outlined, comp_size, outlined_size = compose_character(expr)
+def build_icon(
+    name: str,
+    expr: str,
+    bg: Image.Image,
+    *,
+    cap_scale: float = CAP_SCALE,
+    cap_target: tuple[float, float] = CAP_TARGET,
+) -> Image.Image:
+    outlined, comp_size, outlined_size = compose_character(expr, cap_scale=cap_scale, cap_target=cap_target)
     pad = (outlined_size[0] - comp_size[0]) // 2
 
     scale = v1.T_SCALE
@@ -107,10 +119,18 @@ def build_icon(name: str, expr: str, bg: Image.Image) -> Image.Image:
     return rgb
 
 
+# icon3-3: 角帽を大きくした版（コーディネーター指示 2026-09-05）。
+# 枝豆の飾りの間に収まる範囲で最大にするため板幅を v1/v2 相当（340px）に近づけつつ、
+# 最終キャンバスの上端で頂点が切れないよう合わせ先 y も下げた。
+CAP_SCALE_LARGE = 0.25
+CAP_TARGET_LARGE = (v1.HAT_CX, 180)
+
+
 def main() -> None:
     bg = v1.board_background(CANVAS)
     build_icon("icon3-1", "smug", bg)
     build_icon("icon3-2", "normal", bg)
+    build_icon("icon3-3", "smug", bg, cap_scale=CAP_SCALE_LARGE, cap_target=CAP_TARGET_LARGE)
     print("done")
 
 
