@@ -196,10 +196,10 @@ def attach_readings(scenes: list[dict], v5_readings: dict[int, list[tuple[str, s
             sc["readings"] = [{"surface": Q(s), "reading": Q(r)} for s, r in kept]
 
 
-def build_yaml(title: str, scenes: list[dict], bgm=None, bgm_credit=None) -> dict:
+def build_yaml(title: str, scenes: list[dict], bgm=None, bgm_credit=None, puppet_sink=None) -> dict:
     video = {
         "title": Q(title),
-        "kamishibai": {},
+        "kamishibai": ({"puppet_sink_ratio": puppet_sink} if puppet_sink else {}),
         "characters": [
             {
                 "name": Q(c["name"]),
@@ -238,6 +238,7 @@ def main() -> int:
     ap.add_argument("--out", type=Path, required=True, help="出力先の紙芝居モード YAML")
     ap.add_argument("--bgm", default=None, help="video.bgm に書く BGM パス（YAML からの相対。例: ../bgm/aozora-ni-kuchibue.mp3）")
     ap.add_argument("--bgm-credit", default=None, help="video.bgm_credit に書くクレジット文字列")
+    ap.add_argument("--puppet-sink", type=float, default=None, help="video.kamishibai.puppet_sink_ratio（人形を字幕帯の裏へ沈める比。推奨 0.12）")
     ap.add_argument(
         "--tempo",
         choices=["1.0", "1.1"],
@@ -251,7 +252,7 @@ def main() -> int:
     title, scenes = parse_markdown(args.md_path)
     v5_readings = load_v5_readings(args.v5_yaml)
     attach_readings(scenes, v5_readings)
-    data = build_yaml(title, scenes, bgm=args.bgm, bgm_credit=args.bgm_credit)
+    data = build_yaml(title, scenes, bgm=args.bgm, bgm_credit=args.bgm_credit, puppet_sink=args.puppet_sink)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", encoding="utf-8", newline="\n") as f:
