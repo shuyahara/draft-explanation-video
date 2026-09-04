@@ -12,6 +12,12 @@
 from __future__ import annotations
 
 import argparse
+
+PAUSE_PRESETS = {
+    "1.0": {"speaker_change": 0.4, "sentence": 0.35, "scene_end": 1.0, "explicit_scale": 1.0},
+    "1.1": {"speaker_change": 0.45, "sentence": 0.35, "scene_end": 1.2, "explicit_scale": 1.25},
+}
+PAUSES = PAUSE_PRESETS["1.0"]
 import re
 import sys
 from pathlib import Path
@@ -133,12 +139,12 @@ def parse_markdown(md_path: Path):
         n = len(raw_entries)
         for k, (speaker, expr, body, explicit_pause) in enumerate(raw_entries):
             if explicit_pause is not None:
-                pause = explicit_pause
+                pause = round(explicit_pause * PAUSES["explicit_scale"], 2)
             elif k == n - 1:
-                pause = 1.0
+                pause = PAUSES["scene_end"]
             else:
                 next_speaker = raw_entries[k + 1][0]
-                pause = 0.4 if next_speaker != speaker else 0.35
+                pause = PAUSES["speaker_change"] if next_speaker != speaker else PAUSES["sentence"]
             narration.append(
                 {
                     "text": Q(body),
@@ -190,7 +196,7 @@ def attach_readings(scenes: list[dict], v5_readings: dict[int, list[tuple[str, s
             sc["readings"] = [{"surface": Q(s), "reading": Q(r)} for s, r in kept]
 
 
-def build_yaml(title: str, scenes: list[dict]) -> dict:
+def build_yaml(title: str, scenes: list[dict], bgm=None, bgm_credit=None) -> dict:
     video = {
         "title": Q(title),
         "kamishibai": {},
@@ -205,8 +211,8 @@ def build_yaml(title: str, scenes: list[dict]) -> dict:
             }
             for c in CHARACTERS
         ],
-        "bgm": None,
-        "bgm_credit": None,
+        "bgm": Q(bgm) if bgm else None,
+        "bgm_credit": Q(bgm_credit) if bgm_credit else None,
         "sfx": Q("chic"),
     }
 
@@ -230,12 +236,22 @@ def main() -> int:
     ap.add_argument("md_path", type=Path, help="対話形式の台本 Markdown")
     ap.add_argument("--v5-yaml", type=Path, required=True, help="readings 転記元の v5 シーン YAML")
     ap.add_argument("--out", type=Path, required=True, help="出力先の紙芝居モード YAML")
+    ap.add_argument("--bgm", default=None, help="video.bgm に書く BGM パス（YAML からの相対。例: ../bgm/aozora-ni-kuchibue.mp3）")
+    ap.add_argument("--bgm-credit", default=None, help="video.bgm_credit に書くクレジット文字列")
+    ap.add_argument(
+        "--tempo",
+        choices=["1.0", "1.1"],
+        default="1.0",
+        help="想定話速。1.1 のときは間を一段長くする（話者交代 0.45・文境界 0.35・章末 1.2・（間 N）は 1.25 倍。docs/narration-style.md の 1.1 倍速ルール）",
+    )
     args = ap.parse_args()
 
+    global PAUSES
+    PAUSES = PAUSE_PRESETS[args.tempo]
     title, scenes = parse_markdown(args.md_path)
     v5_readings = load_v5_readings(args.v5_yaml)
     attach_readings(scenes, v5_readings)
-    data = build_yaml(title, scenes)
+    data = build_yaml(title, scenes, bgm=args.bgm, bgm_credit=args.bgm_credit)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", encoding="utf-8", newline="\n") as f:
