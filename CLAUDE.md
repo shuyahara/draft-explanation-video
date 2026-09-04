@@ -214,4 +214,5 @@ v6 以降、シーンの映像は `beats[]`（image / diagram / typo / chapter�
 - `docs/legacy-v5-rhythm.md` — 非ビート運用（v5互換）の映像リズム設計（`chapter_title` / `emphasis` / `cutaways` / `diagrams`）。
 - `docs/asset-workflow.md` — 素材候補収集ワークフロー（説明イラストの検討手順・メタファー辞書・検品・ストック/BGM のライセンス規則）。
 - `docs/narration-style.md` — 機械音声向けの書き方の詳細（ポーズ設計の目安・実測値・根拠文献・クレジット）。
+- `docs/dialogue-guide.md` — 対話劇台本（めたん×ずんだもん）の書き方（ナレーション癖の除去・聞き手の反応・一人称「僕」・反転の論理検証・GitHub 直編集時の運用）。2026-09-04 のユーザー編集から言語化。
 - `docs/decisions.md` — 日付・R番号・実測値・試写FB に基づく判断の索引。
