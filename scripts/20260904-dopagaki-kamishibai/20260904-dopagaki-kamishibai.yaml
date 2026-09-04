@@ -28,7 +28,7 @@ scenes:
     pause_after: 0.4
   - text: おはよう、ずんだもん。……その顔、何時に寝たのかしら。
     speaker: めたん
-    expression: normal
+    expression: thinking
     pause_after: 0.4
   - text: 寝ようと思ったのは、夜中の12時なのだ。でも気づいたら、3時だったのだ。
     speaker: ずんだもん
@@ -122,9 +122,9 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: ドパガキって言葉も、そういう話から来てるのだ。ドーパミンが出すぎて、中毒になったガキ、ってことなのだ。
+  - text: なるほど。だから「ドーパミンが出すぎて、中毒になったガキ」で、ドパガキなのだ？
     speaker: ずんだもん
-    expression: normal
+    expression: thinking
     pause_after: 0.4
   - text: 話としては、よくできているのよ。原因があって、仕組みがあって、対策まであるでしょう？
     speaker: めたん
@@ -160,7 +160,7 @@ scenes:
     telop: Anna Lembke『Dopamine Nation』2021
   - type: image
     cut_reason: 【デトックス】スマホを引き出しにしまう手
-    from: 14
+    from: 15
     slot: 3
     credit: 'Photo: Eren Li / Pexels'
   - type: board
@@ -183,9 +183,9 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: ジュースは嬉しいのだ。
+  - text: ジュースは嬉しいのだ。ずんだ味なら、もっと発火しそうなのだ。
     speaker: ずんだもん
-    expression: smile
+    expression: delighted
     pause_after: 0.4
   - text: でもね。光の合図のあとに必ずジュースが出る、と学習させると、変なことが起きるの。ジュースをもらった瞬間の発火が、消えてしまう。
     speaker: めたん
@@ -215,7 +215,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.4
-  - text: でも、快楽じゃないなら。僕がやめられない、あの感じは、いったい何なのだ？
+  - text: でも、快楽そのものじゃないなら、僕がやめられないあの感じは、いったい何なのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.0
@@ -233,17 +233,17 @@ scenes:
     telop: Schultz et al., Science (1997)
   - type: board
     cut_reason: 【奇妙なこと】写真をはずし、実験の核心（合図→ジュース、発火の移動）をチョークで示す
-    from: 9
+    from: 10
     telop: 合図 → ジュース ／ 発火は「合図」の瞬間へ移る
   - type: board
     cut_reason: 【報酬予測誤差】黒板に用語を書く
-    from: 17
+    from: 18
     telop: 報酬予測誤差 ＝ 予想と現実のズレ
 - id: 4
   title: 反転①後半（ベリッジの wanting / liking）
   chapter_title: null
   narration:
-  - text: 「欲しい」と「好き」。この二つ、似ているようで、脳の中では別々に処理されているの。その違いを研究してきたのが、ミシガン大学の神経科学者、ケント・ベリッジの研究室よ。
+  - text: 「欲しい」と「好き」。この二つ、似ているようで、脳の中では別々に処理されているの。その違いを研究してきたのが、ミシガン大学の神経科学者、ケント・ベリッジたちよ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -293,7 +293,7 @@ scenes:
     pause_after: 0.35
   - text: 「快楽に溺れて、自分がだらしなくなった」という話ではなくて、「楽しくもないのに、欲しいの信号だけが空回りしている」という話。快楽の問題ではなく、予想のズレに反応する仕組みの問題なのよ。
     speaker: めたん
-    expression: explain
+    expression: serious
     pause_after: 0.35
   - text: それに、この仕組みは誰の脳にもあるものよ。ずんだもんの弱さが犯人なわけじゃない。
     speaker: めたん
@@ -331,9 +331,9 @@ scenes:
   title: 「47秒」の誤読（グロリア・マーク）
   chapter_title: null
   narration:
-  - text: でも、めたん。理屈はどうあれ、実際に集中力は落ちてるのだ。現代人の集中力は47秒しか続かないって、聞いたことがあるのだ。
+  - text: でも、めたん。実際、集中できなくなってる気はするのだ。現代人の集中力は47秒しか続かないって、聞いたことがあるのだ。
     speaker: ずんだもん
-    expression: point
+    expression: thinking
     pause_after: 0.4
   - text: その数字、ちゃんとした出どころがあるのよ。カリフォルニア大学アーバイン校のグロリア・マークは、20年以上、働く人がパソコンの画面をどれくらいで切り替えるか、調べてきたの。
     speaker: めたん
@@ -387,7 +387,7 @@ scenes:
     speaker: めたん
     expression: thinking
     pause_after: 0.4
-  - text: 言われてみれば、なんでなのだ。
+  - text: 言われてみれば、どうしてなのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
@@ -448,7 +448,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
-  - text: 新しいメディアが、人の知的な力を弱らせる。この不安の、記録に残るいちばん古い相手が、文字なのよ。
+  - text: 「新しいメディアが、人の知的な力を弱らせる」という不安は、記録に残る範囲では、文字にまでさかのぼるのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -470,7 +470,7 @@ scenes:
     pause_after: 0.4
   - text: あれ。刺激が強い。慣れる。堕落する。……どこかで聞いた筋書きなのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.4
   - text: 小説がショート動画に替わっただけ。心配する話の型は、二百年前とほとんど同じなのよ。
     speaker: めたん
@@ -496,18 +496,18 @@ scenes:
     telop: '不安の系譜: 文字 →'
   - type: image
     cut_reason: 【読書熱】18世紀の読書する女性（絵画）
-    from: 15
+    from: 14
     slot: 2
     credit: Wikimedia Commons, Public Domain（Fragonard, The Reader, c.1770）
     telop: Lesewut（読書熱）18世紀末ドイツ
   - type: image
     cut_reason: 【疫病だと断じる本】古書の山
-    from: 18
+    from: 17
     slot: 3
     credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【同じ筋書き】写真をはずし、系譜を伸ばす
-    from: 22
+    from: 21
     telop: '不安の系譜: 文字 → 小説 →'
 - id: 7
   title: 反転②後半（ワーサムの捏造・日本の学力パニック・モラルパニック）
@@ -517,7 +517,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 漫画まで、悪者にされたのだ？
+  - text: 漫画と少年犯罪が、結び付けられたのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -549,9 +549,9 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: それは聞いたことあるのだ。で、その後どうなったのだ？
+  - text: ゆとり教育が全部悪い、で話は終わったのだ？
     speaker: ずんだもん
-    expression: normal
+    expression: thinking
     pause_after: 0.4
   - text: 2012年には4位まで戻った。教育政策を変えた効果もあったのかもしれない。ところが2018年に、また15位まで落ちたの。
     speaker: めたん
@@ -617,15 +617,15 @@ scenes:
     telop: 'PISA 読解力（OECD）2003年: 8位 → 14位'
   - type: board
     cut_reason: 【順位の上下】写真をはずし、黒板に順位の推移を一本で書く（犯人だけが入れ替わる型を見せる）
-    from: 21
+    from: 20
     telop: 'PISA 読解力 2003: 14位 → 2012: 4位 → 2018: 15位 → 2022: 3位'
   - type: board
     cut_reason: 【モラルパニック】用語を黒板に
-    from: 32
+    from: 31
     telop: moral panic（Cohen, 1972）
   - type: board
     cut_reason: 【系譜が伸びる】文字→小説→漫画→学力
-    from: 40
+    from: 39
     telop: '不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？'
 - id: 8
   title: 反証の検討（何かは起きている。しかし）
@@ -649,7 +649,7 @@ scenes:
     pause_after: 0.4
   - text: 結論はこう。ショート動画をよく使う人ほど、注意力や、衝動を抑える力が低くて、不安や抑うつも強い傾向があった。関連の強さは中程度。無視できるほど小さくはないけれど、これだけですべてを説明できるほど強くもないわ。
     speaker: めたん
-    expression: explain
+    expression: serious
     pause_after: 0.4
   - text: ……やっぱり、僕の集中力は落ちてるのだ？
     speaker: ずんだもん
@@ -663,7 +663,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.4
-  - text: 中の人が、なのだ？
+  - text: 会社の中にいた人が、告発したのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
@@ -691,7 +691,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.4
-  - text: ショート動画に限らない、デジタル機器全般の研究だから、直接の比較はできないけれど。若者の幸福度への影響は、あったとしても、変動のわずか0.4パーセントほどだった。
+  - text: ショート動画に限らない、デジタル機器全般の研究だから、直接は比べられないわ。それでも、若者の幸福度への影響は、あったとしても、変動のわずか0.4パーセントほどだったの。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -703,7 +703,7 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.4
-  - text: 関係はあるけど、「ショート動画が全部悪い」とまでは言えないのだ。
+  - text: つまり、怪しいところはある。でも「全部お前のせいなのだ！」と逮捕できる証拠では、ないのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
@@ -754,11 +754,11 @@ scenes:
   title: 真因（wanting を突く設計）
   chapter_title: わたしたちは、何に負けているのか
   narration:
-  - text: 鍵は、さっきのウォンティングに戻るの。
+  - text: 本当の原因を探る鍵は、さっきのウォンティングよ。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 1950年代、ハーバード大学の心理学者スキナーは、ハトやネズミで実験したの。行動がいちばん止まらなくなる報酬の出し方は何か、という実験よ。答えは、毎回エサが出るレバーでも、決まった回数で出るレバーでもなかった。
+  - text: 1950年代、ハーバード大学の心理学者スキナーは、ハトやネズミでこんな実験をしたの。どんな報酬の出し方なら、行動がいちばん止まらなくなるのか。答えは、毎回エサが出るレバーでも、決まった回数で出るレバーでもなかったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.4
@@ -794,7 +794,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 分からないのだ。
+  - text: 分からないのだ。「あと一回だけ」が、いちばん信用できないのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.4
@@ -822,7 +822,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.4
-  - text: その通り。ずんだもんが依存してるショート動画は、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる装置なのよ。
+  - text: その通り。少なくとも、脳が弱いからだけじゃないわ。ずんだもんが見ていたショート動画は、動物の行動実験と、欲求の神経科学が突き止めた急所を、正確に突いてくる装置なのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -850,16 +850,16 @@ scenes:
     credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
     cut_reason: 【設計】写真をはずし、出典を黒板に
-    from: 26
+    from: 27
     telop: Clark & Zack, Addictive Behaviors (2023)
   - type: image
     cut_reason: 【段差の除去】無限スクロールの手元（再掲）
-    from: 29
+    from: 30
     slot: 4
     credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
     cut_reason: 【決め文】長い決め文をチョークで短く残す
-    from: 37
+    from: 39
     telop: 急所を、正確に突く装置
 - id: 10
   title: 結論（問いに答え、冒頭に戻る）
@@ -887,7 +887,7 @@ scenes:
     pause_after: 0.4
   - text: 「ドパガキ」という言葉そのものも、少し疑ってほしいの。この言葉は、原因を個人の脳に、しかも若者に置いてしまうでしょう。でも、ドーパミン中毒という説明は、科学的に正確じゃない。若者が堕落したという物語も、二千年以上、繰り返されては崩れてきた。
     speaker: めたん
-    expression: explain
+    expression: serious
     pause_after: 0.4
   - text: それに、47秒の話は、働く大人の計測だったのだ。せわしなくなってるのは、若者だけじゃないのだ。
     speaker: ずんだもん
@@ -913,7 +913,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: スマホは、寝室の外で充電するのだ。
+  - text: スマホは、寝室の外で充電するのだ。目覚まし時計を、再雇用するのだ。
     speaker: ずんだもん
     expression: point
     pause_after: 0.4
@@ -962,9 +962,9 @@ scenes:
     credit: 'Photo: Valentin Ilas / Pexels'
   - type: board
     cut_reason: 【救済の一文】写真をはずし、二人だけ
-    from: 35
+    from: 36
   - type: image
     cut_reason: 【朝】窓の外が明るむ寝室。アウトロで保持
-    from: 38
+    from: 39
     slot: 4
     credit: 'Photo: Chris Alo / Pexels'
