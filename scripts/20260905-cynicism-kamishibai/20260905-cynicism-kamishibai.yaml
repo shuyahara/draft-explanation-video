@@ -345,12 +345,8 @@ scenes:
   - text: 動かないほうが、傷つかずに済むからよ。世の中のひどさを見ても、「ほら、やっぱり」で終われるでしょう？
     speaker: めたん
     expression: explain
-    pause_after: 0.35
-  - text: 哲学者のスラヴォイ・ジジェクは、この感じをこう言ったの。「それが欺瞞だと知っている。それでも、そうする」。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.8
-  - text: それ、ちょっと、僕の親指に似てるのだ……。分かってて、次へ滑るのだ。
+    pause_after: 0.45
+  - text: それ、ちょっと、僕に似てるのだ……。分かってて、次の投稿に行くのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -402,31 +398,32 @@ scenes:
     telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 27
+    from: 26
     slot: 2
     credit: 'Photo: Pixabay'
   - type: diagram
-    cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、マゼラ・スローターダイク・ジジェクの言い換えが放射し、決め文で色が転じる（状態変化が主張）'
-    from: 28
+    cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、19世紀の語義・マゼラ・スローターダイクの三つが放射し、決め文で色が転じる（状態変化が主張）'
+    from: 27
     diagram:
       type: narrative
       layout: radiate
       center:
         icon: psychology
         text: 近代の冷笑
-        at: 28
+        at: 27
       items:
+      - id: motive
+        text: 動機を疑って嗤う
+        at: 27
+        after: 鼻で笑う性格
       - id: mazella
         text: 鍛錬から無関心へ
         at: 29
       - id: sloterdijk
         text: 知っていて動かない
         at: 35
-      - id: zizek
-        text: 欺瞞と知って続ける
-        at: 43
       turn:
-        at: 47
+        at: 45
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
