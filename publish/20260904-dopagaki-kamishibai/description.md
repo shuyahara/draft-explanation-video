@@ -49,3 +49,7 @@ BGM：（確定後に記載）
 - Orben & Przybylski, Nature Human Behaviour 3 (2019)
 - Ferster & Skinner, Schedules of Reinforcement (1957)
 - Clark & Zack, Addictive Behaviors 140 (2023)
+
+■ 姉妹チャンネル
+このチャンネルは「社会を科学する雑学」（https://www.youtube.com/channel/UC4CPJ0apLxqCKqt4S9eKO3Q ）の姉妹チャンネルです。同じテーマ・同じ出典の解説を、四国めたんとずんだもんの対話（紙芝居版）としてアレンジして投稿しています。
+ナレーション版はこちら → https://youtu.be/UO-RU_iLRBg
