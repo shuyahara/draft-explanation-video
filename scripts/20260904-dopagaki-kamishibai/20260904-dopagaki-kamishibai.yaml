@@ -146,6 +146,10 @@ scenes:
   - text: えっ、そこからなのだ？
     speaker: ずんだもん
     expression: surprised
+    pause_after: 0.45
+  - text: そこからよ。じゃあ次は、ドーパミンが本当は何をしている物質なのか。そこから見ていきましょう。
+    speaker: めたん
+    expression: explain
     pause_after: 1.2
   beats:
   - type: image
@@ -219,6 +223,10 @@ scenes:
   - text: でも、快楽そのものじゃないなら、僕がやめられないあの感じは、いったい何なのだ？
     speaker: ずんだもん
     expression: confused
+    pause_after: 0.45
+  - text: いい質問ね。それを考えるために、次は「欲しい」と「好き」という二つの言葉を分けてみましょう。
+    speaker: めたん
+    expression: smile
     pause_after: 1.2
   readings:
   - surface: 報酬予測誤差
@@ -327,7 +335,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: それは別の問いね。次に、確かめましょう。
+  - text: それは別の問いね。「本当に集中力は落ちたのか」。次は、そこを確かめましょう。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -439,7 +447,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: もっと前よ。「新しいものが人をだめにする」という不安なら、二千年以上前からあるの。
+  - text: もっと前よ。「新しいものが人をだめにする」という不安なら、二千年以上前からあるの。その歴史を、少しさかのぼってみましょうか。
     speaker: めたん
     expression: normal
     pause_after: 1.2
@@ -517,6 +525,14 @@ scenes:
   - text: 小説がショート動画に替わっただけ。心配する話の型は、二百年前とほとんど同じなのよ。
     speaker: めたん
     expression: smile
+    pause_after: 0.45
+  - text: でも、昔の人は根拠もなしに騒いでただけなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: いいえ。データを掲げて、社会を大きく動かした騒ぎもあるの。次はそれを見ましょう。
+    speaker: めたん
+    expression: serious
     pause_after: 1.2
   readings:
   - surface: 対話篇
@@ -555,7 +571,7 @@ scenes:
   title: 反転②後半（ワーサムの捏造・日本の学力パニック・モラルパニック）
   chapter_title: null
   narration:
-  - text: 20世紀には、この不安がデータを掲げて、社会を大きく動かした例もあるの。1954年、アメリカの精神科医、フレドリック・ワーサムが、「漫画は少年犯罪の温床だ」と告発する本を出したわ。
+  - text: 20世紀のアメリカよ。1954年、アメリカの精神科医、フレドリック・ワーサムが、「漫画は少年犯罪の温床だ」と告発する本を出したわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -627,7 +643,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ただ、そうも言い切れないところもあるのよ。
+  - text: ただ、そうも言い切れないところもあるのよ。次は、そこを正直に見ていきましょう。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -775,6 +791,10 @@ scenes:
   - text: じゃあ、めたん。本当の原因は、どこにあるのだ？
     speaker: ずんだもん
     expression: confused
+    pause_after: 0.45
+  - text: そこが、この話の本題ね。次の章で、ずんだもんの親指が止まらなかった理由に、正面から答えるわ。
+    speaker: めたん
+    expression: serious
     pause_after: 1.2
   beats:
   - type: chapter
@@ -912,6 +932,10 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
+  - text: ……じゃあ、最初の問いの答えは、なんなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 1.2
   readings:
   - surface: 公の場
     reading: オオヤケノバ
