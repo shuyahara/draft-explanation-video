@@ -298,7 +298,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: つまり最初のシニシズムは、力のない側が権力へ向ける嗤いだったの。下から上へ、吠えていたのよ。
+  - text: つまり最初のシニシズムは、力のない側が権力へ向ける嗤いだったの。下から上への突き上げだったのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -306,27 +306,27 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: いい質問ね。向きだけ見れば、たしかに下から上に見えるわ。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、本気の部分よ。
+  - text: いい質問ね。向きだけ見れば、たしかに下から上に見えるわ。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、行動の部分よ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 犬は、持っている側を嗤った。今の冷笑は、やっている側を嗤うの。
+  - text: ディオゲネスは、富や資産を持っている人々を嗤った。今の冷笑は、自分から行動する人々を嗤うの。
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: 持っている側と、やっている側……。向きが違うのだ。
+  - text: 昔の冷笑と今の冷笑では、嗤う対象が違うのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そうよ。けれど、この言葉はやがて意味を変えるの。英語のシニックが、「人の動機を疑って鼻で笑う性格」を指すようになるのは、19世紀半ばだとされているわ。
+  - text: そうよ。そして、冷笑という言葉はやがて意味を変えるの。英語のシニックが、「人の動機を疑って鼻で笑う性格」を指すようになるのは、19世紀半ばだとされているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 文学研究者のデイヴィッド・マゼラは、これは意味が薄くなっただけじゃない、と言うの。昔は欲望を抑える鍛錬だったものが、いまは無関心や受け身を指す。反対向きになったのよ。
+  - text: 文学研究者のデイヴィッド・マゼラは、これは意味が薄くなっただけじゃない、と言うの。昔は欲望を抑える鍛錬だったものが、いまは無関心や受け身を指す。全く違うものなったのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.9
-  - text: 鍛錬が、無関心に……。同じ言葉で、中身が反対になったのだ。
+  - text: 鍛錬、向上心が、無関心に……。同じ言葉で、中身が反対になったのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -402,31 +402,31 @@ scenes:
     telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 28
+    from: 27
     slot: 2
     credit: 'Photo: Pixabay'
   - type: diagram
     cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、マゼラ・スローターダイク・ジジェクの言い換えが放射し、決め文で色が転じる（状態変化が主張）'
-    from: 29
+    from: 28
     diagram:
       type: narrative
       layout: radiate
       center:
         icon: psychology
         text: 近代の冷笑
-        at: 29
+        at: 28
       items:
       - id: mazella
         text: 鍛錬から無関心へ
-        at: 30
+        at: 29
       - id: sloterdijk
         text: 知っていて動かない
-        at: 36
+        at: 35
       - id: zizek
         text: 欺瞞と知って続ける
-        at: 44
+        at: 43
       turn:
-        at: 48
+        at: 47
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
@@ -1445,7 +1445,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.5
-  - text: ……めたん。僕の親指、今日は、次に滑らなかったのだ。
+  - text: ……めたん。僕、今日は、次の投稿に行く前に止まれたのだ。
     speaker: ずんだもん
     expression: smile
     pause_after: 2.0
