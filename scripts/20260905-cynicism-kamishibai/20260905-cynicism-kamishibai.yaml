@@ -1452,10 +1452,6 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.5
-  - text: ……めたん。僕、今日は、次の投稿に行く前に止まれたのだ。
-    speaker: ずんだもん
-    expression: smile
-    pause_after: 2.0
   readings:
   - surface: 犬
     reading: イヌ
@@ -1494,28 +1490,7 @@ scenes:
     from: 31
     telop: 冷笑は安い。だから、広がる
   - type: image
-    cut_reason: 【最後の一枚】親指が止まったままのスマホ。アウトロで保持
-    from: 35
+    cut_reason: 【最後の一枚】暗がりで光る画面に指を置く手。決め文と同時に出し、余韻とアウトロで保持
+    from: 33
     slot: 3
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
-- id: 15
-  title: アウトロ（挨拶）
-  chapter_title: null
-  narration:
-  - text: 今日はここまで。ご視聴ありがとうございました。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 面白いと思ったら、高評価とチャンネル登録をお願いするのだ。
-    speaker: ずんだもん
-    expression: smile
-    pause_after: 0.45
-  - text: それと、あなたの意見も、コメントで教えてね。
-    speaker: めたん
-    expression: smile
-    pause_after: 1.0
-  beats:
-  - type: board
-    cut_reason: 【アウトロ】黒板だけで挨拶。フェードへ
-    from: 1
-    telop: 高評価・チャンネル登録・コメントをお願いします
