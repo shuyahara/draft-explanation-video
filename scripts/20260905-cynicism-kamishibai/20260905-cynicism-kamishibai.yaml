@@ -27,15 +27,15 @@ scenes:
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: 投稿を見ただけで、売名だって決めちゃうの？ ……ずんだもん、今、笑ったでしょう。
+  - text: 投稿を見ただけで、売名だって決めちゃうの？ ……ずんだもん、今、バカにしたでしょう。
     speaker: めたん
     expression: thinking
     pause_after: 0.45
-  - text: 笑ったのだ。ほら、返信も見て。「売名だ」「偽善だ」「はいはい」ばっかりなのだ。みんな同じこと思ってるのだ。
+  - text: でも、返信も見て。「売名乙」「偽善だ」そんなのばっかりなのだ。みんな同じこと思ってるのだ。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: 「ありがとう」より、笑った返信のほうが、ずっと広がってるわね。
+  - text: 褒めるコメントより、バカにするコメントのほうが、ずっと多いわね。
     speaker: めたん
     expression: thinking
     pause_after: 0.45
@@ -43,15 +43,15 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: 待って。指がもう次へ滑っていったわね。ひとつ聞いていいかしら。ずんだもんは、どうして笑ったの？
+  - text: 待って。ひとつ聞いていいかしら。ずんだもんは、どうして笑ったの？
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: どうしてって……。なんか、笑うところだったのだ。理由は、うまく言えないのだ。
+  - text: どうしてって……。理由はうまく言えないのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: そういう笑いのことを、冷笑って呼ぶのよ。本気の人を、「自分は分かってます」って顔で、鼻で笑って終わらせることね。理由がうまく言えないのも、冷笑の特徴なの。
+  - text: そういう態度のことを、冷笑って呼ぶのよ。本気の人を、「自分は分かってます」って顔で、鼻で笑って終わらせることね。理由がうまく言えないのも、冷笑の特徴なの。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -59,9 +59,13 @@ scenes:
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: 責めているわけじゃないのよ。私だって、同じ画面を見たら笑いそうになるかもしれないもの。だから、一緒に考えてみたいの。
+  - text: 責めているわけじゃないのよ。私だって、同じ画面を見たらバカにしそうになるかもしれないもの。だから、一緒に冷笑について考えてみない？
     speaker: めたん
     expression: smile
+    pause_after: 0.45
+  - text: 確かに、なんで冷笑してしまったのか、気になるのだ。
+    speaker: ずんだもん
+    expression: thinking
     pause_after: 1.2
   readings:
   - surface: 冷笑
@@ -74,12 +78,12 @@ scenes:
     credit: 'Photo: MART PRODUCTION / Pexels'
   - type: image
     cut_reason: 【返信欄】返信の並ぶ画面を見る手元（別カット）
-    from: 7
+    from: 6
     slot: 2
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【定義】写真をはずし、黒板に冷笑の定義を書く
-    from: 20
+    from: 17
     telop: 冷笑＝本気を、一段高いところから鼻で笑って済ませる態度
 - id: 2
   title: 問いへの変換
@@ -117,7 +121,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: ええ。最後には、ずんだもんがあの投稿を見て、親指を次へ滑らせた理由に戻ってくるわ。じゃあ、まずは2400年前のアテナイへ行きましょう。
+  - text: ええ。最後には、ずんだもんがあの投稿を見て、冷笑してしまった理由がわかるわよ。じゃあ、まずは2400年前のアテナイへ行きましょう。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -167,7 +171,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: その暮らしを選んだ理由は、次の話を聞くと少し分かるわ。ある日、アレクサンドロス大王が彼の前に立って、何か望みはないかと尋ねたの。
+  - text: 何のためかは、あとで分かるわ。まず、彼が何をどうでもいいと思っていたかが分かる話を、ひとつ。ある日、アレクサンドロス大王が彼の前に立って、何か望みはないかと尋ねたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -195,11 +199,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: じゃあ、「世の中の慣習を作り変えよ」って言われたのだ？
+  - text: つまり、「世の中の慣習を作り変えよ」って言われたのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 彼はそう受け取ったのよ。それが、犬の一生の使命になったの。
+  - text: そう、彼はそう受け取ったのよ。それが、彼の一生の使命になったの。
     speaker: めたん
     expression: explain
     pause_after: 0.6
@@ -211,7 +215,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  - text: 犬が、シニシズムの語源！？ でも、甕で寝てる犬と、スマホの返信欄が、どうつながるのだ？
+  - text: 犬が、シニシズムの語源！？ でも、甕で寝てる男と、スマホの返信欄が、どうつながるのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -253,22 +257,22 @@ scenes:
     credit: 'Photo: Jan van der Wolf / Pexels'
   - type: image
     cut_reason: 【大王】アレクサンドロス大王の彫像
-    from: 17
+    from: 18
     slot: 4
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【犬】遺跡にいる犬
-    from: 24
+    from: 25
     slot: 5
     credit: 'Photo: Trần Chính / Pexels'
   - type: image
     cut_reason: 【神託】デルフォイの遺跡
-    from: 28
+    from: 29
     slot: 6
     credit: 'Photo: Konstantinos Livadas / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、語源を黒板に
-    from: 36
+    from: 37
     telop: 犬（キュオーン）→ シニシズム
 - id: 4
   title: 古代②（反転）
@@ -282,11 +286,11 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: じゃあ、その犬たちは誰に吠えていたのかしら。富や権力、それから「みんなこうするもの」という慣習よ。人はもっと少ないもので生きられる、と、暮らしそのもので示したの。
+  - text: じゃあ、その犬と呼ばれた者たちは誰に吠えていたのか。それは富や権力、それから「みんなこうするもの」という慣習よ。人はもっと少ないもので生きられる、と、暮らしそのもので示したの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 甕で寝てたのも、大王にどいてくれって言ったのも、全部それなのだ。
+  - text: 甕で寝てたのも、大王にどいてくれって言ったのも、全部それなのだ。究極のミニマリストなのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -298,11 +302,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 下から上！ ……でも、僕があの俳優を笑ったのも、下から上なのだ？ 相手は有名人なのだ。
+  - text: 下から上……。それなら、僕があの俳優を笑ったのも、下から上なのだ？ 相手は有名人で、僕はただのずんだもんなのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.45
-  - text: いい反論ね。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、本気の部分よ。
+  - text: いい質問ね。向きだけ見れば、たしかに下から上に見えるわ。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、本気の部分よ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -394,35 +398,35 @@ scenes:
     telop: キュオーン（犬）→ キュニコス（犬のような者たち）→ Cynic
   - type: board
     cut_reason: 【真理の勇気】写真をはずし、出典を黒板に
-    from: 10
+    from: 11
     telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 26
+    from: 28
     slot: 2
     credit: 'Photo: Pixabay'
   - type: diagram
     cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、マゼラ・スローターダイク・ジジェクの言い換えが放射し、決め文で色が転じる（状態変化が主張）'
-    from: 27
+    from: 29
     diagram:
       type: narrative
       layout: radiate
       center:
         icon: psychology
         text: 近代の冷笑
-        at: 27
+        at: 29
       items:
       - id: mazella
         text: 鍛錬から無関心へ
-        at: 28
+        at: 30
       - id: sloterdijk
         text: 知っていて動かない
-        at: 34
+        at: 36
       - id: zizek
         text: 欺瞞と知って続ける
-        at: 42
+        at: 44
       turn:
-        at: 46
+        at: 48
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
