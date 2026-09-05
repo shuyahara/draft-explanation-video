@@ -395,7 +395,7 @@ scenes:
   - type: board
     cut_reason: 【真理の勇気】写真をはずし、出典を黒板に
     from: 10
-    telop: Foucault『真理の勇気』（1983–84 講義）／ Mazella (2007)
+    telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
     from: 26
