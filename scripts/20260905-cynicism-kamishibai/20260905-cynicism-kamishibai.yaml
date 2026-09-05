@@ -401,19 +401,28 @@ scenes:
     from: 26
     slot: 2
     credit: 'Photo: Pixabay'
-  - type: board
-    cut_reason: 【綴りの違い】写真をはずし、二つの綴りを黒板に
-    from: 32
-    telop: Kynismus（古代）／ Zynismus（近代）
-  - type: image
-    cut_reason: 【知った上で動かない】オフィスでスマホを見る手元。白い光
-    from: 39
-    slot: 3
-    credit: 'Photo: AlphaTradeZone / Pexels'
-  - type: board
-    cut_reason: 【決め文】写真をはずし、二人だけで反転を聞かせる
-    from: 45
-    telop: 犬は権力に吠え、冷笑は本気に吠える
+  - type: diagram
+    cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、マゼラ・スローターダイク・ジジェクの言い換えが放射し、決め文で色が転じる（状態変化が主張）'
+    from: 27
+    diagram:
+      type: narrative
+      layout: radiate
+      center:
+        icon: psychology
+        text: 近代の冷笑
+        at: 27
+      items:
+      - id: mazella
+        text: 鍛錬から無関心へ
+        at: 28
+      - id: sloterdijk
+        text: 知っていて動かない
+        at: 34
+      - id: zizek
+        text: 欺瞞と知って続ける
+        at: 42
+      turn:
+        at: 46
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
@@ -771,7 +780,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 三つ目は、たぶんいちばん認めにくいものよ。嫉妬なの。
+  - text: 三つ目は、たぶんいちばん認めにくいものよ。嫉妬。正確には、嫉妬から来る気持ちなの。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -1421,10 +1430,6 @@ scenes:
   - text: だから、広がる。
     speaker: めたん
     expression: serious
-    pause_after: 0.4
-  - text: でも、安いものはたいてい、後で高くつくの。
-    speaker: めたん
-    expression: serious
     pause_after: 0.8
   - text: そして、冷笑が守っているのは、たいてい、正しさじゃなくて、傷つきたくない気持ちなのよ。
     speaker: めたん
@@ -1465,6 +1470,6 @@ scenes:
     telop: 冷笑は安い。だから、広がる
   - type: image
     cut_reason: 【最後の一枚】親指が止まったままのスマホ。アウトロで保持
-    from: 36
+    from: 35
     slot: 3
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
