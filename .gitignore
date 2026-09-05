@@ -220,3 +220,6 @@ __marimo__/
 # BGM/採用素材（再配布禁止音源・ダウンロード素材はコミットしない） #4
 scripts/bgm/
 scripts/assets/
+
+# 試写室ページの生成物（数MBの動画埋め込みHTML・軽量エンコード）はコミットしない #22 #23
+publish/**/shisha/

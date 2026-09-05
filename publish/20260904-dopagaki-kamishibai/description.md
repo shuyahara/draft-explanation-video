@@ -1,0 +1,55 @@
+# 概要欄
+
+## タイトル（確定 2026-09-04）
+なぜ現代人はドパガキになってしまうのか――ショート動画が止まらない本当の仕組み
+
+## 本文
+
+夜、寝ようと思ったのに親指が止まらない。「おれはドパガキだから」と自分を笑う前に、
+四国めたんとずんだもんが、ドーパミン研究・メディアの歴史・画面の設計の三方向から、
+その言葉をほどいていきます。
+
+弱くなったのは、あなたじゃない。強くなったのは、相手のほう。
+
+## チャプター
+（レンダの timeline.json から転記。v2 で更新）
+0:00 夜ふかしの自白
+1:53 通説の提示（ドーパミン中毒という筋書き）
+3:30 ドーパミンは、快楽の物質なのか
+5:16 欲しい と 好き（wanting / liking）
+7:22 「47秒」の誤読
+9:39 この不安は、いつから続いているのか
+11:25 ワーサムの捏造・学力パニック・モラルパニック
+14:07 本当に、何も起きていないのか
+17:35 わたしたちは、何に負けているのか
+20:29 結論
+
+## クレジット
+
+音声：VOICEVOX:四国めたん / VOICEVOX:ずんだもん
+立ち絵：坂本アヒル（ずんだもん立ち絵素材 / 四国めたん立ち絵素材）
+キャラクター：東北ずん子・ずんだもんプロジェクト（ガイドライン準拠）
+効果音：OtoLogic（CC BY 4.0） https://otologic.jp
+BGM：（確定後に記載）
+
+写真・図版の出典（画面内にも表示）：
+- Pexels: cottonbro studio / Muhamad Guruh Budi Hartono / Barbara Olsen / Tima Miroshnichenko / Nikolett Emmert / Christina Morillo / Bence Szemerey / Ayşenur / Jonathan Cooper / RDNE Stock project / YU HSIU CHOU / Guohua Song / Eddie Oliveira / Vanessa V. / Towfiqu barbhuiya / Valentin Ilas / Chris Alo（Pexels License）
+- Pixabay（Pixabay License）
+- Wikimedia Commons（Public Domain）: Papyrus of Ani（大英博物館蔵）／ Jean-Honoré Fragonard, The Reader (c.1770) ／ Skinner boxes (Luis Dantas)
+- 書影: Anna Lembke, Dopamine Nation (Dutton, 2021)
+
+## 主な出典
+- Schultz, Dayan & Montague, Science 275 (1997)
+- Berridge & Robinson, American Psychologist 71(8) (2016)
+- Gloria Mark, Attention Span (2023) / González & Mark, CHI 2004
+- Plato, Phaedrus 274–275
+- Tilley, Information & Culture 47(4) (2012)
+- OECD, PISA 2022 Results (Volume I) / 国立教育政策研究所「PISA2018のポイント」「PISA2022のポイント」
+- Nguyen et al., Psychological Bulletin (2025)
+- Orben & Przybylski, Nature Human Behaviour 3 (2019)
+- Ferster & Skinner, Schedules of Reinforcement (1957)
+- Clark & Zack, Addictive Behaviors 140 (2023)
+
+■ 姉妹チャンネル
+このチャンネルは「社会を科学する雑学」（https://www.youtube.com/channel/UC4CPJ0apLxqCKqt4S9eKO3Q ）の姉妹チャンネルです。同じテーマ・同じ出典の解説を、四国めたんとずんだもんの対話にした「ずんだもん版」としてアレンジして投稿しています。
+ナレーション版はこちら → https://youtu.be/UO-RU_iLRBg

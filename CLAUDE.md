@@ -122,6 +122,9 @@ YAML はレンダリングツール [script-to-video](https://github.com/shuyaha
 - **保存先**: `scripts/{YYYYMMDD-テーマ}/{台本と同名}.yaml`。雛形は `templates/scene-yaml-template.yaml`。
 - 未知のフィールドはツール側でエラーになる（`extra="forbid"`）。仕様にない項目は書かない。
   仕様に不足を感じた場合は独自拡張せず、まずユーザーに相談する。
+- **レンダ出力（動画・音声・フレームなどの生成物）の置き場は `D:\script-to-video-build\`**（2026-09-05 決定。C: が満杯になったため）。`C:\Users\shuya\Projects\script-to-video\build` はこのフォルダへのジャンクションなので、従来どおり `--out-dir build/<名前>` で書けばよく、実体は D に置かれる。
+  台本・YAML・素材メモ・公開パッケージ（`scripts/` `references/` `publish/`）は従来どおり本リポジトリに置く。
+  レンダ完了・アップロード後は中間物（`scenes/` `overlays/` `subtitles/` `assets/`）を消してよい。
 - 完成した YAML は script-to-video の `validate` サブコマンドで検証する。
   ```
   cd C:\Users\shuya\Projects\script-to-video
@@ -214,4 +217,5 @@ v6 以降、シーンの映像は `beats[]`（image / diagram / typo / chapter�
 - `docs/legacy-v5-rhythm.md` — 非ビート運用（v5互換）の映像リズム設計（`chapter_title` / `emphasis` / `cutaways` / `diagrams`）。
 - `docs/asset-workflow.md` — 素材候補収集ワークフロー（説明イラストの検討手順・メタファー辞書・検品・ストック/BGM のライセンス規則）。
 - `docs/narration-style.md` — 機械音声向けの書き方の詳細（ポーズ設計の目安・実測値・根拠文献・クレジット）。
+- `docs/dialogue-guide.md` — 対話劇台本（めたん×ずんだもん）の書き方（ナレーション癖の除去・聞き手の反応・一人称「僕」・反転の論理検証・GitHub 直編集時の運用）。2026-09-04 のユーザー編集から言語化。
 - `docs/decisions.md` — 日付・R番号・実測値・試写FB に基づく判断の索引。

@@ -1,0 +1,276 @@
+"""紙芝居版ドパガキ: ビート（貼り写真 / 黒板のみ / 章カード）を YAML に貼り直す。
+
+セリフを推敲すると字幕キュー番号がずれるので、ビートの開始位置は「そのキュー本文に含まれる
+アンカー文字列」で指定し、実行時にキュー番号へ解決する。
+
+  .venv\\Scripts\\python.exe scripts/20260904-dopagaki-kamishibai/apply_beats.py
+
+前提: tools/kamishibai_md_to_yaml.py で YAML（narration 部）を生成済み。
+"""
+from __future__ import annotations
+
+import re
+import sys
+from pathlib import Path
+
+import yaml
+
+YAML_PATH = Path(__file__).with_name("20260904-dopagaki-kamishibai.yaml")
+
+CREDIT = {
+    "bed": "Photo: cottonbro studio / Pexels",
+    "hand": "Photo: cottonbro studio / Pexels",
+    "train": "Photo: Muhamad Guruh Budi Hartono / Pexels",
+    "cover": "Book cover: Dopamine Nation, Anna Lembke (Dutton, 2021)",
+    "stairs": "Photo: Eren Li / Pexels",
+    "lab": "Photo: Rámon van Raaij / Pexels",
+    "juice": "Photo: Pixabay / Pexels",
+    "stopwatch": "Photo: William Warby / Pexels",
+    "data": "Photo: Pixabay / Pexels",
+    "scope": "Photo: cottonbro studio / Pexels",
+    "oldbooks": "Photo: Suzy Hazelwood / Pexels",
+    "newspaper": "Photo: Lisa Fotios / Pexels",
+    "kiosk": "Photo: Valentin Angel Fernandez / Pexels",
+    "exam": "Photo: Andy Barbour / Pexels",
+    "chicken": "Photo: cottonbro studio / Pexels",
+    "ubc": "Photo: Sunny Lee / Pexels",
+    "rat": "Photo: Nikolett Emmert / Pexels",
+    "office": "Photo: David Kwewum / Pexels",
+    "movie": "Photo: Bence Szemerey / Pexels",
+    "cafe": "Photo: Ayşenur / Pexels",
+    "papyrus": "Wikimedia Commons, Public Domain（大英博物館蔵『パピルス・オブ・アニ』）",
+    "fragonard": "Wikimedia Commons, Public Domain（Fragonard, The Reader, c.1770）",
+    "books": "Photo: Pixabay",
+    "comics": "Photo: Jonathan Cooper / Pexels",
+    "paper": "Photo: RDNE Stock project / Pexels",
+    "classroom": "Photo: Kari Alfonso / Pexels",
+    "library": "Photo: Pixabay",
+    "capitol": "Photo: Guohua Song / Pexels",
+    "skinner": "Photo: Pixabay / Pexels",
+    "slot": "Photo: Vanessa V. / Pexels",
+    "thumb": "Photo: Lisa Fotios / Pexels",
+    "notif": "Photo: cottonbro studio / Pexels",
+    "facedown": "Photo: Valentin Ilas / Pexels",
+    "morning": "Photo: Chris Alo / Pexels",
+}
+KEIFU = "不安の系譜: 文字 → 小説 → 漫画 → 学力 → ショート動画？"
+
+
+# (type, anchor, slot, credit_key, cut_reason, telop)
+# anchor: そのキュー本文に含まれる文字列（シーン内で最初に一致したキューを開始位置にする）。None は先頭。
+def img(anchor, slot, credit_key, why, telop=None):
+    return ("image", anchor, slot, credit_key, why, telop)
+
+
+def board(anchor, why, telop=None):
+    return ("board", anchor, None, None, why, telop)
+
+
+def chapter():
+    return ("chapter", None, None, None, "【章の入口】黒板に問いを書いて本題へ", None)
+
+
+def diagram(anchor, why, spec):
+    """チョーク図解（紙芝居モード v8）。spec 内の `at` は文字列アンカーで書き、実行時にキュー番号へ解決する。"""
+    return ("diagram", anchor, None, None, why, spec)
+
+
+BEATS = {
+    1: [
+        img(None, 1, "bed", "【夜ふかしの自白】ベッドで横になりスマホを見る人。枕元の明かり。冒頭の場面をそのまま見せる"),
+        img("この前「ドパガキ」という言葉", 2, "hand", "【ドパガキという言葉】スマホの画面を見る手元。命名の場面へ",
+            telop="ドパガキ＝ドーパミン中毒のガキ（ネットスラング）"),
+        board("じゃあ今日は", "【問いの提示】写真をはずし、黒板に問いだけ", telop="なぜ現代人は、ドパガキになってしまうのか"),
+        img("先に言っておくわ", 3, "hand", "【冒頭の約束】スマホを持つ手元を再掲し、黒板上部に「犯人＝画面の設計」（試写 v9: 板だけでは寂しい）", telop="犯人＝画面の設計"),
+    ],
+    2: [
+        img(None, 1, "train", "【通説の筋書き】昼の電車でスマホを見る人々"),
+        img("よく知ってるわね", 2, "cover", "【世界的な広がり】書影（実物）を貼る", telop="Anna Lembke『Dopamine Nation』2021"),
+        img("だから「ドーパミンが出すぎて", 3, "stairs", "【デトックス】スマホを引き出しにしまう手"),
+        board("ただ、この説明には", "【決め文】写真をはずして間。反転の一撃", telop="ドーパミン ≠ 快楽物質"),
+    ],
+    3: [
+        chapter(),
+        img(None, 1, "lab", "【1997年の実験】実験に使われる種のサル（マカク）。v7 で脳波写真から差し替え", telop="Schultz et al., Science (1997)"),
+        img("サルにジュースをあげると", 2, "juice", "【ジュースで発火】ジュースのグラス。報酬そのものを見せる"),
+        diagram("光の合図のあとに", "【図解: 実験の鎖】合図→ジュース→発火を黒板に書き、発火が合図の瞬間へ移ることを見せる（配置が知見そのもの）",
+                {"type": "narrative", "layout": "chain",
+                 "items": [
+                     {"id": "cue", "text": "光の合図", "icon": "notifications", "at": "光の合図のあとに"},
+                     {"id": "juice", "text": "ジュース", "icon": "local_drink", "at": "ジュースをもらった瞬間"},
+                     {"id": "fire", "text": "発火は合図の瞬間へ", "icon": "bolt", "at": "合図が出た瞬間に発火"},
+                 ],
+                 "caption": {"at": "それなのにジュースが出ないと", "text": "ジュースが出ないと、沈み込む"}}),
+        board("そのとおり", "【報酬予測誤差】黒板に用語を書く", telop="報酬予測誤差 ＝ 予想と現実のズレ"),
+        img("いい言い方ね", 3, "scope", "【答え合わせの信号】測定器の画面に触れる手元（信号の記録）。v10: 板だけの 44 秒を分ける"),
+    ],
+    4: [
+        img(None, 1, "rat", "【ラットの実験】実験動物の写真", telop="Berridge & Robinson (2016)"),
+        diagram("ベリッジは、この二つを", "【図解: 二つの言葉】欲しい／好きの二項が「ドーパミンは欲しいを動かす」へ収束する",
+                {"type": "narrative", "layout": "converge",
+                 "items": [
+                     {"id": "wanting", "text": "欲しい（wanting）", "at": "ウォンティングは、「欲しくてたまらない」"},
+                     {"id": "liking", "text": "好き（liking）", "at": "ライキングは、味わったときの"},
+                 ],
+                 "result": {"text": "ドーパミンは欲しいを動かす", "at": "ドーパミンが強く動かすのは"}}),
+        img("それ、そのまんま", 2, "bed", "【冒頭の再演】昨夜のずんだもん＝冒頭の写真を再掲"),
+        board("半分は当たっている", "【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる",
+              telop="「溺れている」のではなく「空回りしている」"),
+        img("快楽に溺れて、自分がだらしなくなった", 3, "thumb", "【空回りする親指】フィードを払う手元（再掲）。v10: 板だけの 46 秒を分ける"),
+    ],
+    5: [
+        img(None, 1, "office", "【47秒】ノート・スマホ・PC を同時に扱う手元（注意の分散）", telop="Gloria Mark（UC Irvine）"),
+        img("マーク自身の振り返り", 4, "stopwatch", "【数字】ストップウォッチ＝画面を切り替えるまでの時間の計測。v7 で板だけから写真付きに", telop="2004年: 約2分半 → 近年: 平均47秒（中央値 40秒）"),
+        img("好きな映画なら", 2, "movie", "【映画は2時間見られる】映画館"),
+        img("面白い本なら", 3, "cafe", "【本は1時間読める】読書の場面"),
+        board("少なくともこの数字だけでは", "【誤読の修正】写真をはずし、出典を残す", telop="Gloria Mark『Attention Span』(2023)"),
+        img("もっと前よ", 5, "oldbooks", "【二千年以上前から】古書の山。歴史章への受け渡し"),
+    ],
+    6: [
+        chapter(),
+        img(None, 1, "papyrus", "【パイドロス】パピルスの実物", telop="プラトン『パイドロス』274-275"),
+        board("新しいメディアが", "【系譜の始まり】黒板に系譜の一本線を書き始める", telop="不安の系譜: 文字 →"),
+        img("時代は下って", 2, "fragonard", "【読書熱】18世紀の読書する女性（絵画）", telop="Lesewut（読書熱）18世紀末ドイツ"),
+        img("1795年には", 3, "books", "【疫病だと断じる本】古書の山"),
+        board("あれ。", "【同じ筋書き】写真をはずし、系譜を伸ばす", telop="不安の系譜: 文字 → 小説 →"),
+        img("データを掲げて", 4, "newspaper", "【社会を動かした騒ぎ】新聞の束。次章（ワーサム）への受け渡し"),
+    ],
+    7: [
+        img(None, 1, "comics", "【1954年】積まれた漫画本"),
+        img("この話には、後日談", 2, "paper", "【後日談】資料を精査する手元", telop="Tilley, Information & Culture (2012)"),
+        board("子供の年齢は", "【捏造の中身】写真をはずして聞かせる"),
+        img("日本にも、似た繰り返し", 3, "classroom", "【学力パニック】試験を受ける生徒たちの教室", telop="PISA 読解力（OECD）2003年: 8位 → 14位"),
+        diagram("2012年には4位まで戻った", "【図解: 順位の上下】PISA 読解力の順位を折れ線で。上下を繰り返す形そのものが「犯人が入れ替わる」の土台",
+                {"type": "chart", "chart": "line", "title": "PISA 読解力 日本の順位（数字が小さいほど上位）", "unit": "位",
+                 "source": "国立教育政策研究所「PISA2018 / PISA2022 のポイント」",
+                 "series": [{"color": "accent", "at": "2012年には4位まで戻った",
+                             "points": [{"label": "2000", "value": 8}, {"label": "2003", "value": 14},
+                                        {"label": "2012", "value": 4}, {"label": "2018", "value": 15},
+                                        {"label": "2022", "value": 3}]}]}),
+        board("こういう繰り返しには", "【モラルパニック】用語を黒板に", telop="moral panic（Cohen, 1972）"),
+        img("社会の脅威として祭り上げる", 4, "kiosk", "【メディアがあおる】新聞スタンド。定義の「メディア・世論・規制」を実物で", telop="moral panic（Cohen, 1972）"),
+        board("文字、小説、漫画", "【系譜が伸びる】文字→小説→漫画→学力", telop="不安の系譜: 文字 → 小説 → 漫画 → 学力 → ？"),
+    ],
+    8: [
+        chapter(),
+        diagram(None, "【図解: 不安の系譜】文字→小説→漫画→学力→ショート動画？ の一本鎖。章頭で系譜の終点を書き足す",
+                {"type": "narrative", "layout": "chain",
+                 "items": [
+                     {"id": "moji", "text": "文字", "icon": "history_edu", "at": 1},
+                     {"id": "novel", "text": "小説", "icon": "menu_book", "at": 1},
+                     {"id": "comic", "text": "漫画", "icon": "auto_stories", "at": 1},
+                     {"id": "pisa", "text": "学力", "icon": "school", "at": 1},
+                     {"id": "short", "text": "ショート動画？", "icon": "smartphone", "at": 1},
+                 ]}),
+        img("グリフィス大学", 1, "library", "【メタ分析】学術誌の書架", telop="Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人"),
+        board("結論はこう", "【判定ボード1行目】関連：ある", telop="関連：ある（中程度）"),
+        img("学力についても", 4, "exam", "【OECD 平均点の低下】マークシートに向かう手元。S7 の教室とは別カット", telop="OECD PISA 2022: 平均点が大きく低下（コロナ前から）"),
+        img("運営企業の内側", 2, "capitol", "【内部告発の証言】議会の建物", telop="米上院 商務委員会 公聴会 (2021)"),
+        board("ただし、ここが大事", "【ただし】因果の向きは決められない", telop="関連：ある（中程度）／ 因果：決められない"),
+        img("卵が先か", 5, "chicken", "【卵が先か、ニワトリが先か】ナレーション自身の比喩を実写で（鶏と卵のかご）"),
+        img("もうひとつ、規模", 3, "data", "【規模の数字】データ解析の画面（35万人分）。v7 で板だけから写真付きに", telop="Orben & Przybylski (2019)：説明できた個人差は 0.4%"),
+        board("ここで一度整理", "【整理】判定ボード3行そろう。決め文まで保持", telop="関連：ある（中程度）／ 因果：決められない ／ 規模：大きくない"),
+    ],
+    9: [
+        chapter(),
+        img(None, 1, "skinner", "【スキナーの実験】研究者の手のひらの実験用マウス（装置写真は判読しづらく差し替え）", telop="可変比率強化（Ferster & Skinner, 1957）"),
+        img("スロットマシンが人を離さない", 2, "slot", "【スロットマシン】カジノ"),
+        img("おすすめ動画が次々に並ぶフィード", 3, "thumb", "【あなたのスマホ】フィードを親指で払う手元"),
+        board("誰にも分からない", "【設計】写真をはずし、決め文を聞かせる", telop="そう設計されている"),
+        img("2023年には、ブリティッシュコロンビア大学", 5, "ubc", "【クラークたちの研究】ブリティッシュコロンビア大学のキャンパス（実在の大学）", telop="Clark & Zack, Addictive Behaviors (2023)"),
+        img("しかもスマホの画面は", 4, "thumb", "【段差の除去】無限スクロールの手元（再掲）"),
+        board("ずんだもんが見ていたショート動画", "【決め文】長い決め文をチョークで短く残す", telop="急所を、正確に突く装置"),
+    ],
+    10: [
+        img(None, 1, "bed", "【冒頭に戻る】同じ寝室の写真"),
+        board("脳が弱くなったんじゃない", "【最大の決め文】写真をはずして間だけ"),
+        diagram("「ドパガキ」という言葉そのものも", "【図解: 言葉の中身】中毒説明の不正確さ・若者堕落物語の反復が「個人の脳を責める言葉」へ収束する",
+                {"type": "narrative", "layout": "converge",
+                 "items": [
+                     {"id": "dopa", "text": "中毒説明は不正確", "at": "でも、ドーパミン中毒という説明は"},
+                     {"id": "youth", "text": "若者堕落は二千年の反復", "at": "若者が堕落したという物語も"},
+                 ],
+                 "result": {"text": "個人の脳を責める言葉", "at": "若者が堕落したという物語も"}}),
+        img("通知をひとつ切る", 2, "notif", "【対策】通知を切る手元"),
+        img("寝室の外で充電", 3, "facedown", "【寝室の外で充電】置かれたスマホ"),
+        board("そのときは、自分を責める", "【救済の一文】写真をはずし、二人だけ"),
+        img("今夜は、スマホを居間で", 4, "morning", "【朝】窓の外が明るむ寝室。アウトロで保持"),
+    ],
+}
+
+
+def cues_of(scene) -> list[str]:
+    """字幕キューの本文列。分割規則は script-to-video の `text_cues.split_into_sentences` と
+    必ず同じものを使う（括弧内の 。！？ では切らない。ここがずれるとビート位置が全部ずれる）。"""
+    sys.path.insert(0, "C:/Users/shuya/Projects/script-to-video/src")
+    from script_to_video.text_cues import split_into_sentences
+
+    out = []
+    for seg in scene["narration"]:
+        out.extend(p for p in split_into_sentences(seg["text"]) if p.strip())
+    return out
+
+
+def resolve_ats(spec, cues: list[str], scene_id: int):
+    """spec 内の文字列 `at` をキュー番号へ解決した新しい dict を返す。"""
+    import copy
+
+    def walk(node):
+        if isinstance(node, dict):
+            out = {}
+            for k, v in node.items():
+                if k == "at" and isinstance(v, str):
+                    out[k] = resolve(cues, v, scene_id)
+                else:
+                    out[k] = walk(v)
+            return out
+        if isinstance(node, list):
+            return [walk(v) for v in node]
+        return copy.deepcopy(node)
+
+    return walk(spec)
+
+
+def resolve(cues: list[str], anchor: str | None, scene_id: int) -> int:
+    if anchor is None:
+        return 1
+    for i, c in enumerate(cues, 1):
+        if anchor in c:
+            return i
+    raise SystemExit(f"scene {scene_id}: anchor not found: {anchor!r}")
+
+
+def main() -> None:
+    doc = yaml.safe_load(YAML_PATH.read_text(encoding="utf-8"))
+    total = 0
+    for scene in doc["scenes"]:
+        cues = cues_of(scene)
+        beats = []
+        last_from = 0
+        for kind, anchor, slot, ckey, why, telop in BEATS[scene["id"]]:
+            if kind == "chapter":
+                beats.append({"type": "chapter", "cut_reason": why})
+                continue
+            frm = resolve(cues, anchor, scene["id"])
+            if frm <= last_from:
+                raise SystemExit(f"scene {scene['id']}: from must increase ({anchor!r} -> {frm} <= {last_from})")
+            last_from = frm
+            b = {"type": kind, "cut_reason": why, "from": frm}
+            if kind == "image":
+                b["slot"] = slot
+                b["credit"] = CREDIT[ckey]
+            if kind == "diagram":
+                b["diagram"] = resolve_ats(telop, cues, scene["id"])  # telop 引数の位置に spec が入っている
+            elif telop:
+                b["telop"] = telop
+            beats.append(b)
+        scene["beats"] = beats
+        total += len(beats)
+        print(f"scene {scene['id']:>2}: {len(cues):>2} cues, {len(beats)} beats  from={[b.get('from') for b in beats if 'from' in b]}")
+    with YAML_PATH.open("w", encoding="utf-8", newline="\n") as f:
+        yaml.dump(doc, f, allow_unicode=True, sort_keys=False, width=1000)
+    print(f"beats written: {total}")
+
+
+if __name__ == "__main__":
+    main()
