@@ -261,7 +261,7 @@ scenes:
     slot: 4
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【犬】遺跡にいる犬
+    cut_reason: 【犬】屋外の犬
     from: 25
     slot: 5
     credit: 'Photo: Trần Chính / Pexels'
@@ -398,6 +398,35 @@ scenes:
     cut_reason: 【真理の勇気】写真をはずし、出典を黒板に
     from: 11
     telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
+  - type: diagram
+    cut_reason: '【対比: 昔の犬と今の冷笑】嗤う対象の違いを左右 2 列で見せる（ずんだもんの「下から上？」への答え）'
+    from: 22
+    diagram:
+      type: sketch
+      rows:
+      - - id: old
+          at: 22
+          icon: pets
+          text: 昔の犬
+        - id: old_t
+          at: 22
+          icon: account_balance
+          text: 持つ側を嗤う
+          after: 人々を嗤った
+      - - id: now
+          at: 23
+          icon: sentiment_dissatisfied
+          text: 今の冷笑
+        - id: now_t
+          at: 23
+          icon: directions_run
+          text: 行動する側を嗤う
+          after: 人々を嗤うの
+      arrows:
+      - from: old
+        to: old_t
+      - from: now
+        to: now_t
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
     from: 26
@@ -489,18 +518,61 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【募金の横を通り過ぎる】街頭の呼びかけを見ずに通る人々
+    cut_reason: 【寄付を集める箱】CHARITY の札と寄付箱
     from: 1
     slot: 1
     credit: 'Photo: RDNE Stock project / Pexels'
     telop: 津田正太郎（慶應義塾大学）現代ビジネス
-  - type: board
-    cut_reason: 【動機を疑う】写真をはずし、三つの決めつけを黒板に
+  - type: diagram
+    cut_reason: '【言葉: 三つの決めつけ】三つの言葉をピクトグラム付きで並べる。写真をはずして黒板に'
     from: 9
-    telop: 「カネのため」「売名だ」「ポーズだ」→ 中身を考えなくて済む
-  - type: board
-    cut_reason: 【決めつけ合い】ポスターは描かず、二人だけで
+    diagram:
+      type: sketch
+      rows:
+      - - id: k1
+          at: 9
+          icon: payments
+          text: カネのため
+          after: カネのため
+        - id: k2
+          at: 9
+          icon: campaign
+          text: 売名だ
+          after: 売名だ
+        - id: k3
+          at: 9
+          icon: theater_comedy
+          text: ポーズだ
+          after: ポーズだ
+      caption:
+        text: 動機を疑えば、考えずに済む
+        at: 10
+  - type: diagram
+    cut_reason: '【対比: 敵同士が同じことをする】両側から中央の決めつけへ矢印'
     from: 17
+    diagram:
+      type: sketch
+      rows:
+      - - id: a
+          at: 17
+          icon: person
+          text: 批判する側
+          after: 批判する側
+        - id: m
+          at: 17
+          icon: gavel
+          text: 邪悪な動機だと決めつけ
+          after: 邪悪な動機がある
+        - id: b
+          at: 17
+          icon: person
+          text: 擁護する側
+          after: 擁護する側
+      arrows:
+      - from: a
+        to: m
+      - from: b
+        to: m
   - type: board
     cut_reason: 【決め文】黒板に第一の安さ
     from: 24
@@ -579,14 +651,44 @@ scenes:
     slot: 1
     credit: 'Photo: cottonbro studio / Pexels'
     telop: Stavrova & Ehlebracht (2019) PSPB
-  - type: board
-    cut_reason: 【数字】写真をはずし、割合を黒板に
-    from: 8
-    telop: 「皮肉屋の方が賢い」と答えた人 56〜70%（米・独・英）
+  - type: diagram
+    cut_reason: '【実験: 674 人の答え】質問 → 多数派の答えと割合'
+    from: 7
+    diagram:
+      type: sketch
+      rows:
+      - - id: q
+          at: 7
+          icon: groups
+          text: 674人に質問
+          after: 674人
+        - id: a
+          at: 9
+          icon: psychology
+          text: 皮肉屋が賢い
+          value: 56〜70%
+          after: 56パーセント
+      arrows:
+      - from: q
+        to: a
   - type: board
     cut_reason: 【決め文】第二の安さ
     from: 15
     telop: 第二の安さ：何もしなくても賢い側に立てる
+  - type: diagram
+    cut_reason: '【言葉: 見える／本当か】次章への引きを 2 語で'
+    from: 19
+    diagram:
+      type: sketch
+      rows:
+      - - id: look
+          at: 19
+          icon: visibility
+          text: 賢く見える
+        - id: real
+          at: 21
+          icon: help
+          text: 本当に賢い？
 - id: 7
   title: 探索③（第三の安さ・防衛）と、ひとつ目の答え（無力感）
   chapter_title: 冷笑は、何を守っているのか
@@ -704,7 +806,7 @@ scenes:
         text: 冷笑は安い
         at: 7
   - type: image
-    cut_reason: 【日本の若者】選挙ポスター掲示板の前を通る人々
+    cut_reason: 【日本の若者】選挙ポスターの前を歩く人々
     from: 13
     slot: 1
     credit: 'Photo: Israyosoy S. / Pexels'
@@ -718,9 +820,38 @@ scenes:
     from: 22
     slot: 2
     credit: Milo Winter, The Aesop for Children (1919) / Public Domain
-  - type: board
-    cut_reason: 【決め文】写真をはずし、狐と冷笑を重ねる
+  - type: diagram
+    cut_reason: '【対比: 狐と冷笑は同じ形】葡萄→酸っぱいことにする／社会→変えようとする人を嗤う'
     from: 29
+    diagram:
+      type: sketch
+      rows:
+      - - id: g1
+          at: 29
+          icon: nutrition
+          text: 届かない葡萄
+        - id: g2
+          at: 29
+          icon: sentiment_dissatisfied
+          text: 酸っぱいことにする
+      - - id: s1
+          at: 29
+          icon: public
+          text: 変えられない社会
+          after: 変えられないと思うと
+        - id: s2
+          at: 29
+          icon: sentiment_very_dissatisfied
+          text: 変えようとする人を嗤う
+          after: 嗤ってしまうことがある
+      arrows:
+      - from: g1
+        to: g2
+      - from: s1
+        to: s2
+      caption:
+        text: 動かない自分を責めずに済む
+        at: 30
 - id: 8
   title: ふたつ目の答え（責められる予期）——中盤の反転①
   chapter_title: null
@@ -804,34 +935,83 @@ scenes:
     credit: 'Photo: Garley Gibson / Pexels'
     telop: Minson & Monin (2012) SPPS
   - type: diagram
-    cut_reason: '【図解: 善行者への貶め】道徳的な相手→責められる予期→貶める、の一本鎖'
+    cut_reason: '【実験: 善行者への貶め】肉を食べる人→連想→否定 47%。2 行目に予期→貶める'
     from: 6
     diagram:
-      type: narrative
-      layout: chain
-      items:
-      - id: moral
-        text: 道徳的な相手
-        icon: volunteer_activism
-        at: 6
-      - id: expect
-        text: 責められる予期
-        icon: psychology_alt
-        at: 7
-      - id: derog
-        text: 相手を貶める
-        icon: thumb_down
-        at: 11
-        after: 感じただけで
+      type: sketch
+      rows:
+      - - id: p
+          at: 6
+          icon: restaurant
+          text: 肉を食べる人
+        - id: c
+          at: 6
+          icon: psychology_alt
+          text: ベジタリアンを連想
+        - id: r
+          at: 6
+          icon: thumb_down
+          text: 否定的な言葉
+          value: 47%
+          after: 否定的な言葉
+      - - id: e
+          at: 7
+          icon: visibility_off
+          text: 見下されているはず
+        - null
+        - id: d
+          at: 11
+          icon: trending_down
+          text: 相手を貶める
+          after: 貶めてしまうの
+      arrows:
+      - from: p
+        to: c
+      - from: c
+        to: r
+      - from: e
+        to: d
       caption:
-        at: 12
         text: 善行者への貶め
+        at: 12
   - type: image
     cut_reason: 【2008年の実験】実験室で課題に向かう参加者の後ろ姿
     from: 15
     slot: 2
     credit: 'Photo: Sóc Năng Động / Pexels'
     telop: Monin, Sawyer & Marquez (2008) JPSP
+  - type: diagram
+    cut_reason: '【実験: 非対称】同じ課題をやった人→嫌った／第三者→好んだ'
+    from: 18
+    diagram:
+      type: sketch
+      rows:
+      - - id: s
+          at: 18
+          icon: groups
+          text: 同じ課題をやった人
+        - id: h
+          at: 18
+          icon: heart_broken
+          text: 断った人を嫌った
+      - - id: t
+          at: 18
+          icon: person_search
+          text: 関係のない第三者
+          after: 第三者は
+        - id: l
+          at: 18
+          icon: favorite
+          text: 断った人を好んだ
+          after: 好んだの
+      arrows:
+      - from: s
+        to: h
+      - from: t
+        to: l
+      caption:
+        text: 自分も問われた人だけが嫌う
+        at: 19
   - type: image
     cut_reason: 【冒頭の再演】電車のスマホ画面を再掲
     from: 20
@@ -914,8 +1094,32 @@ scenes:
     slot: 1
     credit: 'Photo: Pixabay'
     telop: Smith et al. (1996) PSPB
+  - type: diagram
+    cut_reason: '【実験: 挫折を喜ぶのは誰か】映像→挫折を伝える→嫉妬していた人ほど喜ぶ'
+    from: 6
+    diagram:
+      type: sketch
+      rows:
+      - - id: v
+          at: 6
+          icon: school
+          text: 優秀な学生の映像
+        - id: f
+          at: 6
+          icon: trending_down
+          text: 挫折したと伝える
+        - id: j
+          at: 7
+          icon: mood
+          text: 嫉妬していた人ほど喜ぶ
+          after: 喜んだの
+      arrows:
+      - from: v
+        to: f
+      - from: f
+        to: j
   - type: image
-    cut_reason: 【高く昇った人】掲示板を見上げる学生たち
+    cut_reason: 【高く昇った人】前方の画面を見る生徒たち
     from: 10
     slot: 2
     credit: 'Photo: Arthur Krijgsman / Pexels'
@@ -929,10 +1133,29 @@ scenes:
   - type: board
     cut_reason: 【決め文】写真をはずし、棘の出どころを聞かせる
     from: 13
-  - type: board
-    cut_reason: 【留保】予測したのは憤り
-    from: 18
-    telop: 転落を喜ぶ気持ちを予測したのは「不当だ」という憤り
+  - type: diagram
+    cut_reason: '【対比: 嫉妬か憤りか】予測したのは憤り。ずんだもんの復唱で憤りが点灯'
+    from: 19
+    diagram:
+      type: sketch
+      rows:
+      - - id: envy
+          at: 19
+          icon: mood_bad
+          text: 嫉妬
+          after: 嫉妬そのものより
+        - id: unfair
+          at: 19
+          icon: gavel
+          text: 不当だという憤り
+          after: 憤りだったわ
+      caption:
+        text: 転落を喜ぶ気持ちを予測したのは
+        at: 19
+      highlight:
+        ids:
+        - unfair
+        at: 20
 - id: 10
   title: 三つの標的（図解でまとめる）
   chapter_title: null
@@ -986,11 +1209,43 @@ scenes:
     reading: フィスク
   beats:
   - type: board
-    cut_reason: 【二つの軸】写真なし。温かさ×有能さを言葉で
+    cut_reason: 【一枚の地図】写真なし。フィスクの二軸を言葉で導入
     from: 1
     telop: Fiske, Cuddy, Glick & Xu (2002) JPSP
+  - type: diagram
+    cut_reason: '【対比: 二軸の二つの組】有能で冷たい→妬み／無能で冷たい→軽蔑'
+    from: 6
+    diagram:
+      type: sketch
+      rows:
+      - - id: a1
+          at: 6
+          icon: workspace_premium
+          text: 有能で冷たい
+        - id: a2
+          at: 6
+          icon: sentiment_very_dissatisfied
+          text: 妬み
+          after: 妬みが
+      - - id: b1
+          at: 7
+          icon: block
+          text: 無能で冷たい
+        - id: b2
+          at: 8
+          icon: thumb_down
+          text: 軽蔑
+          after: 軽蔑
+      arrows:
+      - from: a1
+        to: a2
+      - from: b1
+        to: b2
+      caption:
+        text: 温かさ×有能さ（Fiske 2002）
+        at: 6
   - type: image
-    cut_reason: 【ボランティア】海岸清掃の人々（遠景）。冒頭の投稿の中身
+    cut_reason: 【ボランティア】水辺でごみを拾う人々（遠景）。冒頭の投稿の中身
     from: 12
     slot: 1
     credit: 'Photo: Thirdman / Pexels'
@@ -1119,50 +1374,73 @@ scenes:
     cut_reason: 【反転】写真をはずして間
     from: 6
     telop: 皮肉屋の天才幻想（cynical genius illusion）
+  - type: diagram
+    cut_reason: '【対比: 予想と実際】皮肉屋が賢い 56〜70% ／ 成績は低い 30カ国。実際が点灯'
+    from: 9
+    diagram:
+      type: sketch
+      rows:
+      - - id: pred
+          at: 9
+          icon: psychology
+          text: '予想: 皮肉屋が賢い'
+          value: 56〜70%
+        - id: real
+          at: 9
+          icon: school
+          text: '実際: 成績は低い'
+          value: 30カ国
+          after: 低かったの
+      highlight:
+        ids:
+        - real
+        at: 10
   - type: image
-    cut_reason: 【9年後の収入】給与明細を持つ手（文字は読めない）
+    cut_reason: 【9年後の収入】明細と財布を持つ手元
     from: 14
     slot: 2
     credit: 'Photo: Kaboompics.com / Pexels'
     telop: Stavrova & Ehlebracht (2016) JPSP
   - type: image
-    cut_reason: 【リーダーに選ばれない】会議机の端の席
+    cut_reason: 【リーダーに選ばれない】会議室の机の端
     from: 18
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
     telop: Stavrova, Ehlebracht & Ren (2024) British Journal of Psychology
   - type: image
-    cut_reason: 【つながり直せない】輪の外に立つ一人の後ろ姿
+    cut_reason: 【つながり直せない】集団に背を向けて立つ一人
     from: 23
     slot: 4
     credit: 'Photo: Hayk Paytyan / Pexels'
     telop: Choy, Eom & Li (2021) Personality and Individual Differences
   - type: diagram
-    cut_reason: '【図解: 請求書】四つの代価を一本鎖で積む。ここまで一枚ずつ見せた項目を一望にする'
+    cut_reason: '【請求書: 四つの代価】ここまで一枚ずつ見せた項目を 2×2 で一望にする'
     from: 27
     diagram:
-      type: narrative
-      layout: chain
-      items:
-      - id: cog
-        text: 認知能力が低い
-        icon: school
-        at: 27
-      - id: income
-        text: 9年後の収入が低い
-        icon: payments
-        at: 27
-      - id: leader
-        text: リーダーに選ばれない
-        icon: groups
-        at: 27
-      - id: reconnect
-        text: つながり直せない
-        icon: link_off
-        at: 27
+      type: sketch
+      rows:
+      - - id: c1
+          at: 27
+          icon: school
+          text: 認知能力
+          value: 低い
+        - id: c2
+          at: 27
+          icon: payments
+          text: 9年後の収入
+          value: 低い
+      - - id: c3
+          at: 27
+          icon: groups
+          text: リーダー
+          value: 選ばれない
+        - id: c4
+          at: 27
+          icon: link_off
+          text: つながり直せない
       caption:
-        at: 27
         text: 安い知性の請求書
+        at: 27
   - type: board
     cut_reason: 【防衛の成熟度】黒板に二つの防衛
     from: 28
@@ -1289,10 +1567,32 @@ scenes:
     slot: 2
     credit: 'Photo: Kaboompics.com / Pexels'
     telop: Hasell, Halversen & Weeks (2025) 2020年米大統領選パネル
-  - type: board
-    cut_reason: 【環境の産物】写真をはずし、決め文へ
+  - type: diagram
+    cut_reason: '【実験: 攻撃投稿→怒り→シニシズム】1800 人の追跡で見つかった経路'
     from: 13
-    telop: 冷笑は、個人の性格である前に環境の産物
+    diagram:
+      type: sketch
+      rows:
+      - - id: see
+          at: 13
+          icon: smartphone
+          text: 攻撃投稿を見る
+        - id: anger
+          at: 13
+          icon: local_fire_department
+          text: 怒り
+        - id: cyn
+          at: 13
+          icon: sentiment_dissatisfied
+          text: シニシズム
+      arrows:
+      - from: see
+        to: anger
+      - from: anger
+        to: cyn
+      caption:
+        text: 冷笑は環境の産物でもある
+        at: 14
   - type: image
     cut_reason: 【政府への信頼】国会議事堂
     from: 21
@@ -1303,14 +1603,30 @@ scenes:
     cut_reason: 【決め文】写真をはずす
     from: 23
     telop: 日本は「不信の国」ではなく「無力感の国」
-  - type: board
-    cut_reason: 【三無主義】年表を黒板に
+  - type: diagram
+    cut_reason: '【年表: 半世紀の系譜】1972 連合赤軍事件 → 三無主義 → 2005 皮肉な共同体'
     from: 26
-    telop: 1972 連合赤軍事件 → 1973 オイルショック → 三無主義
-  - type: board
-    cut_reason: 【皮肉な共同体】書名を黒板に
-    from: 30
-    telop: 北田暁大『嗤う日本の「ナショナリズム」』2005
+    diagram:
+      type: sketch
+      rows:
+      - - id: y1
+          at: 27
+          icon: history
+          text: 連合赤軍事件
+          value: '1972'
+        - id: y2
+          at: 28
+          icon: bedtime
+          text: 三無主義
+          value: 1970年代
+        - id: y3
+          at: 30
+          icon: forum
+          text: 皮肉な共同体
+          value: '2005'
+      caption:
+        text: 形を変えながら続く半世紀の系譜
+        at: 32
 - id: 13
   title: 疑うことと、嗤うことは違う
   chapter_title: null
@@ -1375,19 +1691,74 @@ scenes:
     slot: 1
     credit: 'Photo: RDNE Stock project / Pexels'
     telop: Citrin & Stoker (2018) Annual Review of Political Science
-  - type: board
-    cut_reason: 【道具か癖か】黒板に対比
-    from: 13
-    telop: 懐疑（道具）／ 冷笑（癖）
+  - type: diagram
+    cut_reason: '【言葉: 見張る／見放す】二種類の不信を 2 語で'
+    from: 5
+    diagram:
+      type: sketch
+      rows:
+      - - id: sk
+          at: 5
+          icon: search
+          text: 懐疑＝制度を見張る
+        - id: cy
+          at: 6
+          icon: block
+          text: シニシズム＝見放す
+  - type: diagram
+    cut_reason: '【対比: 疑うべきときに疑う／いつも疑う】スタヴロヴァの二群。caption で道具と癖に着地'
+    from: 8
+    diagram:
+      type: sketch
+      rows:
+      - - id: hi
+          at: 8
+          icon: school
+          text: 認知能力が高い
+        - id: hi2
+          at: 8
+          icon: search
+          text: 腐敗の多い社会でだけ疑う
+          after: 強めていたの
+      - - id: lo
+          at: 10
+          icon: person
+          text: 認知能力が低い
+        - id: lo2
+          at: 10
+          icon: repeat
+          text: いつもシニカル
+          after: 強かったのよ
+      arrows:
+      - from: hi
+        to: hi2
+      - from: lo
+        to: lo2
+      caption:
+        text: 懐疑（道具）／ 冷笑（癖）
+        at: 13
   - type: image
-    cut_reason: 【癖】見出しだけ見てノートPCを閉じる手
+    cut_reason: 【癖】ノートPCに手を置く
     from: 16
     slot: 2
     credit: 'Photo: Thirdman / Pexels'
-  - type: board
-    cut_reason: 【希望を持った懐疑】写真をはずし、決め文まで保持
+  - type: diagram
+    cut_reason: '【言葉: 希望を持った懐疑】主張は疑う／人が変わる力は疑わない'
     from: 18
-    telop: 希望を持った懐疑（Zaki, Hope for Cynics 2024）
+    diagram:
+      type: sketch
+      rows:
+      - - id: d
+          at: 19
+          icon: fact_check
+          text: 主張は疑う
+        - id: h
+          at: 20
+          icon: favorite
+          text: 人が変わる力は疑わない
+      caption:
+        text: 希望を持った懐疑（Zaki 2024）
+        at: 18
 - id: 14
   title: 回帰と結び
   chapter_title: null
@@ -1486,7 +1857,7 @@ scenes:
     slot: 2
     credit: 'Photo: MART PRODUCTION / Pexels'
   - type: board
-    cut_reason: 【決め文】写真をはずし、四つの決め文を黒板で受ける
+    cut_reason: 【決め文】写真をはずし、決め文を黒板で受ける
     from: 31
     telop: 冷笑は安い。だから、広がる
   - type: image
