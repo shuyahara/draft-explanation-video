@@ -2,8 +2,9 @@
 
 | 版 | 動画ID | 状態 | 日付 | メモ |
 |---|---|---|---|---|
-| v1 | TDTVoyTeEUE | 非公開（29:38）→ v2 処理完了後に削除予定 | 2026-09-05 | build/cynicism-kamishibai-v1（実体 D:\script-to-video-build）。台本 v2（Codex セリフレビュー反映）、写真 35 枚、図解 4、話速 1.1、BGM「青空に口笛」、サムネ C（ジェローム「ディオゲネス」）、字幕 ja。概要欄 description-v1.txt |
-| v2 | BeotcrzVwEk | 非公開・処理待ち（31:11） | 2026-09-05 | build/cynicism-kamishibai-v2。台本 v4（冒頭を有名人のボランティア投稿→売名に変更、レビュー一式＝7観点・総合・セリフ×2・つなぎ・間を反映、S4 radiate 図解、S12 章カード追加）。サムネ C、字幕 ja。概要欄 description-v2.txt。既知の軽微な不具合: S4 テロップの「1983–84」のダッシュが□表示（修正は次レンダで） |
+| v1 | TDTVoyTeEUE | **削除済み（2026-09-05、v2 処理完了後）** | 2026-09-05 | build/cynicism-kamishibai-v1（実体 D:\script-to-video-build）。台本 v2（Codex セリフレビュー反映）、写真 35 枚、図解 4、話速 1.1、BGM「青空に口笛」、サムネ C（ジェローム「ディオゲネス」）、字幕 ja。概要欄 description-v1.txt |
+| v2 | BeotcrzVwEk | 非公開・処理完了（31:11） | 2026-09-05 | build/cynicism-kamishibai-v2。台本 v4（冒頭を有名人のボランティア投稿→売名に変更、レビュー一式＝7観点・総合・セリフ×2・つなぎ・間を反映、S4 radiate 図解、S12 章カード追加）。サムネ C、字幕 ja。概要欄 description-v2.txt。既知の軽微な不具合: S4 テロップの「1983–84」のダッシュが□表示（修正は次レンダで） |
+| v3 | kERO4v0oSLc | 非公開（31:11）→ 「無力感」の読みが直っていない（辞書 priority 5 で負け）。v4 処理完了後に v2 と共に削除予定 | 2026-09-05 | build/cynicism-kamishibai-v3。S4 テロップのダッシュは修正済み |
 
 旧版削除ルール: 修正版をアップロードして処理完了・再生確認後に旧 ID を削除し、この表に「削除済み」と記す（docs/decisions.md 2026-09-01）。
 
