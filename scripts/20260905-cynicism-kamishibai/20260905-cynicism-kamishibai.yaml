@@ -31,11 +31,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 笑ったのだ。返信も見て。「意識高いね」「どうせ売名でしょ」「はいはい」。みんな同じこと思ってるのだ。
+  - text: 笑ったのだ。ほら、返信も見て。「意識高いね」「どうせ売名でしょ」「はいはい」ばっかりなのだ。みんな同じこと思ってるのだ。
     speaker: ずんだもん
-    expression: smile
+    expression: smug
     pause_after: 0.45
-  - text: 呼びかけそのものについた反応は、数えるほどしかないわね。それを笑った返信のほうが、何倍も広がっているわ。
+  - text: 呼びかけそのものには、ほとんど反応がないのね。なのに、笑った返信のほうは、何倍も広がっているわ。
     speaker: めたん
     expression: thinking
     pause_after: 0.45
@@ -51,7 +51,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: その、うまく言えない笑いのことを、冷笑と呼ぶのよ。本気で何かをしようとする人を、一段高いところから、鼻で笑って済ませる態度ね。
+  - text: その、うまく言えない笑いのことを、冷笑と呼ぶのよ。本気で何かをしようとする人を、自分は一段高いところから分かっている、という顔で、鼻で笑って済ませる態度ね。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -59,26 +59,24 @@ scenes:
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: 責めているわけじゃないのよ。私も、同じ画面を見たら、少し口の端が動いたかもしれないわ。だからこそ、今日はそこを考えてみたいの。
+  - text: 責めているわけじゃないのよ。私だって同じ画面を見たら、つい笑いそうになるかもしれないもの。だからこそ、一緒に考えてみたいの。
     speaker: めたん
     expression: smile
     pause_after: 1.2
   readings:
   - surface: 冷笑
     reading: レイショウ
-  - surface: 口の端
-    reading: クチノハ
   beats:
   - type: image
     cut_reason: 【昼の電車】肩越しに見るスマホの画面。冒頭の場面をそのまま
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: MART PRODUCTION / Pexels'
   - type: image
     cut_reason: 【返信欄】返信の並ぶ画面を見る手元（別カット）
     from: 7
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【定義】写真をはずし、黒板に冷笑の定義を書く
     from: 21
@@ -87,7 +85,7 @@ scenes:
   title: 問いへの変換
   chapter_title: null
   narration:
-  - text: この態度は近ごろ、ネットでは「冷笑系」と呼ばれるわね。でも、冷笑そのものは、新しいものじゃないのよ。
+  - text: こういう態度、最近のネットでは「冷笑系」なんて呼ばれるわね。でも、冷笑そのものは、新しいものじゃないのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -105,13 +103,13 @@ scenes:
     pause_after: 0.45
   - text: そう思うでしょう？ ところが彼らは、今の冷笑とは、まるで反対のことをしていたの。
     speaker: めたん
-    expression: smug
+    expression: smile
     pause_after: 0.9
   - text: 反対？ 反対の冷笑って、何なのだ……。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: なぜ人は、冷笑をしてしまうのか。今日はこの問いを、古代の哲学者の逸話から、現代の心理学の実験まで、順にたどっていくわ。
+  - text: なぜ人は、冷笑をしてしまうのか。その理由を、古代の哲学者の逸話と、現代の心理学の実験を行き来しながら、探ってみましょう。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -119,7 +117,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: ええ。最後には、ずんだもんの親指のところへ戻ってくるわ。まずは、2400年前のアテナイから始めましょう。
+  - text: ええ。最後には、ずんだもんがあの投稿を見て、親指を次へ滑らせた理由に戻ってくるわ。まずは、2400年前のアテナイから。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -136,7 +134,7 @@ scenes:
     cut_reason: 【古代ギリシャ】アテナイの遺跡へ切り替え
     from: 5
     slot: 1
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Uiliam Nörnberg / Pexels'
   - type: board
     cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
     from: 12
@@ -157,11 +155,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 市場は人でいっぱいなのに、人間を探してるのだ？ ……あっ、そういう意味なのだ。
+  - text: 市場に人はいっぱいいるのに……。まともな「人間」を探してる、ってことなのだ？
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.45
-  - text: 察しがいいわね。男の名は、ディオゲネス。家を持たず、大きな素焼きの甕の中で寝起きして、夏は熱い砂の上を転がって体を鍛えたと伝えられているわ。
+  - text: そういうこと。男の名は、ディオゲネスよ。家を持たず、大きな素焼きの甕の中で寝起きして、夏は熱い砂の上を転がって体を鍛えたそうよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -185,15 +183,15 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 人々は彼を、犬と呼んだの。彼はそれを誇りにしたわ。くれる者には尾を振り、くれない者には吠え、悪党には噛みつくからだ、と。
+  - text: 人々は彼を、犬と呼んだの。でも本人は、その呼び名を誇りにしたわ。くれる人には尾を振って、くれない人には吠えて、悪党には噛みつく犬だから、って。
     speaker: めたん
-    expression: explain
+    expression: smile
     pause_after: 0.45
   - text: 犬って、悪口のはずなのに、自分で名乗っちゃったのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: もうひとつ逸話があるわ。若い頃、彼はデルフォイの神託で、「通貨を変造せよ」と告げられたそうよ。ギリシャ語で通貨を意味する言葉は、同時に、慣習も意味したの。
+  - text: もうひとつ逸話があるわ。若い頃、彼はデルフォイの神託で、「通貨を変造せよ」と告げられたそうよ。面白いのは、ギリシャ語では通貨を指す言葉が、慣習の意味も持っていたことなの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -205,11 +203,11 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.35
-  - text: これらの逸話は、紀元3世紀の伝記作家ディオゲネス・ラエルティオスが書き残したもので、どこまでが事実かは分からないのよ。
+  - text: ただし、これらは紀元3世紀の伝記作家、ディオゲネス・ラエルティオスが書き残した逸話よ。どこまで事実かは、分からないわ。
     speaker: めたん
-    expression: normal
+    expression: serious
     pause_after: 0.35
-  - text: ただ、ひとつだけ確かなことがあるわ。この、犬という呼び名こそが、シニシズムという言葉の語源なの。
+  - text: それでも、この犬という呼び名が、シニシズムという言葉の語源になったことは確かよ。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -247,36 +245,36 @@ scenes:
     cut_reason: 【火のついたランプ】素焼きのランプの実写
     from: 3
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Ravi Kant / Pexels'
   - type: image
     cut_reason: 【素焼きの甕】大きな貯蔵用の甕
     from: 13
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Jan van der Wolf / Pexels'
   - type: image
     cut_reason: 【大王】アレクサンドロス大王の彫像
     from: 16
     slot: 4
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【犬】遺跡にいる犬
     from: 23
     slot: 5
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Trần Chính / Pexels'
   - type: image
     cut_reason: 【神託】デルフォイの遺跡
     from: 27
     slot: 6
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Konstantinos Livadas / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、語源を黒板に
-    from: 34
+    from: 35
     telop: 犬（キュオーン）→ シニシズム
 - id: 4
   title: 古代②（反転）
   chapter_title: null
   narration:
-  - text: ギリシャ語で犬は、キュオーン。そこから、ディオゲネスたちの一派は、キュニコス、犬のような者たちと呼ばれたの。英語のシニック、シニシズムは、この犬に由来するのよ。
+  - text: ギリシャ語で犬は、キュオーン。ディオゲネスたちの一派は、そこからキュニコス、犬のような者たちと呼ばれたの。英語のシニック、シニシズムも、この犬につながっているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -284,7 +282,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: では彼らは、何を嗤っていたのか。富と、権力と、慣習よ。人はもっと少ないもので生きられるはずだと考えて、それを言葉ではなく、自分の暮らしそのもので示したの。
+  - text: では、彼らは何に吠えていたのかしら。富や権力、それから「みんなこうするもの」という慣習よ。人はもっと少ないもので生きられる、と、暮らしそのもので示したの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -292,23 +290,23 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: フランスの哲学者ミシェル・フーコーは晩年の講義で、彼らを、真理を語る勇気を生き方そのもので体現した人々と評しているわ。
+  - text: フランスの哲学者ミシェル・フーコーは、晩年の講義で彼らを高く評価したの。真理を語る勇気を、言葉だけでなく生き方で見せた人たちだ、とね。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: つまり最初のシニシズムとは、力を持たない側から権力へ向かう、下から上への嗤いだったの。
+  - text: つまり最初のシニシズムは、力のない側が権力へ向ける嗤いだったの。下から上へ、吠えていたのよ。
     speaker: めたん
     expression: point
     pause_after: 0.45
   - text: 下から上！ 海岸掃除の人を笑うのとは、向きが逆なのだ。
     speaker: ずんだもん
-    expression: point
+    expression: surprised
     pause_after: 0.45
-  - text: そうよ。ところが、この言葉はやがて意味を変えるの。英語のシニックが、哲学の一派ではなく、人の動機を疑って鼻で笑う性格を指すようになったのは、19世紀半ばのことだとされているわ。
+  - text: そうよ。ところが、この言葉はやがて意味を変えるの。英語のシニックが、哲学の一派ではなく、「人の動機を疑って鼻で笑う性格」を指すようになったのは、19世紀半ばだとされているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 文学研究者のデイヴィッド・マゼラは、これを弱まりではなく、反転と呼んだの。かつては欲望を抑える鍛錬を意味した言葉が、いまや無関心と受動性を意味している、と。
+  - text: 文学研究者のデイヴィッド・マゼラは、これはただ意味が弱まったのではなく、反転したのだと言うの。かつては欲望を抑える鍛錬だったものが、いまは無関心や受け身を指す、と。
     speaker: めたん
     expression: explain
     pause_after: 0.6
@@ -316,11 +314,11 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: ドイツの哲学者ペーター・スローターダイクは1983年、この二つを、綴りで分けたわ。古代の、身体で示す嗤いをキュニシズム。近代の、知っていながら何もしない態度をシニシズム。
+  - text: ドイツの哲学者ペーター・スローターダイクは1983年、この二つを呼び分けたの。古代の、体を張って示す嗤いをキュニシズム。近代の、知っていながら動かない態度をシニシズム、とね。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 彼はそれを、啓蒙された偽りの意識と呼んだの。近代の冷笑家は、世の中の仕組みを、すべて見抜いているつもりでいる。だからこそ、何もしない。知った上で、動かないのよ。
+  - text: 彼はそれを、啓蒙された偽りの意識と呼んだの。世の中の仕組みは全部見抜いたつもりでいる。だから、「どうせ無駄」と知った顔で、動かないのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -328,11 +326,11 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 動かないほうが、傷つかないからよ。世の中の欺瞞が新たに暴かれても、「どうせそういうものだ」という自分の前提が、裏付けられただけで済むの。
+  - text: 動かないほうが、傷つかずに済むからよ。世の中のひどさをまた見ても、「ほら、やっぱりそうだった」で終われるでしょう。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 哲学者のスラヴォイ・ジジェクは、この態度を一行にまとめたわ。「彼らは、それが欺瞞だと知っている。それでも、そうする」。
+  - text: 哲学者のスラヴォイ・ジジェクは、この態度をこんなふうに言ったわ。「彼らは、それが欺瞞だと知っている。それでも、そうする」。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -352,7 +350,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: いい問いね。その答えの最初の手がかりは、意外なところにあるの。冷笑が、驚くほど安上がりだという事実よ。
+  - text: いい問いね。手がかりは、意外なところにあるの。冷笑って、びっくりするほど安上がりなのよ。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -361,10 +359,6 @@ scenes:
     reading: イヌ
   - surface: いつの間にか
     reading: イツノマニカ
-  - surface: 一行
-    reading: イチギョウ
-  - surface: 身体
-    reading: カラダ
   - surface: キュオーン
     reading: キュオーン
   - surface: キュニコス
@@ -373,8 +367,6 @@ scenes:
     reading: スローターダイク
   - surface: マゼラ
     reading: マゼラ
-  - surface: 嗤っていた
-    reading: ワラッテイタ
   - surface: 嗤い
     reading: ワライ
   - surface: 嗤う
@@ -393,27 +385,27 @@ scenes:
     telop: Foucault『真理の勇気』（1983–84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 16
+    from: 18
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【綴りの違い】写真をはずし、二つの綴りを黒板に
-    from: 21
+    from: 23
     telop: Kynismus（古代）／ Zynismus（近代）
   - type: image
     cut_reason: 【知った上で動かない】オフィスでスマホを見る手元。白い光
-    from: 30
+    from: 31
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: AlphaTradeZone / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、二人だけで反転を聞かせる
-    from: 36
+    from: 37
     telop: 犬は権力に吠え、冷笑は本気に吠える
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
   narration:
-  - text: 冷笑が安い。この意味を、三つに分けて見ていくわ。まず一つ目。メディア論を研究する、慶應義塾大学の津田正太郎さんは、現代のシニシズムを、他人の言動をつねに利己的な動機で解釈しようとする態度と定義したの。
+  - text: 「冷笑は安い」って、どういうことかしら。三つに分けて見ていきましょう。慶應義塾大学でメディア論を研究する津田正太郎さんは、現代のシニシズムを、他人の言動をつねに利己的な動機で解釈しようとする態度と定義したの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -421,19 +413,23 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そのとおりよ。「あの人はカネのためにやっている」「売名だ」「ポーズだ」。こう決めてしまえば、相手の主張の中身を吟味する手間は、丸ごと省けるでしょう？
+  - text: そのとおりよ。「あの人はカネのためにやっている」「売名だ」「ポーズだ」。こう決めてしまえば、相手が何を言っているか、ちゃんと考えなくて済むでしょう？
     speaker: めたん
     expression: point
     pause_after: 0.45
   - text: あ……。僕、あの投稿の中身、読んでなかったのだ。海岸のどこを、いつ掃除するのかも知らないのだ。
     speaker: ずんだもん
     expression: surprised
+    pause_after: 0.35
+  - text: 場所も時間も読まずに、意識の高さだけ測ってたのだ……。
+    speaker: ずんだもん
+    expression: shy
     pause_after: 0.45
-  - text: 情報が多すぎる時代に、これほど効率のいい処理はないのよ。津田さんが例に挙げたのは、アニメ調の女性キャラクターを使った献血ポスターをめぐる論争だったわ。
+  - text: 情報が多すぎる今、これはとても手軽な考え方なのよ。津田さんが例に挙げたのは、アニメ調の女性キャラクターを使った献血ポスターをめぐる論争だったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 批判する側も、擁護する側も、「相手には邪悪な動機がある」と決めつけ合っていたの。どちらの側にいても、動機を疑えば、考えずに済むのよ。
+  - text: 批判する側も、擁護する側も、「相手には邪悪な動機がある」と決めつけ合っていたの。立場が違っても、動機だけ疑えば、中身を考えずに済むのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -441,7 +437,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: しかもこの疑いは、中身に反論しなくても相手を黙らせられるうえ、正義を掲げる相手ほど、よく効くの。理想を語る人ほど、動機を疑われたときの傷が深いからよ。
+  - text: しかも動機を疑うだけなら、中身に反論しなくても、相手を黙らせやすいの。正義を掲げる人ほど、そこを疑われると深く傷つくからよ。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -471,12 +467,12 @@ scenes:
     cut_reason: 【募金の横を通り過ぎる】街頭の呼びかけを見ずに通る人々
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: 津田正太郎（慶應義塾大学）現代ビジネス
   - type: board
     cut_reason: 【動機を疑う】写真をはずし、三つの決めつけを黒板に
-    from: 8
-    telop: 「カネのため」「売名だ」「ポーズだ」→ 中身を吟味する手間が省ける
+    from: 7
+    telop: 「カネのため」「売名だ」「ポーズだ」→ 中身を考えなくて済む
   - type: board
     cut_reason: 【決めつけ合い】ポスターは描かず、二人だけで
     from: 15
@@ -488,11 +484,11 @@ scenes:
   title: 探索②（第二の安さ・賢く見える）
   chapter_title: null
   narration:
-  - text: オランダのティルブルフ大学の心理学者、オルガ・スタヴロヴァたちの研究チームが、アメリカ、ドイツ、イギリスで、あわせて674人に、こう尋ねたの。
+  - text: オランダのティルブルフ大学の心理学者、オルガ・スタヴロヴァたちの研究チームが、アメリカ、ドイツ、イギリスの、あわせて674人に質問したの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 皮肉屋、つまり、人はどうせ利己的だと考える人と、そうでない人、どちらが認知課題の成績が良いと思うか。
+  - text: 「人はどうせ利己的だと思う皮肉屋」と、そうでない人。どちらが認知課題でいい成績を取ると思うか、とね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -500,7 +496,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ずんだもんと同じ答えの人が、多かったのよ。調査によって、56パーセントから70パーセントの人が、皮肉屋の方が賢いと答えたの。
+  - text: ずんだもんと同じ答えの人は、多かったわ。調べ方によって、56パーセントから70パーセントの人が、皮肉屋の方が賢いと答えたの。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -508,7 +504,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 人を信じない態度は、世の中を見抜いている証しに見えるの。何かを信じて動く人より、腕を組んで見ている人の方が、賢そうに見えるのよ。
+  - text: 人を信じない人って、世の中を見抜いているように見えるのよね。何かを信じて動く人より、腕を組んで眺めている人の方が、賢そうに見えるの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -516,7 +512,7 @@ scenes:
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: そしてこの見え方の利益は、ほとんどタダで手に入るの。冷笑の第二の安さは、何もしなくても、賢い側に立てることよ。
+  - text: しかも、その「賢そう」という印象は、ほとんどタダで手に入るの。第二の安さは、何もしなくても、賢い側に立てることよ。
     speaker: めたん
     expression: point
     pause_after: 1.0
@@ -532,7 +528,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: それは後で見ることにして、先に、三つ目の安さを見ておきたいの。それは、自分を守るための安さよ。
+  - text: その答えは少しあとに回して、もう一つ見ておきましょう。三つ目は、自分を守るための安さよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -556,15 +552,15 @@ scenes:
     cut_reason: 【腕を組んで見ている人】会議室で椅子にもたれる後ろ姿
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
     telop: Stavrova & Ehlebracht (2019) PSPB
   - type: board
     cut_reason: 【数字】写真をはずし、割合を黒板に
-    from: 6
+    from: 7
     telop: 「皮肉屋の方が賢い」と答えた人 56〜70%（米・独・英）
   - type: board
     cut_reason: 【決め文】第二の安さ
-    from: 13
+    from: 14
     telop: 第二の安さ：何もしなくても賢い側に立てる
 - id: 7
   title: 探索③（第三の安さ・防衛）と、ひとつ目の答え（無力感）
@@ -572,13 +568,13 @@ scenes:
   narration:
   - text: 第三の安さは、防衛の安さよ。期待しなければ、失望しない。動かなければ、負けない。嗤う側にいれば、嗤われない。
     speaker: めたん
-    expression: explain
+    expression: serious
     pause_after: 0.8
   - text: 嗤う側にいれば、嗤われない……。確かに、笑ってる間は安全なのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: だとすれば、冷笑は、何かから自分を守っているの。では、何から守っているのか。調べていくと、守っているものが、少なくとも三つ見えてくるわ。
+  - text: つまり冷笑は、何かから自分を守ろうとしているのね。では、何からかしら。見えてくるものは、少なくとも三つあるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -606,15 +602,15 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 「どうせ変わらない」。この前提に立つと、変えようとする人は、無駄なことをしている愚か者に見えてしまうのよ。
+  - text: 「どうせ変わらない」と思っていると、変えようとする人まで、「無駄なことをしてる人」に見えてしまうのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 海岸掃除の人も、僕にはそう見えてたのだ。でも、なんで愚か者に見えちゃうのだ？
+  - text: 海岸掃除の人も、僕にはそう見えてたのだ。でも、なんでそう見えちゃうのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 哲学者のヤン・エルスターが、いい名前をつけているわ。手に入らないものの価値を人が切り下げてしまう仕組みを、イソップの狐になぞらえて、酸っぱい葡萄と呼んだの。
+  - text: 哲学者のヤン・エルスターは、これをイソップの狐になぞらえて、酸っぱい葡萄と呼んだの。手に入らないものを、価値がないことにしてしまう心の動きよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -626,7 +622,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 変えられない社会なら、変えようとする人を嗤えばいい。そうすれば、動かない自分を責めずに済むのよ。
+  - text: 社会なんて変えられない、と思うなら、変えようとする人を嗤えばいい。そうすれば、動かない自分を責めずに済むのよ。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -634,17 +630,17 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: ただ、正直に言っておくわ。無力感が冷笑の土壌になっている、というのは、ここから立てられる私の仮説よ。
+  - text: ここは正直に言っておくわね。無力感が冷笑の土壌になっている、というのは私の推論よ。このデータだけで、原因だと断言できるわけではないの。
     speaker: めたん
-    expression: normal
+    expression: serious
     pause_after: 0.45
-  - text: 一つ目は、無力感。じゃあ二つ目は？ もっと意外なのだ？
+  - text: 一つ目は、無力感。じゃあ二つ目は、もっと意外なものなのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
   - text: 二つ目は、もっと意外よ。標的にされるのは、優れた人ではないの。
     speaker: めたん
-    expression: smug
+    expression: serious
     pause_after: 1.2
   readings:
   - surface: エルスター
@@ -682,25 +678,25 @@ scenes:
     cut_reason: 【日本の若者】選挙ポスター掲示板の前を通る人々
     from: 13
     slot: 1
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Israyosoy S. / Pexels'
     telop: 「自分で国や社会を変えられる」日本 18.3%（9カ国中最下位）
   - type: board
     cut_reason: 【前提】写真をはずし、前提を黒板に
-    from: 20
+    from: 19
     telop: 「どうせ変わらない」→ 変えようとする人が愚か者に見える
   - type: image
     cut_reason: 【酸っぱい葡萄】ナレーション自身の比喩を PD 挿絵で
-    from: 23
+    from: 22
     slot: 2
     credit: Milo Winter, The Aesop for Children (1919) / Public Domain
   - type: board
     cut_reason: 【決め文】写真をはずし、狐と冷笑を重ねる
-    from: 30
+    from: 29
 - id: 8
   title: ふたつ目の答え（責められる予期）——中盤の反転①
   chapter_title: null
   narration:
-  - text: スタンフォード大学の心理学者、ブノワ・モナンたちの研究チームは2012年、肉を食べる人に、ベジタリアンについて自由に連想してもらったの。
+  - text: スタンフォード大学の心理学者、ブノワ・モナンたちの研究チームは2012年、肉を食べる人に、「ベジタリアンと聞いて何を思い浮かべるか」と尋ねたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -708,7 +704,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: 47パーセントの人が、否定的な言葉を連想したのよ。そして、否定が強い人ほど、ある予期を抱いていたの。「ベジタリアンは、自分たちを道徳的に見下しているだろう」という予期よ。
+  - text: すると47パーセントの人が、否定的な言葉を挙げたのよ。とくに否定的だった人ほど、「ベジタリアンは、自分たちを道徳的に見下しているはずだ」と思っていたわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -716,23 +712,23 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 実際に見下されたわけではないの。「そう思われるだろう」と予期しただけで、人は相手を貶めるのよ。研究チームはこれを、善行者への貶め、と名付けたわ。
+  - text: 実際に見下されたわけではないのよ。「そう思われそう」と感じただけで、人は相手を貶めてしまうの。研究チームはこれを、善行者への貶め、と名付けたわ。
     speaker: めたん
     expression: point
     pause_after: 0.45
-  - text: 予期しただけで！ 相手は何も言ってないのに、貶めちゃうのだ。
+  - text: 感じただけで！ 相手は何も言ってないのに、貶めちゃうのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: さらに2008年の実験では、こんな非対称も見つかっているの。差別的な内容の課題を拒否した人がいたとき、同じ課題を言われるまま実行してしまった参加者は、その拒否した人を嫌ったの。
+  - text: 2008年の実験では、もっとはっきりした違いも出たの。差別的な内容の課題を断った人を、同じ課題を言われるままやった参加者は、嫌ったのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 拒否した人のほうが、正しいことをしたのに？
+  - text: 断った人のほうが、正しいことをしたのに？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そう。でも、無関係な第三者は、むしろその人を好んだのよ。つまり、正しいことをした人を嫌うのは、その正しさに自分が巻き込まれている人だけだったの。
+  - text: でも、その場に関係のない第三者は、むしろ断った人を好んだの。正しいことをした人が気に障るのは、その正しさで自分も問われた人だけだったのよ。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -744,7 +740,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: でも、「自分も責められるのではないか」と、ずんだもんの中の何かが予期したの。海岸に行かない自分を。
+  - text: でも、ずんだもんも「自分まで責められるかも」って、どこかで感じたんじゃないかしら。海岸に行かない自分のことを。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -752,13 +748,17 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: この実験で標的になったのは、優れた人だからではないの。自分を責めそうな人なのよ。
+  - text: この実験で嫌われたのは、ただ優れた人だったからではないの。自分を責めてきそうだ、と感じさせる人だったのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
-  - text: 僕が笑ったのは、あの人がすごいからじゃなくて、僕がちくっとしたからなのだ……。二つ目が「責められる予期」。三つ目は何なのだ？
+  - text: 僕が笑ったのは、あの人がすごいからじゃなくて……僕がちくっとしたからなのだ。これが二つ目の、「責められる予期」なのだ？
     speaker: ずんだもん
     expression: sad
+    pause_after: 0.8
+  - text: ……三つ目は、何なのだ？
+    speaker: ずんだもん
+    expression: thinking
     pause_after: 0.45
   - text: 三つ目は、たぶんいちばん認めにくいものよ。嫉妬なの。
     speaker: めたん
@@ -772,7 +772,7 @@ scenes:
     cut_reason: 【ベジタリアン】野菜の食卓
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Garley Gibson / Pexels'
     telop: Minson & Monin (2012) SPPS
   - type: diagram
     cut_reason: '【図解: 善行者への貶め】道徳的な相手→責められる予期→貶める、の一本鎖'
@@ -792,30 +792,30 @@ scenes:
       - id: derog
         text: 相手を貶める
         icon: thumb_down
-        at: 10
-        after: 予期しただけで
+        at: 9
+        after: 感じただけで
       caption:
-        at: 11
+        at: 10
         text: 善行者への貶め
   - type: image
     cut_reason: 【2008年の実験】実験室で課題に向かう参加者の後ろ姿
-    from: 14
+    from: 13
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Sóc Năng Động / Pexels'
     telop: Monin, Sawyer & Marquez (2008) JPSP
   - type: image
     cut_reason: 【冒頭の再演】電車のスマホ画面を再掲
-    from: 20
+    from: 18
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: MART PRODUCTION / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、二人だけで
-    from: 28
+    from: 26
 - id: 9
   title: 三つ目の答え（嫉妬）
   chapter_title: null
   narration:
-  - text: ケンタッキー大学の心理学者、リチャード・スミスたちは1996年、優秀な学生のインタビュー映像を人々に見せたあとで、「その学生が挫折した」と伝える実験を行ったの。
+  - text: ケンタッキー大学の心理学者、リチャード・スミスたちは1996年、優秀な学生のインタビュー映像を見せたあとで、「その学生が挫折した」と伝える実験をしたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -831,7 +831,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: オーストラリアのフリンダース大学のノーマン・フェザーは、自尊心の低い人ほど、高く昇った人の転落を望むことを、繰り返し確かめているわ。オーストラリアには、「高く伸びた芥子は刈り取られる」という言い回しがあるの。
+  - text: オーストラリアのフリンダース大学のノーマン・フェザーは、自尊心の低い人ほど、高く昇った人の転落を望みやすいことを、繰り返し確かめたわ。オーストラリアには、「高く伸びた芥子は刈り取られる」という言い回しもあるの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -839,7 +839,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 自分と似た立場の誰かが、先に行った。認めたくないその痛みを、人は、笑いに変えるの。「意識が高い」という言葉に含まれている棘は、ここから来ているのよ。
+  - text: 自分と似た立場の誰かが、先に行く。その痛みを認めたくなくて、人は笑いに変えてしまうことがあるの。「意識が高い」に棘があるのも、そのためかもしれないわ。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -847,7 +847,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: そこは、付け加えておかなければならないところよ。フェザーが2002年に行った実験では、転落を喜ぶ気持ちを直接に予測したのは、嫉妬そのものよりも、「あの評価は不当だ」という憤りだったの。
+  - text: ただ、ここは少し違いがあるの。フェザーが2002年に行った実験で、転落を喜ぶ気持ちを直接に予測したのは、嫉妬そのものより、「あの評価は不当だ」という憤りだったわ。
     speaker: めたん
     expression: point
     pause_after: 0.45
@@ -855,11 +855,11 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: そうよ。嫉妬は、しばしば、冷笑の奥にあるの。それが表に出るときは、「不当だ」という言葉の形を取るのよ。
+  - text: そうよ。嫉妬は、冷笑のもっと奥に隠れていることがあるの。それが出てくるときは、「不当だ」という言い方になるのよ。
     speaker: めたん
     expression: explain
     pause_after: 2.0
-  - text: 「どうせ売名でしょ」も、「本気じゃないのに評価されるのは不当だ」って言ってるのだ……。無力感、責められる予期、嫉妬。この三つは、全部同じ人に向かうのだ？
+  - text: 「どうせ売名でしょ」って、本当は「本気じゃないのに評価されるのは不当だ」とも言ってるのかもなのだ。無力感、責められる予期、嫉妬。この三つは、みんな同じ人に向かうのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -881,19 +881,19 @@ scenes:
     cut_reason: 【映像を見る参加者】モニターの前の後ろ姿
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Pixabay'
     telop: Smith et al. (1996) PSPB
   - type: image
     cut_reason: 【高く昇った人】掲示板を見上げる学生たち
     from: 8
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Arthur Krijgsman / Pexels'
     telop: Feather (1989)／Feather & Sherman (2002)
   - type: image
     cut_reason: 【高く伸びた芥子】一本だけ高い花。ナレーション自身の比喩
     from: 9
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Susanne Jutzeler, suju-foto / Pexels'
     telop: 高く伸びた芥子は刈り取られる（Tall Poppy）
   - type: board
     cut_reason: 【決め文】写真をはずし、棘の出どころを聞かせる
@@ -906,7 +906,7 @@ scenes:
   title: 三つの標的（図解でまとめる）
   chapter_title: null
   narration:
-  - text: プリンストン大学の心理学者、スーザン・フィスクたちは、人が他の集団に向ける感情を、温かさと有能さの二つの軸で整理したの。
+  - text: プリンストン大学の心理学者、スーザン・フィスクたちは、人が他の集団をどう見るかを、二つの軸で整理したの。温かさと、有能さよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -914,27 +914,27 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: 有能だが冷たい、と見なした相手には、妬みが向くの。
+  - text: 有能だけれど冷たい、と見られた相手には、妬みが向くの。
     speaker: めたん
     expression: explain
     pause_after: 0.4
-  - text: 無能で冷たい、と見なした相手には、軽蔑が向くのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.4
-  - text: 同じ「冷たい」でも、有能なら妬まれて、無能なら見下されるのだ。
+  - text: じゃあ、無能で冷たいと思われた相手は、見下されるのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そう。同じ人でも、有能だと見られれば妬まれ、無能だと見られれば見下されるの。「意識が高い」と呼ばれる人は、しばしば前者に置かれるわ。
+  - text: ええ、軽蔑が向くわ。同じ人でも、有能だと見られれば妬まれて、無能だと見られれば見下されるの。
     speaker: めたん
     expression: point
     pause_after: 0.35
-  - text: 一方で、本気で何かを変えようとする人は、成果が見えにくいぶん、しばしば後者に置かれるの。だから、成功者は妬まれ、ボランティアは見下されやすいのよ。
+  - text: 「意識が高い」と呼ばれる人は、しばしば「有能だけど冷たい」側に置かれるわ。だから妬みの標的になりやすいの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 本気で何かを変えようとする人は、まだ成果が見えないと、「無能で冷たい」側に置かれやすいの。だから、成功者は妬まれ、ボランティアは見下されやすいのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 海岸掃除の人は……後者にされたのだ。成果が見えにくいから。
+  - text: 海岸掃除の人は……後のほうにされたのだ。ゴミ袋の数まで見ないと、僕はすぐ「無能」って札を貼っちゃうのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -946,9 +946,9 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 1.0
-  - text: いいところに気づいたわね。ここで、さっき預けておいた、スタヴロヴァの研究の続きを開けましょう。皮肉屋は、本当に賢かったのか。
+  - text: いいところに気づいたわね。ここで、さっきのスタヴロヴァの研究に戻りましょう。皮肉屋は、本当に賢かったのかしら。
     speaker: めたん
-    expression: smug
+    expression: smile
     pause_after: 1.2
   readings:
   - surface: フィスク
@@ -960,33 +960,33 @@ scenes:
     telop: Fiske, Cuddy, Glick & Xu (2002) JPSP
   - type: image
     cut_reason: 【ボランティア】海岸清掃の人々（遠景）。冒頭の投稿の中身
-    from: 10
+    from: 11
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: diagram
     cut_reason: '【図解: 三つの防衛】無力感・責められる予期・不当だという感覚が「自分を守るための反応」へ収束する'
-    from: 14
+    from: 15
     diagram:
       type: narrative
       layout: converge
       items:
       - id: power
         text: 無力感
-        at: 14
+        at: 15
       - id: blame
         text: 責められる予期
-        at: 14
+        at: 15
       - id: unfair
         text: 不当だという感覚
-        at: 14
+        at: 15
       result:
         text: 自分を守るための反応
-        at: 15
+        at: 16
 - id: 11
   title: 安い知性の請求書——中盤の反転②
   chapter_title: 安い知性の請求書は、誰が払うのか
   narration:
-  - text: 皮肉屋の方が賢い、と、56パーセントから70パーセントの人が答えたわね。では、実際はどうだったのか。研究チームは、ドイツの成人9000人あまりと、30カ国およそ20万人のデータで、皮肉の強さと認知能力の関係を調べたの。
+  - text: 皮肉屋の方が賢い、と、56パーセントから70パーセントの人が答えたわね。でも、実際はどうだったのかしら。研究チームは、ドイツの成人9000人あまりと、30カ国およそ20万人のデータで確かめたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1002,7 +1002,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 皮肉の強い人ほど、読解や数学の成績は低かったの。相関は弱いけれど、30カ国で、ほぼ一貫していたわ。研究チームはこれを、皮肉屋の天才幻想と名付けているの。
+  - text: 皮肉の強い人ほど、読解や数学の成績が低かったの。相関は弱いけれど、30カ国でほぼ一貫していたわ。研究チームはこれを、皮肉屋の天才幻想と呼んでいるの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1010,7 +1010,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 話は、これで終わらないのよ。同じチームがアメリカの全国調査を追跡したところ、人を信じない度合いが強い人は、9年後の収入が低かったの。
+  - text: 話はそれだけではないわ。同じチームがアメリカの全国調査を追ったら、人を信じない度合いが強い人ほど、9年後の収入が低かったの。
     speaker: めたん
     expression: explain
     pause_after: 0.5
@@ -1018,15 +1018,15 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 研究チームの説明は、こうよ。信じないために協力の機会を逃し、警戒に力を使いすぎるからだ、と。
+  - text: 研究チームは、こう説明しているわ。人を信じないと協力の機会を逃して、警戒することに力を使いすぎるからだ、と。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 2024年には、もっと切ない結果も出ているわ。シニカルな人ほど権力を欲しがるのに、実際にリーダーに選ばれることは少なかったの。約9000人を、最長10年追った結果よ。
+  - text: 2024年には、もっと切ない結果も出ているわ。シニカルな人ほど権力を欲しがるのに、リーダーには選ばれにくかったの。約9000人を、最長10年追った結果よ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 仲間はずれの実験もあるのよ。シンガポール経営大学のチームが調べたところ、仲間はずれにされたあと、普通の人は他者への共感が高まって、つながり直そうとしたの。でも、シニシズムの強い人には、その反応が起きなかった。
+  - text: 仲間はずれの実験もあるのよ。シンガポール経営大学のチームの実験では、仲間はずれにされた普通の人は、他者への共感を強めて、もう一度つながろうとしたの。でも、シニシズムの強い人には、その反応が起きなかったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1038,23 +1038,19 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: 精神科医のジョージ・ヴァイラントは、心の防衛を成熟度で並べたとき、ユーモアを最も成熟した防衛に置いて、直接ぶつからずに相手を傷つける受動攻撃を、未成熟な防衛に分類したわ。「冗談だった」と言い逃れできる皮肉は、この未成熟な側に近いの。
+  - text: 精神科医のジョージ・ヴァイラントは、心の防衛にも、成熟した形と未成熟な形があると考えたの。ユーモアは成熟した側に、直接ぶつからず相手を傷つける受動攻撃は、未成熟な側に置いたわ。「冗談だった」と逃げられる皮肉は、後者に近いの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 「冗談なのだ」って、僕、よく言うのだ……。
+  - text: 「冗談なのだ」って、僕、よく言うのだ……。あれ、僕の小さい盾だったのだ。
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: 冷笑は安い。
+  - text: 冷笑は安い。だから、広がるのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.5
-  - text: 安いから、広がる。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.5
-  - text: だけど、安いものはたいてい、後で高くつくのよ。
+  - text: でも、安いものはたいてい、後で請求書が来るの。
     speaker: めたん
     expression: serious
     pause_after: 2.5
@@ -1078,7 +1074,7 @@ scenes:
     cut_reason: 【認知課題】読解・数学のテストに向かう手元
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Kaboompics.com / Pexels'
     telop: Stavrova & Ehlebracht (2019) PSPB
   - type: board
     cut_reason: 【反転】写真をはずして間
@@ -1088,19 +1084,19 @@ scenes:
     cut_reason: 【9年後の収入】給与明細を持つ手（文字は読めない）
     from: 15
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Kaboompics.com / Pexels'
     telop: Stavrova & Ehlebracht (2016) JPSP
   - type: image
     cut_reason: 【リーダーに選ばれない】会議机の端の席
     from: 20
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
     telop: Stavrova, Ehlebracht & Ren (2024) British Journal of Psychology
   - type: image
     cut_reason: 【つながり直せない】輪の外に立つ一人の後ろ姿
     from: 23
     slot: 4
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Hayk Paytyan / Pexels'
     telop: Choy, Eom & Li (2021) Personality and Individual Differences
   - type: diagram
     cut_reason: '【図解: 請求書】四つの代価を一本鎖で積む。ここまで一枚ずつ見せた項目を一望にする'
@@ -1134,25 +1130,25 @@ scenes:
     telop: ユーモア＝成熟した防衛／受動攻撃＝未成熟な防衛（Vaillant）
   - type: board
     cut_reason: 【決め文1】
-    from: 31
+    from: 33
     telop: 冷笑は安い
   - type: board
-    cut_reason: 【決め文3】
-    from: 33
-    telop: 安いものは、後で高くつく
+    cut_reason: 【決め文2】
+    from: 35
+    telop: 安いものには、後で請求書が来る
 - id: 12
   title: 環境が育てる（個人に還元しない）
   chapter_title: null
   narration:
-  - text: 冷笑は、環境が育てるのよ。ペンシルベニア大学のジョセフ・カペラとキャスリーン・ジェイミソンは1997年、政治を、政策の中身ではなく勝ち負けの駆け引きとして描く報道が、視聴者のシニシズムを高めることを、実験で示したの。
+  - text: 冷笑は、個人の性格だけで育つわけではないの。ペンシルベニア大学のジョセフ・カペラとキャスリーン・ジェイミソンは1997年、政治を政策ではなく勝ち負けの駆け引きとして報じると、視聴者のシニシズムが高まることを、実験で示したわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 「誰が勝った、誰が負けた」ばっかりのニュースなのだ。確かに、見てると「どうせ政治家は」って気分になるのだ。
+  - text: 「誰が勝った、誰が負けた」ばっかりのニュースなのだ。見てると「どうせ政治家は」って気分になるのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: のちに32の研究、およそ3万9000人分の結果をまとめたメタ分析も、この効果が一貫して存在することを確かめているわ。
+  - text: この結果は、一つの実験だけではないの。その後、32の研究と、およそ3万9000人分をまとめたメタ分析でも、一貫して確かめられているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1160,7 +1156,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: SNSには、別の経路があるの。2020年のアメリカ大統領選挙の期間に約1800人を追跡した調査では、政治的な攻撃投稿に触れるほど怒りが高まって、その怒りが、シニシズムを高めていたのよ。
+  - text: SNSには別の道筋もあるわ。2020年のアメリカ大統領選挙の期間に約1800人を追った調査では、政治的な攻撃投稿を見るほど怒りが高まって、その怒りが、シニシズムを強めていたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1168,7 +1164,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 画面を開くたびに、「どうせみんな利己的だ」という前提が補給されるのよ。冷笑は、個人の性格である前に、毎日浴びている環境の産物でもあるの。
+  - text: 画面を開くたびに、「どうせみんな利己的だ」という見方を、また覚えさせられるのよ。冷笑は、性格である前に、毎日浴びる環境の産物でもあるの。
     speaker: めたん
     expression: point
     pause_after: 0.45
@@ -1176,7 +1172,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 日本は、人を信じない国ではないのよ。世界価値観調査で、「たいていの人は信頼できる」と答える割合は、世界の中で際立って低いわけではないの。
+  - text: 日本は、人を信じない国というわけではないのよ。世界価値観調査でも、「たいていの人は信頼できる」と答える割合は、世界の中で特別に低くはないの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1184,7 +1180,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 政府への信頼は、2021年のOECDの調査で24パーセント。自分で社会を変えられると思う若者は、先ほどの18.3パーセント。日本で目立つのは、不信よりも、無力感なのよ。
+  - text: 2021年のOECDの調査で、政府への信頼は24パーセント。先ほどの調査でも、社会を変えられると思う若者は18.3パーセントだったわ。日本で目立つのは、不信よりも、無力感なのよ。
     speaker: めたん
     expression: explain
     pause_after: 1.5
@@ -1192,7 +1188,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: そして、この無力感には歴史があるの。1972年の連合赤軍事件と、翌年のオイルショックを経て、学生運動の熱は急速に冷めたわ。若者の無気力、無関心、無責任が、三無主義と呼ばれたの。
+  - text: この無力感には、歴史もあるの。1972年の連合赤軍事件と翌年のオイルショックのあと、学生運動の熱は急速に冷めたわ。若者の無気力、無関心、無責任は、三無主義と呼ばれたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1200,7 +1196,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: 社会学者の北田暁大さんは2005年、2ちゃんねるに生まれたコミュニケーションを、嗤いながら、同時に本気の感情を分かち合う、皮肉な共同体と分析しているわ。冷笑には、形を変えながら続いてきた、半世紀の系譜があるのよ。
+  - text: 社会学者の北田暁大さんは2005年、2ちゃんねるに生まれたやり取りを、皮肉な共同体と分析したわ。嗤いながらも、同時に本気の感情を分け合う場だったの。冷笑には、形を変えながら続く、半世紀の系譜があるのよ。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -1226,45 +1222,45 @@ scenes:
     cut_reason: 【勝ち負けの報道】テレビスタジオ
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Caleb Oquendo / Pexels'
     telop: Cappella & Jamieson (1997) Spiral of Cynicism
   - type: board
     cut_reason: 【メタ分析】写真をはずし、数字を黒板に
-    from: 5
+    from: 6
     telop: 戦略報道 → シニシズム（メタ分析 2021・32研究・約3万9000人）
   - type: image
     cut_reason: 【攻撃投稿と怒り】スマホを握る手元
-    from: 8
+    from: 9
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Kaboompics.com / Pexels'
     telop: Hasell, Halversen & Weeks (2025) 2020年米大統領選パネル
   - type: board
     cut_reason: 【環境の産物】写真をはずし、決め文へ
-    from: 12
+    from: 13
     telop: 冷笑は、個人の性格である前に環境の産物
   - type: image
     cut_reason: 【政府への信頼】国会議事堂
-    from: 20
+    from: 21
     slot: 3
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Guohua Song / Pexels'
     telop: 政府への信頼 24%（OECD 2021）／社会を変えられる 18.3%
   - type: board
     cut_reason: 【決め文】写真をはずす
-    from: 22
+    from: 23
     telop: 日本は「不信の国」ではなく「無力感の国」
   - type: board
     cut_reason: 【三無主義】年表を黒板に
-    from: 25
+    from: 26
     telop: 1972 連合赤軍事件 → 1973 オイルショック → 三無主義
   - type: board
     cut_reason: 【皮肉な共同体】書名を黒板に
-    from: 29
+    from: 30
     telop: 北田暁大『嗤う日本の「ナショナリズム」』2005
 - id: 13
   title: 疑うことと、嗤うことは違う
   chapter_title: null
   narration:
-  - text: 政治学者のジャック・シトリンとローラ・ストーカーは、不信を二つに分けたの。制度を批判的に見張る懐疑と、制度そのものを見放すシニシズムよ。
+  - text: 政治学者のジャック・シトリンとローラ・ストーカーは、不信を二種類に分けたの。制度を批判的に見張る懐疑と、制度そのものを見放すシニシズムよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1272,11 +1268,11 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 前者は民主主義に必要な機能で、問題は、後者への転化だというの。スタヴロヴァの研究にも、これと重なる結果があるわ。
+  - text: 制度を見張る懐疑は、民主主義に必要なものよ。問題なのは、それが「もう何をしても無駄」というシニシズムに変わることだ、と二人は言うの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 認知能力の高い人は、腐敗の多い社会でだけ、シニシズムを強めていたの。つまり、疑うべきときに、疑っていた。一方、認知能力の低い人は、環境にかかわらず、いつもシニカルだったのよ。
+  - text: スタヴロヴァの研究にも、重なる結果があるわ。認知能力の高い人は、腐敗の多い社会でだけ、シニシズムを強めていたの。疑うべき状況を見ていた、と読めるわ。一方、認知能力の低い人は、環境にかかわらず、シニカルな傾向が強かったのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1292,11 +1288,11 @@ scenes:
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: スタンフォード大学の心理学者、ジャミール・ザキは、この二つの間にある構えを、希望を持った懐疑と呼んでいるわ。主張は疑う。だけど、人が変わる力までは、疑わないの。
+  - text: スタンフォード大学の心理学者、ジャミール・ザキは、その間に「希望を持った懐疑」があると言うの。主張は疑う。でも、人が変わる力までは、疑わないのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 冷笑をやめることは、疑うのをやめることではないのよ。疑ったあとに、何をするかなの。
+  - text: 冷笑をやめることは、疑うのをやめることではないの。疑ったあとに、何をするかなのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -1318,26 +1314,26 @@ scenes:
     cut_reason: 【懐疑＝道具】資料を読み込み付箋を貼る手
     from: 1
     slot: 1
-    credit: 'Photo: Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: Citrin & Stoker (2018) Annual Review of Political Science
   - type: board
     cut_reason: 【道具か癖か】黒板に対比
-    from: 12
+    from: 13
     telop: 懐疑（道具）／ 冷笑（癖）
   - type: image
     cut_reason: 【癖】見出しだけ見てノートPCを閉じる手
-    from: 15
+    from: 16
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: board
     cut_reason: 【希望を持った懐疑】写真をはずし、決め文まで保持
-    from: 17
+    from: 18
     telop: 希望を持った懐疑（Zaki, Hope for Cynics 2024）
 - id: 14
   title: 回帰と結び
   chapter_title: null
   narration:
-  - text: ランプを掲げた男は、人間を探していたわ。彼は権力を嗤い、慣習を嗤ったけれど、その嗤いには、賭けているものがあったの。自分の暮らしと、自分の体よ。
+  - text: ランプを掲げた男は、人間を探していたわ。権力や慣習を嗤ったけれど、自分は何も失わずに嗤っていたわけではないの。暮らしも体も、そこに賭けていたのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1353,37 +1349,29 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 安全な場所から、何も賭けずに嗤うとき、その嗤いは、自分を守っているように見えて、自分から少しずつ、何かを削っているの。信じる力と、つながり直す力と、いつか動き出す力を。
+  - text: 安全な場所から、何も賭けずに嗤っていると、自分を守っているようで、少しずつ自分の力も削ってしまうの。信じる力も、つながり直す力も、いつか動き出す力もね。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: さっきの画面を、もう一度思い出してみて。「意識高いね」と笑ったその一瞬、ずんだもんは何かから、自分を守っていたの。
+  - text: あの画面を、もう一度思い出してみて。「意識高いね」と笑った一瞬、ずんだもんは何から、自分を守っていたのかしら。
     speaker: めたん
-    expression: normal
+    expression: serious
     pause_after: 0.35
-  - text: 無力感か。
+  - text: 無力感か。責められる予期か。それとも、嫉妬から来る、「不当だ」という感覚か。
     speaker: めたん
-    expression: explain
-    pause_after: 0.5
-  - text: 責められる予期か。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.5
-  - text: 嫉妬から来る、「不当だ」という感覚か。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.5
+    expression: thinking
+    pause_after: 0.8
   - text: ……たぶん、全部少しずつなのだ。海岸なんて変わらないと思ってたし、行かない自分がちくっとしたし、褒められてるのがちょっと悔しかったのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 正直ね。それが分かれば、次に嗤いたくなったとき、少し違う選択ができるかもしれないわ。同じものは、たぶん、この動画を見ている人の中にもあるはずよ。
+  - text: 正直ね。それが分かれば、次に嗤いたくなったとき、少し違う選択ができるかもしれないわ。ずんだもんだけじゃなく、見ている人にも、似た気持ちはあるはずよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
   - text: 僕、あの投稿、もう一回ちゃんと読んでみるのだ。行くかどうかは、読んでから決めるのだ。
     speaker: ずんだもん
-    expression: normal
+    expression: smile
     pause_after: 0.45
   - text: それで十分よ。疑ったあとに、何をするか、だもの。
     speaker: めたん
@@ -1392,15 +1380,15 @@ scenes:
   - text: 冷笑は安い。
     speaker: めたん
     expression: serious
-    pause_after: 0.6
+    pause_after: 0.4
   - text: だから、広がる。
     speaker: めたん
     expression: serious
-    pause_after: 0.6
+    pause_after: 0.4
   - text: でも、安いものはたいてい、後で高くつくの。
     speaker: めたん
     expression: serious
-    pause_after: 1.0
+    pause_after: 0.8
   - text: そして、冷笑が守ろうとしているのは、正しさではなくて、傷つきたくない、という気持ちなのよ。
     speaker: めたん
     expression: serious
@@ -1418,8 +1406,6 @@ scenes:
     reading: ワラッタ
   - surface: 嗤われる
     reading: ワラワレル
-  - surface: 嗤う
-    reading: ワラウ
   - surface: 甕
     reading: カメ
   beats:
@@ -1435,7 +1421,7 @@ scenes:
     cut_reason: 【冒頭へ回帰】電車のスマホ画面を再掲
     from: 15
     slot: 2
-    credit: 'Photo: Pexels'
+    credit: 'Photo: MART PRODUCTION / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、四つの決め文を黒板で受ける
     from: 29
@@ -1444,4 +1430,4 @@ scenes:
     cut_reason: 【最後の一枚】親指が止まったままのスマホ。アウトロで保持
     from: 34
     slot: 3
-    credit: 'Photo: Pexels'
+    credit: 'Photo: Towfiqu barbhuiya / Pexels'
