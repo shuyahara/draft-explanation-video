@@ -11,6 +11,18 @@
 いずれのツールも**指摘を生成するだけ**で、台本・YAML の文言は一切編集しない。採否判断と反映は
 人／Claude が行う（`DRAFT/CLAUDE.md` の方針どおり）。
 
+## 対話台本（紙芝居版）のレビュー一式
+
+対話台本（めたん×ずんだもん）は、上記に加えて対話特有の観点（セリフの自然さ・章のつなぎ・間の
+設計）を持つ。台本執筆〜レンダまでの間、次の順序で回す。
+
+1. `review_script.py`（7観点。ナレーションの分かりやすさ）
+2. `review_holistic.py`（総合。面白さ・視聴維持・見やすさ・タイトル）
+3. `review_dialogue.py`（セリフ。自然さ・キャラらしさ・テンポ・表情タグ・面白さ）
+4. `review_transitions.py`（章のつなぎ。つなぎの自然さ・予告の具体性・章カードとの整合・反復）
+5. `review_pauses.py`（間・息継ぎ。シーン YAML の `pause_after` が対象なので、YAML 生成後に回す）
+6. レンダ後に `review_video.py`（映像）と `review_reading.py`（読み上げ・ASR）
+
 ## 前提
 
 - Python は script-to-video の venv を使う（Bash の `python` は Microsoft Store のスタブで動かない）。
@@ -88,6 +100,75 @@ PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" 
 | オプション | 既定 | 説明 |
 |---|---|---|
 | `--out` | `references/{実行日}-{フォルダ名}-holistic.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_transitions.py（章のつなぎレビュー）
+
+対話台本 Markdown の各シーンの末尾3発話・次シーンの冒頭3発話・次シーンの章カード
+（`- 章カード: 「…」`）の有無を抽出し、**つなぎの自然さ・予告の具体性・章カードとの整合・
+反復**の観点でGPTにレビューさせる（2026-09-05 追加）。先行して `references/20260905-dopagaki-kamishibai-transitions-review.md`
+でアドホックに実行したカスタムプロンプトをツール化したもの。codex exe の解決・レート制限
+リトライ付き codex exec 呼び出し・台本 md のシーン抽出まわりの正規表現は `review_dialogue.py` /
+`review_script.py` の実装を import して再利用している（キャラクター設定は `review_dialogue.py`
+の版が特定動画向けの記述を含むため流用せず、このツール専用の汎用版を定義している）。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_transitions.py scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.md
+```
+
+依頼する観点:
+(a) つなぎの自然さ (b) 予告の具体性 (c) 章カードとの整合 (d) 境界ごとの判定（可・要修正）
+(e) 反復チェック（「次は〜」等の予告構文が3回以上同じ型で連続・多発していないか）
+
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-transitions-review.md`
+  （`--out` で変更可）。
+- 全境界（シーン数-1）を1回の codex exec 呼び出しにまとめて渡す。
+- 対話台本 md の書式（`## シーンN: タイトル` ＋ `**話者**（表情）: 本文`）は `review_dialogue.py`
+  と同じ前提。`## 出典リスト` 以降は抽出対象から除外する。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--out` | `references/{実行日}-{フォルダ名}-transitions-review.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_pauses.py（間・息継ぎレビュー）
+
+シーン YAML（`scenes[].narration[]`）の `text` / `speaker` / `pause_after` を抽出し、
+**間が足りない／長すぎる箇所・決め文の後の保持・話者交代の間・章転換・息継ぎ位置（文の分割）**
+の観点でGPTにレビューさせる（2026-09-05 追加）。先行して
+`references/20260905-dopagaki-kamishibai-pause-review.md` でアドホックに実行したカスタム
+プロンプトをツール化したもの。codex exe の解決・レート制限リトライ付き codex exec 呼び出しは
+`review_script.py` の実装を import して再利用している。
+
+台本 md ではなく**シーン YAML** が入力（`pause_after` は YAML にしかないため）。台本を対話
+形式に組んだ後、`tools/kamishibai_md_to_yaml.py` で YAML を生成してから実行する。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_pauses.py scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.yaml
+```
+
+- `--tempo`（既定 `1.1`）でプロンプトに提示する `pause_after` の基準値が変わる
+  （`tools/kamishibai_md_to_yaml.py` の `PAUSE_PRESETS` と同じ値: 1.1倍のとき話者交代0.45秒・
+  文境界0.35秒・章転換1.2秒。決め文の目安2.0〜2.5秒は話速に依らず本作の設計判断として
+  提示する）。
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-pause-review.md`（`--out` で
+  変更可）。
+- 全シーンの `pause_after` を1回の codex exec 呼び出しにまとめて渡すため出力が長くなりやすい。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--tempo` | `1.1` | 想定話速（`1.0`/`1.1`）。プロンプトに提示する `pause_after` の基準値が変わる |
+| `--out` | `references/{実行日}-{フォルダ名}-pause-review.md` | 出力先パス |
 | `--timeout` | 900秒 | codex exec のタイムアウト |
 | `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
 
