@@ -56,6 +56,13 @@ CREDIT = {
 }
 
 # 元 YAML（ナレーション版）から転記されない読み。(surface, reading) をシーンに追加する。
+# 「嗤」は VOICEVOX の辞書に無く、未登録の活用形は読み飛ばされる（「嗤って」→「ッテ」）。
+# 台本に出る全活用形を、その形が本文に含まれるシーンへ登録する。
+GLOBAL_READINGS = [
+    ("嗤って", "ワラッテ"), ("嗤った", "ワラッタ"), ("嗤っていた", "ワラッテイタ"), ("嗤う", "ワラウ"), ("嗤い", "ワライ"),
+    ("嗤いながら", "ワライナガラ"), ("嗤われる", "ワラワレル"), ("嗤われない", "ワラワレナイ"), ("嗤えば", "ワラエバ"),
+    ("嗤われ", "ワラワレ"), ("嗤え", "ワラエ"),
+]
 EXTRA_READINGS = {
     1: [("口の端", "クチノハ")],
     4: [("甕", "カメ")],
@@ -242,6 +249,9 @@ BEATS = {
         board("冷笑は安い", "【決め文】写真をはずし、四つの決め文を黒板で受ける", telop="冷笑は安い。だから、広がる"),
         img("次の投稿に行く前に止まれた", 3, "thumb", "【最後の一枚】親指が止まったままのスマホ。アウトロで保持"),
     ],
+    15: [
+        board(None, "【アウトロ】黒板だけで挨拶。フェードへ", telop="高評価・チャンネル登録・コメントをお願いします"),
+    ],
 }
 
 
@@ -304,7 +314,7 @@ def main() -> None:
         scene["beats"] = beats
         total += len(beats)
         text = "".join(seg["text"] for seg in scene["narration"])
-        extra = [(s, r) for s, r in EXTRA_READINGS.get(sid, []) if s in text]
+        extra = [(s, r) for s, r in EXTRA_READINGS.get(sid, []) + GLOBAL_READINGS if s in text]
         if extra:
             rs = scene.get("readings") or []
             have = {r["surface"] for r in rs}

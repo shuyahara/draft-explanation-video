@@ -171,7 +171,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 何のためかは、あとで分かるわ。まず、彼が何をどうでもいいと思っていたかが分かる話を、ひとつ。ある日、アレクサンドロス大王が彼の前に立って、何か望みはないかと尋ねたの。
+  - text: なんのためかは、あとで分かるわ。その前に、彼がどれだけ権力に興味がなかったか、よく分かる話をひとつ。ある日、アレクサンドロス大王が彼の前に立って、何か望みはないかと尋ねたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -385,6 +385,8 @@ scenes:
     reading: ワラウ
   - surface: 甕
     reading: カメ
+  - surface: 嗤った
+    reading: ワラッタ
   beats:
   - type: image
     cut_reason: 【犬のような者たち】ウォーターハウス「ディオゲネス」
@@ -444,7 +446,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.35
-  - text: 写真と返信欄だけ食べて、本文を残してたのだ……。
+  - text: 写真と返信欄だけ見て、本文を見てなかったのだ……。
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
@@ -674,6 +676,10 @@ scenes:
     reading: ワラワレナイ
   - surface: 無力感
     reading: ムリョクカン
+  - surface: 嗤って
+    reading: ワラッテ
+  - surface: 嗤われ
+    reading: ワラワレ
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -1260,6 +1266,10 @@ scenes:
     reading: ワライナガラ
   - surface: 無力感
     reading: ムリョクカン
+  - surface: 嗤う
+    reading: ワラウ
+  - surface: 嗤い
+    reading: ワライ
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -1459,6 +1469,12 @@ scenes:
     reading: カメ
   - surface: 無力感
     reading: ムリョクカン
+  - surface: 嗤って
+    reading: ワラッテ
+  - surface: 嗤っていた
+    reading: ワラッテイタ
+  - surface: 嗤われ
+    reading: ワラワレ
   beats:
   - type: image
     cut_reason: 【回帰】ランプの男へ戻る
@@ -1482,3 +1498,24 @@ scenes:
     from: 35
     slot: 3
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
+- id: 15
+  title: アウトロ（挨拶）
+  chapter_title: null
+  narration:
+  - text: 今日はここまで。ご視聴ありがとうございました。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 面白いと思ったら、高評価とチャンネル登録をお願いするのだ。
+    speaker: ずんだもん
+    expression: smile
+    pause_after: 0.45
+  - text: それと、あなたの意見も、コメントで教えてね。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.0
+  beats:
+  - type: board
+    cut_reason: 【アウトロ】黒板だけで挨拶。フェードへ
+    from: 1
+    telop: 高評価・チャンネル登録・コメントをお願いします
