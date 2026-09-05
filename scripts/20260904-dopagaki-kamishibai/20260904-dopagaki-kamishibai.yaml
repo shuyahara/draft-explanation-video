@@ -39,7 +39,7 @@ scenes:
     speaker: めたん
     expression: thinking
     pause_after: 0.45
-  - text: ショート動画を見ていたのだ。すぐ終わるのに、次が勝手に始まるから、延々と見ちゃうのだ〜。「あと一個だけ」が、百個くらいあったのだ……。
+  - text: ショート動画を見ていたのだ。すぐ終わるのに、次が勝手に始まるから、延々と見ちゃうのだ〜。「あと一個だけ」が、百回くらいあったのだ……。
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
@@ -95,9 +95,11 @@ scenes:
     cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
     from: 20
     telop: なぜ現代人は、ドパガキになってしまうのか
-  - type: board
-    cut_reason: 【冒頭の約束】犯人＝画面の設計、を黒板に大きく
+  - type: image
+    cut_reason: '【冒頭の約束】スマホを持つ手元を再掲し、黒板上部に「犯人＝画面の設計」（試写 v9: 板だけでは寂しい）'
     from: 23
+    slot: 3
+    credit: 'Photo: cottonbro studio / Pexels'
     telop: 犯人＝画面の設計
 - id: 2
   title: 通説の提示（ドーパミン中毒という筋書き）
