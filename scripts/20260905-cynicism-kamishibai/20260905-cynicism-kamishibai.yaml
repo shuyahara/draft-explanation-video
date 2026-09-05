@@ -51,7 +51,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: そういう、理由をうまく言えないまま出る笑いを、冷笑って呼ぶのよ。「自分は分かってます」って顔で、本気の人を鼻で笑って終わらせることね。
+  - text: そういう笑いのことを、冷笑って呼ぶのよ。本気の人を、「自分は分かってます」って顔で、鼻で笑って終わらせることね。理由がうまく言えないのも、冷笑の特徴なの。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -191,7 +191,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: もうひとつ、神託の話があるわ。若い頃、彼はデルフォイで「通貨を変造せよ」と告げられたそうよ。面白いのは、ギリシャ語では「通貨」が「慣習」の意味も持っていたことなの。
+  - text: もうひとつ、神託の話があるわ。若い頃、彼はデルフォイの神殿で、神のお告げとして「通貨を変造せよ」と告げられたそうよ。面白いのは、ギリシャ語では「通貨」が「慣習」の意味も持っていたことなの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -330,7 +330,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 彼はこれを、啓蒙された偽りの意識と呼んだの。世の中を全部見抜いたつもりで、「どうせ無駄」と動かなくなる態度よ。
+  - text: 世の中を全部見抜いたつもりで、「どうせ無駄」と動かなくなる意識。彼はこれを、啓蒙された偽りの意識、と呼んだの。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -391,6 +391,7 @@ scenes:
     from: 1
     slot: 1
     credit: John William Waterhouse, Diogenes (1882), Art Gallery of NSW / Public Domain
+    telop: キュオーン（犬）→ キュニコス（犬のような者たち）→ Cynic
   - type: board
     cut_reason: 【真理の勇気】写真をはずし、出典を黒板に
     from: 10
@@ -417,7 +418,7 @@ scenes:
   title: 探索①（第一の安さ・考えなくて済む）
   chapter_title: 冷笑は、なぜ安いのか
   narration:
-  - text: その安さには、三つの種類があるの。まず一つ目から見るわね。慶應義塾大学でメディア論を研究する津田正太郎さんは、現代のシニシズムを、「他人の言動を、つねに利己的な動機で解釈しようとする態度」と定義したの。
+  - text: その安さには、三つの種類があるの。まず一つ目から見るわね。慶應義塾大学でメディア論を研究する、津田正太郎さん。現代のシニシズムを、こう定義したの。「他人の言動を、つねに利己的な動機で解釈しようとする態度」。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -483,20 +484,20 @@ scenes:
     telop: 津田正太郎（慶應義塾大学）現代ビジネス
   - type: board
     cut_reason: 【動機を疑う】写真をはずし、三つの決めつけを黒板に
-    from: 7
+    from: 9
     telop: 「カネのため」「売名だ」「ポーズだ」→ 中身を考えなくて済む
   - type: board
     cut_reason: 【決めつけ合い】ポスターは描かず、二人だけで
-    from: 15
+    from: 17
   - type: board
     cut_reason: 【決め文】黒板に第一の安さ
-    from: 22
+    from: 24
     telop: 第一の安さ：考えなくて済む
 - id: 6
   title: 探索②（第二の安さ・賢く見える）
   chapter_title: null
   narration:
-  - text: ずんだもんに、ひとつ質問。「人はどうせ利己的だ」と思う皮肉屋と、そうでない人。認知課題でいい成績を取るのは、どちらだと思う？
+  - text: ずんだもんに、ひとつ質問。「人はどうせ利己的だ」と思う皮肉屋、つまり冷笑しがちな人と、そうでない人。読解や計算みたいな、考える力を測る課題でいい成績を取るのは、どちらだと思う？
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -516,11 +517,11 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 人を信じない人は、世の中を見抜いているように見えるのよね。本気で動く人より、少し離れて見ている人のほうが、賢そうに見えるの。
+  - text: 人を信じない人は、世の中を見抜いているように見えるのよね。本気で動く人より、少し離れて見ている人のほうが、一段上に見えるの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 腕を組んで「はいはい」って言ってると、確かに一段上にいる気分なのだ。
+  - text: 腕を組んで「はいはい」って言ってると、確かに偉くなった気分なのだ。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
@@ -586,7 +587,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: つまり冷笑は、何かから自分を守ろうとしているのね。じゃあ、何から守っているのかしら。たどっていくと、大きく三つ、見えてくるものがあるわ。
+  - text: つまり冷笑は、何かから自分を守ろうとしているのね。じゃあ、何から守っているのかしら。防衛の奥にあるものをたどると、さらに三つの気持ちが見えてくるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -650,7 +651,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 二つ目は、もっと意外よ。標的にされるのは、優れた人ではないの。
+  - text: 二つ目は、もっと意外よ。標的になるのは、優れているという理由だけじゃないの。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -722,7 +723,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 実際に見下されたわけではないのよ。「そう思われそう」と感じただけで、人は相手を貶めてしまうの。研究チームはこれを、善行者への貶め、と名付けたわ。
+  - text: 実際に見下されたわけではないのよ。「そう思われそう」と感じただけで、人は相手を貶めてしまうの。研究チームはこれを、善い行いをした人を低く見る反応、という意味で、善行者への貶め、と名付けたわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -916,7 +917,7 @@ scenes:
   title: 三つの標的（図解でまとめる）
   chapter_title: null
   narration:
-  - text: 三つの反応と、その向かう相手を整理するために、一枚の地図を借りましょう。プリンストン大学の心理学者、スーザン・フィスクたちは、人が他の集団をどう見るかを、「温かさ」と「有能さ」の二つで整理したの。
+  - text: 冷笑がどんな相手に向くのかを見るために、一枚の地図を借りましょう。プリンストン大学の心理学者、スーザン・フィスクたちは、人が他の集団をどう見るかを、「温かさ」と「有能さ」の二つで整理したの。集団についての理論だけど、ここでは個人の見え方の補助線として使うわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -956,7 +957,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 1.0
-  - text: いいところに気づいたわね。ここで、さっきのスタヴロヴァの研究に戻りましょう。皮肉屋は、本当に賢かったのかしら。
+  - text: いいところに気づいたわね。ここで、さっき預けたスタヴロヴァたちの続きを開けましょう。同じチームが、別の大きなデータで、実際の成績を調べているの。皮肉屋は、本当に賢かったのかしら。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -970,28 +971,28 @@ scenes:
     telop: Fiske, Cuddy, Glick & Xu (2002) JPSP
   - type: image
     cut_reason: 【ボランティア】海岸清掃の人々（遠景）。冒頭の投稿の中身
-    from: 11
+    from: 12
     slot: 1
     credit: 'Photo: Thirdman / Pexels'
   - type: diagram
     cut_reason: '【図解: 三つの防衛】無力感・責められる予期・不当だという感覚が「自分を守るための反応」へ収束する'
-    from: 16
+    from: 17
     diagram:
       type: narrative
       layout: converge
       items:
       - id: power
         text: 無力感
-        at: 16
+        at: 17
       - id: blame
         text: 責められる予期
-        at: 16
+        at: 17
       - id: unfair
         text: 不当だという感覚
-        at: 16
+        at: 17
       result:
         text: 自分を守るための反応
-        at: 17
+        at: 18
 - id: 11
   title: 安い知性の請求書——中盤の反転②
   chapter_title: 安い知性の請求書は、誰が払うのか
@@ -1016,7 +1017,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.7
-  - text: 賢く見えるだけで、賢くはなかったのだ……。幻想なのだ。
+  - text: 賢く見えるだけで、賢くはなかったのだ……。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -1100,25 +1101,25 @@ scenes:
     telop: 皮肉屋の天才幻想（cynical genius illusion）
   - type: image
     cut_reason: 【9年後の収入】給与明細を持つ手（文字は読めない）
-    from: 15
+    from: 14
     slot: 2
     credit: 'Photo: Kaboompics.com / Pexels'
     telop: Stavrova & Ehlebracht (2016) JPSP
   - type: image
     cut_reason: 【リーダーに選ばれない】会議机の端の席
-    from: 19
+    from: 18
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
     telop: Stavrova, Ehlebracht & Ren (2024) British Journal of Psychology
   - type: image
     cut_reason: 【つながり直せない】輪の外に立つ一人の後ろ姿
-    from: 24
+    from: 23
     slot: 4
     credit: 'Photo: Hayk Paytyan / Pexels'
     telop: Choy, Eom & Li (2021) Personality and Individual Differences
   - type: diagram
     cut_reason: '【図解: 請求書】四つの代価を一本鎖で積む。ここまで一枚ずつ見せた項目を一望にする'
-    from: 28
+    from: 27
     diagram:
       type: narrative
       layout: chain
@@ -1126,33 +1127,33 @@ scenes:
       - id: cog
         text: 認知能力が低い
         icon: school
-        at: 28
+        at: 27
       - id: income
         text: 9年後の収入が低い
         icon: payments
-        at: 28
+        at: 27
       - id: leader
         text: リーダーに選ばれない
         icon: groups
-        at: 28
+        at: 27
       - id: reconnect
         text: つながり直せない
         icon: link_off
-        at: 28
+        at: 27
       caption:
-        at: 28
+        at: 27
         text: 安い知性の請求書
   - type: board
     cut_reason: 【防衛の成熟度】黒板に二つの防衛
-    from: 29
+    from: 28
     telop: ユーモア＝成熟した防衛／受動攻撃＝未成熟な防衛（Vaillant）
   - type: board
     cut_reason: 【決め文1】
-    from: 35
+    from: 34
     telop: 冷笑は安い
   - type: board
     cut_reason: 【決め文2】
-    from: 37
+    from: 36
     telop: 安いものには、後で請求書が来る
 - id: 12
   title: 環境が育てる（個人に還元しない）
@@ -1170,7 +1171,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: しかも、この結果は一つの実験だけではないの。その後、32の研究と、およそ3万9000人分をまとめたメタ分析でも、一貫して確かめられているわ。
+  - text: しかも、この結果は一つの実験だけではないの。その後、32の研究、およそ3万9000人分の結果をまとめて検証したメタ分析でも、一貫して確かめられているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1210,7 +1211,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: この無力感には、歴史もあるの。1972年の連合赤軍事件と翌年のオイルショックのあと、学生運動の熱は急速に冷めたわ。若者の無気力、無関心、無責任は、三無主義と呼ばれたの。
+  - text: 直接の原因とは言えないけれど、似た無力感は、ずっと前から語られてきたの。1972年の連合赤軍事件と翌年のオイルショックのあと、学生運動の熱は急速に冷めたわ。若者の無気力、無関心、無責任は、三無主義と呼ばれたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1425,7 +1426,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.8
-  - text: そして、冷笑が守っているのは、正しさじゃなくて、傷つきたくない気持ちなのよ。
+  - text: そして、冷笑が守っているのは、たいてい、正しさじゃなくて、傷つきたくない気持ちなのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
