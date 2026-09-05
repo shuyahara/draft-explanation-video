@@ -671,6 +671,8 @@ scenes:
     reading: ワラウ
   - surface: 嗤われない
     reading: ワラワレナイ
+  - surface: 無力感
+    reading: ムリョクカン
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -896,6 +898,8 @@ scenes:
     reading: ケシ
   - surface: 憤り
     reading: イキドオリ
+  - surface: 無力感
+    reading: ムリョクカン
   beats:
   - type: image
     cut_reason: 【映像を見る参加者】モニターの前の後ろ姿
@@ -1253,6 +1257,8 @@ scenes:
     reading: キタダアキヒロ
   - surface: 嗤いながら
     reading: ワライナガラ
+  - surface: 無力感
+    reading: ムリョクカン
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -1450,6 +1456,8 @@ scenes:
     reading: ワラワレル
   - surface: 甕
     reading: カメ
+  - surface: 無力感
+    reading: ムリョクカン
   beats:
   - type: image
     cut_reason: 【回帰】ランプの男へ戻る
