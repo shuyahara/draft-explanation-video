@@ -148,7 +148,7 @@ BEATS = {
                      {"id": "novel", "text": "小説", "icon": "menu_book", "at": 1},
                      {"id": "comic", "text": "漫画", "icon": "auto_stories", "at": 1},
                      {"id": "pisa", "text": "学力", "icon": "school", "at": 1},
-                     {"id": "short", "text": "ショート動画？", "icon": "smartphone", "at": "今回もただのパニックじゃないの"},
+                     {"id": "short", "text": "ショート動画？", "icon": "smartphone", "at": 1},
                  ]}),
         img("グリフィス大学", 1, "library", "【メタ分析】学術誌の書架", telop="Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人"),
         board("結論はこう", "【判定ボード1行目】関連：ある", telop="関連：ある（中程度）"),

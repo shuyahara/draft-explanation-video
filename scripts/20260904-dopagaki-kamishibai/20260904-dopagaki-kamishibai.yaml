@@ -147,7 +147,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: そこからよ。じゃあ次は、ドーパミンが本当は何をしている物質なのか。そこから見ていきましょう。
+  - text: そこからよ。では次に、ドーパミンが本当は何をしている物質なのか、確かめてみましょう。
     speaker: めたん
     expression: explain
     pause_after: 1.2
@@ -224,7 +224,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: いい質問ね。それを考えるために、次は「欲しい」と「好き」という二つの言葉を分けてみましょう。
+  - text: いい質問ね。その「やめられなさ」を解くには、欲求と快楽をいったん切り分ける必要があるのよ。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -447,7 +447,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: もっと前よ。「新しいものが人をだめにする」という不安なら、二千年以上前からあるの。その歴史を、少しさかのぼってみましょうか。
+  - text: もっと前よ。同じ型の不安は、二千年以上も繰り返されてきたの。少し歴史をさかのぼってみましょうか。
     speaker: めたん
     expression: normal
     pause_after: 1.2
@@ -482,7 +482,7 @@ scenes:
   title: 反転②前半（文字批判と読書熱）
   chapter_title: この不安は、いつから続いているのか
   narration:
-  - text: 実はね、文字だって、「人をだめにする」と心配されたことがあるの。紀元前4世紀、プラトンの対話篇「パイドロス」に、こんな場面があるの。文字の発明をめぐる、エジプトの神と王の議論よ。作中で語られる物語として、ね。
+  - text: まずは文字よ。文字だって、「人をだめにする」と心配されたことがあるの。紀元前4世紀、プラトンの対話篇「パイドロス」に、こんな場面があるの。文字の発明をめぐる、エジプトの神と王の議論よ。作中で語られる物語として、ね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -530,7 +530,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: いいえ。データを掲げて、社会を大きく動かした騒ぎもあるの。次はそれを見ましょう。
+  - text: いいえ。データを掲げて、社会を大きく動かした騒ぎもあるの。それを見ると、騒ぎの型がもっとはっきりするわ。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -550,22 +550,22 @@ scenes:
     telop: プラトン『パイドロス』274-275
   - type: board
     cut_reason: 【系譜の始まり】黒板に系譜の一本線を書き始める
-    from: 11
+    from: 12
     telop: '不安の系譜: 文字 →'
   - type: image
     cut_reason: 【読書熱】18世紀の読書する女性（絵画）
-    from: 14
+    from: 15
     slot: 2
     credit: Wikimedia Commons, Public Domain（Fragonard, The Reader, c.1770）
     telop: Lesewut（読書熱）18世紀末ドイツ
   - type: image
     cut_reason: 【疫病だと断じる本】古書の山
-    from: 17
+    from: 18
     slot: 3
     credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【同じ筋書き】写真をはずし、系譜を伸ばす
-    from: 22
+    from: 23
     telop: '不安の系譜: 文字 → 小説 →'
 - id: 7
   title: 反転②後半（ワーサムの捏造・日本の学力パニック・モラルパニック）
@@ -643,7 +643,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ただ、そうも言い切れないところもあるのよ。次は、そこを正直に見ていきましょう。
+  - text: ただ、そうも言い切れないところもあるのよ。今あるデータに照らして、確かめてみましょう。
     speaker: めたん
     expression: serious
     pause_after: 1.2
@@ -708,7 +708,7 @@ scenes:
   title: 反証の検討（何かは起きている。しかし）
   chapter_title: 本当に、何も起きていないのか
   narration:
-  - text: ここまでだと、「今回もただのパニックじゃないの？」と思うわよね。でも、そう片づけられないデータもあるの。
+  - text: まず、そう片づけられないデータから見せるわ。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -828,33 +828,33 @@ scenes:
         at: 1
   - type: image
     cut_reason: 【メタ分析】学術誌の書架
-    from: 4
+    from: 3
     slot: 1
     credit: 'Photo: Pixabay'
     telop: Nguyen et al., Psychological Bulletin (2025)：71研究・約9.8万人
   - type: board
     cut_reason: 【判定ボード1行目】関連：ある
-    from: 8
+    from: 7
     telop: 関連：ある（中程度）
   - type: image
     cut_reason: 【内部告発の証言】議会の建物
-    from: 18
+    from: 17
     slot: 2
     credit: 'Photo: Guohua Song / Pexels'
     telop: 米上院 商務委員会 公聴会 (2021)
   - type: board
     cut_reason: 【ただし】因果の向きは決められない
-    from: 27
+    from: 26
     telop: 関連：ある（中程度）／ 因果：決められない
   - type: image
     cut_reason: 【規模の数字】データ解析の画面（35万人分）。v7 で板だけから写真付きに
-    from: 34
+    from: 33
     slot: 3
     credit: 'Photo: Pixabay / Pexels'
     telop: Orben & Przybylski (2019)：説明できた個人差は 0.4%
   - type: board
     cut_reason: 【整理】判定ボード3行そろう。決め文まで保持
-    from: 40
+    from: 39
     telop: 関連：ある（中程度）／ 因果：決められない ／ 規模：大きくない
 - id: 9
   title: 真因（wanting を突く設計）
