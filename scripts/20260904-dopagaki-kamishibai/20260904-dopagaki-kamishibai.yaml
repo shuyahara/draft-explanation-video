@@ -273,6 +273,11 @@ scenes:
     cut_reason: 【報酬予測誤差】黒板に用語を書く
     from: 18
     telop: 報酬予測誤差 ＝ 予想と現実のズレ
+  - type: image
+    cut_reason: '【答え合わせの信号】測定器の画面に触れる手元（信号の記録）。v10: 板だけの 44 秒を分ける'
+    from: 25
+    slot: 3
+    credit: 'Photo: cottonbro studio / Pexels'
 - id: 4
   title: 反転①後半（ベリッジの wanting / liking）
   chapter_title: null
@@ -370,9 +375,14 @@ scenes:
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
   - type: board
-    cut_reason: 【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる。章末の問いまで保持
+    cut_reason: 【筋書きの差し替え】写真をはずし、二人だけで「溺れている→空回り」の言い換えを聞かせる
     from: 27
     telop: 「溺れている」のではなく「空回りしている」
+  - type: image
+    cut_reason: '【空回りする親指】フィードを払う手元（再掲）。v10: 板だけの 46 秒を分ける'
+    from: 30
+    slot: 3
+    credit: 'Photo: Lisa Fotios / Pexels'
 - id: 5
   title: 「47秒」の誤読（グロリア・マーク）
   chapter_title: null
@@ -480,6 +490,11 @@ scenes:
     cut_reason: 【誤読の修正】写真をはずし、出典を残す
     from: 27
     telop: Gloria Mark『Attention Span』(2023)
+  - type: image
+    cut_reason: 【二千年以上前から】古書の山。歴史章への受け渡し
+    from: 32
+    slot: 5
+    credit: 'Photo: Suzy Hazelwood / Pexels'
 - id: 6
   title: 反転②前半（文字批判と読書熱）
   chapter_title: この不安は、いつから続いているのか
@@ -569,6 +584,11 @@ scenes:
     cut_reason: 【同じ筋書き】写真をはずし、系譜を伸ばす
     from: 23
     telop: '不安の系譜: 文字 → 小説 →'
+  - type: image
+    cut_reason: 【社会を動かした騒ぎ】新聞の束。次章（ワーサム）への受け渡し
+    from: 32
+    slot: 4
+    credit: 'Photo: Lisa Fotios / Pexels'
 - id: 7
   title: 反転②後半（ワーサムの捏造・日本の学力パニック・モラルパニック）
   chapter_title: null
@@ -702,6 +722,12 @@ scenes:
     cut_reason: 【モラルパニック】用語を黒板に
     from: 31
     telop: moral panic（Cohen, 1972）
+  - type: image
+    cut_reason: 【メディアがあおる】新聞スタンド。定義の「メディア・世論・規制」を実物で
+    from: 37
+    slot: 4
+    credit: 'Photo: Valentin Angel Fernandez / Pexels'
+    telop: moral panic（Cohen, 1972）
   - type: board
     cut_reason: 【系譜が伸びる】文字→小説→漫画→学力
     from: 40
@@ -718,7 +744,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: グリフィス大学のグエンたちの研究チームは2025年、メタ分析の結果を、心理学の主要誌に発表したの。ショート動画と心の状態を調べた71件の研究、合わせておよそ9万8千人分をまとめた分析よ。
+  - text: グリフィス大学の研究チーム、グエンたちは2025年、メタ分析の結果を、心理学の主要な専門誌に発表したの。ショート動画と心の状態を調べた71件の研究、合わせておよそ9万8千人分をまとめた分析よ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -839,6 +865,12 @@ scenes:
     from: 7
     telop: 関連：ある（中程度）
   - type: image
+    cut_reason: 【OECD 平均点の低下】マークシートに向かう手元。S7 の教室とは別カット
+    from: 13
+    slot: 4
+    credit: 'Photo: Andy Barbour / Pexels'
+    telop: 'OECD PISA 2022: 平均点が大きく低下（コロナ前から）'
+  - type: image
     cut_reason: 【内部告発の証言】議会の建物
     from: 17
     slot: 2
@@ -848,6 +880,11 @@ scenes:
     cut_reason: 【ただし】因果の向きは決められない
     from: 26
     telop: 関連：ある（中程度）／ 因果：決められない
+  - type: image
+    cut_reason: 【卵が先か、ニワトリが先か】ナレーション自身の比喩を実写で（鶏と卵のかご）
+    from: 32
+    slot: 5
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【規模の数字】データ解析の画面（35万人分）。v7 で板だけから写真付きに
     from: 33
@@ -961,8 +998,14 @@ scenes:
     slot: 3
     credit: 'Photo: Lisa Fotios / Pexels'
   - type: board
-    cut_reason: 【設計】写真をはずし、出典を黒板に
+    cut_reason: 【設計】写真をはずし、決め文を聞かせる
     from: 28
+    telop: そう設計されている
+  - type: image
+    cut_reason: 【クラークたちの研究】ブリティッシュコロンビア大学のキャンパス（実在の大学）
+    from: 30
+    slot: 5
+    credit: 'Photo: Sunny Lee / Pexels'
     telop: Clark & Zack, Addictive Behaviors (2023)
   - type: image
     cut_reason: 【段差の除去】無限スクロールの手元（再掲）

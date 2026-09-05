@@ -160,3 +160,19 @@ BGM: 「青空に口笛」のる（DOVA-SYNDROME） https://dova-s.jp/bgm/detail
 | S3-2（追加） | オレンジジュースのグラス | Pexels, Pixabay https://www.pexels.com/photo/selective-focus-photography-of-pure-orange-juice-158053/ |
 | S5-4（追加） | 機械式ストップウォッチ | Pexels, William Warby https://www.pexels.com/photo/close-up-of-a-heuer-mechanical-stopwatch-19730401/ |
 | S8-3（追加） | グラフが映るノート PC | Pexels, Pixabay https://www.pexels.com/photo/gray-and-black-laptop-computer-265087/ |
+
+## v10 追加（2026-09-05。試写 v9「画面が寂しいところがある」→ 板だけの 20 秒超区間 10 件のうち 8 件に写真）
+
+候補は `assets-kamishibai/photos/candidates-v10/`（manifest_all.json）。S2 の決め文区間と S8 の判定ボード区間は意図的に板のまま。
+
+| ビート | 新 | 出典 |
+|---|---|---|
+| S1-3 | スマホを持つ手元（S1-2 の再掲） | 同 S1-2 |
+| S3-3 | 測定器の画面に触れる手元 | Pexels, cottonbro studio https://www.pexels.com/photo/a-person-holding-a-electronic-device-7858289/ |
+| S4-3 | フィードを払う手元（S9-3 の再掲） | 同 S9-3 |
+| S5-5 | 古書の山 | Pexels, Suzy Hazelwood https://www.pexels.com/photo/stacked-books-1333742/ |
+| S6-4 | 新聞の束 | Pexels, Lisa Fotios https://www.pexels.com/photo/close-up-of-newspapers-on-wooden-table-18287623/ |
+| S7-4 | 新聞スタンド | Pexels, Valentin Angel Fernandez https://www.pexels.com/photo/kiosk-in-city-15131966/ |
+| S8-4 | マークシートに向かう手元 | Pexels, Andy Barbour https://www.pexels.com/photo/a-person-taking-an-exam-6684209/ |
+| S8-5 | 鶏と卵のかご | Pexels, cottonbro studio https://www.pexels.com/photo/white-chicken-on-brown-woven-basket-4911793/ |
+| S9-5 | ブリティッシュコロンビア大学のキャンパス | Pexels, Sunny Lee https://www.pexels.com/photo/university-campus-with-clock-tower-and-gardens-37598465/ |
