@@ -122,6 +122,9 @@ YAML はレンダリングツール [script-to-video](https://github.com/shuyaha
 - **保存先**: `scripts/{YYYYMMDD-テーマ}/{台本と同名}.yaml`。雛形は `templates/scene-yaml-template.yaml`。
 - 未知のフィールドはツール側でエラーになる（`extra="forbid"`）。仕様にない項目は書かない。
   仕様に不足を感じた場合は独自拡張せず、まずユーザーに相談する。
+- **レンダ出力（動画・音声・フレームなどの生成物）の置き場は `D:\script-to-video-build\`**（2026-09-05 決定。C: が満杯になったため）。`C:\Users\shuya\Projects\script-to-video\build` はこのフォルダへのジャンクションなので、従来どおり `--out-dir build/<名前>` で書けばよく、実体は D に置かれる。
+  台本・YAML・素材メモ・公開パッケージ（`scripts/` `references/` `publish/`）は従来どおり本リポジトリに置く。
+  レンダ完了・アップロード後は中間物（`scenes/` `overlays/` `subtitles/` `assets/`）を消してよい。
 - 完成した YAML は script-to-video の `validate` サブコマンドで検証する。
   ```
   cd C:\Users\shuya\Projects\script-to-video
