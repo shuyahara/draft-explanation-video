@@ -68,4 +68,12 @@
   （先端が動くと GitHub 側のコミットが弾かれる）。取り込みは pull／別ブランチのマージで行い、
   push は編集完了の合図の後にまとめて行う。
 - 取り込み後は `tools/kamishibai_md_to_yaml.py` → `apply_beats.py`（アンカー文字列を追従）→
-  `validate` → 表情タグの見直し → `tools/review/review_dialogue.py`。
+  `validate` → 表情タグの見直し → レビュー一式。
+- **Codex レビューは一式すべて回す**（2026-09-05 ユーザー指示。セリフレビューだけで試写に出さない）。
+  台本段階: `review_script.py`（7 観点）→ `review_holistic.py`（総合）→ `review_dialogue.py`（セリフ）→
+  `review_transitions.py`（章のつなぎ）→ `review_pauses.py`（間。YAML 生成後）。レンダ後:
+  `review_video.py`（映像）＋ `review_reading.py`（ASR 読み）。各レビューの採否と根拠を Issue に残す。
+  順序は `tools/review/README.md`、コマンドは `/review`。
+- **Codex レビューでは拾えないもの**: 冒頭の例が論の前提と合っているか（例: 冷笑の対象が「本気の人」
+  であるべきところで別種の例を選んでいないか）、反転の否定範囲（§5）。これらはオーケストレーターが
+  台本を書き終えた時点で自分で点検し、判断メモに残す（2026-09-05 の冷笑版 S1 の例の差し替えが実例）。

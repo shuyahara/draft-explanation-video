@@ -23,19 +23,19 @@ scenes:
   title: フック（現代の場面）
   chapter_title: null
   narration:
-  - text: めたん、見てこれ。「海岸の清掃に参加しませんか」だって。意識高いのだ〜。
+  - text: めたん、見てこれ。有名な俳優が、「被災地でボランティアをしてきました」って写真を上げてるのだ。はいはい、売名なのだ〜。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: 呼びかけの投稿ね。……ずんだもん、今、笑ったでしょう。
+  - text: 投稿を見ただけで、売名だと分かるの？ ……ずんだもん、今、笑ったでしょう。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 笑ったのだ。ほら、返信も見て。「意識高いね」「どうせ売名でしょ」「はいはい」ばっかりなのだ。みんな同じこと思ってるのだ。
+  - text: 笑ったのだ。ほら、返信も見て。「売名だ」「偽善だ」「はいはい」ばっかりなのだ。みんな同じこと思ってるのだ。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: 呼びかけそのものには、ほとんど反応がないのね。なのに、笑った返信のほうは、何倍も広がっているわ。
+  - text: 本人の投稿についた「ありがとう」より、笑った返信のほうが、何倍も広がっているわね。
     speaker: めたん
     expression: thinking
     pause_after: 0.45
@@ -79,7 +79,7 @@ scenes:
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【定義】写真をはずし、黒板に冷笑の定義を書く
-    from: 21
+    from: 20
     telop: 冷笑＝本気を、一段高いところから鼻で笑って済ませる態度
 - id: 2
   title: 問いへの変換
@@ -298,9 +298,17 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.45
-  - text: 下から上！ 海岸掃除の人を笑うのとは、向きが逆なのだ。
+  - text: 下から上！ ……でも、僕があの俳優を笑ったのも、下から上なのだ？ 相手は有名人なのだ。
     speaker: ずんだもん
     expression: surprised
+    pause_after: 0.45
+  - text: いい反論ね。でも、ずんだもんが笑ったのは、その人の名声やお金そのものではなくて、「被災地に行った」という本気の部分でしょう？ 犬は、持っている側を嗤った。今の冷笑は、やっている側を嗤うのよ。
+    speaker: めたん
+    expression: point
+    pause_after: 0.45
+  - text: 持っている側と、やっている側……。向きが違うのだ。
+    speaker: ずんだもん
+    expression: thinking
     pause_after: 0.45
   - text: そうよ。ところが、この言葉はやがて意味を変えるの。英語のシニックが、哲学の一派ではなく、「人の動機を疑って鼻で笑う性格」を指すようになったのは、19世紀半ばだとされているわ。
     speaker: めたん
@@ -385,21 +393,21 @@ scenes:
     telop: Foucault『真理の勇気』（1983–84 講義）／ Mazella (2007)
   - type: image
     cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 18
+    from: 25
     slot: 2
     credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【綴りの違い】写真をはずし、二つの綴りを黒板に
-    from: 23
+    from: 30
     telop: Kynismus（古代）／ Zynismus（近代）
   - type: image
     cut_reason: 【知った上で動かない】オフィスでスマホを見る手元。白い光
-    from: 31
+    from: 38
     slot: 3
     credit: 'Photo: AlphaTradeZone / Pexels'
   - type: board
     cut_reason: 【決め文】写真をはずし、二人だけで反転を聞かせる
-    from: 37
+    from: 44
     telop: 犬は権力に吠え、冷笑は本気に吠える
 - id: 5
   title: 探索①（第一の安さ・考えなくて済む）
@@ -409,7 +417,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 利己的な動機……。「どうせ売名でしょ」も、それなのだ。
+  - text: 利己的な動機……。僕の「売名なのだ」も、それなのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -417,11 +425,11 @@ scenes:
     speaker: めたん
     expression: point
     pause_after: 0.45
-  - text: あ……。僕、あの投稿の中身、読んでなかったのだ。海岸のどこを、いつ掃除するのかも知らないのだ。
+  - text: あ……。僕、あの投稿の中身、読んでなかったのだ。どこで何日、何をしてきたのかも知らないのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.35
-  - text: 場所も時間も読まずに、意識の高さだけ測ってたのだ……。
+  - text: 中身を読まずに、売名かどうかだけ決めてたのだ……。
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
@@ -606,7 +614,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 海岸掃除の人も、僕にはそう見えてたのだ。でも、なんでそう見えちゃうのだ？
+  - text: あの俳優も、「一人が行っても、何も変わらないのに」って思ってたのだ。でも、なんでそう見えちゃうのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -626,7 +634,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.0
-  - text: 葡萄を酸っぱいことにするのと、海岸掃除を「意識高い」で済ませるのが、同じ形なのだ……。
+  - text: 葡萄を酸っぱいことにするのと、ボランティアを「売名」で済ませるのが、同じ形なのだ……。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -732,15 +740,15 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 1.0
-  - text: ここで、冒頭の画面に戻ってみましょう。ずんだもん、あの海岸清掃の呼びかけは、ずんだもんを責めていたかしら。
+  - text: ここで、冒頭の画面に戻ってみましょう。ずんだもん、あの俳優の投稿は、ずんだもんを責めていたかしら。
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: ……責めてはいないのだ。ただ「参加しませんか」って書いてあっただけなのだ。
+  - text: ……責めてはいないのだ。ただ「行ってきました」って書いてあっただけなのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: でも、ずんだもんも「自分まで責められるかも」って、どこかで感じたんじゃないかしら。海岸に行かない自分のことを。
+  - text: でも、ずんだもんも「自分まで責められるかも」って、どこかで感じたんじゃないかしら。何もしていない自分のことを。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -843,7 +851,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.0
-  - text: 棘……。でも僕、海岸掃除の人に嫉妬なんて、してないと思うのだ。
+  - text: 棘……。でも僕、あの俳優に嫉妬なんて、してないと思うのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -859,7 +867,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 2.0
-  - text: 「どうせ売名でしょ」って、本当は「本気じゃないのに評価されるのは不当だ」とも言ってるのかもなのだ。無力感、責められる予期、嫉妬。この三つは、みんな同じ人に向かうのだ？
+  - text: 「売名だ」って、本当は「本気じゃないのに褒められるのは不当だ」とも言ってるのかもなのだ。無力感、責められる予期、嫉妬。この三つは、みんな同じ人に向かうのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -934,7 +942,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 海岸掃除の人は……後のほうにされたのだ。ゴミ袋の数まで見ないと、僕はすぐ「無能」って札を貼っちゃうのだ。
+  - text: あの俳優は、成功者でもあって、ボランティアでもあるのだ……。妬まれて、見下されて、両方くらってたのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -1280,7 +1288,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: そう。疑いが、状況を見て使う道具ではなく、癖になっていたの。ずんだもん、あの投稿を見て「どうせ売名でしょ」と思ったとき、それは道具だったかしら。それとも、癖だったかしら。
+  - text: そう。疑いが、状況を見て使う道具ではなく、癖になっていたの。ずんだもん、あの投稿を見て「売名だ」と思ったとき、それは道具だったかしら。それとも、癖だったかしら。
     speaker: めたん
     expression: point
     pause_after: 1.0
@@ -1353,7 +1361,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: あの画面を、もう一度思い出してみて。「意識高いね」と笑った一瞬、ずんだもんは何から、自分を守っていたのかしら。
+  - text: あの画面を、もう一度思い出してみて。「売名なのだ」と笑った一瞬、ずんだもんは何から、自分を守っていたのかしら。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -1361,7 +1369,7 @@ scenes:
     speaker: めたん
     expression: thinking
     pause_after: 0.8
-  - text: ……たぶん、全部少しずつなのだ。海岸なんて変わらないと思ってたし、行かない自分がちくっとしたし、褒められてるのがちょっと悔しかったのだ。
+  - text: ……たぶん、全部少しずつなのだ。一人が行っても変わらないと思ってたし、何もしてない自分がちくっとしたし、褒められてるのがちょっと悔しかったのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -1369,7 +1377,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: 僕、あの投稿、もう一回ちゃんと読んでみるのだ。行くかどうかは、読んでから決めるのだ。
+  - text: 僕、あの投稿、もう一回ちゃんと読んでみるのだ。笑うかどうかは、読んでから決めるのだ。
     speaker: ずんだもん
     expression: smile
     pause_after: 0.45

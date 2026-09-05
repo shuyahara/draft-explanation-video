@@ -132,6 +132,7 @@ YAML はレンダリングツール [script-to-video](https://github.com/shuyaha
   ```
 - 出典は音声で読み上げず、原則 `telop`（画面テロップ）で表示する（読み上げたい場合はナレーションに含める）。
 - 台本完成後とレンダ後に `/review`（別モデル＝GPT による自動レビュー。`tools/review/`）を回し、指摘の採否を記録してから反映する。
+  **レビューは一式すべて回してから試写に出す**（2026-09-05 ユーザー指示）: 台本段階＝7 観点（`review_script.py`）＋総合（`review_holistic.py`）、対話台本はさらにセリフ（`review_dialogue.py`）＋章のつなぎ（`review_transitions.py`）＋間（`review_pauses.py`）。レンダ後＝映像（`review_video.py`）＋ASR 読み（`review_reading.py`）。一部だけ回して試写に出さない。順序と使い方は `tools/review/README.md`。
 
 ### 図解スクリプト（`diagram`）
 
