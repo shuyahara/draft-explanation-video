@@ -296,6 +296,11 @@ def make_thumb_j() -> Image.Image:
     return make_thumb_v2(MOUTH_CANDIDATES / "cand11-pexels-redhair-graffiti.jpg", darken_amount=0.20)
 
 
+def make_thumb_k() -> Image.Image:
+    """I 案の背景（Codex 生成 gen03-woman）を元の H 案レイアウト（見出し中央・人形は下端から大きく覗く）で。2026-09-06 採用。"""
+    return make_thumb(GEN / "gen03-woman-1920x1080.jpg", darken_amount=0.15)
+
+
 def make_contact_sheet(images: list[Image.Image]) -> Image.Image:
     """複数案を横に並べた確認用サムネイルを作る（各画像を等幅に縮小）。"""
 
