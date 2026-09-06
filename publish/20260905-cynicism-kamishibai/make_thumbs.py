@@ -26,6 +26,7 @@ from script_to_video.schema import Kamishibai
 OUT = Path(r"C:/Users/shuya/Projects/draft-explanation-video/publish/20260905-cynicism-kamishibai")
 SPRITES = Path(r"C:/Users/shuya/Projects/assets-kamishibai/sprites")
 PHOTOS = Path(r"C:/Users/shuya/Projects/assets-kamishibai/render-assets-cynicism")
+MOUTH_CANDIDATES = Path(r"C:/Users/shuya/Projects/assets-kamishibai/photos/candidates-cynicism/thumb-mouth")
 
 FONT_BOLD = Path(r"C:/Windows/Fonts/meiryob.ttc")
 
@@ -192,12 +193,116 @@ def make_thumb_c() -> Image.Image:
     return make_thumb(PHOTOS / "scene_03_beat1.jpg", darken_amount=0.25)
 
 
-def make_contact_sheet(images: list[Image.Image]) -> Image.Image:
-    """3案を横に並べた確認用サムネイルを作る（各画像を1/3幅に縮小）。"""
+# ============================================================
+# D/E/F: 口元アップ（手を口に当てて笑っている・正面）差し替え案
+# ============================================================
 
-    scale_w = W // 3
+
+def make_thumb_d() -> Image.Image:
+    """モノクロ・悪戯っぽい流し目＋口元を手で覆う（Pexels 7447408）。"""
+
+    return make_thumb(MOUTH_CANDIDATES / "cand08-pexels-woman-monochrome-playful.jpg", darken_amount=0.20)
+
+
+def make_thumb_e() -> Image.Image:
+    """落書き壁を背に正面から目線・指の隙間から覗く含み笑い（Pexels 3808995）。"""
+
+    return make_thumb(MOUTH_CANDIDATES / "cand11-pexels-redhair-graffiti.jpg", darken_amount=0.20)
+
+
+def make_thumb_f() -> Image.Image:
+    """石壁を背に正面から視線を合わせ、手を口元に当てる一枚（Pexels 36698477）。
+    元画像は16:9で顔が上寄りに収まるため、縦方向をトリミングして口元をズームする。"""
+
+    return make_thumb(MOUTH_CANDIDATES / "cand12-crop-portrait.jpg", darken_amount=0.20)
+
+
+# ============================================================
+# G/H/I/J: 見出しを上帯（35%以内）に集約し、人形を角に小さく配置する新レイアウト
+# （2026-09-06 フィードバック: 文字が口元に重なる／人形が中央寄りすぎる、を修正）
+# ============================================================
+
+GEN = Path(r"C:/Users/shuya/Projects/assets-kamishibai/photos/candidates-cynicism/thumb-mouth/gen")
+
+
+def draw_headline_top(base: Image.Image, center_x: int) -> None:
+    """見出し2行を画面上端の帯（上35%以内）へ収める。フォントは `draw_headline` より
+    小さくし、1行目・2行目とも上35%の枠内に収まる位置・サイズで描く。"""
+
+    line1_font = fit_bold_font(LINE1, max_width=round(W * 0.92), max_height=round(H * 0.115), stroke_width=6)
+    draw_bold_center(base, LINE1, center_x, round(H * 0.095), line1_font, WHITE, stroke_width=6)
+
+    line2_font = fit_bold_font(LINE2, max_width=round(W * 0.92), max_height=round(H * 0.135), stroke_width=7)
+    draw_bold_center(base, LINE2, center_x, round(H * 0.255), line2_font, YELLOW, stroke_width=7)
+
+
+def place_corner_puppets(base: Image.Image, metan_expr: str, zun_expr: str) -> None:
+    """人形を画面下端の左右の角へ、幅 W の約22%で小さく覗かせる（口元＝画面中央と重ならない
+    よう、左右の角だけに寄せる）。"""
+
+    target_width = round(W * 0.22)
+
+    # まず仮の高さで読み込み、素材のアスペクト比から目標幅に対応する高さを逆算する。
+    probe_h = round(H * 1.30)
+    metan_probe = load_puppet("metan", metan_expr, probe_h)
+    zun_probe = load_puppet("zundamon", zun_expr, probe_h)
+    metan_h = round(target_width * probe_h / metan_probe.width)
+    zun_h = round(target_width * probe_h / zun_probe.width)
+
+    metan = load_puppet("metan", metan_expr, metan_h)
+    zun = load_puppet("zundamon", zun_expr, zun_h)
+
+    visible_h = round(H * 0.26)  # 画面下端から見せたい高さ（顔の上半分程度・角に小さく覗く）
+    metan_top_y = H - visible_h
+    zun_top_y = H - visible_h
+
+    # 左下の角・右下の角に寄せる（画面中央の口元とは重ならない）。
+    paste(base, metan, 0, metan_top_y)
+    paste(base, zun, W - zun.width, zun_top_y)
+
+
+def make_thumb_v2(photo_path: Path, darken_amount: float) -> Image.Image:
+    """新レイアウト版: 見出しは上帯、人形は左右下の角に小さく配置し、写真の口元（中央〜
+    下中央）を隠さない。"""
+
+    bg = cover_fit(Image.open(photo_path), W, H)
+    darken(bg, darken_amount)
+    place_corner_puppets(bg, "smug", "confused")
+    draw_headline_top(bg, W // 2)
+    return bg
+
+
+def make_thumb_g() -> Image.Image:
+    """Codex生成・性別非明示プロンプト（口角に薄い見下し笑い、手は緩く口を覆う）。"""
+
+    return make_thumb_v2(GEN / "gen01-neutral-1920x1080.jpg", darken_amount=0.12)
+
+
+def make_thumb_h() -> Image.Image:
+    """Codex生成・"man" 明示プロンプト。"""
+
+    return make_thumb_v2(GEN / "gen02-man-1920x1080.jpg", darken_amount=0.12)
+
+
+def make_thumb_i() -> Image.Image:
+    """Codex生成・"woman" 明示プロンプト。"""
+
+    return make_thumb_v2(GEN / "gen03-woman-1920x1080.jpg", darken_amount=0.12)
+
+
+def make_thumb_j() -> Image.Image:
+    """ストックE案（Pexels 3808995・落書き壁）を新レイアウトで再構成。"""
+
+    return make_thumb_v2(MOUTH_CANDIDATES / "cand11-pexels-redhair-graffiti.jpg", darken_amount=0.20)
+
+
+def make_contact_sheet(images: list[Image.Image]) -> Image.Image:
+    """複数案を横に並べた確認用サムネイルを作る（各画像を等幅に縮小）。"""
+
+    n = len(images)
+    scale_w = W // n
     scale_h = round(H * scale_w / W)
-    sheet = Image.new("RGB", (scale_w * 3, scale_h), (0, 0, 0))
+    sheet = Image.new("RGB", (scale_w * n, scale_h), (0, 0, 0))
     for i, img in enumerate(images):
         small = img.convert("RGB").resize((scale_w, scale_h), Image.LANCZOS)
         sheet.paste(small, (i * scale_w, 0))
@@ -218,3 +323,32 @@ if __name__ == "__main__":
     contact_path = OUT / "thumb-contact.jpg"
     contact.save(contact_path, "JPEG", quality=90)
     print(f"{contact_path}: {contact.size} -> {contact_path.stat().st_size / 1024:.1f} KB")
+
+    d = make_thumb_d()
+    e = make_thumb_e()
+    f = make_thumb_f()
+
+    for img, name in ((d, "thumb-D.png"), (e, "thumb-E.png"), (f, "thumb-F.png")):
+        path = save(img, name)
+        size_kb = path.stat().st_size / 1024
+        print(f"{path}: {img.size} mode={img.mode} -> {size_kb:.1f} KB")
+
+    contact2 = make_contact_sheet([d, e, f])
+    contact2_path = OUT / "thumb-contact2.jpg"
+    contact2.save(contact2_path, "JPEG", quality=90)
+    print(f"{contact2_path}: {contact2.size} -> {contact2_path.stat().st_size / 1024:.1f} KB")
+
+    g = make_thumb_g()
+    h = make_thumb_h()
+    i = make_thumb_i()
+    j = make_thumb_j()
+
+    for img, name in ((g, "thumb-G.png"), (h, "thumb-H.png"), (i, "thumb-I.png"), (j, "thumb-J.png")):
+        path = save(img, name)
+        size_kb = path.stat().st_size / 1024
+        print(f"{path}: {img.size} mode={img.mode} -> {size_kb:.1f} KB")
+
+    contact3 = make_contact_sheet([g, h, i, j])
+    contact3_path = OUT / "thumb-contact3.jpg"
+    contact3.save(contact3_path, "JPEG", quality=90)
+    print(f"{contact3_path}: {contact3.size} -> {contact3_path.stat().st_size / 1024:.1f} KB")
