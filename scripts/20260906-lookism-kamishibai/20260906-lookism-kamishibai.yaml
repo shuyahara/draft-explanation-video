@@ -677,16 +677,16 @@ scenes:
         text: 関連。順番の証明ではない
         at: 20
   - type: image
-    cut_reason: 【AAFPRS 会員調査】自撮りのために整形を望む患者増。美容クリニックの受付（人物なし）
+    cut_reason: 【AAFPRS 会員調査】自撮りのために整形を望む患者増。美容クリニックの施術室（人物なし）
     from: 23
     slot: 2
-    credit: 'Photo: Marc Chemla / Pexels'
+    credit: 'Photo: Max Vakhtbovych / Pexels'
     telop: AAFPRS 会員調査 2021：医師の77%
   - type: image
-    cut_reason: 【数字】施術室の別カットに替えて77%の数値提示へ
+    cut_reason: 【数字】鏡の前で身支度する後ろ姿に替えて「自撮りでよく見せるため」の 77% へ
     from: 25
     slot: 3
-    credit: 'Photo: Anna Tarazevich / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【決め文】「写真が先で、顔が後」。インスタをスクロールする手元で保持
     from: 27
@@ -880,13 +880,13 @@ scenes:
     cut_reason: 【補強する変化②の導入】書類にサインする手元
     from: 13
     slot: 5
-    credit: 'Photo: Tima Miroshnichenko / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
     telop: 補強②：体と生き方は自分で決める（環境批判と両立）
   - type: image
     cut_reason: 【合いの手】サインの別カットに替えて「外野が責めるな」の一言へ
     from: 15
     slot: 6
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Elina Sazonova / Pexels'
   - type: image
     cut_reason: 【留保】サインの別カットに替えて環境批判との両立の一言へ
     from: 19
@@ -896,7 +896,7 @@ scenes:
     cut_reason: 【接続】最初のサインの手元に戻し二つの変化の結びつきへ
     from: 21
     slot: 8
-    credit: 'Photo: Tima Miroshnichenko / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【次章への問い】サインの別カットに替えて「穴はないのか」の疑いへ
     from: 23
@@ -1009,13 +1009,13 @@ scenes:
     cut_reason: 【反証③】整形容認と性産業容認は別問題。美容クリニック（再掲）
     from: 22
     slot: 3
-    credit: 'Photo: Marc Chemla / Pexels'
+    credit: 'Photo: Max Vakhtbovych / Pexels'
     telop: 反証③：整形の容認と性産業の容認は別の問題
   - type: image
     cut_reason: 【留保】施術室の別カットに替えて「そこまでなら言える」への着地
     from: 24
     slot: 4
-    credit: 'Photo: Max Vakhtbovych / Pexels'
+    credit: 'Photo: Konna Jpg / Pexels'
   - type: image
     cut_reason: 【締め】夜の路地のネオン（再掲）で結論へのつなぎ
     from: 26
@@ -1134,7 +1134,7 @@ scenes:
     slot: 3
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【一番大切なこと】最初の天秤に戻し裏側を忘れないという結び
+    cut_reason: 【一番大切なこと→動画をもう一度見る】公園で動画を見る手元。冒頭の動画への回帰
     from: 21
     slot: 4
     credit: 'Photo: Pixabay'
