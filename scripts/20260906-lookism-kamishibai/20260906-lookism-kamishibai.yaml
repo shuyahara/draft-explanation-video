@@ -199,12 +199,12 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: Tima Miroshnichenko / Pexels'
-    telop: 受け入れられている＝①隠さず話す人が増えた ②応援される・昔の仕事だけで責められない場面が増えた
+    telop: ①隠さず話す人が増えた ②責められない場面が増えた
   - type: image
-    cut_reason: 【現実】きつい言葉も残るコメント欄の代替。TVの前でアプリ画面を持つ手元
+    cut_reason: 【現実】きつい言葉も残るコメント欄の代替。PC の前で SNS を見る手元
     from: 3
     slot: 2
-    credit: 'Photo: Jakub Zerdzicki / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【定義の続き】公園で動画を見る手元に替えて「受け入れられている」の二つ目の意味へ
     from: 7
@@ -230,7 +230,7 @@ scenes:
     from: 21
     slot: 7
     credit: 'Photo: Elina Sazonova / Pexels'
-    telop: 注目する変化：写真SNS → 外見が評価や収入につながりやすくなった（ルッキズムの加速）
+    telop: 写真SNS → 外見が評価や収入につながりやすくなった
   - type: image
     cut_reason: 【疑問】雑踏1カット目に戻しルッキズムの語義への疑問へ
     from: 25
@@ -252,7 +252,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: その代表例が、見た目よ。1972年に、ミネソタ大学の心理学者、カレン・ディオンたちが行った実験を見てみましょう。
+  - text: その代表例が、見た目よ。1972年に、ミネソタ大学の心理学者、カレン・ディオンたちの実験を見てみましょう。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -303,6 +303,8 @@ scenes:
   readings:
   - surface: 偏り
     reading: カタヨリ
+  - surface: いい人
+    reading: イイヒト
   - surface: 善い
     reading: ヨイ
   - surface: 賃金
@@ -320,7 +322,7 @@ scenes:
     from: 5
     slot: 2
     credit: 'Photo: Râmbeț Ioana / Pexels'
-    telop: 出典「Dion, Berscheid & Walster (1972) What Is Beautiful Is Good. JPSP」
+    telop: Dion et al. (1972) JPSP
   - type: diagram
     cut_reason: '【実験: ディオン1972】対象→操作→結果を格子で。3列目は温かい・社交的・有能・幸せの順に発話同期'
     from: 8
@@ -335,25 +337,35 @@ scenes:
           at: 8
           icon: quiz
           text: 顔写真で推測
-        - id: w1
+        - id: res
+          at: 13
+          icon: star
+          text: 魅力が高いほど
+      - - id: w1
           at: 14
           icon: favorite
-          text: 温かい・社交的
-          after: 温かくて社交的で
-      - - null
-        - null
+          text: 温かい
+          after: 温かくて
         - id: w2
+          at: 14
+          icon: groups
+          text: 社交的
+          after: 社交的で
+        - id: w3
           at: 14
           icon: psychology
           text: 有能
           after: 能力も高そうだ
-      - - null
-        - null
-        - id: w3
+        - id: w4
           at: 16
           icon: celebration
           text: 幸せ
           after: 幸せな人生
+      arrows:
+      - from: subj
+        to: op
+      - from: op
+        to: res
   - type: image
     cut_reason: 【日常への引き戻し】街の雑踏（再掲）で「誰でもやってしまう」を示す
     from: 22
@@ -373,7 +385,7 @@ scenes:
   title: 美の経済的プレミアムと、フィルター時代の追試
   chapter_title: 美しさは、お金になるのか
   narration:
-  - text: 次は1994年の研究よ。テキサス大学の経済学者ダニエル・ハマーメッシュと、ミシガン州立大学のジェフ・ビドルが行ったの。
+  - text: 次は1994年よ。テキサス大学の経済学者ダニエル・ハマーメッシュと、ミシガン州立大学のジェフ・ビドルの研究なの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -456,6 +468,8 @@ scenes:
   readings:
   - surface: 一割
     reading: イチワリ
+  - surface: いい人
+    reading: イイヒト
   - surface: 偏り
     reading: カタヨリ
   - surface: 善い
@@ -474,7 +488,7 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
-    telop: 出典「Hamermesh & Biddle (1994) Beauty and the Labor Market. AER」
+    telop: Hamermesh & Biddle (1994) AER
   - type: image
     cut_reason: 【問い返し】紙幣を数える手元に替えて「給料が高いのだ？」へ
     from: 5
@@ -520,11 +534,11 @@ scenes:
     slot: 6
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【追試の導入】Gulati 2024 の美顔フィルター実験。スマホのカメラで撮影する手元（顔なし）
+    cut_reason: 【追試の導入】Gulati 2024 の美顔フィルター実験。自撮りする手元（顔はぼけて背景）
     from: 28
     slot: 7
-    credit: 'Photo: Pixabay'
-    telop: 出典「Gulati et al. (2024) Royal Society Open Science（ELLIS Alicante ほか・評価者2,748人）」
+    credit: 'Photo: Mizuno K / Pexels'
+    telop: Gulati ら 2024（ELLIS Alicante）
   - type: diagram
     cut_reason: '【対比: フィルター前後】写っているのは同じ人なのにで右列（フィルター後）を出す'
     from: 30
@@ -632,7 +646,7 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: Kerde Severin / Pexels'
-    telop: 出典「Di Gesto et al. (2021) Aesthetic Plastic Surgery（フィレンツェ大学・女性305人・相関研究）」
+    telop: Di Gesto ら 2021 フィレンツェ大学
   - type: diagram
     cut_reason: '【chain: 写真SNS→整形容認】4項目を「心まで忙しいのだ」までに全部出す。キャプションは関連であり順番の証明ではない旨'
     from: 6
@@ -667,17 +681,17 @@ scenes:
     from: 23
     slot: 2
     credit: 'Photo: Marc Chemla / Pexels'
-    telop: AAFPRS 会員調査 2021：医師の77% が「自撮りでよく見せたい」動機の患者増を回答
+    telop: AAFPRS 会員調査 2021：医師の77%
   - type: image
     cut_reason: 【数字】施術室の別カットに替えて77%の数値提示へ
     from: 25
     slot: 3
     credit: 'Photo: Anna Tarazevich / Pexels'
   - type: image
-    cut_reason: 【決め文】「写真が先で、顔が後」。スマホのカメラで撮影する手元（S4の再掲）で保持
+    cut_reason: 【決め文】「写真が先で、顔が後」。インスタをスクロールする手元で保持
     from: 27
     slot: 4
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Kaboompics.com / Pexels'
   - type: image
     cut_reason: 【切り替え】自撮りする手元の別カットに替えて推論パートへの予告へ
     from: 30
@@ -745,7 +759,7 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: cottonbro studio / Pexels'
-    telop: 推論①：美は努力や投資で手に入れてよい → 見た目を仕事の強みにする人への抵抗が弱まる
+    telop: 推論①：美は手に入れてよい→見た目で働く人を責めにくい
   - type: image
     cut_reason: 【問い返し】鏡の別カットに替えて「美しさを手に入れてもいい」の確認へ
     from: 4
@@ -761,7 +775,7 @@ scenes:
     from: 11
     slot: 4
     credit: 'Photo: Liza Summer / Pexels'
-    telop: 推論②：ハロー効果 → 顔と人柄が見える一人ひとりへの偏見が弱まる → 仕事への見方も変わる
+    telop: 推論②：ハロー効果→個人への偏見→仕事の見方も変わる
   - type: image
     cut_reason: 【限定】カメラを構える後ろ姿に替えて「まず一人ひとりへの偏見」の限定へ
     from: 14
@@ -846,7 +860,7 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: Alpha En / Pexels'
-    telop: 補強する変化①：個人が自分の名前で発信できる → 肩書きではなく一人の人として見られる
+    telop: 補強①：自分の名前で発信→一人の人として見られる
   - type: image
     cut_reason: 【当てはめ】無人のポッドキャストスタジオに替えてS1の当事者への接続
     from: 4
@@ -867,7 +881,7 @@ scenes:
     from: 13
     slot: 5
     credit: 'Photo: Tima Miroshnichenko / Pexels'
-    telop: 補強する変化②：自分の体と生き方は自分で決める（環境の批判とは両立）
+    telop: 補強②：体と生き方は自分で決める（環境批判と両立）
   - type: image
     cut_reason: 【合いの手】サインの別カットに替えて「外野が責めるな」の一言へ
     from: 15
@@ -1108,7 +1122,7 @@ scenes:
     from: 14
     slot: 1
     credit: 'Photo: Pixabay'
-    telop: 同じ力は、見た目で選別する圧力にもなる（採用・評価・SNSのコメント）
+    telop: 同じ力は見た目で選別する圧力にもなる（採用・評価・SNS）
   - type: image
     cut_reason: 【本題】天秤の別カットに替えて選別の圧力そのものの説明へ
     from: 17
@@ -1130,6 +1144,8 @@ scenes:
     slot: 5
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
   readings:
+  - surface: いい人
+    reading: イイヒト
   - surface: 賃金
     reading: チンギン
   - surface: 整形

@@ -469,13 +469,14 @@ def check_beat_durations(document: VideoDocument) -> DurationFindings:
 # ============================================================
 
 
+TELOP_MAX_LENGTH = 30  # 紙芝居の telop 帯は約 30 字で右端が切れる（2026-09-06 ルッキズム版の絵コンテで実測）
 @dataclass
 class TextSurface:
     scene_id: int
     location: str
     text: str
     max_length: int | None = None
-    """診断対象の文字数上限（sketch/narrative ラベルのみ設定。telop 等は None＝チェック5対象外）。"""
+    """診断対象の文字数上限（sketch/narrative ラベルと telop に設定。chapter_title 等は None＝チェック5対象外）。"""
 
 
 def _diagram_label_surfaces(scene_id: int, prefix: str, diagram: object) -> list[TextSurface]:
@@ -528,7 +529,7 @@ def collect_text_surfaces(document: VideoDocument) -> list[TextSurface]:
     surfaces: list[TextSurface] = []
     for scene in document.scenes:
         if scene.telop:
-            surfaces.append(TextSurface(scene.id, "scene.telop", scene.telop))
+            surfaces.append(TextSurface(scene.id, "scene.telop", scene.telop, TELOP_MAX_LENGTH))
         if scene.chapter_title:
             surfaces.append(TextSurface(scene.id, "chapter_title", scene.chapter_title))
         for item in scene.emphasis or []:
@@ -536,7 +537,7 @@ def collect_text_surfaces(document: VideoDocument) -> list[TextSurface]:
         for beat in scene.beats or []:
             if beat.type in ("image", "board") and beat.telop:
                 surfaces.append(
-                    TextSurface(scene.id, f"beats[{beat.type} from={beat.from_}].telop", beat.telop)
+                    TextSurface(scene.id, f"beats[{beat.type} from={beat.from_}].telop", beat.telop, TELOP_MAX_LENGTH)
                 )
 
         for diagram in scene.diagram_specs:
