@@ -7,8 +7,8 @@
 | v3 | kERO4v0oSLc | **削除済み（2026-09-05）**。「無力感」の読みが直っていなかった（辞書 priority 5 で負け） | 2026-09-05 | build/cynicism-kamishibai-v3。S4 テロップのダッシュは修正済み |
 | v4 | v-8HlXEvNOE | **削除済み（2026-09-05、v5 処理完了後）** | 2026-09-05 | build/cynicism-kamishibai-v4。v3 ＋ 「無力感→ムリョクカン」（VOICEVOX 辞書 priority 10、tts.py 修正）。ASR で読みを確認済み。概要欄 description-v3.txt（章 8 件）、サムネ C、字幕 ja |
 | v5 | l7c9CdMUNbk | **削除済み（2026-09-06、v7 処理完了後）** | 2026-09-05 | build/cynicism-kamishibai-v5。ユーザー編集（S1 口語化・S4 突き上げ／行動）、S3 前振り・S4 反論→質問（ユーザー指摘）、ジジェク削除（判断 B）、結び「次の投稿に行く前に止まれた」、放射図解の 3 項目目を 19 世紀の語義に。概要欄 description-v4.txt（章 8 件）、サムネ C、字幕 ja |
-| v7 | 3vUa1L0lUss | 非公開（31:22）→ v8 処理完了後に削除 | 2026-09-06 | build/cynicism-kamishibai-v7。試写指摘の反映（なんのためか・大王の前振り・本文を見てなかった・「嗤」全活用形の読み・結びを決め文で・ジジェク削除）、sketch 図解 17 か所（拡大修正 05e29b2 済み）、chain 2 か所を置換、末尾に endcard.mp4 を結合（--end-card）。v6 は sketch が小さかったため未アップロード。概要欄 description-v5.txt、サムネ C、字幕 ja |
-| v8 | 2Q4FkEjCy6w | **非公開・試写用（26:34、挨拶クリップ込み）** | 2026-09-06 | build/cynicism-kamishibai-v8。タイトル「なぜ人は冷笑してしまうのか」（副題なし、確定）。ディオゲネスの逸話を削除（S3）、語源と反転の短縮版、婉曲→直接（請求書→代償、安い→楽、嗤う→笑う）、読み 8 語追加（audio_query 突合）。概要欄 description-v6.txt（章 8 件）、サムネ C、字幕 ja |
+| v7 | 3vUa1L0lUss | **削除済み（2026-09-06、v8 処理完了後）** | 2026-09-06 | build/cynicism-kamishibai-v7。試写指摘の反映（なんのためか・大王の前振り・本文を見てなかった・「嗤」全活用形の読み・結びを決め文で・ジジェク削除）、sketch 図解 17 か所（拡大修正 05e29b2 済み）、chain 2 か所を置換、末尾に endcard.mp4 を結合（--end-card）。v6 は sketch が小さかったため未アップロード。概要欄 description-v5.txt、サムネ C、字幕 ja |
+| v8 | 2Q4FkEjCy6w | **非公開・処理完了・試写用（26:34、挨拶クリップ込み）** | 2026-09-06 | build/cynicism-kamishibai-v8。タイトル「なぜ人は冷笑してしまうのか」（副題なし、確定）。ディオゲネスの逸話を削除（S3）、語源と反転の短縮版、婉曲→直接（請求書→代償、安い→楽、嗤う→笑う）、読み 8 語追加（audio_query 突合）。概要欄 description-v6.txt（章 8 件）、サムネ C、字幕 ja |
 
 旧版削除ルール: 修正版をアップロードして処理完了・再生確認後に旧 ID を削除し、この表に「削除済み」と記す（docs/decisions.md 2026-09-01）。
 
