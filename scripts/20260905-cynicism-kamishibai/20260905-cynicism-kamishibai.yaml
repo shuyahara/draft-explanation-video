@@ -83,9 +83,11 @@ scenes:
     from: 6
     slot: 2
     credit: 'Photo: RDNE Stock project / Pexels'
-  - type: board
-    cut_reason: 【定義】写真をはずし、黒板に冷笑の定義を書く
+  - type: image
+    cut_reason: 【定義】暗がりで光る画面に指を置く手。定義のテロップを重ねる
     from: 17
+    slot: 3
+    credit: 'Photo: Towfiqu barbhuiya / Pexels'
     telop: 冷笑＝本気を、一段高いところから鼻で笑って済ませる態度
 - id: 2
   title: 問いへの変換
@@ -133,17 +135,21 @@ scenes:
   - surface: 冷笑
     reading: レイショウ
   beats:
-  - type: board
-    cut_reason: 【冷笑系】写真なし。二人だけで言葉の来歴に入る
+  - type: image
+    cut_reason: 【冷笑系】SNS を見る手元。言葉の来歴に入る
     from: 1
+    slot: 2
+    credit: 'Photo: AlphaTradeZone / Pexels'
   - type: image
     cut_reason: 【古代ギリシャ】アテナイの遺跡へ切り替え
     from: 5
     slot: 1
     credit: 'Photo: Uiliam Nörnberg / Pexels'
-  - type: board
-    cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
+  - type: image
+    cut_reason: 【問いの提示】遺跡の写真を保持し、黒板に問いを重ねる
     from: 11
+    slot: 3
+    credit: 'Photo: Uiliam Nörnberg / Pexels'
     telop: なぜ人は、冷笑してしまうのか
 - id: 3
   title: 語源と反転（短縮版）
@@ -372,9 +378,11 @@ scenes:
         to: m
       - from: b
         to: m
-  - type: board
-    cut_reason: 【決め文】黒板に一つ目
+  - type: image
+    cut_reason: 【決め文】寄付箱の写真に戻し、一つ目のテロップ
     from: 24
+    slot: 2
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: 楽な理由①：考えなくて済む
   readings:
   - surface: 敵同士
@@ -472,9 +480,11 @@ scenes:
       arrows:
       - from: q
         to: a
-  - type: board
-    cut_reason: 【決め文】第二の安さ
+  - type: image
+    cut_reason: 【決め文】腕組みの写真に戻し、二つ目のテロップ
     from: 16
+    slot: 2
+    credit: 'Photo: cottonbro studio / Pexels'
     telop: 楽な理由②：何もしなくても賢い側に立てる
   - type: diagram
     cut_reason: '【言葉: 見える／本当か】次章への引きを 2 語で'
@@ -607,20 +617,44 @@ scenes:
         text: 冷笑は楽
         at: 1
         after: 自分を守れること
-  - type: board
-    cut_reason: 【守っているものは三つ】収束図をはずし、板に問いだけ
+  - type: diagram
+    cut_reason: '【言葉: 何を守っているのか】盾のピクトグラムに問いを添える'
     from: 7
-    telop: 冷笑が守っているものは、三つ
+    diagram:
+      type: sketch
+      rows:
+      - - id: shield
+          at: 7
+          icon: shield
+          text: 何から守っている？
+          after: 守ろうとしているのね
+      caption:
+        text: 守っているものは、三つ
+        at: 7
   - type: image
     cut_reason: 【日本の若者】選挙ポスターの前を歩く人々
     from: 13
     slot: 1
     credit: 'Photo: Israyosoy S. / Pexels'
     telop: 「自分で国や社会を変えられる」日本 18.3%（9カ国中最下位）
-  - type: board
-    cut_reason: 【前提】写真をはずし、前提を黒板に
+  - type: diagram
+    cut_reason: '【言葉: 前提→見え方】どうせ変わらない → 変える人が愚かに見える'
     from: 20
-    telop: 「どうせ変わらない」→ 変えようとする人が愚か者に見える
+    diagram:
+      type: sketch
+      rows:
+      - - id: premise
+          at: 20
+          icon: sentiment_neutral
+          text: どうせ変わらない
+        - id: view
+          at: 20
+          icon: visibility
+          text: 変える人が愚かに見える
+          after: 見えてしまうのよ
+      arrows:
+      - from: premise
+        to: view
   - type: image
     cut_reason: 【酸っぱい葡萄】ナレーション自身の比喩を PD 挿絵で
     from: 23
@@ -829,9 +863,25 @@ scenes:
     from: 21
     slot: 3
     credit: 'Photo: MART PRODUCTION / Pexels'
-  - type: board
-    cut_reason: 【決め文】写真をはずし、二人だけで
+  - type: diagram
+    cut_reason: '【対比: 嫌われるのは誰か】優れた人だから、ではなく、自分を責めそうな人'
     from: 28
+    diagram:
+      type: sketch
+      rows:
+      - - id: sup
+          at: 28
+          icon: workspace_premium
+          text: 優れた人だから？
+        - id: blame
+          at: 29
+          icon: psychology_alt
+          text: 自分を責めそうな人
+          after: 感じさせる人
+      highlight:
+        ids:
+        - blame
+        at: 29
   readings:
   - surface: 嫉妬
     reading: シット
@@ -936,9 +986,6 @@ scenes:
     slot: 3
     credit: 'Photo: Susanne Jutzeler, suju-foto / Pexels'
     telop: 高く伸びた芥子は刈り取られる（Tall Poppy）
-  - type: board
-    cut_reason: 【決め文】写真をはずし、棘の出どころを聞かせる
-    from: 15
   - type: diagram
     cut_reason: '【対比: 嫉妬か憤りか】予測したのは憤り。ずんだもんの復唱で憤りが点灯'
     from: 21
@@ -1032,10 +1079,31 @@ scenes:
     expression: smile
     pause_after: 1.2
   beats:
-  - type: board
-    cut_reason: 【一枚の地図】写真なし。フィスクの二軸を言葉で導入
+  - type: image
+    cut_reason: 【一枚の地図】集団の中の一人（人が他の集団をどう見るか）
     from: 1
+    slot: 2
+    credit: 'Photo: Hayk Paytyan / Pexels'
     telop: Fiske, Cuddy, Glick & Xu (2002) JPSP
+  - type: diagram
+    cut_reason: '【言葉: 二つの軸】温かさ／有能さ のピクトグラム'
+    from: 4
+    diagram:
+      type: sketch
+      rows:
+      - - id: warm
+          at: 4
+          icon: favorite
+          text: 温かさ
+          after: 温かさ
+        - id: comp
+          at: 4
+          icon: workspace_premium
+          text: 有能さ
+          after: 有能さ
+      caption:
+        text: Fiske ら 2002 の二つの軸
+        at: 4
   - type: diagram
     cut_reason: '【対比: 二軸の二つの組】有能で冷たい→妬み／無能で冷たい→軽蔑'
     from: 8
@@ -1275,18 +1343,46 @@ scenes:
       caption:
         text: 冷笑の代償
         at: 29
-  - type: board
-    cut_reason: 【防衛の成熟度】黒板に二つの防衛
+  - type: diagram
+    cut_reason: '【対比: 成熟した防衛と未成熟な防衛】ユーモア／受動攻撃'
     from: 30
-    telop: ユーモア＝成熟した防衛／受動攻撃＝未成熟な防衛（Vaillant）
+    diagram:
+      type: sketch
+      rows:
+      - - id: humor
+          at: 31
+          icon: mood
+          text: ユーモア＝成熟
+        - id: passive
+          at: 32
+          icon: sentiment_very_dissatisfied
+          text: 受動攻撃＝未成熟
+          after: 未成熟な側に置いたわ
+      caption:
+        text: 「冗談だった」は未成熟の側
+        at: 33
   - type: board
     cut_reason: 【決め文1】
     from: 36
     telop: 冷笑は楽
-  - type: board
-    cut_reason: 【決め文2】
+  - type: diagram
+    cut_reason: '【言葉: 楽→代償】決め文をピクトグラムで受ける'
     from: 38
-    telop: 楽な分だけ、後で代償を払う
+    diagram:
+      type: sketch
+      rows:
+      - - id: easy
+          at: 38
+          icon: sentiment_satisfied
+          text: 楽
+        - id: cost
+          at: 38
+          icon: payments
+          text: 後で代償を払う
+          after: 代償を払う
+      arrows:
+      - from: easy
+        to: cost
   readings:
   - surface: 同じ
     reading: オナジ
@@ -1385,9 +1481,11 @@ scenes:
     slot: 1
     credit: 'Photo: Caleb Oquendo / Pexels'
     telop: Cappella & Jamieson (1997) Spiral of Cynicism
-  - type: board
-    cut_reason: 【メタ分析】写真をはずし、数字を黒板に
+  - type: image
+    cut_reason: 【メタ分析】スタジオの写真を保持し、数字をテロップに
     from: 7
+    slot: 4
+    credit: 'Photo: Caleb Oquendo / Pexels'
     telop: 戦略報道 → シニシズム（メタ分析 2021・32研究・約3万9000人）
   - type: image
     cut_reason: 【攻撃投稿と怒り】スマホを握る手元
@@ -1427,9 +1525,11 @@ scenes:
     slot: 3
     credit: 'Photo: Guohua Song / Pexels'
     telop: 政府への信頼 24%（OECD 2021）／社会を変えられる 18.3%
-  - type: board
-    cut_reason: 【決め文】写真をはずす
+  - type: image
+    cut_reason: 【決め文】国会の写真を保持し、決め文をテロップに
     from: 25
+    slot: 5
+    credit: 'Photo: Guohua Song / Pexels'
     telop: 日本は「不信の国」ではなく「無力感の国」
   - type: diagram
     cut_reason: '【年表: 半世紀の系譜】1972 連合赤軍事件 → 三無主義 → 2005 皮肉な共同体'
@@ -1658,9 +1758,27 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: MART PRODUCTION / Pexels'
-  - type: board
-    cut_reason: 【削られるもの】写真をはずし、二人だけで
-    from: 10
+  - type: diagram
+    cut_reason: '【言葉: 削られる三つの力】信じる／つながり直す／動き出す'
+    from: 11
+    diagram:
+      type: sketch
+      rows:
+      - - id: trust
+          at: 11
+          icon: favorite
+          text: 信じる力
+          after: 信じる力
+        - id: link
+          at: 11
+          icon: link
+          text: つながり直す力
+          after: つながり直す力
+        - id: move
+          at: 11
+          icon: directions_run
+          text: 動き出す力
+          after: 動き出す力
   - type: image
     cut_reason: 【あの投稿を読み直す】返信欄を見る手元（再掲）
     from: 14
