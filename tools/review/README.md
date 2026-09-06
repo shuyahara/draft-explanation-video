@@ -11,6 +11,21 @@
 いずれのツールも**指摘を生成するだけ**で、台本・YAML の文言は一切編集しない。採否判断と反映は
 人／Claude が行う（`DRAFT/CLAUDE.md` の方針どおり）。
 
+## 対話台本（紙芝居版）のレビュー一式
+
+対話台本（めたん×ずんだもん）は、上記に加えて対話特有の観点（セリフの自然さ・章のつなぎ・間の
+設計）を持つ。台本執筆〜レンダまでの間、次の順序で回す。
+
+1. `review_script.py`（7観点。ナレーションの分かりやすさ）
+2. `review_holistic.py`（総合。面白さ・視聴維持・見やすさ・タイトル）
+3. `review_clarity.py`（視聴者の理解と主題への適合。理解度・説明の抜け・主題への適合・直接表現）
+4. `review_dialogue.py`（セリフ。自然さ・キャラらしさ・テンポ・表情タグ・面白さ）
+5. `review_transitions.py`（章のつなぎ。つなぎの自然さ・予告の具体性・章カードとの整合・反復）
+6. `review_pauses.py`（間・息継ぎ。シーン YAML の `pause_after` が対象なので、YAML 生成後に回す）
+7. `../preflight.py`（レンダ前の機械チェック一括。読みの突合・長いキュー・板だけの区間・要確認
+   文字・ラベル長・素材ファイルの存在）
+8. レンダ後に `review_video.py`（映像）と `review_reading.py`（読み上げ・ASR）
+
 ## 前提
 
 - Python は script-to-video の venv を使う（Bash の `python` は Microsoft Store のスタブで動かない）。
@@ -26,6 +41,8 @@
 - `review_video.py` は script-to-video のライブラリ（`src/script_to_video`）と ffmpeg を使う。
 - `review_reading.py` は Codex CLI を使わない（GPTを呼ばないローカルASRのみ）。必要な追加
   パッケージは `faster-whisper`・`pykakasi`（後述）。
+- `../preflight.py` も Codex CLI を使わない。必要な追加パッケージは `fugashi`・`unidic-lite`
+  （形態素解析。無ければ `pykakasi` にフォールバック。後述）。
 
 ## review_script.py（台本レビュー）
 
@@ -88,6 +105,117 @@ PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" 
 | オプション | 既定 | 説明 |
 |---|---|---|
 | `--out` | `references/{実行日}-{フォルダ名}-holistic.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_clarity.py（視聴者の理解・主題適合レビュー）
+
+台本 Markdown（対話台本・ナレーション台本の両方に対応）を、**「視聴者がその一文を聞いて理解
+できるか」「その段落・逸話が主題にどう寄与するか」**の観点でGPTにレビューさせる
+（2026-09-06 追加）。冷笑ずんだもん版で、既存の5種のレビュー（`review_script.py` の7観点・
+`review_holistic.py` の総合・`review_dialogue.py` のセリフ・`review_transitions.py` の
+つなぎ・`review_pauses.py` の間）を全部通した台本でも、ユーザーの試写で「意味が取れない
+一文」「説明の抜け」「主題に寄与しない逸話」「婉曲・比喩の決め文」「論と噛み合わない具体例」
+の指摘が出て手戻りになったことへの対応。既存レビューは「表現として自然か」を見ており、
+「視聴者が理解できるか」「主題に寄与するか」は見ていなかった隙間を埋める。
+
+対話台本（`**話者**（表情）: 本文` 行がある）と一人語りのナレーション台本（`**ナレーション**`
+ブロックのみ）の両方を自動判別して対応する。台本 md のシーン抽出・codex exec 呼び出しは
+`review_dialogue.py` / `review_script.py` の実装を import して再利用している。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_clarity.py scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.md
+```
+
+依頼する4観点:
+1. 理解度（一文ごと。初見の一般視聴者が音声で一度聞いただけで意味を取れるか。指示語の曖昧さ・
+   引用の意味の閉じなさを含む）
+2. 説明の抜け（主張間の飛躍。分類・因果の理由が示されていない箇所）
+3. 主題への適合（タイトルの問いへの各シーンの寄与を判定し、寄与が薄い・無い段落や逸話を削除
+   候補として文字数の目安つきで列挙。冒頭の具体例と後半の論が同じ型の対象かも判定）
+4. 直接表現（比喩・婉曲・対句の決め文を直接表現に言い直した案。比喩の方が分かりやすいと判断
+   した場合はその旨を明記）
+
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-clarity-review.md`（`--out` で
+  変更可）。
+- 対話台本・ナレーション台本のどちらも1回の codex exec 呼び出しで全シーンをまとめて渡す。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--out` | `references/{実行日}-{フォルダ名}-clarity-review.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_transitions.py（章のつなぎレビュー）
+
+対話台本 Markdown の各シーンの末尾3発話・次シーンの冒頭3発話・次シーンの章カード
+（`- 章カード: 「…」`）の有無を抽出し、**つなぎの自然さ・予告の具体性・章カードとの整合・
+反復**の観点でGPTにレビューさせる（2026-09-05 追加）。先行して `references/20260905-dopagaki-kamishibai-transitions-review.md`
+でアドホックに実行したカスタムプロンプトをツール化したもの。codex exe の解決・レート制限
+リトライ付き codex exec 呼び出し・台本 md のシーン抽出まわりの正規表現は `review_dialogue.py` /
+`review_script.py` の実装を import して再利用している（キャラクター設定は `review_dialogue.py`
+の版が特定動画向けの記述を含むため流用せず、このツール専用の汎用版を定義している）。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_transitions.py scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.md
+```
+
+依頼する観点:
+(a) つなぎの自然さ (b) 予告の具体性 (c) 章カードとの整合 (d) 境界ごとの判定（可・要修正）
+(e) 反復チェック（「次は〜」等の予告構文が3回以上同じ型で連続・多発していないか）
+
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-transitions-review.md`
+  （`--out` で変更可）。
+- 全境界（シーン数-1）を1回の codex exec 呼び出しにまとめて渡す。
+- 対話台本 md の書式（`## シーンN: タイトル` ＋ `**話者**（表情）: 本文`）は `review_dialogue.py`
+  と同じ前提。`## 出典リスト` 以降は抽出対象から除外する。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--out` | `references/{実行日}-{フォルダ名}-transitions-review.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_pauses.py（間・息継ぎレビュー）
+
+シーン YAML（`scenes[].narration[]`）の `text` / `speaker` / `pause_after` を抽出し、
+**間が足りない／長すぎる箇所・決め文の後の保持・話者交代の間・章転換・息継ぎ位置（文の分割）**
+の観点でGPTにレビューさせる（2026-09-05 追加）。先行して
+`references/20260905-dopagaki-kamishibai-pause-review.md` でアドホックに実行したカスタム
+プロンプトをツール化したもの。codex exe の解決・レート制限リトライ付き codex exec 呼び出しは
+`review_script.py` の実装を import して再利用している。
+
+台本 md ではなく**シーン YAML** が入力（`pause_after` は YAML にしかないため）。台本を対話
+形式に組んだ後、`tools/kamishibai_md_to_yaml.py` で YAML を生成してから実行する。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_pauses.py scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.yaml
+```
+
+- `--tempo`（既定 `1.1`）でプロンプトに提示する `pause_after` の基準値が変わる
+  （`tools/kamishibai_md_to_yaml.py` の `PAUSE_PRESETS` と同じ値: 1.1倍のとき話者交代0.45秒・
+  文境界0.35秒・章転換1.2秒。決め文の目安2.0〜2.5秒は話速に依らず本作の設計判断として
+  提示する）。
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-pause-review.md`（`--out` で
+  変更可）。
+- 全シーンの `pause_after` を1回の codex exec 呼び出しにまとめて渡すため出力が長くなりやすい。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--tempo` | `1.1` | 想定話速（`1.0`/`1.1`）。プロンプトに提示する `pause_after` の基準値が変わる |
+| `--out` | `references/{実行日}-{フォルダ名}-pause-review.md` | 出力先パス |
 | `--timeout` | 900秒 | codex exec のタイムアウト |
 | `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
 
@@ -249,6 +377,64 @@ PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" 
 | `--device` / `--compute-type` | `cpu` / `int8` | ASR実行環境 |
 | `--threshold` | `0.85` | かな一致率の閾値 |
 | `--scenes` | 全シーン | カンマ区切りのシーン番号フィルタ |
+
+## ../preflight.py（レンダ前の機械チェック一括）
+
+紙芝居モード（めたん×ずんだもん）のシーン YAML を、**レンダ前**に一括で検査するツール
+（`tools/preflight.py`。GPT・Codex は使わない）。冷笑ずんだもん版（2026-09-05〜06）の試写
+10回のうち4回が機械的に検出できる不具合（誤読・板だけの区間の間延び・フォントで描けない
+文字）だったことを受けて追加した（2026-09-06）。`review_reading.py` はレンダ済み音声を ASR で
+検証する事後チェックだが、こちらは VOICEVOX の `audio_query` を直接叩くため ASR を通さず
+決定的（レンダ自体が不要）。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/preflight.py ^
+    scripts/20260905-cynicism-kamishibai/20260905-cynicism-kamishibai.yaml ^
+    --assets-dir C:/Users/shuya/Projects/assets-kamishibai/render-assets-cynicism ^
+    --out references/20260906-cynicism-kamishibai-preflight.md
+```
+
+6項目を1コマンドでまとめて検出し、Markdown レポートを標準出力＋（`--out` 指定時）ファイルへ
+出す。該当があれば終了コード1。
+
+1. **読みの突合**（最重要）: narration の各セグメントを VOICEVOX の `/audio_query` に投げ、
+   返る実際の読み（kana）を、**fugashi（MeCab + unidic-lite。形態素解析）**によるテキストの
+   あるべき読みと比較する（2026-09-06、pykakasi から差し替え。pykakasi は形態素解析器では
+   なく漢字→かな変換ツールに過ぎず、「力→りき」「断った→た」「棘→なつめ」「優れ→まさ」の
+   ような複合語・活用語の読み取り違いが差分の大半を占め実運用で埋もれていたため）。fugashi
+   が import できない環境（未インストール等）でのみ pykakasi にフォールバックする。差分候補を
+   `VV:実際の読み/辞書:あるべき読み` の形式で列挙する。事前に YAML の `readings` を VOICEVOX の
+   ユーザー辞書へ登録してから比較する（レンダ時と同じ状態で検証するため）。数字・英字略語
+   （SNS・OECD 等。fugashi・pykakasi のどちらもかな化できない）は既知ノイズとして除外する
+   （助詞「は」「を」の表記と発音の違いは fugashi の発音〔`pron`〕がそのまま解決するため
+   除外不要になった。pykakasi フォールバック時のみ「人」のひと／にん／じん のゆれを除外する）。
+   それでも fugashi 自身の誤読（辞書に無い複合語の読み違え等。例:「一段上」→ジョウ。実際は
+   ウエ）や同音異字は残るため、指摘の採否は人／Claude が目視で判断する（`review_reading.py`
+   と同じ位置付け）。`--skip-tts` でこの項目だけ飛ばせる（VOICEVOX未起動の環境向け）。
+2. **長いキュー**: 字幕キュー（`。！？` 区切りの1文）が50字を超えるもの（字幕は2行までで
+   末尾が切れる）。
+3. **板だけの区間**: `board` ビート（黒板・人形だけの区間）の推定尺が10秒を超えるものを列挙
+   （参考として `image`/`diagram` の45秒超も別枠で列挙）。
+4. **テロップ・図解ラベルの文字**: telop・図解ラベルに en dash（–）等、紙芝居の黒板テロップ
+   フォント（UD デジタル教科書体系）で描けない可能性のある文字が無いか（2026-09 に
+   「1983–84」の en dash が □ になった実例あり）。矢印「→」・丸数字「①」等は既に複数の
+   公開動画で常用されレンダ実績があるため対象外にしている。
+5. **ラベル長**: sketch/narrative の要素ラベルが仕様上限を超えるもの（`validate` でも弾かれる
+   が、まとめて見たいという要望に応えるもの）。
+6. **写真ファイルの存在確認**: `--assets-dir` 指定時、`image` ビートの採用素材
+   （`scene_NN_beat{slot}.*`）が全部揃っているか。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--assets-dir` | なし | 採用素材ディレクトリ（項目6用。省略時は項目6をスキップ） |
+| `--out` | なし（標準出力のみ） | Markdown レポートの保存先 |
+| `--skip-tts` | オフ | 項目1（VOICEVOX突合）を飛ばす |
+| `--voicevox-url` | `http://127.0.0.1:50021` | VOICEVOX ENGINE の base URL |
+| `--selftest` | — | 軽量な自己テスト（長いキュー検出・ダッシュ検出・助詞変換・数字/英字マスク）を実行して終了する |
 
 ## review_short.py（ショート映像レビュー）
 
