@@ -61,3 +61,17 @@
 - `university-lab`・`judging-eyes`・`bar-counter`（各3枚、manifest に掲載）は、台本の「画面」欄にこれらを使う場面が明記されていないため未使用。
 - `portrait-photos-2`（顔がやや大きく写る）は manifest が「ディオンの実験＝写真で人物を判断する場面の直接描写」として明示的に許容している例外に該当するため、S8-2 の別カットとして採用した。
 - v1 で発生していた「20秒超の一枚絵警告を、同じ写真のまま beat 数だけ増やして解消しようとしていた」問題は、上表のとおり各カテゴリ内の別候補へ差し替えることで解消した（シーン内で同じ写真が連続する beat は無い）。telop 付きの beat（出典表示・推論・反証・補強する変化・注目する変化など、台本 md の「画面」欄に明記されたテロップ）は差し替えずそのまま維持した。
+
+## v3 での変更点（2026-09-06 夜、レンダ v1 の映像レビュー反映）
+読める文字（「Cosmetic Dentistry」「SIGNATURE」）が写る写真と、場面に合わない写真を 10 枚差し替えた（`apply_beats.py` の該当スロットと `render-assets-lookism/` を更新）。
+
+| ビート | 旧 | 新 | 理由 |
+|---|---|---|---|
+| S5-2 | cosmetic-clinic-1（歯科の内装、文字が読める） | cosmetic-clinic-3（美容の施術室） | 読める文字・歯科に見える |
+| S5-3 | cosmetic-clinic-2（マッサージ台） | mirror-selfcare-2（鏡の前で身支度） | 「自撮りでよく見せるため」に合わせる |
+| S7-5〜9 | signing-contract-1/2/3（契約書。文字が読める） | mirror-selfcare-3 / crowd-city-1 / job-interview-2 / instagram-scroll-2 / phone-video-2 | 読める文字。自己決定→身支度、増えた人→雑踏、働く環境→面接室、SNS→SNS を見る手元、次章への問い→動画を見る手元 |
+| S8-3 | cosmetic-clinic-1 | cosmetic-clinic-3 | 同上 |
+| S8-4 | cosmetic-clinic-3 | mirror-selfcare-1 | 連続重複の回避。「整形は自分の顔の話」 |
+| S9-4 | scale-balance-2（天秤の再掲） | phone-video-2（動画を見る手元） | 「あの動画、また見るのだ」の回帰 |
+
+補足: S2-2 は phone-video-3（Netflix 等のロゴが読める）→ instagram-scroll-2、S4-7・S5-4 は beauty-filter-2（カメラ UI の文字が読める）→ beauty-filter-1 / instagram-scroll-3 に、絵コンテ確認時（v2）に差し替え済み。`apply_beats.py` はファイルをコピーしないので、差し替え時は `render-assets-lookism/` へ手でコピーする。
