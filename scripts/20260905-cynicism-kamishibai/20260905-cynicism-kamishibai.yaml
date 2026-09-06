@@ -1,5 +1,5 @@
 video:
-  title: なぜ人は冷笑してしまうのか——犬は権力に吠え、冷笑は本気に吠える（ずんだもん版）
+  title: なぜ人は冷笑してしまうのか——楽で、賢く見えて、自分を守れる。その代償（ずんだもん版）
   kamishibai:
     puppet_sink_ratio: 0.12
   characters:
@@ -70,6 +70,8 @@ scenes:
   readings:
   - surface: 冷笑
     reading: レイショウ
+  - surface: 同じ
+    reading: オナジ
   beats:
   - type: image
     cut_reason: 【昼の電車】肩越しに見るスマホの画面。冒頭の場面をそのまま
@@ -97,23 +99,23 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 英語では、こういう態度をシニシズムと呼ぶの。この言葉は、およそ2400年前、古代ギリシャにいた哲学者たちにつながっているのよ。
+  - text: 英語では、こういう態度をシニシズムと呼ぶの。言葉の由来は、およそ2400年前の古代ギリシャまでさかのぼるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 2400年前！ 哲学者が、冷笑の元祖なのだ？
+  - text: 2400年前！ そんな昔から、人は冷笑してたのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: そう思うでしょう？ ところが彼らは、今の冷笑とは、まるで反対のことをしていたの。
+  - text: そこが面白いところで、昔の冷笑と今の冷笑は、笑う相手が反対なのよ。
     speaker: めたん
     expression: smile
     pause_after: 0.9
-  - text: 反対？ 反対の冷笑って、何なのだ……。
+  - text: 反対？ どういうことなのだ……。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: なぜ人は、冷笑をしてしまうのか。古代の哲学者の話と、現代の心理学の実験を見比べながら、ずんだもんが笑った理由を探してみましょうか。
+  - text: なぜ人は、冷笑をしてしまうのか。言葉の由来を短く確かめてから、現代の心理学の実験で、ずんだもんが笑った理由を探してみましょう。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -121,7 +123,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: ええ。最後には、ずんだもんがあの投稿を見て、冷笑してしまった理由がわかるわよ。じゃあ、まずは2400年前のアテナイへ行きましょう。
+  - text: ええ。最後には、ずんだもんがあの投稿を見て、冷笑してしまった理由がわかるわよ。
     speaker: めたん
     expression: smile
     pause_after: 1.2
@@ -141,87 +143,59 @@ scenes:
     credit: 'Photo: Uiliam Nörnberg / Pexels'
   - type: board
     cut_reason: 【問いの提示】写真をはずし、黒板に問いだけ
-    from: 12
+    from: 11
     telop: なぜ人は、冷笑してしまうのか
 - id: 3
-  title: 古代①（ディオゲネスの逸話）
-  chapter_title: 犬は、何に吠えていたのか
+  title: 語源と反転（短縮版）
+  chapter_title: 昔の冷笑と今の冷笑は、何が違うのか
   narration:
-  - text: 紀元前4世紀、アテナイ。真昼の市場に、火のついたランプを掲げて歩く男がいたの。
+  - text: シニシズムの語源は、ギリシャ語で「犬」を意味するキュオーンよ。紀元前4世紀、アテナイにいたディオゲネスという哲学者と、その仲間たちが、「犬のような者たち」と呼ばれたの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 真昼にランプ？ 明るいのに、何をしてるのだ？
+  - text: 哲学者が、犬？ 悪口なのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 周りの人も同じことを聞いたのよ。男はこう答えたの。「人間を探している」。
+  - text: 悪口だったのを、本人たちが誇りにしたのよ。彼らは家も財産も持たず、富や権力や、「みんなこうするもの」という慣習を笑った。人はもっと少ないもので生きられる、と、暮らしそのもので示した人たちよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 市場に人はいっぱいいるのに……。まともな「人間」を探してる、ってことなのだ？
+  - text: つまり昔のシニシズムは、力のない側が、力のある側を笑うものだったのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そういうこと。男の名は、ディオゲネスよ。家を持たず、大きな素焼きの甕の中で寝起きしていたそうなの。夏には熱い砂の上を転がって、体も鍛えたそうよ。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 甕の中で寝てたのだ！？ 何のために、そんな暮らしをしてたのだ？
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: なんのためかは、あとで分かるわ。その前に、彼がどれだけ権力に興味がなかったか、よく分かる話をひとつ。ある日、アレクサンドロス大王が彼の前に立って、何か望みはないかと尋ねたの。
+  - text: そう。下からの突き上げだったの。ところが、19世紀半ばに、英語のシニックは「人の動機を疑って鼻で笑う性格」を指す言葉に変わったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 大王が直々に！ 何でも叶えてもらえるチャンスなのだ！
-    speaker: ずんだもん
-    expression: delighted
-    pause_after: 0.45
-  - text: ディオゲネスの答えは、こうよ。「そこをどいてくれ、日陰になる」。
-    speaker: めたん
-    expression: smile
-    pause_after: 1.0
-  - text: 大王に、どいてくれって言ったのだ！？ 怖いもの知らずなのだ……。
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: 人々は彼を、「犬」と呼んだの。でも本人は、その名を誇りにしたわ。「くれる人には尾を振り、くれない人には吠え、悪党には噛みつく犬だから」ってね。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 犬って、悪口のはずなのに、自分で名乗っちゃったのだ。
+  - text: ……でも、僕があの俳優を笑ったのも、下から上なのだ？ 相手は有名人で、僕はただのずんだもんなのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: もうひとつ、神託の話があるわ。若い頃、彼はデルフォイの神殿で、神のお告げとして「通貨を変造せよ」と告げられたそうよ。面白いのは、ギリシャ語では「通貨」が「慣習」の意味も持っていたことなの。
+  - text: いい質問ね。向きだけ見れば、たしかに下から上に見えるわ。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、行動の部分よ。
     speaker: めたん
     expression: explain
-    pause_after: 0.45
-  - text: つまり、「世の中の慣習を作り変えよ」って言われたのだ？
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: そう、彼はそう受け取ったのよ。それが、彼の一生の使命になったの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.6
-  - text: ただし、ここまでの話は、紀元3世紀の伝記作家、ディオゲネス・ラエルティオスが残した逸話よ。どこまで事実かは、分からないわ。
-    speaker: めたん
-    expression: serious
     pause_after: 0.35
-  - text: でも、「犬」という呼び名がシニシズムの語源になったことは、確かよ。
+  - text: 昔のシニシズムは、富や権力を持っている人々を笑った。今の冷笑は、自分から行動する人々を笑うの。
     speaker: めたん
     expression: serious
-    pause_after: 1.2
-  - text: 犬が、シニシズムの語源！？ でも、甕で寝てる男と、スマホの返信欄が、どうつながるのだ？
+    pause_after: 0.5
+  - text: 昔の冷笑と今の冷笑では、笑う対象が違うのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.45
-  - text: そこがこの話のいちばんの急所よ。言葉の意味が、途中で、ひっくり返ったの。その反転を見ていきましょう。
+  - text: 笑う相手が、権力から、本気へ。この反転が、今日の話の土台よ。
     speaker: めたん
-    expression: smile
+    expression: serious
+    pause_after: 2.0
+  - text: でも、なんでなのだ？ なんで人は今、本気を笑うようになったのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 手がかりは、意外なところにあるの。冷笑って、びっくりするほど楽なのよ。
+    speaker: めたん
+    expression: serious
     pause_after: 1.2
   readings:
   - surface: 犬
@@ -230,236 +204,62 @@ scenes:
     reading: ディオゲネス
   - surface: アテナイ
     reading: アテナイ
-  - surface: ラエルティオス
-    reading: ラエルティオス
-  - surface: 甕
-    reading: カメ
-  - surface: 日陰
-    reading: ヒカゲ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: キュオーン
+    reading: キュオーン
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【ランプの男】ジェローム「ディオゲネス」。ランプ・甕・犬が一枚に
-    from: 1
-    slot: 1
-    credit: Jean-Léon Gérôme, Diogenes (1860), Walters Art Museum / Public Domain
-    telop: ディオゲネス・ラエルティオス『ギリシア哲学者列伝』第6巻
-  - type: image
-    cut_reason: 【火のついたランプ】素焼きのランプの実写
-    from: 3
-    slot: 2
-    credit: 'Photo: Ravi Kant / Pexels'
-  - type: image
-    cut_reason: 【素焼きの甕】大きな貯蔵用の甕
-    from: 14
-    slot: 3
-    credit: 'Photo: Jan van der Wolf / Pexels'
-  - type: image
-    cut_reason: 【大王】アレクサンドロス大王の彫像
-    from: 18
-    slot: 4
-    credit: 'Photo: Pixabay'
-  - type: image
-    cut_reason: 【犬】屋外の犬
-    from: 25
-    slot: 5
-    credit: 'Photo: Trần Chính / Pexels'
-  - type: image
-    cut_reason: 【神託】デルフォイの遺跡
-    from: 29
-    slot: 6
-    credit: 'Photo: Konstantinos Livadas / Pexels'
-  - type: board
-    cut_reason: 【決め文】写真をはずし、語源を黒板に
-    from: 37
-    telop: 犬（キュオーン）→ シニシズム
-- id: 4
-  title: 古代②（反転）
-  chapter_title: null
-  narration:
-  - text: ギリシャ語で犬は、キュオーン。ディオゲネスたちは、そこからキュニコス、犬のような者たちと呼ばれたの。英語のシニックやシニシズムも、この犬につながっているわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: キュオーン、キュニコス、シニック。音がつながってるのだ。
-    speaker: ずんだもん
-    expression: normal
-    pause_after: 0.45
-  - text: じゃあ、その犬と呼ばれた者たちは誰に吠えていたのか。それは富や権力、それから「みんなこうするもの」という慣習よ。人はもっと少ないもので生きられる、と、暮らしそのもので示したの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 甕で寝てたのも、大王にどいてくれって言ったのも、全部それなのだ。究極のミニマリストなのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: フランスの哲学者ミシェル・フーコーも、晩年の講義で彼らを高く評価したの。言葉だけじゃなく、生き方で真理を見せた人たちだ、とね。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: つまり最初のシニシズムは、力のない側が権力へ向ける嗤いだったの。下から上への突き上げだったのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 下から上……。それなら、僕があの俳優を笑ったのも、下から上なのだ？ 相手は有名人で、僕はただのずんだもんなのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: いい質問ね。向きだけ見れば、たしかに下から上に見えるわ。でも、ずんだもんが笑ったのは、その人の名声やお金そのものじゃないでしょう？ 「被災地に行った」という、行動の部分よ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ディオゲネスは、富や資産を持っている人々を嗤った。今の冷笑は、自分から行動する人々を嗤うの。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.45
-  - text: 昔の冷笑と今の冷笑では、嗤う対象が違うのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: そうよ。そして、冷笑という言葉はやがて意味を変えるの。英語のシニックが、「人の動機を疑って鼻で笑う性格」を指すようになるのは、19世紀半ばだとされているわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 文学研究者のデイヴィッド・マゼラは、これは意味が薄くなっただけじゃない、と言うの。昔は欲望を抑える鍛錬だったものが、いまは無関心や受け身を指す。全く違うものなったのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.9
-  - text: 鍛錬、向上心が、無関心に……。同じ言葉で、中身が反対になったのだ。
-    speaker: ずんだもん
-    expression: confused
-    pause_after: 0.45
-  - text: ドイツの哲学者ペーター・スローターダイクは1983年、この二つを呼び分けたの。古代の、体を張って示す嗤いがキュニシズム。近代の、知っていながら動かない態度がシニシズムよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 世の中を全部見抜いたつもりで、「どうせ無駄」と動かなくなる意識。彼はこれを、啓蒙された偽りの意識、と呼んだの。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.45
-  - text: 見抜いてるなら、動けばいいのに。なんで動かないのだ？
-    speaker: ずんだもん
-    expression: confused
-    pause_after: 0.45
-  - text: 動かないほうが、傷つかずに済むからよ。世の中のひどさを見ても、「ほら、やっぱり」で終われるでしょう？
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: それ、ちょっと、僕に似てるのだ……。分かってて、次の投稿に行くのだ。
-    speaker: ずんだもん
-    expression: sad
-    pause_after: 0.45
-  - text: 犬は、権力に吠えていたのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.5
-  - text: 今の冷笑は、本気に吠えている。矛先は、いつの間にか反転していたの。
-    speaker: めたん
-    expression: serious
-    pause_after: 2.5
-  - text: 権力から、本気へ……。でも、なんでなのだ？ なんで人は今、本気を嗤うようになったのだ？
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: いい問いね。手がかりは、意外なところにあるの。冷笑って、びっくりするほど安上がりなのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 1.2
-  readings:
-  - surface: 犬
-    reading: イヌ
-  - surface: いつの間にか
-    reading: イツノマニカ
-  - surface: キュオーン
-    reading: キュオーン
-  - surface: キュニコス
-    reading: キュニコス
-  - surface: スローターダイク
-    reading: スローターダイク
-  - surface: マゼラ
-    reading: マゼラ
-  - surface: 嗤い
-    reading: ワライ
-  - surface: 嗤う
-    reading: ワラウ
-  - surface: 甕
-    reading: カメ
-  - surface: 嗤った
-    reading: ワラッタ
-  beats:
-  - type: image
-    cut_reason: 【犬のような者たち】ウォーターハウス「ディオゲネス」
+    cut_reason: 【犬のような者たち】ウォーターハウス「ディオゲネス」（語源の説明の間だけ）
     from: 1
     slot: 1
     credit: John William Waterhouse, Diogenes (1882), Art Gallery of NSW / Public Domain
     telop: キュオーン（犬）→ キュニコス（犬のような者たち）→ Cynic
-  - type: board
-    cut_reason: 【真理の勇気】写真をはずし、出典を黒板に
+  - type: image
+    cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
     from: 11
-    telop: Foucault『真理の勇気』（1983-84 講義）／ Mazella (2007)
+    slot: 2
+    credit: 'Photo: Pixabay'
+    telop: '19世紀半ば: 「人の動機を疑って鼻で笑う性格」'
   - type: diagram
-    cut_reason: '【対比: 昔の犬と今の冷笑】嗤う対象の違いを左右 2 列で見せる（ずんだもんの「下から上？」への答え）'
-    from: 22
+    cut_reason: '【対比: 昔と今】笑う対象の違いを左右 2 列で見せる（ずんだもんの「下から上？」への答え）'
+    from: 18
     diagram:
       type: sketch
       rows:
       - - id: old
-          at: 22
-          icon: pets
-          text: 昔の犬
-        - id: old_t
-          at: 22
+          at: 18
           icon: account_balance
-          text: 持つ側を嗤う
-          after: 人々を嗤った
-      - - id: now
-          at: 23
+          text: 昔のシニシズム
+        - id: old_t
+          at: 18
           icon: sentiment_dissatisfied
+          text: 持つ側を笑う
+          after: 人々を笑った
+      - - id: now
+          at: 19
+          icon: smartphone
           text: 今の冷笑
         - id: now_t
-          at: 23
+          at: 19
           icon: directions_run
-          text: 行動する側を嗤う
-          after: 人々を嗤うの
+          text: 行動する側を笑う
+          after: 人々を笑うの
       arrows:
       - from: old
         to: old_t
       - from: now
         to: now_t
-  - type: image
-    cut_reason: 【19世紀の語義】古い辞書のページ（文字は読めない）
-    from: 26
-    slot: 2
-    credit: 'Photo: Pixabay'
-  - type: diagram
-    cut_reason: '【図解: 反転の三証言】近代の冷笑を中心に、19世紀の語義・マゼラ・スローターダイクの三つが放射し、決め文で色が転じる（状態変化が主張）'
-    from: 27
-    diagram:
-      type: narrative
-      layout: radiate
-      center:
-        icon: psychology
-        text: 近代の冷笑
-        at: 27
-      items:
-      - id: motive
-        text: 動機を疑って嗤う
-        at: 27
-        after: 鼻で笑う性格
-      - id: mazella
-        text: 鍛錬から無関心へ
-        at: 29
-      - id: sloterdijk
-        text: 知っていて動かない
-        at: 35
-      turn:
-        at: 45
-- id: 5
-  title: 探索①（第一の安さ・考えなくて済む）
-  chapter_title: 冷笑は、なぜ安いのか
+      caption:
+        text: 笑う相手が、権力から本気へ
+        at: 21
+- id: 4
+  title: 探索①（楽な理由その一・考えなくて済む）
+  chapter_title: 冷笑は、なぜ楽なのか
   narration:
-  - text: その安さには、三つの種類があるの。まず一つ目から見るわね。慶應義塾大学でメディア論を研究する、津田正太郎さん。現代のシニシズムを、こう定義したの。「他人の言動を、つねに利己的な動機で解釈しようとする態度」。
+  - text: 冷笑が楽な理由は、三つあるの。まず一つ目から見るわね。慶應義塾大学でメディア論を研究する、津田正太郎さん。現代のシニシズムを、こう定義したの。「他人の言動を、つねに利己的な動機で解釈しようとする態度」。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -499,7 +299,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 冷笑の第一の安さは、考えなくて済むことにあるのよ。
+  - text: 冷笑が楽な理由の一つ目は、考えなくて済むことよ。
     speaker: めたん
     expression: explain
     pause_after: 1.0
@@ -511,9 +311,6 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 1.2
-  readings:
-  - surface: 津田正太郎
-    reading: ツダショウタロウ
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -574,11 +371,20 @@ scenes:
       - from: b
         to: m
   - type: board
-    cut_reason: 【決め文】黒板に第一の安さ
+    cut_reason: 【決め文】黒板に一つ目
     from: 24
-    telop: 第一の安さ：考えなくて済む
-- id: 6
-  title: 探索②（第二の安さ・賢く見える）
+    telop: 楽な理由①：考えなくて済む
+  readings:
+  - surface: 敵同士
+    reading: テキドウシ
+  - surface: 同じ
+    reading: オナジ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: 津田正太郎
+    reading: ツダショウタロウ
+- id: 5
+  title: 探索②（楽な理由その二・賢く見える）
   chapter_title: null
   narration:
   - text: ずんだもんに、ひとつ質問。「人はどうせ利己的だ」と思う皮肉屋、つまり冷笑しがちな人と、そうでない人。読解や計算みたいな、考える力を測る課題でいい成績を取るのは、どちらだと思う？
@@ -609,11 +415,11 @@ scenes:
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: しかも、その「賢そう」という印象は、ほとんどタダで手に入るの。第二の安さは、何もしなくても、賢い側に立てることよ。
+  - text: しかも、その「賢そう」という印象は、ほとんどタダで手に入るの。楽な理由の二つ目は、何もしなくても、賢い側に立てることよ。
     speaker: めたん
     expression: explain
     pause_after: 1.0
-  - text: 考えなくていいし、賢く見える。安いのだ……。
+  - text: 考えなくていいし、賢く見える。楽なのだ……。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
@@ -625,7 +431,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: その答えは、もう少しあとで分かるわ。その前に、もう一つ見ておきましょう。三つ目は、自分を守るための安さよ。
+  - text: その答えは、もう少しあとで分かるわ。その前に、もう一つ見ておきましょう。三つ目は、自分を守れることよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -637,13 +443,6 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  readings:
-  - surface: の方が
-    reading: ノホウガ
-  - surface: スタヴロヴァ
-    reading: スタヴロヴァ
-  - surface: ティルブルフ
-    reading: ティルブルフ
   beats:
   - type: image
     cut_reason: 【腕を組んで見ている人】会議室で椅子にもたれる後ろ姿
@@ -674,7 +473,7 @@ scenes:
   - type: board
     cut_reason: 【決め文】第二の安さ
     from: 15
-    telop: 第二の安さ：何もしなくても賢い側に立てる
+    telop: 楽な理由②：何もしなくても賢い側に立てる
   - type: diagram
     cut_reason: '【言葉: 見える／本当か】次章への引きを 2 語で'
     from: 19
@@ -689,15 +488,28 @@ scenes:
           at: 21
           icon: help
           text: 本当に賢い？
-- id: 7
-  title: 探索③（第三の安さ・防衛）と、ひとつ目の答え（無力感）
+  readings:
+  - surface: 一段上
+    reading: イチダンウエ
+  - surface: 同じ
+    reading: オナジ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: の方が
+    reading: ノホウガ
+  - surface: スタヴロヴァ
+    reading: スタヴロヴァ
+  - surface: ティルブルフ
+    reading: ティルブルフ
+- id: 6
+  title: 探索③（三つ目・自分を守れる）と、ひとつ目の答え（無力感）
   chapter_title: 冷笑は、何を守っているのか
   narration:
-  - text: 第三の安さは、防衛の安さよ。期待しなければ、失望しない。動かなければ、負けない。嗤う側にいれば、嗤われない。
+  - text: 三つ目は、自分を守れること。期待しなければ、失望しない。動かなければ、負けない。笑う側にいれば、笑われない。
     speaker: めたん
     expression: serious
     pause_after: 1.0
-  - text: 嗤う側にいれば、嗤われない……。確かに、笑ってる間は安全なのだ。
+  - text: 笑う側にいれば、笑われない……。確かに、笑ってる間は安全なのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -749,7 +561,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 社会なんて変えられないと思うと、変えようとする人を嗤ってしまうことがある。そうすると、動かない自分を責めずに済むのよ。
+  - text: 社会なんて変えられないと思うと、変えようとする人を笑ってしまうことがある。そうすると、動かない自分を責めずに済むのよ。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -769,24 +581,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  readings:
-  - surface: エルスター
-    reading: エルスター
-  - surface: 嗤う
-    reading: ワラウ
-  - surface: 嗤われない
-    reading: ワラワレナイ
-  - surface: 無力感
-    reading: ムリョクカン
-  - surface: 嗤って
-    reading: ワラッテ
-  - surface: 嗤われ
-    reading: ワラワレ
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: diagram
-    cut_reason: '【図解: 三つの安さ】前章の二つに三つ目が加わり「冷笑は安い」へ収束する（構造が主張）'
+    cut_reason: '【図解: 楽な理由三つ】前章の二つに三つ目が加わり「冷笑は楽」へ収束する（構造が主張）'
     from: 1
     diagram:
       type: narrative
@@ -801,9 +600,9 @@ scenes:
       - id: guard
         text: 自分を守れる
         at: 1
-        after: 防衛の安さよ
+        after: 自分を守れること
       result:
-        text: 冷笑は安い
+        text: 冷笑は楽
         at: 7
   - type: image
     cut_reason: 【日本の若者】選挙ポスターの前を歩く人々
@@ -842,8 +641,8 @@ scenes:
         - id: s2
           at: 29
           icon: sentiment_very_dissatisfied
-          text: 変えようとする人を嗤う
-          after: 嗤ってしまうことがある
+          text: 変えようとする人を笑う
+          after: 笑ってしまうことがある
       arrows:
       - from: g1
         to: g2
@@ -852,7 +651,16 @@ scenes:
       caption:
         text: 動かない自分を責めずに済む
         at: 30
-- id: 8
+  readings:
+  - surface: 同じ
+    reading: オナジ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: エルスター
+    reading: エルスター
+  - surface: 無力感
+    reading: ムリョクカン
+- id: 7
   title: ふたつ目の答え（責められる予期）——中盤の反転①
   chapter_title: null
   narration:
@@ -924,9 +732,6 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  readings:
-  - surface: モナン
-    reading: モナン
   beats:
   - type: image
     cut_reason: 【ベジタリアン】野菜の食卓
@@ -1020,7 +825,12 @@ scenes:
   - type: board
     cut_reason: 【決め文】写真をはずし、二人だけで
     from: 27
-- id: 9
+  readings:
+  - surface: 嫉妬
+    reading: シット
+  - surface: モナン
+    reading: モナン
+- id: 8
   title: 三つ目の答え（嫉妬）
   chapter_title: null
   narration:
@@ -1076,17 +886,6 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 1.2
-  readings:
-  - surface: スミス
-    reading: スミス
-  - surface: ケンタッキー
-    reading: ケンタッキー
-  - surface: 芥子
-    reading: ケシ
-  - surface: 憤り
-    reading: イキドオリ
-  - surface: 無力感
-    reading: ムリョクカン
   beats:
   - type: image
     cut_reason: 【映像を見る参加者】モニターの前の後ろ姿
@@ -1156,7 +955,24 @@ scenes:
         ids:
         - unfair
         at: 20
-- id: 10
+  readings:
+  - surface: 同じ
+    reading: オナジ
+  - surface: 嫉妬
+    reading: シット
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: スミス
+    reading: スミス
+  - surface: ケンタッキー
+    reading: ケンタッキー
+  - surface: 芥子
+    reading: ケシ
+  - surface: 憤り
+    reading: イキドオリ
+  - surface: 無力感
+    reading: ムリョクカン
+- id: 9
   title: 三つの標的（図解でまとめる）
   chapter_title: null
   narration:
@@ -1204,9 +1020,6 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 1.2
-  readings:
-  - surface: フィスク
-    reading: フィスク
   beats:
   - type: board
     cut_reason: 【一枚の地図】写真なし。フィスクの二軸を言葉で導入
@@ -1268,9 +1081,24 @@ scenes:
       result:
         text: 自分を守るための反応
         at: 18
-- id: 11
-  title: 安い知性の請求書——中盤の反転②
-  chapter_title: 安い知性の請求書は、誰が払うのか
+  readings:
+  - surface: 他の集団
+    reading: ホカノシュウダン
+  - surface: 同じ
+    reading: オナジ
+  - surface: 妬み
+    reading: ネタミ
+  - surface: 妬まれ
+    reading: ネタマレ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: スタヴロヴァ
+    reading: スタヴロヴァ
+  - surface: フィスク
+    reading: フィスク
+- id: 10
+  title: 冷笑の代償——中盤の反転②
+  chapter_title: 冷笑の代償は、誰が払うのか
   narration:
   - text: 皮肉屋の方が賢い、と、56パーセントから70パーセントの人が答えたわね。でも、実際はどうだったのかしら。研究チームは、ドイツの成人9000人あまりと、30カ国およそ20万人のデータで確かめたの。
     speaker: めたん
@@ -1340,15 +1168,15 @@ scenes:
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: 冷笑は安い。だから、広がるのよ。
+  - text: 冷笑は楽。だから、広がるのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.5
-  - text: でも、安いものはたいてい、後で請求書が来るの。
+  - text: でも、楽な分だけ、後で代償を払うことになるの。
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 請求書は、笑った本人に来るのだ……。でも、めたん。これって結局、「皮肉屋は性格が悪い」って話になっちゃうのだ？ 僕まで悪者なのだ？
+  - text: 代償を払うのは、笑った本人なのだ……。でも、めたん。これって結局、「皮肉屋は性格が悪い」って話になっちゃうのだ？ 僕まで悪者なのだ？
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -1356,11 +1184,6 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  readings:
-  - surface: の方が
-    reading: ノホウガ
-  - surface: ヴァイラント
-    reading: ヴァイラント
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -1414,7 +1237,7 @@ scenes:
     credit: 'Photo: Hayk Paytyan / Pexels'
     telop: Choy, Eom & Li (2021) Personality and Individual Differences
   - type: diagram
-    cut_reason: '【請求書: 四つの代価】ここまで一枚ずつ見せた項目を 2×2 で一望にする'
+    cut_reason: '【代償: 四つ】ここまで一枚ずつ見せた項目を 2×2 で一望にする'
     from: 27
     diagram:
       type: sketch
@@ -1439,7 +1262,7 @@ scenes:
           icon: link_off
           text: つながり直せない
       caption:
-        text: 安い知性の請求書
+        text: 冷笑の代償
         at: 27
   - type: board
     cut_reason: 【防衛の成熟度】黒板に二つの防衛
@@ -1448,12 +1271,21 @@ scenes:
   - type: board
     cut_reason: 【決め文1】
     from: 34
-    telop: 冷笑は安い
+    telop: 冷笑は楽
   - type: board
     cut_reason: 【決め文2】
     from: 36
-    telop: 安いものには、後で請求書が来る
-- id: 12
+    telop: 楽な分だけ、後で代償を払う
+  readings:
+  - surface: 同じ
+    reading: オナジ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: の方が
+    reading: ノホウガ
+  - surface: ヴァイラント
+    reading: ヴァイラント
+- id: 11
   title: 環境が育てる（個人に還元しない）
   chapter_title: 冷笑は、誰が育てているのか
   narration:
@@ -1517,7 +1349,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: 社会学者の北田暁大さんは2005年、2ちゃんねるに生まれたやり取りを、皮肉な共同体と分析したわ。嗤いながらも、本気の感情を分け合う場だったの。
+  - text: 社会学者の北田暁大さんは2005年、2ちゃんねるに生まれたやり取りを、皮肉な共同体と分析したわ。笑いながらも、本気の感情を分け合う場だったの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1529,25 +1361,10 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: そうじゃないのよ。疑うことと、嗤うことは、違うの。最後にそこを分けておきましょう。
+  - text: そうじゃないのよ。疑うことと、笑うことは、違うの。最後にそこを分けておきましょう。
     speaker: めたん
     expression: smile
     pause_after: 1.2
-  readings:
-  - surface: カペラ
-    reading: カペラ
-  - surface: ジェイミソン
-    reading: ジェイミソン
-  - surface: 北田暁大
-    reading: キタダアキヒロ
-  - surface: 嗤いながら
-    reading: ワライナガラ
-  - surface: 無力感
-    reading: ムリョクカン
-  - surface: 嗤う
-    reading: ワラウ
-  - surface: 嗤い
-    reading: ワライ
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -1627,8 +1444,21 @@ scenes:
       caption:
         text: 形を変えながら続く半世紀の系譜
         at: 32
-- id: 13
-  title: 疑うことと、嗤うことは違う
+  readings:
+  - surface: 怒り
+    reading: イカリ
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: カペラ
+    reading: カペラ
+  - surface: ジェイミソン
+    reading: ジェイミソン
+  - surface: 北田暁大
+    reading: キタダアキヒロ
+  - surface: 無力感
+    reading: ムリョクカン
+- id: 12
+  title: 疑うことと、笑うことは違う
   chapter_title: null
   narration:
   - text: 政治学者のジャック・シトリンとローラ・ストーカーは、不信を二つに分けたの。制度を批判的に見張る懐疑と、制度そのものを見放すシニシズムよ。
@@ -1671,19 +1501,14 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 疑ったあとで、何をするか。……めたん、最初のランプの人は、疑ったあとに何をしたのだ？
+  - text: 疑ったあとで、何をするか。……めたん、じゃあ僕は、あの投稿をどうすればよかったのだ？
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: いい戻り方ね。もう一度、あの真昼のアテナイへ行きましょう。
+  - text: いい問いね。最初の画面に、戻ってみましょう。
     speaker: めたん
     expression: smile
     pause_after: 1.2
-  readings:
-  - surface: シトリン
-    reading: シトリン
-  - surface: ストーカー
-    reading: ストーカー
   beats:
   - type: image
     cut_reason: 【懐疑＝道具】資料を読み込み付箋を貼る手
@@ -1759,34 +1584,19 @@ scenes:
       caption:
         text: 希望を持った懐疑（Zaki 2024）
         at: 18
-- id: 14
+  readings:
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: スタヴロヴァ
+    reading: スタヴロヴァ
+  - surface: シトリン
+    reading: シトリン
+  - surface: ストーカー
+    reading: ストーカー
+- id: 13
   title: 回帰と結び
   chapter_title: null
   narration:
-  - text: ランプを掲げた男は、人間を探していたわ。権力や慣習を嗤ったけれど、自分だけ安全な場所から嗤っていたわけじゃないの。暮らしも体も、そこに賭けていたのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 甕で寝て、大王にどいてくれって言って……。嗤われる側に回るのを、恐れなかったのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: そう。犬は、権力に吠えた。今の冷笑は、本気に吠える。反転したのは矛先だけじゃないの。自分で賭けるものも、なくなったのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 1.5
-  - text: 僕は、何も賭けずに笑ってたのだ。安全な場所から。
-    speaker: ずんだもん
-    expression: sad
-    pause_after: 0.45
-  - text: 安全な場所から、何も賭けずに嗤っていると、自分を守っているようで、自分の力も少しずつ削ってしまうの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 信じる力も、つながり直す力も、いつか動き出す力もね。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.8
   - text: あの画面を、もう一度思い出してみて。「売名なのだ」と笑った一瞬、ずんだもんは何から、自分を守っていたのかしら。
     speaker: めたん
     expression: serious
@@ -1799,7 +1609,15 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 正直ね。それが分かれば、次に嗤いたくなったとき、少し違う選択ができるかもしれないわ。見ている人の中にも、似た気持ちがあるかもしれないわね。
+  - text: 何も失わない場所から笑っていると、自分を守っているようで、自分の力も少しずつ削ってしまうの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 信じる力も、つながり直す力も、いつか動き出す力もね。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.8
+  - text: それが分かれば、次に笑いたくなったとき、少し違う選択ができるかもしれないわ。見ている人の中にも、似た気持ちがあるかもしれないわね。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -1811,7 +1629,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.35
-  - text: 冷笑は安い。
+  - text: 冷笑は楽。
     speaker: めたん
     expression: serious
     pause_after: 0.4
@@ -1819,49 +1637,32 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.8
-  - text: そして、冷笑が守っているのは、たいてい、正しさじゃなくて、傷つきたくない気持ちなのよ。
+  - text: でも、楽な分の代償は、あとで自分が払うことになる。そして、冷笑が守っているのは、たいてい、正しさじゃなくて、傷つきたくない気持ちなのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
-  readings:
-  - surface: 犬
-    reading: イヌ
-  - surface: 嗤い
-    reading: ワライ
-  - surface: 嗤った
-    reading: ワラッタ
-  - surface: 嗤われる
-    reading: ワラワレル
-  - surface: 甕
-    reading: カメ
-  - surface: 無力感
-    reading: ムリョクカン
-  - surface: 嗤って
-    reading: ワラッテ
-  - surface: 嗤っていた
-    reading: ワラッテイタ
-  - surface: 嗤われ
-    reading: ワラワレ
   beats:
   - type: image
-    cut_reason: 【回帰】ランプの男へ戻る
+    cut_reason: 【冒頭へ回帰】電車のスマホ画面を再掲
     from: 1
     slot: 1
-    credit: Jean-Léon Gérôme, Diogenes (1860), Walters Art Museum / Public Domain
-  - type: board
-    cut_reason: 【削られるもの】写真をはずし、二人だけで
-    from: 13
-  - type: image
-    cut_reason: 【冒頭へ回帰】電車のスマホ画面を再掲
-    from: 15
-    slot: 2
     credit: 'Photo: MART PRODUCTION / Pexels'
   - type: board
-    cut_reason: 【決め文】写真をはずし、決め文を黒板で受ける
-    from: 31
-    telop: 冷笑は安い。だから、広がる
+    cut_reason: 【削られるもの】写真をはずし、二人だけで
+    from: 10
+  - type: board
+    cut_reason: 【決め文】黒板で受ける
+    from: 18
+    telop: 冷笑は楽。だから、広がる
   - type: image
     cut_reason: 【最後の一枚】暗がりで光る画面に指を置く手。決め文と同時に出し、余韻とアウトロで保持
-    from: 33
+    from: 21
     slot: 3
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
+  readings:
+  - surface: 嫉妬
+    reading: シット
+  - surface: 冷笑
+    reading: レイショウ
+  - surface: 無力感
+    reading: ムリョクカン
