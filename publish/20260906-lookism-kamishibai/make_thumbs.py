@@ -312,6 +312,23 @@ def make_thumb_i() -> Image.Image:
     )
 
 
+
+# ============================================================
+# J: G と同じ写真で文字を「SNS×ルッキズム」だけに（ユーザー案 2026-09-07）
+# ============================================================
+
+
+def make_thumb_j() -> Image.Image:
+    """glamour-dress-1（G と同一写真）で見出しを「SNS×／ルッキズム」の 2 行に。人物・仕事名は
+    タイトル側に任せ、サムネは答えの枠だけを大きく見せる。"""
+    return make_thumb(
+        PHOTOS / "glamour-dress" / "glamour-dress-1.jpg",
+        darken_amount=0.30,
+        line1="SNS×",
+        line2="ルッキズム",
+    )
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
@@ -322,6 +339,7 @@ if __name__ == "__main__":
     g = make_thumb_g()
     h = make_thumb_h()
     i_ = make_thumb_i()
+    j = make_thumb_j()
 
     for img, name in (
         (a, "thumb-A.png"),
@@ -333,6 +351,7 @@ if __name__ == "__main__":
         (g, "thumb-G.png"),
         (h, "thumb-H.png"),
         (i_, "thumb-I.png"),
+        (j, "thumb-J.png"),
     ):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
