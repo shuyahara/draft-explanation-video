@@ -1,5 +1,5 @@
 video:
-  title: なぜキャバ嬢は現代で受け入れられているのか（ずんだもん版）
+  title: なぜキャバ嬢・AV女優は現代で受け入れられてきているのか（ずんだもん版）
   kamishibai:
     puppet_sink_ratio: 0.12
   characters:
@@ -31,7 +31,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 隠さずに、自分から語っているのね。二十年くらい前なら、人前では言いにくい仕事だったのよ。
+  - text: キャバクラ嬢という肩書きを隠さずに、自分から語っているのね。二十年くらい前なら、人前では言いにくい仕事だったのよ。
     speaker: めたん
     expression: thinking
     pause_after: 0.45
@@ -86,6 +86,8 @@ scenes:
   readings:
   - surface: 日陰
     reading: ヒカゲ
+  - surface: 肩書き
+    reading: カタガキ
   beats:
   - type: image
     cut_reason: 【冒頭】リングライトの前で語る元キャバ嬢のユーチューバー（後ろ姿・静止画）
@@ -136,7 +138,7 @@ scenes:
   title: 「受け入れられている」の定義と問い直し
   chapter_title: 『受け入れられている』とは何か
   narration:
-  - text: その前に、「受け入れられている」の意味をそろえておきましょう。みんなが「すばらしい仕事だ」と褒めている、という意味ではないのよ。
+  - text: その前に、「受け入れられている」の意味をそろえておきましょう。全員が全員「すばらしい仕事だ」と褒めている、という意味ではないのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -144,7 +146,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そうでしょう。ここで言う「受け入れられている」には、二つあるの。まず、キャバ嬢だったことを、隠さずに自分から話す人が増えたこと。
+  - text: そうでしょう。ここで言う「受け入れられている」には、二つあるの。まず、キャバ嬢・AV女優だったことを、隠さずに自分から話す人が増えたこと。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -176,7 +178,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: それが、写真中心のSNSの広がりよ。SNSによって、外見が他人からの評価や収入につながりやすくなった。つまり、ルッキズムが加速したの。
+  - text: それが、インスタグラムなどの写真中心のSNSの広がりよ。SNSによって、外見が他人からの評価や収入につながりやすくなった。つまり、ルッキズムが加速したの。
     speaker: めたん
     expression: serious
     pause_after: 1.0
@@ -226,10 +228,15 @@ scenes:
     slot: 6
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【注目する変化】雑踏の別カットに替えて写真SNS・ルッキズム加速の提示へ
+    cut_reason: 【注目する変化】雑踏の別カットに替えて「大きいと考える変化」の予告へ
     from: 21
     slot: 7
     credit: 'Photo: Elina Sazonova / Pexels'
+  - type: image
+    cut_reason: 【写真SNSの提示】インスタをスクロールする手元。ルッキズム加速の一文まで保持
+    from: 22
+    slot: 9
+    credit: 'Photo: Kaboompics.com / Pexels'
     telop: 写真SNS → 外見が評価や収入につながりやすくなった
   - type: image
     cut_reason: 【疑問】雑踏1カット目に戻しルッキズムの語義への疑問へ
@@ -272,7 +279,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 結婚も仕事もうまくいって、幸せな人生を送りそうだ、とまで思われたの。題名も、ずばり「美しいものは善い」よ。
+  - text: 結婚も仕事もうまくいって、幸せな人生を送りそうだ、とまで思われたの。論文の題名も、ずばり「美しいものは善い」よ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -417,7 +424,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: でも、「見た目が生きる仕事を選んだから」だけでは、賃金の差を説明しきれなかった。どの職業でも差が残っていたのよ。
+  - text: でも、「見た目が生きる仕事を選んだから」だけでは、賃金の差を説明しきれなかった。どの職業の切り口で見ても差が残っていたのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -429,11 +436,11 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: じゃあ、SNSの時代になって、この偏りは弱まったのだ？ みんな加工できるなら、差はなくなりそうなのだ。
+  - text: でも、それは昔の話なのだ。今は写真が加工できるって、みんな知ってるのだ。それでも、写真の見た目で中身まで決めるのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ところが、むしろ逆かもしれないのよ。2024年に、スペインの研究チームが、美顔フィルターを使って調べているわ。
+  - text: それを確かめた研究があるわ。2024年に、スペインの研究チームが、美顔フィルターを使って調べているの。
     speaker: めたん
     expression: smug
     pause_after: 0.35
@@ -441,7 +448,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 写っているのは同じ人なのに、魅力的に見える写真のほうが、知性も信頼性も高く評価されたの。
+  - text: 写っているのは同じ人なのに、フィルターで魅力的に見える写真のほうが、知性も信頼性も高く評価されたの。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -453,11 +460,11 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: フィルターで美しく見せやすくなった。それでも、「美しいものは善い」と感じる心理までは消えなかった、ということね。
+  - text: 評価されているのは、その人の顔ではなくて、目の前の写真なのよ。加工の時代でも、「美しいものは善い」と感じる心理は消えなかった、ということね。
     speaker: めたん
     expression: serious
     pause_after: 1.0
-  - text: 偏りが給料にも出て、フィルターを使っても消えないのは分かったのだ。でも、それがどうしてキャバ嬢につながるのだ？
+  - text: 偏りが給料にも出て、写真にもそのまま働くのは分かったのだ。でも、それがどうしてキャバ嬢につながるのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -535,28 +542,28 @@ scenes:
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【追試の導入】Gulati 2024 の美顔フィルター実験。自撮りする手元（顔はぼけて背景）
-    from: 28
+    from: 29
     slot: 7
     credit: 'Photo: Mizuno K / Pexels'
     telop: Gulati ら 2024（ELLIS Alicante）
   - type: diagram
     cut_reason: '【対比: フィルター前後】写っているのは同じ人なのにで右列（フィルター後）を出す'
-    from: 30
+    from: 31
     diagram:
       type: sketch
       rows:
       - - id: before
-          at: 30
+          at: 31
           icon: photo_camera
           text: 加工前の顔写真
         - id: after2
-          at: 31
+          at: 32
           icon: auto_fix_high
           text: フィルター後の顔
           after: 写っているのは同じ人なのに
       caption:
         text: 知性・信頼性が上がる
-        at: 31
+        at: 32
 - id: 5
   title: 写真SNSが変えたもの（見る入口と、整形容認）
   chapter_title: 写真SNSは、何を変えたのか
@@ -569,7 +576,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: そうよね。プロフィールを読むより先に、顔や姿が飛び込んでくるでしょう？ つまりSNSでは、見た目が、人を評価するときの最初の判断材料になるのよ。
+  - text: そうよね。プロフィールを読むより先に、顔や姿が飛び込んでくるでしょう？ つまり写真SNSでは、見た目が、人を評価するときの最初の判断材料になるのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -601,7 +608,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: だから、順番まで証明したわけではないのよ。
+  - text: だから、因果関係の順番まで証明したわけではないのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -701,11 +708,11 @@ scenes:
   title: 整形容認から、見た目を仕事にする人への見方へ（推論）
   chapter_title: null
   narration:
-  - text: 分かったのだ。推論として聞くのだ。
+  - text: でも、整形をいいと思う人が増えたら、キャバ嬢の見方まで変わるのだ？ 別の話に聞こえるのだ。
     speaker: ずんだもん
-    expression: normal
+    expression: confused
     pause_after: 0.45
-  - text: まず、整形を受け入れるって、どんな考えが広がることかしら。
+  - text: そう聞こえるでしょうね。まず、整形を受け入れるって、どんな考えが広がることかしら。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -729,11 +736,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 見た目が評価に大きく関わる仕事の女性なら、「きれいで、きっと魅力的な人なんだ」と思われやすくなるの。
+  - text: 見た目が評価に大きく関わる仕事の女性なら、きれいで、魅力的な人が多いでしょう？
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: ハロー効果が弱めるのは、まず、顔と人柄が見える一人ひとりへの偏見よ。
+  - text: そして写真SNSでは、肩書きや人柄よりもまずは見た目が目に入る。それにより、ハロー効果が肩書きへの偏見を弱めるのよ。
     speaker: めたん
     expression: serious
     pause_after: 0.35
@@ -749,10 +756,15 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: できないわ。重なり合う、ほかの変化も見ておきましょう。
+  - text: それだけで説明できない部分もあるわ。重なり合う、ほかの変化も見ておきましょう。
     speaker: めたん
     expression: smile
     pause_after: 0.9
+  readings:
+  - surface: 肩書き
+    reading: カタガキ
+  - surface: 整形
+    reading: セイケイ
   beats:
   - type: image
     cut_reason: 【推論①の導入】鏡の前でネクタイを結ぶ後ろ姿
@@ -762,38 +774,35 @@ scenes:
     telop: 推論①：美は手に入れてよい→見た目で働く人を責めにくい
   - type: image
     cut_reason: 【問い返し】鏡の別カットに替えて「美しさを手に入れてもいい」の確認へ
-    from: 4
+    from: 5
     slot: 2
     credit: 'Photo: Konna Jpg / Pexels'
   - type: image
     cut_reason: 【推論①の帰結】鏡の別カットに替えて抵抗が弱まる、への接続
-    from: 8
+    from: 9
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【推論②の導入】リングライトの前で語る人（S1の再掲）
-    from: 11
+    from: 12
     slot: 4
     credit: 'Photo: Liza Summer / Pexels'
     telop: 推論②：ハロー効果→個人への偏見→仕事の見方も変わる
   - type: image
     cut_reason: 【限定】カメラを構える後ろ姿に替えて「まず一人ひとりへの偏見」の限定へ
-    from: 14
+    from: 16
     slot: 5
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【接続】横顔でリングライトに取り付ける場面に替えて仕事への評価への接続へ
-    from: 17
+    from: 19
     slot: 6
     credit: 'Photo: George Milton / Pexels'
   - type: image
     cut_reason: 【次章への問い】S1と同じ写真に戻し「これだけで説明できるのか」へ
-    from: 19
+    from: 21
     slot: 7
     credit: 'Photo: Liza Summer / Pexels'
-  readings:
-  - surface: 整形
-    reading: セイケイ
 - id: 7
   title: 補強する二つの変化
   chapter_title: null
@@ -1078,7 +1087,7 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: だから、受け入れられたという表側だけでなく、その裏で誰が厳しく見られているのかも忘れないこと。私は、それがいちばん大切だと思うわ。
+  - text: だから、受け入れられたという表側だけを見て、安心しないことね。
     speaker: めたん
     expression: serious
     pause_after: 0.9
@@ -1089,6 +1098,14 @@ scenes:
   - text: それでいいのよ。
     speaker: めたん
     expression: smile
+    pause_after: 0.4
+  - text: でも、めたん。あの人が見た目で選ばれたなら、見た目で選ばれなかった人もいるのだ。その人は、画面に出てこないのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。見えないから、忘れやすいの。それが、今日いちばん言いたかったことよ。
+    speaker: めたん
+    expression: serious
     pause_after: 0.4
   - text: 見た目で選ばれやすくなった社会は、見た目で落とされやすくなった社会でもあるのよ。
     speaker: めたん
@@ -1134,13 +1151,18 @@ scenes:
     slot: 3
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【一番大切なこと→動画をもう一度見る】公園で動画を見る手元。冒頭の動画への回帰
-    from: 21
+    cut_reason: 【動画をもう一度見る】公園で動画を見る手元。冒頭の動画への回帰
+    from: 20
     slot: 4
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【結び】決め文と同時に夜の街の光と光るスマホを持つ手（象徴的な最後の一枚。アウトロで保持）
+    cut_reason: 【選ばれなかった人】画面に出てこない大勢の人。街の雑踏（後ろ姿）で示す
     from: 25
+    slot: 6
+    credit: 'Photo: Pixabay'
+  - type: image
+    cut_reason: 【結び】決め文と同時に夜の街の光と光るスマホを持つ手（象徴的な最後の一枚。アウトロで保持）
+    from: 30
     slot: 5
     credit: 'Photo: Towfiqu barbhuiya / Pexels'
   readings:

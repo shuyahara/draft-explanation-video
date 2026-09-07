@@ -86,7 +86,7 @@ METAN_STYLE_ID = 2
 ZUNDAMON_STYLE_ID = 3
 SPEED_SCALE = 1.1
 
-LINE1_METAN = "今日はここまで。ご視聴ありがとうございました。"
+LINE1_METAN = "最後までご視聴いただき、ありがとうございました。"
 LINE2_ZUNDAMON = "面白いと思ったら、高評価とチャンネル登録をお願いするのだ。"
 LINE3_METAN = "それと、あなたの意見も、コメントで教えてね。"
 
