@@ -30,6 +30,33 @@ K 案＝写真全面＋暗幕＋人形は下端から大きく覗く＋見出し
 - 狙い: スマホで自撮りする手元にピントを合わせ、顔は背景で大きくぼかす。美顔加工・自撮り
   文化と「偏見／ルッキズム」を結び付ける逆説的な問いを提示する。
 
+## 案D: thumb-D.png
+
+- 文字: 「キャバ嬢・AV女優は」／「なぜ受け入れられた？」
+- 背景写真: `assets-kamishibai/photos/candidates-lookism/face-closeup/face-closeup-1.jpg`
+  - 出典: Pexels / MART PRODUCTION / Pexels License（商用可）
+  - URL: https://www.pexels.com/photo/a-woman-applying-red-lipstick-7290642/
+- 狙い: 赤いリップを塗る唇のアップ。鼻先〜顎までのフレームで目は一切写らない
+  （方針変更: 「きれいな人の顔のアップ、ただし目元は見えない」を反映した3案の1つ目）。
+
+## 案E: thumb-E.png
+
+- 文字: 「見た目の価値が」／「上がった社会」
+- 背景写真: `assets-kamishibai/photos/candidates-lookism/face-closeup/face-closeup-2.jpg`
+  - 出典: Pexels / MART PRODUCTION / Pexels License（商用可）
+  - URL: https://www.pexels.com/photo/side-view-of-woman-s-face-in-close-up-photography-7290081/
+- 狙い: 鼻〜唇の真横プロフィール、無地の明るい背景。目は完全にフレーム外に出ており
+  最も「目元が見えない」条件を満たしやすい構図。
+
+## 案F: thumb-F.png
+
+- 文字: 「偏見を弱めたのは」／「ルッキズム？」
+- 背景写真: `assets-kamishibai/photos/candidates-lookism/face-closeup/face-closeup-3.jpg`
+  - 出典: Pixabay / 未取得（クレジット不要） / Pixabay License（商用可）
+  - URL: https://pixabay.com/photos/female-lips-close-up-woman-girl-1834381/
+- 狙い: 正面寄りにやや俯く構図で、赤い唇・顎・素肌の肩までを写す。目は写らず、
+  D（唇のアップ）・E（横顔プロフィール）とは異なる「首元まで含む正面」の変化をつけた。
+
 ## 共通仕様
 
 - 1280×720 PNG。文字は前作 K 案と同じ白1行目（画面上30%付近）＋黄色2行目（画面55%付近）、
@@ -37,6 +64,22 @@ K 案＝写真全面＋暗幕＋人形は下端から大きく覗く＋見出し
 - 立ち絵は前作と同じ配置（左: めたん、右: ずんだもん、画面下端から顔＋肩まで覗く）。
   表情は今回 metan=smile／zundamon=surprised（前作は smug／confused。テーマに合わせて
   過度な皮肉顔を避け、驚き交じりの興味を示す表情に変更）。
-- 3案ともライセンスは Pixabay/Pexels の商用可（帰属不要）で、顔の正面クローズアップ・
-  判読できる看板文字・性的表現を避けた候補から選定（`candidates-lookism/manifest.md` 記載の
-  選定基準に準拠）。
+- A〜C・D〜F とも、ライセンスは Pixabay/Pexels の商用可（帰属不要）で選定
+  （`candidates-lookism/manifest.md` 記載の選定基準に準拠）。
+- A〜C は顔の正面クローズアップを避けた抽象・手元カット、D〜F は 2026-09-07 の方針変更
+  （「きれいな人の顔のアップ。ただし目元は見えない」）に沿った顔クローズアップ3案。
+  D〜F は暗幕（`darken_amount`）を A〜C（0.15〜0.20）より強め（0.30〜0.35）にして、
+  肌の明るい写真の上でも文字の可読性を確保した。
+- D〜F の写真選定で目が写り込む・小道具が不自然などの理由で不採用にした候補は
+  `candidates-lookism/manifest.md` の `face-closeup` セクション参照。
+
+## 確認結果（2026-09-07）
+
+- 目元: D・E・F とも実際に生成した PNG を目視確認し、3案ともフレーム内に目が写っていない
+  ことを確認（D は鼻先から下、E は真横プロフィールで目が完全にフレーム外、F は俯いた
+  構図で目が影に隠れる位置）。
+- 文字の可読性: 3案とも白/黄色の縁取り太字が肌色・背景に対して十分なコントラストで
+  読める。F は写真全体が暗めのためもともと可読性は確保しやすく、D・E は暗幕を
+  0.30〜0.35 まで強めて確保した。
+- 人形との重なり: D はリップスティックの筒がずんだもんの頭の輪郭にわずかに重なるが、
+  絵柄同士の重なりではなく違和感は小さい。E・F は人形と顔の間に重なりなし。

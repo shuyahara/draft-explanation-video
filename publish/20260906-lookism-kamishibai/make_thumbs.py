@@ -219,12 +219,67 @@ def make_thumb_c() -> Image.Image:
     )
 
 
+# ============================================================
+# D: 顔クローズアップ（唇のアップ、リップを塗る場面）
+# ============================================================
+
+
+def make_thumb_d() -> Image.Image:
+    """Pexels 7290642（MART PRODUCTION）赤いリップを塗る唇のアップ。目は写らない構図。"""
+    return make_thumb(
+        PHOTOS / "face-closeup" / "face-closeup-1.jpg",
+        darken_amount=0.35,
+        line1="キャバ嬢・AV女優は",
+        line2="なぜ受け入れられた？",
+    )
+
+
+# ============================================================
+# E: 顔クローズアップ（鼻から下の横顔）
+# ============================================================
+
+
+def make_thumb_e() -> Image.Image:
+    """Pexels 7290081（MART PRODUCTION）鼻〜唇の真横プロフィール。無地背景で目は完全にフレーム外。"""
+    return make_thumb(
+        PHOTOS / "face-closeup" / "face-closeup-2.jpg",
+        darken_amount=0.30,
+        line1="見た目の価値が",
+        line2="上がった社会",
+    )
+
+
+# ============================================================
+# F: 顔クローズアップ（首元まで含む正面寄り）
+# ============================================================
+
+
+def make_thumb_f() -> Image.Image:
+    """Pixabay 1834381 赤い唇・顎・素肌の肩までを正面寄りに写す。目は写らない構図。"""
+    return make_thumb(
+        PHOTOS / "face-closeup" / "face-closeup-3.jpg",
+        darken_amount=0.35,
+        line1="偏見を弱めたのは",
+        line2="ルッキズム？",
+    )
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
     c = make_thumb_c()
+    d = make_thumb_d()
+    e = make_thumb_e()
+    f = make_thumb_f()
 
-    for img, name in ((a, "thumb-A.png"), (b, "thumb-B.png"), (c, "thumb-C.png")):
+    for img, name in (
+        (a, "thumb-A.png"),
+        (b, "thumb-B.png"),
+        (c, "thumb-C.png"),
+        (d, "thumb-D.png"),
+        (e, "thumb-E.png"),
+        (f, "thumb-F.png"),
+    ):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
         print(f"{path}: {img.size} mode={img.mode} -> {size_kb:.1f} KB")
@@ -233,3 +288,12 @@ if __name__ == "__main__":
     contact_path = OUT / "thumb-contact.jpg"
     contact.save(contact_path, "JPEG", quality=90)
     print(f"{contact_path}: {contact.size} -> {contact_path.stat().st_size / 1024:.1f} KB")
+
+    contact_v2_top = make_contact_sheet([a, b, c])
+    contact_v2_bottom = make_contact_sheet([d, e, f])
+    contact_v2 = Image.new("RGB", (contact_v2_top.width, contact_v2_top.height + contact_v2_bottom.height), (0, 0, 0))
+    contact_v2.paste(contact_v2_top, (0, 0))
+    contact_v2.paste(contact_v2_bottom, (0, contact_v2_top.height))
+    contact_v2_path = OUT / "thumb-contact-v2.jpg"
+    contact_v2.save(contact_v2_path, "JPEG", quality=90)
+    print(f"{contact_v2_path}: {contact_v2.size} -> {contact_v2_path.stat().st_size / 1024:.1f} KB")
