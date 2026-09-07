@@ -401,7 +401,7 @@ scenes:
     cut_reason: 【次章への問い】雑踏の別カットに替えて賃金差への予告へ
     from: 28
     slot: 5
-    credit: 'Photo: Elina Sazonova / Pexels'
+    credit: 'Photo: Towfiqu barbhuiya / Pexels'
 - id: 4
   title: 美の経済的プレミアムと、フィルター時代の追試
   chapter_title: 美しさは、お金になるのか
@@ -803,7 +803,7 @@ scenes:
     cut_reason: 【推論①の帰結】鏡の別カットに替えて抵抗が弱まる、への接続
     from: 9
     slot: 3
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: Konna Jpg / Pexels'
   - type: image
     cut_reason: 【推論②の導入】リングライトの前で語る人（S1の再掲）
     from: 12
@@ -899,7 +899,7 @@ scenes:
     cut_reason: 【当てはめ】無人のポッドキャストスタジオに替えてS1の当事者への接続
     from: 4
     slot: 2
-    credit: 'Photo: Jakub Zerdzicki / Pexels'
+    credit: 'Photo: George Milton / Pexels'
   - type: image
     cut_reason: 【接続】ノートPCとマイクのデスクに替えて「肩書きより一人の人」への接続
     from: 6
@@ -921,11 +921,14 @@ scenes:
     from: 15
     slot: 6
     credit: 'Photo: cottonbro studio / Pexels'
-  - type: image
-    cut_reason: 【留保】サインの別カットに替えて環境批判との両立の一言へ
+  - type: board
+    cut_reason: 【両立する二つ】本人の選択の尊重と、安全や搾取の問題の指摘は両立する、を黒板の文字で
     from: 19
-    slot: 7
-    credit: 'Photo: Noel Aph / Pexels'
+    telop: '両立する二つ
+
+      ・本人の選択を尊重する
+
+      ・安全や搾取の問題を指摘する'
   - type: image
     cut_reason: 【接続】最初のサインの手元に戻し二つの変化の結びつきへ
     from: 21
