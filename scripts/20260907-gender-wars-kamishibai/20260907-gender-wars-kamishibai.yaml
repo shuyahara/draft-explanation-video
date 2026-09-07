@@ -75,10 +75,14 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 先に一つだけ言っておくとね。ああいう炎上に書き込んでいる人は、二百人に一人ほどなのよ。
+  - text: 先に一つだけ言っておくとね。
     speaker: めたん
     expression: smug
-    pause_after: 0.45
+    pause_after: 0.35
+  - text: ああいう炎上に書き込んでいる人は、二百人に一人ほどなのよ。
+    speaker: めたん
+    expression: smug
+    pause_after: 0.7
   - text: 二百人に一人！？ あんなに大勢いるように見えたのだ。
     speaker: ずんだもん
     expression: surprised
@@ -292,7 +296,7 @@ scenes:
   - text: でも画面の向こうになら、驚くほど軽い気持ちで書けてしまうのよ。
     speaker: めたん
     expression: serious
-    pause_after: 1.5
+    pause_after: 1.0
   - text: ……確かに、心の中でなら、僕もけっこう言ってるのだ。
     speaker: ずんだもん
     expression: normal
@@ -329,9 +333,13 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: だいたい二割くらいね。銃規制では19パーセント、同性婚では17パーセント。
+  - text: だいたい二割くらいね。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 銃規制では19パーセント、同性婚では17パーセント。
+    speaker: めたん
+    expression: normal
     pause_after: 0.35
   - text: 気候変動では24パーセントよ。
     speaker: めたん
@@ -503,7 +511,7 @@ scenes:
   - text: 拡散をいちばん強く押し上げるのは、怒りそのものより、相手を名指しする言葉なのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.0
+    pause_after: 1.4
   - text: じゃあ、怒りの言葉だけでは決まらないのだ？
     speaker: ずんだもん
     expression: thinking
@@ -629,7 +637,7 @@ scenes:
   - text: それが、怒りの言葉には、はっきりした関連が出なかったのよ。
     speaker: めたん
     expression: surprised
-    pause_after: 0.45
+    pause_after: 0.7
   - text: 出なかったのだ！？ じゃあ、何が効いてたのだ？
     speaker: ずんだもん
     expression: surprised
@@ -689,7 +697,7 @@ scenes:
   - text: 画面に上がってくるのは、私たちが見たいものというより、反応が多かったものなのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.0
+    pause_after: 1.6
   - text: でも、めたん。それなら政治の話も、宗教の話も、同じ仕組みが働くはずなのだ。
     speaker: ずんだもん
     expression: thinking
@@ -817,7 +825,7 @@ scenes:
   - text: その一方で、自分の気持ちを代わりに言ってくれた、と感じる人も出るのよ。
     speaker: めたん
     expression: normal
-    pause_after: 2.5
+    pause_after: 1.2
   - text: 責められたと思った人は言い返して、代弁だと思った人は応援するのだ。
     speaker: ずんだもん
     expression: thinking
@@ -1003,7 +1011,7 @@ scenes:
   - text: つまり、あれだけ荒れて見えても、書いているのはネット利用者の0.5パーセントなのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.5
+    pause_after: 1.5
   - text: ただし、これは炎上全体を対象にした数字ね。男女論だけを数えたものではないわ。
     speaker: めたん
     expression: explain
@@ -1016,9 +1024,13 @@ scenes:
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: 正直でよろしい。そこも意外よ。書き込む動機は、6割から7割が正義感だったの。
+  - text: 正直でよろしい。そこも意外よ。
     speaker: めたん
     expression: smile
+    pause_after: 0.35
+  - text: 書き込む動機は、6割から7割が正義感だったの。
+    speaker: めたん
+    expression: explain
     pause_after: 0.35
   - text: どんな人が多いかを見ると、ネットを使う人全体と比べて、男性の割合が高かったわ。
     speaker: めたん
@@ -1227,7 +1239,7 @@ scenes:
   - text: 怒りは、出せば消えるわけではないの。反応が返ると、また書きたくなるのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.0
+    pause_after: 1.5
   - text: じゃあ、あの人たちは目立ちたいだけなのだ？ 注目されて気持ちよくなってるのだ？
     speaker: ずんだもん
     expression: thinking
@@ -1334,8 +1346,6 @@ scenes:
   readings:
   - surface: 妥協
     reading: ダキョウ
-  - surface: 1270万件
-    reading: センニヒャクナナジュウマンケン
   - surface: 怒り
     reading: イカリ
   - surface: 270万件
@@ -1408,9 +1418,13 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: モア・イン・コモンは2019年に、2100人あまりへ、相手側をどう見ているか聞いたわ。
+  - text: モア・イン・コモンは2019年に調査をしたわ。
     speaker: めたん
     expression: normal
+    pause_after: 0.35
+  - text: 2100人あまりに、相手側をどう見ているか聞いたの。
+    speaker: めたん
+    expression: explain
     pause_after: 0.35
   - text: 人々は、対立する側のおよそ55パーセントが過激な意見を持っていると思っていたの。
     speaker: めたん
@@ -1439,7 +1453,7 @@ scenes:
   - text: 少数の声でも、実際の人数よりずっと大きく見える形で、画面に出てくるのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.0
+    pause_after: 1.2
   - text: 待つのだ。見え方が作られてるなら、怒ってる中身の方も、作りものなのだ？
     speaker: ずんだもん
     expression: confused
@@ -1499,30 +1513,30 @@ scenes:
     telop: More in Common (2019)：米国が対象
   - type: image
     cut_reason: 【思っていた割合】アメリカの街並み。相手の55％が過激だと思われていた
-    from: 19
+    from: 20
     slot: 6
     credit: TODO
   - type: image
     cut_reason: 【比較】アンケートの別カットに、二つの数字を並べたテロップを重ねる
-    from: 21
+    from: 22
     slot: 7
     credit: TODO
     telop: 思っていた＝相手の55％が過激／実際＝30％
   - type: image
     cut_reason: 【留保】アメリカの街並み（別カット）。日本の男女論の数字ではない、の一言
-    from: 23
+    from: 24
     slot: 8
     credit: TODO
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。間 2.0 秒
-    from: 27
+    from: 28
     slot: 9
     credit: TODO
   readings:
-  - surface: 2800件
-    reading: ニセンハッピャクケン
   - surface: モア・イン・コモン
     reading: モアインコモン
+  - surface: 2800件
+    reading: ニセンハッピャクケン
 - id: 10
   title: 怒りの中身まで、作りものなのか
   chapter_title: 怒りの中身まで、作りものなのか
@@ -1555,9 +1569,13 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: ジェンダーギャップ指数という指標があるわ。教育や経済、政治の男女差を順位にしたものね。
+  - text: ジェンダーギャップ指数という指標があるわ。
     speaker: めたん
     expression: normal
+    pause_after: 0.35
+  - text: 教育や経済、政治の男女差を順位にしたものね。
+    speaker: めたん
+    expression: explain
     pause_after: 0.35
   - text: 2024年、日本は146カ国中118位だったの。
     speaker: めたん
@@ -1614,18 +1632,22 @@ scenes:
   - text: 内閣府の調査では、無理やりに性交等をされた経験のある女性は、およそ14人に1人よ。
     speaker: めたん
     expression: serious
-    pause_after: 0.45
+    pause_after: 0.9
   - text: ……ひどい話なのだ。
     speaker: ずんだもん
     expression: sad
-    pause_after: 0.35
+    pause_after: 0.7
   - text: でも、めたん。男性が困っていることも、ちゃんとあると思うのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そうね。男性の被害は、見えにくいことが多いの。東京都が2025年に行った痴漢の調査があるわ。
+  - text: そうね。男性の被害は、見えにくいことが多いの。
     speaker: めたん
     expression: normal
+    pause_after: 0.35
+  - text: 東京都が2025年におこなった痴漢の調査があるわ。
+    speaker: めたん
+    expression: explain
     pause_after: 0.35
   - text: 約1万2千人に聞いて、被害にあったと答えた男性が8.5パーセントいたの。
     speaker: めたん
@@ -1650,7 +1672,7 @@ scenes:
   - text: 見え方が作られていても、怒りのもとまで作りものではないのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.5
+    pause_after: 2.0
   - text: 問題が本当にあるなら、やっぱり日本は二つに割れてるんじゃないのだ？
     speaker: ずんだもん
     expression: thinking
@@ -1753,8 +1775,6 @@ scenes:
     reading: チカン
   - surface: 合格率
     reading: ゴウカクリツ
-  - surface: 118位
-    reading: ヒャクジュウハチイ
   - surface: 14人に1人
     reading: ジュウヨニンニヒトリ
   - surface: 怒り
@@ -1790,7 +1810,7 @@ scenes:
   - text: それが、結果は逆だったのよ。
     speaker: めたん
     expression: surprised
-    pause_after: 0.45
+    pause_after: 0.8
   - text: 逆なのだ！？
     speaker: ずんだもん
     expression: surprised
@@ -1823,9 +1843,13 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 中高年が悪い、という話でもないの。集団の傾向であって、一人ひとりの評価ではないわ。
+  - text: 中高年が悪い、という話でもないの。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 集団の傾向であって、一人ひとりの評価ではないわ。
+    speaker: めたん
+    expression: normal
     pause_after: 0.35
   - text: ここまでの話とつなげると、こう見えてくるの。
     speaker: めたん
@@ -1870,7 +1894,7 @@ scenes:
   - text: そういう呼び名が広まると、そこに一つのまとまった集団がいるように見えてしまうのよ。
     speaker: めたん
     expression: serious
-    pause_after: 2.5
+    pause_after: 1.8
   - text: 本当は、いろんな人が、ばらばらにいるだけかもしれないのだ。
     speaker: ずんだもん
     expression: thinking
@@ -1981,9 +2005,13 @@ scenes:
   title: 結び
   chapter_title: null
   narration:
-  - text: それじゃあ、最初の疑問に戻りましょう。世の中は、本当にあんなに憎み合っているのか。
+  - text: それじゃあ、最初の疑問に戻りましょう。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 世の中は、本当にあんなに憎み合っているのか。
+    speaker: めたん
+    expression: serious
     pause_after: 0.45
   - text: 僕の言葉でまとめてみるのだ。
     speaker: ずんだもん
@@ -2052,7 +2080,7 @@ scenes:
   - text: 見え方が作られていても、問題そのものは消えないの。
     speaker: めたん
     expression: serious
-    pause_after: 0.35
+    pause_after: 0.7
   - text: 賃金の差も、家事の時間も、入試の点数も、画面の外にある問題として残っているのよ。
     speaker: めたん
     expression: normal
@@ -2064,7 +2092,7 @@ scenes:
   - text: そう。だから、画面の激しさに慣れて、現実の問題への関心まで失わないでほしいの。
     speaker: めたん
     expression: serious
-    pause_after: 0.45
+    pause_after: 0.8
   - text: 燃えてるのを見て、「またやってる」で終わらせないってことなのだ。
     speaker: ずんだもん
     expression: thinking
@@ -2073,9 +2101,13 @@ scenes:
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 画面で見たものを、世の中そのものだと思わないこと。それだけでも、だいぶ変わるわ。
+  - text: 画面で見たものを、世の中そのものだと思わないこと。
     speaker: めたん
     expression: normal
+    pause_after: 0.35
+  - text: それだけでも、だいぶ変わるわ。
+    speaker: めたん
+    expression: smile
     pause_after: 0.35
   - text: ここで言う声の大きさは、どれだけ目立つか、ということね。
     speaker: めたん

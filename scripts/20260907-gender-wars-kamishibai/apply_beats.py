@@ -142,6 +142,16 @@ GLOBAL_READINGS = [
     ("14人に1人", "ジュウヨニンニヒトリ"),
 ]
 EXTRA_READINGS: dict[int, list[tuple[str, str]]] = {}
+
+# 間レビュー（references/20260907-...-pause-review.md）の指摘のうち、既定値（話者交代 0.45・
+# 文境界 0.35）から動かす箇所。セグメント本文の一部で照合する。
+PAUSE_OVERRIDES: dict[int, list[tuple[str, float]]] = {
+    1: [("二百人に一人ほどなのよ", 0.7)],
+    5: [("はっきりした関連が出なかったのよ", 0.7)],
+    10: [("およそ14人に1人よ", 0.9), ("……ひどい話なのだ", 0.7)],
+    11: [("結果は逆だったのよ", 0.8)],
+    12: [("問題そのものは消えないの", 0.7), ("関心まで失わないでほしいの", 0.8)],
+}
 # ナレーション版（元台本）の readings も、表記が本文に含まれるシーンへ転記する。
 _V5 = Path("C:/Users/shuya/Projects/draft-explanation-video/scripts/20260824-net-gender-wars/20260824-net-gender-wars.yaml")
 if _V5.exists():
@@ -624,6 +634,12 @@ def main() -> None:
             beats.append(b)
         scene["beats"] = beats
         total += len(beats)
+        for frag, sec in PAUSE_OVERRIDES.get(sid, []):
+            hit = [seg for seg in scene["narration"] if frag in seg["text"]]
+            if len(hit) != 1:
+                MISSING.append(f"scene {sid}: pause override matched {len(hit)} segments: {frag!r}")
+                continue
+            hit[0]["pause_after"] = sec
         text = "".join(seg["text"] for seg in scene["narration"])
         extra = [(s, r) for s, r in EXTRA_READINGS.get(sid, []) + GLOBAL_READINGS if s in text]
         if extra:
