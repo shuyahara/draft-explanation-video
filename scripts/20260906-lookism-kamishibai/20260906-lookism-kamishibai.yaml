@@ -110,15 +110,15 @@ scenes:
     slot: 4
     credit: 'Photo: Beyza Kaplan / Pexels'
   - type: image
-    cut_reason: 【いま】書店の平積み（題は読めない）でファッションのお手本として語られる現在へ
+    cut_reason: 【いま】ファッションの撮影を受ける人をスマホで撮る場面。お手本として語られる現在へ
     from: 11
     slot: 5
-    credit: 'Photo: Eden Constantino / Pexels'
+    credit: 'Photo: Ron Lach / Pexels'
   - type: image
-    cut_reason: 【問い返し】書店の別カットに替えて「どうしてだと思う？」の間へ
+    cut_reason: 【問い返し】服を並べてスマホで撮る手元に替えて「どうしてだと思う？」の間へ
     from: 15
     slot: 6
-    credit: 'Photo: Serra Nur Çevikdal / Pexels'
+    credit: 'Photo: Marcus Aurelius / Pexels'
   - type: board
     cut_reason: 【ボツの理由】「時代が変わったから」は何も説明していない、を黒板の文字で
     from: 19
@@ -666,10 +666,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【入口】写真中心のSNSを開いたときに最初に目に入るもの。写真グリッドをスクロールする手元
+    cut_reason: 【入口】写真中心のSNSを開いたときに最初に目に入るもの。人物の写真が並ぶインスタグラムの画面を持つ手元
     from: 1
     slot: 1
-    credit: 'Photo: Kerde Severin / Pexels'
+    credit: 'Photo: Brian Ramirez / Pexels'
     telop: Di Gesto ら 2021 フィレンツェ大学
   - type: diagram
     cut_reason: '【chain: 写真SNS→整形容認】4項目を「心まで忙しいのだ」までに全部出す。キャプションは関連であり順番の証明ではない旨'
