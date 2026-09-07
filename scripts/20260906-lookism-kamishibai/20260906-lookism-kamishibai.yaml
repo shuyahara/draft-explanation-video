@@ -388,12 +388,15 @@ scenes:
     cut_reason: 【日常への引き戻し】街の雑踏（再掲）で「誰でもやってしまう」を示す
     from: 22
     slot: 3
-    credit: 'Photo: Francesco Rosati / Pexels'
-  - type: image
-    cut_reason: 【まとめ】雑踏の別カットに替えて結びつけの一言へ
-    from: 25
-    slot: 4
     credit: 'Photo: Pixabay'
+  - type: board
+    cut_reason: 【覚えておくこと】美しい人は中身もきっと良い、と無意識に結びつける。章の要点を黒板の文字で
+    from: 25
+    telop: '覚えておくこと
+
+      「美しい人は、中身もきっと良い」
+
+      ＝ 無意識に結びつけてしまう'
   - type: image
     cut_reason: 【次章への問い】雑踏の別カットに替えて賃金差への予告へ
     from: 28
@@ -538,7 +541,7 @@ scenes:
 
       ＝ 学歴や経験を考慮しても残る
 
-      　見た目による賃金の差（＋5% ／ −7%）'
+      　見た目による賃金の差（＋5% ／ －7%）'
   - type: image
     cut_reason: 【sorting】握手の手元に替えて職業選択だけでは説明しきれない点へ
     from: 18
@@ -798,7 +801,7 @@ scenes:
     cut_reason: 【推論①の帰結】鏡の別カットに替えて抵抗が弱まる、への接続
     from: 9
     slot: 3
-    credit: 'Photo: Dmitriy Tarasenko / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【推論②の導入】リングライトの前で語る人（S1の再掲）
     from: 12
@@ -918,7 +921,7 @@ scenes:
     cut_reason: 【留保】サインの別カットに替えて環境批判との両立の一言へ
     from: 19
     slot: 7
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: Noel Aph / Pexels'
   - type: image
     cut_reason: 【接続】最初のサインの手元に戻し二つの変化の結びつきへ
     from: 21
