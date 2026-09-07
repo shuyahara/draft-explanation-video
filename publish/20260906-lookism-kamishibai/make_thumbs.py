@@ -329,6 +329,23 @@ def make_thumb_j() -> Image.Image:
     )
 
 
+
+# ============================================================
+# K: G と同じ写真で文字「キャバ嬢・AV女優は／なぜ受け入れられた？」（ユーザー決定 2026-09-07）
+# ============================================================
+
+
+def make_thumb_k() -> Image.Image:
+    """glamour-dress-1（G と同一写真）に問いの見出し。人物名・仕事名をサムネにも出し、
+    タイトルの問いと同じ形で興味を引く。"""
+    return make_thumb(
+        PHOTOS / "glamour-dress" / "glamour-dress-1.jpg",
+        darken_amount=0.30,
+        line1="キャバ嬢・AV女優は",
+        line2="なぜ受け入れられた？",
+    )
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
@@ -340,6 +357,7 @@ if __name__ == "__main__":
     h = make_thumb_h()
     i_ = make_thumb_i()
     j = make_thumb_j()
+    k = make_thumb_k()
 
     for img, name in (
         (a, "thumb-A.png"),
@@ -352,6 +370,7 @@ if __name__ == "__main__":
         (h, "thumb-H.png"),
         (i_, "thumb-I.png"),
         (j, "thumb-J.png"),
+        (k, "thumb-K.png"),
     ):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
