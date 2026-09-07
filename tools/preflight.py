@@ -80,6 +80,7 @@ LONG_CUE_MAX_CHARS = 50
 """字幕キューがこれを超えると2行に収まらず末尾が切れる（CLAUDE.md 指定の目安）。"""
 
 BOARD_MAX_SECONDS = 10.0
+BOARD_MULTILINE_MAX_SECONDS = 20.0  # 用語＝説明文の複数行ボード（telop に改行あり）は内容があるので 20 秒まで許容（2026-09-07 ユーザー要望）
 """`board` ビート（黒板・人形だけの区間）の推定尺がこれを超えると単調に見える目安。"""
 
 IMAGE_DIAGRAM_REFERENCE_MAX_SECONDS = 45.0
@@ -451,13 +452,19 @@ def check_beat_durations(document: VideoDocument) -> DurationFindings:
 
     board_over: list[str] = []
     image_diagram_over: list[str] = []
+    multiline_boards = {
+        (scene.id, beat.from_)
+        for scene in document.scenes
+        for beat in (scene.beats or [])
+        if beat.type == "board" and beat.telop and "\n" in beat.telop
+    }
     for row in build_beat_numbering(document):
         cue = f"キュー{row.cue_number}" if row.cue_number is not None else "キュー-"
         line = (
             f"シーン{row.scene_id}: {cue} {row.kind} 約{row.estimated_seconds:.1f}秒"
             f" — {row.cut_reason_prefix}"
         )
-        if row.kind == "board" and row.estimated_seconds > BOARD_MAX_SECONDS:
+        if row.kind == "board" and row.estimated_seconds > (BOARD_MULTILINE_MAX_SECONDS if (row.scene_id, row.cue_number) in multiline_boards else BOARD_MAX_SECONDS):
             board_over.append(line)
         elif row.kind in ("image", "diagram") and row.estimated_seconds > IMAGE_DIAGRAM_REFERENCE_MAX_SECONDS:
             image_diagram_over.append(line)
@@ -572,7 +579,7 @@ def check_label_lengths(surfaces: list[TextSurface]) -> list[str]:
 
     findings: list[str] = []
     for surface in surfaces:
-        if surface.max_length is not None and len(surface.text) > surface.max_length:
+        if surface.max_length is not None and max(len(line) for line in surface.text.split("\n")) > surface.max_length:
             findings.append(
                 f"シーン{surface.scene_id} {surface.location}: {len(surface.text)}字"
                 f"（上限{surface.max_length}字）— 「{surface.text}」"

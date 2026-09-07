@@ -119,21 +119,25 @@ scenes:
     from: 15
     slot: 6
     credit: 'Photo: Serra Nur Çevikdal / Pexels'
-  - type: image
-    cut_reason: 【決め文】書店の別カットに替えて「時代が変わったから」のボツへ
+  - type: board
+    cut_reason: 【ボツの理由】「時代が変わったから」は何も説明していない、を黒板の文字で
     from: 19
-    slot: 7
-    credit: 'Photo: wal_172619 / Pexels'
+    telop: '「時代が変わったから」
+
+      ＝ 何も説明していない'
   - type: image
     cut_reason: 【本題への導入】書店1カット目に戻し研究を根拠にする宣言へ
     from: 21
     slot: 8
-    credit: 'Photo: Eden Constantino / Pexels'
-  - type: image
-    cut_reason: 【予告】書店の別カットに替えて外見の評価・お金の話への予告へ
+    credit: 'Photo: Pixabay'
+  - type: board
+    cut_reason: 【この動画で確かめること】外見の評価と、外見にかける手間やお金の見方の二つを黒板に
     from: 22
-    slot: 9
-    credit: 'Photo: Serra Nur Çevikdal / Pexels'
+    telop: 'この十数年で変わったこと
+
+      ① 私たちは外見をどう評価するか
+
+      ② 外見にお金や手間をかけることの見方'
 - id: 2
   title: 「受け入れられている」の定義と問い直し
   chapter_title: 『受け入れられている』とは何か
@@ -222,11 +226,12 @@ scenes:
     from: 13
     slot: 5
     credit: 'Photo: Francesco Rosati / Pexels'
-  - type: image
-    cut_reason: 【まだ足りない】雑踏の別カットに替えて「なぜ多様性が」の問い直しへ
+  - type: board
+    cut_reason: 【問い直し】「多様性の時代」は答えの先送り。残る問いを黒板の文字で
     from: 16
-    slot: 6
-    credit: 'Photo: Pixabay'
+    telop: '「多様性の時代になったから」
+
+      → なぜ多様性が認められるようになった？'
   - type: image
     cut_reason: 【注目する変化】雑踏の別カットに替えて「大きいと考える変化」の予告へ
     from: 21
@@ -238,11 +243,12 @@ scenes:
     slot: 9
     credit: 'Photo: Kaboompics.com / Pexels'
     telop: 写真SNS → 外見が評価や収入につながりやすくなった
-  - type: image
-    cut_reason: 【疑問】雑踏1カット目に戻しルッキズムの語義への疑問へ
+  - type: board
+    cut_reason: 【用語】ルッキズム＝見た目で人を判断・評価すること。定義を黒板の文字で
     from: 25
-    slot: 8
-    credit: 'Photo: Francesco Rosati / Pexels'
+    telop: 'ルッキズム
+
+      ＝ 見た目で人を判断・評価すること'
 - id: 3
   title: ハロー効果（土台の心理）
   chapter_title: 見た目は、中身の評価まで変えるのか
@@ -319,11 +325,16 @@ scenes:
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
-  - type: image
-    cut_reason: 【ハロー効果】机に並べた人物写真のプリント（顔は小さいか裏返し）
+  - type: board
+    cut_reason: 【用語】ハロー効果の定義を黒板の文字で（目立つ特徴→印象に引っぱられ→無関係な性格・能力まで同じ方向に評価）
     from: 1
-    slot: 1
-    credit: 'Photo: John Barnard / Pexels'
+    telop: 'ハロー効果
+
+      ＝ 目立つ特徴が一つあると
+
+      　その印象に引っぱられて
+
+      　関係ない性格や能力まで同じ方向に評価する'
   - type: image
     cut_reason: 【ディオン1972の導入】写真箱の別カットに替えて出典の実験へ
     from: 5
@@ -520,11 +531,14 @@ scenes:
           value: 0.0
         - label: 平均以上
           value: 4.9
-  - type: image
-    cut_reason: 【美の経済的プレミアム】統計的に条件を考慮しても差が残る話へ。面接室（後ろ姿）
+  - type: board
+    cut_reason: 【用語】美の経済的プレミアム＝条件を考慮しても残る見た目による賃金差。黒板の文字で
     from: 14
-    slot: 3
-    credit: 'Photo: Pixabay'
+    telop: '美の経済的プレミアム
+
+      ＝ 学歴や経験を考慮しても残る
+
+      　見た目による賃金の差（＋5% ／ −7%）'
   - type: image
     cut_reason: 【sorting】握手の手元に替えて職業選択だけでは説明しきれない点へ
     from: 18
@@ -534,7 +548,7 @@ scenes:
     cut_reason: 【接続】握手の別カットに替えてキャバ嬢との関連づけへ
     from: 21
     slot: 5
-    credit: 'Photo: ANTONI SHKRABA production / Pexels'
+    credit: 'Photo: Noel Aph / Pexels'
   - type: image
     cut_reason: 【加工が当たり前の今への疑問】PC の前で SNS を見る手元。写真が加工できると皆が知る時代でも写真で中身を決めるか、の問いへ
     from: 25
@@ -699,11 +713,14 @@ scenes:
     from: 27
     slot: 4
     credit: 'Photo: Kaboompics.com / Pexels'
-  - type: image
-    cut_reason: 【切り替え】自撮りする手元の別カットに替えて推論パートへの予告へ
+  - type: board
+    cut_reason: 【区切り】研究で分かったこと／ここからは推論、を黒板の文字で
     from: 30
-    slot: 5
-    credit: 'Photo: Mizuno K / Pexels'
+    telop: 'ここまで：研究で分かっていること
+
+      　写真SNSが見た目の評価と、見た目を変える行動を強めた
+
+      ここから：研究を材料にした推論'
 - id: 6
   title: 整形容認から、見た目を仕事にする人への見方へ（推論）
   chapter_title: null
@@ -776,23 +793,24 @@ scenes:
     cut_reason: 【問い返し】鏡の別カットに替えて「美しさを手に入れてもいい」の確認へ
     from: 5
     slot: 2
-    credit: 'Photo: Konna Jpg / Pexels'
+    credit: 'Photo: Anna Tarazevich / Pexels'
   - type: image
     cut_reason: 【推論①の帰結】鏡の別カットに替えて抵抗が弱まる、への接続
     from: 9
     slot: 3
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: Dmitriy Tarasenko / Pexels'
   - type: image
     cut_reason: 【推論②の導入】リングライトの前で語る人（S1の再掲）
     from: 12
     slot: 4
     credit: 'Photo: Liza Summer / Pexels'
     telop: 推論②：ハロー効果→個人への偏見→仕事の見方も変わる
-  - type: image
-    cut_reason: 【限定】カメラを構える後ろ姿に替えて「まず一人ひとりへの偏見」の限定へ
-    from: 16
-    slot: 5
-    credit: 'Photo: Pixabay'
+  - type: board
+    cut_reason: 【推論②の筋】写真SNSでは見た目→人柄→肩書きの順に目に入る→ハロー効果が肩書きへの偏見を弱める、を黒板の文字で
+    from: 15
+    telop: '写真SNSでは 見た目 → 人柄 → 肩書き の順に目に入る
+
+      → ハロー効果が肩書きへの偏見を弱める'
   - type: image
     cut_reason: 【接続】横顔でリングライトに取り付ける場面に替えて仕事への評価への接続へ
     from: 19
@@ -895,12 +913,12 @@ scenes:
     cut_reason: 【合いの手】サインの別カットに替えて「外野が責めるな」の一言へ
     from: 15
     slot: 6
-    credit: 'Photo: Elina Sazonova / Pexels'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【留保】サインの別カットに替えて環境批判との両立の一言へ
     from: 19
     slot: 7
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【接続】最初のサインの手元に戻し二つの変化の結びつきへ
     from: 21
