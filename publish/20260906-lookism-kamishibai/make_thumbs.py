@@ -264,6 +264,54 @@ def make_thumb_f() -> Image.Image:
     )
 
 
+# ============================================================
+# G: 服装が煌びやかな女性（クリスタルの高襟チョーカー・イヤリング、口元まで）
+# ============================================================
+
+
+def make_thumb_g() -> Image.Image:
+    """Pexels 34362934（Andrea Prochilo）クリスタルの高襟チョーカーに手を添える口元まで
+    のアップ。目は完全にフレーム外。"""
+    return make_thumb(
+        PHOTOS / "glamour-dress" / "glamour-dress-1.jpg",
+        darken_amount=0.30,
+        line1="性産業×SNS×",
+        line2="ルッキズム",
+    )
+
+
+# ============================================================
+# H: 服装が煌びやかな女性（赤いドレス・ゴールドネックレス、首元まで）
+# ============================================================
+
+
+def make_thumb_h() -> Image.Image:
+    """Pexels 35841164（Vika Glitter）赤いドレスにゴールドの装飾ネックレス、顎先までの
+    アップ。目は完全にフレーム外。"""
+    return make_thumb(
+        PHOTOS / "glamour-dress" / "glamour-dress-2.jpg",
+        darken_amount=0.30,
+        line1="性産業×SNS×",
+        line2="ルッキズム",
+    )
+
+
+# ============================================================
+# I: G と同じ写真で文字だけ比較（キャバ嬢・AV女優 表記）
+# ============================================================
+
+
+def make_thumb_i() -> Image.Image:
+    """glamour-dress-1（G と同一写真）で見出しを「キャバ嬢・AV女優×SNS×ルッキズム」に
+    差し替えた比較案。"""
+    return make_thumb(
+        PHOTOS / "glamour-dress" / "glamour-dress-1.jpg",
+        darken_amount=0.30,
+        line1="キャバ嬢・AV女優",
+        line2="×SNS×ルッキズム",
+    )
+
+
 if __name__ == "__main__":
     a = make_thumb_a()
     b = make_thumb_b()
@@ -271,6 +319,9 @@ if __name__ == "__main__":
     d = make_thumb_d()
     e = make_thumb_e()
     f = make_thumb_f()
+    g = make_thumb_g()
+    h = make_thumb_h()
+    i_ = make_thumb_i()
 
     for img, name in (
         (a, "thumb-A.png"),
@@ -279,6 +330,9 @@ if __name__ == "__main__":
         (d, "thumb-D.png"),
         (e, "thumb-E.png"),
         (f, "thumb-F.png"),
+        (g, "thumb-G.png"),
+        (h, "thumb-H.png"),
+        (i_, "thumb-I.png"),
     ):
         path = save(img, name)
         size_kb = path.stat().st_size / 1024
@@ -297,3 +351,18 @@ if __name__ == "__main__":
     contact_v2_path = OUT / "thumb-contact-v2.jpg"
     contact_v2.save(contact_v2_path, "JPEG", quality=90)
     print(f"{contact_v2_path}: {contact_v2.size} -> {contact_v2_path.stat().st_size / 1024:.1f} KB")
+
+    contact_v3_row1 = make_contact_sheet([a, b, c])
+    contact_v3_row2 = make_contact_sheet([d, e, f])
+    contact_v3_row3 = make_contact_sheet([g, h, i_])
+    contact_v3 = Image.new(
+        "RGB",
+        (contact_v3_row1.width, contact_v3_row1.height + contact_v3_row2.height + contact_v3_row3.height),
+        (0, 0, 0),
+    )
+    contact_v3.paste(contact_v3_row1, (0, 0))
+    contact_v3.paste(contact_v3_row2, (0, contact_v3_row1.height))
+    contact_v3.paste(contact_v3_row3, (0, contact_v3_row1.height + contact_v3_row2.height))
+    contact_v3_path = OUT / "thumb-contact-v3.jpg"
+    contact_v3.save(contact_v3_path, "JPEG", quality=90)
+    print(f"{contact_v3_path}: {contact_v3.size} -> {contact_v3_path.stat().st_size / 1024:.1f} KB")
