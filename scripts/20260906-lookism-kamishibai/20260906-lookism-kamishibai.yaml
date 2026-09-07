@@ -536,10 +536,10 @@ scenes:
     slot: 5
     credit: 'Photo: ANTONI SHKRABA production / Pexels'
   - type: image
-    cut_reason: 【フィルター時代への疑問】面接室に戻し加工で差が消えるかという問いへ
+    cut_reason: 【加工が当たり前の今への疑問】PC の前で SNS を見る手元。写真が加工できると皆が知る時代でも写真で中身を決めるか、の問いへ
     from: 25
     slot: 6
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【追試の導入】Gulati 2024 の美顔フィルター実験。自撮りする手元（顔はぼけて背景）
     from: 29
