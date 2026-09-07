@@ -722,10 +722,10 @@ scenes:
     slot: 1
     credit: 'Photo: Suzy Hazelwood / Pexels'
   - type: image
-    cut_reason: 【比べ方】紙面の別カットで、見出しを二通り用意する話へ
+    cut_reason: 【比べ方】紙面の別カットで、見出しを二通り用意する話へ（旧候補はカップの商品名が読めた）
     from: 6
     slot: 2
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Mike van Schoonderwalt / Pexels'
   - type: image
     cut_reason: 【研究】大学の建物（別カット）。570万クリックの分析へ
     from: 9
@@ -797,7 +797,7 @@ scenes:
     slot: 7
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
-    cut_reason: 【次章への問い】人混みの遠景。政治・宗教でも同じ仕組みのはず、の問いへ
+    cut_reason: 【次章への問い】人混みの遠景（脚のみ）。政治・宗教でも同じ仕組みのはず、の問いへ
     from: 37
     slot: 8
     credit: 'Photo: Pixabay'
@@ -948,7 +948,7 @@ scenes:
     credit: 'Photo: Tahir Osman / Pexels'
     telop: 瀬地山角『炎上CMでよみとくジェンダー論』
   - type: image
-    cut_reason: 【役割の描き方】流し台の手元。役割分担の描かれ方へ
+    cut_reason: 【役割の描き方】台所。役割分担の描かれ方へ
     from: 15
     slot: 5
     credit: 'Photo: Pixabay'
@@ -1148,10 +1148,10 @@ scenes:
         text: 上位一割が投稿の97％
         at: 29
   - type: image
-    cut_reason: 【海外②】アメリカの街並み（別カット）。スイスのヘイトスピーチ分析
+    cut_reason: 【海外②】研究資料の束。スイスのヘイトスピーチ分析（アメリカの街並みだと別の国に見えるため差し替え）
     from: 30
     slot: 7
-    credit: 'Photo: dumitru B / Pexels'
+    credit: 'Photo: Kindel Media / Pexels'
     telop: Gennaro et al. (2025)：上位1％が46％
   - type: image
     cut_reason: 【次章への問い】距離を置いて立つ二人（顔なし）。なぜ引かないのか、へ
@@ -1305,10 +1305,10 @@ scenes:
     slot: 3
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【もう一つの力】大学の建物。イェールの研究へ
+    cut_reason: 【もう一つの力】研究資料の束。イェールの研究へ（大学の建物は S3 と同じ写真になり別大学の誤認を招くため差し替え）
     from: 11
     slot: 4
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Willfried Wende / Pexels'
     telop: Brady et al. (2021) Sci. Adv.
   - type: diagram
     cut_reason: '【循環: 社会的強化学習】怒りを書く→反応がつく→その後も書きやすくなる'
@@ -1487,7 +1487,7 @@ scenes:
     slot: 2
     credit: 'Photo: Mak_ jp / Pexels'
   - type: image
-    cut_reason: 【押し上げ】人混みの遠景。少ない声が繰り返し目立つ場所に出てくる
+    cut_reason: 【押し上げ】人混みの遠景（脚のみ）。少ない声が繰り返し目立つ場所に出てくる
     from: 7
     slot: 3
     credit: 'Photo: Pixabay'
@@ -1777,10 +1777,10 @@ scenes:
 
       ＝ 一つ一つの投稿が正しい、という意味ではない'
   - type: image
-    cut_reason: 【決め文】硬貨と紙幣。画面の外に残る問題の画で保持。間 2.5 秒
+    cut_reason: 【決め文】人混みの遠景（ブレ）。現実に生きている人たちの画で保持。間 2.5 秒
     from: 41
     slot: 8
-    credit: 'Photo: Breakingpic / Pexels'
+    credit: 'Photo: Pixabay'
   readings:
   - surface: 賃金
     reading: チンギン
@@ -1966,10 +1966,10 @@ scenes:
         - r2
         at: 10
   - type: image
-    cut_reason: 【裏付け】ニュースサイトの別カット。白書でも紹介されている話へ
+    cut_reason: 【裏付け】資料を読む手元。白書でも紹介されている話へ
     from: 15
     slot: 4
-    credit: 'Photo: weCare Media / Pexels'
+    credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【論の区切り】この調査から言えないことを黒板の文字で（番号付き）
     from: 18
@@ -1979,7 +1979,7 @@ scenes:
 
       ② 集団の傾向であって、一人ひとりの評価ではない'
   - type: image
-    cut_reason: 【整理】人混みの遠景。全体と目立つ場所の違いへ
+    cut_reason: 【整理】人混みの遠景（脚のみ）。全体と目立つ場所の違いへ
     from: 20
     slot: 5
     credit: 'Photo: Pixabay'
@@ -2146,7 +2146,7 @@ scenes:
       items:
       - id: word
         text: 広がる言葉
-        at: 5
+        at: 4
       - id: order
         text: 反応順の画面
         at: 6
@@ -2187,7 +2187,7 @@ scenes:
     credit: 'Photo: Pixabay'
     telop: 賃金の差・家事の時間・入試の点数は、画面の外に残る
   - type: image
-    cut_reason: 【関心を失わない】流し台の手元。現実の問題の画へ
+    cut_reason: 【関心を失わない】洗い物の手元。現実の問題の画へ
     from: 23
     slot: 6
     credit: 'Photo: Pixabay'
