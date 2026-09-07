@@ -11,8 +11,8 @@ YAML に貼り直す。
 
 図解 10 箇所（型・layout の重複は各 2 回まで、隣接する図解ビートに同じ layout を置かない）:
   S3  sketch 3列2行（ブレイディの分析: 対象→操作→結果＋話題別の数字）
-  S4  chart bar（同一研究内での比較。動画で唯一の chart）
-  S5  sketch 1行3列（見出しを開く行動: 否定的な言葉・怒り・悲しみ）
+  S4  sketch 1行2列（同一研究内での比較。1倍 対 6.7倍）
+  S5  sketch 3列2行（見出しを開く行動: 否定的な言葉・怒り・悲しみと、その結果）
   S6  sketch 2列2行（政治宗教と男女の話の対比）
   S7  narrative row（発信は上位一割に集中）
   S8  narrative chain（怒りを書く→反応→また書きやすくなる）
@@ -37,32 +37,61 @@ YAML_PATH = Path(__file__).with_name("20260907-gender-wars-kamishibai.yaml")
 # 出典表記（字幕帯右下）。候補 manifest（assets-kamishibai/photos/candidates-genderwars/manifest.md）
 # の作者・ライセンスから採用分を転記する。TODO は素材確定後に差し替える。
 CREDIT = {
-    "bed1": "TODO", "bed2": "TODO",
-    "cmt1": "TODO", "cmt2": "TODO", "cmt3": "TODO",
-    "bill1": "TODO",
-    "sink1": "TODO", "sink2": "TODO",
-    "news1": "TODO", "news2": "TODO", "news3": "TODO",
-    "f2f1": "TODO",
-    "type1": "TODO", "type2": "TODO",
-    "univ1": "TODO", "univ2": "TODO", "univ3": "TODO",
-    "hall1": "TODO",
-    "paper1": "TODO", "paper2": "TODO", "paper3": "TODO",
-    "srv1": "TODO", "srv2": "TODO",
-    "phone1": "TODO", "phone2": "TODO", "phone3": "TODO",
-    "elec1": "TODO",
-    "ad1": "TODO", "ad2": "TODO",
-    "form1": "TODO", "form2": "TODO", "form3": "TODO",
-    "ans1": "TODO", "ans2": "TODO",
-    "mtg1": "TODO",
-    "us1": "TODO", "us2": "TODO",
-    "apart1": "TODO", "apart2": "TODO",
-    "bag1": "TODO", "bag2": "TODO",
-    "neon1": "TODO",
-    "crowd1": "TODO", "crowd2": "TODO", "crowd3": "TODO",
-    "exam1": "TODO", "exam2": "TODO",
-    "train1": "TODO", "train2": "TODO",
-    "coin1": "TODO", "coin2": "TODO",
-    "close1": "TODO",
+    # Pexels License / Pixabay License（いずれも商用可・帰属は任意だが作者名を表示する）
+    "bed1": "Photo: Jakub Zerdzicki / Pexels",
+    "bed2": "Photo: cottonbro studio / Pexels",
+    "cmt1": "Photo: thomas vanhaecht / Pexels",
+    "cmt2": "Photo: Uriel Mont / Pexels",
+    "cmt3": "Photo: William Fortunato / Pexels",
+    "bill1": "Photo: Kaboompics.com / Pexels",
+    "sink1": "Photo: Pixabay",
+    "sink2": "Photo: Pixabay",
+    "news1": "Photo: Pixabay",
+    "news2": "Photo: Michael Burrows / Pexels",
+    "news3": "Photo: weCare Media / Pexels",
+    "f2f1": "Photo: Pavel Danilyuk / Pexels",
+    "f2f2": "Photo: Pixabay",
+    "type1": "Photo: RDNE Stock project / Pexels",
+    "type2": "Photo: RDNE Stock project / Pexels",
+    "type3": "Photo: RDNE Stock project / Pexels",
+    "univ1": "Photo: Pixabay",
+    "univ2": "Photo: Pixabay",
+    "univ3": "Photo: Paul Loh / Pexels",
+    "hall1": "Photo: Pixabay",
+    "paper1": "Photo: Mike van Schoonderwalt / Pexels",
+    "paper2": "Photo: Suzy Hazelwood / Pexels",
+    "paper3": "Photo: Pixabay",
+    "srv1": "Photo: Pixabay",
+    "srv2": "Photo: panumas nikhomkhai / Pexels",
+    "phone1": "Photo: JESHOOTS / Pexels",
+    "phone2": "Photo: Sound On / Pexels",
+    "phone3": "Photo: Jakub Zerdzicki / Pexels",
+    "elec1": "Photo: Edmond Dantes / Pexels",
+    "ad1": "Photo: Tahir Osman / Pexels",
+    "ad2": "Photo: Clarence Chan / Pexels",
+    "form1": "Photo: Pixabay",
+    "form2": "Photo: Kindel Media / Pexels",
+    "form3": "Photo: Willfried Wende / Pexels",
+    "ans1": "Photo: Pixabay",
+    "ans2": "Photo: RDNE Stock project / Pexels",
+    "mtg1": "Photo: Pixabay",
+    "us1": "Photo: Pixabay",
+    "us2": "Photo: dumitru B / Pexels",
+    "apart1": "Photo: miniperde / Pexels",
+    "apart2": "Photo: Georgy Druzhinin / Pexels",
+    "bag1": "Photo: Julia Larson / Pexels",
+    "bag2": "Photo: Ivan S / Pexels",
+    "neon1": "Photo: Mak_ jp / Pexels",
+    "crowd1": "Photo: Pixabay",
+    "crowd2": "Photo: Pixabay",
+    "crowd3": "Photo: Pixabay",
+    "exam1": "Photo: Andy Barbour / Pexels",
+    "exam2": "Photo: Andy Barbour / Pexels",
+    "train1": "Photo: Pixabay",
+    "train2": "Photo: Kassandre Pedro / Pexels",
+    "coin1": "Photo: Breakingpic / Pexels",
+    "coin2": "Photo: Pixabay",
+    "close1": "Photo: Roberto Cervantes / Pexels",
 }
 
 # 採用元ファイル（candidates-genderwars/{キー}/{キー}-N.jpg）→ render-assets へ配置するときの対応。
@@ -78,24 +107,29 @@ SOURCE_FILE = {
     "news1": "news-site/news-site-1.jpg",
     "news2": "news-site/news-site-2.jpg",
     "news3": "news-site/news-site-3.jpg",
-    "f2f1": "face-to-face/face-to-face-1.jpg",
+    # 候補1（並んで歩くカップル）は「面と向かって話す」と合わないので候補3（向かい合って座る二人）に差し替え
+    "f2f1": "face-to-face/face-to-face-3.jpg",
+    "f2f2": "face-to-face/face-to-face-2.jpg",
     "type1": "typing-phone/typing-phone-1.jpg",
     "type2": "typing-phone/typing-phone-2.jpg",
+    "type3": "typing-phone/typing-phone-3.jpg",
     "univ1": "university-building/university-building-1.jpg",
     "univ2": "university-building/university-building-2.jpg",
     "univ3": "university-building/university-building-3.jpg",
     "hall1": "lecture-hall/lecture-hall-1.jpg",
-    "paper1": "newspaper-headlines/newspaper-headlines-1.jpg",
+    # 見出しの判読性が低い順に paper1 → paper2 → paper3。見出しが主題になる S5 だけ読める方を使う
+    "paper1": "newspaper-headlines/newspaper-headlines-3.jpg",
     "paper2": "newspaper-headlines/newspaper-headlines-2.jpg",
-    "paper3": "newspaper-headlines/newspaper-headlines-3.jpg",
+    "paper3": "newspaper-headlines/newspaper-headlines-1.jpg",
     "srv1": "server-room/server-room-1.jpg",
     "srv2": "server-room/server-room-2.jpg",
     "phone1": "phone-viewing/phone-viewing-1.jpg",
     "phone2": "phone-viewing/phone-viewing-2.jpg",
     "phone3": "phone-viewing/phone-viewing-3.jpg",
     "elec1": "election-board/election-board-1.jpg",
-    "ad1": "billboard/billboard-1.jpg",
-    "ad2": "billboard/billboard-2.jpg",
+    # billboard-1 は広告スクリーンの顔が大きいので不採用。billboard-3 は neon-ads-1 とほぼ同じ画なので不採用
+    "ad1": "billboard/billboard-2.jpg",
+    "ad2": "neon-ads/neon-ads-3.jpg",
     "form1": "survey-forms/survey-forms-1.jpg",
     "form2": "survey-forms/survey-forms-2.jpg",
     "form3": "survey-forms/survey-forms-3.jpg",
@@ -116,8 +150,9 @@ SOURCE_FILE = {
     "exam2": "exam-desk/exam-desk-2.jpg",
     "train1": "train-platform/train-platform-1.jpg",
     "train2": "train-platform/train-platform-2.jpg",
-    "coin1": "coins-wages/coins-wages-1.jpg",
-    "coin2": "coins-wages/coins-wages-2.jpg",
+    # 候補2は「SALARY」のスクラブル文字が読めるので不採用。差の大きさが見える候補3を決め文に使う
+    "coin1": "coins-wages/coins-wages-3.jpg",
+    "coin2": "coins-wages/coins-wages-1.jpg",
     "close1": "phone-face-down/phone-face-down-1.jpg",
 }
 
@@ -261,7 +296,7 @@ BEATS = {
                 [
                     [
                         cell("subj", text="投稿を分析", icon="forum", value="56万件", at="分かったのは、こういうことよ"),
-                        cell("op", text="感情の言葉が一語", icon="search", at="そういう言葉が一つ多い投稿ほど"),
+                        cell("op", text="感情の言葉が一つ", icon="search", at="そういう言葉が一つ多い投稿ほど"),
                         cell("res", text="拡散されやすい", icon="trending_up", value="＋約2割", at="だいたい二割くらいね"),
                     ],
                     [
@@ -289,17 +324,18 @@ BEATS = {
               telop="67％と6.7倍は別の比較\n① 67％＝敵を名指しする語を一語足したとき\n② 6.7倍＝同じ研究の中で道徳・感情の言葉と比べたとき"),
         diagram(
             "この研究の中で、道徳や感情の言葉の効き目と比べると",
-            "【chart】同一研究内での比較。動画で唯一の chart",
-            chart(
-                "bar",
-                source="Rathje et al. (2021) PNAS（同一研究内での比較）",
-                title="同じ研究の中で比べた効き目",
-                at="この研究の中で、道徳や感情の言葉の効き目と比べると",
-                points=[
-                    {"label": "道徳・感情の言葉", "value": 1.0},
-                    {"label": "自分の側をほめる", "value": 1.0},
-                    {"label": "相手を名指しする", "value": 6.7},
+            "【比較: 同一研究内】道徳・感情の言葉を1倍としたときの、相手を名指しする言葉の効き目",
+            sketch(
+                [
+                    [
+                        cell("base", text="道徳・感情の言葉", icon="chat_bubble", value="1倍",
+                             at="この研究の中で、道徳や感情の言葉の効き目と比べると"),
+                        cell("out", text="相手を名指しする言葉", icon="campaign", value="6.7倍",
+                             at="この研究の中で、道徳や感情の言葉の効き目と比べると", after="およそ6.7倍だったの"),
+                    ],
                 ],
+                highlight={"ids": ["out"], "at": "同じ研究の中で比べた数字なのだ"},
+                caption={"text": "同じ研究の中で比べた効き目", "at": "この研究の中で、道徳や感情の言葉の効き目と比べると"},
             ),
         ),
         img("自分の側をほめた投稿と比べても", 4, "cmt2", "【2倍】コメント欄へ。ほめる投稿と責める投稿の差"),
@@ -312,16 +348,21 @@ BEATS = {
             telop="Robertson et al. (2023) NHB"),
         diagram(
             "「悪い」「つらい」といった否定的な言葉",
-            "【言葉と結果】見出しを開く行動で、何に関連が出て何に出なかったかを 1 行 3 列で",
+            "【言葉と結果】見出しを開く行動で、どの言葉に関連が出て、どれに出なかったかを 3 列 2 行で",
             sketch(
                 [
                     [
-                        cell("neg", text="否定的な言葉", icon="trending_down", value="+2.3%", at="「悪い」「つらい」といった否定的な言葉"),
-                        cell("anger", text="怒りの言葉", icon="local_fire_department", value="関連なし", at="それが、怒りの言葉には、はっきりした関連が出なかった"),
-                        cell("sad", text="悲しみの言葉", icon="sentiment_dissatisfied", value="関連あり", at="悲しさを感じる見出しの方ね"),
+                        cell("w1", text="否定的な言葉", icon="trending_down", at="「悪い」「つらい」といった否定的な言葉"),
+                        cell("w2", text="怒りの言葉", icon="local_fire_department", at="それが、怒りの言葉には、はっきりした関連が出なかった"),
+                        cell("w3", text="悲しみの言葉", icon="sentiment_dissatisfied", at="悲しさを感じる見出しの方ね"),
+                    ],
+                    [
+                        cell("r1", value="+2.3%", text="クリック率", at="クリック率は2.3パーセントほど高かったの"),
+                        cell("r2", value="関連なし", at="それが、怒りの言葉には、はっきりした関連が出なかった", after="はっきりした関連が出なかったのよ"),
+                        cell("r3", value="関連あり", at="怒りを出した見出しより、そちらが開かれていたの"),
                     ],
                 ],
-                highlight={"ids": ["sad"], "at": "怒りを出した見出しより、そちらが開かれていたの"},
+                highlight={"ids": ["w3", "r3"], "at": "怒りを出した見出しより、そちらが開かれていたの"},
                 caption={"text": "見出しを開く行動", "at": "「悪い」「つらい」といった否定的な言葉"},
             ),
         ),
@@ -380,7 +421,7 @@ BEATS = {
               telop="炎上に書き込んだ人（ネットを使う人のうち）\n① 一年以内に書き込んだ：0.5％\n② 一度でも書いた：1.1％"),
         img("つまり、あれだけ荒れて見えても", 4, "crowd1", "【決め文】人混みの遠景で保持。適用範囲のテロップを重ねる。間 2.5 秒",
             telop="0.5％は炎上全体が対象／男女論だけを数えた数字ではない"),
-        img("その0.5パーセントって、よっぽど暇な人", 5, "phone2", "【予想】スマホを見る手元。ずんだもんの決めつけと言い直し"),
+        img("その0.5パーセントって、よっぽど暇な人", 5, "type3", "【予想】スマホを見る手元。ずんだもんの決めつけと言い直し"),
         board("書き込む動機は、6割から7割が正義感",
               "【覚えてほしい要点】書き込む人の動機と属性を黒板の文字で（番号付き）",
               telop="炎上に書き込む人（6万人規模の調査）\n① 動機の6〜7割は正義感\n② ネット利用者全体と比べて男性の割合が高い\n③ 主任・係長より上の役職の人も多い"),
@@ -408,7 +449,7 @@ BEATS = {
               "【鍵になる用語】善悪の問題だと感じている意見、を黒板の文字で",
               telop="善悪の問題だと感じている意見\n＝ 譲ることが「悪に負ける」ことになる\n＝「人それぞれ」で終われなくなる"),
         img("好き嫌いじゃなくて、善悪の問題", 2, "apart1", "【妥協しにくさ】背を向け合う二人（顔なし）。譲れない状態の画"),
-        img("でも善悪の問題だと思っていると", 3, "f2f1", "【譲れない】向かい合って話す二人（後ろ姿）。譲ることが悪に負けることになる"),
+        img("でも善悪の問題だと思っていると", 3, "f2f2", "【譲れない】向かい合って話す二人（後ろ姿）。譲ることが悪に負けることになる"),
         img("そして、引きにくさを強めるものが", 4, "univ1", "【もう一つの力】大学の建物。イェールの研究へ",
             telop="Brady et al. (2021) Sci. Adv."),
         diagram(
@@ -522,7 +563,7 @@ BEATS = {
                         cell("r3", text="両極は中高年の層", icon="elderly", at="むしろ、あまり使わない中高年の層だったわ"),
                     ],
                 ],
-                highlight={"ids": ["r2", "r3"], "at": "むしろ、あまり使わない中高年の層だったわ"},
+                highlight={"ids": ["r2"], "at": "そして、反対の意見に触れていた人ほど"},  # 中高年の層を金色で強調すると「中高年が悪い」と読めるので、強調は穏健化の方だけ
             ),
         ),
         img("この結果は、総務省の情報通信白書", 4, "news3", "【裏付け】ニュースサイトの別カット。白書でも紹介されている話へ"),
@@ -554,7 +595,7 @@ BEATS = {
                 "result": {"text": "少ない声が全部の声に見える", "at": "それでも、炎上に書き込んでるのは"},
             },
         ),
-        img("反応がつくと、強い言葉を書き続けやすくなる", 2, "phone2", "【補足】スマホを見る手元。反応が書き手を後押しする話"),
+        img("反応がつくと、強い言葉を書き続けやすくなる", 2, "type2", "【補足】スマホを見る手元。反応が書き手を後押しする話"),
         img("よくまとまったわね", 3, "phone1", "【受け止め】スマホの別カット。ずんだもんの感覚の方が数字に近かった"),
         img("あなたが見たのは、男の人と女の人が", 4, "cmt1", "【冒頭の回収】コメント欄。実際に書いていたのはごく一部だった"),
         board("世の中全体が憎み合っているかどうかは",

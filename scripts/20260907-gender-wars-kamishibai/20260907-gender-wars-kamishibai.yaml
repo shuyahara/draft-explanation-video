@@ -103,37 +103,37 @@ scenes:
     cut_reason: 【冒頭】暗い部屋でスマホの光だけが手元を照らす（顔なし・静止画）
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: 【燃えている投稿】責め合いのコメント欄へ（文字は読めない）
     from: 2
     slot: 2
-    credit: TODO
+    credit: 'Photo: thomas vanhaecht / Pexels'
   - type: image
     cut_reason: 【何百件】コメント欄の別カットに替えて件数の多さへ
     from: 3
     slot: 3
-    credit: TODO
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【一時間】暗い部屋の別カットに戻して、やめられなかった時間へ
     from: 6
     slot: 4
-    credit: TODO
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【入り口】伝票と財布。日常のどこにでも入り口がある話へ
     from: 9
     slot: 5
-    credit: TODO
+    credit: 'Photo: Kaboompics.com / Pexels'
   - type: image
     cut_reason: 【疑問】スマホを見る手元に替えて、ずんだもんの引っかかりへ
     from: 12
     slot: 6
-    credit: TODO
+    credit: 'Photo: JESHOOTS / Pexels'
   - type: image
     cut_reason: 【肯定】スマホの別カットに替えて「その感覚は的外れじゃない」へ
     from: 14
     slot: 7
-    credit: TODO
+    credit: 'Photo: Sound On / Pexels'
   - type: board
     cut_reason: 【予告】この動画で示す数字を先に一つだけ出す（総合レビューの冒頭フック提案）
     from: 19
@@ -144,7 +144,7 @@ scenes:
     cut_reason: 【定義へ】ニュースサイトを見る手元。次章の言葉そろえへ
     from: 23
     slot: 8
-    credit: TODO
+    credit: 'Photo: Pixabay'
 - id: 2
   title: 何を確かめれば答えが出るのか
   chapter_title: null
@@ -214,7 +214,7 @@ scenes:
     cut_reason: 【当てはめ】ニュースサイトの別カットで、昨日見たものと重ねる
     from: 3
     slot: 1
-    credit: TODO
+    credit: 'Photo: Michael Burrows / Pexels'
   - type: board
     cut_reason: 【この動画で確かめること】三つの問いを黒板の文字で（番号付き）
     from: 6
@@ -229,12 +229,12 @@ scenes:
     cut_reason: 【直接は測れない】人混みの遠景へ。世の中全体は直接測れない話
     from: 12
     slot: 2
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【断言できない範囲】人混みの別カットに替えて限界の宣言へ
     from: 14
     slot: 3
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: board
     cut_reason: 【決め文】答えられる問いの範囲を黒板の文字で。間 1.5 秒を保持
     from: 15
@@ -245,7 +245,7 @@ scenes:
     cut_reason: 【次章へ】スマホの別カットで「怒った投稿ばかり広がる」の問いへ
     from: 17
     slot: 4
-    credit: TODO
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   readings:
   - surface: 炎上
     reading: エンジョウ
@@ -373,7 +373,7 @@ scenes:
     cut_reason: 【心理学の導入】無人の大講義室。クロケットの枠組みへ
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Crockett (2017) Nat Hum Behav
   - type: board
     cut_reason: 【鍵になる整理】三つの仕組みを黒板の文字で（番号付き）
@@ -389,22 +389,22 @@ scenes:
     cut_reason: 【手応え】いいねや返信が並ぶ画面へ（文字は読めない）
     from: 8
     slot: 2
-    credit: TODO
+    credit: 'Photo: William Fortunato / Pexels'
   - type: image
     cut_reason: 【対面】向かい合って話す二人（後ろ姿）。言いにくさの場面
     from: 10
     slot: 3
-    credit: TODO
+    credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【画面越し】スマホに文字を打つ指先。決め文まで保持
     from: 12
     slot: 4
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【実証研究へ】大学の建物。ブレイディの分析の導入
     from: 15
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Brady et al. (2017) PNAS
   - type: diagram
     cut_reason: '【分析: ブレイディ2017】対象→着目した言葉→結果の格子。話題別の数字は発話に同期して出す'
@@ -420,7 +420,7 @@ scenes:
         - id: op
           at: 22
           icon: search
-          text: 感情の言葉が一語
+          text: 感情の言葉が一つ
         - id: res
           at: 25
           icon: trending_up
@@ -451,7 +451,7 @@ scenes:
     cut_reason: 【留保】新聞紙面へ。観察であって実験ではない、の一言
     from: 30
     slot: 6
-    credit: TODO
+    credit: 'Photo: Mike van Schoonderwalt / Pexels'
 - id: 4
   title: 相手を名指しする言葉
   chapter_title: null
@@ -528,7 +528,7 @@ scenes:
     cut_reason: 【転換】スマホに文字を打つ指先（別カット）。もっと広がる言葉の予告
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【鍵になる用語】相手を名指しする言葉の定義を黒板の文字で
     from: 4
@@ -539,13 +539,13 @@ scenes:
     cut_reason: 【研究】大学の建物（別カット）。ラスジェの共同研究へ
     from: 6
     slot: 2
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Rathje et al. (2021) PNAS
   - type: image
     cut_reason: 【67％】コメント欄。名指しする言葉が入るとシェアが増える話へ
     from: 8
     slot: 3
-    credit: TODO
+    credit: 'Photo: William Fortunato / Pexels'
   - type: board
     cut_reason: 【混同を防ぐ】67％と6.7倍が別の比較であることを黒板の文字で（レビューの最優先指摘）
     from: 11
@@ -555,33 +555,39 @@ scenes:
 
       ② 6.7倍＝同じ研究の中で道徳・感情の言葉と比べたとき'
   - type: diagram
-    cut_reason: 【chart】同一研究内での比較。動画で唯一の chart
+    cut_reason: '【比較: 同一研究内】道徳・感情の言葉を1倍としたときの、相手を名指しする言葉の効き目'
     from: 13
     diagram:
-      type: chart
-      chart: bar
-      title: 同じ研究の中で比べた効き目
-      source: Rathje et al. (2021) PNAS（同一研究内での比較）
-      series:
-      - color: accent
+      type: sketch
+      rows:
+      - - id: base
+          at: 13
+          icon: chat_bubble
+          value: 1倍
+          text: 道徳・感情の言葉
+        - id: out
+          at: 13
+          icon: campaign
+          value: 6.7倍
+          text: 相手を名指しする言葉
+          after: およそ6.7倍だったの
+      highlight:
+        ids:
+        - out
+        at: 14
+      caption:
+        text: 同じ研究の中で比べた効き目
         at: 13
-        points:
-        - label: 道徳・感情の言葉
-          value: 1.0
-        - label: 自分の側をほめる
-          value: 1.0
-        - label: 相手を名指しする
-          value: 6.7
   - type: image
     cut_reason: 【2倍】コメント欄へ。ほめる投稿と責める投稿の差
     from: 16
     slot: 4
-    credit: TODO
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【決め文】背を向け合う二人（顔なし）。間 2.0 秒を保持
     from: 18
     slot: 5
-    credit: TODO
+    credit: 'Photo: miniperde / Pexels'
 - id: 5
   title: 怒りではなく悲しみ／並べているのは誰か
   chapter_title: null
@@ -714,42 +720,51 @@ scenes:
     cut_reason: 【別の行動へ】新聞紙面。見出しを開くかどうかの話に切り替える
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Suzy Hazelwood / Pexels'
   - type: image
     cut_reason: 【比べ方】紙面の別カットで、見出しを二通り用意する話へ
     from: 6
     slot: 2
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【研究】大学の建物（別カット）。570万クリックの分析へ
     from: 9
     slot: 3
-    credit: TODO
+    credit: 'Photo: Paul Loh / Pexels'
     telop: Robertson et al. (2023) NHB
   - type: diagram
-    cut_reason: 【言葉と結果】見出しを開く行動で、何に関連が出て何に出なかったかを 1 行 3 列で
+    cut_reason: 【言葉と結果】見出しを開く行動で、どの言葉に関連が出て、どれに出なかったかを 3 列 2 行で
     from: 13
     diagram:
       type: sketch
       rows:
-      - - id: neg
+      - - id: w1
           at: 13
           icon: trending_down
-          value: +2.3%
           text: 否定的な言葉
-        - id: anger
+        - id: w2
           at: 16
           icon: local_fire_department
-          value: 関連なし
           text: 怒りの言葉
-        - id: sad
+        - id: w3
           at: 19
           icon: sentiment_dissatisfied
-          value: 関連あり
           text: 悲しみの言葉
+      - - id: r1
+          at: 14
+          value: +2.3%
+          text: クリック率
+        - id: r2
+          at: 16
+          value: 関連なし
+          after: はっきりした関連が出なかったのよ
+        - id: r3
+          at: 20
+          value: 関連あり
       highlight:
         ids:
-        - sad
+        - w3
+        - r3
         at: 20
       caption:
         text: 見出しを開く行動
@@ -764,28 +779,28 @@ scenes:
     cut_reason: 【並べる側】サーバー室の機械。監査研究の導入
     from: 26
     slot: 4
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Milli et al. (2025) PNAS Nexus
   - type: image
     cut_reason: 【結果】サーバー室の別カットで、反応順の画面に怒りが多い話へ
     from: 29
     slot: 5
-    credit: TODO
+    credit: 'Photo: panumas nikhomkhai / Pexels'
   - type: image
     cut_reason: 【訂正】スマホを見る手元へ。誰かが怒りを選んだのではない、の一言
     from: 33
     slot: 6
-    credit: TODO
+    credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【決め文】スマホの別カットで保持。間 2.0 秒
     from: 36
     slot: 7
-    credit: TODO
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: 【次章への問い】人混みの遠景。政治・宗教でも同じ仕組みのはず、の問いへ
     from: 37
     slot: 8
-    credit: TODO
+    credit: 'Photo: Pixabay'
 - id: 6
   title: なぜ男女の話だけ、特別に燃えるのか
   chapter_title: なぜ男女の話だけ、特別に燃えるのか
@@ -881,7 +896,7 @@ scenes:
     cut_reason: 【距離を置ける話題】選挙ポスターの掲示板（遠景）。政治・宗教は距離を置ける
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Edmond Dantes / Pexels'
   - type: diagram
     cut_reason: '【対比: 話題の近さ】左＝政治・宗教／右＝男女の話。同じ列に同じ役割を置く'
     from: 5
@@ -912,7 +927,7 @@ scenes:
     cut_reason: 【接続】コメント欄へ。大きな主語の話につなぐ
     from: 8
     slot: 2
-    credit: TODO
+    credit: 'Photo: William Fortunato / Pexels'
   - type: board
     cut_reason: 【覚えてほしい要点】大きな主語が生む二つの受け取られ方を黒板の文字で（番号付き）
     from: 9
@@ -925,23 +940,23 @@ scenes:
     cut_reason: 【両方が同時に】コメント欄。言い返す人と応援する人が同時に出る
     from: 11
     slot: 3
-    credit: TODO
+    credit: 'Photo: thomas vanhaecht / Pexels'
   - type: image
     cut_reason: 【広告の炎上】街頭の大きな広告看板（文字は読めない）
     from: 13
     slot: 4
-    credit: TODO
+    credit: 'Photo: Tahir Osman / Pexels'
     telop: 瀬地山角『炎上CMでよみとくジェンダー論』
   - type: image
     cut_reason: 【役割の描き方】流し台の手元。役割分担の描かれ方へ
     from: 15
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【型の反復】広告看板の別カットで、同じ型が繰り返される話へ
     from: 17
     slot: 6
-    credit: TODO
+    credit: 'Photo: Clarence Chan / Pexels'
   - type: board
     cut_reason: 【論の区切り】ここまでの研究の適用範囲を黒板の文字で（類推であることの明示）
     from: 22
@@ -954,7 +969,7 @@ scenes:
     cut_reason: 【次章へ】スマホを見る手元。書いている人への問いへ
     from: 27
     slot: 7
-    credit: TODO
+    credit: 'Photo: JESHOOTS / Pexels'
   readings:
   - surface: 炎上
     reading: エンジョウ
@@ -1071,18 +1086,18 @@ scenes:
     cut_reason: 【日本の調査】アンケート用紙の束。6万人規模の調査の導入
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: 山口真一・田中辰雄『ネット炎上の研究』
   - type: image
     cut_reason: 【手法】コメント欄へ。ツイッターの分析も合わせている話
     from: 4
     slot: 2
-    credit: TODO
+    credit: 'Photo: thomas vanhaecht / Pexels'
   - type: image
     cut_reason: 【対象】コメント欄の別カットで、対象にした炎上の条件へ
     from: 7
     slot: 3
-    credit: TODO
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: board
     cut_reason: 【覚えてほしい要点】炎上に書き込む人の割合を黒板の文字で（番号付き）
     from: 11
@@ -1095,13 +1110,13 @@ scenes:
     cut_reason: 【決め文】人混みの遠景で保持。適用範囲のテロップを重ねる。間 2.5 秒
     from: 15
     slot: 4
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: 0.5％は炎上全体が対象／男女論だけを数えた数字ではない
   - type: image
     cut_reason: 【予想】スマホを見る手元。ずんだもんの決めつけと言い直し
     from: 18
     slot: 5
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【覚えてほしい要点】書き込む人の動機と属性を黒板の文字で（番号付き）
     from: 22
@@ -1116,7 +1131,7 @@ scenes:
     cut_reason: 【意外な属性】無人のオフィスの会議机へ
     from: 25
     slot: 6
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: diagram
     cut_reason: '【割合: 発信の集中】人型 10 個のうち 1 つだけが点灯し、残りは沈む'
     from: 29
@@ -1136,13 +1151,13 @@ scenes:
     cut_reason: 【海外②】アメリカの街並み（別カット）。スイスのヘイトスピーチ分析
     from: 30
     slot: 7
-    credit: TODO
+    credit: 'Photo: dumitru B / Pexels'
     telop: Gennaro et al. (2025)：上位1％が46％
   - type: image
     cut_reason: 【次章への問い】距離を置いて立つ二人（顔なし）。なぜ引かないのか、へ
     from: 32
     slot: 8
-    credit: TODO
+    credit: 'Photo: Georgy Druzhinin / Pexels'
   readings:
   - surface: 炎上
     reading: エンジョウ
@@ -1269,7 +1284,7 @@ scenes:
     cut_reason: 【心理の章へ】無人の大講義室。スキトカの研究の導入
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Skitka ほか（イリノイ大学シカゴ校）
   - type: board
     cut_reason: 【鍵になる用語】善悪の問題だと感じている意見、を黒板の文字で
@@ -1283,17 +1298,17 @@ scenes:
     cut_reason: 【妥協しにくさ】背を向け合う二人（顔なし）。譲れない状態の画
     from: 6
     slot: 2
-    credit: TODO
+    credit: 'Photo: miniperde / Pexels'
   - type: image
     cut_reason: 【譲れない】向かい合って話す二人（後ろ姿）。譲ることが悪に負けることになる
     from: 9
     slot: 3
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【もう一つの力】大学の建物。イェールの研究へ
     from: 11
     slot: 4
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: Brady et al. (2021) Sci. Adv.
   - type: diagram
     cut_reason: '【循環: 社会的強化学習】怒りを書く→反応がつく→その後も書きやすくなる'
@@ -1321,28 +1336,28 @@ scenes:
     cut_reason: 【通説】無人のジムのサンドバッグ。発散すればすっきりする、という通説
     from: 17
     slot: 5
-    credit: TODO
+    credit: 'Photo: Julia Larson / Pexels'
     telop: Bushman (2002) PSPB
   - type: image
     cut_reason: 【反証】サンドバッグの別カット。決め文まで保持。間 2.0 秒
     from: 20
     slot: 6
-    credit: TODO
+    credit: 'Photo: Ivan S / Pexels'
   - type: image
     cut_reason: 【早合点】スマホを見る手元。目立ちたいだけ、という決めつけへ
     from: 24
     slot: 7
-    credit: TODO
+    credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【限定】距離を置く二人の別カット。内心は測っていない、の留保
     from: 26
     slot: 8
-    credit: TODO
+    credit: 'Photo: Georgy Druzhinin / Pexels'
   - type: image
     cut_reason: 【次章への仮説】スマホの別カット。少数がなぜ大勢に見えるか、へ
     from: 30
     slot: 9
-    credit: TODO
+    credit: 'Photo: JESHOOTS / Pexels'
   readings:
   - surface: 妥協
     reading: ダキョウ
@@ -1465,22 +1480,22 @@ scenes:
     cut_reason: 【二つをつなぐ】コメント欄。広がりやすい投稿と、書く人の少なさ
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【仕組み】ネオンの広告が並ぶ夜の街。見てもらう時間が売り上げになる
     from: 5
     slot: 2
-    credit: TODO
+    credit: 'Photo: Mak_ jp / Pexels'
   - type: image
     cut_reason: 【押し上げ】人混みの遠景。少ない声が繰り返し目立つ場所に出てくる
     from: 7
     slot: 3
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【日本の実例】コメント欄の別カット。2800件の返信を分類した研究へ
     from: 9
     slot: 4
-    credit: TODO
+    credit: 'Photo: thomas vanhaecht / Pexels'
     telop: Tonami et al. (2022) F1000Res.
   - type: diagram
     cut_reason: '【三層: 拡散の広がり】中心の少数から、引用・まね、内容に関係ない攻撃へ広がる'
@@ -1509,29 +1524,29 @@ scenes:
     cut_reason: 【認識のずれ】アンケートに答える手元。モア・イン・コモンの調査へ
     from: 17
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: More in Common (2019)：米国が対象
   - type: image
     cut_reason: 【思っていた割合】アメリカの街並み。相手の55％が過激だと思われていた
     from: 20
     slot: 6
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【比較】アンケートの別カットに、二つの数字を並べたテロップを重ねる
     from: 22
     slot: 7
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: 思っていた＝相手の55％が過激／実際＝30％
   - type: image
     cut_reason: 【留保】アメリカの街並み（別カット）。日本の男女論の数字ではない、の一言
     from: 24
     slot: 8
-    credit: TODO
+    credit: 'Photo: dumitru B / Pexels'
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。間 2.0 秒
     from: 28
     slot: 9
-    credit: TODO
+    credit: 'Photo: Pixabay'
   readings:
   - surface: モア・イン・コモン
     reading: モアインコモン
@@ -1690,12 +1705,12 @@ scenes:
     cut_reason: 【振り返り】スマホを見る手元。仕組みの話だけしてきた確認
     from: 4
     slot: 1
-    credit: TODO
+    credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【気づき】スマホの別カット。中身を数字で見る、への転換
     from: 7
     slot: 2
-    credit: TODO
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: board
     cut_reason: 【鍵になる用語】ジェンダーギャップ指数が何を測っているかを黒板の文字で
     from: 9
@@ -1730,31 +1745,31 @@ scenes:
     cut_reason: 【入試】無人の試験会場の机
     from: 21
     slot: 3
-    credit: TODO
+    credit: 'Photo: Andy Barbour / Pexels'
     telop: 2018年 東京医科大学：合格率は男子が女子の約3倍
   - type: image
     cut_reason: 【緊急調査】試験会場の別カット。10校で不適切な扱いが認められた話へ
     from: 23
     slot: 4
-    credit: TODO
+    credit: 'Photo: Andy Barbour / Pexels'
     telop: 文部科学省の調査：81大学中10校で不適切
   - type: image
     cut_reason: 【性暴力】人混みの遠景（顔は判別できない）
     from: 27
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: 内閣府の調査：女性のおよそ14人に1人
   - type: image
     cut_reason: 【男性側】満員電車のホーム（顔は判別できない）
     from: 32
     slot: 6
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: 東京都の調査：被害を答えた男性8.5％
   - type: image
     cut_reason: 【相談しにくさ】ホームの別カット。記録に出てきにくい話へ
     from: 35
     slot: 7
-    credit: TODO
+    credit: 'Photo: Kassandre Pedro / Pexels'
   - type: board
     cut_reason: 【論の区切り】この章が示したことと、示していないことを黒板の文字で
     from: 39
@@ -1765,7 +1780,7 @@ scenes:
     cut_reason: 【決め文】硬貨と紙幣。画面の外に残る問題の画で保持。間 2.5 秒
     from: 41
     slot: 8
-    credit: TODO
+    credit: 'Photo: Breakingpic / Pexels'
   readings:
   - surface: 賃金
     reading: チンギン
@@ -1904,18 +1919,18 @@ scenes:
     cut_reason: 【分断の調査】アンケート用紙の束（別カット）。田中・浜屋の調査へ
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Kindel Media / Pexels'
     telop: 田中辰雄・浜屋敏『ネットは社会を分断しない』
   - type: image
     cut_reason: 【規模】用紙の別カット。10万人規模・5万人回答の内訳へ
     from: 5
     slot: 2
-    credit: TODO
+    credit: 'Photo: Willfried Wende / Pexels'
   - type: image
     cut_reason: 【通説】コメント欄。同じ意見ばかり見て過激になる、という通説
     from: 6
     slot: 3
-    credit: TODO
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: diagram
     cut_reason: '【対比: 画面の日本と調査の日本】左＝画面で見える日本／右＝調査が見た日本'
     from: 9
@@ -1949,13 +1964,12 @@ scenes:
       highlight:
         ids:
         - r2
-        - r3
-        at: 13
+        at: 10
   - type: image
     cut_reason: 【裏付け】ニュースサイトの別カット。白書でも紹介されている話へ
     from: 15
     slot: 4
-    credit: TODO
+    credit: 'Photo: weCare Media / Pexels'
   - type: board
     cut_reason: 【論の区切り】この調査から言えないことを黒板の文字で（番号付き）
     from: 18
@@ -1968,12 +1982,12 @@ scenes:
     cut_reason: 【整理】人混みの遠景。全体と目立つ場所の違いへ
     from: 20
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【呼び名へ】コメント欄の別カット。相手をひとまとめに呼ぶ言葉へ
     from: 24
     slot: 6
-    credit: TODO
+    credit: 'Photo: William Fortunato / Pexels'
   - type: board
     cut_reason: 【鍵になる用語】ネットの呼び名の位置づけを黒板の文字で
     from: 27
@@ -1986,12 +2000,12 @@ scenes:
     cut_reason: 【接続】スマホに文字を打つ指先。相手を名指しする言葉の効果へ戻す
     from: 30
     slot: 7
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。間 2.5 秒
     from: 34
     slot: 8
-    credit: TODO
+    credit: 'Photo: Pixabay'
   readings:
   - surface: 拡散
     reading: カクサン
@@ -2122,7 +2136,7 @@ scenes:
     cut_reason: 【回帰】冒頭と同じ暗い部屋のスマホ。最初の疑問へ戻る
     from: 1
     slot: 1
-    credit: TODO
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: diagram
     cut_reason: '【収束: 今日の答え】ずんだもんのまとめに同期して 1 項目ずつ出し、最後に結論へ収束させる'
     from: 4
@@ -2149,17 +2163,17 @@ scenes:
     cut_reason: 【補足】スマホを見る手元。反応が書き手を後押しする話
     from: 10
     slot: 2
-    credit: TODO
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【受け止め】スマホの別カット。ずんだもんの感覚の方が数字に近かった
     from: 12
     slot: 3
-    credit: TODO
+    credit: 'Photo: JESHOOTS / Pexels'
   - type: image
     cut_reason: 【冒頭の回収】コメント欄。実際に書いていたのはごく一部だった
     from: 15
     slot: 4
-    credit: TODO
+    credit: 'Photo: thomas vanhaecht / Pexels'
   - type: board
     cut_reason: 【論の着地】この動画で言えることの範囲を黒板の文字で
     from: 17
@@ -2170,23 +2184,23 @@ scenes:
     cut_reason: 【残る問題】硬貨と紙幣（別カット）。画面の外に残るもの
     from: 20
     slot: 5
-    credit: TODO
+    credit: 'Photo: Pixabay'
     telop: 賃金の差・家事の時間・入試の点数は、画面の外に残る
   - type: image
     cut_reason: 【関心を失わない】流し台の手元。現実の問題の画へ
     from: 23
     slot: 6
-    credit: TODO
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【回帰】暗い部屋の別カット。冒頭の「指が止まらない」を回収
     from: 25
     slot: 7
-    credit: TODO
+    credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【最後の一枚】暗い部屋でスマホを伏せて置く手。アウトロで保持。間 2.5 秒
     from: 29
     slot: 8
-    credit: TODO
+    credit: 'Photo: Roberto Cervantes / Pexels'
   readings:
   - surface: 炎上
     reading: エンジョウ
