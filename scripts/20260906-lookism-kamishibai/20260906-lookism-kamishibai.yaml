@@ -389,11 +389,9 @@ scenes:
   - type: board
     cut_reason: 【覚えておくこと】美しい人は中身もきっと良い、と無意識に結びつける。章の要点を黒板の文字で
     from: 25
-    telop: '覚えておくこと
+    telop: '「美しい人は、中身もきっと良い」
 
-      「美しい人は、中身もきっと良い」
-
-      ＝ 無意識に結びつけてしまう'
+      ＝ 顔を見ただけで、無意識に結びつけてしまう'
   - type: image
     cut_reason: 【次章への問い】雑踏の別カットに替えて賃金差への予告へ
     from: 28
@@ -718,9 +716,9 @@ scenes:
     from: 30
     telop: 'ここまで：研究で分かっていること
 
-      　写真SNSが見た目の評価を強め、
+      ① 写真SNSは、見た目の評価を強めた
 
-      　見た目を変える行動を広げた
+      ② 見た目を変える行動まで広げた
 
       ここから：研究を材料にした推論'
 - id: 6
@@ -807,14 +805,46 @@ scenes:
     slot: 4
     credit: 'Photo: Liza Summer / Pexels'
     telop: 推論②：ハロー効果→個人への偏見→仕事の見方も変わる
-  - type: board
-    cut_reason: 【推論②の筋】写真SNSでは見た目→人柄→肩書きの順に目に入る→ハロー効果が肩書きへの偏見を弱める、を黒板の文字で
+  - type: diagram
+    cut_reason: '【推論②の筋: 図解】写真SNSでは 見た目→人柄→肩書き の順に目に入り、先の印象（ハロー効果）が肩書きへの偏見を弱める。順序と因果は板の文字ではなく矢印で見せる'
     from: 15
-    telop: '写真SNSで目に入る順番
-
-      見た目 → 人柄 → 肩書き
-
-      → ハロー効果が肩書きへの偏見を弱める'
+    diagram:
+      type: sketch
+      rows:
+      - - id: look
+          at: 15
+          icon: face
+          text: 見た目
+        - id: person
+          at: 15
+          icon: favorite
+          text: 人柄
+        - id: title
+          at: 15
+          icon: badge
+          text: 肩書き
+      - - null
+        - null
+        - id: res
+          at: 16
+          icon: trending_down
+          text: 偏見が弱まる
+          after: 弱める
+      arrows:
+      - from: look
+        to: person
+      - from: person
+        to: title
+      - from: title
+        to: res
+      caption:
+        text: 先の印象が、あとの評価を引き上げる
+        at: 16
+      highlight:
+        ids:
+        - res
+        at: 16
+        after: 弱める
   - type: image
     cut_reason: 【接続】横顔でリングライトに取り付ける場面に替えて仕事への評価への接続へ
     from: 19
