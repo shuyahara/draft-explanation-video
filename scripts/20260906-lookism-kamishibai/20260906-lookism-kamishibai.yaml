@@ -119,12 +119,6 @@ scenes:
     from: 15
     slot: 6
     credit: 'Photo: Marcus Aurelius / Pexels'
-  - type: board
-    cut_reason: 【ボツの理由】「時代が変わったから」は何も説明していない、を黒板の文字で
-    from: 19
-    telop: '「時代が変わったから」
-
-      ＝ 何も説明していない'
   - type: image
     cut_reason: 【本題への導入】書店1カット目に戻し研究を根拠にする宣言へ
     from: 21
@@ -201,24 +195,28 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【定義】「受け入れられている」の意味をそろえる導入。辞書を引く手元
+    cut_reason: 【定義の導入】「受け入れられている」の意味をそろえる。辞書を引く手元
     from: 1
     slot: 1
     credit: 'Photo: Tima Miroshnichenko / Pexels'
-    telop: ①隠さず話す人が増えた ②責められない場面が増えた
   - type: image
     cut_reason: 【現実】きつい言葉も残るコメント欄の代替。PC の前で SNS を見る手元
     from: 3
     slot: 2
     credit: 'Photo: cottonbro studio / Pexels'
-  - type: image
-    cut_reason: 【定義の続き】公園で動画を見る手元に替えて「受け入れられている」の二つ目の意味へ
-    from: 7
-    slot: 3
-    credit: 'Photo: Pixabay'
+  - type: board
+    cut_reason: 【定義】この動画で言う「受け入れられている」の二要素を黒板の文字で（主題の定義なので板で見せる）
+    from: 5
+    telop: '「受け入れられている」とは
+
+      ① 隠さず自分から話す人が増えた
+
+      ② 話した人が応援される場面が増えた
+
+      　（昔の仕事だけを理由に責められない）'
   - type: image
     cut_reason: 【当てはめ】スマホ画面操作の手元に替えてS1の例が二つとも当てはまる確認
-    from: 10
+    from: 9
     slot: 4
     credit: 'Photo: Pixabay'
   - type: image
@@ -226,12 +224,11 @@ scenes:
     from: 13
     slot: 5
     credit: 'Photo: Francesco Rosati / Pexels'
-  - type: board
-    cut_reason: 【問い直し】「多様性の時代」は答えの先送り。残る問いを黒板の文字で
+  - type: image
+    cut_reason: 【まだ足りない】雑踏の別カットに替えて「なぜ多様性が」の問い直しへ
     from: 16
-    telop: '「多様性の時代になったから」
-
-      → なぜ多様性が認められるようになった？'
+    slot: 6
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【注目する変化】雑踏の別カットに替えて「大きいと考える変化」の予告へ
     from: 21
