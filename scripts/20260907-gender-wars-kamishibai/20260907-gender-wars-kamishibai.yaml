@@ -313,7 +313,7 @@ scenes:
   - type: board
     cut_reason: 【鍵になる整理】三つの仕組みを黒板の文字で（番号付き）
     from: 3
-    telop: '怒りが書きやすくなる理由
+    telop: 'ネットで怒りを投稿しやすい理由
 
       ① 目にする回数が増える
 
@@ -355,7 +355,7 @@ scenes:
         - id: op
           at: 23
           icon: search
-          text: 感情の言葉が一つ
+          text: 怒りの言葉が一つ
         - id: res
           at: 25
           icon: trending_up
@@ -414,21 +414,21 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 67パーセント！ さっきの二割より、ずっと大きいのだ。
+  - text: 67パーセント！ そんなに違うのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: ここは注意してね。さっきの二割は、別の研究の数字よ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: この研究の中で、道徳や感情の言葉、つまり怒りや非難の言葉の効き目と比べると、およそ6.7倍だったの。
+  - text: 同じ研究の中で、怒りや非難の言葉の効き目とも比べているの。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 相手を名指しする言葉の効き目は、その6.7倍だったわ。
+    speaker: めたん
+    expression: serious
     pause_after: 0.6
-  - text: 同じ研究の中で比べた数字なのだ。それなら分かるのだ。
+  - text: 怒りの言葉より、名指しする言葉の方が、ずっと効くのだ。
     speaker: ずんだもん
-    expression: thinking
+    expression: surprised
     pause_after: 0.45
   - text: 自分の側をほめた投稿と比べても、相手側を責めた投稿はおよそ2倍シェアされていたわ。
     speaker: めたん
@@ -464,7 +464,9 @@ scenes:
     from: 4
     telop: '相手を名指しする言葉
 
-      「あいつら」とひとまとめに呼ぶ'
+      「あいつら」とひとまとめに呼ぶ
+
+      → 仮想敵を作って対立をあおる'
   - type: image
     cut_reason: 【研究】大学の建物（別カット）。ラスジェの共同研究へ
     from: 6
@@ -476,44 +478,41 @@ scenes:
     from: 8
     slot: 3
     credit: 'Photo: Jakub Zerdzicki / Pexels'
-  - type: image
-    cut_reason: '【注意】スマホを見る手元。二割は別の研究の数字、の注意へ（旧: 板）'
-    from: 11
-    slot: 4
-    credit: 'Photo: JESHOOTS / Pexels'
   - type: diagram
-    cut_reason: '【比較: 同一研究内】道徳・感情の言葉を1倍としたときの、相手を名指しする言葉の効き目'
-    from: 13
+    cut_reason: '【比較: 同一研究内】怒り・非難の言葉 →（矢印）→ 相手を名指しする言葉 6.7倍。基準側に 1倍 は書かない'
+    from: 11
     diagram:
       type: sketch
       rows:
       - - id: base
-          at: 13
-          icon: chat_bubble
-          value: 1倍
-          text: 道徳・感情の言葉
+          at: 11
+          icon: local_fire_department
+          text: 怒り・非難の言葉
         - id: out
-          at: 13
+          at: 12
           icon: campaign
           value: 6.7倍
           text: 相手を名指しする言葉
-          after: およそ6.7倍だったの
+          after: その6.7倍だったわ
+      arrows:
+      - from: base
+        to: out
       highlight:
         ids:
         - out
-        at: 14
+        at: 13
       caption:
         text: 同じ研究の中で比べた効き目
-        at: 13
+        at: 11
   - type: image
     cut_reason: 【2倍】コメント欄へ。ほめる投稿と責める投稿の差
-    from: 16
-    slot: 5
+    from: 14
+    slot: 4
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【決め文】背を向け合う二人（顔なし）。間 2.0 秒を保持
-    from: 18
-    slot: 6
+    from: 16
+    slot: 5
     credit: 'Photo: miniperde / Pexels'
 - id: 5
   title: 怒りではなく悲しみ／並べているのは誰か
@@ -522,16 +521,12 @@ scenes:
   - text: 見る側が何を選ぶのかも、調べられているわ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
-  - text: さっきまでは、投稿を広めるかどうかの話。今度は、見出しを開くかどうかの話ね。
-    speaker: めたん
-    expression: normal
     pause_after: 0.45
-  - text: 広めるのと開くのは、別の行動なのだ。
+  - text: さっきはSNSでシェアされるかの話だったけど、次は記事を開くかの話なのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: あるニュースサイトが実際にやっていた比べ方を見ましょう。
+  - text: そう。あるニュースサイトが実際にやっていた比べ方を見ましょう。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -672,91 +667,91 @@ scenes:
     credit: 'Photo: Suzy Hazelwood / Pexels'
   - type: image
     cut_reason: 【比べ方】紙面の別カットで、見出しを二通り用意する話へ（旧候補はカップの商品名が読めた）
-    from: 5
+    from: 4
     slot: 2
     credit: 'Photo: Mike van Schoonderwalt / Pexels'
   - type: image
     cut_reason: 【研究】新聞紙面（別カット）。570万クリックの分析へ（大学の建物は別大学の誤認を招くため v5 で差し替え）
-    from: 8
+    from: 7
     slot: 3
     credit: 'Photo: Suzy Hazelwood / Pexels'
     telop: Robertson et al. (2023) NHB
   - type: diagram
     cut_reason: 【言葉と結果】見出しを開く行動で、どの言葉に関連が出て、どれに出なかったかを 3 列 2 行で
-    from: 12
+    from: 11
     diagram:
       type: sketch
       rows:
       - - id: w1
-          at: 12
+          at: 11
           icon: trending_down
           text: 否定的な言葉
         - id: w2
-          at: 15
+          at: 14
           icon: local_fire_department
           text: 怒りの言葉
         - id: w3
-          at: 18
+          at: 17
           icon: sentiment_dissatisfied
           text: 悲しみの言葉
       - - id: r1
-          at: 13
+          at: 12
           value: +2.3%
           text: クリック率
         - id: r2
-          at: 15
+          at: 14
           value: 関連なし
           after: はっきりした関連が出なかったのよ
         - id: r3
-          at: 19
+          at: 18
           value: 関連あり
       highlight:
         ids:
         - w3
         - r3
-        at: 19
+        at: 18
       caption:
         text: 見出しを開く行動
-        at: 12
+        at: 11
   - type: image
     cut_reason: 【束ねる】コメント欄。怒りに限らず否定的な言葉に反応する、の整理
-    from: 22
+    from: 21
     slot: 4
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【区切り】スマホに文字を打つ指先。自分で何を開くか、の話の締め
-    from: 27
+    from: 26
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【並べる側へ】タブレットでニュースを見る手元。表示する順番は SNS の側が決めている、の転換
-    from: 28
+    from: 27
     slot: 6
     credit: 'Photo: Michael Burrows / Pexels'
   - type: image
     cut_reason: 【並べる側】サーバー室の機械。監査研究の導入
-    from: 31
+    from: 30
     slot: 7
     credit: 'Photo: Pixabay'
     telop: Milli et al. (2025) PNAS Nexus
   - type: image
     cut_reason: 【結果】サーバー室の別カットで、反応順の画面に怒りが多い話へ
-    from: 35
+    from: 34
     slot: 8
     credit: 'Photo: panumas nikhomkhai / Pexels'
   - type: image
     cut_reason: 【訂正】スマホを見る手元へ。誰かが怒りを選んだのではない、の一言
-    from: 39
+    from: 38
     slot: 9
     credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【決め文】スマホの別カットで保持。間 2.0 秒
-    from: 42
+    from: 41
     slot: 10
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: 【次章への問い】人混みの遠景（脚のみ）。政治・宗教でも同じ仕組みのはず、の問いへ
-    from: 43
+    from: 42
     slot: 11
     credit: 'Photo: Pixabay'
 - id: 6
@@ -1597,6 +1592,11 @@ scenes:
           at: 10
           icon: handshake
           text: 反対意見にも触れる
+      arrows:
+      - from: l1
+        to: l2
+      - from: r1
+        to: r2
       highlight:
         ids:
         - r2
@@ -1616,22 +1616,32 @@ scenes:
     from: 19
     slot: 6
     credit: 'Photo: William Fortunato / Pexels'
-  - type: board
-    cut_reason: 【鍵になる用語】ネットの呼び名の位置づけを黒板の文字で
+  - type: diagram
+    cut_reason: '【因果: 呼び名が集団を作って見せる】呼び名→名指しの言葉と同じ→拡散しやすい→一つの集団に見える。決め文まで保持（旧: 板「ネットの呼び名＝…」は説明になっていなかった）'
     from: 22
-    telop: 'ネットの呼び名
-
-      ＝ 相手側をひとまとめに指す言葉'
-  - type: image
-    cut_reason: 【接続】スマホに文字を打つ指先。相手を名指しする言葉の効果へ戻す
-    from: 25
-    slot: 7
-    credit: 'Photo: RDNE Stock project / Pexels'
-  - type: image
-    cut_reason: 【決め文】人混みの遠景で保持。間 2.5 秒
-    from: 29
-    slot: 8
-    credit: 'Photo: Pixabay'
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: name
+        text: 相手をひとまとめに呼ぶ
+        icon: label
+        at: 22
+      - id: same
+        text: 名指しする言葉と同じ
+        icon: campaign
+        at: 25
+      - id: spread
+        text: 拡散しやすくなる
+        icon: trending_up
+        at: 28
+      - id: group
+        text: 一つの集団に見える
+        icon: groups
+        at: 29
+      caption:
+        text: 呼び名が集団を作って見せる
+        at: 29
   readings:
   - surface: 拡散
     reading: カクサン
@@ -1773,26 +1783,47 @@ scenes:
     slot: 1
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: diagram
-    cut_reason: '【収束: 最初の疑問への答え】ずんだもんのまとめに同期して 1 項目ずつ出し、「だから燃えやすい」へ収束させる'
-    from: 4
+    cut_reason: '【まとめ: 仕組み×話題の性質】左列＝ネットの仕組み（言葉が広がる／反応順の画面）、右列＝男女の話の性質（その言葉が入りやすい／全員が当事者）。4 項目が並列で重なって見えた旧 converge を、2 列に分けて構造を見せる'
+    from: 3
     diagram:
-      type: narrative
-      layout: converge
-      items:
-      - id: word
-        text: 広がる言葉
-        at: 4
-      - id: order
-        text: 反応順の画面
-        at: 6
-      - id: party
-        text: 全員が当事者
-        at: 7
-      - id: enemy
-        text: 敵の名指しと不満
-        at: 8
-      result:
-        text: だから男女の話は燃えやすい
+      type: sketch
+      rows:
+      - - id: h1
+          at: 3
+          icon: public
+          text: ネットの仕組み
+        - id: h2
+          at: 3
+          icon: wc
+          text: 男女の話の性質
+      - - id: a
+          at: 4
+          text: 敵の名指しが広がる
+        - id: c
+          at: 8
+          text: その言葉が入りやすい
+      - - id: b
+          at: 6
+          text: 反応順の画面が押す
+        - id: d
+          at: 7
+          text: 全員が当事者になる
+      arrows:
+      - from: h1
+        to: a
+      - from: a
+        to: b
+      - from: h2
+        to: c
+      - from: c
+        to: d
+      highlight:
+        ids:
+        - c
+        - d
+        at: 10
+      caption:
+        text: 二つが重なるから燃えやすい
         at: 10
   - type: image
     cut_reason: 【受け止め】スマホの別カット。最初の疑問への答えを受け止める
@@ -1809,30 +1840,29 @@ scenes:
     from: 16
     slot: 4
     credit: 'Photo: thomas vanhaecht / Pexels'
-  - type: board
-    cut_reason: 【論の着地】この動画で言えることの範囲を黒板の文字で
+  - type: image
+    cut_reason: '【世の中全体】人混みの遠景。画面の激しさだけでは全体は分からない（旧: 板。一文を見出しと本文に分断しているだけで説明になっていない、との指摘）'
     from: 18
-    telop: '画面の激しさだけでは
-
-      世の中全体は分からない'
+    slot: 5
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【残る問題】人混みの遠景。画面の外にいる人たちの問題は男女どちらの側にも残る
     from: 21
-    slot: 5
+    slot: 6
     credit: 'Photo: Pixabay'
     telop: 画面の外の問題は、男女どちらの側にも残る
   - type: image
-    cut_reason: 【関心を失わない】洗い物の手元。現実の問題の画へ
+    cut_reason: '【燃えている投稿を見る手元】画面の激しさに慣れない、の場面（旧: 手洗いの写真は台詞と無関係、との指摘）'
     from: 25
-    slot: 6
-    credit: 'Photo: Pixabay'
+    slot: 7
+    credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【回帰】暗い部屋の別カット。冒頭の夜の場面へ戻る
     from: 27
-    slot: 7
+    slot: 8
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【最後の一枚】暗い部屋でスマホを伏せて置く手。決め文（仕組みで締める）をアウトロまで保持。間 2.5 秒
     from: 29
-    slot: 8
+    slot: 9
     credit: 'Photo: Roberto Cervantes / Pexels'
