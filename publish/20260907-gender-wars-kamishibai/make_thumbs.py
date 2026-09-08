@@ -171,10 +171,21 @@ def make_thumb_c() -> Image.Image:
     )
 
 
+# D: 仕組みを出す案（v4 で主軸を「燃えやすい言葉 × 全員が当事者」に据え直したため。0.5% の B は主軸とずれる）
+def make_thumb_d() -> Image.Image:
+    return make_thumb(
+        PHOTOS / "comment-scroll" / "comment-scroll-1.jpg",
+        darken_amount=0.38,
+        line1="男女論が燃えるのは",
+        line2="憎しみのせいじゃない",
+        metan_expr="serious", zun_expr="surprised",
+    )
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     images = []
-    for name, fn in [("A", make_thumb_a), ("B", make_thumb_b), ("C", make_thumb_c)]:
+    for name, fn in [("A", make_thumb_a), ("B", make_thumb_b), ("C", make_thumb_c), ("D", make_thumb_d)]:
         img = fn()
         p = OUT / f"thumb-{name}.png"
         img.convert("RGB").save(p, "PNG", optimize=True)

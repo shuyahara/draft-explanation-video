@@ -336,10 +336,10 @@ scenes:
     slot: 4
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【実証研究へ】大学の建物。ブレイディの分析の導入
+    cut_reason: 【実証研究へ】研究資料の束。ブレイディの分析の導入（大学の建物は別大学の誤認を招くため v5 で差し替え）
     from: 15
     slot: 5
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Willfried Wende / Pexels'
     telop: Brady et al. (2017) PNAS
   - type: diagram
     cut_reason: '【分析: ブレイディ2017】対象→着目した言葉→結果の格子。話題別の数字は発話に同期して出す'
@@ -475,7 +475,7 @@ scenes:
     cut_reason: 【67％】コメント欄。名指しする言葉が入るとシェアが増える話へ
     from: 8
     slot: 3
-    credit: 'Photo: William Fortunato / Pexels'
+    credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: '【注意】スマホを見る手元。二割は別の研究の数字、の注意へ（旧: 板）'
     from: 11
@@ -676,10 +676,10 @@ scenes:
     slot: 2
     credit: 'Photo: Mike van Schoonderwalt / Pexels'
   - type: image
-    cut_reason: 【研究】大学の建物（別カット）。570万クリックの分析へ
+    cut_reason: 【研究】新聞紙面（別カット）。570万クリックの分析へ（大学の建物は別大学の誤認を招くため v5 で差し替え）
     from: 8
     slot: 3
-    credit: 'Photo: Paul Loh / Pexels'
+    credit: 'Photo: Suzy Hazelwood / Pexels'
     telop: Robertson et al. (2023) NHB
   - type: diagram
     cut_reason: 【言葉と結果】見出しを開く行動で、どの言葉に関連が出て、どれに出なかったかを 3 列 2 行で
@@ -912,7 +912,7 @@ scenes:
     cut_reason: 【接続】コメント欄へ。大きな主語の話につなぐ
     from: 8
     slot: 2
-    credit: 'Photo: William Fortunato / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
     cut_reason: 【覚えてほしい要点】大きな主語が生む二つの受け取られ方を黒板の文字で（番号付き）
     from: 9
@@ -948,15 +948,15 @@ scenes:
     slot: 7
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【型の反復】広告看板の別カットで、同じ型が繰り返される話へ
+    cut_reason: 【型の反復】街頭の広告看板を保持して、同じ型が繰り返される話へ（夜の繁華街は主題と合わないため v5 で差し替え）
     from: 21
     slot: 8
-    credit: 'Photo: Clarence Chan / Pexels'
+    credit: 'Photo: Tahir Osman / Pexels'
   - type: image
     cut_reason: '【適用範囲の留保】大学の建物。政治の話題で調べた研究が多い、の一言（旧: 板）'
     from: 23
     slot: 9
-    credit: 'Photo: Paul Loh / Pexels'
+    credit: 'Photo: Willfried Wende / Pexels'
   - type: board
     cut_reason: 【この動画の答え】男女の話が燃えやすい理由を二つに束ねる（主軸の決め文）
     from: 25
