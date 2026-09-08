@@ -34,16 +34,8 @@ scenes:
   - text: たった一つの投稿に、怒りのコメントが何百件も付いてたのだ。
     speaker: ずんだもん
     expression: surprised
-    pause_after: 0.45
-  - text: それで、どうなったの？
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: 見るのをやめられなかったのだ。気づいたら一時間たってたのだ。
-    speaker: ずんだもん
-    expression: sad
     pause_after: 0.35
-  - text: しかも、こういうの、前にも何回も見た気がするのだ。
+  - text: こういうの、前にも何回も見た気がするのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -51,7 +43,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: そんなところが、入り口になるのよ。
+  - text: そういう話題を入り口にして、度々炎上騒ぎになっているわね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -63,11 +55,11 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: いい疑問ね。理由は一つではないけれど、研究でかなり分かっているのよ。
+  - text: いい疑問ね。理由は一つではないけれど、色々な研究を見ていくとかなり分かってくるのよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: 分かってるのだ！？ 教えてほしいのだ。
+  - text: 研究から分かるのだ！？ 教えてほしいのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -103,28 +95,28 @@ scenes:
     slot: 3
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
-    cut_reason: 【一時間】暗い部屋の別カットに戻して、やめられなかった時間へ
-    from: 6
+    cut_reason: 【既視感】暗い部屋の別カットに戻して、前にも何回も見た、へ
+    from: 4
     slot: 4
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【入り口】伝票と財布。日常のどこにでも入り口がある話へ
-    from: 9
+    from: 6
     slot: 5
     credit: 'Photo: Kaboompics.com / Pexels'
   - type: image
     cut_reason: 【疑問】スマホを見る手元に替えて、ずんだもんの問いへ
-    from: 12
+    from: 9
     slot: 6
     credit: 'Photo: JESHOOTS / Pexels'
   - type: image
     cut_reason: 【受け】スマホの別カットに替えて「研究でかなり分かっている」へ
-    from: 14
+    from: 11
     slot: 7
     credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【定義へ】ニュースサイトを見る手元。次章の言葉そろえへ
-    from: 19
+    from: 16
     slot: 8
     credit: 'Photo: Pixabay'
 - id: 2
@@ -237,7 +229,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: ネットには、怒りを書き込みやすくする仕組みが三つある、という考え方よ。
+  - text: ネットそのものに、怒りを書き込みやすくする仕組みが三つある、という考え方よ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -297,19 +289,19 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.35
-  - text: 「ひどい」「許せない」みたいな、道徳や感情に触れる言葉。
+  - text: 「ひどい」「許せない」みたいな、道徳や感情に触れる言葉。怒りや非難の言葉、と考えてもらえばいいわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: そういう言葉が一つ多い投稿ほど、広く拡散されていたの。
+  - text: そういう言葉が多い投稿ほど、広く拡散されていたの。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 一つ多いだけで？ どのくらい違うのだ？
+  - text: どのくらい違うのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: だいたい二割くらいね。
+  - text: そういう言葉が一つ入るごとに、だいたい二割くらいね。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -324,12 +316,8 @@ scenes:
   - text: 話題が違っても、同じように広がるのだ。
     speaker: ずんだもん
     expression: surprised
-    pause_after: 0.45
-  - text: そうなの。ただ、これは投稿を集めて比べた分析よ。言葉を足す実験ではないわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: じゃあ、その中でも怒りの言葉がいちばん広がりやすいのだ？
+    pause_after: 0.35
+  - text: じゃあ、男女論も怒りの言葉が入ってるから広がりやすいのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -394,7 +382,7 @@ scenes:
           value: 56万件
           text: 投稿を分析
         - id: op
-          at: 22
+          at: 23
           icon: search
           text: 感情の言葉が一つ
         - id: res
@@ -423,16 +411,11 @@ scenes:
       caption:
         text: 話題が変わっても同じ傾向
         at: 27
-  - type: image
-    cut_reason: 【留保】新聞紙面へ。観察であって実験ではない、の一言
-    from: 30
-    slot: 6
-    credit: 'Photo: Mike van Schoonderwalt / Pexels'
 - id: 4
   title: 相手を名指しする言葉
   chapter_title: null
   narration:
-  - text: それが、違うのよ。もっと広がりやすい言葉があるの。
+  - text: それもあるけど、それだけじゃないのよ。もっと広がりやすい言葉があるの。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -468,7 +451,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: この研究の中で、道徳や感情の言葉の効き目と比べると、およそ6.7倍だったの。
+  - text: この研究の中で、道徳や感情の言葉、つまり怒りや非難の言葉の効き目と比べると、およそ6.7倍だったの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -488,7 +471,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.4
-  - text: じゃあ、怒りの言葉だけでは決まらないのだ？
+  - text: でも、広がるってことは、みんなそういう投稿を見たがってるってことなのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -565,18 +548,18 @@ scenes:
   title: 怒りではなく悲しみ／並べているのは誰か
   chapter_title: null
   narration:
-  - text: そこも、意外な結果が出ているの。ただ、今度は別の行動の話よ。
+  - text: 見る側が何を選ぶのかも、調べられているわ。
     speaker: めたん
     expression: explain
-    pause_after: 0.45
-  - text: 別の行動？
-    speaker: ずんだもん
-    expression: confused
-    pause_after: 0.45
+    pause_after: 0.35
   - text: さっきまでは、投稿を広めるかどうかの話。今度は、見出しを開くかどうかの話ね。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
+    pause_after: 0.45
+  - text: 広めるのと開くのは、別の行動なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
   - text: あるニュースサイトが実際にやっていた比べ方を見ましょう。
     speaker: めたん
     expression: explain
@@ -625,25 +608,41 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: 人間って、思ってたより単純じゃないのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: ここまでは、自分で何を開くかの話ね。でも、もう一つ大事なことがあるわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: そもそも、何が目の前に並ぶのか。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.45
-  - text: ……並べる側の話なのだ？
+  - text: え、さっきは怒りの言葉で広がるって話だったのだ。どっちなのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: それを調べたのが、コーネル・テックやカリフォルニア大学バークレー校の研究チームよ。
+  - text: どっちも本当よ。人が反応するのは、怒りの言葉だけじゃない、ということなの。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 広めるときも、開くときも、否定的な言葉が入っていると目が止まる。怒りは、その一つに過ぎないのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 怒りに限らず、ネガティブな言葉に反応しちゃうのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ここまでは、私たちが自分で何を開くか、という話ね。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: でも、SNSの画面にどの投稿が表示されるかは、私たちが決めているわけじゃないでしょう？
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: あ。表示する順番は、SNSの側が決めてるのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: その並べ方で何が目立つのかを、調べた研究があるわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: コーネル・テックやカリフォルニア大学バークレー校の研究チームよ。
+    speaker: めたん
+    expression: normal
     pause_after: 0.35
   - text: 利用者に二つの画面を見せたの。反応の多い順の画面と、時間順の画面ね。
     speaker: めたん
@@ -688,6 +687,8 @@ scenes:
   readings:
   - surface: 怒り
     reading: イカリ
+  - surface: SNS
+    reading: エスエヌエス
   beats:
   - type: image
     cut_reason: 【別の行動へ】新聞紙面。見出しを開くかどうかの話に切り替える
@@ -696,82 +697,92 @@ scenes:
     credit: 'Photo: Suzy Hazelwood / Pexels'
   - type: image
     cut_reason: 【比べ方】紙面の別カットで、見出しを二通り用意する話へ（旧候補はカップの商品名が読めた）
-    from: 6
+    from: 5
     slot: 2
     credit: 'Photo: Mike van Schoonderwalt / Pexels'
   - type: image
     cut_reason: 【研究】大学の建物（別カット）。570万クリックの分析へ
-    from: 9
+    from: 8
     slot: 3
     credit: 'Photo: Paul Loh / Pexels'
     telop: Robertson et al. (2023) NHB
   - type: diagram
     cut_reason: 【言葉と結果】見出しを開く行動で、どの言葉に関連が出て、どれに出なかったかを 3 列 2 行で
-    from: 13
+    from: 12
     diagram:
       type: sketch
       rows:
       - - id: w1
-          at: 13
+          at: 12
           icon: trending_down
           text: 否定的な言葉
         - id: w2
-          at: 16
+          at: 15
           icon: local_fire_department
           text: 怒りの言葉
         - id: w3
-          at: 19
+          at: 18
           icon: sentiment_dissatisfied
           text: 悲しみの言葉
       - - id: r1
-          at: 14
+          at: 13
           value: +2.3%
           text: クリック率
         - id: r2
-          at: 16
+          at: 15
           value: 関連なし
           after: はっきりした関連が出なかったのよ
         - id: r3
-          at: 20
+          at: 19
           value: 関連あり
       highlight:
         ids:
         - w3
         - r3
-        at: 20
+        at: 19
       caption:
         text: 見出しを開く行動
-        at: 13
+        at: 12
   - type: image
-    cut_reason: '【並べる側へ】タブレットでニュースを見る手元。何が目の前に並ぶか、の転換（旧: 板）'
-    from: 24
+    cut_reason: 【束ねる】コメント欄。怒りに限らず否定的な言葉に反応する、の整理
+    from: 22
     slot: 4
+    credit: 'Photo: Uriel Mont / Pexels'
+  - type: image
+    cut_reason: 【区切り】スマホに文字を打つ指先。自分で何を開くか、の話の締め
+    from: 27
+    slot: 5
+    credit: 'Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【並べる側へ】タブレットでニュースを見る手元。表示する順番は SNS の側が決めている、の転換
+    from: 28
+    slot: 6
     credit: 'Photo: Michael Burrows / Pexels'
   - type: image
     cut_reason: 【並べる側】サーバー室の機械。監査研究の導入
-    from: 26
-    slot: 5
+    from: 31
+    slot: 7
     credit: 'Photo: Pixabay'
     telop: Milli et al. (2025) PNAS Nexus
   - type: image
     cut_reason: 【結果】サーバー室の別カットで、反応順の画面に怒りが多い話へ
-    from: 29
-    slot: 6
+    from: 35
+    slot: 8
     credit: 'Photo: panumas nikhomkhai / Pexels'
   - type: image
     cut_reason: 【訂正】スマホを見る手元へ。誰かが怒りを選んだのではない、の一言
-    from: 33
-    slot: 7
+    from: 39
+    slot: 9
     credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【決め文】スマホの別カットで保持。間 2.0 秒
-    from: 36
-    slot: 8
+    from: 42
+    slot: 10
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: 【次章への問い】人混みの遠景（脚のみ）。政治・宗教でも同じ仕組みのはず、の問いへ
-    from: 37
-    slot: 9
+    from: 43
+    slot: 11
     credit: 'Photo: Pixabay'
 - id: 6
   title: なぜ男女の話だけ、特別に燃えるのか
@@ -801,7 +812,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: ここで、さっきの「相手を名指しする言葉」を思い出してほしいの。
+  - text: ここで、さっきの「相手を名指しする言葉」、つまり「仮想敵を作る言葉」の話を思い出してほしいの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -821,7 +832,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: それと、これは私の推論だけど、「男は」「女は」で始まる投稿は、たいてい不満から書かれるでしょう？
+  - text: それと、これは私の意見だけど、「男は」「女は」で始まる投稿は、たいてい不満から書かれるでしょう？
     speaker: めたん
     expression: normal
     pause_after: 0.35
@@ -833,6 +844,10 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
+  - text: そう、だから男女論は炎上しやすいのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
   - text: こういう炎上の形は、昔から何度も繰り返されているの。
     speaker: めたん
     expression: explain
@@ -861,11 +876,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.5
-  - text: だから男女の話は、他の話題より燃えやすいのだ。
+  - text: 二つ目の疑問は、これで解けたのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: normal
     pause_after: 0.35
-  - text: じゃあ、三つ目なのだ。あの言い争いを実際に書いてるのは、どんな人たちなのだ？
+  - text: じゃあ、三つ目なのだ。炎上する時の言い争いを実際に投稿してるのは、どんな人たちなのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -934,29 +949,34 @@ scenes:
     slot: 4
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【広告の炎上】街頭の大きな広告看板（文字は読めない）
+    cut_reason: 【小結】コメント欄。二つの性質が重なる、の小結
     from: 16
     slot: 5
+    credit: 'Photo: Uriel Mont / Pexels'
+  - type: image
+    cut_reason: 【広告の炎上】街頭の大きな広告看板（文字は読めない）
+    from: 17
+    slot: 6
     credit: 'Photo: Tahir Osman / Pexels'
     telop: 瀬地山角『炎上CMでよみとくジェンダー論』
   - type: image
     cut_reason: 【役割の描き方】台所。役割分担の描かれ方へ
-    from: 18
-    slot: 6
+    from: 19
+    slot: 7
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【型の反復】広告看板の別カットで、同じ型が繰り返される話へ
-    from: 20
-    slot: 7
+    from: 21
+    slot: 8
     credit: 'Photo: Clarence Chan / Pexels'
   - type: image
     cut_reason: '【適用範囲の留保】大学の建物。政治の話題で調べた研究が多い、の一言（旧: 板）'
-    from: 22
-    slot: 8
+    from: 23
+    slot: 9
     credit: 'Photo: Paul Loh / Pexels'
   - type: board
     cut_reason: 【この動画の答え】男女の話が燃えやすい理由を二つに束ねる（主軸の決め文）
-    from: 23
+    from: 24
     telop: '男女の話が燃えやすい理由
 
       ① 燃えやすい言葉が入りやすい
@@ -964,8 +984,8 @@ scenes:
       ② 全員が当事者になる'
   - type: image
     cut_reason: 【次章へ】スマホを見る手元。書いている人への問いへ
-    from: 27
-    slot: 9
+    from: 28
+    slot: 10
     credit: 'Photo: JESHOOTS / Pexels'
 - id: 7
   title: では、誰が書いているのか
@@ -1019,7 +1039,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
-  - text: ただし、これは炎上全体を対象にした数字ね。男女論だけを数えたものではないわ。
+  - text: しかも、これは炎上全体を対象にした数字よ。男女の話だけを数えれば、もっと少ないはずね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1130,7 +1150,7 @@ scenes:
   title: 書いている人は、なぜ引かないのか
   chapter_title: null
   narration:
-  - text: いい疑問ね。じゃあ次は、書いている人が引きにくくなる理由を見ましょう。
+  - text: いい疑問ね。じゃあ次は、炎上騒動に継続して参加してしまう理由を見ましょう。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1158,11 +1178,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: それは、引けないのだ……。
+  - text: それは、やめにくいのだ……。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: そして、引きにくさを強めるものが、もう一つあるわ。
+  - text: そして、やめにくさを強めるものが、もう一つあるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1312,6 +1332,8 @@ scenes:
     slot: 9
     credit: 'Photo: JESHOOTS / Pexels'
   readings:
+  - surface: 炎上
+    reading: エンジョウ
   - surface: 妥協
     reading: ダキョウ
   - surface: 怒り
@@ -1326,7 +1348,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 相手を名指しする言葉が入った投稿は、広がりやすい。
+  - text: 仮想敵を名指しする言葉が入った投稿は、広がりやすい。
     speaker: めたん
     expression: normal
     pause_after: 0.35
@@ -1386,7 +1408,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  - text: 待つのだ。見え方が作られてるなら、怒ってる中身の方も、作りものなのだ？
+  - text: 画面の中は、そうやってできてるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.35
+  - text: じゃあ、画面の外の、日本の人たち全体はどうなのだ？ 本当に男と女で二つに割れてるのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -1446,249 +1472,10 @@ scenes:
   - surface: 2800件
     reading: ニセンハッピャクケン
 - id: 10
-  title: 怒りの中身まで、作りものなのか
-  chapter_title: 怒りの中身まで、作りものなのか
-  narration:
-  - text: そこは、はっきり分けておきたいところね。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.35
-  - text: ここまで見てきた仕組みが作るのは、主に見え方の方よ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: どういうことなのだ？
-    speaker: ずんだもん
-    expression: confused
-    pause_after: 0.45
-  - text: 今日見てきたのは、どんな投稿が広がりやすいか、誰が書いているか、という話でしょう？
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 怒りのもとになっている問題が本当にあるかどうかは、まだ一度も調べていないのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.45
-  - text: あ。仕組みの話だけしてたのだ。
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: だから今度は、日本にどんな差や被害が実際にあるのかを、数字で見ておきましょう。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ジェンダーギャップ指数という指標があるわ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 教育や経済、政治の男女差を順位にしたものね。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 2024年、日本は146カ国中118位だったの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 118位！ もっと上だと思ってたのだ。
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: 2024年の賃金は、男性を100としたとき、女性は75.8よ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 1976年に統計を取り始めてから、これでもいちばん差が小さい数字なの。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: いちばん縮まって、それでも四分の一近く違うのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: 総務省の調査だと、家事や育児にあてる時間は、男性が一日平均51分。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 女性は3時間24分よ。子育て世帯だけでなく、十歳以上の全体の平均ね。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: 四倍くらい違うのだ！
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: 2018年には、東京医科大学の入試で、女子受験者の点数を一律に減らしていたことが分かったわ。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.35
-  - text: その年の合格率は、男子が女子のおよそ三倍だったの。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 文部科学省が81の大学を調べたところ、10校で不適切な扱いが認められたわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ただし、中身は大学によって違うわ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: 点数をいじられてたのだ！ それは、怒って当たり前なのだ。
-    speaker: ずんだもん
-    expression: angry
-    pause_after: 0.45
-  - text: 内閣府の調査では、無理やりに性交等をされた経験のある女性は、およそ14人に1人よ。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.9
-  - text: ……ひどい話なのだ。
-    speaker: ずんだもん
-    expression: sad
-    pause_after: 0.7
-  - text: でも、めたん。男性が困っていることも、ちゃんとあると思うのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: そうね。男性の被害は、見えにくいことが多いの。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 東京都が2025年におこなった痴漢の調査があるわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 約1万2千人に聞いて、被害にあったと答えた男性が8.5パーセントいたの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: しかも、誰にも相談しなかった割合は、男性の方が高いという調査もあるのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 0.45
-  - text: 相談しにくいと、警察や相談の記録には出てきにくいのだ。
-    speaker: ずんだもん
-    expression: sad
-    pause_after: 0.45
-  - text: ええ。どちらの側にも、まだ解かれていない問題が残っているわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ただし、勘違いしないでね。これは、一つ一つの投稿が正しいという意味ではないの。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 見え方が作られていても、怒りのもとまで作りものではないのよ。
-    speaker: めたん
-    expression: serious
-    pause_after: 2.0
-  - text: 問題が本当にあるなら、やっぱり日本は二つに割れてるんじゃないのだ？
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 1.2
-  beats:
-  - type: chapter
-    cut_reason: 【章の入口】黒板に問いを書いて本題へ
-  - type: image
-    cut_reason: '【区切り】コメント欄。ここまでは見え方の話、と分ける（旧: 板）'
-    from: 1
-    slot: 1
-    credit: 'Photo: Uriel Mont / Pexels'
-  - type: image
-    cut_reason: 【振り返り】スマホを見る手元。仕組みの話だけしてきた確認
-    from: 4
-    slot: 2
-    credit: 'Photo: Sound On / Pexels'
-  - type: image
-    cut_reason: 【気づき】スマホの別カット。中身を数字で見る、への転換
-    from: 7
-    slot: 3
-    credit: 'Photo: Jakub Zerdzicki / Pexels'
-  - type: image
-    cut_reason: '【統計の導入】電卓と硬貨。指標の説明（旧: 板）'
-    from: 9
-    slot: 4
-    credit: 'Photo: Breakingpic / Pexels'
-  - type: diagram
-    cut_reason: '【数字: 日本の男女の差】三つの数字を 1 行 3 列で。発話に同期して 1 つずつ出す'
-    from: 11
-    diagram:
-      type: sketch
-      rows:
-      - - id: rank
-          at: 11
-          icon: public
-          value: 118位
-          text: 146カ国中
-        - id: wage
-          at: 14
-          icon: payments
-          value: '75.8'
-          text: 男性100に対し
-        - id: home
-          at: 17
-          icon: home
-          value: 約4倍
-          text: 家事・育児の時間
-      caption:
-        text: 日本の男女の差を測った統計
-        at: 11
-  - type: image
-    cut_reason: 【入試】無人の試験会場の机
-    from: 21
-    slot: 5
-    credit: 'Photo: Andy Barbour / Pexels'
-    telop: 2018年 東京医科大学：合格率は男子が女子の約3倍
-  - type: image
-    cut_reason: 【緊急調査】試験会場の別カット。10校で不適切な扱いが認められた話へ
-    from: 23
-    slot: 6
-    credit: 'Photo: Andy Barbour / Pexels'
-    telop: 文部科学省の調査：81大学中10校で不適切
-  - type: image
-    cut_reason: 【性暴力】人混みの遠景（顔は判別できない）
-    from: 27
-    slot: 7
-    credit: 'Photo: Pixabay'
-    telop: 内閣府の調査：女性のおよそ14人に1人
-  - type: image
-    cut_reason: 【男性側】満員電車のホーム（顔は判別できない）
-    from: 32
-    slot: 8
-    credit: 'Photo: Pixabay'
-    telop: 東京都の調査：被害を答えた男性8.5％
-  - type: image
-    cut_reason: 【相談しにくさ】ホームの別カット。記録に出てきにくい話へ
-    from: 35
-    slot: 9
-    credit: 'Photo: Kassandre Pedro / Pexels'
-  - type: image
-    cut_reason: '【留保】コメント欄。一つ一つの投稿が正しいという意味ではない（旧: 板）'
-    from: 39
-    slot: 10
-    credit: 'Photo: thomas vanhaecht / Pexels'
-  - type: image
-    cut_reason: 【決め文】人混みの遠景（ブレ）。現実に生きている人たちの画で保持。間 2.5 秒
-    from: 41
-    slot: 11
-    credit: 'Photo: Pixabay'
-  readings:
-  - surface: 賃金
-    reading: チンギン
-  - surface: 性交等
-    reading: セイコウトウ
-  - surface: 痴漢
-    reading: チカン
-  - surface: 合格率
-    reading: ゴウカクリツ
-  - surface: 14人に1人
-    reading: ジュウヨニンニヒトリ
-  - surface: 怒り
-    reading: イカリ
-- id: 11
   title: では、日本は二つに割れているのか
-  chapter_title: null
+  chapter_title: では、日本は二つに割れているのか
   narration:
-  - text: 世の中が本当に二つに割れているのかも、調べた人がいるのよ。
+  - text: それを調べた人がいるのよ。
     speaker: めたん
     expression: smile
     pause_after: 0.35
@@ -1789,6 +1576,8 @@ scenes:
     expression: thinking
     pause_after: 1.2
   beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
     cut_reason: 【分断の調査】アンケート用紙の束（別カット）。田中・浜屋の調査へ
     from: 1
@@ -1869,7 +1658,7 @@ scenes:
     reading: ハマヤサトシ
   - surface: 田中辰雄
     reading: タナカタツオ
-- id: 12
+- id: 11
   title: 結び
   chapter_title: null
   narration:
@@ -1937,11 +1726,15 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 見え方が作られていても、問題そのものは消えないの。
+  - text: 見え方が作られていても、怒りのもとになっている問題まで消えるわけじゃないの。
     speaker: めたん
     expression: serious
     pause_after: 0.7
-  - text: 賃金の差も、家事の時間も、入試の点数も、画面の外にある問題として残っているのよ。
+  - text: 賃金の差や家事の時間の偏りのように、画面の外で解かれていない問題は残っているの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: それは、男女どちらの側にもあるのよ。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -1957,7 +1750,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: ……でも、今夜も指が止まらなくなったら、僕はどうしたらいいのだ？
+  - text: じゃあ、また今日も炎上している投稿を見たら、僕はどう受け止めればいいのだ？
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -1969,10 +1762,21 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: 燃えやすい言葉と、全員が当事者になる話題が、重なっているからよ。
+  - text: 燃えやすい言葉と、全員が当事者になる話題が、重なっているから。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.6
+  - text: それが、憎み合いに見えているだけなのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
+  readings:
+  - surface: 怒り
+    reading: イカリ
+  - surface: 炎上
+    reading: エンジョウ
+  - surface: 賃金
+    reading: チンギン
   beats:
   - type: image
     cut_reason: 【回帰】冒頭と同じ暗い部屋のスマホ。最初の疑問へ戻る
@@ -2002,7 +1806,7 @@ scenes:
         text: だから男女の話は燃えやすい
         at: 9
   - type: image
-    cut_reason: 【受け止め】スマホの別カット。ずんだもんの感覚の方が数字に近かった
+    cut_reason: 【受け止め】スマホの別カット。最初の疑問への答えを受け止める
     from: 10
     slot: 2
     credit: 'Photo: JESHOOTS / Pexels'
@@ -2023,30 +1827,23 @@ scenes:
 
       世の中全体は分からない'
   - type: image
-    cut_reason: 【残る問題】硬貨と紙幣（別カット）。画面の外に残るもの
+    cut_reason: 【残る問題】人混みの遠景。画面の外にいる人たちの問題は男女どちらの側にも残る
     from: 19
     slot: 5
     credit: 'Photo: Pixabay'
-    telop: 賃金の差・家事の時間・入試の点数は、画面の外に残る
+    telop: 画面の外の問題は、男女どちらの側にも残る
   - type: image
     cut_reason: 【関心を失わない】洗い物の手元。現実の問題の画へ
-    from: 22
+    from: 23
     slot: 6
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【回帰】暗い部屋の別カット。冒頭の「指が止まらない」を回収
-    from: 24
+    cut_reason: 【回帰】暗い部屋の別カット。冒頭の夜の場面へ戻る
+    from: 25
     slot: 7
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【最後の一枚】暗い部屋でスマホを伏せて置く手。決め文（仕組みで締める）をアウトロまで保持。間 2.5 秒
-    from: 26
+    from: 27
     slot: 8
     credit: 'Photo: Roberto Cervantes / Pexels'
-  readings:
-  - surface: 炎上
-    reading: エンジョウ
-  - surface: 賃金
-    reading: チンギン
-  - surface: 怒り
-    reading: イカリ
