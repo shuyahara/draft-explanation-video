@@ -146,9 +146,9 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
-  - text: 順番に見ていけば、僕にも分かりそうなのだ。
+  - text: 数えるのだ？ 炎上する人の数を数えるなんて、考えたことなかったのだ。
     speaker: ずんだもん
-    expression: delighted
+    expression: surprised
     pause_after: 0.35
   - text: じゃあ、一つ目なのだ。どうして、あんなに怒った投稿ばかり広がるのだ？
     speaker: ずんだもん
@@ -182,7 +182,7 @@ scenes:
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【次章へ】スマホの別カットで「怒った投稿ばかり広がる」の問いへ
-    from: 12
+    from: 13
     slot: 4
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   readings:
@@ -252,7 +252,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 56万件！？ ずんだを56万粒数えるより大変なのだ！
+  - text: 56万件！？ ずんだを56万粒数えたら、腕がつるのだ！
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -260,10 +260,10 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.35
-  - text: 「ひどい」「許せない」みたいな、道徳や感情に触れる言葉。怒りや非難の言葉、と考えてもらえばいいわ。
+  - text: 「ひどい」「許せない」みたいな、道徳や感情に触れる言葉が入っているかを見たの。怒りや非難の言葉、と考えてもらえばいいわ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.5
   - text: そういう言葉が多い投稿ほど、広く拡散されていたの。
     speaker: めたん
     expression: normal
@@ -272,7 +272,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そういう言葉が一つ入るごとに、だいたい二割くらいね。
+  - text: そういう言葉が一つ入るごとに、拡散される確率がだいたい二割くらい高くなるの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -282,7 +282,7 @@ scenes:
     pause_after: 0.35
   - text: 気候変動では24パーセントよ。
     speaker: めたん
-    expression: normal
+    expression: explain
     pause_after: 0.45
   - text: 話題が違っても、同じように広がるのだ。
     speaker: ずんだもん
@@ -425,7 +425,7 @@ scenes:
   - text: この研究の中で、道徳や感情の言葉、つまり怒りや非難の言葉の効き目と比べると、およそ6.7倍だったの。
     speaker: めたん
     expression: explain
-    pause_after: 0.45
+    pause_after: 0.6
   - text: 同じ研究の中で比べた数字なのだ。それなら分かるのだ。
     speaker: ずんだもん
     expression: thinking
@@ -441,8 +441,8 @@ scenes:
   - text: 拡散をいちばん強く押し上げるのは、怒りそのものより、相手を名指しする言葉なのよ。
     speaker: めたん
     expression: serious
-    pause_after: 1.4
-  - text: でも、広がるってことは、みんなそういう投稿を見たがってるってことなのだ？
+    pause_after: 1.8
+  - text: でも、広がるってことは、読む人がそういう投稿を見たがってるってことなのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -549,7 +549,7 @@ scenes:
     pause_after: 0.35
   - text: クリック570万回分よ。
     speaker: めたん
-    expression: normal
+    expression: surprised
     pause_after: 0.45
   - text: 見出しを変えるだけで、そんなに差がつくのだ？
     speaker: ずんだもん
@@ -586,8 +586,12 @@ scenes:
   - text: どっちも本当よ。人が反応するのは、怒りの言葉だけじゃない、ということなの。
     speaker: めたん
     expression: explain
+    pause_after: 0.5
+  - text: 広めるときも、開くときも、否定的な言葉が入っていると目が止まる。
+    speaker: めたん
+    expression: normal
     pause_after: 0.35
-  - text: 広めるときも、開くときも、否定的な言葉が入っていると目が止まる。怒りは、その一つに過ぎないのよ。
+  - text: 怒りは、その一つに過ぎないのよ。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -637,7 +641,7 @@ scenes:
     pause_after: 0.35
   - text: でも同じ研究で、利用者はその画面を、特に好んではいなかったわ。
     speaker: めたん
-    expression: serious
+    expression: surprised
     pause_after: 0.45
   - text: 自分でも好きじゃない画面が、勝手に並んでたのだ？
     speaker: ずんだもん
@@ -818,7 +822,7 @@ scenes:
   - text: そう、だから男女論は炎上しやすいのよ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.8
   - text: こういう炎上の形は、昔から何度も繰り返されているの。
     speaker: めたん
     expression: explain
@@ -839,19 +843,27 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ここまでの研究は政治の話題で調べたものが多いから、男女の話で同じ数字が出たわけではないわ。
+  - text: ここまでの研究は、政治の話題で調べたものが多いの。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: でも、仕組みはつながっているの。燃えやすい言葉と、全員が当事者になる話題が、重なっているのよ。
+  - text: だから、男女の話で同じ数字が出たわけではないわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: でも、仕組みはつながっているの。
     speaker: めたん
     expression: serious
-    pause_after: 2.5
+    pause_after: 0.35
+  - text: 燃えやすい言葉と、全員が当事者になる話題が、重なっているのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
   - text: 二つ目の疑問は、これで解けたのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.35
-  - text: じゃあ、三つ目なのだ。炎上する時の言い争いを実際に投稿してるのは、どんな人たちなのだ？
+  - text: 残るは三つ目なのだ。炎上する時の言い争いを実際に投稿してるのは、どんな人たちなのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -947,7 +959,7 @@ scenes:
     credit: 'Photo: Paul Loh / Pexels'
   - type: board
     cut_reason: 【この動画の答え】男女の話が燃えやすい理由を二つに束ねる（主軸の決め文）
-    from: 24
+    from: 25
     telop: '男女の話が燃えやすい理由
 
       ① 燃えやすい言葉が入りやすい
@@ -955,14 +967,14 @@ scenes:
       ② 全員が当事者になる'
   - type: image
     cut_reason: 【次章へ】スマホを見る手元。書いている人への問いへ
-    from: 28
+    from: 29
     slot: 10
     credit: 'Photo: JESHOOTS / Pexels'
 - id: 7
   title: では、誰が書いているのか
   chapter_title: では、誰が書いているのか
   narration:
-  - text: その疑問に答えるための、日本の調査があるわ。
+  - text: ちょうどそれを数えた、日本の調査があるわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1010,7 +1022,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
-  - text: しかも、これは炎上全体を対象にした数字よ。男女の話だけを数えれば、もっと少ないはずね。
+  - text: しかも、これは炎上全体を対象にした数字よ。男女の話は、この中の一部ということね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1020,7 +1032,7 @@ scenes:
     pause_after: 0.35
   - text: ……って、僕もいきなり決めつけてるのだ。
     speaker: ずんだもん
-    expression: shy
+    expression: sad
     pause_after: 0.45
   - text: 正直でよろしい。そこも意外よ。
     speaker: めたん
@@ -1029,7 +1041,7 @@ scenes:
   - text: 書き込む動機は、6割から7割が正義感だったの。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.6
   - text: どんな人が多いかを見ると、ネットを使う人全体と比べて、男性の割合が高かったわ。
     speaker: めたん
     expression: explain
@@ -1121,7 +1133,7 @@ scenes:
   title: 書いている人は、なぜ引かないのか
   chapter_title: null
   narration:
-  - text: いい疑問ね。じゃあ次は、炎上騒動に継続して参加してしまう理由を見ましょう。
+  - text: そこが大事なところね。鍵は、意見を好みではなく、善悪として捉える心理よ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1129,7 +1141,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 「これは好みの違いじゃない。正しいか間違っているかの問題だ」。
+  - text: 「これは好みの違いじゃない。正しいか間違っているかの問題だ」と感じること、あるでしょう？
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1148,7 +1160,7 @@ scenes:
   - text: でも善悪の問題だと思っていると、譲ることが、悪に負けることになってしまうの。
     speaker: めたん
     expression: serious
-    pause_after: 0.45
+    pause_after: 0.6
   - text: それは、やめにくいのだ……。
     speaker: ずんだもん
     expression: sad
@@ -1221,7 +1233,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: 少ない人が書いた投稿でも、広がりやすければ何度も目に入る。だから大勢に見えるのだ？
+  - text: それなのに、画面ではもっと大勢が書いてるように見える。この差はどこから来るのだ？
     speaker: ずんだもん
     expression: point
     pause_after: 1.2
@@ -1303,8 +1315,6 @@ scenes:
     slot: 9
     credit: 'Photo: JESHOOTS / Pexels'
   readings:
-  - surface: 炎上
-    reading: エンジョウ
   - surface: 妥協
     reading: ダキョウ
   - surface: 怒り
@@ -1315,7 +1325,7 @@ scenes:
   title: なぜ少数の声が、世の中の声に見えるのか
   chapter_title: なぜ少数の声が大きく見えるのか
   narration:
-  - text: その通りよ。ここまでの話をつなぐと、見え方の仕組みが分かるわ。
+  - text: そこが、ここまでの話が一本につながるところよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -1371,7 +1381,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: 大勢に見えても、最初に動かしてるのは何人かなのだ。
+  - text: 大勢に見えても、最初に動かしてるのは、ほんの何人かなのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -1383,7 +1393,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: じゃあ、画面の外の、日本の人たち全体はどうなのだ？ 本当に男と女で二つに割れてるのだ？
+  - text: 今度は、画面の外を見たいのだ。日本の人たち全体は、本当に男と女で二つに割れてるのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -1397,46 +1407,46 @@ scenes:
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【仕組み】ネオンの広告が並ぶ夜の街。見てもらう時間が売り上げになる
-    from: 5
+    from: 4
     slot: 2
     credit: 'Photo: Mak_ jp / Pexels'
   - type: image
     cut_reason: 【押し上げ】人混みの遠景（脚のみ）。少ない声が繰り返し目立つ場所に出てくる
-    from: 7
+    from: 6
     slot: 3
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【日本の実例】コメント欄の別カット。2800件の返信を分類した研究へ
-    from: 9
+    from: 8
     slot: 4
     credit: 'Photo: thomas vanhaecht / Pexels'
     telop: Tonami et al. (2022) F1000Res.
   - type: diagram
     cut_reason: '【三層: 拡散の広がり】中心の少数から、引用・まね、内容に関係ない攻撃へ広がる'
-    from: 12
+    from: 11
     diagram:
       type: narrative
       layout: radiate
       center:
         icon: campaign
         text: 少数の発信者
-        at: 12
+        at: 11
       items:
       - id: quote
         text: 引用して広める
-        at: 13
+        at: 12
       - id: mimic
         text: まねて書く人
-        at: 13
+        at: 12
         after: まねて書いたり
       - id: pile
         text: 攻撃に加わる人
-        at: 14
+        at: 13
       turn:
-        at: 15
+        at: 14
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。間 2.0 秒
-    from: 17
+    from: 16
     slot: 5
     credit: 'Photo: Pixabay'
   readings:
@@ -1486,9 +1496,9 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 思ってたのと、逆なのだ！
+  - text: 同じ意見ばかり見て過激になる、は思い込みだったのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.45
   - text: この結果は、総務省の情報通信白書でも紹介されているのよ。
     speaker: めたん
@@ -1505,7 +1515,7 @@ scenes:
   - text: 日本全体が二つに割れているというより、目立つ場所で強い意見がぶつかって見えている。
     speaker: めたん
     expression: normal
-    pause_after: 0.45
+    pause_after: 0.8
   - text: 日本全体が割れてるとは、すぐには言えないのだ。
     speaker: ずんだもん
     expression: thinking
@@ -1541,7 +1551,7 @@ scenes:
   - text: そういう呼び名が広まると、そこに一つのまとまった集団がいるように見えてしまうのよ。
     speaker: めたん
     expression: serious
-    pause_after: 1.8
+    pause_after: 1.5
   - text: 本当は、いろんな人が、ばらばらにいるだけかもしれないのだ。
     speaker: ずんだもん
     expression: thinking
@@ -1639,13 +1649,13 @@ scenes:
     pause_after: 0.35
   - text: なぜ男女の論争は、こんなに炎上しやすいのか。
     speaker: めたん
-    expression: serious
+    expression: explain
     pause_after: 0.45
   - text: 僕の言葉でまとめてみるのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: まず、怒りや否定的な言葉と、相手をひとまとめに名指しする言葉。
+  - text: まず、怒りや否定的な言葉と、相手をひとまとめに名指しする言葉があるのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.35
@@ -1661,14 +1671,18 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: 「男は」「女は」という言い方が、そのまま敵の名指しになって、不満の言葉も入りやすいのだ。
+  - text: 「男は」「女は」という言い方が、そのまま敵の名指しになるのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: そこには、不満の言葉も入りやすいのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.35
   - text: だから、他の話題より燃えやすいのだ。
     speaker: ずんだもん
     expression: smile
-    pause_after: 0.45
+    pause_after: 0.8
   - text: よくまとまったわね。それが、最初の疑問への答えよ。
     speaker: めたん
     expression: smile
@@ -1677,7 +1691,11 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: 反応がつくと書き続けやすくなるから、少ない人の声が世の中全部の声みたいに見えるのだ。
+  - text: 反応がつくと、書き続けやすくなるのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: だから、少ない人の声が、世の中全部の声みたいに見えるのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
@@ -1692,7 +1710,7 @@ scenes:
   - text: 世の中全体が憎み合っているかどうかは、あの画面の激しさだけでは判断できないわ。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
+    pause_after: 0.7
   - text: ただ、ここで忘れちゃいけないこともあるわ。
     speaker: めたん
     expression: normal
@@ -1700,12 +1718,12 @@ scenes:
   - text: 見え方が作られていても、怒りのもとになっている問題まで消えるわけじゃないの。
     speaker: めたん
     expression: serious
-    pause_after: 0.7
+    pause_after: 1.0
   - text: 賃金の差や家事の時間の偏りのように、画面の外で解かれていない問題は残っているの。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: それは、男女どちらの側にもあるのよ。
+  - text: それは、男性にも女性にもあるのよ。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -1736,8 +1754,8 @@ scenes:
   - text: 燃えやすい言葉と、全員が当事者になる話題が、重なっているから。
     speaker: めたん
     expression: serious
-    pause_after: 0.6
-  - text: それが、憎み合いに見えているだけなのよ。
+    pause_after: 0.8
+  - text: それが、憎み合いのように見えているのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
@@ -1775,46 +1793,46 @@ scenes:
         at: 8
       result:
         text: だから男女の話は燃えやすい
-        at: 9
+        at: 10
   - type: image
     cut_reason: 【受け止め】スマホの別カット。最初の疑問への答えを受け止める
-    from: 10
+    from: 11
     slot: 2
     credit: 'Photo: JESHOOTS / Pexels'
   - type: image
     cut_reason: 【補足】スマホを見る手元。反応が書き手を後押しする話
-    from: 13
+    from: 14
     slot: 3
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【冒頭の回収】コメント欄。実際に書いていたのはごく一部だった
-    from: 14
+    from: 16
     slot: 4
     credit: 'Photo: thomas vanhaecht / Pexels'
   - type: board
     cut_reason: 【論の着地】この動画で言えることの範囲を黒板の文字で
-    from: 16
+    from: 18
     telop: '画面の激しさだけでは
 
       世の中全体は分からない'
   - type: image
     cut_reason: 【残る問題】人混みの遠景。画面の外にいる人たちの問題は男女どちらの側にも残る
-    from: 19
+    from: 21
     slot: 5
     credit: 'Photo: Pixabay'
     telop: 画面の外の問題は、男女どちらの側にも残る
   - type: image
     cut_reason: 【関心を失わない】洗い物の手元。現実の問題の画へ
-    from: 23
+    from: 25
     slot: 6
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【回帰】暗い部屋の別カット。冒頭の夜の場面へ戻る
-    from: 25
+    from: 27
     slot: 7
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【最後の一枚】暗い部屋でスマホを伏せて置く手。決め文（仕組みで締める）をアウトロまで保持。間 2.5 秒
-    from: 27
+    from: 29
     slot: 8
     credit: 'Photo: Roberto Cervantes / Pexels'
