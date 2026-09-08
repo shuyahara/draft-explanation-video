@@ -55,19 +55,19 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: ねえ、めたん。僕、だんだん分からなくなってきたのだ。
+  - text: ねえ、めたん。僕、前から不思議だったのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
-  - text: 世の中の男の人と女の人って、本当にあんなに憎み合ってるのだ？
+  - text: なんで男女の論争って、こんなに炎上しやすいのだ？
     speaker: ずんだもん
-    expression: sad
+    expression: confused
     pause_after: 0.45
-  - text: そこに引っかかったのは、大事なことよ。その感覚は、的外れじゃないと私は思っているの。
+  - text: いい疑問ね。理由は一つではないけれど、研究でかなり分かっているのよ。
     speaker: めたん
-    expression: serious
+    expression: smile
     pause_after: 0.45
-  - text: え、あれが本当じゃないってことなのだ？
+  - text: 分かってるのだ！？ 教えてほしいのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -125,24 +125,24 @@ scenes:
     slot: 5
     credit: 'Photo: Kaboompics.com / Pexels'
   - type: image
-    cut_reason: 【疑問】スマホを見る手元に替えて、ずんだもんの引っかかりへ
+    cut_reason: 【疑問】スマホを見る手元に替えて、ずんだもんの問いへ
     from: 12
     slot: 6
     credit: 'Photo: JESHOOTS / Pexels'
   - type: image
-    cut_reason: 【肯定】スマホの別カットに替えて「その感覚は的外れじゃない」へ
+    cut_reason: 【受け】スマホの別カットに替えて「研究でかなり分かっている」へ
     from: 14
     slot: 7
     credit: 'Photo: Sound On / Pexels'
   - type: board
     cut_reason: 【予告】この動画で示す数字を先に一つだけ出す（総合レビューの冒頭フック提案）
-    from: 19
+    from: 20
     telop: '炎上に書き込む人
 
       200人に1人'
   - type: image
     cut_reason: 【定義へ】ニュースサイトを見る手元。次章の言葉そろえへ
-    from: 23
+    from: 24
     slot: 8
     credit: 'Photo: Pixabay'
 - id: 2
@@ -161,7 +161,7 @@ scenes:
     speaker: ずんだもん
     expression: normal
     pause_after: 0.45
-  - text: そうね。それで、ずんだもんの疑問は「世の中は本当に憎み合っているのか」だったわね。
+  - text: そうね。それで、ずんだもんの疑問は「なぜ男女の論争は炎上しやすいのか」だったわね。
     speaker: めたん
     expression: smile
     pause_after: 0.35
@@ -181,15 +181,15 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: あ。「本当に憎み合ってるか」を、そのまま調べるんじゃないのだ？
+  - text: 炎上しやすい理由を聞いたのに、「誰が」とか「見え方」も調べるのだ？
     speaker: ずんだもん
-    expression: surprised
+    expression: confused
     pause_after: 0.45
-  - text: ええ。世の中全体が本当に対立しているかどうかは、私には断言できないわ。
+  - text: ええ。燃え広がる仕組みだけ見ていると、世の中が二つに割れているように思えてしまうの。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: でも、あの激しさが誰の声でできているかなら、数えられるのよ。
+  - text: でも、実際に書いている人を数えると、見え方が変わるのよ。
     speaker: めたん
     expression: serious
     pause_after: 1.5
@@ -226,18 +226,18 @@ scenes:
 
       ③ なぜ全体の声に見えるのか'
   - type: image
-    cut_reason: 【直接は測れない】人混みの遠景へ。世の中全体は直接測れない話
-    from: 12
+    cut_reason: 【三つに分ける理由】人混みの遠景へ。誰が・見え方まで調べる理由
+    from: 11
     slot: 2
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【断言できない範囲】人混みの別カットに替えて限界の宣言へ
-    from: 14
+    cut_reason: 【二つに割れて見える】人混みの別カットに替えて、数えると見え方が変わる、へ
+    from: 13
     slot: 3
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【次章へ】スマホの別カットで「怒った投稿ばかり広がる」の問いへ
-    from: 17
+    from: 16
     slot: 4
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   readings:
@@ -2000,7 +2000,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 世の中は、本当にあんなに憎み合っているのか。
+  - text: なぜ男女の論争は、こんなに炎上しやすいのか。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -2044,11 +2044,11 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.35
-  - text: 「本当にみんなが憎み合ってるの？」というあなたの感覚の方が、数字に近かったのよ。
+  - text: 炎上しやすい理由と、大きく見える理由。両方が一本につながったわね。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 僕の勘、当たってたのだ！
+  - text: 昨日の夜のもやもやが、すっきりしたのだ！
     speaker: ずんだもん
     expression: delighted
     pause_after: 0.45
@@ -2148,34 +2148,34 @@ scenes:
     credit: 'Photo: JESHOOTS / Pexels'
   - type: image
     cut_reason: 【冒頭の回収】コメント欄。実際に書いていたのはごく一部だった
-    from: 15
+    from: 16
     slot: 4
     credit: 'Photo: thomas vanhaecht / Pexels'
   - type: board
     cut_reason: 【論の着地】この動画で言えることの範囲を黒板の文字で
-    from: 17
+    from: 18
     telop: '画面の激しさだけでは
 
       世の中全体は分からない'
   - type: image
     cut_reason: 【残る問題】硬貨と紙幣（別カット）。画面の外に残るもの
-    from: 20
+    from: 21
     slot: 5
     credit: 'Photo: Pixabay'
     telop: 賃金の差・家事の時間・入試の点数は、画面の外に残る
   - type: image
     cut_reason: 【関心を失わない】洗い物の手元。現実の問題の画へ
-    from: 23
+    from: 24
     slot: 6
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【回帰】暗い部屋の別カット。冒頭の「指が止まらない」を回収
-    from: 25
+    from: 26
     slot: 7
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【最後の一枚】暗い部屋でスマホを伏せて置く手。アウトロで保持。間 2.5 秒
-    from: 29
+    from: 30
     slot: 8
     credit: 'Photo: Roberto Cervantes / Pexels'
   readings:
