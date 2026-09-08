@@ -81,15 +81,15 @@ scenes:
     slot: 1
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
-    cut_reason: 【燃えている投稿】責め合いのコメント欄へ（文字は読めない）
+    cut_reason: 【燃えている投稿】夜の寝室、スマホの中で男女の陣営が吹き出しで応酬（生成イラスト。文字はなぐり書き）
     from: 2
     slot: 2
-    credit: 'Photo: thomas vanhaecht / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
-    cut_reason: 【何百件】コメント欄の別カットに替えて件数の多さへ
+    cut_reason: 【何百件】一つの投稿に怒りの返信が嵐のように積み上がる（生成イラスト）
     from: 3
     slot: 3
-    credit: 'Photo: Uriel Mont / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【既視感】暗い部屋の別カットに戻して、前にも何回も見た、へ
     from: 4
@@ -326,15 +326,15 @@ scenes:
     slot: 2
     credit: 'Photo: William Fortunato / Pexels'
   - type: image
-    cut_reason: 【対面】向かい合って話す二人（後ろ姿）。言いにくさの場面
+    cut_reason: 【対面】向かい合った席で言い出せずに汗をかく人（生成イラスト）
     from: 10
     slot: 3
-    credit: 'Photo: Pavel Danilyuk / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
-    cut_reason: 【画面越し】スマホに文字を打つ指先。決め文まで保持
+    cut_reason: 【画面越し】ソファで軽い顔つきのまま片手で辛辣な投稿を打つ人（生成イラスト）。決め文まで保持
     from: 12
     slot: 4
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【実証研究へ】研究資料の束。ブレイディの分析の導入（大学の建物は別大学の誤認を招くため v5 で差し替え）
     from: 15
@@ -474,10 +474,10 @@ scenes:
     credit: 'Photo: Pixabay'
     telop: Rathje et al. (2021) PNAS
   - type: image
-    cut_reason: 【67％】コメント欄。名指しする言葉が入るとシェアが増える話へ
+    cut_reason: 【敵として見る相手】線の向こうの顔のない群れを指さす人（生成イラスト）。名指しする言葉が入るとシェアが増える話へ
     from: 8
     slot: 3
-    credit: 'Photo: Jakub Zerdzicki / Pexels'
+    credit: 'Illustration: AI generated'
   - type: diagram
     cut_reason: '【比較: 同一研究内】怒り・非難の言葉 →（矢印）→ 相手を名指しする言葉 6.7倍。基準側に 1倍 は書かない'
     from: 11
@@ -735,10 +735,10 @@ scenes:
     credit: 'Photo: Pixabay'
     telop: Milli et al. (2025) PNAS Nexus
   - type: image
-    cut_reason: 【結果】サーバー室の別カットで、反応順の画面に怒りが多い話へ
+    cut_reason: 【反応順の画面】上に赤く燃える投稿、下に押しやられる穏やかな投稿（生成イラスト）
     from: 34
     slot: 8
-    credit: 'Photo: panumas nikhomkhai / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【訂正】スマホを見る手元へ。誰かが怒りを選んだのではない、の一言
     from: 38
@@ -917,10 +917,10 @@ scenes:
 
       ② 代弁されたと感じる人も出る'
   - type: image
-    cut_reason: 【両方が同時に】コメント欄。言い返す人と応援する人が同時に出る
+    cut_reason: 【両方が同時に】一つの投稿を挟んで、傷ついて怒る人と、うなずいてハートを押す人（生成イラスト）
     from: 11
     slot: 3
-    credit: 'Photo: thomas vanhaecht / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【推論】スマホに文字を打つ指先。不満から書かれる投稿には否定的な言葉が入りやすい、の推論
     from: 13
@@ -1102,10 +1102,10 @@ scenes:
 
       ③ 役職が上の人が多い'
   - type: image
-    cut_reason: 【意外な属性】無人のオフィスの会議机へ
+    cut_reason: 【意外な属性】夕方のオフィスで正義感の顔つきで長文を打つ管理職（生成イラスト）
     from: 25
     slot: 6
-    credit: 'Photo: Pixabay'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【次章への問い】距離を置いて立つ二人（顔なし）。なぜ引かないのか、へ
     from: 27
@@ -1401,10 +1401,10 @@ scenes:
     slot: 1
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
-    cut_reason: 【仕組み】ネオンの広告が並ぶ夜の街。見てもらう時間が売り上げになる
+    cut_reason: 【仕組み】反応の多い投稿が上へ押し上げられ、横に伸びるグラフと硬貨・広告（生成イラスト）
     from: 4
     slot: 2
-    credit: 'Photo: Mak_ jp / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【押し上げ】人混みの遠景（脚のみ）。少ない声が繰り返し目立つ場所に出てくる
     from: 6
@@ -1836,10 +1836,10 @@ scenes:
     slot: 3
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【冒頭の回収】コメント欄。実際に書いていたのはごく一部だった
+    cut_reason: 【冒頭の回収】冒頭と同じ、男女の陣営が応酬する画面（生成イラスト）。実際に書いていたのはごく一部だった
     from: 16
     slot: 4
-    credit: 'Photo: thomas vanhaecht / Pexels'
+    credit: 'Illustration: AI generated'
   - type: image
     cut_reason: '【世の中全体】人混みの遠景。画面の激しさだけでは全体は分からない（旧: 板。一文を見出しと本文に分断しているだけで説明になっていない、との指摘）'
     from: 18
