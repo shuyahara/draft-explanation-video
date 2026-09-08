@@ -182,10 +182,34 @@ def make_thumb_d() -> Image.Image:
     )
 
 
+# E/F: 背景を「男女が直接言い合っている」生成イラストに（2026-09-08 公開後のユーザー指示）。文言は A と同じ
+GEN = Path(r"D:/script-to-video-build/genderwars-assets-codex")
+
+
+def make_thumb_e() -> Image.Image:
+    return make_thumb(
+        GEN / "thumb_argue_1.png",
+        darken_amount=0.30,
+        line1="男女論はなぜ",
+        line2="炎上するのか？",
+        metan_expr="serious", zun_expr="confused",
+    )
+
+
+def make_thumb_f() -> Image.Image:
+    return make_thumb(
+        GEN / "thumb_argue_2.png",
+        darken_amount=0.35,
+        line1="男女論はなぜ",
+        line2="炎上するのか？",
+        metan_expr="serious", zun_expr="surprised",
+    )
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     images = []
-    for name, fn in [("A", make_thumb_a), ("B", make_thumb_b), ("C", make_thumb_c), ("D", make_thumb_d)]:
+    for name, fn in [("A", make_thumb_a), ("B", make_thumb_b), ("C", make_thumb_c), ("D", make_thumb_d), ("E", make_thumb_e), ("F", make_thumb_f)]:
         img = fn()
         p = OUT / f"thumb-{name}.png"
         img.convert("RGB").save(p, "PNG", optimize=True)
