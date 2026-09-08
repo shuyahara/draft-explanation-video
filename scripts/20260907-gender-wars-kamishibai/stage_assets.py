@@ -25,9 +25,11 @@ def main() -> None:
     missing: list[str] = []
     used: dict[str, list[str]] = {}
     for sid, beats in BEATS.items():
-        for kind, _anchor, slot, ckey, _why, _telop in beats:
+        slot = 0  # apply_beats.main と同じ通し番号（img() の slot 引数は使わない）
+        for kind, _anchor, _slot, ckey, _why, _telop in beats:
             if kind != "image":
                 continue
+            slot += 1
             rel = SOURCE_FILE.get(ckey)
             if rel is None:
                 missing.append(f"scene {sid} slot {slot}: SOURCE_FILE に {ckey} がありません")

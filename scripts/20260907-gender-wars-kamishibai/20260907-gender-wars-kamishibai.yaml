@@ -137,9 +137,9 @@ scenes:
   - type: board
     cut_reason: 【予告】この動画で示す数字を先に一つだけ出す（総合レビューの冒頭フック提案）
     from: 19
-    telop: '炎上に書き込んでいる人
+    telop: '炎上に書き込む人
 
-      ＝ 二百人に一人ほど'
+      200人に1人'
   - type: image
     cut_reason: 【定義へ】ニュースサイトを見る手元。次章の言葉そろえへ
     from: 23
@@ -207,9 +207,9 @@ scenes:
     from: 1
     telop: '「炎上」とは
 
-      短い間に批判や非難がどっと集まり
+      批判がどっと集まり
 
-      まとめサイトやニュースにまで広がること'
+      ニュースにまで広がる'
   - type: image
     cut_reason: 【当てはめ】ニュースサイトの別カットで、昨日見たものと重ねる
     from: 3
@@ -220,11 +220,11 @@ scenes:
     from: 6
     telop: '今日確かめる三つのこと
 
-      ① 何があの激しさを作るのか
+      ① 何が激しさを作るのか
 
-      ② 実際に書いているのは誰か
+      ② 誰が書いているのか
 
-      ③ なぜ世の中全体の声に見えるのか'
+      ③ なぜ全体の声に見えるのか'
   - type: image
     cut_reason: 【直接は測れない】人混みの遠景へ。世の中全体は直接測れない話
     from: 12
@@ -235,12 +235,6 @@ scenes:
     from: 14
     slot: 3
     credit: 'Photo: Pixabay'
-  - type: board
-    cut_reason: 【決め文】答えられる問いの範囲を黒板の文字で。間 1.5 秒を保持
-    from: 15
-    telop: '断言できないこと：対立が本物かどうか
-
-      数えられること：あの激しさが誰の声でできているか'
   - type: image
     cut_reason: 【次章へ】スマホの別カットで「怒った投稿ばかり広がる」の問いへ
     from: 17
@@ -378,13 +372,13 @@ scenes:
   - type: board
     cut_reason: 【鍵になる整理】三つの仕組みを黒板の文字で（番号付き）
     from: 3
-    telop: 'ネットが怒りを書き込みやすくする三つの仕組み
+    telop: '怒りが書きやすくなる理由
 
-      ① 怒るきっかけを見る回数が増える
+      ① 目にする回数が増える
 
-      ② 怒りを表に出す負担が減る
+      ② 書く負担が減る
 
-      ③ いいねや返信が大きく返ってくる'
+      ③ 反応が大きく返る'
   - type: image
     cut_reason: 【手応え】いいねや返信が並ぶ画面へ（文字は読めない）
     from: 8
@@ -534,7 +528,7 @@ scenes:
     from: 4
     telop: '相手を名指しする言葉
 
-      ＝ 相手をひとまとめにして「あいつら」と呼ぶ言葉'
+      「あいつら」とひとまとめに呼ぶ'
   - type: image
     cut_reason: 【研究】大学の建物（別カット）。ラスジェの共同研究へ
     from: 6
@@ -546,14 +540,11 @@ scenes:
     from: 8
     slot: 3
     credit: 'Photo: William Fortunato / Pexels'
-  - type: board
-    cut_reason: 【混同を防ぐ】67％と6.7倍が別の比較であることを黒板の文字で（レビューの最優先指摘）
+  - type: image
+    cut_reason: '【注意】スマホを見る手元。二割は別の研究の数字、の注意へ（旧: 板）'
     from: 11
-    telop: '67％と6.7倍は別の比較
-
-      ① 67％＝敵を名指しする語を一語足したとき
-
-      ② 6.7倍＝同じ研究の中で道徳・感情の言葉と比べたとき'
+    slot: 4
+    credit: 'Photo: JESHOOTS / Pexels'
   - type: diagram
     cut_reason: '【比較: 同一研究内】道徳・感情の言葉を1倍としたときの、相手を名指しする言葉の効き目'
     from: 13
@@ -581,12 +572,12 @@ scenes:
   - type: image
     cut_reason: 【2倍】コメント欄へ。ほめる投稿と責める投稿の差
     from: 16
-    slot: 4
+    slot: 5
     credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【決め文】背を向け合う二人（顔なし）。間 2.0 秒を保持
     from: 18
-    slot: 5
+    slot: 6
     credit: 'Photo: miniperde / Pexels'
 - id: 5
   title: 怒りではなく悲しみ／並べているのは誰か
@@ -769,37 +760,36 @@ scenes:
       caption:
         text: 見出しを開く行動
         at: 13
-  - type: board
-    cut_reason: 【論の区切り】自分で開くかの話から、並べる側の話へ（総合レビューの転換明示の指摘）
+  - type: image
+    cut_reason: '【並べる側へ】タブレットでニュースを見る手元。何が目の前に並ぶか、の転換（旧: 板）'
     from: 24
-    telop: 'ここまで＝自分で何を開くか
-
-      ここから＝そもそも何が目の前に並ぶか'
+    slot: 4
+    credit: 'Photo: Michael Burrows / Pexels'
   - type: image
     cut_reason: 【並べる側】サーバー室の機械。監査研究の導入
     from: 26
-    slot: 4
+    slot: 5
     credit: 'Photo: Pixabay'
     telop: Milli et al. (2025) PNAS Nexus
   - type: image
     cut_reason: 【結果】サーバー室の別カットで、反応順の画面に怒りが多い話へ
     from: 29
-    slot: 5
+    slot: 6
     credit: 'Photo: panumas nikhomkhai / Pexels'
   - type: image
     cut_reason: 【訂正】スマホを見る手元へ。誰かが怒りを選んだのではない、の一言
     from: 33
-    slot: 6
+    slot: 7
     credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【決め文】スマホの別カットで保持。間 2.0 秒
     from: 36
-    slot: 7
+    slot: 8
     credit: 'Photo: Jakub Zerdzicki / Pexels'
   - type: image
     cut_reason: 【次章への問い】人混みの遠景（脚のみ）。政治・宗教でも同じ仕組みのはず、の問いへ
     from: 37
-    slot: 8
+    slot: 9
     credit: 'Photo: Pixabay'
 - id: 6
   title: なぜ男女の話だけ、特別に燃えるのか
@@ -931,11 +921,11 @@ scenes:
   - type: board
     cut_reason: 【覚えてほしい要点】大きな主語が生む二つの受け取られ方を黒板の文字で（番号付き）
     from: 9
-    telop: '大きな主語（「男は」「女は」）が出ると
+    telop: '「男は」「女は」と言われると
 
-      ① 自分が責められたと感じる人が出る
+      ① 責められたと感じる人が出る
 
-      ② 代わりに言ってくれたと感じる人も出る'
+      ② 代弁されたと感じる人も出る'
   - type: image
     cut_reason: 【両方が同時に】コメント欄。言い返す人と応援する人が同時に出る
     from: 11
@@ -957,18 +947,15 @@ scenes:
     from: 17
     slot: 6
     credit: 'Photo: Clarence Chan / Pexels'
-  - type: board
-    cut_reason: 【論の区切り】ここまでの研究の適用範囲を黒板の文字で（類推であることの明示）
+  - type: image
+    cut_reason: '【適用範囲の留保】大学の建物。政治の話題で調べた研究が多い、の一言（旧: 板）'
     from: 22
-    telop: 'ここまでの研究は政治の話題が対象
-
-      ＝ 男女の話で同じ数字が出たわけではない
-
-      ＝ 同じ仕組みが働きうる、ということ'
+    slot: 7
+    credit: 'Photo: Paul Loh / Pexels'
   - type: image
     cut_reason: 【次章へ】スマホを見る手元。書いている人への問いへ
     from: 27
-    slot: 7
+    slot: 8
     credit: 'Photo: JESHOOTS / Pexels'
   readings:
   - surface: 炎上
@@ -1101,11 +1088,11 @@ scenes:
   - type: board
     cut_reason: 【覚えてほしい要点】炎上に書き込む人の割合を黒板の文字で（番号付き）
     from: 11
-    telop: '炎上に書き込んだ人（ネットを使う人のうち）
+    telop: '炎上に書き込んだ人
 
-      ① 一年以内に書き込んだ：0.5％
+      ① この一年で 0.5％
 
-      ② 一度でも書いた：1.1％'
+      ② 一度でも 1.1％'
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。適用範囲のテロップを重ねる。間 2.5 秒
     from: 15
@@ -1120,13 +1107,13 @@ scenes:
   - type: board
     cut_reason: 【覚えてほしい要点】書き込む人の動機と属性を黒板の文字で（番号付き）
     from: 22
-    telop: '炎上に書き込む人（6万人規模の調査）
+    telop: '書き込んでいる人
 
-      ① 動機の6〜7割は正義感
+      ① 6〜7割は正義感
 
-      ② ネット利用者全体と比べて男性の割合が高い
+      ② 男性が多い
 
-      ③ 主任・係長より上の役職の人も多い'
+      ③ 役職が上の人が多い'
   - type: image
     cut_reason: 【意外な属性】無人のオフィスの会議机へ
     from: 25
@@ -1289,11 +1276,9 @@ scenes:
   - type: board
     cut_reason: 【鍵になる用語】善悪の問題だと感じている意見、を黒板の文字で
     from: 4
-    telop: '善悪の問題だと感じている意見
+    telop: '善悪の問題だと思うと
 
-      ＝ 譲ることが「悪に負ける」ことになる
-
-      ＝「人それぞれ」で終われなくなる'
+      譲ることが「悪に負ける」になる'
   - type: image
     cut_reason: 【妥協しにくさ】背を向け合う二人（顔なし）。譲れない状態の画
     from: 6
@@ -1695,28 +1680,26 @@ scenes:
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
-  - type: board
-    cut_reason: 【論の区切り】ここまで作られていたのは何か、まだ調べていないのは何かを黒板の文字で
+  - type: image
+    cut_reason: '【区切り】コメント欄。ここまでは見え方の話、と分ける（旧: 板）'
     from: 1
-    telop: 'ここまでの仕組みが作るのは、主に見え方
-
-      怒りのもとになる問題があるかは、まだ調べていない'
+    slot: 1
+    credit: 'Photo: Uriel Mont / Pexels'
   - type: image
     cut_reason: 【振り返り】スマホを見る手元。仕組みの話だけしてきた確認
     from: 4
-    slot: 1
+    slot: 2
     credit: 'Photo: Sound On / Pexels'
   - type: image
     cut_reason: 【気づき】スマホの別カット。中身を数字で見る、への転換
     from: 7
-    slot: 2
+    slot: 3
     credit: 'Photo: Jakub Zerdzicki / Pexels'
-  - type: board
-    cut_reason: 【鍵になる用語】ジェンダーギャップ指数が何を測っているかを黒板の文字で
+  - type: image
+    cut_reason: '【統計の導入】電卓と硬貨。指標の説明（旧: 板）'
     from: 9
-    telop: 'ジェンダーギャップ指数
-
-      ＝ 教育・経済・政治などの男女の差を順位にした指標'
+    slot: 4
+    credit: 'Photo: Breakingpic / Pexels'
   - type: diagram
     cut_reason: '【数字: 日本の男女の差】三つの数字を 1 行 3 列で。発話に同期して 1 つずつ出す'
     from: 11
@@ -1744,42 +1727,41 @@ scenes:
   - type: image
     cut_reason: 【入試】無人の試験会場の机
     from: 21
-    slot: 3
+    slot: 5
     credit: 'Photo: Andy Barbour / Pexels'
     telop: 2018年 東京医科大学：合格率は男子が女子の約3倍
   - type: image
     cut_reason: 【緊急調査】試験会場の別カット。10校で不適切な扱いが認められた話へ
     from: 23
-    slot: 4
+    slot: 6
     credit: 'Photo: Andy Barbour / Pexels'
     telop: 文部科学省の調査：81大学中10校で不適切
   - type: image
     cut_reason: 【性暴力】人混みの遠景（顔は判別できない）
     from: 27
-    slot: 5
+    slot: 7
     credit: 'Photo: Pixabay'
     telop: 内閣府の調査：女性のおよそ14人に1人
   - type: image
     cut_reason: 【男性側】満員電車のホーム（顔は判別できない）
     from: 32
-    slot: 6
+    slot: 8
     credit: 'Photo: Pixabay'
     telop: 東京都の調査：被害を答えた男性8.5％
   - type: image
     cut_reason: 【相談しにくさ】ホームの別カット。記録に出てきにくい話へ
     from: 35
-    slot: 7
+    slot: 9
     credit: 'Photo: Kassandre Pedro / Pexels'
-  - type: board
-    cut_reason: 【論の区切り】この章が示したことと、示していないことを黒板の文字で
+  - type: image
+    cut_reason: '【留保】コメント欄。一つ一つの投稿が正しいという意味ではない（旧: 板）'
     from: 39
-    telop: '示したのは、背景となる問題が実在すること
-
-      ＝ 一つ一つの投稿が正しい、という意味ではない'
+    slot: 10
+    credit: 'Photo: thomas vanhaecht / Pexels'
   - type: image
     cut_reason: 【決め文】人混みの遠景（ブレ）。現実に生きている人たちの画で保持。間 2.5 秒
     from: 41
-    slot: 8
+    slot: 11
     credit: 'Photo: Pixabay'
   readings:
   - surface: 賃金
@@ -1970,41 +1952,36 @@ scenes:
     from: 15
     slot: 4
     credit: 'Photo: Pixabay'
-  - type: board
-    cut_reason: 【論の区切り】この調査から言えないことを黒板の文字で（番号付き）
+  - type: image
+    cut_reason: '【留保】ベンチに座る二人（後ろ姿）。集団の傾向であって個人の評価ではない（旧: 板）'
     from: 18
-    telop: 'この調査で言えないこと
-
-      ① 一つの調査であり、男女論を測ったものではない
-
-      ② 集団の傾向であって、一人ひとりの評価ではない'
+    slot: 5
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【整理】人混みの遠景（脚のみ）。全体と目立つ場所の違いへ
     from: 20
-    slot: 5
+    slot: 6
     credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【呼び名へ】コメント欄の別カット。相手をひとまとめに呼ぶ言葉へ
     from: 24
-    slot: 6
+    slot: 7
     credit: 'Photo: William Fortunato / Pexels'
   - type: board
     cut_reason: 【鍵になる用語】ネットの呼び名の位置づけを黒板の文字で
     from: 27
     telop: 'ネットの呼び名
 
-      ＝ 学者が決めた学術用語ではない
-
       ＝ 相手側をひとまとめに指す言葉'
   - type: image
     cut_reason: 【接続】スマホに文字を打つ指先。相手を名指しする言葉の効果へ戻す
     from: 30
-    slot: 7
+    slot: 8
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【決め文】人混みの遠景で保持。間 2.5 秒
     from: 34
-    slot: 8
+    slot: 9
     credit: 'Photo: Pixabay'
   readings:
   - surface: 拡散
@@ -2179,7 +2156,7 @@ scenes:
     from: 17
     telop: '画面の激しさだけでは
 
-      世の中全体が憎み合っているかは判断できない'
+      世の中全体は分からない'
   - type: image
     cut_reason: 【残る問題】硬貨と紙幣（別カット）。画面の外に残るもの
     from: 20
