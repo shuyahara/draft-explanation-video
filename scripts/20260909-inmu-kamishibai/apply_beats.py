@@ -45,12 +45,17 @@ S4 は台本指定どおり定義1行のみ。S8 は見出し込み4行上限に
 
 2026-09-09 絵コンテ点検で追加取得したストック（stock-candidates.md 追記済み。すべて
 tools/stock_search.py で検索）:
-  selfie_video -> stock/scene3_selfie_video_1.jpg（自宅で自撮り動画を撮る普通の人）
+  selfie_video -> stock/scene3_vlogger_man_1.jpg（自宅でスマホ三脚に向かって動画を撮る男性。v1は女性の自撮りで映像レビュー⑦の指摘を受けv2で男性に差し替え）
   app_feed     -> stock/scene2_app_feed_1.jpg（動画配信アプリのサムネイル一覧をスクロールする手元）
   friends_laugh -> stock/scene5_friends_laugh_1.jpg（友人同士で笑っている数人）
   protest      -> stock/scene7_protest_1.jpg（抗議のプラカードを持つ人々。特定団体ロゴなし）
   whisper は scene3_whisper_1.jpg（暗い書斎でノワール調、場面に不一致）から
-  scene3_whisper_2.jpg（明るい部屋で笑いながら耳打ち）へ差し替え。
+  scene3_whisper_2.jpg（明るい部屋で笑いながら耳打ち）を経て、v2で scene4_whisper_clear_1.jpg
+  （手のひらで口元から耳元までを完全に覆う構図。v1のscene3_whisper_2.jpgは頬にキスして
+  いるように見えるとの指摘）へ差し替え。
+  old_dvd_photo -> stock/scene1_dvd_shelf_stock.jpg（v2追加。S1「二十五年前」用。
+  illust/ill_dvd_shelf.png は図書館に見えるためS1のみストック写真に差し替え。S2冒頭の
+  つなぎカットは引き続きill_dvd_shelf.pngを使用）
 """
 from __future__ import annotations
 
@@ -68,10 +73,11 @@ CREDIT = {
     "watch1": "Photo: Pixabay",
     "comment_top": "Illustration: AI generated",
     "old_dvd": "Illustration: AI generated",
+    "old_dvd_photo": "Photo: Pixabay / Pexels",
     "tiktok": "Photo: Artem Podrez / Pexels",
     "classroom": "Illustration: AI generated",
     "circle_outsider": "Illustration: AI generated",
-    "whisper": "Photo: Kaboompics.com / Pexels",
+    "whisper": "Photo: RDNE Stock project / Pexels",
     "headphones": "Illustration: AI generated",
     "shape_wall": "Illustration: AI generated",
     "papercraft": "Photo: Ksenia Chernaya / Pexels",
@@ -80,7 +86,7 @@ CREDIT = {
     "circle_laugh_turned": "Illustration: AI generated",
     "fan_event_back": "Illustration: AI generated",
     "dark_room_phone": "Illustration: AI generated",
-    "selfie_video": "Photo: Gustavo Fring / Pexels",
+    "selfie_video": "Photo: Ron Lach / Pexels",
     "app_feed": "Photo: cottonbro studio / Pexels",
     "friends_laugh": "Photo: Antonius Ferret / Pexels",
     "protest": "Photo: Oriel Frankie Ashcroft / Pexels",
@@ -92,10 +98,11 @@ SOURCE_FILE = {
     "watch1": "stock/scene1_watching_phone_2.jpg",
     "comment_top": "illust/ill_comment_feed.png",
     "old_dvd": "illust/ill_dvd_shelf.png",
+    "old_dvd_photo": "stock/scene1_dvd_shelf_stock.jpg",
     "tiktok": "stock/scene2_tiktok_dance_1.jpg",
     "classroom": "illust/ill_classroom_laugh.png",
     "circle_outsider": "illust/ill_circle_outsider.png",
-    "whisper": "stock/scene3_whisper_2.jpg",
+    "whisper": "stock/scene4_whisper_clear_1.jpg",
     "headphones": "illust/ill_headphones_laugh.png",
     "shape_wall": "illust/ill_shape_wall.png",
     "papercraft": "stock/scene3_papercraft_1.jpg",
@@ -104,7 +111,7 @@ SOURCE_FILE = {
     "circle_laugh_turned": "illust/ill_circle_laugh_turned.png",
     "fan_event_back": "illust/ill_fan_event_back.png",
     "dark_room_phone": "illust/ill_dark_room_phone.png",
-    "selfie_video": "stock/scene3_selfie_video_1.jpg",
+    "selfie_video": "stock/scene3_vlogger_man_1.jpg",
     "app_feed": "stock/scene2_app_feed_1.jpg",
     "friends_laugh": "stock/scene5_friends_laugh_1.jpg",
     "protest": "stock/scene7_protest_1.jpg",
@@ -192,7 +199,7 @@ BEATS = {
         img("やりますねぇ", 2, "comment_top", "【核心のコメント】ピン留めコメントと桁違いのいいね数を再現（文字は描かない）"),
         img("僕にはさっぱり分からなかったのだ", 3, "comment_top", "【間】同じ絵のまま、ずんだもんの困惑まで尺を分ける"),
         img("知っている人にだけ通じる合言葉", 4, "watch1", "【間】めたんの受けで手元カットに戻し尺を分ける"),
-        img("二十五年くらい前に出た", 4, "old_dvd", "【時代を示す】無地の背表紙が並ぶ棚で『25年前』を視覚化"),
+        img("二十五年くらい前に出た", 4, "old_dvd_photo", "【時代を示す】DVDケースが並ぶ棚のストック写真で『25年前』を視覚化（v1のill_dvd_shelfは図書館に見えたため差し替え）"),
         img("そんな古いものの台詞が", 5, "comment_top", "【問いへの折り返し】コメント欄に戻り、なぜ今も笑いになるのかへ"),
         img("作品の中身は説明しないわ", 6, "watch1", "【留保】手元カットに戻し、中身は説明しない旨と締めの受けを保持"),
     ],

@@ -93,10 +93,10 @@ scenes:
     slot: 4
     credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【時代を示す】無地の背表紙が並ぶ棚で『25年前』を視覚化
+    cut_reason: 【時代を示す】DVDケースが並ぶ棚のストック写真で『25年前』を視覚化（v1のill_dvd_shelfは図書館に見えたため差し替え）
     from: 7
     slot: 5
-    credit: 'Illustration: AI generated'
+    credit: 'Photo: Pixabay / Pexels'
   - type: image
     cut_reason: 【問いへの折り返し】コメント欄に戻り、なぜ今も笑いになるのかへ
     from: 10
@@ -146,11 +146,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: そして二千二十年代の今は、TikTok のダンスや、さっきの料理動画のコメント欄みたいな形で広がっているわ。
+  - text: そして二千二十年代の今は、TikTok のダンスみたいな形でも広がっているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 元の動画を見たことがない世代にまで、ね。
+  - text: さっきの料理動画のコメント欄も、その一つ。元の動画を見たことがない世代にまで届いているの。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -234,12 +234,12 @@ scenes:
     credit: 'Photo: Artem Podrez / Pexels'
   - type: image
     cut_reason: 【問いの再提示】動画アプリのサムネイル一覧をスクロールする手元に替え、なぜ生き残ったのかを問う（棚の絵の再掲は婉曲だったため差し替え）
-    from: 15
+    from: 16
     slot: 4
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【決め文の保持】ダンス動画に戻し、決め文の間1.5秒まで保持
-    from: 17
+    from: 18
     slot: 5
     credit: 'Photo: Artem Podrez / Pexels'
   readings:
@@ -310,12 +310,12 @@ scenes:
     cut_reason: 【比喩の直接化】自宅で自撮り動画を撮る普通の人。真似される動画のイメージを直接描写（図解の保持74秒が長すぎたため前半をimageビートへ）
     from: 1
     slot: 1
-    credit: 'Photo: Gustavo Fring / Pexels'
+    credit: 'Photo: Ron Lach / Pexels'
   - type: image
     cut_reason: 【間】同じ絵のまま、シフマンの研究紹介へ尺を分ける（保持38秒を短縮するため分割）
     from: 3
     slot: 2
-    credit: 'Photo: Gustavo Fring / Pexels'
+    credit: 'Photo: Ron Lach / Pexels'
   - type: diagram
     cut_reason: 【6特徴】Shifman(2012)の6特徴と淫夢への当てはめを『特徴／当てはめ』の1セルにまとめ2列3行で（行数上限3のため。保持時間短縮のため前振りはimageビートへ譲る）
     from: 7
@@ -469,13 +469,13 @@ scenes:
     cut_reason: 【表に出したくないが広まってほしい】ひそひそ話をする二人
     from: 15
     slot: 5
-    credit: 'Photo: Kaboompics.com / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: '打田 2024: 14人への聞き取り'
   - type: image
     cut_reason: 【間】同じ絵のまま、打田の調査結果の話へ尺を分ける
     from: 17
     slot: 6
-    credit: 'Photo: Kaboompics.com / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【矛盾の受け止め】教室の絵に戻り、矛盾する気持ちの話へ
     from: 20
@@ -494,7 +494,7 @@ scenes:
     cut_reason: 【次章への問い】ひそひそ話の絵に戻り、タブーの話へつなぐ
     from: 30
     slot: 9
-    credit: 'Photo: Kaboompics.com / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: 淫夢
     reading: インム
