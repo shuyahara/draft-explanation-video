@@ -531,9 +531,13 @@ scenes:
   title: なぜタブーほど笑えるのか
   chapter_title: なぜタブーほど笑えるのか
   narration:
-  - text: 人はどういうときに笑うのか。アメリカのコロラド大学のマグロウ准教授と、当時博士課程だったウォレンが、2010年に「良性侵犯理論」という答えを出したの。
+  - text: 人はどういうときに笑うのか。アメリカのコロラド大学のマグロウ准教授と、当時博士課程だったウォレンの研究よ。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 2010年に出した答えが、「良性侵犯理論」なの。
+    speaker: めたん
+    expression: normal
     pause_after: 0.45
   - text: りょうせいしんぱん？
     speaker: ずんだもん
@@ -605,41 +609,41 @@ scenes:
     credit: 'Photo: Antonius Ferret / Pexels'
   - type: diagram
     cut_reason: 【良性侵犯理論】規則違反と安全の両立が笑いへ収束することをconvergeで示す。決め文「人は笑うの」の間1.5秒まで保持（保持52秒が長すぎたため前振りをimageビートへ譲る）
-    from: 4
+    from: 5
     diagram:
       type: narrative
       layout: converge
       items:
       - id: broken
         text: 決まりが破られる
-        at: 4
+        at: 5
         after: 何かの決まりが破られていると感じて
       - id: safe
         text: 自分は傷つかない
-        at: 4
+        at: 5
         after: 自分は傷つかない、と同時に感じたとき
       result:
         text: 笑いが起きる
-        at: 8
+        at: 9
         after: 笑いが起きるの
   - type: image
     cut_reason: 【つなぎ】壁の絵に先取りで替え、合言葉の強さの話を続ける
-    from: 15
+    from: 16
     slot: 2
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【単純接触効果の出典】夜の部屋の絵に戻り、Zajonc 1968の提示へ
-    from: 18
+    from: 19
     slot: 3
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【単純接触効果】壁一面の反復図形で『見るほど馴染む』を比喩化
-    from: 21
+    from: 22
     slot: 4
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【次章への問い】夜の部屋の絵に戻り、場所の話へつなぐ
-    from: 24
+    from: 25
     slot: 5
     credit: 'Illustration: AI generated'
   readings:
@@ -781,9 +785,13 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: これは、アメリカのウェスタンカロライナ大学のトーマス・フォード教授と、当時大学院生だったマーク・ファーガソンが示したことよ。
+  - text: これを示したのは、アメリカのウェスタンカロライナ大学のトーマス・フォード教授よ。
     speaker: めたん
     expression: explain
+    pause_after: 0.35
+  - text: 当時大学院生だったマーク・ファーガソンとの共同研究なの。
+    speaker: めたん
+    expression: normal
     pause_after: 0.35
   - text: 2004年の、「偏見規範理論」という説明ね。
     speaker: めたん
@@ -867,78 +875,78 @@ scenes:
     slot: 2
     credit: 'Illustration: AI generated'
   - type: image
-    cut_reason: 【出典の提示】同じ絵のまま、Ford & Fergusonの提唱を示す（研究者肩書き追加で保持21.9秒を短縮するため分割）
+    cut_reason: 【出典の提示】同じ絵のまま、Ford & Fergusonの提唱を示す（研究者肩書き追加で伸びた分、台本側で2文に分割済み。同じ絵のまま尺を分ける）
     from: 7
     slot: 3
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【間】同じ絵のまま、悪気の有無の話へ
-    from: 9
+    from: 10
     slot: 4
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【外への聞こえ方】抗議のプラカードを持つ人々の写真を挟み、批判の具体像を示す（ill_laugh_circle_backの3連続を崩す）
-    from: 10
+    from: 11
     slot: 5
     credit: 'Photo: Oriel Frankie Ashcroft / Pexels'
   - type: image
     cut_reason: 【間】同じ絵のまま、当事者からの批判へ
-    from: 13
+    from: 14
     slot: 6
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【間】同じ絵のまま、外から見た聞こえ方の結びへ
-    from: 15
+    from: 16
     slot: 7
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【出演者は実在する】黒線入り静止画を短く再掲（出所テロップ再掲）
-    from: 18
+    from: 19
     slot: 8
     credit: © COAT Corporation（2001）より。引用
     telop: © COAT Corporation（2001）より。引用
   - type: image
     cut_reason: 【被害の継続】同じ絵に戻り、特定・迷惑行為の話へ
-    from: 19
+    from: 20
     slot: 9
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【本人の実写】ヘリントン本人の写真（ユーザー提供。胸から上でトリミング、クレジット表記あり）
-    from: 24
+    from: 25
     slot: 10
     credit: 'Photo: ガジェット通信'
   - type: image
     cut_reason: 【ファンイベント】後ろ姿でファンの歓待を描写に戻す（顔なし）
-    from: 28
+    from: 29
     slot: 11
     credit: 'Illustration: AI generated'
   - type: diagram
     cut_reason: 【ヘリントン対比】選択の有無と結果を見出し行＋2行の3行2列で対比し、決め文の間2.0秒まで保持
-    from: 30
+    from: 31
     diagram:
       type: sketch
       rows:
       - - id: h0
-          at: 30
+          at: 31
           icon: person
           text: ビリー・ヘリントン
         - id: p0
-          at: 30
+          at: 31
           icon: person_off
           text: 淫夢の出演者
       - - id: h1
-          at: 31
+          at: 32
           text: 自分で選んで表に出た
           after: 自分から表に出てきた
         - id: p1
-          at: 32
+          at: 33
           text: 選んでいない
           after: 自らの意思では表に出てきていないのに捜索されたりしている
       - - id: h2
-          at: 30
+          at: 31
           text: 来日・イベント出演
         - id: p2
-          at: 30
+          at: 31
           text: 探し出される
       arrows:
       - from: h1
@@ -949,11 +957,11 @@ scenes:
         ids:
         - p1
         - p2
-        at: 32
+        at: 33
         after: 自らの意思では表に出てきていないのに捜索されたりしている
       caption:
         text: 同じ切り貼り、違う経緯
-        at: 30
+        at: 31
   readings:
   - surface: 淫夢
     reading: インム
