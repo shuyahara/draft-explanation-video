@@ -685,7 +685,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
-  - text: これで、あなたの最初の疑問には答えが出たわ。25年も続いた理由は、面白さではなく仕組みだった。
+  - text: これで、ずんだもんの最初の疑問には答えが出たわ。25年も続いた理由は、面白さではなく仕組みだった。
     speaker: めたん
     expression: explain
     pause_after: 0.9
@@ -849,7 +849,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: 同じ切り貼りなのに、片方は本人が表に出てきてて、片方は自らの意思ではなく引き出されたのだ。
+  - text: 同じようなミームなのに、片方は本人が表に出てきてて、片方は自らの意思ではなく引き出されたのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -857,10 +857,10 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 熱狂に仕組みがあることと、その笑いが誰も傷つけないことは、別なのよ。
+  - text: 熱狂に仕組みがあることと、その笑いが誰も傷つけないかどうかは、別なのよ。
     speaker: めたん
     expression: normal
-    pause_after: 2.0
+    pause_after: 1.0
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
@@ -983,7 +983,7 @@ scenes:
     speaker: ずんだもん
     expression: point
     pause_after: 0.45
-  - text: 切り貼りしやすい形をしていたこと。通じるだけで仲間だと分かること。口に出しにくいものを安全な場所で触れること。そして、何百回も触れる場所があったこと。
+  - text: 切り貼りしやすい形をしていたこと。通じるだけで仲間だと分かること。口に出しにくいものを安全な場所でネタにできること。そして、何百回も触れる場所があったこと。
     speaker: ずんだもん
     expression: point
     pause_after: 0.45
