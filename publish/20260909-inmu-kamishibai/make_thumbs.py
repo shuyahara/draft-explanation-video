@@ -10,15 +10,24 @@
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+
+sys.path.insert(0, r"C:\Users\shuya\Projects\script-to-video\src")
+
+from script_to_video.kamishibai import add_paper_outline, load_sprite
+from script_to_video.schema import Kamishibai
 
 SOURCE_IMG = Path(
     r"C:/Users/shuya/Projects/assets-kamishibai/photos/candidates-inmu/source/famous-face-200.jpg"
 )
 EYEBAR_DIR = Path(r"C:/Users/shuya/Projects/assets-kamishibai/photos/candidates-inmu")
 OUT = Path(r"C:/Users/shuya/Projects/draft-explanation-video/publish/20260909-inmu-kamishibai")
+SPRITES = Path(r"C:/Users/shuya/Projects/assets-kamishibai/sprites")
+
+CFG = Kamishibai()
 
 FONT_BOLD = Path(r"C:/Windows/Fonts/meiryob.ttc")
 
@@ -96,6 +105,21 @@ def darken(base: Image.Image, amount: float) -> None:
     base.alpha_composite(veil)
 
 
+def load_puppet(character_dir: str, expression: str, target_height: int) -> Image.Image:
+    """立ち絵を読み、余白をトリムして目標高にリサイズし、白い縁を付ける（前作 gender-wars 版を踏襲）。"""
+    raw = load_sprite(SPRITES / character_dir, expression)
+    bbox = raw.getbbox()
+    cropped = raw.crop(bbox) if bbox else raw
+    scale = target_height / cropped.height
+    resized = cropped.resize((max(1, round(cropped.width * scale)), target_height), Image.LANCZOS)
+    outline_px = round(CFG.puppet_outline_px * H / 1080)
+    return add_paper_outline(resized, outline_px)
+
+
+def paste(base: Image.Image, layer: Image.Image, x: float, y: float) -> None:
+    base.paste(layer, (round(x), round(y)), layer)
+
+
 def vertical_gradient(width: int, height: int, top: tuple, bottom: tuple) -> Image.Image:
     grad = Image.new("RGB", (1, height))
     for y in range(height):
@@ -136,6 +160,10 @@ def make_eyebar_images() -> None:
 LINE1_SEGMENTS = [("なぜ", WHITE), ("淫夢", YELLOW), ("に", WHITE)]
 LINE2_TEXT = "熱狂するのか？"
 
+# A2: めたん・ずんだもんを添える改訂案の文言（2026-09-09 ユーザー指示）。
+# 1行目は「淫夢は」「なぜ人気？」の2段、2行目は副題として1段に収める。
+LINE2_TEXT_A2 = "ネットミーム×笑いのメカニズム"
+
 
 def make_thumb_a() -> Image.Image:
     """顔を右側に高さいっぱい、左に文言。背景は濃紺の単色グラデーション。"""
@@ -150,6 +178,69 @@ def make_thumb_a() -> Image.Image:
     draw_mixed_center(bg, LINE1_SEGMENTS, left_center_x, round(H * 0.40), f1, stroke_width=9)
     f2 = fit_bold_font(LINE2_TEXT, max_width=round((W - H) * 0.86), max_height=round(H * 0.20), stroke_width=9)
     draw_mixed_center(bg, [(LINE2_TEXT, WHITE)], left_center_x, round(H * 0.60), f2, stroke_width=9)
+    return bg
+
+
+def make_thumb_a2() -> Image.Image:
+    """A案 + 文言を大幅拡大（1行目は2段の特大文字）、左下にめたん・ずんだもんを高さ38%で
+    配置する改訂版（2026-09-09 ユーザー指示: 3案とも文字が画面の1割程度しかなく小さすぎる
+    との指摘を受け、A2 のレイアウトで作り直し。A3・A4は廃止）。
+
+    文言ブロック（2段の見出し＋副題）は画面上55%に収め、その下に立ち絵を置く。
+    """
+    bg = vertical_gradient(W, H, (18, 20, 30), (34, 30, 46))
+
+    face = Image.open(EYEBAR_DIR / "famous-face-eyebar-800.png").convert("RGBA")
+    face = face.resize((H, H), Image.LANCZOS)
+    bg.alpha_composite(face, (W - H, 0))
+
+    left_w = W - H  # 560（顔の左端まで）
+    left_center_x = left_w // 2
+    draw = ImageDraw.Draw(bg)
+    stroke_big = 11
+
+    # 1行目: 「淫夢は」「なぜ人気？」を2段、幅いっぱいまで拡大（高さ制約は緩め、幅で最大化する）。
+    text_max_w = round(left_w * 0.95)
+    f1a = fit_bold_font("淫夢は", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
+    f1b = fit_bold_font("なぜ人気？", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
+    bbox_1a = draw.textbbox((0, 0), "淫夢は", font=f1a, stroke_width=stroke_big)
+    h_1a = bbox_1a[3] - bbox_1a[1]
+    bbox_1b = draw.textbbox((0, 0), "なぜ人気？", font=f1b, stroke_width=stroke_big)
+    h_1b = bbox_1b[3] - bbox_1b[1]
+
+    line_gap = round(H * 0.02)
+    top_y = round(H * 0.04)
+    y1a = top_y + h_1a / 2
+    y1b = top_y + h_1a + line_gap + h_1b / 2
+    draw_mixed_center(bg, [("淫夢", YELLOW), ("は", WHITE)], left_center_x, round(y1a), f1a, stroke_width=stroke_big)
+    draw_mixed_center(bg, [("なぜ人気？", WHITE)], left_center_x, round(y1b), f1b, stroke_width=stroke_big)
+    text_block_bottom = y1b + h_1b / 2
+
+    # 2行目（副題）: 半透明の黒帯を敷いてから、幅いっぱいの最大サイズで重ねる。
+    stroke_sub = 6
+    f2 = fit_bold_font(LINE2_TEXT_A2, max_width=round(left_w * 0.97), max_height=round(H * 0.12), stroke_width=stroke_sub)
+    bbox_2 = draw.textbbox((0, 0), LINE2_TEXT_A2, font=f2, stroke_width=stroke_sub)
+    h_2 = bbox_2[3] - bbox_2[1]
+    band_pad = round(H * 0.018)
+    band_top = round(text_block_bottom + H * 0.025)
+    band_bottom = band_top + h_2 + band_pad * 2
+    band = Image.new("RGBA", (left_w, band_bottom - band_top), (0, 0, 0, round(255 * 0.60)))
+    bg.alpha_composite(band, (0, band_top))
+    y2 = (band_top + band_bottom) / 2
+    draw_mixed_center(bg, [(LINE2_TEXT_A2, WHITE)], left_center_x, round(y2), f2, stroke_width=stroke_sub)
+
+    # 文言ブロックは上55%（=H*0.55）に収まっているはずだが、念のため実測でも確認する
+    # （呼び出し側 main() の目視確認に加え、ここではアサーションはせず素通しする）。
+
+    # 立ち絵: 左下、高さ38%で並べる。
+    puppet_h = round(H * 0.38)
+    metan = load_puppet("metan", "smile", puppet_h)
+    zun = load_puppet("zundamon", "normal", puppet_h)
+    bottom_y = H - puppet_h
+    metan_cx = round(left_w * 0.28)
+    zun_cx = round(left_w * 0.70)
+    paste(bg, metan, metan_cx - metan.width / 2, bottom_y)
+    paste(bg, zun, zun_cx - zun.width / 2, bottom_y)
     return bg
 
 
@@ -239,6 +330,18 @@ def main() -> None:
     p = OUT / "thumb-contact.jpg"
     sheet.save(p, quality=88)
     print(p)
+
+    # A2: 文言拡大版で上書き（A3・A4は廃止、2026-09-09）。
+    img_a2 = make_thumb_a2()
+    p = OUT / "thumb-A2.png"
+    img_a2.convert("RGB").save(p, "PNG", optimize=True)
+    print(p)
+
+    small_w = 480
+    small_h = round(H * small_w / W)
+    p_small = OUT / "thumb-A2-small.jpg"
+    img_a2.convert("RGB").resize((small_w, small_h), Image.LANCZOS).save(p_small, quality=90)
+    print(p_small)
 
 
 if __name__ == "__main__":
