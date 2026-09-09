@@ -1,0 +1,1001 @@
+video:
+  title: ネット民はなぜ淫夢に熱狂するのか（めたん×ずんだもん 紙芝居版）
+  kamishibai:
+    puppet_sink_ratio: 0.12
+  characters:
+  - name: めたん
+    speaker: 四国めたん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/metan
+    side: left
+    subtitle_color: '#E8A0BE'
+    default_expression: normal
+  - name: ずんだもん
+    speaker: ずんだもん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/zundamon
+    side: right
+    subtitle_color: '#8FCF7A'
+    default_expression: normal
+  bgm: ../bgm/aozora-ni-kuchibue.mp3
+  bgm_credit: 「青空に口笛」のる（DOVA-SYNDROME）
+  sfx: chic
+scenes:
+- id: 1
+  title: フック（料理動画のコメント欄）
+  chapter_title: null
+  narration:
+  - text: めたん、昨日、料理の動画を見てたのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: そうしたら、コメント欄のいちばん上に「やりますねぇ」とだけ書いてあったのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.35
+  - text: それに、三千もいいねが付いてたのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.35
+  - text: その下にも、同じ台詞をもじった返信が、ずらっと並んでたのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.35
+  - text: 料理と何の関係があるのか、僕にはさっぱり分からなかったのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ああ、それは知っている人にだけ通じる合言葉ね。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 元ネタは、二十五年くらい前に出た、成人向けのビデオの一場面よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 二十五年前！？ しかも成人向け！？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.35
+  - text: そんな古いものの台詞が、なんで今の料理動画で笑いになるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.9
+  - text: それが今日の問いね。二十五年前のビデオの台詞が、なぜ今も笑いの合言葉として使われているのか。
+    speaker: めたん
+    expression: normal
+    pause_after: 1.2
+  - text: 作品の中身は説明しないわ。人が何に熱狂しているのかを研究で確かめて、最後に、その笑いが誰にどう届いているのかまで見るつもりよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 中身の話じゃないなら、僕も安心して聞けるのだ。
+    speaker: ずんだもん
+    expression: smile
+    pause_after: 1.2
+  beats:
+  - type: image
+    cut_reason: 【日常の入り口】料理動画を見る手元から始める
+    from: 1
+    slot: 1
+    credit: 'Photo: Pixabay'
+  - type: image
+    cut_reason: 【核心のコメント】ピン留めコメントと桁違いのいいね数を再現（文字は描かない）
+    from: 2
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、ずんだもんの困惑まで尺を分ける
+    from: 5
+    slot: 3
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】めたんの受けで手元カットに戻し尺を分ける
+    from: 6
+    slot: 4
+    credit: 'Photo: Pixabay'
+  - type: image
+    cut_reason: 【時代を示す】無地の背表紙が並ぶ棚で『25年前』を視覚化
+    from: 7
+    slot: 5
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【問いへの折り返し】コメント欄に戻り、なぜ今も笑いになるのかへ
+    from: 10
+    slot: 6
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【留保】手元カットに戻し、中身は説明しない旨と締めの受けを保持
+    from: 13
+    slot: 7
+    credit: 'Photo: Pixabay'
+  readings:
+  - surface: いちばん上に
+    reading: イチバンウエニ
+- id: 2
+  title: そもそも何が起きたのか
+  chapter_title: そもそも何が起きたのか
+  narration:
+  - text: まず、何が起きたのかを順番に見ましょう。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 元は、二千一年に発売された一本の成人向けビデオよ。あとから同じ制作会社の作品まで含めて、ネットの人たちはまとめて「淫夢」と呼ぶようになったの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 二千七年ごろ、ニコニコ動画にその映像が転載されたの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 二千八年ごろからは、台詞や場面を切り貼りした音MADの素材にされ始めたわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 音MADって、台詞を音楽に合わせて刻むやつなのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: そう。二千十年には、ニコニコ動画に「例のアレ」というカテゴリができたの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: そこが、淫夢の動画の置き場になっていったわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 二千十四年には、週間のタグ人気で一位になったこともあるわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そして二千二十年代の今は、TikTok のダンスや、さっきの料理動画のコメント欄みたいな形で広がっているわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 元の動画を見たことがない世代にまで、ね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 見たことがないのに使ってるのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: ええ。世の中に面白い動画はいくらでもあるのに、なぜこれだけが二十五年も生き残ったのか。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.8
+  - text: 面白かったから、じゃないのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 面白さだけでは、二十五年は続かないの。切り貼りしやすい形をしていたから広まった、と考えるほうが説明がつくのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: 切り貼りしやすい形って、どういう形なのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.7
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【つなぎ】前シーンと同じ棚の絵で始め、歴史の説明へ入る
+    from: 1
+    slot: 1
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【出典の明示】黒線入り静止画を出所テロップ付きで提示
+    from: 2
+    slot: 2
+    credit: © COAT Corporation（2001）より。引用
+    telop: © COAT Corporation（2001）より。引用
+  - type: diagram
+    cut_reason: 【年表】2001→2014の5イベントを2列3行で振り返る。2020年代TikTokはこの図に詰め込まず、直後の実写で見せる
+    from: 3
+    diagram:
+      type: sketch
+      rows:
+      - - id: y2001
+          at: 3
+          icon: movie
+          text: 2001 発売
+        - id: y2007
+          at: 4
+          icon: upload
+          text: 2007 転載
+          after: ニコニコ動画にその映像が転載されたの
+        - id: y2008
+          at: 5
+          icon: music_note
+          text: 2008 音MAD
+          after: 音MADの素材にされ始めたわ
+      - - id: y2010
+          at: 8
+          icon: folder
+          text: 2010 例のアレ
+          after: 「例のアレ」というカテゴリができたの
+        - id: y2014
+          at: 10
+          icon: trending_up
+          text: 2014 タグ1位
+        - null
+      arrows:
+      - from: y2001
+        to: y2007
+      - from: y2007
+        to: y2008
+      - from: y2008
+        to: y2010
+      - from: y2010
+        to: y2014
+  - type: image
+    cut_reason: 【現代への橋渡し】ダンス動画で今の使われ方を実写で見せる
+    from: 11
+    slot: 3
+    credit: 'Photo: Artem Podrez / Pexels'
+  - type: image
+    cut_reason: 【問いの再提示】動画アプリのサムネイル一覧をスクロールする手元に替え、なぜ生き残ったのかを問う（棚の絵の再掲は婉曲だったため差し替え）
+    from: 15
+    slot: 4
+    credit: 'Photo: cottonbro studio / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】ダンス動画に戻し、決め文の間1.5秒まで保持
+    from: 17
+    slot: 5
+    credit: 'Photo: Artem Podrez / Pexels'
+  readings:
+  - surface: 淫夢
+    reading: インム
+  - surface: 例のアレ
+    reading: レイノアレ
+  - surface: 音MAD
+    reading: オトマッド
+- id: 3
+  title: 切り貼りしやすい形とは何か（章カードなし）
+  chapter_title: null
+  narration:
+  - text: 真似され続ける動画には、共通の形があるの。普通の人が出ていて、男らしさがどこか欠けて見えて、単純で、繰り返しがあって、奇妙で、そして笑える。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: この六つは、イスラエルのヘブライ大学のリモール・シフマンが、二千十二年に取り出した特徴よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: YouTube で真似され続けた動画を、分析したものなの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 男らしさが欠けて見える、というのはどういうことなのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 強くて格好いい人ではなく、どこか締まらない人のほうが、真似されやすいということね。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 淫夢の素材に当てはめてみましょう。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 素人に近い出演者、締まらない演技、短い言い回し、繰り返せる場面、意味の分からないやり取り。普通の人、欠けた男らしさ、単純、繰り返し、奇妙の五つは、はっきり当てはまるわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 「笑える」かどうかは人によるから、そこは空けておくわね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: シフマンの研究は、淫夢を調べたわけじゃないのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ええ、YouTube 全体の話よ。淫夢への当てはめは、私たちの見立て。だから、あとで淫夢そのものを調べた研究も見るわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 僕なりに言うと、面白い作品だったというより、切り刻んで遊ぶのにちょうどいい形をしてた、ということなのだ。
+    speaker: ずんだもん
+    expression: smug
+    pause_after: 0.45
+  - text: そういうこと。でも、形がよかっただけなら、使う側がここまで夢中になる理由にはならないわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.7
+  - text: 確かに、三千いいねは多すぎるのだ。使う側は、何が嬉しいのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: image
+    cut_reason: 【比喩の直接化】自宅で自撮り動画を撮る普通の人。真似される動画のイメージを直接描写（図解の保持74秒が長すぎたため前半をimageビートへ）
+    from: 1
+    slot: 1
+    credit: 'Photo: Gustavo Fring / Pexels'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、シフマンの研究紹介へ尺を分ける（保持38秒を短縮するため分割）
+    from: 3
+    slot: 2
+    credit: 'Photo: Gustavo Fring / Pexels'
+  - type: diagram
+    cut_reason: 【6特徴】Shifman(2012)の6特徴と淫夢への当てはめを『特徴／当てはめ』の1セルにまとめ2列3行で（行数上限3のため。保持時間短縮のため前振りはimageビートへ譲る）
+    from: 7
+    diagram:
+      type: sketch
+      rows:
+      - - id: f1
+          at: 8
+          text: 普通の人／素人出演者
+          after: 素人に近い出演者
+        - id: f2
+          at: 8
+          text: 男らしさ欠如／演技緩い
+          after: 締まらない演技
+      - - id: f3
+          at: 8
+          text: 単純／短い言い回し
+          after: 短い言い回し
+        - id: f4
+          at: 8
+          text: 繰り返し／繰り返せる場面
+          after: 繰り返せる場面
+      - - id: f5
+          at: 8
+          text: 奇妙／意味不明のやり取り
+          after: 意味の分からないやり取り
+        - id: f6
+          at: 10
+          text: 笑える／（空欄）
+          after: そこは空けておくわね
+      highlight:
+        ids:
+        - f1
+        - f2
+        - f3
+        - f4
+        - f5
+        at: 9
+        after: はっきり当てはまるわ
+  - type: image
+    cut_reason: 【比喩の直接化】『切り刻んで遊ぶ』を机上の紙細工の手元で見せる。図解のあとに切り替え
+    from: 14
+    slot: 3
+    credit: 'Photo: Ksenia Chernaya / Pexels'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、決め文の余韻まで尺を分ける（保持28秒を短縮するため分割）
+    from: 16
+    slot: 4
+    credit: 'Photo: Ksenia Chernaya / Pexels'
+  readings:
+  - surface: 淫夢
+    reading: インム
+- id: 4
+  title: なぜ通じるだけで嬉しいのか
+  chapter_title: なぜ通じるだけで嬉しいのか
+  narration:
+  - text: 笑ったというより、「自分は分かる側だ」と確かめられたのが嬉しいのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 分かる側？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 社会的アイデンティティ理論、という考え方があるの。イギリスのブリストル大学のタジフェルとターナーが、千九百七十九年に出したものよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 人は、自分が属する集団とそうでない集団の境目をはっきりさせることで、自分の価値を感じる。そして、その境目を作る道具の一つが言葉なの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 合言葉が、仲間かどうかの境目になるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 一万例以上。アメリカのノースカロライナ大学のコニー・イーブルが集めた、大学生の俗語の数よ。調べて分かった俗語の役割は、仲間意識を作ることと、大人や権威に対抗することだったの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 淫夢の語録は、まさにこれね。元ネタが成人向けだから、大っぴらには言えない。だからこそ、通じた相手は確実に仲間なの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 言えないことが、逆に合言葉として強いのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: ここで、淫夢そのものを調べた研究を見ましょう。早稲田大学の打田秀太さんが、二千二十二年に、淫夢の文化に関わる十四人から聞き取りをしたの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 分かったのは、使う人たちは、これを表に出したいわけではない。でも、広まってはほしい。その二つを同時に成り立たせているのが、この文化の形だ、ということよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 表に出したくないけど、広まってほしい？ 矛盾してるのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 合言葉と考えれば、矛盾しないわ。合言葉は、みんなに知られたら合言葉でなくなる。でも、仲間が増えないと使う場所がない。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 語録は笑いの道具というより、仲間を見分ける合言葉なのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: じゃあ、僕が料理動画のコメント欄で笑えなかったのは、僕がまだ仲間じゃなかったから、ということなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。あなたも、通じる相手を見つけたときの嬉しさは知っているでしょう。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: でも、まだ説明できていないことがあるわ。なぜ、よりによって成人向けの、それも男性同士のビデオが合言葉になったのか。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.8
+  - text: 確かに、合言葉ならアニメの台詞でもよかったはずなのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【自分は分かる側】教室で一人だけ落書きに笑う生徒（記号のみ）
+    from: 1
+    slot: 1
+    credit: 'Illustration: AI generated'
+    telop: 社会的アイデンティティ理論
+  - type: image
+    cut_reason: 【出典の提示】輪の絵に替え、Tajfel & Turnerの提唱年を見せる
+    from: 4
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【内と外の境目・再掲】教室の絵に戻り、境目の話を続ける
+    from: 7
+    slot: 3
+    credit: 'Illustration: AI generated'
+    telop: 'Eble 1996: 大学生の俗語1万例以上'
+  - type: image
+    cut_reason: 【当てはめ】輪の絵に戻り、淫夢の語録への当てはめへ
+    from: 11
+    slot: 4
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【表に出したくないが広まってほしい】ひそひそ話をする二人
+    from: 15
+    slot: 5
+    credit: 'Photo: Kaboompics.com / Pexels'
+    telop: '打田 2024: 14人への聞き取り'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、打田の調査結果の話へ尺を分ける
+    from: 17
+    slot: 6
+    credit: 'Photo: Kaboompics.com / Pexels'
+  - type: image
+    cut_reason: 【矛盾の受け止め】教室の絵に戻り、矛盾する気持ちの話へ
+    from: 20
+    slot: 7
+    credit: 'Illustration: AI generated'
+  - type: board
+    cut_reason: 【定義】決め文と同時に一行を提示
+    from: 25
+    telop: 語録＝仲間を見分ける合言葉
+  - type: image
+    cut_reason: 【仲間の実感】輪の絵に戻り、決め文の余韻の直後から通じ合う嬉しさの話へ
+    from: 26
+    slot: 8
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【次章への問い】ひそひそ話の絵に戻り、タブーの話へつなぐ
+    from: 30
+    slot: 9
+    credit: 'Photo: Kaboompics.com / Pexels'
+  readings:
+  - surface: 淫夢
+    reading: インム
+  - surface: 打田
+    reading: ウチダ
+- id: 5
+  title: なぜタブーほど笑えるのか
+  chapter_title: なぜタブーほど笑えるのか
+  narration:
+  - text: 人はどういうときに笑うのか。アメリカのコロラド大学のマグロウとウォレンが、二千十年に「良性侵犯理論」という答えを出したの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: りょうせいしんぱん？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 何かの決まりが破られていると感じて、それでいて自分は傷つかない、と同時に感じたとき。そのときに人は笑う、という理論よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 破られているだけなら不快。傷つかないだけなら退屈。両方が重なった瞬間に、笑いが起きるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 当時のネットの人たちにとって、成人向けで、しかも男性同士のビデオは、口に出しにくいものだったのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう受け取られていたの。それ自体が悪いことだという意味ではないわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 当時の多くの人が、口に出しにくいものとして扱っていた、ということね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そして、それを画面越しに、仲間内で、台詞だけ切り出して使うなら、自分は傷つく側にはならない。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 口に出しにくいものを、安全な場所で触るとき、人は笑うの。
+    speaker: めたん
+    expression: normal
+    pause_after: 1.5
+  - text: だから、普通の台詞より、言ってはいけない感じの台詞のほうが、合言葉として強かったのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: もう一つ、繰り返しの力もあるわ。同じものに何度も触れるだけで好きになっていく。単純接触効果と呼ばれる現象よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: アメリカのミシガン大学のロバート・ザイアンスが、千九百六十八年に示したの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 意味のない図形や文字でも、見た回数が多いほど好ましく感じるの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 「やりますねぇ」も、何百回も聞いているうちに、気づいたら好きになってた、ということなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 最初は意味不明だった台詞が、聞くたびに馴染んで、ついには自分でも言いたくなる。ミームが広がるときの道筋そのものね。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: でも、何百回も触れるには、何百回も出てくる場所が要るのだ。それがニコニコ動画だったのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【人はどういうときに笑うのか】友人同士で笑っている数人を直接描写。良性侵犯理論の説明に入る前まで保持（ill_headphones_nightは決め文の後で使う）
+    from: 1
+    slot: 1
+    credit: 'Photo: Antonius Ferret / Pexels'
+  - type: diagram
+    cut_reason: 【良性侵犯理論】規則違反と安全の両立が笑いへ収束することをconvergeで示す。決め文「人は笑うの」の間1.5秒まで保持（保持52秒が長すぎたため前振りをimageビートへ譲る）
+    from: 4
+    diagram:
+      type: narrative
+      layout: converge
+      items:
+      - id: broken
+        text: 決まりが破られる
+        at: 4
+        after: 何かの決まりが破られていると感じて
+      - id: safe
+        text: 自分は傷つかない
+        at: 4
+        after: 自分は傷つかない、と同時に感じたとき
+      result:
+        text: 笑いが起きる
+        at: 8
+        after: 笑いが起きるの
+  - type: image
+    cut_reason: 【つなぎ】壁の絵に先取りで替え、合言葉の強さの話を続ける
+    from: 15
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【単純接触効果の出典】夜の部屋の絵に戻り、Zajonc 1968の提示へ
+    from: 18
+    slot: 3
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【単純接触効果】壁一面の反復図形で『見るほど馴染む』を比喩化
+    from: 21
+    slot: 4
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【次章への問い】夜の部屋の絵に戻り、場所の話へつなぐ
+    from: 24
+    slot: 5
+    credit: 'Illustration: AI generated'
+  readings:
+  - surface: 良性侵犯
+    reading: リョウセイシンパン
+- id: 6
+  title: なぜニコニコで増殖したのか
+  chapter_title: なぜニコニコで増殖したのか
+  narration:
+  - text: ええ。あの場所には、二つの仕組みがあったの。批評家の濱野智史さんが、二千八年の『アーキテクチャの生態系』で指摘したものよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 一つは、動画の上に視聴者のコメントが流れること。別の時間に見ているのに、同じ瞬間に同じ場所で笑っているように感じる。これを擬似同期と呼んだわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 一人で見てるのに、みんなで見てる気がするのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: もう一つは、誰かの作った動画を、別の誰かが切り貼りして、さらに別の誰かが作り替えていくこと。N次創作と呼ばれているわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 淫夢の素材は、短い台詞と単純な場面の集まりだったから、切り貼りの部品としてちょうどよかったの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 部品を組み合わせた動画が上がり、その上にコメントで合言葉が流れ、それを見た人がまた部品を組み合わせる。この輪が、何年も回り続けたの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 僕の予想だと、その輪の中にいると、何百回も触れることになって、どんどん好きになるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: その通り。一人で見る動画ではなく、みんなで書き込んで、みんなで作り替える動画だったのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: これで、あなたの最初の疑問には答えが出たわ。二十五年も続いた理由は、面白さではなく仕組みだった。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.9
+  - text: すっきりしたのだ。
+    speaker: ずんだもん
+    expression: smile
+    pause_after: 0.45
+  - text: ただ、ここまでは、熱狂する側から見た話なの。さっき、笑うのは「自分は傷つかない」と感じたときだと言ったでしょう。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: 言ってたのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 自分が傷つかないということは、傷つく側が、別にいるかもしれないということよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 2.0
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【擬似同期】コメント可視化でニコニコ動画特有の疑似同期を再現（線のみ）。章の開始から保持
+    from: 1
+    slot: 1
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、擬似同期の説明を続ける（保持28秒を短縮するため分割）
+    from: 4
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【N次創作へ先出し】もう一つの仕組み（N次創作）の絵に替え、「淫夢の素材は」まで保持
+    from: 8
+    slot: 3
+    credit: 'Illustration: AI generated'
+  - type: diagram
+    cut_reason: 【N次創作の循環】動画化→合言葉拡散→再制作の3項をchainで見せ、captionで循環を明示（保持39秒が長すぎたため、素材の切り出し・N次創作の紹介は直前のimageビートへ譲り図解を短縮）
+    from: 11
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: made
+        text: 動画が上がる
+        icon: movie_creation
+        at: 11
+        after: 部品を組み合わせた動画が上がり
+      - id: comment
+        text: 合言葉が流れる
+        icon: chat
+        at: 11
+        after: その上にコメントで合言葉が流れ
+      - id: remake
+        text: また誰かが作る
+        icon: replay
+        at: 11
+        after: それを見た人がまた部品を組み合わせる
+      caption:
+        text: また最初に戻る
+        at: 12
+        after: この輪が、何年も回り続けたの
+  - type: image
+    cut_reason: 【決め文の保持】大量の手のイラストで参加の多さを示し、決め文の間1.5秒を保持
+    from: 15
+    slot: 4
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【問いへの回収】コメント可視化に戻り、最初の疑問への答えを示す
+    from: 16
+    slot: 5
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【転換】書き込む手の絵に替え、傷つく側への転換を示す
+    from: 19
+    slot: 6
+    credit: 'Illustration: AI generated'
+  readings:
+  - surface: 淫夢
+    reading: インム
+  - surface: 濱野
+    reading: ハマノ
+  - surface: N次創作
+    reading: エヌジソウサク
+  - surface: 擬似同期
+    reading: ギジドウキ
+- id: 7
+  title: その笑いは誰の上に立っているのか
+  chapter_title: その笑いは誰の上に立っているのか
+  narration:
+  - text: 二つの問題があるの。一つは、その笑いが外からどう聞こえるか。もう一つは、笑いの素材にされた人よ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: まず聞こえ方。特定の集団をからかう笑いは、その場に「この集団は軽く扱っていい」という空気を作る。もともと偏見を持っていた人は、その空気の中で、偏見を行動に出しやすくなる。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: これは、アメリカのウェスタンカロライナ大学のフォードとファーガソンが示したことよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 二千四年の、「偏見規範理論」という説明ね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 笑ってる本人に悪気がなくても、そうなるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 悪気の有無とは別に、空気ができてしまう、という話なの。淫夢の元ネタは男性同士のビデオでしょう。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: だから同性愛の当事者や活動家からは、この文化そのものが差別だという批判が続いているわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 使っている側は「同性愛を笑っているのではなく、締まらない演技や意味不明なやり取りを笑っている」と言う。それが本当だとしても、外から聞けば区別はつかないのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 合言葉のつもりが、誰かにとっては、自分を笑う声に聞こえるのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: そして、もう一つ。笑いの素材にされた人は、実在するの。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.9
+  - text: 出演者たちは、二十五年前に一本の仕事をしただけの、普通の人たちよ。本人は、この文化に参加していない。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: それなのに、出演者が誰で、今どこにいるのかを探し出そうとする動きが、何度も起きたの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: そのたびに、批判されてきたわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: それは、もう遊びじゃないのだ。
+    speaker: ずんだもん
+    expression: angry
+    pause_after: 0.45
+  - text: 比べてほしい人がいるの。ビリー・ヘリントンというアメリカの俳優よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 同じころ、彼の出演作もニコニコ動画で切り貼りされて、大流行したの。二千七年の夏に投稿された動画は、二か月で十四万回以上再生されたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 彼は、それを知って、自分から受け入れたの。二千九年に日本に来て、ファンのイベントに何度も出た。二千十八年に亡くなったとき、日本中のファンが追悼したわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 同じ切り貼りなのに、片方は本人が選んで表に出て、片方は選んでいないのに引き出されたのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ヘリントンは、自分で選んで表に出た。淫夢の出演者は、選んでいないのに引き出されたの。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: 熱狂に仕組みがあることと、その笑いが誰も傷つけないことは、別なのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 2.0
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【偏見規範理論】笑いが作る空気を、輪から離れる人の絵で示す。章の開始から保持
+    from: 1
+    slot: 1
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、偏見が行動に出る話へ切り替えて尺を分ける
+    from: 6
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、悪気の有無の話へ
+    from: 9
+    slot: 3
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【外への聞こえ方】抗議のプラカードを持つ人々の写真を挟み、批判の具体像を示す（ill_laugh_circle_backの3連続を崩す）
+    from: 10
+    slot: 4
+    credit: 'Photo: Oriel Frankie Ashcroft / Pexels'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、当事者からの批判へ
+    from: 13
+    slot: 5
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、外から見た聞こえ方の結びへ
+    from: 15
+    slot: 6
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【出演者は実在する】黒線入り静止画を短く再掲（出所テロップ再掲）
+    from: 18
+    slot: 7
+    credit: © COAT Corporation（2001）より。引用
+    telop: © COAT Corporation（2001）より。引用
+  - type: image
+    cut_reason: 【被害の継続】同じ絵に戻り、特定・迷惑行為の話へ
+    from: 19
+    slot: 8
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【対比する実例】ヘリントンの後ろ姿でファンの歓待を描写（顔なし）
+    from: 24
+    slot: 9
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、来日・追悼の話へ尺を分ける
+    from: 27
+    slot: 10
+    credit: 'Illustration: AI generated'
+  - type: diagram
+    cut_reason: 【ヘリントン対比】選択の有無と結果を見出し行＋2行の3行2列で対比し、決め文の間2.0秒まで保持
+    from: 30
+    diagram:
+      type: sketch
+      rows:
+      - - id: h0
+          at: 30
+          icon: person
+          text: ビリー・ヘリントン
+        - id: p0
+          at: 30
+          icon: person_off
+          text: 淫夢の出演者
+      - - id: h1
+          at: 31
+          text: 自分で選んで表に出た
+          after: 自分で選んで表に出た
+        - id: p1
+          at: 30
+          text: 選んでいない
+          after: 選んでいないのに引き出された
+      - - id: h2
+          at: 30
+          text: 来日・イベント出演
+        - id: p2
+          at: 30
+          text: 探し出される
+      arrows:
+      - from: h1
+        to: h2
+      - from: p1
+        to: p2
+      highlight:
+        ids:
+        - p1
+        - p2
+        at: 30
+        after: 選んでいないのに引き出された
+      caption:
+        text: 同じ切り貼り、違う経緯
+        at: 30
+  readings:
+  - surface: 淫夢
+    reading: インム
+- id: 8
+  title: 結び
+  chapter_title: null
+  narration:
+  - text: めたんの最後の話、重かったのだ。でも、ちゃんと受け取ったうえで、僕の言葉でまとめてみるのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.35
+  - text: 二十五年前のビデオの台詞が今も合言葉なのは、動画が面白かったからじゃないのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: 四つの理由が、重なったからなのだ。
+    speaker: ずんだもん
+    expression: point
+    pause_after: 0.45
+  - text: 切り貼りしやすい形をしていたこと。通じるだけで仲間だと分かること。口に出しにくいものを安全な場所で触れること。そして、何百回も触れる場所があったこと。
+    speaker: ずんだもん
+    expression: point
+    pause_after: 0.45
+  - text: その通りよ。熱狂の正体は、動画そのものではなく、合言葉の仕組みなの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: だから、あなたが次に「やりますねぇ」を見て笑ったとき、三つのことを分けて思い出してほしいの。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 面白がっているのは、合言葉が通じた自分たち。その声は、外からは同性愛を笑う声に聞こえうる。そして、その合言葉の元になった人は、何も選んでいない。
+    speaker: めたん
+    expression: normal
+    pause_after: 2.5
+  - text: 笑うのをやめろ、という話ではないのだ。何を笑っていて、それが誰にどう聞こえるかを、知っておこう、という話なのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.45
+  - text: それで十分よ。今日の話はここまで。
+    speaker: めたん
+    expression: smile
+    pause_after: 2.5
+  beats:
+  - type: image
+    cut_reason: 【冒頭への予告】結びの前振り。コメント欄の再現から始める
+    from: 1
+    slot: 1
+    credit: 'Illustration: AI generated'
+  - type: board
+    cut_reason: 【結びの整理】ずんだもんの4点列挙をチョーク文字の番号付きで残す
+    from: 5
+    telop: '熱狂の正体は合言葉の仕組み
+
+      ①切り貼りしやすい形 ②通じれば仲間
+
+      ③安全に触れるタブー ④何百回も触れる場所'
+  - type: image
+    cut_reason: 【冒頭への回収】コメント欄の再現に戻り、決め文の仕組みの話へ
+    from: 9
+    slot: 2
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、三つの留保へ話を進める
+    from: 11
+    slot: 3
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【間】同じ絵のまま、決め文の間2.5秒まで保持
+    from: 13
+    slot: 4
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【最後の一枚】暗い部屋でスマホを見る後ろ姿。アウトロまで保持
+    from: 15
+    slot: 5
+    credit: 'Illustration: AI generated'
