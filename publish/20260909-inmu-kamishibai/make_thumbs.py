@@ -182,11 +182,13 @@ def make_thumb_a() -> Image.Image:
 
 
 def make_thumb_a2() -> Image.Image:
-    """A案 + 文言を大幅拡大（1行目は2段の特大文字）、左下にめたん・ずんだもんを高さ38%で
-    配置する改訂版（2026-09-09 ユーザー指示: 3案とも文字が画面の1割程度しかなく小さすぎる
-    との指摘を受け、A2 のレイアウトで作り直し。A3・A4は廃止）。
+    """A案 + 文言を大幅拡大（1行目は2段の特大文字）、左下にめたん・ずんだもんを大きく
+    （高さ76%、下端は画面外）配置する改訂版。
 
-    文言ブロック（2段の見出し＋副題）は画面上55%に収め、その下に立ち絵を置く。
+    2026-09-09 二度目のユーザー指示: 「二人が小さすぎる、下半身が画面外にはみ出してよいので
+    腰から上を大きく見せる」との指摘を受け、立ち絵の高さを 38%→76% に拡大。その分の余白を
+    作るため、文言ブロック（2段の見出し＋副題）は上45%に収め、1段目フォントを幅最大値から
+    12%縮める。
     """
     bg = vertical_gradient(W, H, (18, 20, 30), (34, 30, 46))
 
@@ -199,17 +201,21 @@ def make_thumb_a2() -> Image.Image:
     draw = ImageDraw.Draw(bg)
     stroke_big = 11
 
-    # 1行目: 「淫夢は」「なぜ人気？」を2段、幅いっぱいまで拡大（高さ制約は緩め、幅で最大化する）。
+    # 1行目: 「淫夢は」「なぜ人気？」を2段。まず幅いっぱいに最大化し、そこから12%縮めて
+    # 文言ブロックを上45%以内に収める。
     text_max_w = round(left_w * 0.95)
-    f1a = fit_bold_font("淫夢は", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
-    f1b = fit_bold_font("なぜ人気？", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
+    f1a_full = fit_bold_font("淫夢は", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
+    f1b_full = fit_bold_font("なぜ人気？", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
+    shrink = 0.84
+    f1a = _font(round(f1a_full.size * shrink))
+    f1b = _font(round(f1b_full.size * shrink))
     bbox_1a = draw.textbbox((0, 0), "淫夢は", font=f1a, stroke_width=stroke_big)
     h_1a = bbox_1a[3] - bbox_1a[1]
     bbox_1b = draw.textbbox((0, 0), "なぜ人気？", font=f1b, stroke_width=stroke_big)
     h_1b = bbox_1b[3] - bbox_1b[1]
 
-    line_gap = round(H * 0.02)
-    top_y = round(H * 0.04)
+    line_gap = round(H * 0.008)
+    top_y = round(H * 0.01)
     y1a = top_y + h_1a / 2
     y1b = top_y + h_1a + line_gap + h_1b / 2
     draw_mixed_center(bg, [("淫夢", YELLOW), ("は", WHITE)], left_center_x, round(y1a), f1a, stroke_width=stroke_big)
@@ -218,29 +224,28 @@ def make_thumb_a2() -> Image.Image:
 
     # 2行目（副題）: 半透明の黒帯を敷いてから、幅いっぱいの最大サイズで重ねる。
     stroke_sub = 6
-    f2 = fit_bold_font(LINE2_TEXT_A2, max_width=round(left_w * 0.97), max_height=round(H * 0.12), stroke_width=stroke_sub)
+    f2 = fit_bold_font(LINE2_TEXT_A2, max_width=round(left_w * 0.97), max_height=round(H * 0.07), stroke_width=stroke_sub)
     bbox_2 = draw.textbbox((0, 0), LINE2_TEXT_A2, font=f2, stroke_width=stroke_sub)
     h_2 = bbox_2[3] - bbox_2[1]
-    band_pad = round(H * 0.018)
-    band_top = round(text_block_bottom + H * 0.025)
+    band_pad = round(H * 0.008)
+    band_top = round(text_block_bottom + H * 0.008)
     band_bottom = band_top + h_2 + band_pad * 2
     band = Image.new("RGBA", (left_w, band_bottom - band_top), (0, 0, 0, round(255 * 0.60)))
     bg.alpha_composite(band, (0, band_top))
     y2 = (band_top + band_bottom) / 2
     draw_mixed_center(bg, [(LINE2_TEXT_A2, WHITE)], left_center_x, round(y2), f2, stroke_width=stroke_sub)
 
-    # 文言ブロックは上55%（=H*0.55）に収まっているはずだが、念のため実測でも確認する
-    # （呼び出し側 main() の目視確認に加え、ここではアサーションはせず素通しする）。
-
-    # 立ち絵: 左下、高さ38%で並べる。
-    puppet_h = round(H * 0.38)
+    # 立ち絵: 高さ76%（下端は画面外にはみ出させ、腰から上を大きく見せる）。
+    # 頭頂は画面高さ47%あたり（文言ブロックの下、45〜50%の指示範囲）。ずんだもんを手前に
+    # （後から貼るレイヤーが手前になる）、左下で少し重ねる。
+    puppet_h = round(H * 0.76)
     metan = load_puppet("metan", "smile", puppet_h)
     zun = load_puppet("zundamon", "normal", puppet_h)
-    bottom_y = H - puppet_h
-    metan_cx = round(left_w * 0.28)
-    zun_cx = round(left_w * 0.70)
-    paste(bg, metan, metan_cx - metan.width / 2, bottom_y)
-    paste(bg, zun, zun_cx - zun.width / 2, bottom_y)
+    head_top_y = round(H * 0.47)
+    metan_cx = round(left_w * 0.30)
+    zun_cx = round(left_w * 0.64)
+    paste(bg, metan, metan_cx - metan.width / 2, head_top_y)
+    paste(bg, zun, zun_cx - zun.width / 2, head_top_y)
     return bg
 
 
