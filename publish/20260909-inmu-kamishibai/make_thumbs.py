@@ -182,13 +182,12 @@ def make_thumb_a() -> Image.Image:
 
 
 def make_thumb_a2() -> Image.Image:
-    """A案 + 文言を大幅拡大（1行目は2段の特大文字）、左下にめたん・ずんだもんを大きく
-    （高さ76%、下端は画面外）配置する改訂版。
+    """A案 + 文言大幅拡大版の第3版。副題を3行（ネットミーム／×／笑いのメカニズム）に分割し、
+    めたん・ずんだもんは頭〜肩だけ見える位置まで下げる。
 
-    2026-09-09 二度目のユーザー指示: 「二人が小さすぎる、下半身が画面外にはみ出してよいので
-    腰から上を大きく見せる」との指摘を受け、立ち絵の高さを 38%→76% に拡大。その分の余白を
-    作るため、文言ブロック（2段の見出し＋副題）は上45%に収め、1段目フォントを幅最大値から
-    12%縮める。
+    2026-09-10 三度目のユーザー指示: 副題を3行に分けてそれぞれ拡大・黒帯は3行まとめて1枚、
+    1行目見出しは幅最大値から5〜10%分だけ追加で縮めて余白を作る、文言ブロック全体は上65%
+    以内、立ち絵は頭頂を画面高さ68〜72%まで下げて頭〜肩だけ見せる（胴体はほぼ画面外）。
     """
     bg = vertical_gradient(W, H, (18, 20, 30), (34, 30, 46))
 
@@ -201,47 +200,67 @@ def make_thumb_a2() -> Image.Image:
     draw = ImageDraw.Draw(bg)
     stroke_big = 11
 
-    # 1行目: 「淫夢は」「なぜ人気？」を2段。まず幅いっぱいに最大化し、そこから12%縮めて
-    # 文言ブロックを上45%以内に収める。
+    # 1行目: 「淫夢は」「なぜ人気？」を2段。幅いっぱいの最大値から22%縮め、副題3行分の
+    # 余白を作る（前版の12%縮小から更に約10%分の追加縮小＝5〜10%の指示範囲）。
     text_max_w = round(left_w * 0.95)
     f1a_full = fit_bold_font("淫夢は", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
     f1b_full = fit_bold_font("なぜ人気？", max_width=text_max_w, max_height=round(H * 0.42), stroke_width=stroke_big)
-    shrink = 0.84
-    f1a = _font(round(f1a_full.size * shrink))
-    f1b = _font(round(f1b_full.size * shrink))
+    shrink1 = 0.78
+    f1a = _font(round(f1a_full.size * shrink1))
+    f1b = _font(round(f1b_full.size * shrink1))
     bbox_1a = draw.textbbox((0, 0), "淫夢は", font=f1a, stroke_width=stroke_big)
     h_1a = bbox_1a[3] - bbox_1a[1]
     bbox_1b = draw.textbbox((0, 0), "なぜ人気？", font=f1b, stroke_width=stroke_big)
     h_1b = bbox_1b[3] - bbox_1b[1]
 
-    line_gap = round(H * 0.008)
-    top_y = round(H * 0.01)
+    line_gap = round(H * 0.006)
+    top_y = round(H * 0.008)
     y1a = top_y + h_1a / 2
     y1b = top_y + h_1a + line_gap + h_1b / 2
     draw_mixed_center(bg, [("淫夢", YELLOW), ("は", WHITE)], left_center_x, round(y1a), f1a, stroke_width=stroke_big)
     draw_mixed_center(bg, [("なぜ人気？", WHITE)], left_center_x, round(y1b), f1b, stroke_width=stroke_big)
     text_block_bottom = y1b + h_1b / 2
 
-    # 2行目（副題）: 半透明の黒帯を敷いてから、幅いっぱいの最大サイズで重ねる。
+    # 副題: 「ネットミーム」「×」「笑いのメカニズム」の3行。各行を自分の文字数で幅いっぱいまで
+    # 最大化した上で、文言ブロックが上65%に収まるよう一律スケール（shrink2）を掛ける。
+    # 「×」はネットミーム行の1.2倍サイズで中央寄せ。黒帯は3行分まとめて1枚に敷く。
     stroke_sub = 6
-    f2 = fit_bold_font(LINE2_TEXT_A2, max_width=round(left_w * 0.97), max_height=round(H * 0.07), stroke_width=stroke_sub)
-    bbox_2 = draw.textbbox((0, 0), LINE2_TEXT_A2, font=f2, stroke_width=stroke_sub)
-    h_2 = bbox_2[3] - bbox_2[1]
+    sub_max_w = round(left_w * 0.97)
+    f_net_full = fit_bold_font("ネットミーム", max_width=sub_max_w, max_height=round(H * 0.20), stroke_width=stroke_sub)
+    f_warai_full = fit_bold_font("笑いのメカニズム", max_width=sub_max_w, max_height=round(H * 0.20), stroke_width=stroke_sub)
+    shrink2 = 0.78
+    f_net = _font(round(f_net_full.size * shrink2))
+    f_warai = _font(round(f_warai_full.size * shrink2))
+    f_times = _font(round(f_net.size * 1.2))
+
+    bbox_net = draw.textbbox((0, 0), "ネットミーム", font=f_net, stroke_width=stroke_sub)
+    h_net = bbox_net[3] - bbox_net[1]
+    bbox_times = draw.textbbox((0, 0), "×", font=f_times, stroke_width=stroke_sub)
+    h_times = bbox_times[3] - bbox_times[1]
+    bbox_warai = draw.textbbox((0, 0), "笑いのメカニズム", font=f_warai, stroke_width=stroke_sub)
+    h_warai = bbox_warai[3] - bbox_warai[1]
+
+    sub_line_gap = round(H * 0.004)
     band_pad = round(H * 0.008)
     band_top = round(text_block_bottom + H * 0.008)
-    band_bottom = band_top + h_2 + band_pad * 2
+    y_net = band_top + band_pad + h_net / 2
+    y_times = band_top + band_pad + h_net + sub_line_gap + h_times / 2
+    y_warai = band_top + band_pad + h_net + sub_line_gap + h_times + sub_line_gap + h_warai / 2
+    band_bottom = round(y_warai + h_warai / 2 + band_pad)
+
     band = Image.new("RGBA", (left_w, band_bottom - band_top), (0, 0, 0, round(255 * 0.60)))
     bg.alpha_composite(band, (0, band_top))
-    y2 = (band_top + band_bottom) / 2
-    draw_mixed_center(bg, [(LINE2_TEXT_A2, WHITE)], left_center_x, round(y2), f2, stroke_width=stroke_sub)
+    draw_mixed_center(bg, [("ネットミーム", WHITE)], left_center_x, round(y_net), f_net, stroke_width=stroke_sub)
+    draw_mixed_center(bg, [("×", WHITE)], left_center_x, round(y_times), f_times, stroke_width=stroke_sub)
+    draw_mixed_center(bg, [("笑いのメカニズム", WHITE)], left_center_x, round(y_warai), f_warai, stroke_width=stroke_sub)
 
-    # 立ち絵: 高さ76%（下端は画面外にはみ出させ、腰から上を大きく見せる）。
-    # 頭頂は画面高さ47%あたり（文言ブロックの下、45〜50%の指示範囲）。ずんだもんを手前に
-    # （後から貼るレイヤーが手前になる）、左下で少し重ねる。
+    # 立ち絵: 高さ76%は変えず、頭頂を画面高さ70%まで下げ、頭〜肩だけ見せる（胴体はほぼ画面外）。
+    # 黒帯（band_bottom）との間に十分な余白があるため左右シフトは不要。ずんだもんを手前に
+    # （後から貼るレイヤーが手前）、左下で少し重ねる。
     puppet_h = round(H * 0.76)
     metan = load_puppet("metan", "smile", puppet_h)
     zun = load_puppet("zundamon", "normal", puppet_h)
-    head_top_y = round(H * 0.47)
+    head_top_y = round(H * 0.70)
     metan_cx = round(left_w * 0.30)
     zun_cx = round(left_w * 0.64)
     paste(bg, metan, metan_cx - metan.width / 2, head_top_y)
