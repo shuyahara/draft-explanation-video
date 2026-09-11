@@ -1632,24 +1632,24 @@ scenes:
     cut_reason: 【自分でやるしかない】夜のスマホの手元に戻り、近づく役の偏りを数字で見る
     from: 1
     slot: 1
-    credit: 'Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)／Photo: Mikhail Nilov / Pexels'
+    credit: 'Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)／Photo: Jaroslav Maléř / Pexels'
   - type: image
     cut_reason: 【4対1】最初のメッセージの件数の偏りを出す
     from: 5
     slot: 2
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: 最初のメッセージ 男性142,444件・女性34,960件
   - type: image
     cut_reason: 【返信率は逆】送っている数と返る割合が男女で逆であることを出す
     from: 9
     slot: 3
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: 未返信率 男性発79%・女性発58%
   - type: image
     cut_reason: 【読みすぎない】同じ絵のまま、この数字から言えるところまでの限定へ
     from: 12
     slot: 4
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
   - type: image
     cut_reason: 【席の実験へ】向かい合わせに並んだ椅子に替え、役を入れ替えた実験に入る
     from: 16
@@ -1707,7 +1707,7 @@ scenes:
     cut_reason: 【限定と次への問い】手元の絵に戻し、席の移動とメッセージは同じ行動ではない旨と章末の問いへ
     from: 32
     slot: 7
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
 - id: 13
   title: まともな男性は、何に負けているのか
   chapter_title: null
