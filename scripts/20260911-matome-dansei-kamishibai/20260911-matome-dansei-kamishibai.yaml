@@ -69,7 +69,7 @@ scenes:
     cut_reason: 【数字】手元の別カットに替え、マッチ3件の数字を台詞と同時にテロップで出す
     from: 4
     slot: 2
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: 半年でマッチ3件
   - type: image
     cut_reason: 【会ったあとで止まった1件】二人分のカップに替え、会えた1人の話へ
@@ -101,7 +101,7 @@ scenes:
     cut_reason: 【間】手元に戻り、ずんだもんが違いを飲み込めないところまで尺を分ける
     from: 17
     slot: 8
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
 - id: 2
   title: 「まとも」の中身と、三つの段階
   chapter_title: null
@@ -846,7 +846,7 @@ scenes:
     cut_reason: 【決め文の保持】夜のスマホの手元に替え、会う仕組みだけが新しいという決め文と間2.5秒を持たせる
     from: 31
     slot: 10
-    credit: 'Photo: Mikhail Nilov / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
   - type: image
     cut_reason: 【次章への問い】組んだ手に替え、時間がかかるものはいつ効くのかという問いで閉じる
     from: 34
