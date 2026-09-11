@@ -1,0 +1,1029 @@
+video:
+  title: "なぜ\"まとも\"な男性はモテないのか ― 真のモテ要素とは何か（めたん×ずんだもん 紙芝居版）"
+  kamishibai:
+    puppet_sink_ratio: 0.12
+  characters:
+    - name: "めたん"
+      speaker: "四国めたん"
+      sprites_dir: "C:/Users/shuya/Projects/assets-kamishibai/sprites/metan"
+      side: "left"
+      subtitle_color: "#E8A0BE"
+      default_expression: "normal"
+    - name: "ずんだもん"
+      speaker: "ずんだもん"
+      sprites_dir: "C:/Users/shuya/Projects/assets-kamishibai/sprites/zundamon"
+      side: "right"
+      subtitle_color: "#8FCF7A"
+      default_expression: "normal"
+  bgm: "../bgm/main.mp3"
+  bgm_credit: "BGM: 「落ち着いた？」ミルアージュ（DOVA-SYNDROME）"
+  sfx: "chic"
+scenes:
+  - id: 1
+    title: "フック（半年でマッチ3件）"
+    chapter_title: null
+    narration:
+      - text: "めたん、僕、マッチングアプリを始めて半年になるのだ。"
+        speaker: "ずんだもん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "プロフィールは何回も書き直したのだ。仕事も趣味も、ちゃんと埋めたのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.35
+      - text: "それで、成立したマッチは、半年で3件なのだ。送った「いいね」は、数えるのをやめたのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "半年で3件。それは、こたえるわね。"
+        speaker: "めたん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "しかも、実際に会えたのは、そのうちの1人なのだ。その1人とも、1回きりで終わったのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "会う前で止まったのが2件、会ったあとで止まったのが1件、ということね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "僕、そんなに変なことは書いてないと思うのだ。悪いことも、してないつもりなのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.35
+      - text: "掲示板で「まともな男ほどモテない」って見たのだ。返信欄も「自分もそうだ」ばっかりだったのだ。"
+        speaker: "ずんだもん"
+        expression: "angry"
+        pause_after: 0.4
+      - text: "その言葉、私も見たことがあるわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "本当にそうなのだ？ まともにしてたら、損をするのだ？"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "それを、一緒に確かめましょう。まともな男性は、本当にモテないのか。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "先に、答えの形だけ言っておくわね。優しさが嫌われている、という部分は違うわ。でも、優しいだけでは最初に選ばれにくい、という部分は当たっているの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 1.2
+      - text: "嫌われてはいない。でも、選ばれにくい…。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.35
+      - text: "その違いが、僕には分からないのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 2
+    title: "「まとも」の中身を、ほどく"
+    chapter_title: null
+    narration:
+      - text: "まず、その「まとも」という言葉に何が入っているのか、一つずつ分けてみましょう。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "ずんだもんが自分をまともだと思うとき、頭に浮かんでいるのは、どんなことかしら。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "えっと…犯罪はしてないのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.35
+      - text: "浮気もしないのだ。ちゃんと働いてるのだ。人にも優しくしてるのだ。"
+        speaker: "ずんだもん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "いいわ。今の四つを並べてみると、何か気づかないかしら。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "うーん…当たり前のことばかりなのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "犯罪をしない。浮気をしない。働いている。優しい。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "最初の二つは、「悪いことをしていない」という話ね。三つ目の「働いている」も、無職ではない、という意味で挙げているでしょう？"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "あっ、そうなのだ。マイナスがない、って言ってるだけなのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "四つのうち三つは、減点がないという話なの。相手に向かっているのは、四つ目だけよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 1.5
+      - text: "そしてこれは、ずんだもん一人の話ではないわ。数字も見ておきましょう。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "国立社会保障・人口問題研究所が2021年に行った調査では、18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "7割以上！ 僕だけじゃなかったのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "同じ調査で、結婚するつもりがあるのに独身の人に、理由も聞いているわ。25歳から34歳でいちばん多かったのは、調査の言葉で「適当な相手にまだめぐり会わない」。つまり、自分に合う相手とまだ出会っていない、ね。男性で43.3パーセントよ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "断られてるんじゃなくて、出会えてないと感じてる人が多いのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ええ。ただ、この調査はその人が優しいかどうかまでは測っていないの。背景の数字として見てちょうだい。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "それと、先に決めておきたいことがあるわ。この話は、段階を分けないと混ざるのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "写真とプロフィールしか見えていない、会う前。実際に会ったあと。そして、付き合いが始まってから。この三つで、効くものが違うの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "僕は、会う前でも、会ったあとでも止まってるのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "だから、三つとも見ていくわ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "でも、優しくしてるのに選ばれないなら…優しさが嫌われてるんじゃないのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 3
+    title: "「優しい男は損をする」は、本当なのか"
+    chapter_title: "『優しい男は損をする』は、本当なのか"
+    narration:
+      - text: "そこを最初に確かめましょう。いまの問いは、会ったあとの段階の話ね。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "2003年、サウスカロライナ大学の研究チームが、女子学生を相手に、こんな実験をしたわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "二人の男性を、写真と紹介文で見せるの。一人は見た目の評価が高いけれど、態度が意地悪。もう一人は見た目の評価は低いけれど、感じがいい人よ。どちらがいいか、と聞いたの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "顔がいい方なのだ。絶対そうなのだ。"
+        speaker: "ずんだもん"
+        expression: "smug"
+        pause_after: 0.4
+      - text: "選ばれたのは、感じがいい方だったの。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "えっ、負けたのだ！？ 顔がいい方が負けたのだ？"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ええ。この実験は二度行われていて、48人でも194人でも、同じ方向の結果が出ているわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "結婚相手にするなら、交際相手にするなら、友人にするなら。どの聞き方でも、感じのいい方が高く評価されたの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "でも、見た目と態度の両方が違うのだ。それ、優しさだけの力なのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "いい疑問ね。この実験では、見た目の良さと態度の良さが、それぞれ別々に効いていたことも確かめられているわ。混ざってはいないのよ。"
+        speaker: "めたん"
+        expression: "delighted"
+        pause_after: 0.35
+      - text: "この実験で評価が低かったのは、見た目のいい男性ではなく、態度が意地悪な男性の方だったの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.0
+      - text: "じゃあ「優しい男は損をする」っていうのは、何だったのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "その言い方と関係が深い、別の研究もあるのよ。1999年、カナダのゲルフ大学の研究チームが、優しいけれど奥手な男性と、魅力的で経験の多い男性の、どちらを選ぶか聞いたの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "優しい方を選んだ女性が54パーセント。魅力的な方は18パーセントだったわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "3倍じゃないか！ 言われてることと逆なのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ただし、こちらは優しさ以外もいろいろ違う比較だから、この数字を優しさの力とは読めないわ。俗説のもとになった設定でも、優しい方が選ばれた、というところまでね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "じゃあ僕の「優しい」は、どこで止まってるのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 1.0
+  - id: 4
+    title: "人は、誰に惹かれるか分かっているのか"
+    chapter_title: "人は、誰に惹かれるか分かっているのか"
+    narration:
+      - text: "そこを考えるために、会う前と、会ったあとを並べてみましょう。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "まず、会う前の話ね。さっきと同じ2021年の調査で、女性に「結婚相手の男性の何を重視しますか」と聞いているの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "いちばん多かったのは「人柄」よ。重視すると答えた人は88.2パーセント。いっぽう「容姿」は18.8パーセントだったわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "それなら僕の人柄、かなり有利なはずなのだ。"
+        speaker: "ずんだもん"
+        expression: "smug"
+        pause_after: 0.4
+      - text: "待って。ここからが本題よ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.6
+      - text: "2008年、ノースウェスタン大学のポール・イーストウィックたちが、163人の学生を集めて実験したの。当時の彼は、まだ博士課程の大学院生だったわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "まず全員に、理想の相手に何を求めるかを書いてもらうの。そのあと、一人4分ずつ、9人から13人と実際に会ってもらったわ。数分ずつ相手を替えて話していく、スピードデートという形式ね。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "書いたとおりの人を、ちゃんと好きになってたのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ほとんど、当たらなかったわ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.4
+      - text: "ほとんど当たらなかったのだ？ じゃあ、何を基準に好きになってたのだ？"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "それは次に見るわ。先に、この結果がどのくらい確かかを言っておくわね。2014年には、同じ問いを扱った97本の研究をまとめた分析も出ているの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "事前に挙げた理想に合う人ほど実際にも好きになる、という関係は、そこでもほとんど見られなかったわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "それ、女性だけの話なのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "いいえ。男性も同じだったの。自分が誰を好きになるかを、男女とも、うまく言い当てられなかったわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "じゃあ、あの88.2パーセントは嘘なのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "嘘とは言えないわ。「誠実な人がいい」という気持ちは本物よ。ただ、本人の答えだけでは、実際に誰に惹かれるかまでは分からないの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "それに、調査が聞いているのは結婚相手の条件で、実験が見ているのは初対面の惹かれ方。同じものさしではないわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "人は、自分がなぜその相手に惹かれたのかを、正確には説明できないことがあるの。聞かれると、理由をあとから、もっともらしく整えてしまうのよ。これは、この研究者たちが挙げている説明ね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 2.5
+      - text: "本人にも分からない…。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 1.0
+  - id: 5
+    title: "では、実際には何が効いていたのか"
+    chapter_title: null
+    narration:
+      - text: "その実験では、実際に惹かれた度合いと、相手のどんな特徴が結びついていたかも測っているのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "いちばん強かったのは、見た目の魅力。次が、人当たりの良さ。三番目が、稼ぐ力よ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "やっぱり顔なのだ…。いちばん上は変わらないのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "落ち込むのは早いわ。順位だけじゃなくて、数字の開きを見てちょうだい。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "見た目は0.43から0.46。人当たりの良さは0.29から0.32。稼ぐ力は0.16から0.19よ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "その数字、何なのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "二つのものごとが、どれくらい一緒に動くかを表す数字ね。0だと関係なし、1に近いほど強く結びついている、と思ってちょうだい。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "じゃあ、人当たりの良さは、稼ぐ力より上なのだ！"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "そうなの。しかも、たった4分の会話の中で、そうなっていたわ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 1.5
+      - text: "報われるのだ！"
+        speaker: "ずんだもん"
+        expression: "delighted"
+        pause_after: 0.4
+      - text: "ただ、言葉には気をつけましょうね。この研究が測った「人当たりの良さ」は、話していて感じがいい、という評価なの。約束を守るとか、責任感があるとか、そこまでは測っていないわ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.4
+      - text: "「優しい」と全部同じじゃないのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ええ。その違いは、あとでもう一度出てくるわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "それにしても、優しさが効くなら、僕は最初の4分で何を落としてるのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 6
+    title: "優しさの隣に、何が足りないのか"
+    chapter_title: "優しさの隣に、何が足りないのか"
+    narration:
+      - text: "そこよ。ここからが、この動画のいちばん大事なところ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "人の魅力は、二つのものさしで見ると分かりやすいのよ。一つは、人に良くする力。優しさ、誠実さ、思いやりね。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "もう一つは、自分から前に出る力。自信や積極性を、姿勢や発言で相手に見せることよ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "優しい人の反対が、自信のある人ってことなのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そこが、いちばん勘違いされやすいところね。反対ではないのよ。二つは別々のものさしなの。両方高い人も、両方低い人もいるわ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 1.0
+      - text: "一本の線の右と左じゃないのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ええ。だから「優しさを捨てて男らしくなれ」という話ではないの。優しさを減らしたからって、自信が上がるわけじゃないもの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "断っておくと、この二つで人の魅力が全部説明できる、という話でもないわ。人の評価を整理するのに、よく使われる二本、ということね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "そのうえで、さっきずんだもんが挙げた四つを、思い出してほしいのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "犯罪をしない、浮気をしない、働いてる、優しい…。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "四つとも、問題を起こさないか、相手に良くするか、という話なの。自分から前に出る力は、一つも入っていないわ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "あっ…。本当に入ってないのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "だから、「まとも」だと言えるだけでは、前に出る力までは伝わらないのよ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "その前に出る力が実際に効くことも、調べられているわ。2016年、カリフォルニア大学バークレー校の研究チームが、スピードデートと、出会い系のアプリの両方で試したの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "体を開いて、ゆったりした姿勢をしていた人は、縮こまった姿勢の人と比べて、「また会いたい」と選ばれやすさが、およそ1.76倍だったわ。アプリの方でも1.27倍よ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "姿勢だけで！？ 性格じゃなくて、姿勢なのだ？"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ただし、姿勢が伝えていたのが余裕だけ、とは限らないわ。自信、開放感、存在感。いろいろ混ざっているはずよ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "それでも、胸を張れば効くのだ！ 腕も組んで、声も低くすれば完璧なのだ？"
+        speaker: "ずんだもん"
+        expression: "delighted"
+        pause_after: 1.0
+  - id: 7
+    title: "男らしさには、二種類ある"
+    chapter_title: null
+    narration:
+      - text: "待って。そこで急ぐと、間違えるのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "人が高い位置に立つやり方には、二種類あるの。2013年、ブリティッシュコロンビア大学の研究チームが、二つを分けて測っているわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "一つ目は、相手を威圧して従わせるやり方。怖がらせて、言うことを聞かせるのね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "二つ目は、能力で尊敬されるやり方。この人はすごい、と思わせて、自然に耳を傾けてもらうのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "どっちも強そうなのだ。似たようなものじゃないのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "それが、ほとんど関係がなかったの。二つの結びつきを表す数字は0.01。さっきの言い方なら、ほぼ0ね。片方が強い人ほどもう片方も強い、とは言えなかったわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "本当に別物なのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "そして、好かれ方が正反対よ。尊敬されるやり方は、好感度と強く結びついていたわ。威圧するやり方は、結びつきがマイナス。好かれてはいないの。恐れられてはいても。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 2.0
+      - text: "でも、怖い人がモテてるのは見たことがあるのだ。あれは何なのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "それも、完全に間違いではないのよ。2025年、トロント大学のニコラス・ルール教授たちが、そこを調べたわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "短い関係を探している人ほど、威圧するやり方に強く惹かれていたの。数字は0.58。かなり高いわね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "やっぱりモテてるじゃないか！"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ところが、長く続く関係を探している人では、マイナス0.55。好まれる、から、避けられる、へ変わるのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 1.5
+      - text: "プラスからマイナス！？ 真逆なのだ！"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "いっぽう、尊敬されるやり方は、短くても長くても、どちらでもプラスのままだったわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "威圧して従わせるやり方と、能力で尊敬されるやり方は、別物なのよ。好かれているのは、尊敬される方なの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "ここで言う「モテてる」は、短い関係の方の話なのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そこを分けられたなら、大丈夫よ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "もう一つ断っておくわね。この二種類は、男らしさを全部二つに分けた、という話ではないの。高い位置に立つやり方を二つに分けた研究、ということよ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "…めたん、僕、自分のあの1回を思い出して、嫌な予感がしてきたのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 1.0
+  - id: 8
+    title: "僕の1回は、何だったのか（章カードなし・図解なし）"
+    chapter_title: null
+    narration:
+      - text: "ここで少し、研究から離れましょう。ずんだもんの、その1回のデートの話を聞かせてほしいの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "会ったのは、カフェなのだ。1時間くらいだったのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "何を話したの。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "相手の仕事の話を聞いたのだ。趣味の話も聞いたのだ。僕は、聞かれたことに、まじめに答えたのだ。"
+        speaker: "ずんだもん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "自分からは、何か切り出した？"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "…切り出してないのだ。失礼があったら困るから、聞かれるまで待ってたのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "それ、さっきの二本のものさしで言うと、どっちの話かしら。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "人に良くする方、なのだ。前に出る方は、たぶん、ゼロなのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "失礼がなかった、というのは、減点がなかった、ということね。相手から見て、ずんだもんがどんな人か分かる材料は、あったかしら。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.4
+      - text: "…ないのだ。僕、まじめに聞いてただけなのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "それは、悪いことではないのよ。ただ、1回で伝わるのは、そこまでね。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "僕は「変な人じゃない」までは伝えられて、「どんな人か」は伝えてなかったのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そういうことだと思うわ。そして、それでも2回目があれば、話は違ったかもしれないの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "でも、2回目に進めてる人って、モテてる人なのだ？ モテてる人は、そのまま結婚できてるのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 9
+    title: "モテることと、結ばれることは同じか"
+    chapter_title: "モテることと、結ばれることは同じか"
+    narration:
+      - text: "いい問いね。そこ、日本のデータで確かめられているのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "男性825人、女性757人。大手の結婚相談サービスに入会した人たちを、およそ1年4か月追いかけた研究が、2018年に出ているの。秋田大学と明星大学などの研究チームよ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "実際に結婚したかどうかまで、見たのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ええ。そこで、二つのものさしを分けて測ったの。お見合いを申し込まれた数と、実際に結婚まで行ったかどうかよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "申し込まれた数で見ると、男性はとても分かりやすかったわ。学歴が高いこと、収入が高いこと、背が高いこと、細身であること。どれも人気と結びついていたの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "それ、僕にないものばかりな気がするのだ…。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "まだ半分よ。もう一つのものさしを見てちょうだい。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "結婚まで行ったかどうかで見ると、学歴も、身長も、体型も、結婚する確率とは結びついていなかったわ。例外は、収入の高さだけよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "人気なのに、結婚できてないのだ！？"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "正確には、申し込まれやすい条件と、結婚まで行く条件が、一致していなかったということね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "この研究では、理由も分析されているわ。条件のいい人ほど、相手を厳しく選ぶようになっていたの。申し込まれる数は増えても、自分も相手を絞るから、結果として決まりにくくなるのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "選ばれる側になると、選ぶ方も厳しくなるのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "モテることと、結ばれることは、別のものさしなのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.0
+      - text: "じゃあ、結ばれる方には何が効くのだ？ 僕が知りたいのは、そっちなのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 10
+    title: "遅れて効いてくるもの"
+    chapter_title: null
+    narration:
+      - text: "やっと、ずんだもんの良さが分かる話になるわ。ここからは、付き合いが始まってからの段階ね。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "協調性と誠実性の高い人は、関係の満足度も高い。それを、19の調査、合わせて3,848人分をまとめて確かめた分析があるの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "2010年、オーストラリアのニューイングランド大学の准教授、ジョン・マラフたちの仕事よ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "どんな性格の人が、うまくいってたのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "協調性の高さ。誠実性の高さ。それに、感情が安定していること。この三つが、満足度と結びついていたわ。数字は0.25から0.29。強くはないけれど、はっきりプラスね。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "協調性と誠実性！ それ、僕が持ってるやつなのだ！"
+        speaker: "ずんだもん"
+        expression: "delighted"
+        pause_after: 0.4
+      - text: "そうね。だから、まともさが弱いわけではないのよ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "ただし、この研究が見ているのは、関係が始まったあとの満足度なの。誰が最初に選ばれるか、は測っていないわ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 1.5
+      - text: "始まったあとの話なのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ここからは、研究そのものではなく、私の推論として聞いてちょうだい。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "考えてみて。約束を守る人かどうか、4分で見きわめられるかしら。困ったときに逃げない人かどうかは、どうかしら。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "分からないのだ…。何回か会って、何かあって、やっと分かるやつなのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "いっぽう、自分から前に出る力の方は、最初から見えるの。姿勢も、話し方も、会った瞬間に届くわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "しかも、別の研究では、自信たっぷりに見える人への高い評価が、何週間かたつと下がっていく、と報告されているの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "最初に高くて、あとから下がるのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "まとめると、こういうことね。まともさが弱いんじゃないのよ。効き始めるのが、遅いの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.0
+      - text: "遅いなら、その時間は、どこで手に入れるのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 11
+    title: "その「時間」は、誰が用意していたのか"
+    chapter_title: "その『時間』は、誰が用意していたのか"
+    narration:
+      - text: "いい問いね。実はその時間、昔は自分で用意しなくてよかったのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "最初に出した、国立社会保障・人口問題研究所の2021年の調査に戻るわ。夫婦がどうやって出会ったかを、結婚した年ごとに聞いているの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "1930年代に結婚した夫婦では、見合い結婚が69.0パーセント。7割近くが見合いよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "7割！ ほとんど見合いなのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "それが、2019年から2021年に結婚した夫婦では、9.9パーセントまで下がっているわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "職場で出会って結婚した割合も減っているの。前回の2015年の調査では28.2パーセント、2021年の調査では21.4パーセントよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "見合いも職場も、減ってるのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そのかわりに増えたのが、ネットで出会う形ね。2019年から2021年では15.2パーセント。見合いを追い抜いたわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "それの何がまずいのだ？ 出会いの数は、増えてる気がするのだ。"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "数はそうかもしれないわ。でも、見合いと職場には、共通していたものが二つあるのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "一つは、周りの人がその人を保証してくれること。「この人はちゃんとした人ですよ」と、誰かが言ってくれるの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "紹介状みたいなものなのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "近いわね。もう一つは、何度も会う時間が、先に決まっていること。職場なら毎日顔を合わせるし、見合いも、話が進めば仲を取り持つ人がついて、何度か会うことになるわ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "さっきの「遅れて効いてくるもの」が、育つ時間なのだ！"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "そういうことよ。それに、人は繰り返し会う相手に好意を持ちやすい、という効果も知られているわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "昔は、まともさを他人が保証してくれて、しかも何度も会う時間が、先に決まっていたのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.0
+      - text: "ただし、断っておくわね。この効果には限界があって、最初の印象が悪い相手だと、何度会っても好意は上がらない、と報告されているの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.4
+      - text: "会えば何とかなる、ではないのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ええ。会う回数を増やせばうまくいく、とまでは、研究は言っていないわ。それに、こういう出会い方が減った、というだけで、なくなったわけでもないの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "減った分は、今は誰がやってるのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 12
+    title: "近づく役を、誰がやっているか"
+    chapter_title: null
+    narration:
+      - text: "今は、自分でやるしかないわ。そして、その役が誰に偏っているかも、数字で出ているのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "2014年に、オンラインの出会いのサービスを6か月分調べた研究があるの。対象は、男女合わせて1万4千人あまりよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "その半年で送られた最初のメッセージは、男性からがおよそ14万件。女性からは、およそ3万5千件。4対1ね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "4倍も男から送ってるのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "返事をもらえた割合を見ると、女性が最初に送った場合の方が、男性が最初に送った場合の、およそ2倍だったわ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "送れば返ってくるのに、送ってないのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 0.4
+      - text: "そこまでは言えないの。送る相手の選び方が違うかもしれないもの。分かるのは、送っている数と、返事が返る割合が、男女で逆だった、ということね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "男が数を打って、女性が選んでるのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そこで、その「近づく役」そのものを入れ替えた実験があるのよ。2009年、さっきと同じイーストウィックたちが、350人でスピードデートをしたの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "ふつうは、男性が席を移動して、女性が座って待つわ。それを逆にして、女性に移動してもらったの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "席を替えただけなのだ？"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "それだけよ。すると、ふだんのスピードデートで見られる「男性の方が相手を広く受け入れる」という男女の差が、消えたの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "消えたのだ！？ 男女の生まれつきの違いじゃなかったのだ？"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "少なくとも、それだけでは説明がつかないわね。移動する側は相手を受け入れやすくなって、座って待つ側が、相手を厳しく選ぶようになったの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "選り好みしているのが女性だから、じゃないのよ。座って待つ役をやっている側が、選ぶ側になるの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "僕はずっと、送る側で、移動する側だったのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "ただ、席を移ることと、アプリでメッセージを送ることは、同じ行動ではないわ。自分から近づく役、という点が共通している。そこまでね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "めたん、結局、僕は何に負けてるのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 13
+    title: "まともな男性は、何に負けているのか"
+    chapter_title: null
+    narration:
+      - text: "ここまでを、四つにまとめるわね。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "一つ目。優しさは負けていないわ。実験でも、実際に会ったあとの評価でも、ちゃんと効いていたの。負けていたのは、意地悪な態度の方よ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "そこは、疑わなくていいのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "二つ目。でも「まとも」という言葉には、人に良くする力しか入っていないの。自分から前に出る力は、抜けているわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "僕が数えた四つ、全部そっちだったのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "三つ目。その前に出る力も、二種類あるのよ。威圧して従わせるやり方は、長く続く関係では避けられていたわ。好かれているのは、能力で尊敬される方ね。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "威張る方じゃなくて、尊敬される方なのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "四つ目。そして、まともさは効き始めるまでに時間がかかるのに、その時間をくれていた出会い方が、この数十年で減ったの。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "四つとも、僕の人格が悪いって話じゃないのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "ええ。少なくとも、ずんだもんが悪い人だからではないわね。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "まともな男性がモテなくなったんじゃないのよ。まともさが伝わる前に、判断が終わる場面が、増えたの。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "伝わる前に、終わってるのだ…。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.35
+      - text: "じゃあ、僕はどうしたらいいのだ？ 真のモテ要素って、結局なんなのだ？"
+        speaker: "ずんだもん"
+        expression: "confused"
+        pause_after: 1.0
+  - id: 14
+    title: "結び（真のモテ要素とは何か）"
+    chapter_title: null
+    narration:
+      - text: "研究から言えることなら、あるわ。ただし、これをやれば必ずうまくいく、という話ではないの。そこは先に言っておくわね。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.4
+      - text: "それでいいのだ。聞きたいのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "最初に決めた三つの段階ごとに、分けて答えるわ。全部が同じものさしに並んでいるわけではないから。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.35
+      - text: "まず、会ったあと。実際に人が惹かれていたのは、見た目の魅力、人当たりの良さ、そして能力で尊敬される強さね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.35
+      - text: "この中で、人当たりの良さは、稼ぐ力より強く効いていたわ。尊敬される強さの方は、短い関係でも、長い関係でも、ずっとプラスだったの。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "威張る方じゃなくて、尊敬される方なのだ。"
+        speaker: "ずんだもん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "ええ。威圧する方は、短い関係では選ばれることがあっても、長く続く関係では避けられていたわ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 0.35
+      - text: "次に、続いてから。協調性も誠実性も、ちゃんと効くの。ただし、関係が始まったあとで、ね。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "始まったあと…。だから、始めるところが要るのだ。"
+        speaker: "ずんだもん"
+        expression: "thinking"
+        pause_after: 0.4
+      - text: "そして、会う前。ここがいちばん薄いわ。写真とプロフィールからは、優しさも誠実さも、ほとんど読み取れないもの。文字で「まじめです」と書いても、伝わらないのよ。"
+        speaker: "めたん"
+        expression: "explain"
+        pause_after: 0.4
+      - text: "僕が半年やってたのは、そこなのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "繰り返し会って相手を知る機会が、以前より減っている。昔は他人が用意してくれた場所を、今は自分で見つけないといけないわ。"
+        speaker: "めたん"
+        expression: "normal"
+        pause_after: 0.4
+      - text: "それが、いちばんむずかしいのだ。"
+        speaker: "ずんだもん"
+        expression: "sad"
+        pause_after: 0.4
+      - text: "そうね。むずかしいわ。だから、うまくいっていないことを、自分の人格のせいにしなくていいのよ。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 0.35
+      - text: "まともさは、持っているだけでは伝わらないの。伝わる場所まで、行かないといけないのよ。"
+        speaker: "めたん"
+        expression: "serious"
+        pause_after: 2.5
+      - text: "僕、プロフィールを書き直すのは、もうやめるのだ。"
+        speaker: "ずんだもん"
+        expression: "smug"
+        pause_after: 0.4
+      - text: "あら。どうするの。"
+        speaker: "めたん"
+        expression: "surprised"
+        pause_after: 0.4
+      - text: "書き直すより、同じ人と何回か会える場所を探すのだ。そっちの方が、僕の誠実さを知ってもらえる気がするのだ。"
+        speaker: "ずんだもん"
+        expression: "smile"
+        pause_after: 0.4
+      - text: "それは、この動画の研究から出てきた見立てで、確かめられた方法ではないわ。でも、筋は通っているわね。"
+        speaker: "めたん"
+        expression: "smile"
+        pause_after: 2.5
