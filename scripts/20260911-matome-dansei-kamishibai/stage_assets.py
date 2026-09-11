@@ -27,7 +27,8 @@ def main() -> None:
     used: dict[str, list[str]] = {}
     for sid, beats in BEATS.items():
         slot = 0  # apply_beats.main と同じ通し番号（img() の slot 引数は使わない）
-        for kind, _anchor, _slot, ckey, _why, _telop in beats:
+        for beat in beats:
+            kind, ckey = beat[0], beat[3]
             if kind != "image":
                 continue
             slot += 1

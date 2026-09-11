@@ -84,12 +84,12 @@ scenes:
     cut_reason: 【半年の書き直し】夜の部屋でスマホを見る手元から始める
     from: 1
     slot: 1
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【数字】同じ手元のまま、マッチ3件の数字を台詞と同時にテロップで出す
     from: 4
     slot: 2
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
     telop: 半年でマッチ3件
   - type: image
     cut_reason: 【会ったあとで止まった1件】二人分のカップに替え、会えた1人の話へ
@@ -101,7 +101,7 @@ scenes:
     cut_reason: 【プロフィールへ戻る】書いた内容の話に戻るので手元カットへ
     from: 11
     slot: 4
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【掲示板の書き込み】「まともな男ほどモテない」を見た画面（文字は描かない）
     from: 13
@@ -111,7 +111,7 @@ scenes:
     cut_reason: 【問いの言語化】本人の状況に戻し、この動画が答える問いを立てる
     from: 18
     slot: 6
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【答えの形の予告】カフェのカットで「嫌われてはいない／選ばれにくい」を予告
     from: 20
@@ -121,7 +121,7 @@ scenes:
     cut_reason: 【間】手元に戻り、ずんだもんが違いを飲み込めないところまで尺を分ける
     from: 23
     slot: 8
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
 - id: 2
   title: 「まとも」の中身を、ほどく
   chapter_title: null
@@ -170,7 +170,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 国立社会保障・人口問題研究所が2021年に行った調査では、18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったの。
+  - text: 国立社会保障・人口問題研究所が、2021年に行った調査があるの。18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -257,24 +257,23 @@ scenes:
     telop: 交際相手なし 72.2%（18〜34歳 未婚男性）
   - type: image
     cut_reason: 【43.3%】独身でいる理由の1位を出す
-    from: 25
+    from: 26
     slot: 5
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-    telop: 「適当な相手にめぐり会わない」43.3%（25〜34歳 男性）
+    telop: 「適当な相手にめぐり会わない」43.3%
   - type: image
-    cut_reason: 【出典】語義の言い換えに合わせて調査名を出す
-    from: 27
+    cut_reason: 【言い換え】自分に合う相手と出会っていない、という言い換えまで尺を分ける
+    from: 28
     slot: 6
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-    telop: 国立社会保障・人口問題研究所「第16回出生動向基本調査」
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Ahmad Shakir Shamsulbadri / Pexels'
   - type: image
     cut_reason: 【留保と段階分けの前置き】この調査が測っていないことと、段階を分ける宣言へ
-    from: 31
+    from: 32
     slot: 7
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
   - type: board
     cut_reason: 【全編の骨格】三つの段階を黒板に書き、以後のシーンで参照できるようにする
-    from: 35
+    from: 36
     telop: '三つの段階
 
       ①会う前＝写真とプロフィール
@@ -284,9 +283,14 @@ scenes:
       ③続いてから＝関係が始まった後'
   - type: image
     cut_reason: 【次章への問い】通勤の絵に戻し、優しさが嫌われているのかという問いで閉じる
-    from: 39
+    from: 40
     slot: 8
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+  readings:
+  - surface: 18歳
+    reading: ジュウハッサイ
+  - surface: 34歳
+    reading: サンジュウヨンサイ
 - id: 3
   title: 「優しい男は損をする」は、本当なのか
   chapter_title: 『優しい男は損をする』は、本当なのか
@@ -339,7 +343,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: その言い方と関係が深い、別の研究もあるのよ。1999年、カナダのゲルフ大学の研究チームが、優しいけれど奥手な男性と、魅力的で経験の多い男性の、どちらを選ぶか聞いたの。
+  - text: その言い方と関係が深い、別の研究もあるのよ。1999年、カナダのゲルフ大学の研究チームの調査よ。優しいけれど奥手な男性と、魅力的で経験の多い男性の、どちらを選ぶか聞いたの。
     speaker: めたん
     expression: normal
     pause_after: 0.35
@@ -366,8 +370,7 @@ scenes:
     cut_reason: 【実験の紹介】大学の校舎で2003年の実験に入る。図解の前振りとして短く
     from: 1
     slot: 1
-    credit: 'Photo: Pixabay'
-    telop: Urbaniak & Kilmann (2003) Sex Roles 49(9/10)
+    credit: 'Urbaniak & Kilmann (2003) Sex Roles 49(9/10)／Photo: Pixabay'
   - type: diagram
     cut_reason: 【実験の骨格】二人の男性→女子学生に聞いた→感じがいい方が選ばれた、を格子で見せる
     from: 4
@@ -424,22 +427,23 @@ scenes:
     cut_reason: 【1999年の研究】ゲルフ大学の設問を紹介する
     from: 25
     slot: 6
-    credit: 'Photo: Pixabay'
-    telop: Herold & Milhausen (1999) J Sex Marital Ther 25(4)
+    credit: 'Herold & Milhausen (1999) J Sex Marital Ther 25(4)／Photo: Pixabay'
   - type: image
     cut_reason: 【数字の受け】笑い合う二人に替え、54%対18%の驚きを受ける
-    from: 28
+    from: 29
     slot: 7
     credit: 'Photo: Tim Douglas / Pexels'
     telop: 優しい方 54%・魅力的な方 18%（1999年）
   - type: image
     cut_reason: 【限定】同じ絵のまま、この数字を優しさの力とは読めない旨と章末の問いへ
-    from: 30
+    from: 31
     slot: 8
     credit: 'Photo: Tim Douglas / Pexels'
   readings:
   - surface: 奥手
     reading: オクテ
+  - surface: 顔がいい方
+    reading: カオガイイホウ
 - id: 4
   title: 人は、誰に惹かれるか分かっているのか
   chapter_title: 人は、誰に惹かれるか分かっているのか
@@ -538,30 +542,29 @@ scenes:
     cut_reason: 【実験へ】向かい合う二人の席に替え、スピードデートの実験に入る
     from: 10
     slot: 3
-    credit: 'Photo: RDNE Stock project / Pexels'
-    telop: Eastwick & Finkel (2008) JPSP 94(2)
+    credit: 'Eastwick & Finkel (2008) JPSP 94(2)／Photo: Mike Jones / Pexels'
   - type: image
     cut_reason: 【4分ずつ】同じ絵のまま、実験の手順と人数を出す
     from: 13
     slot: 4
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: Mike Jones / Pexels'
     telop: 163人／一人4分ずつ 9〜13人と
   - type: image
     cut_reason: 【当たらなかった】ずんだもんの驚きから、確かさの説明へ
     from: 17
     slot: 5
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: Mike Jones / Pexels'
   - type: image
     cut_reason: 【メタ分析】97本をまとめた分析でも同じだったことを出す
     from: 22
     slot: 6
-    credit: 'Photo: RDNE Stock project / Pexels'
-    telop: 97本の研究をまとめた分析（Eastwick et al., 2014）
+    credit: 'Eastwick et al. (2014) Psychol Bull 140(3)／Photo: Mike Jones / Pexels'
+    telop: 97本の研究をまとめた分析（2014年）
   - type: image
     cut_reason: 【問い返し】同じ絵のまま、答えた理想は嘘なのかという問いを受ける（図解の保持を短くするための前振り）
     from: 27
     slot: 7
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: Mike Jones / Pexels'
   - type: diagram
     cut_reason: 【つながらない上下】会う前に答えた理想と、会ったあと実際に惹かれた相手を上下に置き、下段は？のまま結びつかないことだけを見せる
     from: 28
@@ -651,12 +654,12 @@ scenes:
     cut_reason: 【同じ実験の続き】向かい合う席の絵で、4分の会話で何が効いたかに入る
     from: 1
     slot: 1
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: Mike Jones / Pexels'
   - type: image
     cut_reason: 【順位への落胆】同じ絵のまま、いちばん上は変わらないという受けから数字の開きの話へ尺を分ける
     from: 5
     slot: 2
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: Mike Jones / Pexels'
   - type: diagram
     cut_reason: 【相関の大きさ】数字の開きそのものが主張なので棒グラフにする。人当たりの棒が稼ぐ力より明らかに長いことを見せる
     from: 9
@@ -669,11 +672,11 @@ scenes:
       - color: accent
         at: 9
         points:
-        - label: 見た目の魅力
+        - label: 見た目0.43
           value: 0.43
-        - label: 人当たりの良さ
+        - label: 人当たり0.29
           value: 0.29
-        - label: 稼ぐ力
+        - label: 稼ぐ力0.19
           value: 0.19
   - type: image
     cut_reason: 【人当たりの良さ】笑いながら会話している二人に替え、言葉の意味の限定へ
@@ -685,6 +688,9 @@ scenes:
     from: 22
     slot: 4
     credit: 'Photo: Tim Douglas / Pexels'
+  readings:
+  - surface: いちばん上
+    reading: イチバンウエ
 - id: 6
   title: 優しさの隣に、何が足りないのか
   chapter_title: 優しさの隣に、何が足りないのか
@@ -741,11 +747,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: その前に出る力が実際に効くことも、調べられているわ。2016年、カリフォルニア大学バークレー校の研究チームが、スピードデートと、出会い系のアプリの両方で試したの。
+  - text: その前に出る力が実際に効くことも、調べられているわ。2016年、カリフォルニア大学バークレー校の研究チームの実験よ。スピードデートと、出会い系のアプリの両方で試したの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 体を開いて、ゆったりした姿勢をしていた人は、縮こまった姿勢の人と比べて、「また会いたい」と選ばれやすさが、およそ1.76倍だったわ。アプリの方でも1.27倍よ。
+  - text: 体を開いて、ゆったりした姿勢をしていた人と、縮こまった姿勢の人を比べたの。開いていた人の方が、「また会いたい」と選ばれやすさが、およそ1.76倍だったわ。アプリの方でも1.27倍よ。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -769,56 +775,68 @@ scenes:
     from: 1
     slot: 1
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-  - type: diagram
-    cut_reason: 【二本のものさし】人に良くする力と、自分から前に出る力を中心から分けて出す
+  - type: image
+    cut_reason: 【人に良くする力】笑い合う二人で、一本目のものさし（優しさ・誠実さ・思いやり）を直接描く
     from: 3
-    diagram:
-      type: narrative
-      layout: radiate
-      center:
-        icon: person
-        text: 人の魅力
-        at: 3
-      items:
-      - id: kind
-        text: 人に良くする力
-        at: 4
-      - id: kind_ex
-        text: 優しさ・誠実さ・思いやり
-        at: 5
-      - id: front
-        text: 自分から前に出る力
-        at: 6
-      - id: front_ex
-        text: 自信・積極性・姿勢
-        at: 7
+    slot: 2
+    credit: 'Photo: Tim Douglas / Pexels'
+  - type: image
+    cut_reason: 【自分から前に出る力】ゆったり座って話す人に替え、二本目のものさし（姿勢や発言で見せる）を直接描く
+    from: 6
+    slot: 3
+    credit: 'Photo: Arina Krasnikova / Pexels'
   - type: image
     cut_reason: 【反対ではない】通勤の絵に戻し、二つが別々のものさしである話を続ける
     from: 9
-    slot: 2
+    slot: 4
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
   - type: image
     cut_reason: 【誤解を断つ】笑い合う二人に替え、優しさを減らしても自信は上がらない話へ
     from: 15
-    slot: 3
+    slot: 5
     credit: 'Photo: Tim Douglas / Pexels'
   - type: image
     cut_reason: 【範囲の限定】同じ絵のまま、二本で全部が説明できるわけではない旨まで尺を分ける
     from: 17
-    slot: 4
-    credit: 'Photo: Tim Douglas / Pexels'
-  - type: image
-    cut_reason: 【四つの回収】S2の通勤の絵に戻し、ずんだもんが四つを数え直すところまで
-    from: 19
-    slot: 5
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-  - type: image
-    cut_reason: 【決め文の保持】同じ絵のまま、前に出る力が一つも入っていないという決め文と間2.5秒を持たせる
-    from: 21
     slot: 6
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Tim Douglas / Pexels'
+  - type: diagram
+    cut_reason: 【四つはどちらの列か】二本のものさしを列見出しにして、S2の四つが全部左の列に入り、右の列が空のままであることを見せる。決め文「一つも入っていないわ」で保持（S7 の sketch と隣接するが、こちらは2列×3行の対比、S7 は3行4列の数値表で格子の形が違う）
+    from: 19
+    diagram:
+      type: sketch
+      rows:
+      - - id: kind_h
+          at: 19
+          icon: volunteer_activism
+          text: 人に良くする力
+        - id: front_h
+          at: 19
+          icon: campaign
+          text: 自分から前に出る力
+      - - id: kind_1
+          at: 20
+          text: 犯罪・浮気をしない
+          after: 犯罪をしない、浮気をしない
+        - id: front_q
+          at: 19
+          text: ？
+      - - id: kind_2
+          at: 20
+          text: 働いている・優しい
+          after: 働いてる
+        - null
+      highlight:
+        ids:
+        - front_q
+        at: 22
+        after: 自分から前に出る力は
+      caption:
+        text: 右の列に、入っているものがない
+        at: 21
+        after: 四つとも、問題を起こさないか
   - type: image
-    cut_reason: 【間】同じ絵のまま、伝わらないという受けまで尺を分ける
+    cut_reason: 【間】通勤の絵に戻し、伝わらないという受けまで尺を分ける
     from: 25
     slot: 7
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
@@ -826,22 +844,21 @@ scenes:
     cut_reason: 【姿勢の研究へ】バークレー校の研究の紹介に入る
     from: 26
     slot: 8
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-    telop: Vacharkulksemsuk et al. (2016) PNAS 113(15)
+    credit: 'Vacharkulksemsuk et al. (2016) PNAS 113(15)／Photo: Ahmad Shakir Shamsulbadri / Pexels'
   - type: image
-    cut_reason: 【開いた姿勢】体を開いた姿勢の写真で、1.76倍の結果を出す
-    from: 28
+    cut_reason: 【開いた姿勢】体を開いた姿勢の写真に戻り、1.76倍の結果を出す
+    from: 29
     slot: 9
     credit: 'Photo: Arina Krasnikova / Pexels'
-    telop: 開いた姿勢 約1.76倍（スピードデート）／1.27倍（アプリ）
+    telop: 開いた姿勢 約1.76倍／アプリ 約1.27倍
   - type: image
     cut_reason: 【対比の1枚】比較対象の縮こまった姿勢に切り替える（同じ1枚に入れず image ビートを分ける指定。台詞の途中では切れないので、ずんだもんの驚きのキューで切り替えた）
-    from: 30
+    from: 32
     slot: 10
     credit: 'Photo: Darina Belonogova / Pexels'
   - type: image
     cut_reason: 【留保】開いた姿勢に戻し、姿勢が伝えていたものの限定と早合点へ
-    from: 32
+    from: 34
     slot: 11
     credit: 'Photo: Arina Krasnikova / Pexels'
 - id: 7
@@ -933,8 +950,7 @@ scenes:
     cut_reason: 【二種類ある】会議室で腕を組む人の写真で、高い位置に立つ二つのやり方に入る
     from: 1
     slot: 1
-    credit: 'Photo: Vlada Karpovich / Pexels'
-    telop: Cheng et al. (2013) JPSP 104(1), Study 1
+    credit: 'Cheng et al. (2013) JPSP 104(1), Study 1（仲間評定）／Photo: Vlada Karpovich / Pexels'
   - type: image
     cut_reason: 【威圧して従わせる】同じ絵のまま、怖がらせて従わせる説明に尺を分ける
     from: 5
@@ -956,13 +972,12 @@ scenes:
     from: 16
     slot: 5
     credit: 'Photo: Matheus Bertelli / Pexels'
-    telop: 尊敬される力 +0.73・威圧する力 −0.06（有意差なし）
+    telop: 尊敬される力 +0.73・威圧する力 マイナス0.06
   - type: image
     cut_reason: 【怖い人がモテる】腕を組む人に戻し、短期を求める人を調べた研究へ渡す（図解の保持を短くするための前振り）
     from: 21
     slot: 6
-    credit: 'Photo: Vlada Karpovich / Pexels'
-    telop: Witkower & Rule (2025) SPPS 17(5), Study 1
+    credit: 'Witkower & Rule (2025) SPPS 17(5), Study 1／Photo: Vlada Karpovich / Pexels'
   - type: diagram
     cut_reason: 【符号の反転】二つのやり方×三つの相手で数値表を作り、威圧する力だけが長い関係で符号を反転させることを見せる
     from: 25
@@ -985,13 +1000,13 @@ scenes:
           text: 威圧して従わせる
         - id: dom_like
           at: 25
-          value: '-0.06'
+          value: マイナス0.06
         - id: dom_short
           at: 26
           value: '+0.58'
         - id: dom_long
           at: 29
-          value: '-0.55'
+          value: マイナス0.55
           after: ところが、長く続く関係を探している人では
       - - id: pre
           at: 25
@@ -1014,7 +1029,7 @@ scenes:
         at: 34
         after: 威圧して従わせるやり方と
       caption:
-        text: 好感度は仲間評定。-0.06は有意差なし
+        text: 仲間評定。マイナス0.06は有意差なし
         at: 25
   - type: image
     cut_reason: 【言い分けの確認】聞いている場面に戻し、モテの種類を分けた受けを見せる
@@ -1026,6 +1041,9 @@ scenes:
     from: 38
     slot: 8
     credit: 'Photo: Matheus Bertelli / Pexels'
+  readings:
+  - surface: やり方
+    reading: ヤリカタ
 - id: 8
   title: 僕の1回は、何だったのか（章カードなし・図解なし）
   chapter_title: null
@@ -1127,6 +1145,11 @@ scenes:
     from: 24
     slot: 8
     credit: 'Photo: Sare / Pexels'
+  readings:
+  - surface: どんな人か
+    reading: ドンナヒトカ
+  - surface: 変な人
+    reading: ヘンナヒト
 - id: 9
   title: モテることと、結ばれることは同じか
   chapter_title: モテることと、結ばれることは同じか
@@ -1251,8 +1274,7 @@ scenes:
     cut_reason: 【理由】条件のいい人ほど相手を厳しく選ぶという分析を示す
     from: 20
     slot: 4
-    credit: 'Photo: Pixabay'
-    telop: 鈴木ほか (2018)『理論と方法』33(2)
+    credit: '鈴木翔・須藤康介・寺田悠希・小黒恵 (2018)『理論と方法』33(2)／Photo: Pixabay'
   - type: image
     cut_reason: 【決め文の保持】モテることと結ばれることは別のものさしだという決め文と間2.0秒を持たせる
     from: 23
@@ -1314,7 +1336,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: しかも、別の研究では、自信たっぷりに見える人への高い評価が、何週間かたつと下がっていく、と報告されているの。
+  - text: しかも、別の研究もあるの。自信たっぷりに見える人への高い評価は、何週間かたつと下がっていく、と報告されているわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1335,8 +1357,8 @@ scenes:
     cut_reason: 【続いてからの段階】笑い合う二人の絵で、関係が始まったあとの話に入る
     from: 1
     slot: 1
-    credit: 'Photo: Tim Douglas / Pexels'
-    telop: 19の調査・3,848人の分析（Malouff et al. 2010）
+    credit: 'Malouff, Schutte, Bhullar et al. (2010) J Res Pers 44(1)／Photo: Tim Douglas / Pexels'
+    telop: 19の調査・3,848人をまとめた分析
   - type: image
     cut_reason: 【研究の帰属】ニューイングランド大学の准教授の仕事だと示す
     from: 5
@@ -1382,12 +1404,12 @@ scenes:
       - id: weeks
         text: 何週間か後＝下がる
         icon: trending_down
-        at: 28
-        after: 自信たっぷりに見える人への高い評価が
+        at: 29
+        after: 自信たっぷりに見える人への高い評価は
       - id: later
         text: まともさは遅れて効く
         icon: schedule
-        at: 31
+        at: 32
         after: まともさが弱い
       caption:
         text: 後半は推論
@@ -1460,7 +1482,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: ただし、断っておくわね。この効果には限界があって、最初の印象が悪い相手だと、何度会っても好意は上がらない、と報告されているの。
+  - text: ただし、断っておくわね。この効果には限界があるの。最初の印象が悪い相手だと、何度会っても好意は上がらない、と報告されているわ。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -1483,26 +1505,25 @@ scenes:
     cut_reason: 【出会い方の変化】昔の記念写真で、夫婦の出会い方を年ごとに聞いた調査に入る
     from: 1
     slot: 1
-    credit: 'Illustration: AI generated'
-    telop: 第16回出生動向基本調査（2021年）図表5-2・5-3
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）図表5-2・5-3／Illustration: AI generated'
   - type: image
     cut_reason: 【見合いの減少】69.0%から9.9%への落差を数字で出す
     from: 5
     slot: 2
     credit: 'Illustration: AI generated'
-    telop: 見合い結婚 69.0%（1930年代）→ 9.9%（2019〜21年）
+    telop: 見合い結婚 69.0% → 9.9%
   - type: image
     cut_reason: 【職場の減少】オフィスで並んで働く人たちに替え、職場での出会いの減少を出す
     from: 10
     slot: 3
     credit: 'Photo: Anna Shvets / Pexels'
-    telop: 職場 28.2%（2015年調査）→ 21.4%（2021年調査）
+    telop: 職場で出会う 28.2% → 21.4%
   - type: image
     cut_reason: 【ネットの増加】同じ絵のまま、ネットでの出会いが見合いを追い抜いたことを出す
     from: 13
     slot: 4
     credit: 'Photo: Anna Shvets / Pexels'
-    telop: ネットで出会う 15.2%（2019〜21年）
+    telop: ネットで出会う 15.2%
   - type: image
     cut_reason: 【共通していた二つ】記念写真に戻し、見合いと職場に共通していた一つ目を言うところまで（図解の保持を短くするための前振り）
     from: 18
@@ -1532,7 +1553,7 @@ scenes:
     credit: 'Illustration: AI generated'
   - type: image
     cut_reason: 【次章への問い】オフィスの絵に替え、減った分は今は誰がやっているのかという問いへ
-    from: 34
+    from: 35
     slot: 7
     credit: 'Photo: Anna Shvets / Pexels'
 - id: 12
@@ -1555,7 +1576,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 返事をもらえた割合を見ると、女性が最初に送った場合の方が、男性が最初に送った場合の、およそ2倍だったわ。
+  - text: 返事をもらえた割合も見てみましょう。女性が最初に送った場合の方が、男性が最初に送った場合の、およそ2倍だったわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1583,7 +1604,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: それだけよ。すると、ふだんのスピードデートで見られる「男性の方が相手を広く受け入れる」という男女の差が、消えたの。
+  - text: それだけよ。すると、ふだんのスピードデートで見られる、あの男女の差が消えたの。「男性の方が相手を広く受け入れる」という差よ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
@@ -1616,59 +1637,57 @@ scenes:
     cut_reason: 【自分でやるしかない】夜のスマホの手元に戻り、近づく役の偏りを数字で見る
     from: 1
     slot: 1
-    credit: 'Photo: Jaroslav Maléř / Pexels'
-    telop: Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)
+    credit: 'Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)／Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【4対1】最初のメッセージの件数の偏りを出す
     from: 5
     slot: 2
-    credit: 'Photo: Jaroslav Maléř / Pexels'
-    telop: 最初のメッセージ 男性142,444件・女性34,960件（約4対1）
+    credit: 'Photo: Jaroslav Maler / Pexels'
+    telop: 最初のメッセージ 男性142,444件・女性34,960件
   - type: image
     cut_reason: 【返信率は逆】送っている数と返る割合が男女で逆であることを出す
     from: 9
     slot: 3
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
     telop: 未返信率 男性発79%・女性発58%
   - type: image
     cut_reason: 【読みすぎない】同じ絵のまま、この数字から言えるところまでの限定へ
-    from: 11
+    from: 12
     slot: 4
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【席の実験へ】向かい合わせに並んだ椅子に替え、役を入れ替えた実験に入る
-    from: 15
+    from: 16
     slot: 5
-    credit: 'Photo: Pixabay'
-    telop: Finkel & Eastwick (2009) Psychol Sci 20(10)
+    credit: 'Finkel & Eastwick (2009) Psychol Sci 20(10)／Photo: Pixabay'
   - type: diagram
     cut_reason: 【席順と結果】ふつうの席順と入れ替えた席順を左右に置き、移動する役を入れ替えると結果も入れ替わることを見せる
-    from: 17
+    from: 18
     diagram:
       type: sketch
       rows:
       - - id: norm_h
-          at: 17
+          at: 18
           icon: event_seat
           text: ふつうの席順
         - id: swap_h
-          at: 18
+          at: 19
           icon: swap_horiz
           text: 入れ替えた席順
       - - id: norm_m
-          at: 17
+          at: 18
           text: 男性が移動する
           after: 男性が席を移動して
         - id: swap_m
-          at: 18
+          at: 19
           text: 女性が移動する
           after: それを逆にして
       - - id: norm_r
-          at: 21
+          at: 22
           text: 厳しく選ぶのは女性
           after: ふだんのスピードデートで見られる
         - id: swap_r
-          at: 25
+          at: 27
           text: 厳しく選ぶのは男性
           after: 移動する側は相手を受け入れやすくなって
       arrows:
@@ -1679,21 +1698,21 @@ scenes:
       highlight:
         ids:
         - swap_r
-        at: 27
+        at: 29
         after: 座って待つ役をやっている側が
       caption:
         text: 入れ替えたら結果も入れ替わる
-        at: 26
+        at: 28
   - type: image
     cut_reason: 【自分の役】手元の絵に戻り、ずっと近づく役だったという受けへ
-    from: 28
+    from: 30
     slot: 6
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【限定と次への問い】同じ絵のまま、席の移動とメッセージは同じ行動ではない旨と章末の問いへ
-    from: 30
+    from: 32
     slot: 7
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
 - id: 13
   title: まともな男性は、何に負けているのか
   chapter_title: null
@@ -1726,7 +1745,7 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: 四つ目。そして、まともさは効き始めるまでに時間がかかるのに、その時間をくれていた出会い方が、この数十年で減ったの。
+  - text: 四つ目。そして、まともさは効き始めるまでに時間がかかるの。なのに、その時間をくれていた出会い方が、この数十年で減ったわ。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -1759,26 +1778,29 @@ scenes:
       layout: converge
       items:
       - id: one
-        text: 優しさは負けてない
+        text: 優しさは負けない
         at: 2
       - id: two
-        text: 前に出る力が抜けた
+        text: 前に出る力がない
         at: 7
       - id: three
         text: 好かれるのは尊敬
         at: 11
       - id: four
-        text: 時間をくれた場が減った
+        text: 出会い方が減った
         at: 16
       result:
         text: 伝わる前に判断が終わる
-        at: 22
+        at: 23
         after: まともさが伝わる前に
   - type: image
     cut_reason: 【本人に戻る】図解を閉じ、夜のスマホの手元でずんだもんの「どうしたらいいのだ」へ渡す
-    from: 23
+    from: 24
     slot: 1
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
+  readings:
+  - surface: やり方
+    reading: ヤリカタ
 - id: 14
   title: 結び（真のモテ要素とは何か）
   chapter_title: null
@@ -1893,7 +1915,7 @@ scenes:
     cut_reason: 【会う前がいちばん薄い】夜のスマホの手元に替え、写真と文字からは読み取れない話へ
     from: 20
     slot: 4
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: board
     cut_reason: 【会う前の答え】三段そろえて、会う前がいちばん薄いことを書き足す
     from: 25
@@ -1908,14 +1930,17 @@ scenes:
     cut_reason: 【決め文の保持】伝わる場所まで行かないといけない、という決め文と間2.5秒を持たせる
     from: 30
     slot: 5
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【方針の転換】同じ絵のまま、書き直すのをやめると言うところまで尺を分ける
     from: 33
     slot: 6
-    credit: 'Photo: Jaroslav Maléř / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【象徴的な最後の一枚】何人かで同じ作業をしている場面で終え、アウトロへつなぐ
     from: 36
     slot: 7
     credit: 'Photo: Nataliya Vaitkevich / Pexels'
+  readings:
+  - surface: 通っている
+    reading: トオッテイル
