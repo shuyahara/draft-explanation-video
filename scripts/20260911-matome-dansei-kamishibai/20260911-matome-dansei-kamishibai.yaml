@@ -1,549 +1,1339 @@
 video:
-  title: "なぜ\"まとも\"な男性はモテないのか ― 真のモテ要素とは何か（めたん×ずんだもん 紙芝居版）"
+  title: なぜ"まとも"な男性はモテないのか ― 真のモテ要素とは何か（めたん×ずんだもん 紙芝居版）
   kamishibai:
     puppet_sink_ratio: 0.12
   characters:
-    - name: "めたん"
-      speaker: "四国めたん"
-      sprites_dir: "C:/Users/shuya/Projects/assets-kamishibai/sprites/metan"
-      side: "left"
-      subtitle_color: "#E8A0BE"
-      default_expression: "normal"
-    - name: "ずんだもん"
-      speaker: "ずんだもん"
-      sprites_dir: "C:/Users/shuya/Projects/assets-kamishibai/sprites/zundamon"
-      side: "right"
-      subtitle_color: "#8FCF7A"
-      default_expression: "normal"
-  bgm: "../bgm/meisou-no-piano.mp3"
-  bgm_credit: "BGM:「瞑想のピアノ」lei（DOVA-SYNDROME）"
-  sfx: "chic"
+  - name: めたん
+    speaker: 四国めたん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/metan
+    side: left
+    subtitle_color: '#E8A0BE'
+    default_expression: normal
+  - name: ずんだもん
+    speaker: ずんだもん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/zundamon
+    side: right
+    subtitle_color: '#8FCF7A'
+    default_expression: normal
+  bgm: ../bgm/meisou-no-piano.mp3
+  bgm_credit: BGM:「瞑想のピアノ」lei（DOVA-SYNDROME）
+  sfx: chic
 scenes:
-  - id: 1
-    title: "フック（半年でマッチ3件）"
-    chapter_title: null
-    narration:
-      - text: "めたん、僕、マッチングアプリを始めて半年になるのだ。"
-        speaker: "ずんだもん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "プロフィールは何回も書き直したのだ。仕事も趣味も、ちゃんと埋めたのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.35
-      - text: "それで、成立したマッチは、半年で3件なのだ。実際に会えたのは1人で、その1人とも、1回きりで終わったのだ。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "会う前で止まったのが2件、会ったあとで止まったのが1件。それは、こたえるわね。"
-        speaker: "めたん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "僕、変なことは書いてないし、悪いこともしてないつもりなのだ。掲示板には「まともな男ほどモテない」って書いてあったのだ。"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 0.35
-      - text: "本当にそうなのだ？ まともにしてたら、損をするのだ？"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "それを、一緒に確かめましょう。まともな男性は、本当にモテないのか。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.35
-      - text: "先に、答えの形だけ言っておくわね。優しさが嫌われている、という部分は違うわ。でも、優しいだけでは最初に選ばれにくい、という部分は当たっているの。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 1.2
-      - text: "嫌われてはいない。でも、選ばれにくい…。その違いが、僕には分からないのだ。"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 1.2
-  - id: 2
-    title: "「まとも」の中身と、三つの段階"
-    chapter_title: null
-    narration:
-      - text: "まず、その「まとも」に何が入っているのか、分けてみましょう。ずんだもんが自分をまともだと思うとき、頭に浮かぶのはどんなことかしら。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "犯罪はしてないのだ。浮気もしないのだ。ちゃんと働いてるし、人にも優しくしてるのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "最初の二つは「悪いことをしていない」。三つ目の「働いている」も、無職ではない、という意味で挙げているでしょう？"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "あっ、そうなのだ。マイナスがない、って言ってるだけなのだ。"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "四つのうち三つは、減点がないという話。相手に向かっているのは、四つ目だけよ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 1.5
-      - text: "そしてこれは、ずんだもん一人の話ではないわ。国立社会保障・人口問題研究所が、2021年に行った調査があるの。18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "7割以上！ 僕だけじゃなかったのだ。"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "ここで、先に決めておきたいことがあるの。この話は、段階を分けないと混ざるのよ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "写真とプロフィールしか見えていない、会う前。実際に会ったあと。そして、付き合いが始まってから。この三つで、効くものが違うわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "僕は、会う前でも、会ったあとでも止まってるのだ。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "だから今日の結論も、先に一行で言っておくわね。モテる要素は、段階ごとに違うの。そして「まとも」は、最後の段階でしか効かない力なのよ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 1.0
-      - text: "なのに今は、そこまで届く前に、判断が終わってしまう。それを三つの段階で、順番に確かめていくわ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.0
-      - text: "でも、優しくしてるのに選ばれないなら、やっぱり優しさが嫌われてるんじゃないのだ？"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 1.2
-  - id: 3
-    title: "「優しい男は損をする」は、本当なのか（会ったあと①）"
-    chapter_title: "『優しい男は損をする』は、本当なのか"
-    narration:
-      - text: "会ったあとの段階から始めましょう。優しい男性は損をするのか。これは実験されているのよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "2003年、サウスカロライナ大学の研究チームが、女子学生に二人の男性を写真と紹介文で見せたの。一人は見た目の評価が高いけれど、態度が意地悪。もう一人は見た目の評価は低いけれど、感じがいい。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "顔がいい方なのだ。絶対そうなのだ。"
-        speaker: "ずんだもん"
-        expression: "smug"
-        pause_after: 0.45
-      - text: "選ばれたのは、感じがいい方だったの。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.45
-      - text: "えっ、顔がいい方が負けたのだ？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "ええ。48人でも194人でも、同じ方向の結果よ。結婚相手でも、交際相手でも、友人でも、感じのいい方が高く評価されたわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "でも、見た目と態度の両方が違うのだ。優しさだけの力なのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "いい疑問ね。この実験では、見た目の良さと態度の良さが、別々に効いていたことも確かめられているの。混ざってはいないのよ。"
-        speaker: "めたん"
-        expression: "delighted"
-        pause_after: 0.35
-      - text: "評価が低かったのは、見た目のいい男性ではなく、態度が意地悪な男性の方だったの。優しさは、会ったあとの段階で、ちゃんと効いているわ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.0
-      - text: "会ったあとで優しさが効くなら、僕はあの1回で、何を落としてたのだ？"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 1.2
-  - id: 4
-    title: "会ったあと、実際に効いていたのは何か（会ったあと②）"
-    chapter_title: null
-    narration:
-      - text: "それを調べた実験があるの。ただその前に、会う前の言葉を一つ見ておくわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "さっきの2021年の調査で、女性に結婚相手の男性の何を重視するか聞いているの。いちばん多いのは「人柄」で、重視すると答えた人は88.2パーセント。「容姿」は18.8パーセントよ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "それなら僕の人柄、かなり有利なはずなのだ。"
-        speaker: "ずんだもん"
-        expression: "smug"
-        pause_after: 0.45
-      - text: "待って。それは会う前の、言葉の話。会ったあとを測ったのが、この実験よ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.6
-      - text: "2008年、ノースウェスタン大学のポール・イーストウィックたちが、163人の学生を集めたの。当時の彼は、まだ博士課程の大学院生だったわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "まず全員に、理想の相手に何を求めるかを書いてもらう。そのあと、一人4分ずつ、9人から13人と実際に会ってもらったの。数分ずつ相手を替えて話す、スピードデートという形式ね。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "書いたとおりの人を、ちゃんと好きになってたのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "ほとんど、当たらなかったわ。男性も女性も、自分が誰に惹かれるかを、うまく言い当てられなかったの。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.45
-      - text: "じゃあ、実際には何に惹かれてたのだ？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "惹かれた度合いと結びついていたのは、強い順に、見た目の魅力、人当たりの良さ、稼ぐ力。数字で言うと0.43、0.29、0.19よ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "その数字、何なのだ？"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 0.45
-      - text: "二つのものごとがどれくらい一緒に動くかを表す数字ね。0だと関係なし、1に近いほど強く結びついている、と思ってちょうだい。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "じゃあ、人当たりの良さは、稼ぐ力より上なのだ！"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "そうなの。たった4分の会話でも、効いていたわ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 1.5
-      - text: "ただし、ここで測った「人当たりの良さ」は、話していて感じがいい、という評価よ。約束を守るとか、責任感があるとか、そこまでは測っていないの。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.45
-      - text: "「優しい」と全部同じじゃないのだ。会ったあとの段階で効くのは、4分で見える分だけなのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "そういうことね。そして、その4分で見えるものが、もう一つあるのよ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 1.2
-  - id: 5
-    title: "優しさの隣に、何が足りないのか（会ったあと③）"
-    chapter_title: "優しさの隣に、何が足りないのか"
-    narration:
-      - text: "人の魅力は、二つのものさしで見ると分かりやすいの。一つは、人に良くする力。優しさ、誠実さ、思いやり。もう一つは、自分から前に出る力。自信や積極性を、姿勢や発言で相手に見せることよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "優しい人の反対が、自信のある人ってことなのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "そこが勘違いされやすいところ。反対ではないのよ。二つは別々のものさしで、両方高い人も、両方低い人もいるわ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 1.0
-      - text: "そのうえで、さっきの四つを思い出して。犯罪をしない、浮気をしない、働いている、優しい。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "四つとも、問題を起こさないか、相手に良くするか、という話なの。自分から前に出る力は、一つも入っていないわ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.5
-      - text: "あっ…。本当に入ってないのだ。"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "そして前に出る力は、会った瞬間に見えるの。2016年、カリフォルニア大学バークレー校の研究チームが、スピードデートと出会い系アプリで試したわ。体を開いた、ゆったりした姿勢の人と、縮こまった姿勢の人を比べたの。開いていた人の方が、「また会いたい」と選ばれやすさがおよそ1.76倍だったわ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "姿勢だけで！？ じゃあ僕、胸を張って、腕を組んで、声を低くすれば完璧なのだ！"
-        speaker: "ずんだもん"
-        expression: "delighted"
-        pause_after: 0.45
-      - text: "待って。そこで急ぐと間違えるわ。前に出る力にも、二種類あるの。相手を威圧して従わせるやり方と、能力で尊敬されるやり方。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.35
-      - text: "2025年、トロント大学のニコラス・ルール教授たちの研究があるわ。威圧するやり方に惹かれるのは、短い関係を探している人だけだったの。長く続く関係を探している人は、むしろ避けていたわ。尊敬されるやり方は、どちらでもプラスよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "威張るんじゃなくて、尊敬される方なのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "会ったあとの段階で効くのは、見た目と、人当たりと、前に出る力。そして「まとも」には、三つ目が入っていないのよ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.0
-      - text: "でも、なんで人は、そんな4分で見えるものに惹かれるようにできてるのだ？ まともさの方が、大事な気がするのだ。"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 1.2
-  - id: 6
-    title: "なぜ、そこに惹かれるようにできているのか（起源）"
-    chapter_title: "なぜ、そこに惹かれるようにできているのか"
-    narration:
-      - text: "ここで、よく聞く言い方を一つ取り上げるわ。「人間の脳は石器時代から変わっていない。だから恋愛の好みも、そのころのままだ」。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "聞いたことあるのだ。だから見た目と強さで選ばれる、って話なのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "半分だけ、当たっているの。当たっている部分から行くわね。子どもを持つときの負担は、男女で同じではないでしょう？ 妊娠と授乳を抱える側の負担が、ずっと重いわ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "1972年に提案された「親の投資」という考え方があるの。負担が重い側が相手を選ぶ側になり、軽い側が競う側になる、という説明よ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "選ぶ側と、競う側に分かれるのだ。"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "そして選ぶ側は、相手を短い時間で見きわめないといけない。だから、見て分かる手がかりが使われたの。健康そうか、力がありそうか、周りから一目置かれているか。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "さっきの「尊敬される力」もここに入るわ。有能な人のそばにいれば学べるから、人はそういう相手に自然と敬意を払う。その敬意が、魅力として読まれるのよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "4分で見えるものに惹かれるのは、そういう仕組みだったのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "ここまでは、当たっている部分。言い過ぎの部分も言うわね。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 1.0
-      - text: "まず「石器時代」は、一つの時代ではないの。この考え方を作った研究者自身が、そう書いているの。進化の環境は特定の時代や場所ではなく、たくさんの選択圧をまとめたものだ、と。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "それに、進化は止まっていない。2007年、ウィスコンシン大学のジョン・ホークスたちが、人の遺伝子を調べたわ。農耕が始まってからの方が、選択がむしろ速まっている、という報告よ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "そして何より、好みの中身は社会で動くわ。地位や経済力を求める男女の差は、男女が平等な国ほど小さいの。それに、口で言う好みが初対面の惹かれ方を予測しなかったことは、さっき見たとおりよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "じゃあ、どこが変わってなくて、どこが変わったのだ？"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 0.45
-      - text: "手がかりを素早く読む仕組みは、古い。でも、誰が選んで、何回会えるかという仕組みは、ごく最近変わったの。ずれているのは、そこよ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.5
-      - text: "読む側は昔のまま、会う仕組みだけ新しいのだ。じゃあ、まともさみたいに時間がかかるものは、いつ効くのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 1.2
-  - id: 7
-    title: "続いてから効くものは、なぜ最初に見えないのか（続いてから）"
-    chapter_title: "続いてから効くものは、なぜ最初に見えないのか"
-    narration:
-      - text: "やっと、ずんだもんの良さが分かる段階の話になるわ。付き合いが始まってから、ね。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.35
-      - text: "協調性と誠実性の高い人は、関係の満足度も高い。それを、19の調査、合わせて3,848人分をまとめて確かめた分析があるの。2010年、オーストラリアのニューイングランド大学の准教授、ジョン・マラフたちよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "協調性と誠実性！ それ、僕が持ってるやつなのだ！"
-        speaker: "ずんだもん"
-        expression: "delighted"
-        pause_after: 0.45
-      - text: "そうね。だから、まともさが弱いわけではないのよ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.35
-      - text: "ただし、この研究が見ているのは、関係が始まったあとの満足度なの。誰が最初に選ばれるかは、測っていないわ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 1.5
-      - text: "ここからは、研究そのものではなく、私の推論として聞いてちょうだい。約束を守る人かどうか、4分で見きわめられるかしら。困ったときに逃げない人かどうかは、どうかしら。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "分からないのだ…。何回か会って、何かあって、やっと分かるやつなのだ。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "日本の実際のデータでも、同じ形が出ているのよ。男性825人、女性757人。大手の結婚相談サービスに入会した人たちを、およそ1年4か月追いかけた研究が、2018年に出ているの。秋田大学と明星大学などの研究チームよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "お見合いを申し込まれた数で見ると、学歴が高い、収入が高い、背が高い、細身。どれも人気と結びついていたわ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "それ、僕にないものばかりな気がするのだ…。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "まだ半分よ。実際に結婚まで行ったかどうかで見ると、学歴も身長も体型も、結婚する確率とは結びついていなかったの。例外は収入だけ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 2.0
-      - text: "人気なのに、結婚できてないのだ！？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "申し込まれる段階と、結ばれる段階で、効くものが違っていたということね。まともさが弱いんじゃないのよ。効き始めるのが、遅いの。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.5
-      - text: "遅いなら、その時間は、どこで手に入れるのだ？"
-        speaker: "ずんだもん"
-        expression: "confused"
-        pause_after: 1.2
-  - id: 8
-    title: "その「時間」は、誰が用意していたのか（会う前・歴史）"
-    chapter_title: "その『時間』は、誰が用意していたのか"
-    narration:
-      - text: "実はその時間、昔は自分で用意しなくてよかったのよ。少しさかのぼるわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "明治より前の村では、若い人どうしが自分で相手を選ぶ形も、ふつうにあったの。それが明治になって、結婚は家が決めるものになったわ。明治の民法には、家族が結婚するには戸主の同意がいる、と書いてあるのよ。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.45
-      - text: "本人の気持ちだけじゃ、結婚できなかったのだ？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "ええ。その代わりに、仲人が間に立った。この人はちゃんとした人ですよ、と保証して、何度か会う段取りまで整える役ね。慶應義塾大学の准教授、阪井裕一郎さんの研究によればね。見合い結婚は古い伝統ではなく、明治以降に広まった近代の制度なのよ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "昔ながらだと思ってたのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "1947年、憲法に「婚姻は両性の合意のみに基いて成立する」と書かれたわ。結婚は制度として初めて、本人が選ぶものになったの。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "それでも仲人の慣行はしばらく残ったわ。首都圏の結婚式で仲人を立てた割合は、1994年で63.9パーセント。それが2001年には7.3パーセント。たった7年で、ほぼ消えたの。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "7年で、63パーセントから7パーセント！？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "出会い方も同じ向きに動いたわ。1930年代に結婚した夫婦では見合い結婚が69.0パーセント。2019年から2021年では9.9パーセント。かわりにネットで出会った夫婦が15.2パーセントで、見合いを追い抜いたの。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "見合いと仲人には、二つのものが先に付いていたのよ。周りの人の保証と、何度も会う時間。まともさが効き始めるまでの時間を、他人が用意してくれていたの。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.0
-      - text: "だから「モテる」なんて言葉、昔はあまり要らなかったのだ？"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "鋭いわね。2008年に「婚活」という言葉を提唱したのは、中央大学の教授、山田昌弘さんたちよ。結婚が自動的にやって来る時代は終わった、という趣旨ね。「モテる」が切実な言葉になったのは、自分で見せる市場ができてからよ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.35
-      - text: "昔がよかった、という話ではないわよ。家が決める時代は、本人の気持ちより家柄だったのだから。"
-        speaker: "めたん"
-        expression: "normal"
-        pause_after: 0.35
-      - text: "それと、今の市場では、近づく役が男性に偏っているの。2009年、さっきのイーストウィックたちが、350人でスピードデートをしたわ。席を移動する役を、男性から女性に入れ替えてね。すると「男性の方が相手を広く受け入れる」という差が、消えたの。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "席を替えただけで、消えたのだ？"
-        speaker: "ずんだもん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "座って待つ側が、選ぶ側になるのよ。それも、生まれつきではなく、席順で決まっていたということね。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.0
-      - text: "僕はずっと、送る側で、移動する側だったのだ。じゃあ結局、僕は何に負けてるのだ？"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 1.2
-  - id: 9
-    title: "結び（真のモテ要素とは何か）"
-    chapter_title: null
-    narration:
-      - text: "整理するわね。冒頭の一行に戻るわ。モテる要素は、段階ごとに違う。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.35
-      - text: "会う前。写真と文字からは、優しさも誠実さも、ほとんど読み取れない。「まじめです」と書いても、伝わらないの。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "僕が半年やってたのは、そこなのだ。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "会ったあと。効くのは、見た目、人当たりの良さ、そして前に出る力。威張る方ではなく、尊敬される方ね。人当たりの良さは、稼ぐ力より強く効いていたわ。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.35
-      - text: "続いてから。協調性も誠実性も、ちゃんと効く。ただし、関係が始まったあとで。"
-        speaker: "めたん"
-        expression: "explain"
-        pause_after: 0.45
-      - text: "「まとも」は、三つ目の段階の力なのだ。"
-        speaker: "ずんだもん"
-        expression: "thinking"
-        pause_after: 0.45
-      - text: "そう。まともさが弱いんじゃない。効き始めるのが遅いの。そして、その時間を用意してくれていた仕組みが、この数十年で薄くなったわ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 0.35
-      - text: "まともな男性がモテなくなったんじゃないのよ。まともさが伝わる前に、判断が終わる場面が、増えたの。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.5
-      - text: "伝わる前に、終わってるのだ…。"
-        speaker: "ずんだもん"
-        expression: "sad"
-        pause_after: 0.45
-      - text: "だから、うまくいっていないことを、自分の人格のせいにしなくていいのよ。ただし、これをやれば必ずうまくいく、という話でもないわ。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 0.35
-      - text: "まともさは、持っているだけでは伝わらないの。伝わる場所まで、行かないといけないのよ。"
-        speaker: "めたん"
-        expression: "serious"
-        pause_after: 2.5
-      - text: "僕、プロフィールを書き直すのは、もうやめるのだ。"
-        speaker: "ずんだもん"
-        expression: "smug"
-        pause_after: 0.45
-      - text: "あら。どうするの。"
-        speaker: "めたん"
-        expression: "surprised"
-        pause_after: 0.45
-      - text: "書き直すより、同じ人と何回か会える場所を探すのだ。そっちの方が、僕の誠実さを知ってもらえる気がするのだ。"
-        speaker: "ずんだもん"
-        expression: "smile"
-        pause_after: 0.45
-      - text: "それは研究で確かめられた方法ではないけれど、筋は通っているわね。"
-        speaker: "めたん"
-        expression: "smile"
-        pause_after: 2.5
+- id: 1
+  title: フック（半年でマッチ3件）
+  chapter_title: null
+  narration:
+  - text: めたん、僕、マッチングアプリを始めて半年になるのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: プロフィールは何回も書き直したのだ。仕事も趣味も、ちゃんと埋めたのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.35
+  - text: それで、成立したマッチは、半年で3件なのだ。実際に会えたのは1人で、その1人とも、1回きりで終わったのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: 会う前で止まったのが2件、会ったあとで止まったのが1件。それは、こたえるわね。
+    speaker: めたん
+    expression: sad
+    pause_after: 0.45
+  - text: 僕、変なことは書いてないし、悪いこともしてないつもりなのだ。掲示板には「まともな男ほどモテない」って書いてあったのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.35
+  - text: 本当にそうなのだ？ まともにしてたら、損をするのだ？
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.9
+  - text: それを、一緒に確かめましょう。まともな男性は、本当にモテないのか。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 先に、答えの形だけ言っておくわね。優しさが嫌われている、という部分は違うわ。でも、優しいだけでは最初に選ばれにくい、という部分は当たっているの。
+    speaker: めたん
+    expression: explain
+    pause_after: 1.2
+  - text: 嫌われてはいない。でも、選ばれにくい…。その違いが、僕には分からないのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: image
+    cut_reason: 【半年の書き直し】夜の部屋でスマホを見る手元から始める（台本指定の静止画）
+    from: 1
+    slot: 1
+    credit: 'Photo: Jaroslav Maléř / Pexels'
+  - type: image
+    cut_reason: 【数字】手元の別カットに替え、マッチ3件の数字を台詞と同時にテロップで出す
+    from: 4
+    slot: 2
+    credit: 'Photo: Mikhail Nilov / Pexels'
+    telop: 半年でマッチ3件
+  - type: image
+    cut_reason: 【会ったあとで止まった1件】二人分のカップに替え、会えた1人の話へ
+    from: 5
+    slot: 3
+    credit: 'Photo: İbrahim KARASU / Pexels'
+    telop: 会えたのは1人
+  - type: image
+    cut_reason: 【書いた内容へ戻る】プロフィールの話に戻るので手元カットへ
+    from: 8
+    slot: 4
+    credit: 'Photo: Phil Desforges / Pexels'
+  - type: image
+    cut_reason: 【掲示板の書き込み】「まともな男ほどモテない」を見た画面（文字は描かない）
+    from: 9
+    slot: 5
+    credit: 'Illustration: AI generated'
+  - type: image
+    cut_reason: 【問いの言語化】カフェのカットに替え、この動画が答える問いを立てる
+    from: 12
+    slot: 6
+    credit: 'Photo: Şeydanur Yıldız / Pexels'
+  - type: image
+    cut_reason: 【答えの形の予告】二人分のカップに戻し「嫌われてはいない／選ばれにくい」を予告
+    from: 14
+    slot: 7
+    credit: 'Photo: İbrahim KARASU / Pexels'
+  - type: image
+    cut_reason: 【間】手元に戻り、ずんだもんが違いを飲み込めないところまで尺を分ける
+    from: 17
+    slot: 8
+    credit: 'Photo: Mikhail Nilov / Pexels'
+- id: 2
+  title: 「まとも」の中身と、三つの段階
+  chapter_title: null
+  narration:
+  - text: まず、その「まとも」に何が入っているのか、分けてみましょう。ずんだもんが自分をまともだと思うとき、頭に浮かぶのはどんなことかしら。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 犯罪はしてないのだ。浮気もしないのだ。ちゃんと働いてるし、人にも優しくしてるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 最初の二つは「悪いことをしていない」。三つ目の「働いている」も、無職ではない、という意味で挙げているでしょう？
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: あっ、そうなのだ。マイナスがない、って言ってるだけなのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: 四つのうち三つは、減点がないという話。相手に向かっているのは、四つ目だけよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: そしてこれは、ずんだもん一人の話ではないわ。国立社会保障・人口問題研究所が、2021年に行った調査があるの。18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 7割以上！ 僕だけじゃなかったのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: ここで、先に決めておきたいことがあるの。この話は、段階を分けないと混ざるのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 写真とプロフィールしか見えていない、会う前。実際に会ったあと。そして、付き合いが始まってから。この三つで、効くものが違うわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 僕は、会う前でも、会ったあとでも止まってるのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: だから今日の結論も、先に一行で言っておくわね。モテる要素は、段階ごとに違うの。そして「まとも」は、最後の段階でしか効かない力なのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.0
+  - text: なのに今は、そこまで届く前に、判断が終わってしまう。それを三つの段階で、順番に確かめていくわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: でも、優しくしてるのに選ばれないなら、やっぱり優しさが嫌われてるんじゃないのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: image
+    cut_reason: 【当たり前の暮らし】朝の駅のホームで「まとも」の中身をほどく前振り
+    from: 1
+    slot: 1
+    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+  - type: image
+    cut_reason: 【四つの列挙】働く場面に替え、ずんだもんが四つ（犯罪・浮気・仕事・優しさ）を数え上げるところまで
+    from: 3
+    slot: 2
+    credit: 'Photo: Anna Shvets / Pexels'
+  - type: diagram
+    cut_reason: 【四つの内訳】めたんの言い直しに合わせて四つを1つずつ黒板に出し、三つが「減点なし」・四つ目だけが相手へ向かうことを見せる
+    from: 6
+    diagram:
+      type: narrative
+      layout: radiate
+      center:
+        icon: person
+        text: まとも
+        at: 6
+      items:
+      - id: crime
+        text: 犯罪をしない＝減点なし
+        at: 6
+        after: 最初の二つは
+      - id: affair
+        text: 浮気をしない＝減点なし
+        at: 6
+        after: 悪いことをしていない
+      - id: work
+        text: 働いている＝減点なし
+        at: 7
+        after: 無職ではない
+      - id: kind
+        text: 優しい＝相手へ
+        at: 11
+        after: 相手に向かっているのは
+  - type: image
+    cut_reason: 【個人の話から数字へ】駅のホームに戻し、調査の数字へ移る
+    from: 12
+    slot: 3
+    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+  - type: image
+    cut_reason: 【72.2%】交際相手がいない割合を数字と同時に出す
+    from: 14
+    slot: 4
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Airam Dato-on / Pexels'
+    telop: 交際相手なし 72.2%（18〜34歳 未婚男性）
+  - type: image
+    cut_reason: 【段階分けの前置き】働く場面の別カットに替え、段階を分ける宣言へ
+    from: 17
+    slot: 5
+    credit: 'Photo: kaboompics.com / Pexels'
+  - type: board
+    cut_reason: 【全編の骨格】三つの段階を黒板に書き、以後の章頭で参照できるようにする
+    from: 19
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【当事者の位置】夜のスマホの手元に替え、会う前でも会ったあとでも止まっている受けへ
+    from: 23
+    slot: 6
+    credit: 'Photo: Phil Desforges / Pexels'
+  - type: board
+    cut_reason: 【主軸の二文】台本「演出」の指定どおり、主軸の二文は板を保持したまま言う（間1.0→2.0）
+    from: 25
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【次章への問い】駅のホームに戻し、優しさが嫌われているのかという問いで閉じる
+    from: 29
+    slot: 7
+    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+  readings:
+  - surface: 18歳
+    reading: ジュウハッサイ
+  - surface: 34歳
+    reading: サンジュウヨンサイ
+- id: 3
+  title: 「優しい男は損をする」は、本当なのか（会う前）
+  chapter_title: 『優しい男は損をする』は、本当なのか
+  narration:
+  - text: 会う前の段階から始めましょう。写真と紹介文だけを見た相手に、優しい男性は損をするのか。これは実験されているのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 2003年、サウスカロライナ大学の研究チームが、女子学生に二人の男性を写真と紹介文で見せたの。一人は見た目の評価が高いけれど、態度が意地悪。もう一人は見た目の評価は低いけれど、感じがいい。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 顔がいい方なのだ。絶対そうなのだ。
+    speaker: ずんだもん
+    expression: smug
+    pause_after: 0.45
+  - text: 選ばれたのは、感じがいい方だったの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: えっ、顔がいい方が負けたのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: ええ。48人でも194人でも、同じ方向の結果よ。結婚相手でも、交際相手でも、友人でも、感じのいい方が高く評価されたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: でも、見た目と態度の両方が違うのだ。優しさだけの力なのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: いい疑問ね。この実験では、見た目の良さと態度の良さが、別々に効いていたことも確かめられているの。混ざってはいないのよ。
+    speaker: めたん
+    expression: delighted
+    pause_after: 0.35
+  - text: 評価が低かったのは、見た目のいい男性ではなく、態度が意地悪な男性の方だったの。紹介文で優しさが伝わりさえすれば、会う前でも負けていないのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: 伝わりさえすれば…。じゃあ僕のプロフィールの「まじめです」は、伝わってなかったのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: board
+    cut_reason: 【道しるべ】章頭に三つの段階の板を出し、この章が①会う前の話だと示す
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール ← いまここ
+
+      ②会ったあと＝初対面〜数回
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【二人の男性】カフェで向かい合う男性二人に替え、2003年の実験に入る
+    from: 3
+    slot: 1
+    credit: 'Urbaniak & Kilmann (2003) Sex Roles 49(9/10)／Photo: RDNE Stock project / Pexels'
+  - type: diagram
+    cut_reason: 【実験の骨格】二人の男性→女子学生に聞いた→感じがいい方が選ばれた、を格子で見せる
+    from: 5
+    diagram:
+      type: sketch
+      rows:
+      - - id: mean_man
+          at: 5
+          icon: person
+          text: 見た目◎ 意地悪
+        - id: ask
+          at: 7
+          icon: forum
+          text: 女子学生に聞いた
+        - id: chosen
+          at: 9
+          icon: thumb_up
+          text: 感じがいい方が選ばれた
+          after: 選ばれたのは
+      - - id: nice_man
+          at: 6
+          icon: person
+          text: 見た目△ 感じがいい
+        - null
+        - null
+      arrows:
+      - from: mean_man
+        to: ask
+      - from: nice_man
+        to: ask
+      - from: ask
+        to: chosen
+  - type: image
+    cut_reason: 【再現性】大学の校舎に替え、二度の実験の人数を出す
+    from: 12
+    slot: 2
+    credit: 'Photo: Pixabay'
+    telop: 感じがいい方が選ばれた（N=48／N=194）
+  - type: image
+    cut_reason: 【交絡への疑問】別の校舎の絵に替え、優しさだけの力かという疑問を受ける
+    from: 14
+    slot: 3
+    credit: 'Photo: Shivam / Pexels'
+  - type: image
+    cut_reason: 【別々に効いていた】向かい合う二人に戻し、混ざっていないという説明へ
+    from: 17
+    slot: 4
+    credit: 'Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】和やかに話す二人に替え、会う前でも負けていないという決め文と間2.0秒を持たせる
+    from: 19
+    slot: 5
+    credit: 'Photo: Alexandr / Pexels'
+  - type: image
+    cut_reason: 【章末の問い】カフェの窓際に替え、自分のプロフィールは伝わっていたのかという問いへ
+    from: 21
+    slot: 6
+    credit: 'Photo: Sare / Pexels'
+  readings:
+  - surface: 顔がいい方
+    reading: カオガイイホウ
+- id: 4
+  title: 会ったあと、実際に効いていたのは何か（会ったあと①）
+  chapter_title: null
+  narration:
+  - text: そこが、次の段階への入口ね。会う前の言葉を、もう一つ見ておくわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: さっきの2021年の調査で、女性に結婚相手の男性の何を重視するか聞いているの。いちばん多いのは「人柄」で、重視すると答えた人は88.2パーセント。「容姿」は18.8パーセントよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: それなら僕の人柄、かなり有利なはずなのだ。
+    speaker: ずんだもん
+    expression: smug
+    pause_after: 0.45
+  - text: 待って。それは会う前の、言葉の話。会ったあとを測ったのが、この実験よ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.6
+  - text: 2008年、ノースウェスタン大学のポール・イーストウィックたちが、163人の学生を集めたの。当時の彼は、まだ博士課程の大学院生だったわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: まず全員に、理想の相手に何を求めるかを書いてもらう。そのあと、一人4分ずつ、9人から13人と実際に会ってもらったの。数分ずつ相手を替えて話す、スピードデートという形式ね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 書いたとおりの人を、ちゃんと好きになってたのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ほとんど、当たらなかったわ。男性も女性も、自分が誰に惹かれるかを、うまく言い当てられなかったの。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: じゃあ、実際には何に惹かれてたのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: 惹かれた度合いと結びついていたのは、強い順に、見た目の魅力、人当たりの良さ、稼ぐ力。数字で言うと0.43、0.29、0.19よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: その数字、何なのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 二つのものごとがどれくらい一緒に動くかを表す数字ね。0だと関係なし、1に近いほど強く結びついている、と思ってちょうだい。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: じゃあ、人当たりの良さは、稼ぐ力より上なのだ！
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: そうなの。たった4分の会話でも、効いていたわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.5
+  - text: ただし、ここで測った「人当たりの良さ」は、話していて感じがいい、という評価よ。約束を守るとか、責任感があるとか、そこまでは測っていないの。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: 「優しい」と全部同じじゃないのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。「優しい」には、会ってすぐ見える感じの良さと、時間がかかる誠実さの二つが混ざっているの。「まとも」が指しているのは、後の方よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 会ったあとの段階で効くのは、4分で見える方だけなのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: そういうことね。そして、その4分で見えるものが、もう一つあるのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 1.2
+  beats:
+  - type: board
+    cut_reason: 【道しるべ】章カードは無いがここから段階が変わるので、冒頭に板を出す（②会ったあと）
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回 ← いまここ
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【会う前の言葉】夜のスマホの手元で、写真とプロフィールしか見えない段階の「言葉」を出す
+    from: 3
+    slot: 1
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）・女性の回答／Photo: Jaroslav Maléř / Pexels'
+    telop: 人柄を重視 88.2%／容姿 18.8%
+  - type: image
+    cut_reason: 【会ったあとを測る】カフェのカットに替え、言葉の話から実験の話へ渡す
+    from: 6
+    slot: 2
+    credit: 'Photo: Şeydanur Yıldız / Pexels'
+  - type: image
+    cut_reason: 【実験へ】向かい合う男女の席に替え、スピードデートの実験に入る
+    from: 10
+    slot: 3
+    credit: 'Eastwick & Finkel (2008) JPSP 94(2)／Photo: Mike Jones / Pexels'
+  - type: image
+    cut_reason: 【手順と人数】会場の椅子に替え、4分ずつ9〜13人と会う手順を出す
+    from: 12
+    slot: 4
+    credit: 'Photo: Pixabay'
+    telop: 163人／一人4分ずつ 9〜13人と
+  - type: image
+    cut_reason: 【当たらなかった】会場の別カットに替え、書いた理想が当たらなかったところまで
+    from: 15
+    slot: 5
+    credit: 'Photo: Pixabay'
+  - type: diagram
+    cut_reason: 【相関の大きさ】数字の開きそのものが主張なので棒グラフにする。人当たりの棒が稼ぐ力より明らかに長いことを見せる
+    from: 19
+    diagram:
+      type: chart
+      chart: bar
+      title: 恋愛的関心との相関（男性の場合。女性でも順番は同じ）
+      source: Eastwick & Finkel (2008) JPSP 94(2)
+      series:
+      - color: accent
+        at: 19
+        after: 強い順に
+        points:
+        - label: 見た目0.43
+          value: 0.43
+        - label: 人当たり0.29
+          value: 0.29
+        - label: 稼ぐ力0.19
+          value: 0.19
+  - type: image
+    cut_reason: 【人当たりの良さ】笑いながら話す二人に替え、4分で効いたことと、その言葉の限定へ
+    from: 25
+    slot: 6
+    credit: 'Photo: Tim Douglas / Pexels'
+  - type: image
+    cut_reason: 【二つの優しさ】テーブルの上で組んだ手に替え、感じの良さと時間のかかる誠実さを分ける
+    from: 29
+    slot: 7
+    credit: 'Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【次章への渡し】組んだ手の別カットに替え、4分で見えるものがもう一つあるという予告へ
+    from: 33
+    slot: 8
+    credit: 'Photo: The masked Guy / Pexels'
+  readings:
+  - surface: 博士課程
+    reading: ハクシカテイ
+  - surface: 人柄
+    reading: ヒトガラ
+- id: 5
+  title: 優しさの隣に、何が足りないのか（会ったあと②）
+  chapter_title: 優しさの隣に、何が足りないのか
+  narration:
+  - text: 人の魅力は、二つのものさしで見ると分かりやすいの。一つは、人に良くする力。優しさ、誠実さ、思いやり。もう一つは、自分から前に出る力。自信や積極性を、姿勢や発言で相手に見せることよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 優しい人の反対が、自信のある人ってことなのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そこが勘違いされやすいところ。反対ではないのよ。二つは別々のものさしで、両方高い人も、両方低い人もいるわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.0
+  - text: そのうえで、さっきの四つを思い出して。犯罪をしない、浮気をしない、働いている、優しい。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 四つとも、問題を起こさないか、相手に良くするか、という話なの。自分から前に出る力は、一つも入っていないわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.5
+  - text: あっ…。本当に入ってないのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: そして前に出る力は、会った瞬間に見えるの。2016年、カリフォルニア大学バークレー校の研究チームが、スピードデートと出会い系アプリで試したわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 体を開いた、ゆったりした姿勢の人と、縮こまった姿勢の人を比べたの。開いていた人の方が、「また会いたい」と選ばれやすさがおよそ1.76倍だったわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 姿勢だけで！？ じゃあ僕、胸を張って、腕を組んで、声を低くすれば完璧なのだ！
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 0.45
+  - text: 待って。そこで急ぐと間違えるわ。前に出る力にも、二種類あるの。相手を威圧して従わせるやり方と、能力で尊敬されるやり方。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 2025年、トロント大学のニコラス・ルール教授たちの研究があるわ。威圧するやり方に惹かれるのは、短い関係を探している人だけだったの。長く続く関係を探している人は、むしろ避けていたわ。尊敬されるやり方は、どちらでもプラスよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 威張るんじゃなくて、尊敬される方なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 会ったあとの段階で効くのは、見た目と、人当たりと、前に出る力。そして「まとも」には、三つ目が入っていないのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: でも、なんで人は、そんな4分で見えるものに惹かれるようにできてるのだ？ まともさの方が、大事な気がするのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: board
+    cut_reason: 【道しるべ】章頭に板を出す（②会ったあと ← いまここ）
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回 ← いまここ
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【自分から前に出る力】ゆったり座って話す人に替え、二本目のものさし（姿勢や発言で見せる）を直接描く
+    from: 4
+    slot: 1
+    credit: 'Photo: Arina Krasnikova / Pexels'
+  - type: image
+    cut_reason: 【反対ではない】くつろいで話す人に替え、二つが別々のものさしである話を続ける
+    from: 6
+    slot: 2
+    credit: 'Photo: Kindel Media / Pexels'
+  - type: diagram
+    cut_reason: 【四つはどちらの列か】二本のものさしを列見出しにして、S2の四つが全部左の列に入り、右の列が空のままであることを見せる。決め文「一つも入っていないわ」で保持
+    from: 10
+    diagram:
+      type: sketch
+      rows:
+      - - id: kind_h
+          at: 10
+          icon: volunteer_activism
+          text: 人に良くする力
+        - id: front_h
+          at: 10
+          icon: campaign
+          text: 自分から前に出る力
+      - - id: kind_1
+          at: 11
+          text: 犯罪・浮気をしない
+          after: 浮気をしない
+        - id: front_q
+          at: 10
+          text: ？
+      - - id: kind_2
+          at: 11
+          text: 働いている・優しい
+          after: 働いている
+        - null
+      highlight:
+        ids:
+        - front_q
+        at: 13
+        after: 自分から前に出る力は
+      caption:
+        text: 右の列に、入っているものがない
+        at: 12
+        after: 相手に良くするか
+  - type: image
+    cut_reason: 【受け】縮こまった姿勢のカットに替え、本当に入っていないという受けから姿勢の研究へ
+    from: 14
+    slot: 3
+    credit: 'Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【姿勢の研究】スピードデート会場の椅子に替え、バークレー校の実験を紹介する
+    from: 17
+    slot: 4
+    credit: 'Vacharkulksemsuk et al. (2016) PNAS 113(15)／Photo: Pixabay'
+  - type: image
+    cut_reason: 【開いた姿勢】体を開いた姿勢の写真に戻り、1.76倍の結果を出す
+    from: 18
+    slot: 5
+    credit: 'Photo: Arina Krasnikova / Pexels'
+    telop: 開いた姿勢 約1.76倍／アプリ 約1.27倍
+  - type: image
+    cut_reason: 【対比の1枚】比較対象の縮こまった姿勢に切り替える（同一キュー内では切れないので、ずんだもんの驚きのキューで）
+    from: 20
+    slot: 6
+    credit: 'Photo: Darina Belonogova / Pexels'
+  - type: image
+    cut_reason: 【威圧して従わせる】腕を組む人に替え、前に出る力の二種類のうち一方を見せる
+    from: 22
+    slot: 7
+    credit: 'Photo: Vlada Karpovich / Pexels'
+  - type: image
+    cut_reason: 【短い関係だけ】腕を組む別カットに替え、威圧に惹かれるのは短期を探す人だけという結果へ
+    from: 26
+    slot: 8
+    credit: 'Witkower & Rule (2025) SPPS 17(5)／Photo: Kindel Media / Pexels'
+  - type: image
+    cut_reason: 【尊敬される方】人が集まって話を聞く場面に替え、どちらでもプラスな方を見せる
+    from: 28
+    slot: 9
+    credit: 'Photo: Matheus Bertelli / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】聞き入る人たちの別カットに替え、三つ目が入っていないという決め文と間2.0秒を持たせる
+    from: 31
+    slot: 10
+    credit: 'Photo: Pavel Danilyuk / Pexels'
+  - type: image
+    cut_reason: 【次章への問い】身振りを交えて話す人に替え、なぜそこに惹かれるのかという問いで閉じる
+    from: 33
+    slot: 11
+    credit: 'Photo: PNW Production / Pexels'
+  readings:
+  - surface: やり方
+    reading: ヤリカタ
+- id: 6
+  title: なぜ、そこに惹かれるようにできたのか（起源）
+  chapter_title: なぜ、そこに惹かれるようにできたのか
+  narration:
+  - text: ここで、よく聞く言い方を一つ取り上げるわ。「人間の脳は石器時代から変わっていない。だから恋愛の好みも、そのころのままだ」。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 聞いたことあるのだ。だから見た目と強さで選ばれる、って話なのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 半分だけ、当たっているの。当たっている部分から行くわね。子どもを持つときの負担は、男女で同じではないでしょう？ 妊娠と授乳を抱える側の負担が、ずっと重いわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 1972年に提案された「親の投資」という考え方があるの。負担が重い側が相手を選ぶ側になり、軽い側が競う側になる、という説明よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 選ぶ側と、競う側に分かれるのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: そして選ぶ側は、相手を短い時間で見きわめないといけない。だから、見て分かる手がかりが使われたの。健康そうか、力がありそうか、周りから一目置かれているか。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: さっきの「尊敬される力」もここに入るわ。有能な人のそばにいれば学べるから、人はそういう相手に自然と敬意を払う。その敬意が、魅力として読まれるのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 4分で見えるものに惹かれるのは、そういう仕組みだったのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: ここまでは、当たっている部分。言い過ぎの部分も言うわね。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.0
+  - text: まず「石器時代」は、一つの時代ではないの。この考え方を作った研究者自身が、そう書いているの。進化の環境は特定の時代や場所ではなく、たくさんの選択圧をまとめたものだ、と。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: それに、進化は止まっていない。2007年、ウィスコンシン大学のジョン・ホークスたちが、人の遺伝子を調べたわ。農耕が始まってからの方が、選択がむしろ速まっている、という報告よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そして何より、好みの中身は社会で動くわ。地位や経済力を求める男女の差は、男女が平等な国ほど小さいの。それに、口で言う好みが初対面の惹かれ方を予測しなかったことは、さっき見たとおりよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: じゃあ、どこが変わってなくて、どこが変わったのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 手がかりを素早く読む仕組みは、古い。でも、誰が選んで、何回会えるかという仕組みは、ごく最近変わったの。ずれているのは、そこよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.5
+  - text: 読む側は昔のまま、会う仕組みだけ新しいのだ。じゃあ、まともさみたいに時間がかかるものは、いつ効くのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: board
+    cut_reason: 【道しるべ】章頭に板を出す（②会ったあと ← いまここ。4分で見えるものの話の続き）
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回 ← いまここ
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【石器時代】よく聞く言い方を、石器と古い道具の実物で受ける
+    from: 2
+    slot: 1
+    credit: 'Photo: Rinat Askarov / Pexels'
+  - type: image
+    cut_reason: 【子育ての負担】赤ん坊の手を握る親の手に替え、妊娠と授乳を抱える側の負担の話へ
+    from: 5
+    slot: 2
+    credit: 'Photo: Han Lahandoe / Pexels'
+  - type: image
+    cut_reason: 【親の投資】赤ん坊を抱く場面に替え、1972年の考え方を名前で出す
+    from: 9
+    slot: 3
+    credit: 'Trivers (1972) Parental Investment and Sexual Selection／Photo: Pixabay'
+    telop: 「親の投資」（1972年）
+  - type: diagram
+    cut_reason: 【古い仕組みの鎖】負担の差→選ぶ側と競う側→見て分かる手がかり、の順で黒板に書き足し、4分で見えるものに惹かれる理由をたどる
+    from: 10
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: burden
+        text: 子育ての負担が男女で違う
+        icon: child_care
+        at: 10
+      - id: choose
+        text: 重い側が選び軽い側が競う
+        icon: balance
+        at: 10
+        after: 相手を選ぶ側になり
+      - id: cue
+        text: 見て分かる手がかりで選ぶ
+        icon: visibility
+        at: 13
+        after: 見て分かる
+      caption:
+        text: 仕組みは古い。中身は社会が決める
+        at: 15
+  - type: image
+    cut_reason: 【敬意が魅力に】人が話に聞き入る場面に替え、敬意が魅力として読まれるところまで
+    from: 17
+    slot: 4
+    credit: 'Photo: Matheus Bertelli / Pexels'
+  - type: image
+    cut_reason: 【折り返し】石器に戻し、ここから言い過ぎの部分に入ると宣言する（間1.0秒）
+    from: 19
+    slot: 5
+    credit: 'Photo: Rinat Askarov / Pexels'
+  - type: image
+    cut_reason: 【一つの時代ではない】発掘の作業台に替え、EEA が特定の時代ではないという話へ
+    from: 21
+    slot: 6
+    credit: 'Photo: Yena Kwon / Pexels'
+  - type: image
+    cut_reason: 【農耕以降】麦畑に替え、農耕が始まってから選択が速まっているという報告を出す
+    from: 24
+    slot: 7
+    credit: 'Hawks et al. (2007) PNAS 104(52)／Photo: Pixabay'
+    telop: 進化は止まっていない／農耕以降に選択が加速
+  - type: image
+    cut_reason: 【社会で動く】街を歩く男女に替え、平等な国ほど差が小さいという話へ
+    from: 27
+    slot: 8
+    credit: 'Zentner & Mitura (2012) Psychol Sci 23(10)／Photo: Pixabay'
+  - type: image
+    cut_reason: 【問い返し】街を歩く別カットに替え、どこが変わったのかという問いを受ける
+    from: 30
+    slot: 9
+    credit: 'Photo: Leticia Curvelo / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】夜のスマホの手元に替え、会う仕組みだけが新しいという決め文と間2.5秒を持たせる
+    from: 31
+    slot: 10
+    credit: 'Photo: Mikhail Nilov / Pexels'
+  - type: image
+    cut_reason: 【次章への問い】組んだ手に替え、時間がかかるものはいつ効くのかという問いで閉じる
+    from: 34
+    slot: 11
+    credit: 'Photo: RDNE Stock project / Pexels'
+  readings:
+  - surface: 親の投資
+    reading: オヤノトウシ
+  - surface: 選択圧
+    reading: センタクアツ
+  - surface: 一目置かれている
+    reading: イチモクオカレテイル
+- id: 7
+  title: なぜ、まともさは最初に見えないのか（続いてから）
+  chapter_title: なぜ、まともさは最初に見えないのか
+  narration:
+  - text: やっと、ずんだもんの良さが分かる段階の話になるわ。付き合いが始まってから、ね。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 協調性と誠実性の高い人は、関係の満足度も高い。それを、19の調査、合わせて3,848人分をまとめて確かめた分析があるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 2010年、オーストラリアのニューイングランド大学の准教授、ジョン・マラフたちの仕事よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 協調性と誠実性！ それ、僕が持ってるやつなのだ！
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 0.45
+  - text: そうね。だから、まともさが弱いわけではないのよ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: ただし、この研究が見ているのは、関係が始まったあとの満足度なの。誰が最初に選ばれるかは、測っていないわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: ここからは、研究そのものではなく、私の推論として聞いてちょうだい。約束を守る人かどうか、4分で見きわめられるかしら。困ったときに逃げない人かどうかは、どうかしら。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 分からないのだ…。何回か会って、何かあって、やっと分かるやつなのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: 日本の実際のデータでも、同じ形が出ているのよ。男性825人、女性757人。大手の結婚相談サービスに入会した人たちを、およそ1年4か月追いかけた研究が、2018年に出ているの。秋田大学と明星大学などの研究チームよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: お見合いを申し込まれた数で見ると、学歴が高い、収入が高い、背が高い、細身。どれも人気と結びついていたわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: それ、僕にないものばかりな気がするのだ…。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: まだ半分よ。実際に結婚まで行ったかどうかで見ると、学歴も身長も体型も、結婚する確率とは結びついていなかったの。例外は収入だけ。
+    speaker: めたん
+    expression: smile
+    pause_after: 2.0
+  - text: 人気なのに、結婚できてないのだ！？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: この研究が言えるのは、申し込まれる段階と、結ばれる段階で、効くものが違っていた、というところまでよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そこに、さっきの推論を重ねると、こうなるわ。まともさが弱いんじゃないのよ。効き始めるのが、遅いの。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.5
+  - text: 遅いなら、その時間は、どこで手に入れるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: board
+    cut_reason: 【道しるべ】章頭に板を出す（③続いてから ← いまここ）
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール
+
+      ②会ったあと＝初対面〜数回
+
+      ③続いてから＝関係が始まった後 ← いまここ'
+  - type: image
+    cut_reason: 【続いてからの段階】笑い合う二人で、関係が始まったあとの満足度の話に入る
+    from: 3
+    slot: 1
+    credit: 'Photo: Tim Douglas / Pexels'
+    telop: 協調性・誠実性と満足度の相関 0.25〜0.29
+  - type: image
+    cut_reason: 【研究の帰属】和やかな別カットに替え、19調査をまとめた分析だと示す
+    from: 5
+    slot: 2
+    credit: 'Malouff et al. (2010) J Res Pers 44(1)／Photo: Alexandr / Pexels'
+    telop: 19の調査・3,848人をまとめた分析
+  - type: image
+    cut_reason: 【測っていないこと】待ち合わせで時計を見る人に替え、この研究の範囲の限定と間1.5秒を持たせる
+    from: 8
+    slot: 3
+    credit: 'Photo: Pixabay'
+  - type: image
+    cut_reason: 【推論の宣言】時計の別カットに替え、ここからは推論だと断る（約束を守る人かは4分では分からない）
+    from: 12
+    slot: 4
+    credit: 'Photo: Arina Krasnikova / Pexels'
+  - type: image
+    cut_reason: 【時間がかかるもの】組んだ手に替え、何回か会ってやっと分かるという受けへ
+    from: 15
+    slot: 5
+    credit: 'Photo: The masked Guy / Pexels'
+  - type: image
+    cut_reason: 【日本のデータ】面談用の小さなテーブルと椅子に替え、追跡研究の規模を出す
+    from: 17
+    slot: 6
+    credit: 'Photo: Pixabay'
+    telop: 男性825人・女性757人を約1年4か月追跡
+  - type: image
+    cut_reason: 【研究の帰属】面談室の別カットに替え、実施した研究チームを示す
+    from: 19
+    slot: 7
+    credit: '鈴木翔・須藤康介・寺田悠希・小黒恵 (2018)『理論と方法』33(2)／Photo: Pixabay'
+  - type: diagram
+    cut_reason: 【二つのものさし】同じ825人を申し込まれた数と結婚まで行ったかの二つで測ると、効く条件が食い違うことを見せる
+    from: 21
+    diagram:
+      type: sketch
+      rows:
+      - - id: men
+          at: 21
+          icon: groups
+          text: 同じ825人の男性
+        - id: offers
+          at: 21
+          icon: forum
+          text: 申し込まれた数
+        - id: offers_res
+          at: 21
+          text: 学歴・収入・身長・体型
+          after: 背が高い
+      - - null
+        - id: married
+          at: 25
+          icon: favorite
+          text: 結婚まで行ったか
+          after: 実際に結婚まで行ったかどうかで見ると
+        - id: married_res
+          at: 25
+          text: 収入以外は効かない
+          after: 学歴も身長も体型も
+      arrows:
+      - from: men
+        to: offers
+      - from: men
+        to: married
+      - from: offers
+        to: offers_res
+      - from: married
+        to: married_res
+      highlight:
+        ids:
+        - married_res
+        at: 26
+  - type: image
+    cut_reason: 【言えるところまで】面談室の別カットに替え、研究が言える範囲を区切る
+    from: 28
+    slot: 8
+    credit: 'Photo: Pixabay'
+  - type: image
+    cut_reason: 【決め文の保持】時計に戻し、効き始めるのが遅いという決め文と間2.5秒を持たせる
+    from: 29
+    slot: 9
+    credit: 'Photo: Arina Krasnikova / Pexels'
+  - type: image
+    cut_reason: 【次章への問い】組んだ手に替え、その時間はどこで手に入れるのかという問いで閉じる
+    from: 32
+    slot: 10
+    credit: 'Photo: The masked Guy / Pexels'
+- id: 8
+  title: その「時間」は、誰が用意していたのか（会う前・歴史）
+  chapter_title: その『時間』は、誰が用意していたのか
+  narration:
+  - text: 実はその時間、昔は自分で用意しなくてよかったのよ。少しさかのぼるわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 明治より前の村では、若い人どうしが自分で相手を選ぶ形も、ふつうにあったの。それが明治になって、結婚は家が決めるものになったわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 明治の民法には、家族が結婚するには戸主の同意がいる、と書いてあるのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 本人の気持ちだけじゃ、結婚できなかったのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: ええ。その代わりに、仲人が間に立った。この人はちゃんとした人ですよ、と保証して、何度か会う段取りまで整える役ね。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 慶應義塾大学の准教授、阪井裕一郎さんの研究によればね。見合い結婚は古い伝統ではなく、明治以降に広まった近代の制度なのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 昔ながらだと思ってたのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 1947年、憲法に「婚姻は両性の合意のみに基いて成立する」と書かれたわ。結婚は制度として初めて、本人が選ぶものになったの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: それでも仲人の慣行はしばらく残ったわ。首都圏の結婚式で仲人を立てた割合は、1994年で63.9パーセント。それが2001年には7.3パーセント。たった7年で、ほぼ消えたの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 7年で、63パーセントから7パーセント！？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: 出会い方も同じ向きに動いたわ。1930年代に結婚した夫婦では見合い結婚が69.0パーセント。2019年から2021年では9.9パーセント。かわりにネットで出会った夫婦が15.2パーセントで、見合いを追い抜いたの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 見合いと仲人には、二つのものが先に付いていたのよ。周りの人の保証と、何度も会う時間。まともさが効き始めるまでの時間を、他人が用意してくれていたの。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: だから「モテる」なんて言葉、昔はあまり要らなかったのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 鋭いわね。2008年に「婚活」という言葉を提唱したのは、中央大学の教授、山田昌弘さんたちよ。結婚が自動的にやって来る時代は終わった、という趣旨ね。「モテる」が切実な言葉になったのは、自分で見せる市場ができてからよ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 昔がよかった、という話ではないわよ。家が決める時代は、本人の気持ちより家柄だったのだから。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 僕はずっと、その市場の、会う前の段階で止まってたのだ。じゃあ結局、僕は何に負けてるのだ？
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: board
+    cut_reason: 【道しるべ】章頭に板を出す（①会う前 ← いまここ。出会い方そのものの話へ戻る）
+    from: 1
+    telop: '三つの段階
+
+      ①会う前＝写真とプロフィール ← いまここ
+
+      ②会ったあと＝初対面〜数回
+
+      ③続いてから＝関係が始まった後'
+  - type: image
+    cut_reason: 【家が決める結婚】古い和装の記念写真で、明治の民法の話に入る
+    from: 3
+    slot: 1
+    credit: '明治民法 第750条／阪井裕一郎『仲人の近代』青弓社 2021／Illustration: AI generated'
+    telop: 明治民法「戸主ノ同意」
+  - type: image
+    cut_reason: 【仲人が間に立った】結婚式場に替え、保証と段取りを担った役の説明へ
+    from: 6
+    slot: 2
+    credit: 'Photo: Steven Van Elk / Pexels'
+  - type: image
+    cut_reason: 【近代の制度】式場の別カットに替え、見合い結婚が近代の制度だという研究を示す
+    from: 10
+    slot: 3
+    credit: '阪井裕一郎『仲人の近代』青弓社 2021（慶應義塾大学 准教授）／Photo: Kimy Moto / Pexels'
+  - type: image
+    cut_reason: 【本人が選ぶものへ】記念写真に戻し、憲法24条で結婚が本人のものになったことを出す
+    from: 13
+    slot: 4
+    credit: '日本国憲法 第24条／Illustration: AI generated'
+    telop: 憲法24条「両性の合意のみ」（1947年）
+  - type: image
+    cut_reason: 【7年でほぼ消えた】式場に替え、仲人を立てた割合の急落を数字で出す
+    from: 15
+    slot: 5
+    credit: '小関孝子 (2019) 社会デザイン学会学会誌 11（ゼクシィ結婚トレンド調査 2004）／Photo: Steven Van Elk / Pexels'
+    telop: 仲人を立てた割合 1994年63.9%→2001年7.3%
+  - type: image
+    cut_reason: 【驚きの受け】式場の別カットに替え、ずんだもんの驚きで一拍置く
+    from: 19
+    slot: 6
+    credit: 'Photo: Kimy Moto / Pexels'
+  - type: image
+    cut_reason: 【見合いの減少】記念写真に戻し、69.0%から9.9%への落差を出す
+    from: 20
+    slot: 7
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Illustration: AI generated'
+    telop: 見合い結婚 69.0% → 9.9%
+  - type: image
+    cut_reason: 【ネットの増加】夜のスマホの手元に替え、ネットが見合いを追い抜いたことを出す
+    from: 23
+    slot: 8
+    credit: 'Photo: Jaroslav Maléř / Pexels'
+    telop: ネットで出会う 15.2%
+  - type: diagram
+    cut_reason: 【誰が用意していたか】周りの人の保証と、何度も会う時間の二つが、昔は先に付いていたことを収束で見せる。決め文で保持
+    from: 24
+    diagram:
+      type: narrative
+      layout: converge
+      items:
+      - id: vouch
+        text: 周りの人の保証
+        at: 25
+        after: 周りの人の保証
+      - id: time
+        text: 何度も会う時間
+        at: 25
+        after: 何度も会う
+      result:
+        text: 昔は先に付いていた
+        at: 26
+        after: 他人が用意して
+  - type: image
+    cut_reason: 【婚活という言葉】大学の校舎に替え、2008年に婚活を提唱した研究者を示す
+    from: 28
+    slot: 9
+    credit: '山田昌弘・白河桃子『「婚活」時代』ディスカヴァー 2008（山田＝中央大学 教授）／Photo: Shivam / Pexels'
+  - type: image
+    cut_reason: 【自分で見せる市場】夜のスマホの手元に替え、モテが切実になった理由へ
+    from: 31
+    slot: 10
+    credit: 'Photo: Phil Desforges / Pexels'
+  - type: image
+    cut_reason: 【留保】式場に替え、昔がよかったという話ではないという断りを置く
+    from: 32
+    slot: 11
+    credit: 'Photo: Kimy Moto / Pexels'
+  - type: image
+    cut_reason: 【章末の問い】カフェの窓際に替え、結局何に負けているのかという問いで閉じる
+    from: 34
+    slot: 12
+    credit: 'Photo: Sare / Pexels'
+  readings:
+  - surface: 戸主
+    reading: コシュ
+  - surface: 仲人
+    reading: ナコウド
+  - surface: 基いて
+    reading: モトヅイテ
+  - surface: 阪井裕一郎
+    reading: サカイユウイチロウ
+  - surface: 山田昌弘
+    reading: ヤマダマサヒロ
+- id: 9
+  title: 結び（真のモテ要素とは何か）
+  chapter_title: null
+  narration:
+  - text: 整理するわね。冒頭の一行に戻るわ。モテる要素は、段階ごとに違う。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 会う前。写真と文字では、感じの良さは少し伝わっても、誠実さや責任感までは確認できない。「まじめです」と書いても、それだけでは伝わらないの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 僕が半年やってたのは、そこなのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: 会ったあと。効くのは、見た目、人当たりの良さ、そして前に出る力。威張る方ではなく、尊敬される方ね。人当たりの良さは、稼ぐ力より強く効いていたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 続いてから。協調性も誠実性も、ちゃんと効く。ただし、関係が始まったあとで。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 「まとも」は、三つ目の段階の力なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。まともさが弱いんじゃない。効き始めるのが遅いの。そして、その時間を用意してくれていた仕組みが、この数十年で薄くなったわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: まともさが弱いから、ではないのよ。まともさが伝わる前に判断が終わる場面が、増えたの。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.5
+  - text: 伝わる前に、終わってるのだ…。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: だから、うまくいっていないことを、自分の人格のせいにしなくていいのよ。ただし、これをやれば必ずうまくいく、という話でもないわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: まともさは、持っているだけでは伝わらないの。伝わる場所まで、行かないといけないのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.5
+  - text: 僕、プロフィールだけを書き直し続けるのは、もうやめるのだ。
+    speaker: ずんだもん
+    expression: smug
+    pause_after: 0.45
+  - text: あら。どうするの。
+    speaker: めたん
+    expression: surprised
+    pause_after: 0.45
+  - text: 書き直すより、同じ人と何回か会える場所を探すのだ。そっちの方が、僕の誠実さを知ってもらえる気がするのだ。
+    speaker: ずんだもん
+    expression: smile
+    pause_after: 0.45
+  - text: それは研究で確かめられた方法ではないけれど、筋は通っているわね。
+    speaker: めたん
+    expression: smile
+    pause_after: 2.5
+  beats:
+  - type: image
+    cut_reason: 【結びの整理】朝の通りの絵で、冒頭の一行に戻る
+    from: 1
+    slot: 1
+    credit: 'Photo: Airam Dato-on / Pexels'
+  - type: board
+    cut_reason: 【段階ごとの答え①】会う前は誠実さまで確認できない、を黒板に書く
+    from: 4
+    telop: '段階ごとの答え
+
+      ①会う前＝誠実さまでは確認できない'
+  - type: board
+    cut_reason: 【段階ごとの答え②】会ったあとに効く三つを書き足す
+    from: 8
+    telop: '段階ごとの答え
+
+      ①会う前＝誠実さまでは確認できない
+
+      ②会ったあと＝見た目・人当たり・前に出る力'
+  - type: board
+    cut_reason: 【段階ごとの答え③】続いてから効くものを書き足し、三段そろえる
+    from: 12
+    telop: '段階ごとの答え
+
+      ①会う前＝誠実さまでは確認できない
+
+      ②会ったあと＝見た目・人当たり・前に出る力
+
+      ③続いてから＝協調性・誠実性・感情の安定'
+  - type: image
+    cut_reason: 【薄くなった仕組み】結婚式場に替え、時間を用意してくれていた仕組みが薄くなった話へ
+    from: 16
+    slot: 2
+    credit: 'Photo: Steven Van Elk / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】人が集まって声を合わせる場面に替え、判断が終わる場面が増えたという決め文と間2.5秒を持たせる
+    from: 20
+    slot: 3
+    credit: 'Photo: Thirdman / Pexels'
+  - type: image
+    cut_reason: 【人格のせいにしない】人が輪になって同じ作業をする場面に替え、断りを添える
+    from: 23
+    slot: 4
+    credit: 'Photo: cottonbro studio / Pexels'
+  - type: image
+    cut_reason: 【決め文の保持】声を合わせる場面に戻し、伝わる場所まで行くという決め文と間2.5秒を持たせる
+    from: 25
+    slot: 5
+    credit: 'Photo: Thirdman / Pexels'
+  - type: image
+    cut_reason: 【方針の転換】輪になる場面に替え、書き直すのをやめると言うところまで
+    from: 27
+    slot: 6
+    credit: 'Photo: cottonbro studio / Pexels'
+  - type: image
+    cut_reason: 【象徴的な最後の一枚】手仕事を教え合う場面で終え、アウトロへつなぐ
+    from: 30
+    slot: 7
+    credit: 'Photo: Nataliya Vaitkevich / Pexels'
+  readings:
+  - surface: 通っている
+    reading: トオッテイル

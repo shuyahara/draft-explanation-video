@@ -1,11 +1,15 @@
-"""採用した貼り写真を render-assets-matome/scene_NN_beat{slot}.* として配置する。
+"""採用した貼り写真を render-assets-matome/scene_NN_beat{slot}.* として配置する（v4・9シーン）。
 
   .venv\\Scripts\\python.exe scripts/20260911-matome-dansei-kamishibai/stage_assets.py
 
 apply_beats.py の BEATS と SOURCE_FILE を読み、image ビートの (シーン, スロット) に対応する
 候補ファイルをコピーする。候補は Git 管理外（assets-kamishibai）なので、このスクリプトが
 「どの候補を採用したか」の記録も兼ねる。採用元は candidates-matome の
-manifest-s01-s07.md / manifest-s08-s14.md の**推奨**。
+manifest-s01-s07.md / manifest-s08-s14.md（v4 で追加した S6・S8 の新規分は後者の末尾
+「v4 追加分」）。
+
+配置前に `scene_*_beat*.*` をいったん全部消すので、v3（14シーン）の scene_10〜scene_14 など
+古い残骸は残らない。
 """
 from __future__ import annotations
 
