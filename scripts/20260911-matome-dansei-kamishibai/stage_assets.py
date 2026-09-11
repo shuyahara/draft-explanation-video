@@ -22,6 +22,10 @@ DST = Path(r"C:\Users\shuya\Projects\assets-kamishibai\render-assets-matome")
 
 def main() -> None:
     DST.mkdir(parents=True, exist_ok=True)
+    # 割り当てを変えるとスロット数や拡張子が変わるので、毎回いったん空にしてから配置する
+    # （古い scene_NN_beatM.png が残ると、同じスロットの .jpg と二重になる）。
+    for old in DST.glob("scene_*_beat*.*"):
+        old.unlink()
     n = 0
     missing: list[str] = []
     used: dict[str, list[str]] = {}

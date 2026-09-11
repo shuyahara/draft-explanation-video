@@ -84,12 +84,12 @@ scenes:
     cut_reason: 【半年の書き直し】夜の部屋でスマホを見る手元から始める
     from: 1
     slot: 1
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
   - type: image
     cut_reason: 【数字】同じ手元のまま、マッチ3件の数字を台詞と同時にテロップで出す
     from: 4
     slot: 2
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: 半年でマッチ3件
   - type: image
     cut_reason: 【会ったあとで止まった1件】二人分のカップに替え、会えた1人の話へ
@@ -101,7 +101,7 @@ scenes:
     cut_reason: 【プロフィールへ戻る】書いた内容の話に戻るので手元カットへ
     from: 11
     slot: 4
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Phil Desforges / Pexels'
   - type: image
     cut_reason: 【掲示板の書き込み】「まともな男ほどモテない」を見た画面（文字は描かない）
     from: 13
@@ -111,17 +111,17 @@ scenes:
     cut_reason: 【問いの言語化】本人の状況に戻し、この動画が答える問いを立てる
     from: 18
     slot: 6
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Phil Desforges / Pexels'
   - type: image
     cut_reason: 【答えの形の予告】カフェのカットで「嫌われてはいない／選ばれにくい」を予告
     from: 20
     slot: 7
-    credit: 'Photo: İbrahim KARASU / Pexels'
+    credit: 'Photo: Şeydanur Yıldız / Pexels'
   - type: image
     cut_reason: 【間】手元に戻り、ずんだもんが違いを飲み込めないところまで尺を分ける
     from: 23
     slot: 8
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
 - id: 2
   title: 「まとも」の中身を、ほどく
   chapter_title: null
@@ -259,18 +259,18 @@ scenes:
     cut_reason: 【43.3%】独身でいる理由の1位を出す
     from: 26
     slot: 5
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Airam Dato-on / Pexels'
     telop: 「適当な相手にめぐり会わない」43.3%
   - type: image
     cut_reason: 【言い換え】自分に合う相手と出会っていない、という言い換えまで尺を分ける
     from: 28
     slot: 6
-    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Airam Dato-on / Pexels'
   - type: image
     cut_reason: 【留保と段階分けの前置き】この調査が測っていないことと、段階を分ける宣言へ
     from: 32
     slot: 7
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Airam Dato-on / Pexels'
   - type: board
     cut_reason: 【全編の骨格】三つの段階を黒板に書き、以後のシーンで参照できるようにする
     from: 36
@@ -285,7 +285,7 @@ scenes:
     cut_reason: 【次章への問い】通勤の絵に戻し、優しさが嫌われているのかという問いで閉じる
     from: 40
     slot: 8
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Airam Dato-on / Pexels'
   readings:
   - surface: 18歳
     reading: ジュウハッサイ
@@ -403,21 +403,21 @@ scenes:
       - from: ask
         to: chosen
   - type: image
-    cut_reason: 【再現性】校舎の絵に戻り、二度の実験と人数を出す
+    cut_reason: 【再現性】別の校舎の絵に替え、二度の実験と人数を出す
     from: 14
     slot: 2
-    credit: 'Photo: Pixabay'
+    credit: 'Photo: Shivam / Pexels'
     telop: 二度の実験 N=48／N=194（2003年）
   - type: image
-    cut_reason: 【交絡への疑問】笑い合う二人の写真に替え、優しさだけの力かという疑問を受ける
+    cut_reason: 【交絡への疑問】向かい合って話す二人の写真に替え、優しさだけの力かという疑問を受ける
     from: 17
     slot: 3
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【決め文の保持】同じ絵のまま、負けていたのは意地悪な態度だという決め文と間2.0秒を持たせる
     from: 20
     slot: 4
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【俗説そのものへ】校舎に戻り、俗説を扱った別の研究へ移る
     from: 23
@@ -427,18 +427,18 @@ scenes:
     cut_reason: 【1999年の研究】ゲルフ大学の設問を紹介する
     from: 25
     slot: 6
-    credit: 'Herold & Milhausen (1999) J Sex Marital Ther 25(4)／Photo: Pixabay'
+    credit: 'Herold & Milhausen (1999) J Sex Marital Ther 25(4)／Photo: Shivam / Pexels'
   - type: image
-    cut_reason: 【数字の受け】笑い合う二人に替え、54%対18%の驚きを受ける
+    cut_reason: 【数字の受け】向かい合って話す二人に戻り、54%対18%の驚きを受ける
     from: 29
     slot: 7
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
     telop: 優しい方 54%・魅力的な方 18%（1999年）
   - type: image
     cut_reason: 【限定】同じ絵のまま、この数字を優しさの力とは読めない旨と章末の問いへ
     from: 31
     slot: 8
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: 奥手
     reading: オクテ
@@ -528,15 +528,15 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【会う前の段階】通勤の絵で、まず会う前の話だと示す
+    cut_reason: '【会う前の段階】夜のスマホの手元で、会う前は写真とプロフィールしか見えないことを示す（映像レビュー①: 通勤写真では会う前の段階に見えない）'
     from: 1
     slot: 1
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
   - type: image
     cut_reason: 【人柄88.2%】重視すると答えた割合を出す
     from: 4
     slot: 2
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: 人柄を重視 88.2%／容姿 18.8%（女性・2021年）
   - type: image
     cut_reason: 【実験へ】向かい合う二人の席に替え、スピードデートの実験に入る
@@ -550,18 +550,18 @@ scenes:
     credit: 'Photo: Mike Jones / Pexels'
     telop: 163人／一人4分ずつ 9〜13人と
   - type: image
-    cut_reason: 【当たらなかった】ずんだもんの驚きから、確かさの説明へ
+    cut_reason: 【当たらなかった】スピードデートの会場に替え、ずんだもんの驚きから確かさの説明へ
     from: 17
     slot: 5
-    credit: 'Photo: Mike Jones / Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【メタ分析】97本をまとめた分析でも同じだったことを出す
     from: 22
     slot: 6
-    credit: 'Eastwick et al. (2014) Psychol Bull 140(3)／Photo: Mike Jones / Pexels'
+    credit: 'Eastwick et al. (2014) Psychol Bull 140(3)／Photo: Pixabay'
     telop: 97本の研究をまとめた分析（2014年）
   - type: image
-    cut_reason: 【問い返し】同じ絵のまま、答えた理想は嘘なのかという問いを受ける（図解の保持を短くするための前振り）
+    cut_reason: 【問い返し】向かい合う二人に戻り、答えた理想は嘘なのかという問いを受ける（図解の保持を短くするための前振り）
     from: 27
     slot: 7
     credit: 'Photo: Mike Jones / Pexels'
@@ -651,15 +651,15 @@ scenes:
     pause_after: 1.2
   beats:
   - type: image
-    cut_reason: 【同じ実験の続き】向かい合う席の絵で、4分の会話で何が効いたかに入る
+    cut_reason: 【同じ実験の続き】スピードデートの会場の絵のまま、4分の会話で何が効いたかに入る
     from: 1
     slot: 1
-    credit: 'Photo: Mike Jones / Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【順位への落胆】同じ絵のまま、いちばん上は変わらないという受けから数字の開きの話へ尺を分ける
     from: 5
     slot: 2
-    credit: 'Photo: Mike Jones / Pexels'
+    credit: 'Photo: Pixabay'
   - type: diagram
     cut_reason: 【相関の大きさ】数字の開きそのものが主張なので棒グラフにする。人当たりの棒が稼ぐ力より明らかに長いことを見せる
     from: 9
@@ -771,35 +771,35 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【いちばん大事なところ】通勤の絵で章に入り、二本のものさしの説明へ渡す
+    cut_reason: 【いちばん大事なところ】くつろいで話す人の絵で章に入り、二本のものさしの説明へ渡す
     from: 1
     slot: 1
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Kindel Media / Pexels'
   - type: image
-    cut_reason: 【人に良くする力】笑い合う二人で、一本目のものさし（優しさ・誠実さ・思いやり）を直接描く
+    cut_reason: 【人に良くする力】同じ絵のまま、一本目のものさし（優しさ・誠実さ・思いやり）の説明へ尺を分ける
     from: 3
     slot: 2
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Kindel Media / Pexels'
   - type: image
     cut_reason: 【自分から前に出る力】ゆったり座って話す人に替え、二本目のものさし（姿勢や発言で見せる）を直接描く
     from: 6
     slot: 3
     credit: 'Photo: Arina Krasnikova / Pexels'
   - type: image
-    cut_reason: 【反対ではない】通勤の絵に戻し、二つが別々のものさしである話を続ける
+    cut_reason: 【反対ではない】同じ絵に戻し、二つが別々のものさしである話を続ける
     from: 9
     slot: 4
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: Kindel Media / Pexels'
   - type: image
-    cut_reason: 【誤解を断つ】笑い合う二人に替え、優しさを減らしても自信は上がらない話へ
+    cut_reason: 【誤解を断つ】身振りを交えて話す人に替え、優しさを減らしても自信は上がらない話へ
     from: 15
     slot: 5
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: PNW Production / Pexels'
   - type: image
     cut_reason: 【範囲の限定】同じ絵のまま、二本で全部が説明できるわけではない旨まで尺を分ける
     from: 17
     slot: 6
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: PNW Production / Pexels'
   - type: diagram
     cut_reason: 【四つはどちらの列か】二本のものさしを列見出しにして、S2の四つが全部左の列に入り、右の列が空のままであることを見せる。決め文「一つも入っていないわ」で保持（S7 の sketch と隣接するが、こちらは2列×3行の対比、S7 は3行4列の数値表で格子の形が違う）
     from: 19
@@ -836,15 +836,15 @@ scenes:
         at: 21
         after: 四つとも、問題を起こさないか
   - type: image
-    cut_reason: 【間】通勤の絵に戻し、伝わらないという受けまで尺を分ける
+    cut_reason: 【間】縮こまった姿勢の別カットに替え、まともさだけでは伝わらないという受けまで尺を分ける
     from: 25
     slot: 7
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【姿勢の研究へ】バークレー校の研究の紹介に入る
     from: 26
     slot: 8
-    credit: 'Vacharkulksemsuk et al. (2016) PNAS 113(15)／Photo: Ahmad Shakir Shamsulbadri / Pexels'
+    credit: 'Vacharkulksemsuk et al. (2016) PNAS 113(15)／Photo: PNW Production / Pexels'
   - type: image
     cut_reason: 【開いた姿勢】体を開いた姿勢の写真に戻り、1.76倍の結果を出す
     from: 29
@@ -968,16 +968,16 @@ scenes:
     credit: 'Photo: Matheus Bertelli / Pexels'
     telop: 二つの結びつき 0.01（別の力）
   - type: image
-    cut_reason: 【好感度】好かれているのは尊敬される方だという決め文と間2.0秒を持たせる
+    cut_reason: 【好感度】聞き入る人たちの別カットに替え、好かれているのは尊敬される方だという決め文と間2.0秒を持たせる
     from: 16
     slot: 5
-    credit: 'Photo: Matheus Bertelli / Pexels'
+    credit: 'Photo: Pavel Danilyuk / Pexels'
     telop: 尊敬される力 +0.73・威圧する力 マイナス0.06
   - type: image
-    cut_reason: 【怖い人がモテる】腕を組む人に戻し、短期を求める人を調べた研究へ渡す（図解の保持を短くするための前振り）
+    cut_reason: 【怖い人がモテる】腕を組む人の別カットに替え、短期を求める人を調べた研究へ渡す（図解の保持を短くするための前振り）
     from: 21
     slot: 6
-    credit: 'Witkower & Rule (2025) SPPS 17(5), Study 1／Photo: Vlada Karpovich / Pexels'
+    credit: 'Witkower & Rule (2025) SPPS 17(5), Study 1／Photo: Kindel Media / Pexels'
   - type: diagram
     cut_reason: 【符号の反転】二つのやり方×三つの相手で数値表を作り、威圧する力だけが長い関係で符号を反転させることを見せる
     from: 25
@@ -1032,15 +1032,15 @@ scenes:
         text: 仲間評定。マイナス0.06は有意差なし
         at: 25
   - type: image
-    cut_reason: 【言い分けの確認】聞いている場面に戻し、モテの種類を分けた受けを見せる
+    cut_reason: 【言い分けの確認】聞いている場面の別カットに替え、モテの種類を分けた受けを見せる
     from: 36
     slot: 7
-    credit: 'Photo: Matheus Bertelli / Pexels'
+    credit: 'Photo: Pexels'
   - type: image
     cut_reason: 【範囲の限定】同じ絵のまま、男らしさを二分した研究ではない旨と、次章への嫌な予感へ
     from: 38
     slot: 8
-    credit: 'Photo: Matheus Bertelli / Pexels'
+    credit: 'Photo: Pexels'
   readings:
   - surface: やり方
     reading: ヤリカタ
@@ -1116,7 +1116,7 @@ scenes:
     slot: 2
     credit: 'Photo: Sare / Pexels'
   - type: image
-    cut_reason: 【自分からは切り出したか】めたんの問いまで尺を分ける
+    cut_reason: 【自分からは切り出したか】窓際の別カットに替え、めたんの問いまで尺を分ける
     from: 9
     slot: 3
     credit: 'Photo: Sare / Pexels'
@@ -1131,20 +1131,20 @@ scenes:
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【材料がない】同じ絵のまま、1回で伝わるのはそこまでという受けへ
+    cut_reason: 【材料がない】組んだ手の別カットに替え、1回で伝わるのはそこまでという受けへ
     from: 18
     slot: 6
-    credit: 'Photo: RDNE Stock project / Pexels'
+    credit: 'Photo: The masked Guy / Pexels'
   - type: image
-    cut_reason: 【本人の言語化】カフェの絵に戻し、伝わったこと・伝わらなかったことの整理へ
+    cut_reason: 【本人の言語化】カフェの別カットに替え、伝わったこと・伝わらなかったことの整理へ
     from: 21
     slot: 7
-    credit: 'Photo: Sare / Pexels'
+    credit: 'Photo: dilay (:) / Pexels'
   - type: image
     cut_reason: 【次章への問い】同じ絵のまま、モテと結婚の関係を問う章末へ
     from: 24
     slot: 8
-    credit: 'Photo: Sare / Pexels'
+    credit: 'Photo: dilay (:) / Pexels'
   readings:
   - surface: どんな人か
     reading: ドンナヒトカ
@@ -1266,7 +1266,7 @@ scenes:
         - married_res
         at: 17
   - type: image
-    cut_reason: 【食い違いの受け】面談室の絵に戻り、一致していなかったという言い直しへ
+    cut_reason: 【食い違いの受け】面談室の別カットに替え、一致していなかったという言い直しへ
     from: 18
     slot: 3
     credit: 'Photo: Pixabay'
@@ -1276,7 +1276,7 @@ scenes:
     slot: 4
     credit: '鈴木翔・須藤康介・寺田悠希・小黒恵 (2018)『理論と方法』33(2)／Photo: Pixabay'
   - type: image
-    cut_reason: 【決め文の保持】モテることと結ばれることは別のものさしだという決め文と間2.0秒を持たせる
+    cut_reason: 【決め文の保持】面談室の別カットに替え、モテることと結ばれることは別のものさしだという決め文と間2.0秒を持たせる
     from: 23
     slot: 5
     credit: 'Photo: Pixabay'
@@ -1357,36 +1357,36 @@ scenes:
     cut_reason: 【続いてからの段階】笑い合う二人の絵で、関係が始まったあとの話に入る
     from: 1
     slot: 1
-    credit: 'Malouff, Schutte, Bhullar et al. (2010) J Res Pers 44(1)／Photo: Tim Douglas / Pexels'
+    credit: 'Malouff, Schutte, Bhullar et al. (2010) J Res Pers 44(1)／Photo: Alexandr / Pexels'
     telop: 19の調査・3,848人をまとめた分析
   - type: image
     cut_reason: 【研究の帰属】ニューイングランド大学の准教授の仕事だと示す
     from: 5
     slot: 2
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Alexandr / Pexels'
     telop: 協調性・誠実性・感情の安定と満足度 0.25〜0.29
   - type: image
     cut_reason: 【三つの性質】同じ絵のまま、満足度と結びついていた三つと数字を出す
     from: 7
     slot: 3
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Alexandr / Pexels'
   - type: image
     cut_reason: 【自分の持ち物】同じ絵のまま、ずんだもんが持っている性質だという受けへ
     from: 11
     slot: 4
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Alexandr / Pexels'
   - type: image
-    cut_reason: 【測っていないこと】この研究が測っていない範囲の限定と間1.5秒を持たせる
+    cut_reason: 【測っていないこと】待ち合わせで時計を見る人に替え、この研究が測っていない範囲の限定と間1.5秒を持たせる
     from: 16
     slot: 5
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【推論の宣言】待ち合わせで時計を見る人に替え、ここからは推論だと断る
+    cut_reason: 【推論の宣言】S8のデートで組んでいた手に戻し、ここからは推論だと断る（約束を守る人かどうかは4分では分からない、の回収）
     from: 20
     slot: 6
-    credit: 'Photo: Arina Krasnikova / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【時間がかかるもの】同じ絵のまま、何回か会ってやっと分かるという受けへ
+    cut_reason: 【時間がかかるもの】待ち合わせで時計を見る人に替え、何回か会ってやっと分かるという受けへ
     from: 24
     slot: 7
     credit: 'Photo: Arina Krasnikova / Pexels'
@@ -1519,10 +1519,10 @@ scenes:
     credit: 'Photo: Anna Shvets / Pexels'
     telop: 職場で出会う 28.2% → 21.4%
   - type: image
-    cut_reason: 【ネットの増加】同じ絵のまま、ネットでの出会いが見合いを追い抜いたことを出す
+    cut_reason: '【ネットの増加】夜のスマホの手元に替え、ネットでの出会いが見合いを追い抜いたことを出す（映像レビュー②: 職場の写真のままだと職場の出会いに見える）'
     from: 13
     slot: 4
-    credit: 'Photo: Anna Shvets / Pexels'
+    credit: 'Photo: Jaroslav Maléř / Pexels'
     telop: ネットで出会う 15.2%
   - type: image
     cut_reason: 【共通していた二つ】記念写真に戻し、見合いと職場に共通していた一つ目を言うところまで（図解の保持を短くするための前振り）
@@ -1547,15 +1547,10 @@ scenes:
         at: 29
         after: しかも何度も会う時間が
   - type: image
-    cut_reason: 【効果の限界】記念写真に戻り、何度会っても好意が上がらない場合の留保へ
-    from: 30
+    cut_reason: '【次章への問い】図解を留保の終わりまで保持したあと、オフィスの絵に替えて「減った分は今は誰がやっているのか」という問いへ（映像レビュー③: 留保の途中で1930年代の婚礼写真に戻さない）'
+    from: 37
     slot: 6
-    credit: 'Illustration: AI generated'
-  - type: image
-    cut_reason: 【次章への問い】オフィスの絵に替え、減った分は今は誰がやっているのかという問いへ
-    from: 35
-    slot: 7
-    credit: 'Photo: Anna Shvets / Pexels'
+    credit: 'Photo: kaboompics.com / Pexels'
 - id: 12
   title: 近づく役を、誰がやっているか
   chapter_title: null
@@ -1637,24 +1632,24 @@ scenes:
     cut_reason: 【自分でやるしかない】夜のスマホの手元に戻り、近づく役の偏りを数字で見る
     from: 1
     slot: 1
-    credit: 'Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)／Photo: Jaroslav Maler / Pexels'
+    credit: 'Kreager, Cavanagh, Yen & Yu (2014) J Marriage Fam 76(2)／Photo: Mikhail Nilov / Pexels'
   - type: image
     cut_reason: 【4対1】最初のメッセージの件数の偏りを出す
     from: 5
     slot: 2
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Mikhail Nilov / Pexels'
     telop: 最初のメッセージ 男性142,444件・女性34,960件
   - type: image
     cut_reason: 【返信率は逆】送っている数と返る割合が男女で逆であることを出す
     from: 9
     slot: 3
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Mikhail Nilov / Pexels'
     telop: 未返信率 男性発79%・女性発58%
   - type: image
     cut_reason: 【読みすぎない】同じ絵のまま、この数字から言えるところまでの限定へ
     from: 12
     slot: 4
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Mikhail Nilov / Pexels'
   - type: image
     cut_reason: 【席の実験へ】向かい合わせに並んだ椅子に替え、役を入れ替えた実験に入る
     from: 16
@@ -1704,15 +1699,15 @@ scenes:
         text: 入れ替えたら結果も入れ替わる
         at: 28
   - type: image
-    cut_reason: 【自分の役】手元の絵に戻り、ずっと近づく役だったという受けへ
+    cut_reason: 【自分の役】椅子の絵のまま、ずっと送る側・移動する側だったという受けへ
     from: 30
     slot: 6
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
-    cut_reason: 【限定と次への問い】同じ絵のまま、席の移動とメッセージは同じ行動ではない旨と章末の問いへ
+    cut_reason: 【限定と次への問い】手元の絵に戻し、席の移動とメッセージは同じ行動ではない旨と章末の問いへ
     from: 32
     slot: 7
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Mikhail Nilov / Pexels'
 - id: 13
   title: まともな男性は、何に負けているのか
   chapter_title: null
@@ -1797,7 +1792,7 @@ scenes:
     cut_reason: 【本人に戻る】図解を閉じ、夜のスマホの手元でずんだもんの「どうしたらいいのだ」へ渡す
     from: 24
     slot: 1
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Phil Desforges / Pexels'
   readings:
   - surface: やり方
     reading: ヤリカタ
@@ -1883,15 +1878,15 @@ scenes:
     pause_after: 2.5
   beats:
   - type: image
-    cut_reason: 【結びの前置き】笑い合う二人の絵で、必ずうまくいく話ではないという断りから入る
+    cut_reason: 【結びの前置き】声を合わせる人たちの絵で、必ずうまくいく話ではないという断りから入る
     from: 1
     slot: 1
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: image
     cut_reason: 【段階ごとに答える】同じ絵のまま、三つの段階に分けて答える宣言へ
     from: 6
     slot: 2
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: board
     cut_reason: 【会ったあとの答え】実際に人が惹かれていた三つを黒板に書く
     from: 8
@@ -1899,10 +1894,10 @@ scenes:
 
       ②会ったあと＝見た目・人当たり・尊敬'
   - type: image
-    cut_reason: 【尊敬される方】笑い合う二人に戻し、威圧する方との違いを確認する
+    cut_reason: 【尊敬される方】一人の話に聞き入る人たちの絵に替え、威圧する方との違いを確認する
     from: 11
     slot: 3
-    credit: 'Photo: Tim Douglas / Pexels'
+    credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: board
     cut_reason: 【続いてからの答え】協調性・誠実性・感情の安定を書き足す
     from: 15
@@ -1915,7 +1910,7 @@ scenes:
     cut_reason: 【会う前がいちばん薄い】夜のスマホの手元に替え、写真と文字からは読み取れない話へ
     from: 20
     slot: 4
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Phil Desforges / Pexels'
   - type: board
     cut_reason: 【会う前の答え】三段そろえて、会う前がいちばん薄いことを書き足す
     from: 25
@@ -1927,15 +1922,15 @@ scenes:
 
       ③続いてから＝協調性・誠実性・感情の安定'
   - type: image
-    cut_reason: 【決め文の保持】伝わる場所まで行かないといけない、という決め文と間2.5秒を持たせる
+    cut_reason: '【決め文の保持】人が集まって声を合わせる絵に替え、伝わる場所まで行かないといけないという決め文と間2.5秒を持たせる（映像レビュー④: 決め文を夜のスマホで受けない）'
     from: 30
     slot: 5
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: image
     cut_reason: 【方針の転換】同じ絵のまま、書き直すのをやめると言うところまで尺を分ける
     from: 33
     slot: 6
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Thirdman / Pexels'
   - type: image
     cut_reason: 【象徴的な最後の一枚】何人かで同じ作業をしている場面で終え、アウトロへつなぐ
     from: 36
