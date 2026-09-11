@@ -53,6 +53,37 @@
 - 限界: **この論文自体は恋愛的魅力・配偶者選択を直接測定した研究ではない**（初対面グループの集団課題における社会的影響力・好感度を測定）。「男らしさ＝支配性なら、それは"好かれる"要因ではなく"恐れられ従わせる"要因である」という理論的裏付けとして使えるが、モテとの関連は次項2-2・2-3の後続研究で補う必要がある。
 - **台本での使い方**: 「"余裕がある男性"が、恐怖で従わせるタイプ（dominance）なのか、能力・魅力で尊敬されるタイプ（prestige）なのかで、好かれ方が正反対になる」という区別を数字で示せる中心論文。ここで「ただ威圧的・高圧的な男らしさ」と「落ち着いて頼れる男らしさ」を区別する論拠になる。
 
+#### 追記（2026-09-11 second pass）: 図解キャプション用に Table／評定者条件を確定
+
+オーケストレーターからの追加依頼を受け、該当 PDF の Table 2・Table 3（p.111–112）を再度精読し、各数値がどの Study・どの表・どの評定者条件のものかを特定した。
+
+**1. 各数値の出典特定**
+
+- **Table 3（Study 1, N=191）**の構造は、行方向に「Likability を誰が評定したか」（in-lab peers' ratings ／ outside observers' ratings）、列方向に「Dominance・Prestige を誰が評定したか」（in-lab peer rated ／ outside observer rated）が独立に交差する2×2構成。**"73/.38" と "-.06/-.18" は、いずれも「Dominance・Prestige は in-lab peer rated（列を固定）」のまま、「Likability の評定者」だけを in-lab peers → outside observers に替えた2値**である（Dominance・Prestige 自体の評定者を替えた値ではない）。
+  - Prestige（in-lab peer rated）× Likability（in-lab peers' ratings）: **r=.73**\*\*（同一情報源同士＝ピア評定に完全に閉じた値）
+  - Prestige（in-lab peer rated）× Likability（outside observers' ratings）: **r=.38**\*\*（Prestige はピア評定、Likability は外部観察者評定というクロス評定者の値）
+  - Dominance（in-lab peer rated）× Likability（in-lab peers' ratings）: **r=−.06**（有意差なし、マーカーなし）
+  - Dominance（in-lab peer rated）× Likability（outside observers' ratings）: **r=−.18**†（p<.10、有意傾向マーカーのみ）
+  - なお表にはこの他に「Dominance/Prestige が outside observer rated」の場合の値（Prestige×in-lab Likability=.49\*\*、Prestige×outside Likability=.43\*\*、Dominance×in-lab Likability=.13†、Dominance×outside Likability=.09, ns）も存在するが、今回の "73/.38" 報告はこちらではなく上記の「Dominance/Prestige=peer rated 固定」の系列。
+- **Table 2（Study 1, N=177）**: Dominance と Prestige の相関 **r=.01**（本文中の "r=.01, p=.85" とも一致）。この値は Dominance・Prestige とも **in-lab peer rated**（ラウンドロビン・ピア評定）のみで構成される表であり、outside observer 版の Dominance-Prestige 相関はこの論文には掲載されていない。
+  - 注意: Table 2 の N=177 と Table 3 の N=191 は異なる（ラウンドロビン評定のペアワイズ欠測差によるものと推定、論文内に明示的な説明はなし＝この差の理由は未確認）。図解でNを併記する場合はこの差に注意。
+
+**2. 「ピア評定に統一」した場合の3数値（図解用）**
+
+| 関係 | r | 出典 | N |
+|---|---|---|---|
+| Prestige–Likability（ともに in-lab peer 評定） | **.73**\*\* | Table 3 | 191 |
+| Dominance–Likability（ともに in-lab peer 評定） | **−.06**（ns） | Table 3 | 191 |
+| Dominance–Prestige（ともに in-lab peer 評定） | **.01**（ns, p=.85） | Table 2 | 177 |
+
+**3. 出典表記案（画面表示用）**
+
+- Prestige–Likability, Dominance–Likability: 「Cheng et al. (2013) *JPSP* 104(1), Study 1, Table 3（in-lab peer ratings, N=191）」
+- Dominance–Prestige: 「Cheng et al. (2013) *JPSP* 104(1), Study 1, Table 2（in-lab peer ratings, N=177）」
+- 3値を1枚の図解にまとめて出典を1行で書く場合: 「Cheng et al. (2013) *JPSP* 104(1), Study 1, Tables 2–3（in-lab peer ratings, N=177–191）」
+
+**図解での注意点**: Dominance–Likability の r=−.06 は統計的に非有意（マーカーなし）。図解キャプションで「dominanceは好かれない」と断定的に書く場合は、この値が有意差なしであることを踏まえ、「無相関に近い」という表現に留めるのが正確（有意に負なのは outside observer 評定を混ぜた r=−.18† の方だが、これは今回「ピア評定統一」の対象外）。
+
 ### 2-2. Kruger & Fitzgerald (2011) [部分確認]
 
 - 著者: Daniel J. Kruger（University of Michigan）／Carey J. Fitzgerald（University of South Carolina Beaufort）。肩書き未確認。
