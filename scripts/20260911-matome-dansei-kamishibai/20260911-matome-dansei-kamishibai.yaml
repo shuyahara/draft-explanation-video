@@ -51,11 +51,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: 先に、答えの形だけ言っておくわね。優しさが嫌われている、という部分は違うわ。でも、優しいだけでは最初に選ばれにくい、という部分は当たっているの。
+  - text: 先に、答えの形だけ言っておくわね。まともさが嫌われている、という部分は違うわ。でも、まともさは最初のうちは見えない、という部分は当たっているの。
     speaker: めたん
     expression: explain
     pause_after: 1.2
-  - text: 嫌われてはいない。でも、選ばれにくい…。その違いが、僕には分からないのだ。
+  - text: 嫌われてはいない。でも、見えない…。その違いが、僕には分からないのだ。
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -93,7 +93,7 @@ scenes:
     slot: 6
     credit: 'Photo: Şeydanur Yıldız / Pexels'
   - type: image
-    cut_reason: 【答えの形の予告】二人分のカップに戻し「嫌われてはいない／選ばれにくい」を予告
+    cut_reason: 【答えの形の予告】二人分のカップに戻し「嫌われてはいない／見えない」を予告
     from: 14
     slot: 7
     credit: 'Photo: İbrahim KARASU / Pexels'
@@ -126,6 +126,18 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
+  - text: だから、この動画で言う「まとも」は、こう定義しておくわね。悪いことをしない。そして、相手に誠実である。この二つがそろっていることよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 減点がない、と、相手に向かう。二つで一組なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。そして、どちらも一目では分からないものよ。悪いことをしないかどうかは、見せて証明できないし、誠実さは、続けて初めて分かるの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
   - text: そしてこれは、ずんだもん一人の話ではないわ。国立社会保障・人口問題研究所が、2021年に行った調査があるの。18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったわ。
     speaker: めたん
     expression: explain
@@ -154,7 +166,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: でも、優しくしてるのに選ばれないなら、やっぱり優しさが嫌われてるんじゃないのだ？
+  - text: 相手に向いているのは、優しさだけなのだ。じゃあ僕が選ばれないのは、優しさが嫌われてるからなのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -196,25 +208,38 @@ scenes:
         text: 優しい＝相手へ
         at: 11
         after: 相手に向かっているのは
+  - type: board
+    cut_reason: 【定義の板】四つの内訳を受けて「まとも」を二つの条件で定義し、以後の章が参照する言葉を固定する
+    from: 12
+    telop: '「まとも」の定義
+
+      ①悪いことをしない＝減点がない
+
+      ②相手に誠実である＝相手に向かう'
+  - type: image
+    cut_reason: 【定義の性質】働く場面に戻し、二つの条件とも一目では分からないと言う
+    from: 19
+    slot: 3
+    credit: 'Photo: Anna Shvets / Pexels'
   - type: image
     cut_reason: 【個人の話から数字へ】駅のホームに戻し、調査の数字へ移る
-    from: 12
-    slot: 3
+    from: 21
+    slot: 4
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
   - type: image
     cut_reason: 【72.2%】交際相手がいない割合を数字と同時に出す
-    from: 14
-    slot: 4
+    from: 23
+    slot: 5
     credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Airam Dato-on / Pexels'
     telop: 交際相手なし 72.2%（18〜34歳 未婚男性）
   - type: image
     cut_reason: 【段階分けの前置き】働く場面の別カットに替え、段階を分ける宣言へ
-    from: 17
-    slot: 5
+    from: 26
+    slot: 6
     credit: 'Photo: kaboompics.com / Pexels'
   - type: board
     cut_reason: 【全編の骨格】三つの段階を黒板に書き、以後の章頭で参照できるようにする
-    from: 19
+    from: 28
     telop: '三つの段階
 
       ①会う前＝写真とプロフィール
@@ -224,12 +249,12 @@ scenes:
       ③続いてから＝関係が始まった後'
   - type: image
     cut_reason: 【当事者の位置】夜のスマホの手元に替え、会う前でも会ったあとでも止まっている受けへ
-    from: 23
-    slot: 6
+    from: 32
+    slot: 7
     credit: 'Photo: Phil Desforges / Pexels'
   - type: board
     cut_reason: 【主軸の二文】台本「演出」の指定どおり、主軸の二文は板を保持したまま言う（間1.0→2.0）
-    from: 25
+    from: 34
     telop: '三つの段階
 
       ①会う前＝写真とプロフィール
@@ -238,11 +263,13 @@ scenes:
 
       ③続いてから＝関係が始まった後'
   - type: image
-    cut_reason: 【次章への問い】駅のホームに戻し、優しさが嫌われているのかという問いで閉じる
-    from: 29
-    slot: 7
+    cut_reason: 【次章への問い】駅のホームに戻し、まともの中で相手に向く優しさが嫌われているのかという問いで閉じる
+    from: 38
+    slot: 8
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
   readings:
+  - surface: 一目では
+    reading: ヒトメデハ
   - surface: 18歳
     reading: ジュウハッサイ
   - surface: 34歳
@@ -547,7 +574,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 四つとも、問題を起こさないか、相手に良くするか、という話なの。自分から前に出る力は、一つも入っていないわ。
+  - text: 四つとも、さっき定義した二つ、悪いことをしないか、相手に誠実か、のどちらかなの。自分から前に出る力は、一つも入っていないわ。
     speaker: めたん
     expression: serious
     pause_after: 2.5
@@ -644,7 +671,7 @@ scenes:
       caption:
         text: 右の列に、入っているものがない
         at: 12
-        after: 相手に良くするか
+        after: 相手に誠実か
   - type: image
     cut_reason: 【受け】縮こまった姿勢のカットに替え、本当に入っていないという受けから姿勢の研究へ
     from: 14
