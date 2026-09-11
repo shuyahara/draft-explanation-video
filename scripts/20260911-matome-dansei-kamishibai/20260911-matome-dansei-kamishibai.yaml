@@ -126,47 +126,43 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 1.5
-  - text: だから、この動画で言う「まとも」は、こう定義しておくわね。悪いことをしない。そして、相手に誠実である。この二つがそろっていることよ。
+  - text: だから、この動画で言う「まとも」は、こう定義しておくわね。悪いことをしない。そして、誠実さ・優しさがある。この二つがそろっていることよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 減点がない、と、相手に向かう。二つで一組なのだ。
+  - text: 悪いことをしない、と、誠実さ。二つで一組なのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: そう。そして、どちらも一目では分からないものよ。悪いことをしないかどうかは、見せて証明できないし、誠実さは、続けて初めて分かるの。
+  - text: そう。そして、どちらも一目では分からない要素なのよ。悪いことをしないかどうかは、見せて証明できないし、誠実さは、長く関わって初めて分かるの。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
-  - text: そしてこれは、ずんだもん一人の話ではないわ。国立社会保障・人口問題研究所が、2021年に行った調査があるの。18歳から34歳の未婚男性のうち、72.2パーセントに交際相手がいなかったわ。
-    speaker: めたん
-    expression: explain
     pause_after: 0.45
-  - text: 7割以上！ 僕だけじゃなかったのだ。
+  - text: 悪魔の証明なのだ。
     speaker: ずんだもん
-    expression: surprised
+    expression: thinking
     pause_after: 0.45
-  - text: ここで、先に決めておきたいことがあるの。この話は、段階を分けないと混ざるのよ。
+  - text: そして、ここからは出会いの段階から親密になる段階まで、時系列で段階を分けて説明していくわ。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: 写真とプロフィールしか見えていない、会う前。実際に会ったあと。そして、付き合いが始まってから。この三つで、効くものが違うわ。
+  - text: 写真とプロフィールしか見えていない、会う前。実際に会ったあと。そして、付き合いが始まってから。この三つで、異性に効いてくる要素が違うわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 僕は、会う前でも、会ったあとでも止まってるのだ。
+  - text: 僕は、会う前でも、会ったあとでもイケてる気がしないのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: だから今日の結論も、先に一行で言っておくわね。モテる要素は、段階ごとに違うの。そして「まとも」は、最後の段階でしか効かない力なのよ。
+  - text: そしてモテる要素は、段階ごとに違うの。そして「まとも」は、最後の段階でしか効かない力なのよ。
     speaker: めたん
     expression: serious
     pause_after: 1.0
-  - text: なのに今は、そこまで届く前に、判断が終わってしまう。それを三つの段階で、順番に確かめていくわ。
+  - text: なのに現代では、そこまで届く前に、足切りされてしまう。それを三つの段階で、順番に確かめていくわ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 相手に向いているのは、優しさだけなのだ。じゃあ僕が選ばれないのは、優しさが嫌われてるからなのだ？
+  - text: 僕がモテないのは、優しさがあっても意味ないからなのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -222,24 +218,13 @@ scenes:
     slot: 3
     credit: 'Photo: Anna Shvets / Pexels'
   - type: image
-    cut_reason: 【個人の話から数字へ】駅のホームに戻し、調査の数字へ移る
-    from: 21
-    slot: 4
-    credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
-  - type: image
-    cut_reason: 【72.2%】交際相手がいない割合を数字と同時に出す
-    from: 23
-    slot: 5
-    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）／Photo: Airam Dato-on / Pexels'
-    telop: 交際相手なし 72.2%（18〜34歳 未婚男性）
-  - type: image
     cut_reason: 【段階分けの前置き】働く場面の別カットに替え、段階を分ける宣言へ
-    from: 26
-    slot: 6
+    from: 22
+    slot: 4
     credit: 'Photo: kaboompics.com / Pexels'
   - type: board
     cut_reason: 【全編の骨格】三つの段階を黒板に書き、以後の章頭で参照できるようにする
-    from: 28
+    from: 23
     telop: '三つの段階
 
       ①会う前＝写真とプロフィール
@@ -249,12 +234,12 @@ scenes:
       ③続いてから＝関係が始まった後'
   - type: image
     cut_reason: 【当事者の位置】夜のスマホの手元に替え、会う前でも会ったあとでも止まっている受けへ
-    from: 32
-    slot: 7
+    from: 27
+    slot: 5
     credit: 'Photo: Phil Desforges / Pexels'
   - type: board
     cut_reason: 【主軸の二文】台本「演出」の指定どおり、主軸の二文は板を保持したまま言う（間1.0→2.0）
-    from: 34
+    from: 28
     telop: '三つの段階
 
       ①会う前＝写真とプロフィール
@@ -263,22 +248,18 @@ scenes:
 
       ③続いてから＝関係が始まった後'
   - type: image
-    cut_reason: 【次章への問い】駅のホームに戻し、まともの中で相手に向く優しさが嫌われているのかという問いで閉じる
-    from: 38
-    slot: 8
+    cut_reason: 【次章への問い】駅のホームに戻し、優しさがあっても意味がないのかという問いで閉じる
+    from: 32
+    slot: 6
     credit: 'Photo: Ahmad Shakir Shamsulbadri / Pexels'
   readings:
   - surface: 一目では
     reading: ヒトメデハ
-  - surface: 18歳
-    reading: ジュウハッサイ
-  - surface: 34歳
-    reading: サンジュウヨンサイ
 - id: 3
   title: 「優しい男は損をする」は、本当なのか（会う前）
   chapter_title: 『優しい男は損をする』は、本当なのか
   narration:
-  - text: 会う前の段階から始めましょう。写真と紹介文だけを見た相手に、優しい男性は損をするのか。これは実験されているのよ。
+  - text: 会う前の段階から見ていきましょう。写真と紹介文だけを見た相手に、優しい男性は損をするのか。これは実験されているのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -298,15 +279,15 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: ええ。48人でも194人でも、同じ方向の結果よ。結婚相手でも、交際相手でも、友人でも、感じのいい方が高く評価されたわ。
+  - text: ええ。そうなのよ。結婚相手でも、交際相手でも、友人でも、感じのいい方が高く評価されたわ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: でも、見た目と態度の両方が違うのだ。優しさだけの力なのだ？
+  - text: でも、見た目と態度の両方が違うのだ。影響が混ざっている可能性はないのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: いい疑問ね。この実験では、見た目の良さと態度の良さが、別々に効いていたことも確かめられているの。混ざってはいないのよ。
+  - text: いい疑問ね。この実験では、見た目の良さと態度の良さが、独立に効いていたことも確かめられているの。混ざってはいないのよ。
     speaker: めたん
     expression: delighted
     pause_after: 0.35
@@ -370,7 +351,7 @@ scenes:
         to: chosen
   - type: image
     cut_reason: 【再現性】大学の校舎に替え、二度の実験の人数を出す
-    from: 12
+    from: 13
     slot: 2
     credit: 'Photo: Pixabay'
     telop: 感じがいい方が選ばれた（N=48／N=194）
@@ -397,27 +378,17 @@ scenes:
   readings:
   - surface: 顔がいい方
     reading: カオガイイホウ
+  - surface: 感じのいい方
+    reading: カンジノイイホウ
 - id: 4
-  title: 会ったあと、実際に効いていたのは何か（会ったあと①）
+  title: 会ったあとのモテる要素は何か（会ったあと①）
   chapter_title: null
   narration:
-  - text: そこが、次の段階への入口ね。会う前の言葉を、もう一つ見ておくわ。
+  - text: じゃあ、会ったあとにどのような男性がモテるかを測った実験も見ていくわね。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
-  - text: さっきの2021年の調査で、女性に結婚相手の男性の何を重視するか聞いているの。いちばん多いのは「人柄」で、重視すると答えた人は88.2パーセント。「容姿」は18.8パーセントよ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: それなら僕の人柄、かなり有利なはずなのだ。
-    speaker: ずんだもん
-    expression: smug
-    pause_after: 0.45
-  - text: 待って。それは会う前の、言葉の話。会ったあとを測ったのが、この実験よ。
-    speaker: めたん
-    expression: smile
     pause_after: 0.6
-  - text: 2008年、ノースウェスタン大学のポール・イーストウィックたちが、163人の学生を集めたの。当時の彼は、まだ博士課程の大学院生だったわ。
+  - text: ノースウェスタン大学のポール・イーストウィックたちが、2008年に発表した実験よ。163人の学生を集めたの。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -425,11 +396,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 書いたとおりの人を、ちゃんと好きになってたのだ？
+  - text: 会う前に書いたとおりの人を、ちゃんと好きになってたのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: ほとんど、当たらなかったわ。男性も女性も、自分が誰に惹かれるかを、うまく言い当てられなかったの。
+  - text: ほとんど、当たらなかったわ。男性も女性も、自分が誰に惹かれるかを、事前に言い当てることはできなかったの。
     speaker: めたん
     expression: serious
     pause_after: 0.45
@@ -437,7 +408,7 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 惹かれた度合いと結びついていたのは、強い順に、見た目の魅力、人当たりの良さ、稼ぐ力。数字で言うと0.43、0.29、0.19よ。
+  - text: 惹かれた度合いと結びついていたのは、強い順に、見た目の魅力、人当たりの良さ、稼ぐ力。数字で言うと0.46、0.32、0.16よ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -445,18 +416,30 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: 二つのものごとがどれくらい一緒に動くかを表す数字ね。0だと関係なし、1に近いほど強く結びついている、と思ってちょうだい。
+  - text: 二つのものごとがどれくらい一緒に動くかを表す数字ね。相関係数というわ。0だと関係なし、1に近いほど強く結びついている、と思ってちょうだい。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: じゃあ、人当たりの良さは、稼ぐ力より上なのだ！
+  - text: じゃあ、やっぱり見た目がいちばんなのだ…。
     speaker: ずんだもん
-    expression: surprised
+    expression: sad
     pause_after: 0.45
-  - text: そうなの。たった4分の会話でも、効いていたわ。
+  - text: そう。会ったあとの段階でいちばん効いていたのは、見た目。ここは正直に認めましょう。4分の会話は、見えるものが勝つ段階なのよ。
     speaker: めたん
-    expression: smile
+    expression: serious
     pause_after: 1.5
+  - text: ただ、この順番には、あと二つ読めることがあるわ。二番目の人当たりの良さは、稼ぐ力より上。優しさの見える部分は、ちゃんと効いているの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: そして最下位の稼ぐ力は、「働いている」に近い要素ね。まともの中身は、この段階ではいちばん弱かったのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 見えるものが上、見えにくいものが下、なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
   - text: ただし、ここで測った「人当たりの良さ」は、話していて感じがいい、という評価よ。約束を守るとか、責任感があるとか、そこまでは測っていないの。
     speaker: めたん
     expression: serious
@@ -489,71 +472,65 @@ scenes:
 
       ③続いてから＝関係が始まった後'
   - type: image
-    cut_reason: 【会う前の言葉】夜のスマホの手元で、写真とプロフィールしか見えない段階の「言葉」を出す
-    from: 3
-    slot: 1
-    credit: '国立社会保障・人口問題研究所 第16回出生動向基本調査（2021年）・女性の回答／Photo: Jaroslav Maléř / Pexels'
-    telop: 人柄を重視 88.2%／容姿 18.8%
-  - type: image
-    cut_reason: 【会ったあとを測る】カフェのカットに替え、言葉の話から実験の話へ渡す
-    from: 6
-    slot: 2
-    credit: 'Photo: Şeydanur Yıldız / Pexels'
-  - type: image
     cut_reason: 【実験へ】向かい合う男女の席に替え、スピードデートの実験に入る
-    from: 10
-    slot: 3
+    from: 2
+    slot: 1
     credit: 'Eastwick & Finkel (2008) JPSP 94(2)／Photo: Mike Jones / Pexels'
   - type: image
     cut_reason: 【手順と人数】会場の椅子に替え、4分ずつ9〜13人と会う手順を出す
-    from: 12
-    slot: 4
+    from: 4
+    slot: 2
     credit: 'Photo: Pixabay'
     telop: 163人／一人4分ずつ 9〜13人と
   - type: image
     cut_reason: 【当たらなかった】会場の別カットに替え、書いた理想が当たらなかったところまで
-    from: 15
-    slot: 5
+    from: 7
+    slot: 3
     credit: 'Photo: Pixabay'
   - type: diagram
-    cut_reason: 【相関の大きさ】数字の開きそのものが主張なので棒グラフにする。人当たりの棒が稼ぐ力より明らかに長いことを見せる
-    from: 19
+    cut_reason: 【相関の大きさ】数字の開きそのものが主張なので棒グラフにする。見た目の棒がいちばん長く、人当たりが稼ぐ力より長いことを見せる
+    from: 11
     diagram:
       type: chart
       chart: bar
-      title: 恋愛的関心との相関（男性の場合。女性でも順番は同じ）
+      title: 恋愛的関心との相関（女性が男性を評価。男性側も順番は同じ）
       source: Eastwick & Finkel (2008) JPSP 94(2)
       series:
       - color: accent
-        at: 19
+        at: 11
         after: 強い順に
         points:
-        - label: 見た目0.43
-          value: 0.43
-        - label: 人当たり0.29
-          value: 0.29
-        - label: 稼ぐ力0.19
-          value: 0.19
+        - label: 見た目0.46
+          value: 0.46
+        - label: 人当たり0.32
+          value: 0.32
+        - label: 稼ぐ力0.16
+          value: 0.16
   - type: image
-    cut_reason: 【人当たりの良さ】笑いながら話す二人に替え、4分で効いたことと、その言葉の限定へ
-    from: 25
-    slot: 6
+    cut_reason: 【人当たりの良さ】笑いながら話す二人に替え、二番目の人当たりが稼ぐ力より上で、優しさの見える部分は効いていると言う
+    from: 22
+    slot: 4
     credit: 'Photo: Tim Douglas / Pexels'
   - type: image
+    cut_reason: 【稼ぐ力＝働いている】働く場面に替え、まともの中身はこの段階でいちばん弱かったと言う
+    from: 25
+    slot: 5
+    credit: 'Photo: kaboompics.com / Pexels'
+  - type: image
+    cut_reason: 【言葉の限定】和やかに話す二人に替え、測ったのは話していて感じがいいという評価だけだと限定する
+    from: 28
+    slot: 6
+    credit: 'Photo: Alexandr / Pexels'
+  - type: image
     cut_reason: 【二つの優しさ】テーブルの上で組んだ手に替え、感じの良さと時間のかかる誠実さを分ける
-    from: 29
+    from: 30
     slot: 7
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【次章への渡し】組んだ手の別カットに替え、4分で見えるものがもう一つあるという予告へ
-    from: 33
+    from: 34
     slot: 8
     credit: 'Photo: The masked Guy / Pexels'
-  readings:
-  - surface: 博士課程
-    reading: ハクシカテイ
-  - surface: 人柄
-    reading: ヒトガラ
 - id: 5
   title: 優しさの隣に、何が足りないのか（会ったあと②）
   chapter_title: 優しさの隣に、何が足りないのか
