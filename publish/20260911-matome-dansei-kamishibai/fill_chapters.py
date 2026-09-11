@@ -11,9 +11,7 @@ from pathlib import Path
 
 OVERRIDE = {
     1: "半年でマッチ3件",
-    8: "僕の1回は、何だったのか",
-    13: "まともな男性は、何に負けているのか",
-    14: "真のモテ要素とは何か",
+    9: "真のモテ要素とは何か",
 }
 out_dir = Path(sys.argv[1])
 here = Path(__file__).parent
