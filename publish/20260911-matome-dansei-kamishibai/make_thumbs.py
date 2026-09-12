@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""サムネイル合成スクリプト（"まとも"な男性はモテないのか・紙芝居版, Issue #34）。
+"""サムネイル合成スクリプト（"誠実"な男性はモテないのか・紙芝居版, Issue #34）。
 
 サムネ3案（A/B/C）と比較用コンタクトシートを作る。
 
@@ -162,10 +162,10 @@ def make_thumb_a() -> Image.Image:
     bg = render_board_plate(stage, CFG).convert("RGBA")
     bl, bt, br, bb = stage.board_rect
 
-    # 右上: 小さく「まともなのに、なぜ？」
+    # 右上: 小さく「誠実なのに、なぜ？」
     # チョーク書体（UDDigiKyokashoN）は半角ダブルクオートが開閉とも同じ字形になり
     # 引用符に見えないため、鉤括弧に置き換える。
-    small_text = "「まとも」なのに、なぜ？"
+    small_text = "「誠実」なのに、なぜ？"
     small_size = fit_chalk_size(small_text, max_width=round((br - bl) * 0.42), max_height=round((bb - bt) * 0.10))
     small_x = br - round((br - bl) * 0.02)
     small_layer = chalk_text_layer(small_text, _chalk_font(small_size), color=CHALK_COLOR)
@@ -209,8 +209,8 @@ def make_thumb_b() -> Image.Image:
     darken_band(bg, 0, round(H * 0.30), 0.35)
     darken_band(bg, round(H * 0.66), H, 0.35)
 
-    f1 = fit_bold_font("まともなのに、モテない", max_width=round(W * 0.90), max_height=round(H * 0.19), stroke_width=9)
-    draw_mixed_center(bg, [("まともなのに、モテない", WHITE)], W // 2, round(H * 0.16), f1, stroke_width=9)
+    f1 = fit_bold_font("誠実なのに、モテない", max_width=round(W * 0.90), max_height=round(H * 0.19), stroke_width=9)
+    draw_mixed_center(bg, [("誠実なのに、モテない", WHITE)], W // 2, round(H * 0.16), f1, stroke_width=9)
 
     # 頭肩だけの立ち絵を画面隅に小さく寄せ、中央の帯を文言専用にする（重なり回避）。
     puppet_h = round(H * 0.46)
@@ -222,8 +222,8 @@ def make_thumb_b() -> Image.Image:
     paste(bg, metan, metan_cx - metan.width / 2, head_top_y)
     paste(bg, zun, zun_cx - zun.width / 2, head_top_y)
 
-    f2 = fit_bold_font("負けているのは優しさじゃない", max_width=round(W * 0.66), max_height=round(H * 0.17), stroke_width=9)
-    draw_mixed_center(bg, [("負けているのは優しさじゃない", GOLD)], W // 2, round(H * 0.85), f2, stroke_width=9)
+    f2 = fit_bold_font("誠実さは、伝わるのが遅い", max_width=round(W * 0.66), max_height=round(H * 0.17), stroke_width=9)
+    draw_mixed_center(bg, [("誠実さは、伝わるのが遅い", GOLD)], W // 2, round(H * 0.85), f2, stroke_width=9)
     return bg
 
 
@@ -267,7 +267,7 @@ def draw_ruler(base: Image.Image, x_center: int, top_y: int, height: int, width:
 def make_thumb_c() -> Image.Image:
     bg = vertical_gradient(W, H, (16, 22, 20), (34, 44, 40))
 
-    title1 = '"まとも"に入っていない、'
+    title1 = '"誠実"に入っていない、'
     title2 = "もう一つの目盛り"
     f1 = fit_bold_font(title1, max_width=round(W * 0.92), max_height=round(H * 0.13), stroke_width=8)
     f2 = fit_bold_font(title2, max_width=round(W * 0.92), max_height=round(H * 0.13), stroke_width=8)
