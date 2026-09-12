@@ -190,7 +190,7 @@ scenes:
     cut_reason: 【予告】街を歩く人々に替え、この先ひっくり返る三つの常識を並べる
     from: 16
     slot: 3
-    credit: 'Photo: Airam Dato-on / Pexels'
+    credit: 'Photo: Lara Jameson / Pexels'
   - type: image
     cut_reason: 【順番の宣言】駅のホームに戻し、三つの段階を順に確かめると告げて章へ渡す
     from: 20
@@ -1195,7 +1195,7 @@ scenes:
     cut_reason: 【自分で用意する時代】街を歩く人々に替え、今は保証も時間も自分持ちだという受けへ
     from: 26
     slot: 10
-    credit: 'Photo: Airam Dato-on / Pexels'
+    credit: 'Photo: Lara Jameson / Pexels'
   - type: image
     cut_reason: 【留保】式場に替え、昔がよかったという話ではないという断りを置く
     from: 27
@@ -1288,7 +1288,7 @@ scenes:
     cut_reason: 【結びの整理】街を歩く人々の絵で、冒頭の一行に戻る
     from: 1
     slot: 1
-    credit: 'Photo: Airam Dato-on / Pexels'
+    credit: 'Photo: Lara Jameson / Pexels'
   - type: board
     cut_reason: 【段階ごとの答え①】会う前は誠実さまで確認できない、を黒板に書く
     from: 3
