@@ -30,7 +30,8 @@ SCENE_HEADER_RE = re.compile(r"^##\s*シーン(\d+):\s*(.+?)\s*$")
 SOURCE_LIST_RE = re.compile(r"^##\s*出典リスト")
 DIALOGUE_RE = re.compile(r"^\*\*(めたん|ずんだもん)\*\*（([^）]+)）:\s*(.*)$")
 PAUSE_MARK_RE = re.compile(r"(.*?)\s*（間\s*([\d.]+)）\s*$")
-CHAPTER_CARD_RE = re.compile(r"^-\s*章カード[:：]\s*「(.+)」\s*$")
+# 「」の後ろに補足（採用理由など）を書いた行も拾えるよう、末尾は固定しない（2026-09-12）。
+CHAPTER_CARD_RE = re.compile(r"^-\s*章カード[:：]\s*「(.+?)」")
 
 # キャラクター定義（Issue #23 / タスク指示のとおり固定）
 CHARACTERS = [
