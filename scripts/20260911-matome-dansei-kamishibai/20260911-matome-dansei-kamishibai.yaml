@@ -617,15 +617,15 @@ scenes:
     credit: 'Photo: Arina Krasnikova / Pexels'
     telop: 姿勢が開いていた人は 約1.76倍 選ばれた
   - type: image
-    cut_reason: 【対比の1枚】比較対象の縮こまった姿勢に切り替える（同一キュー内では切れないので、ずんだもんの驚きのキューで）
+    cut_reason: 【胸を張って腕を組む】自信を見せようと意気込む姿に切り替える（同一キュー内では切れないので、ずんだもんの驚きのキューで）
     from: 18
     slot: 5
-    credit: 'Photo: Darina Belonogova / Pexels'
+    credit: 'Photo: Vlada Karpovich / Pexels'
   - type: image
     cut_reason: 【悪い男の説】腕を組む人に替え、悪い男の方がモテるという説を受け止めて待ったをかける
     from: 20
     slot: 6
-    credit: 'Photo: Vlada Karpovich / Pexels'
+    credit: 'Photo: Kindel Media / Pexels'
   - type: board
     cut_reason: 【二種類の見せ方】威圧と尊敬の違いを黒板に書き、次の研究の結果を読む前提にする
     from: 24
@@ -638,7 +638,7 @@ scenes:
     cut_reason: 【短い関係だけ】腕を組む別カットに替え、威圧に惹かれるのは短期を探す人だけという結果へ
     from: 27
     slot: 7
-    credit: 'Witkower & Rule (2025) SPPS 17(5)／Photo: Kindel Media / Pexels'
+    credit: 'Witkower & Rule (2025) SPPS 17(5)／Photo: Vlada Karpovich / Pexels'
     telop: 威圧型＝短い関係を探す人にだけ有利
   - type: image
     cut_reason: 【尊敬される方】人が集まって話を聞く場面に替え、どちらにも有利な方を見せる
@@ -871,7 +871,7 @@ scenes:
     cut_reason: 【もう一つの研究へ】並んで歩く別カットに替え、次の研究に渡す
     from: 14
     slot: 4
-    credit: 'Photo: Liliana Drew / Pexels'
+    credit: 'Photo: Felicity Tai / Pexels'
   - type: image
     cut_reason: 【167組】手をつなぐ手元に替え、付き合う前にどれくらい知り合いだったかを聞いた研究を示す
     from: 17
