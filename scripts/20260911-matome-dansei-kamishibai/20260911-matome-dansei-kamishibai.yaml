@@ -116,7 +116,7 @@ scenes:
   - text: 一つ目は、会う前。写真とプロフィールしか見えていない段階ね。二つ目は、初対面。実際に会って、数回目までよ。三つ目は、長い関係。付き合いが続いてからの段階ね。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.6
   - text: この三つで、選ばれやすくなる要素が違うの。
     speaker: めたん
     expression: serious
@@ -136,7 +136,7 @@ scenes:
   - text: 途中で、よく聞く常識が三つ、ひっくり返るわ。悪い男の方がモテるという説。恋人の3人に2人は友人から始まっている、という事実。そして、誠実さが伝わる時間を、昔は誰が用意していたか。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.7
   - text: ここから、会う前、初対面、長い関係の順に確かめるわ。
     speaker: めたん
     expression: normal
@@ -395,7 +395,7 @@ scenes:
   - text: そう。人当たりの良さは、すぐ見える。誠実さは、時間がかかる。初対面で有利に働くのは、すぐ見える方だけよ。
     speaker: めたん
     expression: explain
-    pause_after: 0.45
+    pause_after: 0.8
   - text: 僕が持ってるのは、時間がかかる方なのだ。
     speaker: ずんだもん
     expression: sad
@@ -501,7 +501,7 @@ scenes:
   - text: そして、最初に決めた誠実さの中身を思い出して。嘘をつかない、約束を守る、逃げない。この中に、自信と積極性は入っていないわ。
     speaker: めたん
     expression: serious
-    pause_after: 2.0
+    pause_after: 1.0
   - text: あっ…。本当に入ってないのだ。
     speaker: ずんだもん
     expression: surprised
@@ -799,7 +799,7 @@ scenes:
   - text: 違ったの。カナダとアメリカの調査でね。今の恋人か直近の恋人と、付き合う前は友人だった、と答えた人が68パーセント。3人に2人よ。
     speaker: めたん
     expression: normal
-    pause_after: 1.5
+    pause_after: 1.0
   - text: 3人に2人が、友達からなのだ！？
     speaker: ずんだもん
     expression: surprised
@@ -963,7 +963,7 @@ scenes:
   - text: まだ半分よ。実際に結婚したかどうかで見ると、学歴も身長も体型も、結婚する確率とは結びついていなかったの。例外は収入だけ。
     speaker: めたん
     expression: smile
-    pause_after: 2.0
+    pause_after: 1.2
   - text: 人気なのに、結婚できてないのだ！？
     speaker: ずんだもん
     expression: surprised
@@ -1090,7 +1090,7 @@ scenes:
   - text: 1947年、憲法に「婚姻は両性の合意のみに基いて成立する」と書かれたわ。結婚は制度として初めて、本人が選ぶものになったの。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
+    pause_after: 0.7
   - text: それでも仲人の慣行はしばらく残ったわ。首都圏の結婚式で仲人を立てた割合は、1994年で63.9パーセント。それが2001年には7.3パーセント。たった7年で、ほぼ消えたの。
     speaker: めたん
     expression: explain
@@ -1102,7 +1102,7 @@ scenes:
   - text: 出会い方も同じ向きに動いたわ。1930年代に結婚した夫婦では見合い結婚が69.0パーセント。2019年から2021年では9.9パーセント。かわりにネットで出会った夫婦が15.2パーセントで、見合いを追い抜いたの。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
+    pause_after: 0.7
   - text: 見合いと仲人には、保証と時間が先に付いていたのよ。周りの人の保証と、何度も会う時間。誠実さが有利に働き始めるまでの時間を、他人が用意してくれていたの。
     speaker: めたん
     expression: serious
@@ -1242,7 +1242,7 @@ scenes:
   - text: そう。誠実さが弱いんじゃない。有利に働き始めるのが遅いの。そして、何度か会う機会を作っていた仲人や見合いが、この数十年でほぼ消えたわ。
     speaker: めたん
     expression: serious
-    pause_after: 0.35
+    pause_after: 0.7
   - text: 誠実さが嫌われているから、ではないのよ。誠実さが伝わる前に判断が終わる場面が、増えたの。
     speaker: めたん
     expression: serious
@@ -1274,7 +1274,7 @@ scenes:
   - text: それは研究で確かめられた方法ではないけれど、筋は通っているわね。
     speaker: めたん
     expression: smile
-    pause_after: 1.5
+    pause_after: 1.0
   - text: 頑張って、ずんだもん。
     speaker: めたん
     expression: delighted
