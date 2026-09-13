@@ -43,3 +43,14 @@
 - 板の「抽象→具体の置き換え」パターン（一般要素を番号付きで並べ、当てはめ場面で同じ位置に具体例を差し替える）を追加。一般化先: docs/dialogue-guide.md §7、docs/diagram-guide.md。
 - 本人が公の場に出ている人物（例: ビリー・ヘリントン）の実写は使ってよい。同意のない出演者は目線処理・実名秘匿、写真内の文字はトリミングで外す。一般化先: docs/asset-workflow.md 2026-09-09 追記。
 - .claude/commands/draft.md の絵コンテ点検項目に「数字は算用数字か／研究者の肩書きがあるか（院生は無名か）」を追加。
+
+## 2026-09-12〜13 誠実な男性版（旧「まとも」）v4〜v8 の試写指摘を一般化（#34）
+
+- 主題の語を一つに決めてから使う（「まとも」→「誠実」に絞り、定義の段を削除）。定義は具体行動で。段階名は日常語。一般化先: docs/dialogue-guide.md §8、.claude/commands/draft-kamishibai.md 手順 0。
+- 婉曲・冗長を排して一文一義（「面白さを履き違えている」）。抽象動詞「効く」→「有利に働く」。反転は平文で二文。一般化先: docs/dialogue-guide.md §8。
+- レビュー観点に「冗長・婉曲」「構成の切れ味」を追加（`review_clarity.py`、40d1ca4）。一般化先: tools/review/README.md。
+- 道しるべの板は `highlight_lines` で行を色替え（script-to-video PR #3）。「← いまここ」は廃止。一般化先: docs/dialogue-guide.md §8。
+- 終了カード `--end-card` を紙芝居のレンダ手順に明記（v4〜v7 で付け忘れ）。一般化先: .claude/commands/draft-kamishibai.md 手順 5。
+- サムネはリアル調・人物中央に「？」を重ねる・文字帯は全幅・立ち絵は下から顔。一般化先: docs/dialogue-guide.md §8、docs/asset-workflow.md 2026-09-13 追記。
+- 紙芝居の手順を `/draft-kamishibai` に分離（`/draft` はナレーション版）。理由: TTS・YAML 生成・板・終了カード・タイトル接尾語・レビューの種類が違い、「紙芝居なら加えて」の差し込みでは漏れる。一般化先: CLAUDE.md ワークフロー、.claude/commands/draft-kamishibai.md。
+- 本文が取得できない研究は数値を載せない（Back 2010 / Leckelt 2015）。相関などは動画の問いの向き（女性が男性を評価した側）で採る。一般化先: .claude/commands/draft-kamishibai.md 手順 1。
