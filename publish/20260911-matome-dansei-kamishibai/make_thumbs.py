@@ -303,15 +303,16 @@ def make_thumb_c() -> Image.Image:
 
 
 # ---------------------------------------------------------------------------
-# D: 横長の生成イラスト（人物は右1/3、腰から上）＋ 中央やや左の大きな金の「？」
-#    ＋ 上下2行の文言（2026-09-13 構図やり直し指示: 縦長画像を16:9に切って顔が
-#    アップになり過ぎ、服装も帯で隠れていた反省を踏まえ、背景自体を横長で
-#    再生成し、暗化帯は左2/3だけに限定して人物には掛けない）。
+# D: 横長の実写風（photorealistic）生成写真（人物は画面中央、腰から上）＋
+#    中央に人物へ重ねる大きな金の「？」＋ 全幅の上下2帯に文言（2026-09-13
+#    再々指示: アニメ調→実写風、人物を右1/3→中央、暗化帯を左2/3限定→全幅、
+#    「？」は人物を避ける→重ねてよい、立ち絵は隅に小さく→下端から顔が
+#    覗く大きさへ、と構図を全面的に作り直し）。
 # ---------------------------------------------------------------------------
 
 THUMB_BG_DIR = OUT / "thumb-bg"
 
-LEFT_ZONE_W = round(W * 2 / 3)  # 853px。人物のいる右1/3には帯もマークも掛けない。
+GOLD_SEMI = (194, 169, 112, round(255 * 0.85))  # 「？」を人物に重ねる際の半透明金（85%不透明）。
 
 
 def make_thumb_d(bg_path: Path) -> Image.Image:
@@ -319,41 +320,40 @@ def make_thumb_d(bg_path: Path) -> Image.Image:
     if bg.size != (W, H):
         bg = bg.resize((W, H), Image.LANCZOS)
 
-    # 上下の暗化帯は左2/3だけ（人物のいる右1/3は明るいまま＝服装・表情がそのまま見える）。
-    darken_rect(bg, 0, 0, LEFT_ZONE_W, round(H * 0.22), 0.35)
-    darken_rect(bg, 0, round(H * 0.82), LEFT_ZONE_W, H, 0.35)
+    # 上下の暗化帯は全幅（人物にも掛かるが、文言を読ませるための帯なので許容）。
+    darken_band(bg, 0, round(H * 0.22), 0.40)
+    darken_band(bg, round(H * 0.80), H, 0.40)
 
-    text_cx = round(W * 0.38)  # 「？」と同じ x に文言も中央寄せする。
+    # 中央（x=50%, y=54%）に大きな金色半透明の「？」（高さ画面の48%）。
+    # 人物の頭頂は画面上端から8〜10%・目の位置はおおむね24%あたりなので、
+    # マーク上端（54%-24%=30%）が目より下に来るよう中心をやや低めに置き、
+    # 目にはかからないようにする。顔の他の部分（鼻筋・口元）には重ねてよい。
+    mark_h = round(H * 0.48)
+    mark_font = fit_bold_font("？", max_width=round(W * 0.6), max_height=mark_h, stroke_width=22)
+    draw_mixed_center(bg, [("？", GOLD_SEMI)], W // 2, round(H * 0.54), mark_font, stroke_width=22)
 
-    # 中心やや左（x≈38%, y≈50%）に大きな金色の「？」（高さ画面の45%）。
-    mark_h = round(H * 0.45)
-    mark_font = fit_bold_font("？", max_width=round(LEFT_ZONE_W * 0.9), max_height=mark_h, stroke_width=20)
-    draw_mixed_center(bg, [("？", GOLD)], text_cx, round(H * 0.50), mark_font, stroke_width=20)
-
-    # 上段（最上部の帯、高さ22%）: 白文字
+    # 上段（最上部の全幅帯、高さ22%）: 白文字
     title1 = "誠実な男性はなぜモテない？"
-    f1 = fit_bold_font(title1, max_width=round(LEFT_ZONE_W * 0.92), max_height=round(H * 0.15), stroke_width=8)
-    draw_mixed_center(bg, [(title1, WHITE)], text_cx, round(H * 0.11), f1, stroke_width=8)
+    f1 = fit_bold_font(title1, max_width=round(W * 0.92), max_height=round(H * 0.15), stroke_width=8)
+    draw_mixed_center(bg, [(title1, WHITE)], W // 2, round(H * 0.11), f1, stroke_width=8)
 
-    # 下段（最下部の帯、高さ18%）: 金文字
+    # 下段（最下部の全幅帯、高さ20%）: 金文字
     title2 = "モテ要素を科学する"
-    f2 = fit_bold_font(title2, max_width=round(LEFT_ZONE_W * 0.66), max_height=round(H * 0.12), stroke_width=9)
-    draw_mixed_center(bg, [(title2, GOLD)], text_cx, round(H * 0.91), f2, stroke_width=9)
+    f2 = fit_bold_font(title2, max_width=round(W * 0.50), max_height=round(H * 0.13), stroke_width=9)
+    draw_mixed_center(bg, [(title2, GOLD)], W // 2, round(H * 0.90), f2, stroke_width=9)
 
-    # 立ち絵: めたんは左下に小さく（暗化帯の上、文言と重ならない隅）。
-    metan_h = round(H * 0.28)
-    metan = load_puppet("metan", "explain", metan_h)
-    metan_cx = round(W * 0.06)
-    metan_top_y = H - round(metan_h * 0.62)
-    paste(bg, metan, metan_cx - metan.width / 2, metan_top_y)
-
-    # ずんだもんは右上の隅に小さく。人物は頭頂が画面上端から10%ほど下に来る構図
-    # なので、右上の頭上の余白（人物と重ならない）に収まるサイズに抑える。
-    zun_h = round(H * 0.19)
-    zun = load_puppet("zundamon", "confused", zun_h)
-    zun_cx = round(W * 0.965)
-    zun_top_y = round(H * 0.02)
-    paste(bg, zun, zun_cx - zun.width / 2, zun_top_y)
+    # 立ち絵: 「下端から顔が覗く」配置。キャラクター素材自体は大きく
+    # （puppet_h=画面高の65%）描画し、その下半分（体側）を画面外にはみ出させて、
+    # 上半分（顔〜首）だけが下端から覗くようにする。下段文言（中央寄せ）と
+    # 重ならないよう左右端に寄せる。
+    puppet_h = round(H * 0.65)
+    metan = load_puppet("metan", "explain", puppet_h)
+    zun = load_puppet("zundamon", "confused", puppet_h)
+    peek_top_y = H - round(puppet_h * 0.5)  # 上半分だけ画面内、下半分は下端の外へ。
+    metan_cx = round(W * 0.12)
+    zun_cx = round(W * 0.88)
+    paste(bg, metan, metan_cx - metan.width / 2, peek_top_y)
+    paste(bg, zun, zun_cx - zun.width / 2, peek_top_y)
 
     return bg
 
