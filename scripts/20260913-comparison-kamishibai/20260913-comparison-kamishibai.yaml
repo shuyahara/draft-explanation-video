@@ -54,7 +54,7 @@ scenes:
   - text: 先に、答えだけ言っておくわね。比べるのは、性格の欠点じゃないのよ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.8
   - text: 仕事の出来みたいに目盛りのないものは、他人を見るしか測りようがないの。
     speaker: めたん
     expression: explain
@@ -98,15 +98,15 @@ scenes:
     slot: 4
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
-    cut_reason: 【保持の分割】同じ時計カットを保持したまま20秒超を避けるための継続カット（2）
-    from: 16
+    cut_reason: 【目盛りのない例】体重計に乗る足元（S3用候補を流用）に替え、目盛りのない測り方の話に入る
+    from: 15
     slot: 5
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: Annushka Ahuja / Pexels'
   - type: image
-    cut_reason: 【保持の分割】同じ時計カットを保持したまま20秒超を避けるための継続カット（3）
-    from: 20
+    cut_reason: 【冒頭へ戻る】S1冒頭のスマホの手元に戻り、フックの余韻を保ったまま章末へ
+    from: 18
     slot: 6
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: Jaroslav Maler / Pexels'
 - id: 2
   title: 「比較」とは何か、答えを先に
   chapter_title: null
@@ -126,7 +126,7 @@ scenes:
   - text: じゃあ、先に結論を言うわね。比較は、やめられないのよ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 1.0
   - text: 壊れているのは二つ。「誰と比べるか」と、「相手の何を見るか」よ。
     speaker: めたん
     expression: serious
@@ -178,15 +178,20 @@ scenes:
     slot: 1
     credit: 'Photo: Yan Krukau / Pexels'
   - type: image
+    cut_reason: 【保持の分割】同じオフィス写真を保持したまま20秒超を避けるための継続カット
+    from: 6
+    slot: 2
+    credit: 'Photo: Yan Krukau / Pexels'
+  - type: image
     cut_reason: 【対比の予告】同じオフィス写真を保持したまま、壊れた二つの前提をテロップで出す
     from: 10
-    slot: 2
+    slot: 3
     credit: 'Photo: Yan Krukau / Pexels'
     telop: 壊れているのは ①誰と比べるか ②相手の何を見るか
   - type: image
     cut_reason: 【保持の分割】同じオフィス写真を保持したまま20秒超を避けるための継続カット
     from: 12
-    slot: 3
+    slot: 4
     credit: 'Photo: Yan Krukau / Pexels'
   - type: board
     cut_reason: 【板の進行1/3】見出し＋①だけを出す（②③はまだ）
@@ -246,7 +251,7 @@ scenes:
   - text: その通り。目盛りがないとき、人は他人と比べて自分を測る。これが理論の中心よ。
     speaker: めたん
     expression: delighted
-    pause_after: 0.35
+    pause_after: 0.7
   - text: もう一つ大事なことがあるわ。比べる相手は、遠い人より近い人を選びやすいの。
     speaker: めたん
     expression: normal
@@ -298,7 +303,7 @@ scenes:
   - text: 比べるのは意志の弱さじゃなくて、脳の反応まで動かす仕組みなのよ。
     speaker: めたん
     expression: serious
-    pause_after: 1.5
+    pause_after: 2.0
   - text: ただ、フェスティンガーも、「目盛りがないとき」と限っているの。身長みたいに測れるものなら、他人はいらないわ。
     speaker: めたん
     expression: normal
@@ -315,36 +320,38 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: board
-    cut_reason: 【出典の提示】フェスティンガーの理論名だけを黒板に出して開く
+    cut_reason: 【板の進行1/4】見出しだけを出す
     from: 1
     telop: フェスティンガーの社会的比較（1954）
   - type: board
-    cut_reason: 【保持の分割】同じ見出しの板を保持したまま10秒超を避けるための継続ビート
-    from: 3
-    telop: フェスティンガーの社会的比較（1954）
-  - type: board
-    cut_reason: 【保持の分割】同じ見出しの板を保持したまま10秒超を避けるための継続ビート（2）
-    from: 5
-    telop: フェスティンガーの社会的比較（1954）
+    cut_reason: 【板の進行2/4】①（自分を評価したい欲求）を書き足す
+    from: 2
+    telop: 'フェスティンガーの社会的比較（1954）
+
+      ① 自分を評価したい欲求'
   - type: image
     cut_reason: 【測れるものの例】体重計に乗る足元に替え、目盛りがある例を示す
     from: 7
     slot: 1
     credit: 'Photo: Annushka Ahuja / Pexels'
   - type: board
-    cut_reason: 【板の進行2/3】①（目盛りがないときは他人で測る）を書き足す
+    cut_reason: 【板の進行3/4】②（目盛りがない→他人で測る）を書き足す
     from: 12
     telop: 'フェスティンガーの社会的比較（1954）
 
-      ① 目盛りがない→他人で測る'
+      ① 自分を評価したい欲求
+
+      ② 目盛りがない→他人で測る'
   - type: board
-    cut_reason: 【板の進行3/3】②（近い人を選ぶ）を書き足す
+    cut_reason: 【板の進行4/4】③（近い人を選ぶ）を書き足して三つ揃える
     from: 15
     telop: 'フェスティンガーの社会的比較（1954）
 
-      ① 目盛りがない→他人で測る
+      ① 自分を評価したい欲求
 
-      ② 相手は、近い人を選ぶ'
+      ② 目盛りがない→他人で測る
+
+      ③ 相手は、近い人を選ぶ'
   - type: image
     cut_reason: 【近い相手の例】同年代の同僚が並ぶオフィスに替え、同期という近い相手の例を示す
     from: 20
@@ -367,7 +374,7 @@ scenes:
     slot: 5
     credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308.／Photo: Pexels'
   - type: diagram
-    cut_reason: 【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる
+    cut_reason: 【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる。決め文「仕組みなのよ」（間）まで保持する
     from: 29
     diagram:
       type: sketch
@@ -402,6 +409,11 @@ scenes:
           icon: trending_down
           text: 脳の反応 ↓
           after: 反応が下がったの
+  - type: image
+    cut_reason: 【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで
+    from: 36
+    slot: 6
+    credit: 'Photo: Annushka Ahuja / Pexels'
 - id: 4
   title: 上を見るから苦しいとは限らない
   chapter_title: 上を見るから、苦しいのか
@@ -498,7 +510,7 @@ scenes:
     slot: 3
     credit: 'Photo: Szcze hoo / Pexels'
   - type: diagram
-    cut_reason: 【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる
+    cut_reason: 【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる。決め文「何と比べたか、よ」（間）まで保持する
     from: 11
     diagram:
       type: sketch
@@ -532,6 +544,16 @@ scenes:
         text: 10点満点・競技直後
         at: 11
         after: 7.1点
+  - type: image
+    cut_reason: 【保持の分割】表彰台の写真に戻し、研究の限定を言う間の継続カット
+    from: 23
+    slot: 4
+    credit: 'Photo: Szcze hoo / Pexels'
+  - type: image
+    cut_reason: 【S5用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ
+    from: 28
+    slot: 5
+    credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: 銀が上
     reading: ギンガウエ
@@ -667,15 +689,15 @@ scenes:
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
-    cut_reason: 【保持の分割】同じ窓辺写真を保持したまま継続カット
-    from: 21
+    cut_reason: 【教室へ戻る】研究の限定を言う位置で教室の写真に戻し、シーン末まで保持
+    from: 22
     slot: 4
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
-    cut_reason: 【保持の分割】同じ窓辺写真を保持したまま継続カット（2）
+    cut_reason: 【保持の分割】同じ教室写真を保持したまま20秒超を避けるための継続カット
     from: 24
     slot: 5
-    credit: 'Photo: cottonbro studio / Pexels'
+    credit: 'Photo: RDNE Stock project / Pexels'
 - id: 6
   title: SNS は相手を選ばせない
   chapter_title: null
@@ -810,6 +832,11 @@ scenes:
     from: 26
     slot: 9
     credit: 'Photo: kaboompics / Pexels'
+  - type: image
+    cut_reason: 【パーティーへ戻る】まとめの位置でパーティー写真に戻し、章末の問いへ渡す
+    from: 27
+    slot: 10
+    credit: 'Photo: Pavel Danilyuk / Pexels'
 - id: 7
   title: 眺めるだけの 10 分が、夜の気分を下げる
   chapter_title: 眺めるだけで、気分は落ちるのか
@@ -865,7 +892,7 @@ scenes:
   - text: 眺めてから気分が下がるまでに、何があったのか。妬みよ。眺める、妬む、気分が下がる、の順ね。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.8
   - text: 同じ10分でも、眺めるだけなら夜の気分が下がる。自分から動いた組は、下がらなかったのよ。
     speaker: めたん
     expression: serious
@@ -901,9 +928,30 @@ scenes:
     from: 8
     slot: 3
     credit: 'Photo: SHVETS production / Pexels'
-  - type: diagram
-    cut_reason: 【因果の鎖】眺めるだけ→妬み→夜の気分が下がる、を1本の鎖で見せる。動く組の変化なしはcaptionで補う
+  - type: image
+    cut_reason: 【結果】同じ暗い部屋の写真を保持したまま、9%低下／変化なしをテロップで出す
     from: 10
+    slot: 4
+    credit: 'Photo: SHVETS production / Pexels'
+    telop: '眺める組: 夜の気分 約9％低下／動く組: 変化なし'
+  - type: image
+    cut_reason: 【保持の分割】同じ暗い部屋の写真を保持したまま20秒超を避けるための継続カット
+    from: 14
+    slot: 5
+    credit: 'Photo: SHVETS production / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じ暗い部屋の写真を保持したまま20秒超を避けるための継続カット（2）
+    from: 18
+    slot: 6
+    credit: 'Photo: SHVETS production / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じ暗い部屋の写真を保持したまま20秒超を避けるための継続カット（3）
+    from: 19
+    slot: 7
+    credit: 'Photo: SHVETS production / Pexels'
+  - type: diagram
+    cut_reason: 【因果の鎖】眺めるだけ→妬み→夜の気分が下がる、を1本の鎖で見せる。三要素は「眺める、妬む、気分が下がる、の順ね」の1キューに語同期。動く組の変化なしはcaptionで補い、決め文「下がらなかったのよ」（間）まで保持する
+    from: 22
     diagram:
       type: narrative
       layout: chain
@@ -911,13 +959,13 @@ scenes:
       - id: watch
         text: 眺めるだけ
         icon: visibility
-        at: 10
-        after: 眺めた組だけ
+        at: 24
+        after: 眺める
       - id: envy
         text: 妬み
         icon: mood_bad
-        at: 23
-        after: 妬みよ
+        at: 24
+        after: 妬む
       - id: mood_down
         text: 夜の気分↓9%
         icon: trending_down
@@ -925,8 +973,18 @@ scenes:
         after: 気分が下がる
       caption:
         text: 動く組は変化なし
-        at: 11
-        after: 動いた組には変化がなかった
+        at: 26
+        after: 下がらなかったのよ
+  - type: image
+    cut_reason: 【落ち着いて限定】明るい部屋のノートPCの写真に戻し、限定条件を言ってシーン末まで
+    from: 27
+    slot: 8
+    credit: 'Photo: kaboompics / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じノートPCの写真を保持したまま20秒超を避けるための継続カット
+    from: 31
+    slot: 9
+    credit: 'Photo: kaboompics / Pexels'
 - id: 8
   title: 「やめればいい」への答え
   chapter_title: null
@@ -934,7 +992,7 @@ scenes:
   - text: 勢いがいいわね。でも、答えは半分だけ正解よ。やめれば少し楽になる。でも、比べる癖は消えないの。
     speaker: めたん
     expression: smile
-    pause_after: 0.35
+    pause_after: 0.8
   - text: SNS を実際にやめてもらう実験もあるのよ。スタンフォード大学とニューヨーク大学の経済学者たちが、2020年に発表したの。
     speaker: めたん
     expression: explain
@@ -958,7 +1016,7 @@ scenes:
   - text: 参加した学生の一人は、こんな感想を残しているわ。「他人の人生と自分を比べなくなったことが、思ったよりずっと効いた」。
     speaker: めたん
     expression: normal
-    pause_after: 0.45
+    pause_after: 0.9
   - text: やっぱりやめれば効くのだ！ 今すぐアプリを消す指がうなるのだ！
     speaker: ずんだもん
     expression: delighted
@@ -1116,7 +1174,7 @@ scenes:
   - text: それどころか、生活の満足度は、かえって上がったのよ。
     speaker: めたん
     expression: explain
-    pause_after: 0.35
+    pause_after: 0.7
   - text: この実験は社交生活の話だから、仕事に当てはめるのは私の提案ね。
     speaker: めたん
     expression: normal
@@ -1153,21 +1211,21 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: board
-    cut_reason: 【板の進行1/4】見出しだけを出す
+    cut_reason: 【道しるべ】使い直す前に、壊れた二つの前提を振り返る板を出す（強調なし）
     from: 1
-    telop: 比べ方の使い直し
+    telop: '比較の、壊れた二つの前提
+
+      ① 誰と比べるか
+
+      ② 相手の何を見るか'
   - type: board
-    cut_reason: 【保持の分割】同じ見出しの板を保持したまま10秒超を避けるための継続ビート
-    from: 3
-    telop: 比べ方の使い直し
-  - type: board
-    cut_reason: 【板の進行2/4】①（見えない部分も数に入れる）を書き足す
+    cut_reason: 【板の進行1/3】使い直しの板へ切り替え、①（見えない部分も数に入れる）を出す
     from: 4
     telop: '比べ方の使い直し
 
       ① 見えない部分も数に入れる'
   - type: board
-    cut_reason: 【板の進行3/4】②（話しかける）を書き足す
+    cut_reason: 【板の進行2/3】②（話しかける）を書き足す
     from: 9
     telop: '比べ方の使い直し
 
@@ -1176,16 +1234,11 @@ scenes:
       ② 話しかける'
   - type: image
     cut_reason: 【話しかける例】カフェで向かい合って話す写真に替え、二つ目の使い直しを示す
-    from: 10
+    from: 12
     slot: 1
     credit: 'Photo: RDNE Stock project / Pexels'
-  - type: image
-    cut_reason: 【保持の分割】同じカフェ写真を保持したまま継続カット
-    from: 12
-    slot: 2
-    credit: 'Photo: RDNE Stock project / Pexels'
   - type: board
-    cut_reason: 【板の進行4/4】③（比べる相手を自分で決める）を書き足して三つ揃える
+    cut_reason: 【板の進行3/3】③（比べる相手を自分で決める）を書き足して三つ揃える
     from: 16
     telop: '比べ方の使い直し
 
@@ -1195,23 +1248,18 @@ scenes:
 
       ③ 比べる相手を自分で決める'
   - type: image
-    cut_reason: 【相手を選ぶ例】友人数人の後ろ姿に替え、三つ目の使い直しを示す
-    from: 17
-    slot: 3
-    credit: 'Photo: Kassia Melo / Pexels'
-  - type: image
-    cut_reason: 【結果】同じ写真を保持したまま、結果をテロップで出す
+    cut_reason: 【相手を選ぶ例】友人数人の後ろ姿に替え、三つ目の使い直しの結果をテロップで出す
     from: 19
-    slot: 4
+    slot: 2
     credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A. コーネル大学 154人／Photo: Kassia Melo / Pexels'
     telop: 比べる相手を変えると、『自分の方が劣っている』感覚が消えた
   - type: image
     cut_reason: 【保持の分割】同じ写真を保持したまま継続カット
     from: 21
-    slot: 5
+    slot: 3
     credit: 'Photo: Kassia Melo / Pexels'
   - type: diagram
-    cut_reason: 【S4の再掲】銀と銅の対比図解をまとめて一度に再掲し、何を基準にしたかで見え方が変わることを思い出させる
+    cut_reason: 【S4の再掲】銀と銅の対比図解をまとめて一度に再掲し、何を基準にしたかで見え方が変わることを思い出させる。決め文「自分で決めるのよ」（間2.5）まで保持する
     from: 23
     diagram:
       type: sketch
@@ -1241,6 +1289,11 @@ scenes:
         to: gold2
       - from: bronze2
         to: fourth2
+  - type: image
+    cut_reason: 【決め文の保持後】友人の後ろ姿の写真に戻し、シーン末まで保持
+    from: 29
+    slot: 4
+    credit: 'Photo: Kassia Melo / Pexels'
 - id: 10
   title: 結び（冒頭の夜に戻る）
   chapter_title: null
@@ -1276,7 +1329,7 @@ scenes:
   - text: 比べること自体は、自分の位置を知るための方法よ。ずんだもんを苦しめていたのは、その使い方だったの。
     speaker: めたん
     expression: normal
-    pause_after: 1.5
+    pause_after: 2.0
   - text: それなら、今夜は眠れそうね。頑張って、ずんだもん。
     speaker: めたん
     expression: smile
