@@ -58,7 +58,8 @@
   各アンカーは素材メモの「推奨」候補を採用。見つからなかった3箇所の判断:
   S4表彰台=無人の表彰台（podium_a）、S8タイマー=タイマー単独（timer_b。stopwatch画面）、
   S8ランニング=後ろ姿単独（running_c）。S3のMRI写真はCTの可能性があるが汎用の検査装置
-  カットとして採用（mri_a）。S1の時計は薬瓶が写らない方（clock_b）。
+  カットとして採用（mri_a）。S1の時計は clock_b（4:12）がテロップ「3時まで眠れなかった」と
+  食い違うため、2026-09-13 に clock_c（3:33表示）へ差し替え（Issue #38）。
 """
 from __future__ import annotations
 
@@ -106,7 +107,7 @@ CREDIT = {
 SOURCE_FILE = {
     "phone": "stock/s01_phone_a.jpg",
     "handshake": "stock/s01_handshake_a.jpg",
-    "clock": "stock/s01_clock_b.jpg",
+    "clock": "stock/s01_clock_c.jpg",
     "office2": "stock/s02_office_b.jpg",
     "scale": "stock/s03_scale_a.jpg",
     "office3": "stock/s03_office_a.jpg",
