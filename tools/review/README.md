@@ -21,11 +21,13 @@
 3. `review_clarity.py`（視聴者の理解と主題への適合。理解度・説明の抜け・主題への適合・直接表現・
    冗長婉曲・構成の切れ味）
 4. `review_dialogue.py`（セリフ。自然さ・キャラらしさ・テンポ・表情タグ・面白さ）
-5. `review_transitions.py`（章のつなぎ。つなぎの自然さ・予告の具体性・章カードとの整合・反復）
-6. `review_pauses.py`（間・息継ぎ。シーン YAML の `pause_after` が対象なので、YAML 生成後に回す）
-7. `../preflight.py`（レンダ前の機械チェック一括。読みの突合・長いキュー・板だけの区間・要確認
+5. `review_ai_tone.py`（AI らしさ。セリフが台本の構成・規則を宣言する「文書」になって
+   いないか）
+6. `review_transitions.py`（章のつなぎ。つなぎの自然さ・予告の具体性・章カードとの整合・反復）
+7. `review_pauses.py`（間・息継ぎ。シーン YAML の `pause_after` が対象なので、YAML 生成後に回す）
+8. `../preflight.py`（レンダ前の機械チェック一括。読みの突合・長いキュー・板だけの区間・要確認
    文字・ラベル長・素材ファイルの存在）
-8. レンダ後に `review_video.py`（映像）と `review_reading.py`（読み上げ・ASR）
+9. レンダ後に `review_video.py`（映像）と `review_reading.py`（読み上げ・ASR）
 
 ## 前提
 
@@ -160,6 +162,59 @@ PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" 
 | オプション | 既定 | 説明 |
 |---|---|---|
 | `--out` | `references/{実行日}-{フォルダ名}-clarity-review.md` | 出力先パス |
+| `--timeout` | 900秒 | codex exec のタイムアウト |
+| `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
+
+## review_ai_tone.py（AI らしさレビュー）
+
+台本（対話台本・ナレーション台本の両方に対応）を、**セリフが台本の構成・規則を宣言する
+「文書」になっていないか**の観点でGPTにレビューさせる（2026-09-13 追加）。ユーザー指摘
+「AI 独特の表現でスッと入ってこない」箇所があったが、既存のレビュー（`review_dialogue.py`
+のセリフの自然さ・キャラらしさ等）ではこれを拾えなかったことへの対応。
+
+判定軸は一つ: **「その台詞が更新するのは『状況』か『文書』か」**（出来事・数字・判断を
+進めるなら状況＝残す。台本の構成・規則・予告を語るなら文書＝削る）。参考: k16shikano
+「認知リズムを生むための日本語ライティング規範」の「装置は実現するものであって、宣言する
+ものではない」。
+
+`review_clarity.py`（対話台本・ナレーション台本の両対応の自動判別）を雛形にし、codex exec
+呼び出し（`review_script.py` から import）・対話台本の抽出（`review_dialogue.py` から
+import）・ナレーション台本の抽出（`review_script.py` から import）をそのまま流用している。
+キャラクター設定は `review_transitions.py` と同じく、特定動画の題材に依存しない汎用版を
+使う。
+
+```
+cd C:\Users\shuya\Projects\draft-explanation-video
+PYTHONUTF8=1 "C:/Users/shuya/Projects/script-to-video/.venv/Scripts/python.exe" ^
+    tools/review/review_ai_tone.py scripts/20260913-comparison-kamishibai/20260913-comparison-kamishibai.md
+```
+
+依頼する9観点:
+1. 骨組みの実況（構成・章の予告・レビュー規則を台詞で宣言している行）
+2. 規則語彙の漏出（「決め文」「限定」「推論」「予告」「前提」等が台詞に出ている行）
+3. 対句・決め台詞（コピー調・標語調の締め）
+4. 読点刻みと語尾置き（読点で刻んで語尾だけ置く型）
+5. 名詞句の唱和（同じ名詞句を章をまたいで繰り返す。章の入口・結びで現在地を示す1回は許容）
+6. 要約だけの相づち（主語のない要約の相づち。「僕」主語の当事者の言い方への言い直し案）
+7. 理論名の先出し（固有名詞・年・理論名が場面より先に来る行）
+8. 息継ぎの欠如（言い淀み・言い直し・脱線が一つもないシーン）
+9. 拍（長い断定文が3行以上連続する箇所）
+
+各指摘には「該当行の引用・種別・理由・言い直し案」を必須で含める。言い直し案はめたん
+「〜のよ」「〜わ」、ずんだもん「〜のだ」「僕」の口癖を保つ。出力の最後に「最優先で直す
+べき5点」と「このレビューが誤検出しやすい点」（口癖自体・板や章カードの文言は対象外）を
+出力させる。
+
+- 出力先の既定: `references/{実行日 YYYYMMDD}-{台本フォルダ名}-ai-tone-review.md`
+  （`--out` で変更可）。
+- 台本 md の対話台本・ナレーション台本の自動判別は `review_clarity.py` と同じ
+  `is_dialogue_script`（`**話者**（表情）: 本文` 行の有無）で行う。
+
+### 主なオプション
+
+| オプション | 既定 | 説明 |
+|---|---|---|
+| `--out` | `references/{実行日}-{フォルダ名}-ai-tone-review.md` | 出力先パス |
 | `--timeout` | 900秒 | codex exec のタイムアウト |
 | `--codex-path` | 自動検出 | codex 実行ファイルの明示指定 |
 
