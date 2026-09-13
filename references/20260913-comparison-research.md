@@ -397,3 +397,159 @@
 - 「Festingerの理論＝人は常に他人と比較する」という一般化: Festinger自身の理論は「客観的な
   基準がない場合に限り」比較に頼るという条件付きの主張であり、無条件の一般化は原論文の
   主張を超える。
+
+---
+
+## 追記（再取得の結果, 2026-09-13）
+
+前回未取得だった3本について入手先の当たりを変えて再挑戦した結果、**Fliessbach et al. 2007
+と Hunt et al. 2018 は原論文の本文を取得できた**。**Solnick & Hemenway (1998, 2005) は
+今回も取得できず**（既存の「3. Solnick & Hemenway 1998」節・「使えない・要注意リスト」節の
+記載は取得できずのまま変わらない。以下は追加で試した入手先の記録）。
+
+### 3′. Solnick & Hemenway 1998／2005 — 今回も取得できず
+
+- 取得可否: **取得できず**。Unpaywallでは1998年論文が `oa_status: hybrid`（Elsevier本文が
+  条件付きオープンアクセス）と表示されるが、実際にDOI経由でScienceDirectへ到達すると
+  リダイレクトスタブのみでJS描画される本文には到達できなかった（機関認証なしでは本文表示
+  されない模様）。2005年AER P&Pは Unpaywall で `oa_status: closed`。
+- 試した入手先（今回分。前回分と合わせて延べ8か所以上）:
+  1. Semantic Scholar（該当論文ページ、PDFリンクなし）
+  2. DOI経由 ScienceDirect（`doi.org/10.1016/s0167-2681(98)00089-4` → リダイレクトスタブ止まり）
+  3. IDEAS/RePEc（"not available for download" と明記）
+  4. ResearchGate（2005年AER P&P版。403 Forbidden）
+  5. ProQuest openview（プレビューのみ、本文非表示）
+  6. AEAweb記事ページ（PDFボタンはあるがURL非公開、機関購読が必要）
+  7. CORE.ac.uk（API検索でSolnick & Hemenway 1998のエントリはヒットするが `downloadUrl` 空、
+     `fullText: "Not available for public API users."`）
+  8. WU Vienna Digital Collections（`viewer.wu.ac.at` の `piresolver`。CORE経由で
+     `sourceFulltextUrls` に発見したが、Anubis（bot対策のProof-of-Work chall）で
+     ブロックされアクセス不可）
+  9. Harvard Kennedy School "Rank as an Incentive" PDF、大学講義PDF等の二次引用文献
+     （Solnick & Hemenway の具体的な数値表を再掲しているものは見つからず）
+- 結論: 本文入手ルートを一通り試したが、機関購読なしでは到達不可能という状況に変わりはない。
+  既存節の「複数の独立した二次資料が一致して『約半数がA（相対所得）を選んだ』『257名』
+  『容姿・上司の評価が最強、休暇が最弱』と報告している」という記載は今回の調査でも追加で
+  裏付けられた（同じ257名・同じ趣旨の記述が独立した複数の二次資料で再確認できた）が、
+  **正確なパーセンテージ・統計値の一次資料での確認はできていない**ため、既存の「要確認」
+  扱いを維持する。
+
+### 4′. Fliessbach et al. 2007 — 本文取得済み（訂正あり）
+
+- 取得可否: **本文取得済み**。CORE.ac.uk のAPI検索（`api.core.ac.uk/v3/search/works`）で
+  Maastricht University Research Portal 経由の複製が見つかり、直接ダウンロードURL
+  （`https://core.ac.uk/download/231301375.pdf`）からPublisher's PDF（Science本誌の
+  レイアウトそのままのバージョン・オブ・レコード）を取得できた。全6ページ、全文OCR確認。
+  ※前回・今回とも `cris.maastrichtuniversity.nl` への直接アクセスはCloudflare認証チャレンジで
+  ブロックされたが、CORE.ac.uk が同じファイルをキャッシュ配信しており、そちらは認証なしで
+  取得できた。
+- 入手先URL: https://core.ac.uk/download/231301375.pdf
+  （landing page: https://cris.maastrichtuniversity.nl/en/publications/b054e09e-1668-4028-94da-c9388a488e56）
+- **所属の訂正（既存「4. Fliessbach et al. 2007」節の記載を修正する情報）**: 既存節では
+  「著者全員がIZA・Life and Brain Center Bonn・ボン大学経済学部の3機関全部に所属」と
+  書いたが、これはUnpaywallのメタデータ（各著者に3つの所属文字列がまとめて重複表示される
+  仕様上の癖）に基づく誤りだった。**本文の著者欄（p.1305, 脚注1–3）で確認した正しい所属は
+  著者ごとに異なる**:
+  - Life and Brain Center Bonn, Department of NeuroCognition and Clinic of Epileptology
+    （脚注1）: K. Fliessbach, B. Weber, P. Trautner, C. E. Elger
+  - Institute for the Study of Labor (IZA), Bonn（脚注2）: T. Dohmen, U. Sunde
+  - University of Bonn, Department of Economics（脚注3）: A. Falk（連絡先著者。
+    E-mail: armin.falk@uni-bonn.de）
+  - 論文本文には各著者の肩書き（教授／准教授等）の記載はなく、所属機関名のみ。Armin Falk が
+    教授であったか等は本論文からは確認できない（別途確認が必要）。
+- 数値（本文中、所在つき）:
+  - 対象: **19組（38名）の被験者ペア**のうち、5名を除外し**33名分のデータを解析**
+    （p.1306）。隣接する2台のMRIスキャナーで同時にスキャン。
+  - 課題: 画面上のドットの数を推定する簡単な作業課題。300試行、1試行ごとに自分と相手の
+    正誤・報酬額のフィードバックを提示（p.1306, Fig. 1）。正答率は全体で**81%（SD 0.07）**
+    （p.1306）。
+  - 報酬条件（Table 1, p.1306）: 両者不正解（C1, 6.5%）／自分のみ正解（C2・C3合計14.3%、
+    高群60€・低群30€）／相手のみ正解（C4・C5合計13.3%）／**両者正解（C6〜C11合計65.9%）**
+    ＝関心の中心となる条件。両者正解時は「絶対額（高60€系 or 低30€系）×相対比率
+    （自分:相手＝1:2, 1:1, 2:1）」の2×3要因計画（例: 1:2高＝自分60€・相手120€、
+    2:1高＝自分120€・相手60€）。
+  - 主結果（Results, p.1307）: 線条体（ventral striatum）のBOLD反応は相対報酬の比率
+    （1:2 / 1:1 / 2:1）に強く依存する主効果あり: **F(2,31) = 8.0, P < 0.001**。反応は
+    「自分が相手より多くもらった（2:1）＞同額（1:1）＞自分が相手より少なくもらった（1:2）」
+    の順で強かった（絶対額の高低やその交互作用は非有意）。
+  - 互恵性との相関（p.1308）: 線条体反応の相対報酬への感度は、被験者の互恵的傾向の自己申告
+    （実験後アンケート）と正の相関: **t = 2.10, P = 0.048**。
+  - Discussion（p.1308）の直接引用: "Receiving less than another subject was associated
+    with a reduced BOLD signal in this area."（相手より少なくもらうと、この領域＝線条体の
+    BOLD信号が低下した）
+- 台本で使えるポイント: 「絶対額は同じでも、相手より多いか少ないかだけで脳の報酬系（線条体）の
+  反応そのものが変わる」という主張は、**F(2,31)=8.0, P<0.001の統計値と19ペア・33名という
+  被験者規模つきで正確に紹介できる**ようになった。「自分の取り分が変わらなくても、相手の
+  取り分次第で脳の反応が上下する」という一文は原文の趣旨に忠実。
+- 注意点・言い過ぎになる点: 被験者は19ペア・33名という比較的小規模な実験。課題は「ドット数の
+  推定」という単純作業であり、日常生活の比較全般に一般化するには注意が必要（著者ら自身も
+  Discussionで「文脈情報が線条体反応に与える影響」という限定的な主張にとどめている）。
+  「脳が反応する＝苦痛や不幸を感じている」という短絡的な言い換えは避け、原文の
+  「reward-related brain activity（報酬関連の脳活動）」という表現に忠実であること。
+
+### 8-B′. Hunt, Marx, Lipson & Young 2018 — 本文取得済み
+
+- 取得可否: **本文取得済み**。`creatorsfreepress.wordpress.com` に転載されていた本文PDF
+  （出版社Guilford誌面のレイアウトそのまま、全18ページ）を取得し、全文OCR確認。
+- 入手先URL: https://creatorsfreepress.wordpress.com/wp-content/uploads/2020/09/56d31-jscp.2018.37.10.751.pdf
+  （原典: *Journal of Social and Clinical Psychology*, 37(10), 751–768, 2018）
+- 所属（p.751, 著者欄）: Melissa G. Hunt, Rachel Marx, Courtney Lipson, Jordyn Young ——
+  全員 **University of Pennsylvania**（心理学部。個別の学部名の記載は本文になし、
+  "University of Pennsylvania" とのみ表記）。脚注: "Address correspondence to
+  Melissa G. Hunt, 425 S. University Ave., Philadelphia, PA 19104;
+  E-mail: mhunt@psych.upenn.edu"（p.751）。
+  - **肩書き**: 論文本文には肩書き（Associate Director of Clinical Training 等）の記載は
+    ない（所属機関名のみ）。UPenn心理学部の公式教員ページ（researchgate profile・
+    psychology.sas.upenn.edu）では Melissa Hunt が「Associate Director of Clinical
+    Training, Department of Psychology」と紹介されているが、**これは論文本文ではなく
+    大学公式サイトでの確認**であり、CLAUDE.mdの「肩書きも一次資料で確認」の基準からは
+    一段弱い（論文自体には書かれていない）。台本で肩書きに触れる場合は「ペンシルベニア
+    大学のハント准教授（心理学部）」ではなく、まずは学部名までの表記にとどめるのが安全。
+- 数値（本文中、所在つき）:
+  - 対象（Methods/Participants, p.754）: **143名**（女性108名・男性35名）のペンシルベニア
+    大学学部生。秋学期72名・春学期71名。Facebook・Instagram・Snapchatのアカウント保有と
+    iPhone所有が参加条件。
+  - 割付・介入（p.754, 757）: 1週間のベースライン自己監視後、実験群は
+    **Facebook・Instagram・Snapchatをそれぞれ1日10分・合計最大30分/日に制限**、対照群は
+    通常利用のまま3週間追跡。
+  - 操作チェック（Manipulation Check, p.760）: 実験群は対照群より有意に利用時間が少なかった
+    （week1 **t(117)=5.69, p<.001**／week2 **t(119)=6.516, p<.001**／week3
+    **t(113)=5.78, p<.001**）。実験群の週間利用時間は week1 M=179分(SD=140)、
+    week2 M=166分(SD=149)、week3 M=176分(SD=155)で、制限枠（210分/週）内に収まっていた。
+  - **孤独感**（p.761）: ベースライン孤独感と実際の利用量を統制したANCOVAで、実験群は
+    week4時点のUCLA孤独感尺度が対照群より有意に低かった: **F(1,111) = 6.896, p = .01**。
+  - **抑うつ**（p.761–762）: 条件×ベースライン抑うつの交互作用が有意
+    （**F(1,111) = 5.188, p < .05**）。BDIカットオフ14で高低群に分割すると、week4時点で
+    ベースライン水準の主効果（**F(1,111)=44.5, p<.001**）・条件の主効果
+    （**F(1,111)=4.5, p<.05**）がともに有意。**ベースライン抑うつが高かった実験群は
+    BDI平均23→14.5へ臨床的に意味のある改善**。同条件の対照群はBDI平均22.8→22.83と
+    ほぼ変化なし。ベースライン抑うつが低かった実験群はBDI平均5.1→4.1と統計的には有意だが
+    臨床的には意味のない微減、同条件の対照群は5→4.67で有意差なし。
+  - その他の指標（社会的支援・FOMO・不安・自尊心・心理的well-being）は群間差なし（p.762）。
+    ただしFOMOと不安は両群とも時間経過で有意に低下（自己モニタリング自体の効果と推測、
+    著者ら自身の解釈）。
+  - 追跡調査（follow-up）はp.763記載の通り脱落率79%（完全データ30名=21%のみ）で
+    **分析対象から除外**（サンプル過小のため）。
+  - **直接引用として台本で使える一文**（p.763, Discussion。被験者の発言）:
+    "Not comparing my life to the lives of others had a much stronger impact than I
+    expected, and I felt a lot more positive about myself during those weeks."
+    （他人の人生と自分を比べなくなったことが、思っていたよりずっと強い影響を持っていた。
+    あの数週間は自分についてずっと前向きな気持ちになれた）
+  - 結論部（p.767）の一文: "It is ironic, but perhaps not surprising, that reducing
+    social media, which promised to help us connect with others, actually helps people
+    feel less lonely and depressed."（他者とつながるためのはずのSNSを減らすことが、
+    実際には孤独感と抑うつを減らす助けになるというのは皮肉だが、驚くには当たらないかも
+    しれない）
+- 台本で使えるポイント: 「SNSを1日30分に制限した3週間のランダム化実験で、孤独感
+  （UCLA尺度、F(1,111)=6.896, p=.01）と、特にもともと抑うつ傾向が強かった人の抑うつ症状
+  （BDI平均23→14.5）が有意に改善した」という具体的な統計値・数値で紹介できる。被験者の
+  「他人と比べなくなったら前向きになれた」という発言は、社会的比較そのものへの言及として
+  ナレーションでそのまま使える強い引用。
+- 注意点・言い過ぎになる点: 対象はペンシルベニア大学の学部生143名（iPhone所有者に限定、
+  Android除外）という偏ったサンプル。抑うつの改善は**ベースラインで抑うつ傾向が高かった
+  被験者に限って顕著**であり、全員が同程度に改善したわけではない（低ベースライン群の改善は
+  統計的有意でも「臨床的に意味のない」1点の変化と著者ら自身が明記、p.762）。社会的支援・
+  自尊心・心理的well-being・FOMO・不安には**群間の有意差はなかった**点も見落とさないこと
+  （FOMO・不安の低下は両群共通で、SNS制限固有の効果ではなく自己モニタリングの効果と
+  著者らは解釈）。追跡調査（1か月後）は脱落率が高く分析不能だったため、**効果の持続性は
+  この論文からは分からない**。
