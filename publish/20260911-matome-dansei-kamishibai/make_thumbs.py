@@ -104,6 +104,12 @@ def darken_band(base: Image.Image, y0: int, y1: int, amount: float) -> None:
     base.alpha_composite(veil, (0, y0))
 
 
+def darken_rect(base: Image.Image, x0: int, y0: int, x1: int, y1: int, amount: float) -> None:
+    """base の矩形 (x0,y0)-(x1,y1) だけを黒く沈める（帯を画面の一部だけに限定する版）。"""
+    veil = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, round(255 * amount)))
+    base.alpha_composite(veil, (x0, y0))
+
+
 def load_puppet(character_dir: str, expression: str, target_height: int) -> Image.Image:
     """立ち絵を読み、余白をトリムして目標高にリサイズし、白い縁を付ける。"""
     raw = load_sprite(SPRITES / character_dir, expression)
@@ -297,6 +303,62 @@ def make_thumb_c() -> Image.Image:
 
 
 # ---------------------------------------------------------------------------
+# D: 横長の生成イラスト（人物は右1/3、腰から上）＋ 中央やや左の大きな金の「？」
+#    ＋ 上下2行の文言（2026-09-13 構図やり直し指示: 縦長画像を16:9に切って顔が
+#    アップになり過ぎ、服装も帯で隠れていた反省を踏まえ、背景自体を横長で
+#    再生成し、暗化帯は左2/3だけに限定して人物には掛けない）。
+# ---------------------------------------------------------------------------
+
+THUMB_BG_DIR = OUT / "thumb-bg"
+
+LEFT_ZONE_W = round(W * 2 / 3)  # 853px。人物のいる右1/3には帯もマークも掛けない。
+
+
+def make_thumb_d(bg_path: Path) -> Image.Image:
+    bg = Image.open(bg_path).convert("RGBA")
+    if bg.size != (W, H):
+        bg = bg.resize((W, H), Image.LANCZOS)
+
+    # 上下の暗化帯は左2/3だけ（人物のいる右1/3は明るいまま＝服装・表情がそのまま見える）。
+    darken_rect(bg, 0, 0, LEFT_ZONE_W, round(H * 0.22), 0.35)
+    darken_rect(bg, 0, round(H * 0.82), LEFT_ZONE_W, H, 0.35)
+
+    text_cx = round(W * 0.38)  # 「？」と同じ x に文言も中央寄せする。
+
+    # 中心やや左（x≈38%, y≈50%）に大きな金色の「？」（高さ画面の45%）。
+    mark_h = round(H * 0.45)
+    mark_font = fit_bold_font("？", max_width=round(LEFT_ZONE_W * 0.9), max_height=mark_h, stroke_width=20)
+    draw_mixed_center(bg, [("？", GOLD)], text_cx, round(H * 0.50), mark_font, stroke_width=20)
+
+    # 上段（最上部の帯、高さ22%）: 白文字
+    title1 = "誠実な男性はなぜモテない？"
+    f1 = fit_bold_font(title1, max_width=round(LEFT_ZONE_W * 0.92), max_height=round(H * 0.15), stroke_width=8)
+    draw_mixed_center(bg, [(title1, WHITE)], text_cx, round(H * 0.11), f1, stroke_width=8)
+
+    # 下段（最下部の帯、高さ18%）: 金文字
+    title2 = "モテ要素を科学する"
+    f2 = fit_bold_font(title2, max_width=round(LEFT_ZONE_W * 0.66), max_height=round(H * 0.12), stroke_width=9)
+    draw_mixed_center(bg, [(title2, GOLD)], text_cx, round(H * 0.91), f2, stroke_width=9)
+
+    # 立ち絵: めたんは左下に小さく（暗化帯の上、文言と重ならない隅）。
+    metan_h = round(H * 0.28)
+    metan = load_puppet("metan", "explain", metan_h)
+    metan_cx = round(W * 0.06)
+    metan_top_y = H - round(metan_h * 0.62)
+    paste(bg, metan, metan_cx - metan.width / 2, metan_top_y)
+
+    # ずんだもんは右上の隅に小さく。人物は頭頂が画面上端から10%ほど下に来る構図
+    # なので、右上の頭上の余白（人物と重ならない）に収まるサイズに抑える。
+    zun_h = round(H * 0.19)
+    zun = load_puppet("zundamon", "confused", zun_h)
+    zun_cx = round(W * 0.965)
+    zun_top_y = round(H * 0.02)
+    paste(bg, zun, zun_cx - zun.width / 2, zun_top_y)
+
+    return bg
+
+
+# ---------------------------------------------------------------------------
 # コンタクトシート
 # ---------------------------------------------------------------------------
 
@@ -330,6 +392,20 @@ def main() -> None:
     sheet = make_contact_sheet(images, labels)
     p = OUT / "thumb-contact.jpg"
     sheet.save(p, quality=88)
+    print(p)
+
+    d_images = []
+    d_labels = ["D1", "D2", "D3"]
+    for i, label in enumerate(d_labels, start=1):
+        img = make_thumb_d(THUMB_BG_DIR / f"bg-{i}.png")
+        p = OUT / f"thumb-{label}.png"
+        img.convert("RGB").save(p, "PNG", optimize=True)
+        print(p)
+        d_images.append(img)
+
+    d_sheet = make_contact_sheet(d_images, d_labels)
+    p = OUT / "thumb-contact-D.jpg"
+    d_sheet.save(p, quality=88)
     print(p)
 
 
