@@ -287,9 +287,11 @@
 **ずんだもん**（smile）: なるほど。眺める10分を、話しかける10分に変えるのだ。
 **めたん**（explain）: 三つ目。比べる相手を、自分で決めること。
 **めたん**（explain）: ギロビッチ教授たちの別の実験では、比べる相手をあらかじめ指定したの。
-**めたん**（normal）: 目立つ人ではなく、あまり社交的でない知人を思い浮かべてもらうと、生活の満足度への影響が消えたのよ。
-**ずんだもん**（surprised）: 相手を変えただけで、消えるのだ？
+**めたん**（normal）: あまり社交的じゃない知人を思い浮かべて答えてもらうと、「自分の方が劣っている」という感覚が消えたの。
+**めたん**（explain）: それどころか、生活の満足度は、かえって上がったのよ。
+**ずんだもん**（surprised）: 相手を変えただけで、感覚が消えるのだ？
 **めたん**（smile）: 銀と銅で、何を見たかによって気分が違って見えたのと同じね。
+**めたん**（serious）: ただし、「下を見ろ」という話じゃないのよ。流れてきた相手を、そのまま基準にしなくていい、という話。
 **めたん**（normal）: 違いは、流れてきた相手をそのまま基準にするか、自分で選び直すか、なのよ。
 **めたん**（serious）: 比べるのをやめるんじゃない。誰と、何を見て比べるかを、自分で決めるのよ。（間 2.5）
 **ずんだもん**（thinking）: なるほど、自分で決めるのだ。流れてきたものを、僕が選び直すのだ。
@@ -298,7 +300,7 @@
 **画面**
 - 黒板文字（板 4）: 比べ方の使い直し ／ ① 見えていない部分も、数に入れる ／ ② 眺めるだけで終えず、話しかける ／ ③ 比べる相手を、自分で決める（「一つ目」「二つ目」「三つ目」で行を順に出す。番号付き）
 - 章カード: どう、使い直すのか
-- テロップ: 「比べる相手を指定すると、生活満足度への影響が消えた（コーネル大学 2017）」
+- テロップ: 「比べる相手を変えると、『自分の方が劣っている』感覚が消えた」（該当の台詞と同時）／「コーネル大学 154 人（2017）」は credit
 - 図解: なし（板 4 が主役。S4 の図 2 を「銀と銅で、何を見たかによって」で再掲してよい）
 - 貼り写真: 「話しかけること」で、カフェで二人が向かい合って話す写真（ストック。日中）→「比べる相手を、自分で決めること」で、同じ年頃の友人数人が並んで歩く後ろ姿（ストック）
 - 出典表示: Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A.
@@ -336,7 +338,7 @@
 2. Fliessbach, K., Weber, B., Trautner, P., Dohmen, T., Sunde, U., Elger, C. E., & Falk, A. (2007). Social comparison affects reward-related brain activity in the human ventral striatum. *Science*, 318(5854), 1305–1308. https://doi.org/10.1126/science.1145876 — S3（19 組・解析 33 名、相対報酬の主効果 F(2,31)=8.0, p<.001、p.1306–1307）
 3. Medvec, V. H., Madey, S. F., & Gilovich, T. (1995). When less is more: Counterfactual thinking and satisfaction among Olympic medalists. *Journal of Personality and Social Psychology*, 69(4), 603–610. https://doi.org/10.1037/0022-3514.69.4.603 — S4（Study 1 競技直後 銅 7.1 / 銀 4.8、評定者 20 名）
 4. Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think: Underestimating the prevalence of others' negative emotions. *Personality and Social Psychology Bulletin*, 37(1), 120–135. https://doi.org/10.1177/0146167210390822 — S5（Study 1a 隠した割合 40% / 13%、Study 1b 80 名・過小評価 17.2 ポイント）
-5. Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone: Why people believe others' social lives are richer than their own. *Journal of Personality and Social Psychology*, 113(6), 858–877. https://doi.org/10.1037/pspa0000105 — S6（Study 1 304 名・パーティー 82%）、S9（Study 6A 比較相手の指定で効果が消える）
+5. Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone: Why people believe others' social lives are richer than their own. *Journal of Personality and Social Psychology*, 113(6), 858–877. https://doi.org/10.1037/pspa0000105 — S6（Study 1 304 名・パーティー 82%）、S9（Study 6A 154 名。社交的でない知人を思い浮かべる条件で「自分の方が劣っている」認識が消え p=.630、生活満足度は上昇 d=0.45, p=.028。pp.871–872）
 6. Verduyn, P., Lee, D. S., Park, J., Shablack, H., Orvell, A., Bayer, J., Ybarra, O., Jonides, J., & Kross, E. (2015). Passive Facebook usage undermines affective well-being: Experimental and longitudinal evidence. *Journal of Experimental Psychology: General*, 144(2), 480–488. https://doi.org/10.1037/xge0000057 — S7（Study 1 解析 67 名・夜の気分約 9% 低下、Study 2 妬みの媒介・逆向き非有意）
 7. Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. *American Economic Review*, 110(3), 629–676. https://doi.org/10.1257/aer.20190658 — S8（4 週間停止・主観的 well-being +0.09 SD、約 80% が「良かった」、p.631）
 8. Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO: Limiting social media decreases loneliness and depression. *Journal of Social and Clinical Psychology*, 37(10), 751–768. https://doi.org/10.1521/jscp.2018.37.10.751 — S8（143 名・孤独感 F(1,111)=6.896, p=.01、参加者の発言 p.763）
@@ -349,10 +351,10 @@ v1 で使い v2 で外した研究: Vogel et al. (2014)（Facebook 利用と自�
 
 - **冒頭の例が論の前提と合うか**: 同期＝近い相手（Festinger 仮説 III の条件を満たす）。昇進報告＝相手の一番いい瞬間（Jordan の型）。夜に眺める＝受動的閲覧（Verduyn の型）。S4 末でずんだもんが「近い同期を選んだのに」と指摘し、S5 で「相手は正しい、見えているものが違う」と受ける。一致。
 - **反転の否定範囲**: S4「上を見るから苦しい、とは限らない」が否定するのは「上を見ること自体が唯一の原因」。否定しないのは「上と比べると気分が下がること」（銀メダリストはまさにそうなっている）。根拠は Medvec 一本なので「本人には聞いていない」「他人との比較というより基準の話」と限定を言う。S8「やめれば解決、は半分だけ正解」が否定するのは「全部解決」。否定しないのは「やめると楽になる」（Allcott・Hunt で肯定）。根拠は S5・S6 が SNS のない場面の研究であること。
-- **研究の帰属の向き**: Verduyn は「受動→気分」の向きで、逆向きは非有意（本文で確認）。Deri 6A は「比較対象を非社交的な人に固定すると、比較対象条件が生活満足度を直接予測しなくなる」（メモ）。台本の「あまり社交的でない知人を思い浮かべてもらうと、影響が消えた」は素材ワーカーの本文確認で最終判定（要確認）。
+- **研究の帰属の向き**: Verduyn は「受動→気分」の向きで、逆向きは非有意（本文で確認）。Deri 6A は本文 pp.871–872 で確認済み（素材メモ）: 社交的でない知人を思い浮かべる条件で「自分の方が劣っている」認識が消え、生活満足度はかえって上昇。v2 初稿の「影響が消えた」は媒介分析の直接効果の誤読だったので訂正した。「下を見ろ」と受け取られないよう、直後に一言限定を置いた。
 - **研究と提案の区切り**: S9 冒頭で「ここからは研究の結果じゃなくて、私の提案ね」と言う。三つ目だけ Deri 6A で支える。
 - **数字の主役**: S4 は 7.1／4.8 の一対だけ。S5 は 17 ポイント（40%/13% は telop の従）。S6 は 82%。S7 は 9%。S8 は「効果は小さい」（+0.09 SD は台詞で言わない）。
 
 ## 文字数
 
-v2: 5442 字（発話本文。160 発話。全シーン 1,000 字以内。最長 S3）。話速 1.1 で約 15 分。
+v2: 5521 字（発話本文。162 発話。全シーン 1,000 字以内。最長 S3）。話速 1.1 で約 15 分。
