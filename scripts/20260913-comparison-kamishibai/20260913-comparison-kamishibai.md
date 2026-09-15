@@ -242,24 +242,28 @@
 **めたん**（normal）: 資格の合否、走ったタイム、書き上げた枚数。他人がどうでも、自分の数字が出るものよ。
 **めたん**（smile）: そこでは他人を見る必要がないから、比べようがないの。実験で確かめた話じゃなくて、理屈の上での話だけどね。
 **ずんだもん**（thinking）: 資格の勉強なら、隣の人の点数は見えないのだ。
-**めたん**（explain）: それから、SNSは眺めるだけで終えないこと。落ち込んだら、いま誰と比べているのか、一人だけ名指ししてみて。
+**めたん**（explain）: それから、SNSは眺めるだけで終えないこと。気になった相手がいたら、その人に話しかけてみるの。ずんだもんなら、誰？
 **ずんだもん**（normal）: 昇進した、同期のAさんなのだ。
-**めたん**（normal）: フィードを眺めているときは、何百人分のいい瞬間と比べているの。Aさん一人になれば、普通の人間よ。
-**めたん**（explain）: 思い浮かべる相手を、目立つ人じゃない特定の知人に指定すると、劣等感が消えたの。ギロビッチ教授たちの別の実験よ。
-**ずんだもん**（sad）: でも、昇進した相手に聞くのは、ちょっと気まずいのだ…。
-**めたん**（smile）: 気まずいわよね。でも、Aさんに「どうやったのか」を聞くのよ。メッセージでもいいし、会う約束をして聞くのが一番いいわ。
+**ずんだもん**（sad）: でも、昇進した相手に話しかけるのは、ちょっと気まずいのだ…。
+**めたん**（smile）: そう思うわよね。でも、その気まずさは、たいてい思い過ごしなのよ。
+**めたん**（normal）: シカゴ大学の研究チームが、通勤電車で実験をしたわ。乗客を、隣の見知らぬ人に話しかける組と、一人で過ごす組に分けたの。
+**めたん**（explain）: 別の乗客に事前に予想してもらうと、「話しかける方が嫌な時間になる」という答えだった。でも実際は、話しかけた組の方が、通勤の満足度が高かったのよ。
+**ずんだもん**（surprised）: 予想と逆なのだ。
+**めたん**（normal）: 久しぶりに連絡する場面でも同じよ。ピッツバーグ大学などの研究で、しばらく連絡していない友人に、実際に一言メッセージを送ってもらったの。
+**めたん**（explain）: 送った側は「そんなに喜ばないだろう」と予想していたけど、受け取った側は、その予想より喜んでいたわ。
+**めたん**（smile）: だから、Aさんに「どうやったのか」を聞いていいのよ。メッセージでもいいし、会う約束をして聞くのが一番いいわ。
 **めたん**（normal）: 自分から動いた組は気分が下がらなかったし、会えば、投稿に出ていない部分まで見えるでしょう？
 **ずんだもん**（smile）: 眺める10分の代わりに、Aさんを飲みに誘うのだ。
 **めたん**（serious）: SNSをやめてしまってもいいし、続けるなら、眺めるだけで終えないことね。（間 2.0）
 
 **画面**
-- 黒板文字（板 4）: 比べ方の使い直し ／ ① 目盛りのあるものを持つ ／ ② 眺めるだけで終えず、一人に絞って聞く（①は「目盛りのあるものを一つ持てばいいのよ」、②は「それから、SNSは眺めるだけで終えないこと」で出す。番号は板だけ）
+- 黒板文字（板 4）: 比べ方の使い直し ／ ① 目盛りのあるものを持つ ／ ② 眺めるだけで終えず、その人に話しかける（①は「目盛りのあるものを一つ持てばいいのよ」、②は「それから、SNSは眺めるだけで終えないこと」で出す。番号は板だけ）
 - 章カード: 「どうすればいいのか」
-- テロップ: 「思い浮かべる相手を特定の知人に指定 → 劣等感が消えた」（「劣等感が消えたの」と同時）／「コーネル大学 154 人（2017）」（credit）
+- テロップ: 「話しかけた組の方が満足度が高かった（予想は逆）」（「満足度が高かったのよ」と同時）／「シカゴ大学 通勤電車 97 人（2014）」（credit）／「久しぶりの連絡は、相手は予想より喜ぶ」（「予想より喜んでいたわ」と同時）／「ピッツバーグ大学など 54 組（2023）」（credit）
 - 図解: なし
-- 貼り写真: 「資格の合否、走ったタイム」で、タイマー（S7 と同じ）→「落ち込んだら、いま誰と比べているのか」で、夜のスマホの手元（S1 と同じ）→「メッセージでもいいし、会う約束をして」で、カフェで二人が向かい合って話す写真
-- 出典表示: Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A. ／ Verduyn, P. et al. (2015).
-- 発音・ポーズメモ: 「Aさん」は「エーさん」。「眺めるだけで終えないことね。」の後 2.0 秒。
+- 貼り写真: 「資格の合否、走ったタイム」で、タイマー（S7 と同じ）→「気になった相手がいたら」で、夜のスマホの手元（S1 と同じ）→「通勤電車で実験をしたわ」で、電車の車内で隣り合って座る乗客（ストック。日中）→「メッセージでもいいし、会う約束をして」で、カフェで二人が向かい合って話す写真
+- 出典表示: Epley, N., & Schroeder, J. (2014). Mistakenly seeking solitude. Journal of Experimental Psychology: General, 143(5), 1980–1999. ／ Liu, P. J., Rim, S., Min, L., & Min, K. E. (2023). The surprise of reaching out. Journal of Personality and Social Psychology, 124(4), 754–771. ／ Verduyn, P. et al. (2015).
+- 発音・ポーズメモ: 「Aさん」は「エーさん」。「予想と逆なのだ。」の後 0.6 秒。「眺めるだけで終えないことね。」の後 2.0 秒。
 
 ---
 
@@ -295,10 +299,12 @@
 2. Fliessbach, K., Weber, B., Trautner, P., Dohmen, T., Sunde, U., Elger, C. E., & Falk, A. (2007). Social comparison affects reward-related brain activity in the human ventral striatum. *Science*, 318(5854), 1305–1308. https://doi.org/10.1126/science.1145876 — S3（19 組・解析 33 名、相対報酬の主効果 F(2,31)=8.0, p<.001、p.1306–1307）
 3. Medvec, V. H., Madey, S. F., & Gilovich, T. (1995). When less is more: Counterfactual thinking and satisfaction among Olympic medalists. *Journal of Personality and Social Psychology*, 69(4), 603–610. https://doi.org/10.1037/0022-3514.69.4.603 — S4（Study 1 競技直後 銅 7.1 / 銀 4.8、評定者 20 名）
 4. Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think: Underestimating the prevalence of others' negative emotions. *Personality and Social Psychology Bulletin*, 37(1), 120–135. https://doi.org/10.1177/0146167210390822 — S5（Study 1a 隠した割合 40% / 13%、Study 1b 80 名・過小評価 17.2 ポイント）
-5. Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone: Why people believe others' social lives are richer than their own. *Journal of Personality and Social Psychology*, 113(6), 858–877. https://doi.org/10.1037/pspa0000105 — S6（Study 1 304 名・パーティー 82%）、S9（Study 6A 154 名。社交的でない知人を思い浮かべる条件で「自分の方が劣っている」認識が消え p=.630、生活満足度は上昇 d=0.45, p=.028。pp.871–872）
+5. Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone: Why people believe others' social lives are richer than their own. *Journal of Personality and Social Psychology*, 113(6), 858–877. https://doi.org/10.1037/pspa0000105 — S5（Study 1 304 名・パーティー 82%）。Study 6A は v7 で S8 から外した（同期に話す流れと合わず、下方比較を勧める印象になるため。2026-09-16 ユーザー判断）
 6. Verduyn, P., Lee, D. S., Park, J., Shablack, H., Orvell, A., Bayer, J., Ybarra, O., Jonides, J., & Kross, E. (2015). Passive Facebook usage undermines affective well-being: Experimental and longitudinal evidence. *Journal of Experimental Psychology: General*, 144(2), 480–488. https://doi.org/10.1037/xge0000057 — S7（Study 1 解析 67 名・夜の気分約 9% 低下、Study 2 妬みの媒介・逆向き非有意）
 7. Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. *American Economic Review*, 110(3), 629–676. https://doi.org/10.1257/aer.20190658 — S8（4 週間停止・主観的 well-being +0.09 SD、約 80% が「良かった」、p.631）
-8. Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO: Limiting social media decreases loneliness and depression. *Journal of Social and Clinical Psychology*, 37(10), 751–768. https://doi.org/10.1521/jscp.2018.37.10.751 — S8（143 名・孤独感 F(1,111)=6.896, p=.01、参加者の発言 p.763）
+8. Epley, N., & Schroeder, J. (2014). Mistakenly seeking solitude. *Journal of Experimental Psychology: General*, 143(5), 1980–1999. https://doi.org/10.1037/a0037323 — S8（Experiment 1a 通勤電車 97 名: 話しかける組 vs 一人 t(94)=2.49, d=0.63／Experiment 1b 66 名の事前予測は逆 d=0.41／Experiment 2a バス 75 名 d=0.56）
+9. Liu, P. J., Rim, S., Min, L., & Min, K. E. (2023). The surprise of reaching out: Appreciated more than we think. *Journal of Personality and Social Psychology*, 124(4), 754–771. https://doi.org/10.1037/pspi0000402 — S8（Experiment 2 実際のメッセージ 54 組: 送り手の予測 5.57 vs 受け手 6.17, dz=.34／Experiment 3 67 組 dz=.56）
+10. Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO: Limiting social media decreases loneliness and depression. *Journal of Social and Clinical Psychology*, 37(10), 751–768. https://doi.org/10.1521/jscp.2018.37.10.751 — S8（143 名・孤独感 F(1,111)=6.896, p=.01、参加者の発言 p.763）
 
 v1 で使い v2 で外した研究: Vogel et al. (2014)（Facebook 利用と自尊心の相関。S7 の実験で足りるため削除）。
 
@@ -315,4 +321,4 @@ v1 で使い v2 で外した研究: Vogel et al. (2014)（Facebook 利用と自�
 
 ## 文字数
 
-v7: 4872 字（発話本文。131 発話。S1 289 字、S8 506 字、S9 266 字）。話速 1.1 で約 13 分。
+v7: 5058 字（発話本文。135 発話。S1 289 字、S8 506 字、S9 266 字）。話速 1.1 で約 13 分。
