@@ -2,7 +2,7 @@
 """レンダ出力の timeline.json からチャプター行を作り、description-v1.txt の __CHAPTERS__ を埋めて
 description-v2.txt に書き出す。章名は timeline.json の scene.chapter_title（章カードの文言）を使い、
 章カードのないシーンは OVERRIDE の短い見出しで補う（YouTube の章は最初が 0:00・3 章以上・各 10 秒以上）。
-全 10 シーンをそれぞれ 1 章にする（前作 matome-dansei と同じ粒度）。
+全 9 シーンをそれぞれ 1 章にする（前作 matome-dansei と同じ粒度）。
 
   .venv\\Scripts\\python.exe publish/20260913-comparison-kamishibai/fill_chapters.py D:/script-to-video-build/comparison-v1
 """
@@ -11,12 +11,11 @@ import json
 import sys
 from pathlib import Path
 
-OVERRIDE = {
+OVERRIDE = {  # v5（2026-09-15）: S1・S2 統合で 9 シーン
     1: "同期の昇進を見た夜",
-    2: "比較とは何か",
-    6: "SNS は相手を選ばせない",
-    8: "やめれば解決か",
-    10: "昨日の夜に戻る",
+    5: "SNS は相手を選ばせない",
+    7: "やめれば解決か",
+    9: "昨日の夜に戻る",
 }
 out_dir = Path(sys.argv[1])
 here = Path(__file__).parent
