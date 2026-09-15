@@ -23,55 +23,31 @@ scenes:
   title: フック（同期の昇進を見た夜）
   chapter_title: null
   narration:
-  - text: めたん、聞いてほしいのだ。昨日の夜、寝る前にスマホを見てたのだ。
+  - text: めたん、昨日の夜、寝る前にスマホを見てたら、同期の昇進報告が流れてきたのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.35
-  - text: そしたら、同期の昇進報告が流れてきたのだ。
-    speaker: ずんだもん
-    expression: normal
-    pause_after: 0.35
-  - text: 「おめでとう」って送ったのだ。でも、打ちながら胸が重くなったのだ。
+  - text: 「おめでとう」って送ったのだ。でも、打ちながら胸が重くなって、3時まで眠れなかったのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: ちゃんと送ったのね。それで、そのあと眠れたの？
+  - text: 3時まで。それはこたえるわね。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 3時まで眠れなかったのだ。僕は何も失ってないのに、なんでこんなに落ち込んだのだ？
-    speaker: ずんだもん
-    expression: sad
-    pause_after: 0.35
-  - text: 人と比べるのって、やめようとしてもやめられないのだ？
+  - text: 僕は何も失ってないのに、なんで落ち込むのだ？ 人と比べるのって、やめられないのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.9
-  - text: やめられないわね。それには理由があるの。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 比べてしまうからって、性格が悪いわけじゃないのよ。
+  - text: やめられないわ。比べるのは、性格が悪いからじゃないの。自分がどのくらいなのかを知る方法が、他人を見ることしかないからよ。
     speaker: めたん
     expression: explain
     pause_after: 0.8
-  - text: 仕事の出来みたいなものって、体重計みたいに目盛りがないでしょう？ だから他人を見て測るしかないの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ただね、いまのずんだもんは、その測り方がおかしくなっているのよ。
+  - text: ただね、いまのずんだもんは、比べる相手の選び方と、その相手のどこを見ているかがおかしくなっているの。
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  - text: 測り方？ 比べるのって、測ることなのだ？
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: そうよ。道具みたいなものね。使い方を間違えると、夜中の3時まで眠れなくなるの。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 道具なのだ…。じゃあ、比べるって、そもそも何をしてることなのだ？
+  - text: 相手と、どこを見るか…。じゃあまず、なんで僕は比べずにいられないのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -82,153 +58,34 @@ scenes:
     slot: 1
     credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
-    cut_reason: 【昇進報告】スーツ姿の握手カットに替え、流れてきた投稿を示す
-    from: 3
+    cut_reason: 【昇進報告】スーツ姿の握手カットに替え、流れてきた投稿を示す（「同期の昇進報告」がcue1内に同居するため、congratulationsを送る自然な継続点へ後ろ倒し）
+    from: 2
     slot: 2
     credit: 'Photo: Khwanchai Phanthong / Pexels'
   - type: image
     cut_reason: 【異常事態】3時台を示す時計に替え、無音でも伝わるようテロップを添える
-    from: 8
+    from: 3
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
     telop: 3時まで眠れなかった
   - type: image
-    cut_reason: 【保持の分割】同じ時計カットを保持したまま20秒超を避けるための継続カット
-    from: 11
+    cut_reason: 【目盛りのない例】同年代の同僚が並ぶオフィス（S2用候補を流用）に替え、比較の理由説明に入る
+    from: 9
     slot: 4
-    credit: 'Photo: cottonbro studio / Pexels'
-  - type: image
-    cut_reason: 【目盛りのない例】同年代の同僚が並ぶオフィス（S3用候補を流用）に替え、目盛りのない測り方の話に入る
-    from: 14
-    slot: 5
     credit: 'Photo: Mikhail Nilov / Pexels'
   - type: image
-    cut_reason: 【冒頭へ戻る】S1冒頭のスマホの手元に戻り、フックの余韻を保ったまま章末へ
-    from: 18
+    cut_reason: 【比較の定義】同じオフィス写真を保持したまま、比較の定義をテロップで出す
+    from: 10
+    slot: 5
+    credit: 'Photo: Mikhail Nilov / Pexels'
+    telop: 比較＝自分がどのくらいかを、他人を見て測ること
+  - type: image
+    cut_reason: 【予告】同じオフィス写真を保持したまま、おかしくなっている二つをテロップで出す
+    from: 11
     slot: 6
-    credit: 'Photo: Jaroslav Maler / Pexels'
-- id: 2
-  title: 比べるとは、何をしていることか
-  chapter_title: null
-  narration:
-  - text: ずんだもんは、人と比べるとき、何をしていると思う？
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: えっと…相手を見て、自分はどうかなって考えてるのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: それよ。自分がどのくらいなのかを、他人を見て測っているの。それがここで言う「比較」ね。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.35
-  - text: 仕事ができるか。話が面白いか。ちゃんと生きているか。全部、誰かを見て測っているでしょう？
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: 確かに、僕が「仕事はできる方だ」と思うときも、誰かと比べてるのだ。
-    speaker: ずんだもん
-    expression: normal
-    pause_after: 0.45
-  - text: だから、比べること自体はやめられないの。残念だけどね。
-    speaker: めたん
-    expression: serious
-    pause_after: 1.0
-  - text: おかしくなっているのは、比べる相手の選び方と、その相手のどこを見ているかよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: そこを自分で選び直せば、夜中に落ち込まなくて済むわ。
-    speaker: めたん
-    expression: smile
-    pause_after: 1.5
-  - text: うーん、まだぴんと来ないのだ。相手を選んでる覚えもないのだ。
-    speaker: ずんだもん
-    expression: confused
-    pause_after: 0.45
-  - text: 来なくていいわ。ずんだもん、比べるのは悪い癖だと思っているでしょう？
-    speaker: めたん
-    expression: smug
-    pause_after: 0.45
-  - text: 思ってるのだ。直したい癖なのだ。
-    speaker: ずんだもん
-    expression: normal
-    pause_after: 0.45
-  - text: それがまず違うの。それから、上を見るから苦しいというのも、たぶん違うわ。銀メダルより、銅メダルの方が幸せそうに見えるのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 銀より銅？ 順位は銀が上なのだ。
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: そうよ。でも表情を見ると、銅の方がうれしそうだったの。それに、みんなが自分より充実して見えるのにも、ちゃんと理由があるのよ。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 全部気になるのだ。じゃあまず、なんで僕は比べずにいられないのだ？
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 1.2
-  beats:
-  - type: image
-    cut_reason: 【開幕の受け】板が出る前にオフィス写真の気配だけで開く（cue1が板より前のため）
-    from: 1
-    slot: 1
-    credit: 'Photo: Yan Krukau / Pexels'
-  - type: board
-    cut_reason: 【用語の定義】比較の定義を黒板に固定し、以後の章が参照できるようにする
-    from: 5
-    telop: '比較
-
-      ＝自分がどのくらいか
-
-      他人を見て測ること'
-  - type: image
-    cut_reason: 【測る対象の例】オフィスで談笑する写真に替え、日常の「できる／できない」判断の例を示す
-    from: 6
-    slot: 2
-    credit: 'Photo: Yan Krukau / Pexels'
-  - type: image
-    cut_reason: 【対比の予告】同じオフィス写真を保持したまま、おかしくなっている二つをテロップで出す
-    from: 13
-    slot: 3
-    credit: 'Photo: Yan Krukau / Pexels'
+    credit: 'Photo: Mikhail Nilov / Pexels'
     telop: おかしくなっているのは ①相手の選び方 ②どこを見ているか
-  - type: image
-    cut_reason: 【保持の分割】同じオフィス写真を保持したまま20秒超を避けるための継続カット
-    from: 17
-    slot: 4
-    credit: 'Photo: Yan Krukau / Pexels'
-  - type: board
-    cut_reason: 【板の進行1/3】見出し＋①だけを出す（②③はまだ）
-    from: 21
-    telop: '比較についての三つの思い込み
-
-      ① 比較は悪い癖'
-  - type: board
-    cut_reason: 【板の進行2/3】②を書き足す
-    from: 22
-    telop: '比較についての三つの思い込み
-
-      ① 比較は悪い癖
-
-      ② 上を見るから苦しい'
-  - type: board
-    cut_reason: 【板の進行3/3】③を書き足して三つ揃える
-    from: 28
-    telop: '比較についての三つの思い込み
-
-      ① 比較は悪い癖
-
-      ② 上を見るから苦しい
-
-      ③ みんな充実して見える'
-  readings:
-  - surface: 銀が上
-    reading: ギンガウエ
-- id: 3
+- id: 2
   title: なぜ比べずにいられないのか
   chapter_title: なぜ、比べずにいられないのか
   narration:
@@ -418,7 +275,7 @@ scenes:
     from: 34
     slot: 6
     credit: 'Photo: Annushka Ahuja / Pexels'
-- id: 4
+- id: 3
   title: 上を見るから苦しいとは限らない
   chapter_title: 上を見るから、苦しいのか
   narration:
@@ -549,14 +406,14 @@ scenes:
     slot: 4
     credit: 'Photo: Szcze hoo / Pexels'
   - type: image
-    cut_reason: 【S5用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ
+    cut_reason: 【S4用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ
     from: 27
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: 銀の方が上
     reading: ギンノホウガウエ
-- id: 5
+- id: 4
   title: 相手は正しい。見えているものが違う
   chapter_title: 相手の、何が見えているのか
   narration:
@@ -704,7 +561,7 @@ scenes:
     from: 26
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
-- id: 6
+- id: 5
   title: SNS は相手を選ばせない
   chapter_title: null
   narration:
@@ -834,7 +691,7 @@ scenes:
     from: 29
     slot: 10
     credit: 'Photo: Pavel Danilyuk / Pexels'
-- id: 7
+- id: 6
   title: 眺めるだけの 10 分が、夜の気分を下げる
   chapter_title: 眺めるだけで、気分は落ちるのか
   narration:
@@ -985,7 +842,7 @@ scenes:
   readings:
   - surface: 二組
     reading: フタクミ
-- id: 8
+- id: 7
   title: 「やめればいい」への答え
   chapter_title: null
   narration:
@@ -1127,7 +984,7 @@ scenes:
   readings:
   - surface: 二組
     reading: フタクミ
-- id: 9
+- id: 8
   title: 昨日の夜をやり直す
   chapter_title: どう、使い直すのか
   narration:
@@ -1262,7 +1119,7 @@ scenes:
     slot: 4
     credit: 'Photo: Keira Burton / Pexels'
   - type: diagram
-    cut_reason: 【S4の再掲】銀と銅の対比図解をまとめて一度に再掲し、何を基準にしたかで見え方が変わることを思い出させる。決め文「自分で選ぶのよ」（間2.5）まで保持する
+    cut_reason: 【S3の再掲】銀と銅の対比図解をまとめて一度に再掲し、何を基準にしたかで見え方が変わることを思い出させる。決め文「自分で選ぶのよ」（間2.5）まで保持する
     from: 22
     diagram:
       type: sketch
@@ -1300,7 +1157,7 @@ scenes:
   readings:
   - surface: 一場面
     reading: イチバメン
-- id: 10
+- id: 9
   title: 結び（もう一通）
   chapter_title: null
   narration:
