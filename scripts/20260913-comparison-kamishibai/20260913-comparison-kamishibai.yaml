@@ -43,11 +43,11 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.8
-  - text: ただね、いまのずんだもんは、比べる相手の選び方と、その相手のどこを見ているかがおかしくなっているの。
+  - text: ただね、いまのずんだもんは、比べる相手が勝手に流れてきて、その相手のいいところしか見えていないの。
     speaker: めたん
     expression: serious
     pause_after: 1.2
-  - text: 相手と、どこを見るか…。じゃあまず、なんで僕は比べずにいられないのだ？
+  - text: 流れてきて、いいところしか見えない…。じゃあまず、なんで僕は比べずにいられないのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 1.2
@@ -84,7 +84,7 @@ scenes:
     from: 11
     slot: 6
     credit: 'Photo: Mikhail Nilov / Pexels'
-    telop: おかしくなっているのは ①相手の選び方 ②どこを見ているか
+    telop: おかしくなっているのは ①相手が流れてくる ②いいところだけ
 - id: 2
   title: なぜ比べずにいられないのか
   chapter_title: なぜ、比べずにいられないのか
@@ -276,14 +276,14 @@ scenes:
     slot: 6
     credit: 'Photo: Annushka Ahuja / Pexels'
 - id: 3
-  title: 上を見るから苦しいとは限らない
-  chapter_title: 上を見るから、苦しいのか
+  title: 順位がよければ、楽になるのか
+  chapter_title: 順位がよければ、楽になるのか
   narration:
-  - text: 上を見たら苦しい。そう思うでしょう？ でも、順位が上でも落ち込む人はいるのよ。
+  - text: 上を見たら苦しい。それは合っているわ。むしろ、順位がよくても、上を見ていれば苦しいのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 順位が上なのに？
+  - text: 順位がよくても？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -323,27 +323,23 @@ scenes:
     speaker: めたん
     expression: delighted
     pause_after: 0.35
-  - text: だから、順位が気分を決めるわけじゃないの。何と比べたかで、気分が変わるのよ。
+  - text: 同じ銀メダルでも、金を見ていれば苦しいし、4位を見ていれば楽なの。しかもどっちを見るかは、本人が選んだのではなく、状況が決めていたのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
   - text: もっとも、本人に聞いたわけじゃないわ。学生が表情を見て採点した結果よ。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
-  - text: それに、これは他人と比べた話というより、頭の中の基準の話ね。でも、基準で気分が変わるのは同じことよ。
-    speaker: めたん
-    expression: explain
     pause_after: 0.45
   - text: 僕にも覚えがあるのだ。テストで80点でも、平均が90点だと落ち込むのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: そうそう。同じ80点でも、90点の平均を見た途端に低く感じるのよね。
+  - text: そうそう。80点は変わらないのに、90点を見た途端に低く感じるのよね。
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: でも待つのだ。僕はちゃんと近い同期を選んだのだ。それでもおかしくなるのは、なんでなのだ？
+  - text: 僕の場合はどうなのだ？ 同期は近い相手だから、比べる相手としては間違ってないのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 1.2
@@ -357,7 +353,7 @@ scenes:
     credit: 'Photo: Szcze hoo / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット
-    from: 4
+    from: 3
     slot: 2
     credit: 'Photo: Szcze hoo / Pexels'
   - type: image
@@ -366,7 +362,7 @@ scenes:
     slot: 3
     credit: 'Photo: Szcze hoo / Pexels'
   - type: diagram
-    cut_reason: 【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる。決め文「気分が変わるのよ」（間）まで保持する
+    cut_reason: 【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる。決め文「状況が決めていたのよ」（間）まで保持する
     from: 11
     diagram:
       type: sketch
@@ -407,7 +403,7 @@ scenes:
     credit: 'Photo: Szcze hoo / Pexels'
   - type: image
     cut_reason: 【S4用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ
-    from: 27
+    from: 25
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
@@ -493,9 +489,9 @@ scenes:
     from: 1
     telop: '比較の、おかしくなっている二つ
 
-      ① 比べる相手の選び方
+      ① 相手が勝手に流れてくる
 
-      ② 相手のどこを見ているか'
+      ② いいところしか見えない'
     highlight_lines:
     - 3
   - type: board
@@ -503,9 +499,9 @@ scenes:
     from: 5
     telop: '比較の、おかしくなっている二つ
 
-      ① 比べる相手の選び方
+      ① 相手が勝手に流れてくる
 
-      ② 相手のどこを見ているか'
+      ② いいところしか見えない'
     highlight_lines:
     - 3
   - type: image
@@ -565,7 +561,7 @@ scenes:
   title: SNS は相手を選ばせない
   chapter_title: null
   narration:
-  - text: ひどくなるわ。もう一つ、おかしくなっているところがあるの。比べる相手の方よ。
+  - text: ひどくなるわ。SNSだと、比べる相手まで勝手に決まってしまうのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.35
@@ -640,55 +636,55 @@ scenes:
     from: 2
     telop: '比較の、おかしくなっている二つ
 
-      ① 比べる相手の選び方
+      ① 相手が勝手に流れてくる
 
-      ② 相手のどこを見ているか'
+      ② いいところしか見えない'
     highlight_lines:
     - 2
   - type: image
     cut_reason: 【調査の場面】賑やかなパーティー写真に替え、300人への質問調査を示す
-    from: 5
+    from: 4
     slot: 2
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット
-    from: 8
+    from: 7
     slot: 3
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【意外な数字】同じパーティー写真を保持したまま、82%の回答をテロップで出す
-    from: 11
+    from: 10
     slot: 4
     credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone. Journal of Personality and Social Psychology, 113(6), 858–877.／Photo: Pavel Danilyuk / Pexels'
     telop: 82％ が『他人の方がパーティーに行く』と回答
   - type: image
     cut_reason: 【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット（2）
-    from: 15
+    from: 14
     slot: 5
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【浮かばない例】家で読書する写真に替え、思い浮かばない側の生活を示す
-    from: 18
+    from: 17
     slot: 6
     credit: 'Photo: Monstera Production / Pexels'
   - type: image
     cut_reason: 【SNSの偏り】スクロールする手元に替え、偏った瞬間が大量に流れてくる様子を示す
-    from: 21
+    from: 20
     slot: 7
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット
-    from: 24
+    from: 23
     slot: 8
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット（2）
-    from: 27
+    from: 26
     slot: 9
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【パーティーへ戻る】まとめの位置でパーティー写真に戻し、章末の問いへ渡す
-    from: 29
+    from: 28
     slot: 10
     credit: 'Photo: Pavel Danilyuk / Pexels'
 - id: 6
@@ -985,214 +981,163 @@ scenes:
   - surface: 二組
     reading: フタクミ
 - id: 8
-  title: 昨日の夜をやり直す
-  chapter_title: どう、使い直すのか
+  title: じゃあ、どうすればいいのか
+  chapter_title: じゃあ、どうすればいいのか
   narration:
-  - text: じゃあ、昨日の夜をやり直してみましょう。同期の昇進報告を見た、あの場面から。
+  - text: 比べる理由は「目盛りがないから」だったでしょう？ だったら、目盛りのあるものを一つ持てばいいのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 見た瞬間に、胸が重くなったのだ。
+  - text: 目盛りのあるもの？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 資格の合否、走ったタイム、書き上げた枚数。他人がどうでも、自分の数字が出るものよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そこでは他人を見る必要がないから、比べようがないの。実験で確かめた話じゃなくて、理屈の上での話だけどね。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 資格の勉強なら、隣の人の点数は見えないのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: それから、SNSは眺めるだけで終えないこと。落ち込んだら、いま誰と比べているのか、一人だけ名指ししてみて。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 昇進した、同期のAさんなのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.45
+  - text: フィードを眺めているときは、何百人分のいい瞬間と比べているの。Aさん一人になれば、普通の人間よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 思い浮かべる相手を、目立つ人じゃない特定の知人に指定すると、劣等感が消えたの。ギロビッチ教授たちの別の実験よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: でも、昇進した相手に聞くのは、ちょっと気まずいのだ…。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: そこでまず、思い出してほしいの。ずんだもんに見えたのは、同期が昇進したという一場面だけよ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: 他人の落ち込みは、実際より17ポイントも少なく見積もられていたでしょう？ 同期にも、投稿しなかった夜があるかもしれないわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: 僕に見えたのは、いい報告の一枚だけだったのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.45
-  - text: それから、眺めて終わりにしないこと。「おめでとう」のあとに、「今度、どうやったのか聞かせて」と続けてみるの。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: 聞けば、投稿に出ていない事情も分かるかもしれないわ。それに話しかけるのは、さっきの実験で言う「自分から動く使い方」に近いでしょう？
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: なるほど。10分眺め続ける代わりに、一言送ってみるのだ。
-    speaker: ずんだもん
-    expression: smile
-    pause_after: 0.45
-  - text: もう一つ。フィードに出てきた人を、全員自分の基準にしなくていいのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.35
-  - text: ギロビッチ教授たちの別の実験で、比べる相手を先に指定してみたの。いつも浮かぶ目立つ人じゃなくて、あまり社交的じゃない知人を思い浮かべてもらったのよ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: すると、「自分の方が劣っている」という感覚が消えたの。それどころか、生活の満足度は上がったわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.7
-  - text: 相手を変えただけで、感覚が消えるのだ？
-    speaker: ずんだもん
-    expression: surprised
-    pause_after: 0.45
-  - text: 銀と銅で、何を見たかで気分が違って見えたのと同じね。
+  - text: 気まずいわよね。でも、Aさんに「どうやったのか」を聞くのよ。メッセージでもいいし、会う約束をして聞くのが一番いいわ。
     speaker: めたん
     expression: smile
     pause_after: 0.35
-  - text: もちろん、自分より下の人を探して安心しなさい、という意味じゃないわ。流れてきた人を、そのまま基準にしなくていいのよ。
+  - text: 自分から動いた組は気分が下がらなかったし、会えば、投稿に出ていない部分まで見えるでしょう？
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 基準は、僕が決めていいのだ。
+  - text: 眺める10分の代わりに、Aさんを飲みに誘うのだ。
     speaker: ずんだもん
-    expression: thinking
+    expression: smile
     pause_after: 0.45
-  - text: そう。この実験は社交生活の話だから、仕事でもそのまま当てはまるかは、まだ分からないけどね。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.35
-  - text: でも、比べるのを無理にやめなくていいの。比べるなら、誰のどこを見るかを、自分で選ぶのよ。
+  - text: SNSをやめてしまってもいいし、続けるなら、眺めるだけで終えないことね。
     speaker: めたん
     expression: serious
-    pause_after: 2.5
-  - text: じゃあ、フィードに出てきた順に落ち込むのは、もうやめるのだ。
-    speaker: ずんだもん
-    expression: thinking
-    pause_after: 0.35
-  - text: それなら、僕にもできそうなのだ。
-    speaker: ずんだもん
-    expression: smile
-    pause_after: 1.2
+    pause_after: 2.0
   beats:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【冒頭に戻る】S1と同じ夜のスマホの手元で、昨日の夜をやり直す場面を開く
+    cut_reason: 【タイマー開幕】資格の合否・走ったタイムの喩えを先取りしてタイマー写真で開く（章の背景も兼ねる）
     from: 1
     slot: 1
-    credit: 'Photo: Jaroslav Maler / Pexels'
+    credit: 'Photo: Image Hunter / Pexels'
   - type: board
-    cut_reason: 【板の進行1/3】使い直しの板へ切り替え、①（見えない部分も数に入れる）を出す
+    cut_reason: 【板の進行1/2】見出し＋①（目盛りのあるものを持つ）を出す
+    from: 2
+    telop: '比べ方の使い直し
+
+      ① 目盛りのあるものを持つ'
+  - type: image
+    cut_reason: 【具体例】同じタイマー写真を保持したまま、目盛りのある例を示す
     from: 4
-    telop: '比べ方の使い直し
-
-      ① 見えない部分も数に入れる'
-  - type: board
-    cut_reason: 【保持の分割】同じ板を保持したまま20秒超を避けるための継続ビート
+    slot: 2
+    credit: 'Photo: Image Hunter / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じタイマー写真を保持したまま20秒超を避けるための継続カット
     from: 6
-    telop: '比べ方の使い直し
-
-      ① 見えない部分も数に入れる'
+    slot: 3
+    credit: 'Photo: Image Hunter / Pexels'
   - type: board
-    cut_reason: 【板の進行2/3】②（話しかける）を書き足す
+    cut_reason: 【板の進行2/2】②（一人に絞って聞く）を書き足す
     from: 9
     telop: '比べ方の使い直し
 
-      ① 見えない部分も数に入れる
+      ① 目盛りのあるものを持つ
 
-      ② 話しかける'
+      ② 眺めるだけで終えず、一人に絞って聞く'
   - type: image
-    cut_reason: 【話しかける例】カフェで向かい合って話す写真に替え、二つ目の使い直しを示す
-    from: 11
-    slot: 2
-    credit: 'Photo: RDNE Stock project / Pexels'
-  - type: board
-    cut_reason: 【板の進行3/3】③（比べる相手を自分で決める）を書き足して三つ揃える
-    from: 15
-    telop: '比べ方の使い直し
-
-      ① 見えない部分も数に入れる
-
-      ② 話しかける
-
-      ③ 比べる相手を自分で決める'
-  - type: image
-    cut_reason: 【相手を選ぶ例】男女混成の友人グループが並んで歩く写真に替え、三つ目の使い直しの結果をテロップで出す
-    from: 18
-    slot: 3
-    credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A. コーネル大学 154人／Photo: Keira Burton / Pexels'
-    telop: 比べる相手を変えると、『自分の方が劣っている』感覚が消えた
-  - type: image
-    cut_reason: 【保持の分割】同じ友人グループの写真を保持したまま20秒超を避けるための継続カット
-    from: 20
+    cut_reason: 【夜のスマホへ】S1と同じ夜のスマホの手元に替え、一人だけ名指しする話に入る
+    from: 10
     slot: 4
-    credit: 'Photo: Keira Burton / Pexels'
-  - type: diagram
-    cut_reason: 【S3の再掲】銀と銅の対比図解をまとめて一度に再掲し、何を基準にしたかで見え方が変わることを思い出させる。決め文「自分で選ぶのよ」（間2.5）まで保持する
-    from: 22
-    diagram:
-      type: sketch
-      rows:
-      - - id: gold2
-          at: 22
-          text: 金
-          after: 銀と銅で、何を見たかで
-        - null
-      - - id: silver2
-          at: 22
-          value: '4.8'
-          text: 銀メダリスト
-          after: 銀と銅で、何を見たかで
-        - id: bronze2
-          at: 22
-          value: '7.1'
-          text: 銅メダリスト
-          after: 銀と銅で、何を見たかで
-      - - null
-        - id: fourth2
-          at: 22
-          text: 4位
-          after: 銀と銅で、何を見たかで
-      arrows:
-      - from: silver2
-        to: gold2
-      - from: bronze2
-        to: fourth2
+    credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
-    cut_reason: 【決め文の保持後】男女混成の友人グループの写真に戻し、シーン末まで保持
-    from: 30
+    cut_reason: 【結果】同じ写真を保持したまま、劣等感が消えた結果をテロップで出す
+    from: 14
     slot: 5
-    credit: 'Photo: Keira Burton / Pexels'
+    credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A. コーネル大学154人（2017）／Photo: Jaroslav Maler / Pexels'
+    telop: 思い浮かべる相手を特定の知人に指定→劣等感が消えた
+  - type: image
+    cut_reason: 【保持の分割】同じ夜のスマホ写真を保持したまま20秒超を避けるための継続カット
+    from: 16
+    slot: 6
+    credit: 'Photo: Jaroslav Maler / Pexels'
+  - type: image
+    cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
+    from: 19
+    slot: 7
+    credit: 'Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す
+    from: 20
+    slot: 8
+    credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488.／Photo: RDNE Stock project / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット
+    from: 22
+    slot: 9
+    credit: 'Photo: RDNE Stock project / Pexels'
   readings:
-  - surface: 一場面
-    reading: イチバメン
+  - surface: Aさん
+    reading: エーサン
 - id: 9
-  title: 結び（もう一通）
+  title: 結び（なぜ比べてしまうのか）
   chapter_title: null
   narration:
-  - text: それじゃあ、続きをやりましょうか。「おめでとう」は、もう送ったのよね。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.45
-  - text: 送ったのだ。
-    speaker: ずんだもん
-    expression: normal
-    pause_after: 0.45
-  - text: そのあとに、もう一通打つのよ。
+  - text: ずんだもん、なんで人と比べてしまうのか、もう答えられるでしょう？
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 「今度、どうやったのか聞かせて」…これでいいのだ？
+  - text: えっと…仕事の出来には目盛りがないから、他人で測るしかないのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。脳もその差に反応する。ここまでは、誰でも同じよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 苦しくなるのは、比べる相手が向こうから流れてきて、しかも相手のいいところしか見えないからよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 2.0
+  - text: 僕は昨日、流れてきたAさんの昇進だけ見て、3時まで落ち込んでたのだ。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.45
+  - text: そういうこと。それで、昨日の夜の続きだけど。「おめでとう」の次は？
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 「今度、どうやったのか聞かせて」…会って聞くのだ。
     speaker: ずんだもん
     expression: shy
     pause_after: 0.45
-  - text: いいわ。昇進の報告だけで決めつけずに、本人の話を聞きに行くの。
-    speaker: めたん
-    expression: smile
-    pause_after: 0.35
-  - text: どうやって昇進したのかまで聞けば、張り合う相手じゃなくて、参考にできる相手になるわ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: じゃあ今夜は、投稿を見返す前に、もう一通送ってみるのだ。
-    speaker: ずんだもん
-    expression: smile
-    pause_after: 0.45
-  - text: 比べること自体は、自分の位置を知るための方法よ。ずんだもんを苦しめていたのは、その使い方だったの。
-    speaker: めたん
-    expression: normal
-    pause_after: 2.0
   - text: それなら、今夜は眠れそうね。頑張って、ずんだもん。
     speaker: めたん
     expression: smile
@@ -1202,23 +1147,49 @@ scenes:
     expression: delighted
     pause_after: 2.0
   beats:
+  - type: board
+    cut_reason: 【板の進行1/4】見出しだけを出す（cue1はめたんの問いかけと同居するため、見出しのみ短く保持）
+    from: 1
+    telop: なぜ他人と比べてしまうのか
+  - type: board
+    cut_reason: 【板の進行2/4】①（目盛りがない→他人で測る）を書き足す
+    from: 2
+    telop: 'なぜ他人と比べてしまうのか
+
+      ① 目盛りがない→他人で測る'
+  - type: board
+    cut_reason: 【板の進行3/4】②（脳は差に反応する）を書き足す
+    from: 4
+    telop: 'なぜ他人と比べてしまうのか
+
+      ① 目盛りがない→他人で測る
+
+      ② 脳は差に反応する'
+  - type: board
+    cut_reason: 【板の進行4/4】③（相手は流れてきて、いいところしか見えない）を書き足して三つ揃える。決め文（間2.0）まで保持
+    from: 6
+    telop: 'なぜ他人と比べてしまうのか
+
+      ① 目盛りがない→他人で測る
+
+      ② 脳は差に反応する
+
+      ③ 相手は流れてきて、いいところしか見えない'
   - type: image
     cut_reason: 【朝に戻る】S1と同じスマホの手元だが朝の光で開く
-    from: 1
+    from: 9
     slot: 1
     credit: 'Photo: LinkedIn Sales Navigator / Pexels'
   - type: image
-    cut_reason: 【裏を見に行く】二人でコーヒーを飲む写真に替え、本人の話を聞きに行く様子を示す
-    from: 7
+    cut_reason: 【会って聞く】二人でコーヒーを飲む写真に替え、会って聞く様子を示す
+    from: 11
     slot: 2
-    credit: 'Photo: Thirdman / Pexels'
-  - type: image
-    cut_reason: 【保持の分割】同じコーヒーの写真を保持したまま20秒超を避けるための継続カット
-    from: 9
-    slot: 3
     credit: 'Photo: Thirdman / Pexels'
   - type: image
     cut_reason: 【象徴的な最後の一枚】朝の窓辺で伸びをする人で終え、アウトロへつなぐ
     from: 12
-    slot: 4
+    slot: 3
     credit: 'Photo: Mikhail Nilov / Pexels'
+  readings:
+  - surface: Aさん
+    reading: エーサン
