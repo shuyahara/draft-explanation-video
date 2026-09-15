@@ -20,18 +20,18 @@ video:
   sfx: chic
 scenes:
 - id: 1
-  title: フック（同期の昇進を見た夜）
+  title: フック（人と比較してしまうずんだもん）
   chapter_title: null
   narration:
   - text: めたん、昨日の夜、寝る前にスマホを見てたら、同期の昇進報告が流れてきたのだ。
     speaker: ずんだもん
     expression: normal
     pause_after: 0.35
-  - text: 「おめでとう」って送ったのだ。でも、打ちながら胸が重くなって、3時まで眠れなかったのだ。
+  - text: 「おめでとう」って送ったのだ。でも、打ちながら胸が重くなって、なかなか眠れなかったのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 3時まで。それはこたえるわね。
+  - text: 祝う気持ちもあったけど、悲しくなったのね。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -39,17 +39,17 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.9
-  - text: やめられないわ。比べるのは、性格が悪いからじゃないの。自分がどのくらいなのかを知る方法が、他人を見ることしかないからよ。
+  - text: 難しい問題ね。人は、自分がどのくらいなのかを知るために、本能的に比較してしまうのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.8
-  - text: ただね、いまのずんだもんは、比べる相手が勝手に流れてきて、その相手のいいところしか見えていないの。
+  - text: それも踏まえて、なんで人が比較をしてしまうのか、研究や調査を見ながら解説していきましょうか。
     speaker: めたん
-    expression: serious
-    pause_after: 1.2
-  - text: 流れてきて、いいところしか見えない…。じゃあまず、なんで僕は比べずにいられないのだ？
+    expression: smile
+    pause_after: 0.6
+  - text: ありがとうなのだ。ぜひ頼むのだ。
     speaker: ずんだもん
-    expression: thinking
+    expression: smile
     pause_after: 1.2
   beats:
   - type: image
@@ -63,41 +63,34 @@ scenes:
     slot: 2
     credit: 'Photo: Khwanchai Phanthong / Pexels'
   - type: image
-    cut_reason: 【異常事態】3時台を示す時計に替え、無音でも伝わるようテロップを添える
+    cut_reason: 【異常事態】眠れない人の寝室に替え、無音でも伝わるようテロップを添える
     from: 3
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
-    telop: 3時まで眠れなかった
+    telop: なかなか眠れなかった
   - type: image
-    cut_reason: 【目盛りのない例】同年代の同僚が並ぶオフィス（S2用候補を流用）に替え、比較の理由説明に入る
-    from: 9
+    cut_reason: 【比較の定義】同年代の同僚が並ぶオフィス（S2用候補を流用）に替え、比較の定義をテロップで出す
+    from: 8
     slot: 4
     credit: 'Photo: Mikhail Nilov / Pexels'
-  - type: image
-    cut_reason: 【比較の定義】同じオフィス写真を保持したまま、比較の定義をテロップで出す
-    from: 10
-    slot: 5
-    credit: 'Photo: Mikhail Nilov / Pexels'
     telop: 比較＝自分がどのくらいかを、他人を見て測ること
-  - type: image
-    cut_reason: 【予告】同じオフィス写真を保持したまま、おかしくなっている二つをテロップで出す
-    from: 11
-    slot: 6
-    credit: 'Photo: Mikhail Nilov / Pexels'
-    telop: おかしくなっているのは ①相手が流れてくる ②いいところだけ
 - id: 2
   title: なぜ比べずにいられないのか
   chapter_title: なぜ、比べずにいられないのか
   narration:
-  - text: 身長なら、目盛りがあるわ。170センチ、と数字が出る。
+  - text: 突然だけど、身長なら、ずんだもんは人と身長を比べる時どうする？
     speaker: めたん
     expression: explain
-    pause_after: 0.35
-  - text: でも、仕事がどれくらいできるかとか、人としての価値には、目盛りがないでしょう？
-    speaker: めたん
-    expression: normal
     pause_after: 0.45
-  - text: ないのだ…。だから、他人を目盛りにするのだ？
+  - text: 簡単なのだ。背中をピッタリ合わせればいいのだ。それか、健康診断で測った身長を比べればいいのだ。
+    speaker: ずんだもん
+    expression: smile
+    pause_after: 0.45
+  - text: そうよね。身長には数値にできる目盛りがあるわ。でも、仕事がどれくらいできるかとか、人としての価値には、目盛りがないでしょう？
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: ないのだ…。じゃそういうときは、他人を目盛りにするのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -117,7 +110,7 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 近い人って、同期みたいな相手なのだ？
+  - text: 近い人って、同僚とか友達みたいな相手なのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -125,7 +118,7 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: だから、ずんだもんは芸能人の年収では落ち込まない。落ち込むのは、同期よ。
+  - text: だから、ずんだもんは芸能人の年収では落ち込まない。落ち込むのは、近い立場の知人や同僚よ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
@@ -161,13 +154,9 @@ scenes:
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 33人の小さな実験だけどね。はっきり出たわ。
+  - text: はっきり出たわ。だから、意志の力だけで止めるのは難しいのよ。
     speaker: めたん
     expression: normal
-    pause_after: 0.35
-  - text: だから、意志の力だけで止めるのは難しいのよ。
-    speaker: めたん
-    expression: smile
     pause_after: 1.5
   - text: ただ、フェスティンガーも、目盛りがないときの話だと言っているわ。身長みたいに測れるものなら、他人はいらないの。
     speaker: めたん
@@ -191,18 +180,23 @@ scenes:
     credit: 'Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117–140.／Photo: Annushka Ahuja / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット
-    from: 5
+    from: 6
     slot: 2
+    credit: 'Photo: Annushka Ahuja / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット（2）
+    from: 9
+    slot: 3
     credit: 'Photo: Annushka Ahuja / Pexels'
   - type: board
     cut_reason: 【板の進行1/3】見出し＋①（目盛りがない→他人で測る）を出す
-    from: 8
+    from: 12
     telop: 'フェスティンガーの社会的比較（1954）
 
       ① 目盛りがない→他人で測る'
   - type: board
     cut_reason: 【板の進行2/3】②（自分を評価したい欲求）を書き足す
-    from: 9
+    from: 13
     telop: 'フェスティンガーの社会的比較（1954）
 
       ① 目盛りがない→他人で測る
@@ -210,7 +204,7 @@ scenes:
       ② 自分を評価したい欲求'
   - type: board
     cut_reason: 【板の進行3/3】③（近い人を選ぶ）を書き足して三つ揃える
-    from: 13
+    from: 17
     telop: 'フェスティンガーの社会的比較（1954）
 
       ① 目盛りがない→他人で測る
@@ -219,61 +213,61 @@ scenes:
 
       ③ 相手は、近い人を選ぶ'
   - type: image
-    cut_reason: 【近い相手の例】同年代の同僚が並ぶオフィスに替え、同期という近い相手の例を示す
-    from: 18
-    slot: 3
+    cut_reason: 【近い相手の例】同年代の同僚が並ぶオフィスに替え、近い相手の例を示す
+    from: 22
+    slot: 4
     credit: 'Photo: Mikhail Nilov / Pexels'
   - type: image
     cut_reason: 【実験装置】検査装置の写真に替え、MRIに入ってもらう場面へ
-    from: 22
-    slot: 4
+    from: 26
+    slot: 5
     credit: 'Photo: Pexels'
   - type: image
     cut_reason: 【研究の出典】同じMRI写真を保持したまま、実施機関と年をテロップで出す
-    from: 25
-    slot: 5
+    from: 29
+    slot: 6
     credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308.／Photo: Pexels'
     telop: ボン大学など 33人（2007）
   - type: diagram
     cut_reason: 【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる。決め文「難しいのよ」（間）まで保持する
-    from: 27
+    from: 31
     diagram:
       type: sketch
       rows:
       - - id: own1
-          at: 27
+          at: 31
           icon: payments
           text: 自分の額 同じ
           after: 隣の人がもらった額も見せられるわ
         - id: other1
-          at: 27
+          at: 31
           icon: person
           text: 相手の額 少ない
           after: 隣の人がもらった額も見せられるわ
         - id: react1
-          at: 28
+          at: 32
           icon: trending_up
           text: 脳の反応 ↑
           after: 反応が下がったの
       - - id: own2
-          at: 27
+          at: 31
           icon: payments
           text: 自分の額 同じ
           after: 隣の人がもらった額も見せられるわ
         - id: other2
-          at: 27
+          at: 31
           icon: person
           text: 相手の額 多い
           after: 隣の人がもらった額も見せられるわ
         - id: react2
-          at: 28
+          at: 32
           icon: trending_down
           text: 脳の反応 ↓
           after: 反応が下がったの
   - type: image
     cut_reason: 【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで
-    from: 34
-    slot: 6
+    from: 37
+    slot: 7
     credit: 'Photo: Annushka Ahuja / Pexels'
 - id: 3
   title: 順位がよければ、楽になるのか
@@ -287,11 +281,11 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: オリンピックの銀メダリストよ。銅の人より、暗い顔をしていることが多いの。
+  - text: オリンピックの銀メダリストよ。銅メダルの人より、暗い顔をしていることが多いの。
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: 銀の方が上なのに、なんでなのだ？
+  - text: 銀メダルの方が上なのに、なんでなのだ？
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -307,15 +301,15 @@ scenes:
     speaker: めたん
     expression: smug
     pause_after: 0.45
-  - text: 銀の方がだいぶ低いのだ！
+  - text: 銀メダリストの方がだいぶ低いのだ！
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 銀の人は、金を見ているの。「あと一歩で金だった」と思っている。研究チームは、そう考えたのよ。
+  - text: 2位の人は、1位を見ているの。「あと一歩で金だった」と思っている。研究チームは、そう考えたのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: じゃあ銅の人は、4位を見て「あと一歩でメダルなしだった」と思ったのだ？
+  - text: じゃあ3位の人は、4位を見て「あと一歩でメダルなしだった」と思ったのだ？
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
@@ -323,7 +317,7 @@ scenes:
     speaker: めたん
     expression: delighted
     pause_after: 0.35
-  - text: 同じ銀メダルでも、金を見ていれば苦しいし、4位を見ていれば楽なの。しかもどっちを見るかは、本人が選んだのではなく、状況が決めていたのよ。
+  - text: 同じ銀メダルでも、1位を見ていれば苦しいし、4位を見ていれば楽なの。しかもどっちを見るかは、本人が選んだのではなく、状況が決めていたのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
@@ -370,7 +364,7 @@ scenes:
       - - id: gold
           at: 14
           text: 金
-          after: 銀の人は、金を見ているの
+          after: 2位の人は、1位を見ているの
         - null
       - - id: silver
           at: 12
@@ -407,11 +401,11 @@ scenes:
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
-  - surface: 銀の方が上
-    reading: ギンノホウガウエ
+  - surface: 上なのに
+    reading: ウエナノニ
 - id: 4
-  title: 相手は正しい。見えているものが違う
-  chapter_title: 相手の、何が見えているのか
+  title: 相手との比較で見えているもの
+  chapter_title: 相手との比較で見えているもの
   narration:
   - text: 相手の選び方は、間違ってないわ。問題は、その同期のどこが見えているかよ。
     speaker: めたん
@@ -421,7 +415,7 @@ scenes:
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
-  - text: そう、それだけよ。同期にもつらい夜があったとして、それ、ずんだもんに見えるかしら。
+  - text: そう、それだけよ。でも、同期の人にもつらいことや落ち込んだことがあったはずよ。それ、ずんだもんに見えるかしら。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -449,11 +443,11 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: うれしい出来事の方は、ほぼ正しく予想できていたのにね。
+  - text: 逆にうれしい出来事の方は、ほぼ正しく予想できていたのよ。
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: みんな、他人の落ち込みだけ、少なく見積もってるのだ？
+  - text: みんな、他人の落ち込みは少なく見積もってるのだ？
     speaker: ずんだもん
     expression: confused
     pause_after: 0.45
@@ -465,15 +459,15 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 同期にも、3時まで眠れない夜があったかもしれないのだ。
+  - text: 同期にも、なかなか眠れない夜があったかもしれないのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: あったかもしれないわね。ちなみにこの研究、SNSは関係ないの。対面の大学生活を調べたものよ。
+  - text: あったかもしれないわね。ちなみにこの研究、SNSが登場する前の大学生活の状況を調べたものよ。
     speaker: めたん
     expression: normal
     pause_after: 0.35
-  - text: つまり、この見えなさは、SNSが生まれる前からあったということね。
+  - text: つまり、この状況はSNSが生まれる前からあったということね。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -506,33 +500,33 @@ scenes:
     - 3
   - type: image
     cut_reason: 【調査の場面】明るい教室で話す学生たちに替え、大学生への質問調査を示す
-    from: 9
+    from: 10
     slot: 1
     credit: 'Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think. Personality and Social Psychology Bulletin, 37(1), 120–135.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【隠された割合】同じ教室写真を保持したまま、40%/13%の従テロップを出す
-    from: 11
+    from: 12
     slot: 2
     credit: 'スタンフォード大学 大学生80人（2011）／Photo: RDNE Stock project / Pexels'
     telop: 落ち込みは 40％ 隠す ／ うれしさは 13％
   - type: diagram
     cut_reason: 【予想の外れ方】学生80人に→予想させた→実際より17ポイント低かった、を横一列で見せる
-    from: 15
+    from: 16
     diagram:
       type: sketch
       rows:
       - - id: subj
-          at: 15
+          at: 16
           icon: group
           text: 学生80人に
           after: 別の学生80人に
         - id: op
-          at: 15
+          at: 16
           icon: psychology
           text: 落ち込んだ割合を予想
           after: 予想してもらったのよ
         - id: result
-          at: 16
+          at: 17
           icon: trending_down
           value: 17pt
           text: 低く予想された
@@ -544,16 +538,16 @@ scenes:
         to: result
   - type: image
     cut_reason: 【見えない夜】夜の窓辺の後ろ姿に替え、見えない落ち込みを象徴させる
-    from: 21
+    from: 22
     slot: 3
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じ窓辺写真を保持したまま20秒超を避けるための継続カット
-    from: 23
+    from: 24
     slot: 4
     credit: 'Photo: cottonbro studio / Pexels'
   - type: image
-    cut_reason: 【教室へ戻る】SNSは関係ないと限定する位置で教室の写真に戻し、シーン末まで保持
+    cut_reason: 【教室へ戻る】SNSより前の状況だったと限定する位置で教室の写真に戻し、シーン末まで保持
     from: 26
     slot: 5
     credit: 'Photo: RDNE Stock project / Pexels'
@@ -569,11 +563,11 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 0.45
-  - text: パーティーの人なのだ。ちなみに僕は、おうちが皆勤賞なのだ。
+  - text: パーティーによく行く人なのだ。ちなみに僕は、おうち派なのだ。
     speaker: ずんだもん
     expression: smug
     pause_after: 0.45
-  - text: 皆勤賞のずんだもんに、ちょうどいい調査があるわ。ギロビッチ教授たちが2017年に、300人に聞いたの。
+  - text: そんなずんだもんに、ちょうどいい調査があるわ。ギロビッチ教授たちが2017年に、300人に聞いたの。
     speaker: めたん
     expression: smile
     pause_after: 0.35
@@ -581,15 +575,15 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 82％！？ そんなに大勢が他人より少ないなんて、変なのだ。
+  - text: 82％！？ そんなに大勢が他人より少ないなんて、変なのだ。本当なら50%のはずなのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
-  - text: 変でしょう？ 友人の数でも、外食の回数でも、同じ結果だったの。
+  - text: 変でしょう？ 友人の数を聞いても、外食の回数でも、同じように他人の方が多いと思う結果だったの。
     speaker: めたん
     expression: delighted
     pause_after: 0.35
-  - text: 理由は、さっきの質問と同じ。思い浮かぶのが、目立つ人ばかりだからよ。家で本を読んでいる人は、誰の頭にも浮かばないの。
+  - text: 理由は、さっきの質問と同じ。思い浮かぶのが、目立つ人ばかりだからよ。家でゆっくりしているような人は、頭にも浮かびにくいの。
     speaker: めたん
     expression: normal
     pause_after: 0.45
@@ -601,7 +595,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.35
-  - text: 家で本を読んでいる姿は、投稿されないでしょう？ 投稿されるのは、パーティーと昇進。それが何百人分も流れてくるの。
+  - text: 家でスマホを見ているような姿は、投稿されないでしょう？ 投稿されるのは、華やかなパーティー、旅行や祝い事。それが何百人分も流れてくるの。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -613,10 +607,6 @@ scenes:
     speaker: めたん
     expression: normal
     pause_after: 2.0
-  - text: ただ、相手の数が増えたこと自体を測った研究は、まだ見つかっていないのよ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
   - text: 僕、相手も選べてないし、いいところしか見えてないのだ。なんていうか、勝負になってないのだ。
     speaker: ずんだもん
     expression: thinking
@@ -659,27 +649,27 @@ scenes:
     telop: 82％ が『他人の方がパーティーに行く』と回答
   - type: image
     cut_reason: 【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット（2）
-    from: 14
+    from: 15
     slot: 5
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【浮かばない例】家で読書する写真に替え、思い浮かばない側の生活を示す
-    from: 17
+    from: 18
     slot: 6
     credit: 'Photo: Monstera Production / Pexels'
   - type: image
     cut_reason: 【SNSの偏り】スクロールする手元に替え、偏った瞬間が大量に流れてくる様子を示す
-    from: 20
+    from: 21
     slot: 7
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット
-    from: 23
+    from: 24
     slot: 8
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット（2）
-    from: 26
+    from: 27
     slot: 9
     credit: 'Photo: kaboompics / Pexels'
   - type: image
@@ -739,21 +729,13 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.35
-  - text: 同じ10分でも、眺めるだけだと夜に落ちて、自分から動いた組は落ちなかったのよ。
+  - text: 同じ10分でも、眺めるだけの組は夜に気分が落ちて、自分から動いた組は落ちなかったのよ。
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 僕の3時も、たぶんそれなのだ…。
+  - text: 僕のも、たぶんそれなのだ…。
     speaker: ずんだもん
     expression: sad
-    pause_after: 0.45
-  - text: 下がったのは気分だけで、生活の満足度までは変わらなかったけどね。それに、大学生の実験よ。
-    speaker: めたん
-    expression: normal
-    pause_after: 0.45
-  - text: 気分だけ、なのだ。でも僕には、その気分こそが問題なのだ。
-    speaker: ずんだもん
-    expression: thinking
     pause_after: 0.35
   - text: もう分かったのだ。SNSをやめれば全部解決なのだ！ 今すぐスマホを封印するのだ！
     speaker: ずんだもん
@@ -826,23 +808,18 @@ scenes:
         at: 25
         after: 自分から動いた組は
   - type: image
-    cut_reason: 【落ち着いて限定】明るい部屋のノートPCの写真に戻し、限定条件を言ってシーン末まで
-    from: 27
+    cut_reason: 【落ち着いて限定】明るい部屋のノートPCの写真に戻し、シーン末まで保持（画面指定の旧アンカー「下がったのは気分だけで」は台詞削除で消失したため、後続の最も近い節目に前出し）
+    from: 26
     slot: 8
-    credit: 'Photo: kaboompics / Pexels'
-  - type: image
-    cut_reason: 【保持の分割】同じノートPCの写真を保持したまま20秒超を避けるための継続カット
-    from: 30
-    slot: 9
     credit: 'Photo: kaboompics / Pexels'
   readings:
   - surface: 二組
     reading: フタクミ
 - id: 7
-  title: 「やめればいい」への答え
+  title: SNSをやめればいいのか？
   chapter_title: null
   narration:
-  - text: 勢いがいいわね。半分は正解よ。やめれば少し楽になるわ。
+  - text: それも一つの手ね。やめれば少し楽になるわ。
     speaker: めたん
     expression: smile
     pause_after: 0.8
@@ -858,9 +835,9 @@ scenes:
     speaker: めたん
     expression: explain
     pause_after: 0.45
-  - text: 上がるのだ。でも、思ったより小さいのだ。
+  - text: おお、少し上がるのだ。
     speaker: ずんだもん
-    expression: normal
+    expression: surprised
     pause_after: 0.45
   - text: ペンシルベニア大学でも、SNSを1日30分に制限して3週間続けてもらったの。こっちは孤独感が減ったわ。
     speaker: めたん
@@ -870,7 +847,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.9
-  - text: やっぱりやめれば効くのだ！ 今すぐアプリを消す指がうなるのだ！
+  - text: やっぱりやめれば効くのだ！ 今すぐアプリを消すのだ！
     speaker: ずんだもん
     expression: delighted
     pause_after: 0.45
@@ -878,7 +855,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 0.45
-  - text: あっ。スマホを封印しても、僕の頭の中の同期は消えないのだ。
+  - text: あっ。スマホを封印しても、僕の頭の中の比較は消えないのだ。
     speaker: ずんだもん
     expression: surprised
     pause_after: 0.45
@@ -894,7 +871,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.45
-  - text: じゃあ僕、比べちゃったこと自体を責めなくていいのだ。誰をどう見るかを変えればいいのだ？
+  - text: じゃあ僕、比べちゃったこと自体を責めなくていいのだ。
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.35
@@ -910,55 +887,55 @@ scenes:
     credit: 'Photo: John (Giannis) Tekeridis / Pexels'
   - type: image
     cut_reason: 【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す
-    from: 5
+    from: 4
     slot: 2
     credit: 'Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676.／Photo: John (Giannis) Tekeridis / Pexels'
     telop: スタンフォード大学・ニューヨーク大学（2020）
   - type: image
     cut_reason: 【保持の分割】同じスマホ写真を保持したまま20秒超を避けるための継続カット
-    from: 7
+    from: 6
     slot: 3
     credit: 'Photo: John (Giannis) Tekeridis / Pexels'
   - type: image
     cut_reason: 【結果】同じ写真を保持したまま、幸福感の変化をテロップで出す
-    from: 9
+    from: 8
     slot: 4
     credit: 'Photo: John (Giannis) Tekeridis / Pexels'
     telop: 4週間で幸福感が上がった／8割『止めてよかった』
   - type: image
     cut_reason: 【別の実験】タイマーの写真に替え、ペンシルベニア大学の制限実験を示す
-    from: 12
+    from: 10
     slot: 5
     credit: 'Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO. Journal of Social and Clinical Psychology, 37(10), 751–768.／Photo: Image Hunter / Pexels'
   - type: image
     cut_reason: 【結果】同じタイマー写真を保持したまま、孤独感減少をテロップで出す
-    from: 13
+    from: 11
     slot: 6
     credit: 'ペンシルベニア大学 学生143人（2018）／Photo: Image Hunter / Pexels'
     telop: '1日30分制限・3週間: 孤独感が減少'
   - type: diagram
     cut_reason: 【半分だけ正解】SNSをやめる→少し楽になる、頭の中で比べる癖→残る、の対比を格子で見せる。決め文「止まらないのよ」（間）まで保持する
-    from: 18
+    from: 16
     diagram:
       type: sketch
       rows:
       - - id: snsstop
-          at: 18
+          at: 16
           icon: phonelink_erase
           text: SNSをやめる
           after: ちょっと待って
         - id: relief
-          at: 18
+          at: 16
           icon: sentiment_satisfied
           text: 少し楽になる
           after: ちょっと待って
       - - id: bias
-          at: 21
+          at: 19
           icon: visibility_off
           text: 比べる癖
           after: 消えないのだ
         - id: remain
-          at: 21
+          at: 19
           icon: repeat
           text: 残る
           after: 消えないのだ
@@ -969,22 +946,22 @@ scenes:
         to: remain
   - type: image
     cut_reason: 【良い面】ランナーの後ろ姿に替え、比べることの良い面（目標）を示す
-    from: 24
+    from: 22
     slot: 7
     credit: 'Photo: MART PRODUCTION / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット
-    from: 26
+    from: 24
     slot: 8
     credit: 'Photo: MART PRODUCTION / Pexels'
   readings:
   - surface: 二組
     reading: フタクミ
 - id: 8
-  title: じゃあ、どうすればいいのか
-  chapter_title: じゃあ、どうすればいいのか
+  title: どうすればいいのか
+  chapter_title: どうすればいいのか
   narration:
-  - text: 比べる理由は「目盛りがないから」だったでしょう？ だったら、目盛りのあるものを一つ持てばいいのよ。
+  - text: 比べる理由は「目盛りがないから」だったでしょう？ だったら、目盛りのある趣味とかを一つ持てばいいのよ。
     speaker: めたん
     expression: explain
     pause_after: 0.45
@@ -1004,27 +981,35 @@ scenes:
     speaker: ずんだもん
     expression: thinking
     pause_after: 0.45
-  - text: それから、SNSは眺めるだけで終えないこと。落ち込んだら、いま誰と比べているのか、一人だけ名指ししてみて。
+  - text: それから、SNSは眺めるだけで終えないこと。気になった相手がいたら、その人に話しかけてみるの。ずんだもんなら、誰？
     speaker: めたん
     expression: explain
     pause_after: 0.45
   - text: 昇進した、同期のAさんなのだ。
     speaker: ずんだもん
     expression: normal
-    pause_after: 0.45
-  - text: フィードを眺めているときは、何百人分のいい瞬間と比べているの。Aさん一人になれば、普通の人間よ。
-    speaker: めたん
-    expression: normal
     pause_after: 0.35
-  - text: 思い浮かべる相手を、目立つ人じゃない特定の知人に指定すると、劣等感が消えたの。ギロビッチ教授たちの別の実験よ。
-    speaker: めたん
-    expression: explain
-    pause_after: 0.45
-  - text: でも、昇進した相手に聞くのは、ちょっと気まずいのだ…。
+  - text: でも、昇進した相手に話しかけるのは、ちょっと気まずいのだ…。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
-  - text: 気まずいわよね。でも、Aさんに「どうやったのか」を聞くのよ。メッセージでもいいし、会う約束をして聞くのが一番いいわ。
+  - text: そう思うわよね。でも、その気まずさは、たいてい思い過ごしなのよ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: ピッツバーグ大学などの研究で、しばらく連絡していない友人に、実際に一言メッセージを送ってもらったの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 送った側は「そんなに喜ばないだろう」と予想していたけど、受け取った側は、その予想より喜んでいたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 予想と逆なのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.6
+  - text: だから、Aさんに「どうやったのか」を聞いていいのよ。メッセージでもいいし、会う約束をして聞くのが一番いいわ。
     speaker: めたん
     expression: smile
     pause_after: 0.35
@@ -1065,43 +1050,48 @@ scenes:
     slot: 3
     credit: 'Photo: Image Hunter / Pexels'
   - type: board
-    cut_reason: 【板の進行2/2】②（一人に絞って聞く）を書き足す
+    cut_reason: 【板の進行2/2】②（その人に話しかける）を書き足す
     from: 9
     telop: '比べ方の使い直し
 
       ① 目盛りのあるものを持つ
 
-      ② 眺めるだけで終えず、一人に絞って聞く'
+      ② 眺めるだけで終えず、その人に話しかける'
   - type: image
-    cut_reason: 【夜のスマホへ】S1と同じ夜のスマホの手元に替え、一人だけ名指しする話に入る
+    cut_reason: 【夜のスマホへ】S1と同じ夜のスマホの手元に替え、気まずさの話に入る
     from: 10
     slot: 4
     credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
-    cut_reason: 【結果】同じ写真を保持したまま、劣等感が消えた結果をテロップで出す
-    from: 14
-    slot: 5
-    credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Study 6A. コーネル大学154人（2017）／Photo: Jaroslav Maler / Pexels'
-    telop: 思い浮かべる相手を特定の知人に指定→劣等感が消えた
-  - type: image
     cut_reason: 【保持の分割】同じ夜のスマホ写真を保持したまま20秒超を避けるための継続カット
-    from: 16
-    slot: 6
+    from: 13
+    slot: 5
     credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
-    cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
-    from: 19
+    cut_reason: 【朝のスマホへ】S9用の朝のスマホの手元を流用し、Liu 2023の実験へ切り替える
+    from: 16
+    slot: 6
+    credit: 'Photo: LinkedIn Sales Navigator / Pexels'
+  - type: image
+    cut_reason: 【結果】同じ写真を保持したまま、予想より喜ばれた結果をテロップで出す
+    from: 17
     slot: 7
+    credit: 'Liu, P. J., Rim, S., Min, L., & Min, K. E. (2023). The surprise of reaching out. Journal of Personality and Social Psychology, 124(4), 754–771. ピッツバーグ大学など54組（2023）／Photo: LinkedIn Sales Navigator / Pexels'
+    telop: 久しぶりの連絡は、相手は予想より喜ぶ
+  - type: image
+    cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
+    from: 20
+    slot: 8
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す
-    from: 20
-    slot: 8
+    from: 21
+    slot: 9
     credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット
-    from: 22
-    slot: 9
+    from: 23
+    slot: 10
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: Aさん
@@ -1126,7 +1116,7 @@ scenes:
     speaker: めたん
     expression: serious
     pause_after: 2.0
-  - text: 僕は昨日、流れてきたAさんの昇進だけ見て、3時まで落ち込んでたのだ。
+  - text: 僕は昨日、流れてきたAさんの昇進だけ見て、劣等感を感じてモヤモヤしてたのだ。
     speaker: ずんだもん
     expression: sad
     pause_after: 0.45
@@ -1142,7 +1132,7 @@ scenes:
     speaker: めたん
     expression: smile
     pause_after: 0.8
-  - text: 今夜は、3時前に眠るのだ！
+  - text: 今夜は、早く眠るのだ！
     speaker: ずんだもん
     expression: delighted
     pause_after: 2.0
