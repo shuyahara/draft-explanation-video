@@ -238,12 +238,12 @@ scenes:
           at: 31
           icon: payments
           text: 自分の額 同じ
-          after: 隣の人がもらった額も見せられるわ
+          after: 隣の人が
         - id: other1
           at: 31
           icon: person
           text: 相手の額 少ない
-          after: 隣の人がもらった額も見せられるわ
+          after: もらった額も
         - id: react1
           at: 32
           icon: trending_up
@@ -253,12 +253,12 @@ scenes:
           at: 31
           icon: payments
           text: 自分の額 同じ
-          after: 隣の人がもらった額も見せられるわ
+          after: 隣の人が
         - id: other2
           at: 31
           icon: person
           text: 相手の額 多い
-          after: 隣の人がもらった額も見せられるわ
+          after: もらった額も
         - id: react2
           at: 32
           icon: trending_down
@@ -666,7 +666,7 @@ scenes:
           at: 8
           icon: group
           text: 300人に聞いた
-          after: 300人に聞いたの
+          after: 2017年に
         - id: deri_q
           at: 9
           icon: psychology
@@ -692,7 +692,7 @@ scenes:
       caption:
         text: ギロビッチ教授ら（2017）
         at: 8
-        after: 300人に聞いたの
+        after: ギロビッチ教授たちが
   - type: image
     cut_reason: 【写真に戻す】図解のあとパーティー写真に戻し、他の質問でも同じだったと言う
     from: 15
@@ -947,7 +947,7 @@ scenes:
           at: 5
           icon: group
           text: 利用者を2組に
-          after: 二組に分けて
+          after: Facebookの利用者を
         - id: fb_op
           at: 5
           icon: phonelink_erase
@@ -1152,7 +1152,7 @@ scenes:
           icon: mood
           value: 5.57点
           text: 送った側の予想
-          after: 予想していたけど
+          after: 送った側は
         - id: liu_real
           at: 17
           icon: sentiment_very_satisfied
@@ -1170,7 +1170,7 @@ scenes:
       caption:
         text: 7点満点・54組（2023）
         at: 17
-        after: 予想していたけど
+        after: 送った側は
   - type: image
     cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
     from: 20

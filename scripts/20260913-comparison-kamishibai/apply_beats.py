@@ -262,13 +262,13 @@ BEATS = {
             sketch(
                 [
                     [
-                        cell("own1", icon="payments", text="自分の額 同じ", at="隣の人がもらった額も見せられるわ", after="隣の人がもらった額も見せられるわ"),
-                        cell("other1", icon="person", text="相手の額 少ない", at="隣の人がもらった額も見せられるわ", after="隣の人がもらった額も見せられるわ"),
+                        cell("own1", icon="payments", text="自分の額 同じ", at="隣の人がもらった額も見せられるわ", after="隣の人が"),
+                        cell("other1", icon="person", text="相手の額 少ない", at="隣の人がもらった額も見せられるわ", after="もらった額も"),
                         cell("react1", icon="trending_up", text="脳の反応 ↑", at="反応が下がったの", after="反応が下がったの"),
                     ],
                     [
-                        cell("own2", icon="payments", text="自分の額 同じ", at="隣の人がもらった額も見せられるわ", after="隣の人がもらった額も見せられるわ"),
-                        cell("other2", icon="person", text="相手の額 多い", at="隣の人がもらった額も見せられるわ", after="隣の人がもらった額も見せられるわ"),
+                        cell("own2", icon="payments", text="自分の額 同じ", at="隣の人がもらった額も見せられるわ", after="隣の人が"),
+                        cell("other2", icon="person", text="相手の額 多い", at="隣の人がもらった額も見せられるわ", after="もらった額も"),
                         cell("react2", icon="trending_down", text="脳の反応 ↓", at="反応が下がったの", after="反応が下がったの"),
                     ],
                 ],
@@ -350,7 +350,7 @@ BEATS = {
             sketch(
                 [
                     [
-                        cell("deri_n", icon="group", text="300人に聞いた", at="300人に聞いたの", after="300人に聞いたの"),
+                        cell("deri_n", icon="group", text="300人に聞いた", at="300人に聞いたの", after="2017年に"),
                         cell("deri_q", icon="psychology", text="どちらが多く行くか", at="どちらがパーティーによく行くと思うか", after="よく行くと思うか"),
                     ],
                     [
@@ -360,7 +360,7 @@ BEATS = {
                 ],  # 2 段（S4 の 1x3 格子と同じ形が続く警告を避ける）
                 arrows=[("deri_n", "deri_q"), ("deri_q", "deri_r")],
                 highlight={"ids": ["deri_r"], "at": "82％が", "after": "82％が"},
-                caption={"text": "ギロビッチ教授ら（2017）", "at": "300人に聞いたの", "after": "300人に聞いたの"},
+                caption={"text": "ギロビッチ教授ら（2017）", "at": "300人に聞いたの", "after": "ギロビッチ教授たちが"},
             ),
         ),
         img("友人の数を聞いても", 4, "party", "【写真に戻す】図解のあとパーティー写真に戻し、他の質問でも同じだったと言う"),
@@ -417,7 +417,7 @@ BEATS = {
             sketch(
                 [
                     [
-                        cell("fb_n", icon="group", text="利用者を2組に", at="Facebookの利用者をランダムに二組に分けて", after="二組に分けて"),
+                        cell("fb_n", icon="group", text="利用者を2組に", at="Facebookの利用者をランダムに二組に分けて", after="Facebookの利用者を"),
                         cell("fb_op", icon="phonelink_erase", text="片方だけ4週間停止", at="Facebookの利用者をランダムに二組に分けて", after="止めてもらったの"),
                         cell("fb_r", icon="trending_up", text="幸福感が少し上昇", at="止めた組は、幸福感が少し上がったわ", after="少し上がったわ"),
                     ],
@@ -460,13 +460,13 @@ BEATS = {
             sketch(
                 [
                     [
-                        cell("liu_pred", icon="mood", value="5.57点", text="送った側の予想", at="送った側は", after="予想していたけど"),
+                        cell("liu_pred", icon="mood", value="5.57点", text="送った側の予想", at="送った側は", after="送った側は"),
                         cell("liu_real", icon="sentiment_very_satisfied", value="6.17点", text="相手の実際の喜び", at="送った側は", after="予想より喜んでいたわ"),
                     ],
                 ],
                 arrows=[("liu_pred", "liu_real")],
                 highlight={"ids": ["liu_real"], "at": "送った側は", "after": "予想より喜んでいたわ"},
-                caption={"text": "7点満点・54組（2023）", "at": "送った側は", "after": "予想していたけど"},
+                caption={"text": "7点満点・54組（2023）", "at": "送った側は", "after": "送った側は"},
             ),
         ),
         img("メッセージでもいいし、会う約束をして", 6, "cafe9", "【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す"),
