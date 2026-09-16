@@ -997,31 +997,25 @@ scenes:
     from: 12
     slot: 3
     credit: 'Photo: John (Giannis) Tekeridis / Pexels'
-  - type: board
-    cut_reason: '【板の進行1/2】見出し＋①（減らせば少し楽になる）を出す（v8: 台詞の写しだった格子図解を板に替え、前の図解との連続を避ける）'
+  - type: image
+    cut_reason: '【決め文まで保持】板にせず机のスマホを保持したまま、決め文「止まらないのよ」（間）を聞かせる（v10: v9 の板は字幕の写しで、①②が譲歩と反転の関係を列挙に見せていた）'
     from: 16
-    telop: 'SNSをやめれば解決か
-
-      ① 減らせば、少し楽になる'
-  - type: board
-    cut_reason: 【板の進行2/2】②（頭の中の比較は止まらない）を書き足して金色に。決め文「止まらないのよ」（間）まで保持する
-    from: 19
-    telop: 'SNSをやめれば解決か
-
-      ① 減らせば、少し楽になる
-
-      ② 頭の中の比較は、止まらない'
-    highlight_lines:
-    - 3
+    slot: 4
+    credit: 'Photo: John (Giannis) Tekeridis / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じ机のスマホを保持したまま、決め文「止まらないのよ」（間）まで（20秒超を避ける継続カット）
+    from: 21
+    slot: 5
+    credit: 'Photo: John (Giannis) Tekeridis / Pexels'
   - type: image
     cut_reason: '【良い面】前を走る人を追うランナーの生成画像に替え、比べることの良い面（目標）を示す（v8: 単独の後ろ姿から差し替え）'
     from: 22
-    slot: 4
+    slot: 6
     credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット
     from: 24
-    slot: 5
+    slot: 7
     credit: 'Image: AI generated'
   readings:
   - surface: 二組
@@ -1103,43 +1097,34 @@ scenes:
     slot: 1
     credit: 'Photo: Image Hunter / Pexels'
   - type: board
-    cut_reason: 【板の進行1/2】見出し＋①（目盛りのあるものを持つ）を出す
-    from: 2
-    telop: '比べ方の使い直し
-
-      ① 目盛りのあるものを持つ'
-  - type: image
-    cut_reason: 【具体例】同じタイマー写真を保持したまま、目盛りのある例を示す
+    cut_reason: '【用語と列挙】「目盛りのあるもの」を見出しに、音声では覚えきれない具体例 3 つを板に並べる（v10: v9 の「比べ方の使い直し／① 目盛りのあるものを持つ」は枠組みラベルの見出しと一項目の番号付きで、板が抽象・台詞が具体と逆だった）'
     from: 4
-    slot: 2
-    credit: 'Photo: Image Hunter / Pexels'
+    telop: '目盛りのあるもの
+
+      ① 資格の合否
+
+      ② 走ったタイム
+
+      ③ 書き上げた枚数'
   - type: image
     cut_reason: 【保持の分割】同じタイマー写真を保持したまま20秒超を避けるための継続カット
     from: 6
-    slot: 3
+    slot: 2
     credit: 'Photo: Image Hunter / Pexels'
-  - type: board
-    cut_reason: 【板の進行2/2】②（その人に話しかける）を書き足す
-    from: 9
-    telop: '比べ方の使い直し
-
-      ① 目盛りのあるものを持つ
-
-      ② 眺めるだけで終えず、その人に話しかける'
   - type: image
-    cut_reason: 【夜のスマホへ】S1と同じ夜のスマホの手元に替え、気まずさの話に入る
-    from: 10
-    slot: 4
+    cut_reason: '【夜のスマホへ】二つ目の提案で S1 と同じ夜のスマホの手元に替え、気まずさの話に入る（v10: 主張文の板をやめた）'
+    from: 9
+    slot: 3
     credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じ夜のスマホ写真を保持したまま20秒超を避けるための継続カット
     from: 13
-    slot: 5
+    slot: 4
     credit: 'Photo: Jaroslav Maler / Pexels'
   - type: image
     cut_reason: 【朝のスマホへ】S9用の朝のスマホの手元を流用し、Liu 2023の実験へ切り替える
     from: 16
-    slot: 6
+    slot: 5
     credit: 'Photo: LinkedIn Sales Navigator / Pexels'
   - type: diagram
     cut_reason: '【予想と実際】送った側の予想 5.57 点 → 相手の実際 6.17 点（7 点満点・54 組）を 2 セルで並べ、予想の方が低かったことを見せる。「予想と逆なのだ」まで保持する（v8: 写真＋テロップだけだった箇所。Liu, Rim, Min & Min 2023, JPSP 124(4), Experiment 2）'
@@ -1174,17 +1159,17 @@ scenes:
   - type: image
     cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
     from: 20
-    slot: 7
+    slot: 6
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す
     from: 21
-    slot: 8
+    slot: 7
     credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480-488.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット
     from: 23
-    slot: 9
+    slot: 8
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: Aさん
