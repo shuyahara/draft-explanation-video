@@ -9,9 +9,11 @@ A/B/C（`make_thumbs.py`、実写風の夜のスマホ場面）とは別構図�
 「？」を置いた `thumb-D2.png` も追加で作る。
 
 合成の骨格（上下2帯・立ち絵の配置）は `make_thumbs.py` を踏襲するが、背景の配置方法は
-異なる。表彰台3人＋4人目が全員はっきり見える必要があるため、クロップして全画面に
-敷き詰める（cover-fit）のではなく、**クロップせず等比縮小して上下帯の間（安全地帯）に
-全体を収め、余白は背景の地色と同じ薄いグレーで埋める**（2026-09-16 差し戻しで変更）。
+異なる。表彰台3人＋4人目が全員はっきり見える必要があるため、背景は**横幅いっぱい
+（等比・幅合わせ）に置き、縮小はせず、画像を下へずらして「1位の拳の頂点」を上帯の
+下端に合わせる**。下帯の文言とは重なってよい（2026-09-16 ユーザー指示。それ以前の
+「上下帯の間に等比縮小で収める」contain-fit は、人物が小さくなりすぎるため取りやめ）。
+下端は 60〜70px ほどキャンバス外に出る（床の反射と 4 人目の足先）。
 """
 from __future__ import annotations
 
@@ -52,10 +54,17 @@ VARIANTS = [
     ("bg-F.png", "順位より、何と比べたか", "thumb-F.png", "explain", "thinking"),
 ]
 
-# 上下の帯（文言を置く領域）を除いた「安全地帯」の縦範囲。表彰台3人+4人目が
-# 必ずこの中に収まるよう、背景はクロップせず等比縮小してここへ収める。
+# 上帯（タイトル文言を置く領域）の下端。背景の「一番上の人物（1位の拳）」の頂点を
+# ここに合わせる（縮小せず下へずらす）。
 TOP_SAFE = round(H * 0.21)
-BOTTOM_SAFE = round(H * 0.80)
+
+# 各背景の「一番上の白い人物」の頂点行（元画像座標。輝度 >238 の画素が 4 個以上ある
+# 最初の行を計測した値）。
+FIGURE_TOP = {
+    "bg-D.png": 31,
+    "bg-E.png": 17,
+    "bg-F.png": 41,
+}
 
 # 上段タイトル文字の下端（実測値。fit_bold_font(TITLE_TOP, W*0.92, H*0.16, stroke=8) で
 # 描画したときのテキスト bbox 下端が canvas y=124 になる。D2 の「？」をタイトルへ
@@ -63,18 +72,23 @@ BOTTOM_SAFE = round(H * 0.80)
 TITLE_BOTTOM_PX = 124
 
 # D2: D と同じ背景・文言に、2位の頭上へ大きめの金色「？」を1つ追加する。
-# 通常の TOP_SAFE のままだと「タイトル下端」〜「2位の頭上端」の隙間が約100pxしかなく
-# 旧版（0.12H=86px）の2倍サイズが入らないため、D2 だけ写真を一段小さく（TOP_SAFE を
-# 下げて）縮小し、タイトルと頭の間に「？」の置き場を確保する。
-D2_TOP_SAFE = round(H * 0.32)
-D2_MARK_H = round(H * 0.18)  # 旧版（0.12H）の1.5倍。物理的に入る上限で「旧版の2倍」に最も近づけた値
+# 幅合わせ配置では 2位の頭上端（元画像 y≈220）がキャンバス y≈296 に来るので、
+# タイトル下端（124）との間に約170px の隙間があり、0.18H（130px）の「？」が収まる。
+D2_MARK_H = round(H * 0.18)
 D2_MARK_CX_SRC_FRAC = 0.556  # 2位の頭の中心 x（bg-D.png 内の比率。目視で計測）
-D2_MARK_CY = round((TITLE_BOTTOM_PX + D2_TOP_SAFE) / 2)  # タイトル下端と写真上端のちょうど中間
+D2_HEAD_TOP_SRC = 220        # 2位の頭の上端 y（bg-D.png 内の px。目視で計測）
 
-# 4人目が立ち絵と重ならないよう、背景の水平配置を個別に微調整する（px、正で右へ）。
+# 背景の水平ずらし（px、正で右へ）。幅合わせ配置ではずらすと端に地色の帯が出るため 0。
 H_BIAS = {
-    "bg-D.png": -60,  # D: 4人目が右寄りのため、全体を左へ寄せる
-    "bg-E.png": 60,   # E: 4人目が左寄りのため、全体を右へ寄せる
+    "bg-D.png": 0,
+    "bg-E.png": 0,
+    "bg-F.png": 0,
+}
+# 立ち絵を小さくした版（-s）の水平ずらし。端に出る地色の帯（40px）は壁と同じグレーで
+# ほぼ見えず、大半は立ち絵の後ろに隠れる。
+H_BIAS_SMALL = {
+    "bg-D.png": -40,  # 4人目が右端 → 左へ
+    "bg-E.png": 40,   # 4人目が左端 → 右へ
     "bg-F.png": 0,
 }
 
@@ -126,19 +140,19 @@ def sample_fill_color(photo: Image.Image) -> tuple[int, int, int, int]:
     return (r, g, b, 255)
 
 
-def place_contained(canvas: Image.Image, photo: Image.Image, safe_top: int, safe_bottom: int,
-                     hbias: int = 0) -> tuple[float, int, int]:
-    """photo をクロップせず等比縮小し、`safe_top`〜`safe_bottom` の縦帯にちょうど収まる
-    高さで canvas 中央（+hbias px）へ貼る。戻り値 (scale, x0, y0) は元画像の座標を
-    最終キャンバス座標へ変換するための係数（final = (src_x*scale+x0, src_y*scale+y0)）。"""
+def place_top_aligned(canvas: Image.Image, photo: Image.Image, figure_top_src: int, top_y: int,
+                      hbias: int = 0) -> tuple[float, int, int]:
+    """photo を等比でキャンバス幅いっぱいに合わせ（縮小はしない）、元画像の
+    `figure_top_src` 行がキャンバスの `top_y` に来るよう下へずらして貼る。はみ出した
+    下端はキャンバス外。戻り値 (scale, x0, y0) は元画像座標→キャンバス座標の係数
+    （final = (src_x*scale+x0, src_y*scale+y0)）。"""
     img = photo.convert("RGBA")
     w, h = img.size
-    safe_h = safe_bottom - safe_top
-    scale = safe_h / h
-    new_w = round(w * scale)
-    resized = img.resize((new_w, safe_h), Image.LANCZOS)
-    x0 = (canvas.width - new_w) // 2 + hbias
-    y0 = safe_top
+    scale = canvas.width / w
+    new_w, new_h = canvas.width, round(h * scale)
+    resized = img.resize((new_w, new_h), Image.LANCZOS)
+    x0 = hbias
+    y0 = top_y - round(figure_top_src * scale)
     canvas.paste(resized, (x0, y0), resized)
     return scale, x0, y0
 
@@ -158,27 +172,31 @@ def paste(base: Image.Image, layer: Image.Image, x: float, y: float) -> None:
 
 
 def make_thumb(bg_path: Path, subtitle: str, metan_expr: str, zun_expr: str,
-                small_mark: bool = False) -> Image.Image:
+                small_mark: bool = False, small_puppets: bool = False) -> Image.Image:
+    """small_puppets=True: 立ち絵を 0.65H→0.45H に縮めて両隅へ寄せ（cx 0.08 / 0.92）、
+    背景を H_BIAS_SMALL だけ横にずらして 4 人目（体育座り）が立ち絵の後ろに隠れない
+    ようにする（D/E 用。F は 4 人目がいないので不要）。"""
     photo = Image.open(bg_path)
     fill = sample_fill_color(photo)
     bg = Image.new("RGBA", (W, H), fill)
-    hbias = H_BIAS.get(bg_path.name, 0)
-    top_safe = D2_TOP_SAFE if small_mark else TOP_SAFE
-    scale, x0, y0 = place_contained(bg, photo, top_safe, BOTTOM_SAFE, hbias=hbias)
+    hbias = (H_BIAS_SMALL if small_puppets else H_BIAS).get(bg_path.name, 0)
+    scale, x0, y0 = place_top_aligned(bg, photo, FIGURE_TOP[bg_path.name], TOP_SAFE, hbias=hbias)
 
     if small_mark:
         mark_font = fit_bold_font("？", max_width=D2_MARK_H, max_height=D2_MARK_H, stroke_width=14)
         cx = round(D2_MARK_CX_SRC_FRAC * photo.width * scale + x0)
-        draw_mixed_center(bg, [("？", GOLD)], cx, D2_MARK_CY, mark_font, stroke_width=14)
+        head_top = round(D2_HEAD_TOP_SRC * scale + y0)
+        cy = round((TITLE_BOTTOM_PX + head_top) / 2)  # タイトル下端と2位の頭上端の中間
+        draw_mixed_center(bg, [("？", GOLD)], cx, cy, mark_font, stroke_width=14)
 
     # 立ち絵: 「下端から顔が覗く」配置。文言より先に貼り、下帯の文言を
     # 立ち絵の上に重ねて描くことで、文字が立ち絵に隠れないようにする。
-    puppet_h = round(H * 0.65)
+    puppet_h = round(H * (0.45 if small_puppets else 0.65))
     metan = load_puppet("metan", metan_expr, puppet_h)
     zun = load_puppet("zundamon", zun_expr, puppet_h)
     peek_top_y = H - round(puppet_h * 0.5)
-    metan_cx = round(W * 0.12)
-    zun_cx = round(W * 0.88)
+    metan_cx = round(W * (0.08 if small_puppets else 0.12))
+    zun_cx = round(W * (0.92 if small_puppets else 0.88))
     paste(bg, metan, metan_cx - metan.width / 2, peek_top_y)
     paste(bg, zun, zun_cx - zun.width / 2, peek_top_y)
 
@@ -230,6 +248,25 @@ def main() -> None:
     d2 = make_thumb(BG_DIR / "bg-D.png", "2位はなぜ落ち込むのか", "thinking", "confused", small_mark=True)
     p = OUT / "thumb-D2.png"
     d2.convert("RGB").save(p, "PNG", optimize=True)
+    print(p)
+
+    # -s 版: 立ち絵を小さくして 4 人目を見せる（D / D2 / E）。
+    small = []
+    for bg_name, subtitle, out_name, metan_expr, zun_expr in VARIANTS[:2]:
+        img = make_thumb(BG_DIR / bg_name, subtitle, metan_expr, zun_expr, small_puppets=True)
+        p = OUT / out_name.replace(".png", "-s.png")
+        img.convert("RGB").save(p, "PNG", optimize=True)
+        print(p)
+        small.append((img, out_name.replace("thumb-", "").replace(".png", "-s")))
+    d2s = make_thumb(BG_DIR / "bg-D.png", "2位はなぜ落ち込むのか", "thinking", "confused",
+                     small_mark=True, small_puppets=True)
+    p = OUT / "thumb-D2-s.png"
+    d2s.convert("RGB").save(p, "PNG", optimize=True)
+    print(p)
+    small.insert(1, (d2s, "D2-s"))
+    sheet = make_contact_sheet([i for i, _ in small], [l for _, l in small])
+    p = OUT / "thumb-contact-DEs.jpg"
+    sheet.save(p, quality=88)
     print(p)
 
 
