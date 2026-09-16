@@ -51,7 +51,7 @@ TITLE_TOP = "なぜ人と比べてしまうのか"
 VARIANTS = [
     ("bg-D.png", "2位はなぜ落ち込むのか", "thumb-D.png", "thinking", "confused"),
     ("bg-E.png", "比べるのはやめられない", "thumb-E.png", "serious", "sad"),
-    ("bg-F.png", "順位より、何と比べたか", "thumb-F.png", "explain", "thinking"),
+    ("bg-F.png", "SNSで病む理由", "thumb-F.png", "explain", "thinking"),  # 採用案（ユーザー選択 2026-09-16。旧文言「順位より、何と比べたか」）
 ]
 
 # 上帯（タイトル文言を置く領域）の下端。背景の「一番上の人物（1位の拳）」の頂点を
