@@ -992,6 +992,11 @@ scenes:
         text: 8割が『止めてよかった』
         at: 8
         after: 8割の人が
+  - type: image
+    cut_reason: 【引用文】図解を 30 秒弱で閉じ、机のスマホに戻して学生の言葉を聞かせる
+    from: 12
+    slot: 3
+    credit: 'Photo: John (Giannis) Tekeridis / Pexels'
   - type: board
     cut_reason: '【板の進行1/2】見出し＋①（減らせば少し楽になる）を出す（v8: 台詞の写しだった格子図解を板に替え、前の図解との連続を避ける）'
     from: 16
@@ -1011,12 +1016,12 @@ scenes:
   - type: image
     cut_reason: '【良い面】前を走る人を追うランナーの生成画像に替え、比べることの良い面（目標）を示す（v8: 単独の後ろ姿から差し替え）'
     from: 22
-    slot: 3
+    slot: 4
     credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット
     from: 24
-    slot: 4
+    slot: 5
     credit: 'Image: AI generated'
   readings:
   - surface: 二組
