@@ -82,7 +82,8 @@ CREDIT = {
     "handshake": "Photo: Khwanchai Phanthong / Pexels",
     "clock": "Photo: cottonbro studio / Pexels",
     "office2": "Photo: Yan Krukau / Pexels",
-    "scale": "Photo: Annushka Ahuja / Pexels",
+    "scale": "Photo: Annushka Ahuja / Pexels",  # v9 で height_gen に差し替え（台詞は身長なのに体重計。映像レビュー v2）
+    "height_gen": "Image: AI generated",
     "office3": "Photo: Mikhail Nilov / Pexels",
     "mri": "Photo: Pexels",  # v8 で mri_gen に差し替え（実は CT 装置でロゴが読めた）
     "mri_gen": "Image: AI generated",
@@ -114,6 +115,7 @@ SOURCE_FILE = {
     "clock": "stock/s01_clock_c.jpg",
     "office2": "stock/s02_office_b.jpg",
     "scale": "stock/s03_scale_a.jpg",
+    "height_gen": "gen/s02_height_gen_sq.jpg",  # 背中合わせで身長を比べる 2 人（上部正方形クロップ）
     "office3": "stock/s03_office_a.jpg",
     "mri": "stock/s03_mri_a.jpg",
     "mri_gen": "gen/s02_mri_gen.jpg",
@@ -239,10 +241,10 @@ BEATS = {
     # ---------------- S2 なぜ、比べずにいられないのか ----------------
     2: [
         chapter(),
-        img("突然だけど、身長なら", 1, "scale", "【測れるものの例】体重計に乗る足元で開く",
+        img("突然だけど、身長なら", 1, "height_gen", "【測れるものの例】背中合わせで身長を比べる 2 人の生成画像で開く（v9: 体重計から差し替え）",
             source="Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140."),
-        img("身長には数値にできる目盛りがあるわ", 2, "scale", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット"),
-        img("他人を目盛りにするのだ", 3, "scale", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット（2）"),
+        img("身長には数値にできる目盛りがあるわ", 2, "height_gen", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット"),
+        img("他人を目盛りにするのだ", 3, "height_gen", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット（2）"),
         board("1954年に", "【板の進行1/3】見出し＋①（目盛りがない→他人で測る）を出す",
               telop="フェスティンガーの社会的比較（1954）\n① 目盛りがない→他人で測る"),
         board("欲求があるの", "【板の進行2/3】②（自分を評価したい欲求）を書き足す",
@@ -275,7 +277,7 @@ BEATS = {
                 highlight={"ids": ["react2"], "at": "反応が下がったの", "after": "反応が下がったの"},  # 決め要素だけ金色
             ),
         ),
-        img("ただ、フェスティンガーも", 5, "scale", "【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで"),
+        img("ただ、フェスティンガーも", 5, "height_gen", "【決め文の保持後】身長比べの写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで"),
     ],
     # ---------------- S3 順位がよければ、楽になるのか ----------------
     3: [

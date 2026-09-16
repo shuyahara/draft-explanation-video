@@ -174,20 +174,20 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【測れるものの例】体重計に乗る足元で開く
+    cut_reason: '【測れるものの例】背中合わせで身長を比べる 2 人の生成画像で開く（v9: 体重計から差し替え）'
     from: 1
     slot: 1
-    credit: 'Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140.／Photo: Annushka Ahuja / Pexels'
+    credit: 'Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140.／Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット
     from: 6
     slot: 2
-    credit: 'Photo: Annushka Ahuja / Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット（2）
     from: 9
     slot: 3
-    credit: 'Photo: Annushka Ahuja / Pexels'
+    credit: 'Image: AI generated'
   - type: board
     cut_reason: 【板の進行1/3】見出し＋①（目盛りがない→他人で測る）を出す
     from: 12
@@ -270,10 +270,10 @@ scenes:
         at: 32
         after: 反応が下がったの
   - type: image
-    cut_reason: 【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで
+    cut_reason: 【決め文の保持後】身長比べの写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで
     from: 37
     slot: 7
-    credit: 'Photo: Annushka Ahuja / Pexels'
+    credit: 'Image: AI generated'
 - id: 3
   title: 順位がよければ、楽になるのか
   chapter_title: 順位がよければ、楽になるのか
