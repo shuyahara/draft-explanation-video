@@ -218,15 +218,15 @@ scenes:
     slot: 4
     credit: 'Photo: Mikhail Nilov / Pexels'
   - type: image
-    cut_reason: 【実験装置】検査装置の写真に替え、MRIに入ってもらう場面へ
+    cut_reason: '【実験装置】MRI 2 台に参加者が 2 人入る生成画像に替え、二人同時に測る実験の場面へ（v8: CT 写真から差し替え）'
     from: 26
     slot: 5
-    credit: 'Photo: Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【研究の出典】同じMRI写真を保持したまま、実施機関と年をテロップで出す
     from: 29
     slot: 6
-    credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308.／Photo: Pexels'
+    credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308.／Image: AI generated'
     telop: ボン大学など 33人（2007）
   - type: diagram
     cut_reason: 【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる。決め文「難しいのよ」（間）まで保持する
@@ -264,6 +264,11 @@ scenes:
           icon: trending_down
           text: 脳の反応 ↓
           after: 反応が下がったの
+      highlight:
+        ids:
+        - react2
+        at: 32
+        after: 反応が下がったの
   - type: image
     cut_reason: 【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで
     from: 37
@@ -341,20 +346,20 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【表彰台】チャプター背景として無人の表彰台で開く
+    cut_reason: '【表彰台】3 人のメダリスト（2 位だけ暗い顔で 1 位を見上げる）の生成画像で開く（v8: 無人の表彰台から差し替え）'
     from: 1
     slot: 1
-    credit: 'Photo: Szcze hoo / Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット
     from: 3
     slot: 2
-    credit: 'Photo: Szcze hoo / Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット（2）
     from: 8
     slot: 3
-    credit: 'Photo: Szcze hoo / Pexels'
+    credit: 'Image: AI generated'
   - type: diagram
     cut_reason: 【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる。決め文「状況が決めていたのよ」（間）まで保持する
     from: 11
@@ -386,6 +391,11 @@ scenes:
         to: gold
       - from: bronze
         to: fourth
+      highlight:
+        ids:
+        - bronze
+        at: 11
+        after: 7.1点
       caption:
         text: 10点満点・競技直後
         at: 11
@@ -394,7 +404,7 @@ scenes:
     cut_reason: 【保持の分割】表彰台の写真に戻し、研究の限定を言う
     from: 22
     slot: 4
-    credit: 'Photo: Szcze hoo / Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【S4用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ
     from: 25
@@ -536,6 +546,11 @@ scenes:
         to: op
       - from: op
         to: result
+      highlight:
+        ids:
+        - result
+        at: 17
+        after: 17ポイントも低かったわ
   - type: image
     cut_reason: 【見えない夜】夜の窓辺の後ろ姿に替え、見えない落ち込みを象徴させる
     from: 22
@@ -641,41 +656,72 @@ scenes:
     from: 7
     slot: 3
     credit: 'Photo: Pavel Danilyuk / Pexels'
+  - type: diagram
+    cut_reason: '【調査の構造】300人に→自分と他人どちらが多く行くか→82%が『他人』、を横一列で見せる（v8: 写真＋テロップの数字だけだった箇所。Deri, Davidai & Gilovich 2017, JPSP 113(6)）。「友人の数を聞いても」で写真に戻す'
+    from: 8
+    diagram:
+      type: sketch
+      rows:
+      - - id: deri_n
+          at: 8
+          icon: group
+          text: 300人に聞いた
+          after: 300人に聞いたの
+        - id: deri_q
+          at: 9
+          icon: psychology
+          text: どちらが多く行くか
+          after: よく行くと思うか
+      - - null
+        - id: deri_r
+          at: 10
+          icon: trending_up
+          value: 82%
+          text: 『他人の方が多い』
+          after: 82％が
+      arrows:
+      - from: deri_n
+        to: deri_q
+      - from: deri_q
+        to: deri_r
+      highlight:
+        ids:
+        - deri_r
+        at: 10
+        after: 82％が
+      caption:
+        text: ギロビッチ教授ら（2017）
+        at: 8
+        after: 300人に聞いたの
   - type: image
-    cut_reason: 【意外な数字】同じパーティー写真を保持したまま、82%の回答をテロップで出す
-    from: 10
-    slot: 4
-    credit: 'Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone. Journal of Personality and Social Psychology, 113(6), 858–877.／Photo: Pavel Danilyuk / Pexels'
-    telop: 82％ が『他人の方がパーティーに行く』と回答
-  - type: image
-    cut_reason: 【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット（2）
+    cut_reason: 【写真に戻す】図解のあとパーティー写真に戻し、他の質問でも同じだったと言う
     from: 15
-    slot: 5
+    slot: 4
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【浮かばない例】家で読書する写真に替え、思い浮かばない側の生活を示す
     from: 18
-    slot: 6
+    slot: 5
     credit: 'Photo: Monstera Production / Pexels'
   - type: image
     cut_reason: 【SNSの偏り】スクロールする手元に替え、偏った瞬間が大量に流れてくる様子を示す
     from: 21
-    slot: 7
+    slot: 6
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット
     from: 24
-    slot: 8
+    slot: 7
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット（2）
     from: 27
-    slot: 9
+    slot: 8
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【パーティーへ戻る】まとめの位置でパーティー写真に戻し、章末の問いへ渡す
     from: 28
-    slot: 10
+    slot: 9
     credit: 'Photo: Pavel Danilyuk / Pexels'
 - id: 6
   title: 眺めるだけの 10 分が、夜の気分を下げる
@@ -891,69 +937,87 @@ scenes:
     slot: 2
     credit: 'Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676.／Photo: John (Giannis) Tekeridis / Pexels'
     telop: スタンフォード大学・ニューヨーク大学（2020）
-  - type: image
-    cut_reason: 【保持の分割】同じスマホ写真を保持したまま20秒超を避けるための継続カット
-    from: 6
-    slot: 3
-    credit: 'Photo: John (Giannis) Tekeridis / Pexels'
-  - type: image
-    cut_reason: 【結果】同じ写真を保持したまま、幸福感の変化をテロップで出す
-    from: 8
-    slot: 4
-    credit: 'Photo: John (Giannis) Tekeridis / Pexels'
-    telop: 4週間で幸福感が上がった／8割『止めてよかった』
-  - type: image
-    cut_reason: 【別の実験】タイマーの写真に替え、ペンシルベニア大学の制限実験を示す
-    from: 10
-    slot: 5
-    credit: 'Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO. Journal of Social and Clinical Psychology, 37(10), 751–768.／Photo: Image Hunter / Pexels'
-  - type: image
-    cut_reason: 【結果】同じタイマー写真を保持したまま、孤独感減少をテロップで出す
-    from: 11
-    slot: 6
-    credit: 'ペンシルベニア大学 学生143人（2018）／Photo: Image Hunter / Pexels'
-    telop: '1日30分制限・3週間: 孤独感が減少'
   - type: diagram
-    cut_reason: 【半分だけ正解】SNSをやめる→少し楽になる、頭の中で比べる癖→残る、の対比を格子で見せる。決め文「止まらないのよ」（間）まで保持する
-    from: 16
+    cut_reason: '【実験の構造】上段: 利用者を2組に→片方だけ4週間停止→幸福感が少し上昇（Allcott et al. 2020, AER 110(3)）。下段: 学生143人→1日30分に制限→孤独感が減少（Hunt et al. 2018, JSCP 37(10)）。学生の引用文まで保持する（v8: 写真＋テロップだけだった 2 研究を図解に）'
+    from: 5
     diagram:
       type: sketch
       rows:
-      - - id: snsstop
-          at: 16
+      - - id: fb_n
+          at: 5
+          icon: group
+          text: 利用者を2組に
+          after: 二組に分けて
+        - id: fb_op
+          at: 5
           icon: phonelink_erase
-          text: SNSをやめる
-          after: ちょっと待って
-        - id: relief
-          at: 16
-          icon: sentiment_satisfied
-          text: 少し楽になる
-          after: ちょっと待って
-      - - id: bias
-          at: 19
-          icon: visibility_off
-          text: 比べる癖
-          after: 消えないのだ
-        - id: remain
-          at: 19
-          icon: repeat
-          text: 残る
-          after: 消えないのだ
+          text: 片方だけ4週間停止
+          after: 止めてもらったの
+        - id: fb_r
+          at: 6
+          icon: trending_up
+          text: 幸福感が少し上昇
+          after: 少し上がったわ
+      - - id: pa_n
+          at: 10
+          icon: school
+          text: 学生143人
+          after: ペンシルベニア大学でも
+        - id: pa_op
+          at: 10
+          icon: timer
+          text: 1日30分に制限
+          after: 3週間続けてもらったの
+        - id: pa_r
+          at: 11
+          icon: trending_down
+          text: 孤独感が減少
+          after: 孤独感が減ったわ
       arrows:
-      - from: snsstop
-        to: relief
-      - from: bias
-        to: remain
+      - from: fb_n
+        to: fb_op
+      - from: fb_op
+        to: fb_r
+      - from: pa_n
+        to: pa_op
+      - from: pa_op
+        to: pa_r
+      highlight:
+        ids:
+        - fb_r
+        - pa_r
+        at: 11
+        after: 孤独感が減ったわ
+      caption:
+        text: 8割が『止めてよかった』
+        at: 8
+        after: 8割の人が
+  - type: board
+    cut_reason: '【板の進行1/2】見出し＋①（減らせば少し楽になる）を出す（v8: 台詞の写しだった格子図解を板に替え、前の図解との連続を避ける）'
+    from: 16
+    telop: 'SNSをやめれば解決か
+
+      ① 減らせば、少し楽になる'
+  - type: board
+    cut_reason: 【板の進行2/2】②（頭の中の比較は止まらない）を書き足して金色に。決め文「止まらないのよ」（間）まで保持する
+    from: 19
+    telop: 'SNSをやめれば解決か
+
+      ① 減らせば、少し楽になる
+
+      ② 頭の中の比較は、止まらない'
+    highlight_lines:
+    - 3
   - type: image
-    cut_reason: 【良い面】ランナーの後ろ姿に替え、比べることの良い面（目標）を示す
+    cut_reason: '【良い面】前を走る人を追うランナーの生成画像に替え、比べることの良い面（目標）を示す（v8: 単独の後ろ姿から差し替え）'
     from: 22
-    slot: 7
-    credit: 'Photo: MART PRODUCTION / Pexels'
+    slot: 3
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット
     from: 24
-    slot: 8
-    credit: 'Photo: MART PRODUCTION / Pexels'
+    slot: 4
+    credit: 'Image: AI generated'
   readings:
   - surface: 二組
     reading: フタクミ
@@ -1072,26 +1136,50 @@ scenes:
     from: 16
     slot: 6
     credit: 'Photo: LinkedIn Sales Navigator / Pexels'
-  - type: image
-    cut_reason: 【結果】同じ写真を保持したまま、予想より喜ばれた結果をテロップで出す
+  - type: diagram
+    cut_reason: '【予想と実際】送った側の予想 5.57 点 → 相手の実際 6.17 点（7 点満点・54 組）を 2 セルで並べ、予想の方が低かったことを見せる。「予想と逆なのだ」まで保持する（v8: 写真＋テロップだけだった箇所。Liu, Rim, Min & Min 2023, JPSP 124(4), Experiment 2）'
     from: 17
-    slot: 7
-    credit: 'Liu, P. J., Rim, S., Min, L., & Min, K. E. (2023). The surprise of reaching out. Journal of Personality and Social Psychology, 124(4), 754–771. ピッツバーグ大学など54組（2023）／Photo: LinkedIn Sales Navigator / Pexels'
-    telop: 久しぶりの連絡は、相手は予想より喜ぶ
+    diagram:
+      type: sketch
+      rows:
+      - - id: liu_pred
+          at: 17
+          icon: mood
+          value: 5.57点
+          text: 送った側の予想
+          after: 予想していたけど
+        - id: liu_real
+          at: 17
+          icon: sentiment_very_satisfied
+          value: 6.17点
+          text: 相手の実際の喜び
+          after: 予想より喜んでいたわ
+      arrows:
+      - from: liu_pred
+        to: liu_real
+      highlight:
+        ids:
+        - liu_real
+        at: 17
+        after: 予想より喜んでいたわ
+      caption:
+        text: 7点満点・54組（2023）
+        at: 17
+        after: 予想していたけど
   - type: image
     cut_reason: 【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す
     from: 20
-    slot: 8
+    slot: 7
     credit: 'Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す
     from: 21
-    slot: 9
+    slot: 8
     credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット
     from: 23
-    slot: 10
+    slot: 9
     credit: 'Photo: RDNE Stock project / Pexels'
   readings:
   - surface: Aさん

@@ -84,8 +84,10 @@ CREDIT = {
     "office2": "Photo: Yan Krukau / Pexels",
     "scale": "Photo: Annushka Ahuja / Pexels",
     "office3": "Photo: Mikhail Nilov / Pexels",
-    "mri": "Photo: Pexels",
-    "podium": "Photo: Szcze hoo / Pexels",
+    "mri": "Photo: Pexels",  # v8 で mri_gen に差し替え（実は CT 装置でロゴが読めた）
+    "mri_gen": "Image: AI generated",
+    "podium": "Photo: Szcze hoo / Pexels",  # v8 で podium_gen に差し替え（無人で表情が見せられない）
+    "podium_gen": "Image: AI generated",
     "classroom": "Photo: RDNE Stock project / Pexels",
     "window5": "Photo: cottonbro studio / Pexels",
     "party": "Photo: Pavel Danilyuk / Pexels",
@@ -95,7 +97,8 @@ CREDIT = {
     "glow7": "Photo: SHVETS production / Pexels",
     "phonedesk": "Photo: John (Giannis) Tekeridis / Pexels",
     "timer": "Photo: Image Hunter / Pexels",
-    "running": "Photo: MART PRODUCTION / Pexels",
+    "running": "Photo: MART PRODUCTION / Pexels",  # v8 で running_gen に差し替え（追う相手が写っていない）
+    "running_gen": "Image: AI generated",
     "cafe9": "Photo: RDNE Stock project / Pexels",
     "walk": "Photo: Kassia Melo / Pexels",  # 原綴 Kássia Melo（未採用。恋愛相手選びに見えるとの指摘で不採用）
     "walk2": "Photo: Keira Burton / Pexels",
@@ -113,7 +116,9 @@ SOURCE_FILE = {
     "scale": "stock/s03_scale_a.jpg",
     "office3": "stock/s03_office_a.jpg",
     "mri": "stock/s03_mri_a.jpg",
+    "mri_gen": "gen/s02_mri_gen.jpg",
     "podium": "stock/s04_podium_a.jpg",
+    "podium_gen": "gen/s03_podium_gen.jpg",
     "classroom": "stock/s05_classroom_a.jpg",
     "window5": "stock/s05_window_a.jpg",
     "party": "stock/s06_party_a.jpg",
@@ -124,6 +129,7 @@ SOURCE_FILE = {
     "phonedesk": "stock/s08_phonedesk_a.jpg",
     "timer": "stock/s08_timer_b.jpg",
     "running": "stock/s08_running_c.jpg",
+    "running_gen": "gen/s07_running_gen.jpg",
     "cafe9": "stock/s09_cafe_a.jpg",
     "walk": "stock/s09_walk_a.jpg",  # 未採用（下記参照）
     "walk2": "stock/s09_walk_c.jpg",
@@ -244,8 +250,8 @@ BEATS = {
         board("近い人を選びやすいの", "【板の進行3/3】③（近い人を選ぶ）を書き足して三つ揃える",
               telop="フェスティンガーの社会的比較（1954）\n① 目盛りがない→他人で測る\n② 自分を評価したい欲求\n③ 相手は、近い人を選ぶ"),
         img("近い立場の知人や同僚よ", 2, "office3", "【近い相手の例】同年代の同僚が並ぶオフィスに替え、近い相手の例を示す"),
-        img("脳の反応にも出るのよ", 3, "mri", "【実験装置】検査装置の写真に替え、MRIに入ってもらう場面へ"),
-        img("それをドイツのボン大学などの研究チームが", 4, "mri",
+        img("脳の反応にも出るのよ", 3, "mri_gen", "【実験装置】MRI 2 台に参加者が 2 人入る生成画像に替え、二人同時に測る実験の場面へ（v8: CT 写真から差し替え）"),
+        img("それをドイツのボン大学などの研究チームが", 4, "mri_gen",
             "【研究の出典】同じMRI写真を保持したまま、実施機関と年をテロップで出す",
             telop="ボン大学など 33人（2007）",
             source="Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308."),
@@ -266,6 +272,7 @@ BEATS = {
                         cell("react2", icon="trending_down", text="脳の反応 ↓", at="反応が下がったの", after="反応が下がったの"),
                     ],
                 ],
+                highlight={"ids": ["react2"], "at": "反応が下がったの", "after": "反応が下がったの"},  # 決め要素だけ金色
             ),
         ),
         img("ただ、フェスティンガーも", 5, "scale", "【決め文の保持後】体重計の写真に戻し、フェスティンガー自身の限定条件を添えてシーン末まで"),
@@ -273,9 +280,9 @@ BEATS = {
     # ---------------- S3 順位がよければ、楽になるのか ----------------
     3: [
         chapter(),
-        img(None, 1, "podium", "【表彰台】チャプター背景として無人の表彰台で開く"),
-        img("順位がよくても", 2, "podium", "【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット"),
-        img("コーネル大学のギロビッチ教授たちが", 3, "podium", "【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット（2）"),
+        img(None, 1, "podium_gen", "【表彰台】3 人のメダリスト（2 位だけ暗い顔で 1 位を見上げる）の生成画像で開く（v8: 無人の表彰台から差し替え）"),
+        img("順位がよくても", 2, "podium_gen", "【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット"),
+        img("コーネル大学のギロビッチ教授たちが", 3, "podium_gen", "【保持の分割】同じ表彰台の写真を保持したまま20秒超を避けるための継続カット（2）"),
         diagram(
             "銅メダリストの平均は7.1点",
             "【逆転の構造】銅メダリストの方が高得点という一対の数字と、それぞれが見上げ／見下ろす先（金／4位）を格子で見せる。"
@@ -290,10 +297,11 @@ BEATS = {
                     [None, cell("fourth", text="4位", at="4位を見て", after="4位を見て")],
                 ],
                 arrows=[("silver", "gold"), ("bronze", "fourth")],
+                highlight={"ids": ["bronze"], "at": "銅メダリストの平均は7.1点", "after": "7.1点"},  # 逆転した側だけ金色
                 caption={"text": "10点満点・競技直後", "at": "銅メダリストの平均は7.1点", "after": "7.1点"},
             ),
         ),
-        img("もっとも、本人に聞いたわけじゃないわ", 2, "podium", "【保持の分割】表彰台の写真に戻し、研究の限定を言う"),
+        img("もっとも、本人に聞いたわけじゃないわ", 2, "podium_gen", "【保持の分割】表彰台の写真に戻し、研究の限定を言う"),
         img("テストで80点でも", 3, "classroom", "【S4用写真を流用】教室の学生の写真に替え、身近な例（テストの点数）からシーン末へ"),
     ],
     # ---------------- S4 相手の、何が見えているのか ----------------
@@ -321,6 +329,7 @@ BEATS = {
                     ],
                 ],
                 arrows=[("subj", "op"), ("op", "result")],
+                highlight={"ids": ["result"], "at": "17ポイントも低かったわ", "after": "17ポイントも低かったわ"},  # 主役の数字だけ金色
             ),
         ),
         img("その人が落ち込んだ夜までは", 3, "window5", "【見えない夜】夜の窓辺の後ろ姿に替え、見えない落ち込みを象徴させる"),
@@ -334,10 +343,27 @@ BEATS = {
               telop=GUIDE_BOARD, highlight_lines=[2]),
         img("パーティーによく行く人", 2, "party", "【調査の場面】賑やかなパーティー写真に替え、300人への質問調査を示す"),
         img("そんなずんだもんに", 3, "party", "【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット"),
-        img("82％が", 3, "party", "【意外な数字】同じパーティー写真を保持したまま、82%の回答をテロップで出す",
-            telop="82％ が『他人の方がパーティーに行く』と回答",
-            source="Deri, S., Davidai, S., & Gilovich, T. (2017). Home alone. Journal of Personality and Social Psychology, 113(6), 858–877."),
-        img("友人の数を聞いても", 4, "party", "【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット（2）"),
+        diagram(
+            "300人に聞いたの",
+            "【調査の構造】300人に→自分と他人どちらが多く行くか→82%が『他人』、を横一列で見せる（v8: 写真＋テロップの数字だけだった箇所。"
+            "Deri, Davidai & Gilovich 2017, JPSP 113(6)）。「友人の数を聞いても」で写真に戻す",
+            sketch(
+                [
+                    [
+                        cell("deri_n", icon="group", text="300人に聞いた", at="300人に聞いたの", after="300人に聞いたの"),
+                        cell("deri_q", icon="psychology", text="どちらが多く行くか", at="どちらがパーティーによく行くと思うか", after="よく行くと思うか"),
+                    ],
+                    [
+                        None,
+                        cell("deri_r", icon="trending_up", value="82%", text="『他人の方が多い』", at="82％が", after="82％が"),
+                    ],
+                ],  # 2 段（S4 の 1x3 格子と同じ形が続く警告を避ける）
+                arrows=[("deri_n", "deri_q"), ("deri_q", "deri_r")],
+                highlight={"ids": ["deri_r"], "at": "82％が", "after": "82％が"},
+                caption={"text": "ギロビッチ教授ら（2017）", "at": "300人に聞いたの", "after": "300人に聞いたの"},
+            ),
+        ),
+        img("友人の数を聞いても", 4, "party", "【写真に戻す】図解のあとパーティー写真に戻し、他の質問でも同じだったと言う"),
         img("家でゆっくりしているような人は", 4, "reading6", "【浮かばない例】家で読書する写真に替え、思い浮かばない側の生活を示す"),
         img("そしてSNSは、この偏りを", 5, "scroll", "【SNSの偏り】スクロールする手元に替え、偏った瞬間が大量に流れてくる様子を示す"),
         img("それが何百人分も流れてくるの", 6, "scroll", "【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット"),
@@ -368,7 +394,7 @@ BEATS = {
                 "items": [
                     {"id": "watch", "text": "眺めるだけ", "icon": "visibility", "at": "眺めたあとに妬みが生まれて", "after": "眺めた"},
                     {"id": "envy", "text": "妬み", "icon": "mood_bad", "at": "眺めたあとに妬みが生まれて", "after": "妬みが生まれて"},
-                    {"id": "mood_down", "text": "夜の気分↓9%", "icon": "trending_down", "at": "眺めたあとに妬みが生まれて", "after": "気分が下がっていた"},
+                    {"id": "mood_down", "text": "夜の気分↓9%", "icon": "trending_down", "at": "眺めたあとに妬みが生まれて", "after": "気分が下がっていた"},  # chain 型は強調色を持たない（仕様）
                 ],
                 "caption": {"text": "動く組は変化なし", "at": "自分から動いた組は", "after": "自分から動いた組は"},
             },
@@ -383,33 +409,35 @@ BEATS = {
             "【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す",
             telop="スタンフォード大学・ニューヨーク大学（2020）",
             source="Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676."),
-        img("止めた組は、幸福感が少し上がったわ", 3, "phonedesk", "【保持の分割】同じスマホ写真を保持したまま20秒超を避けるための継続カット"),
-        img("8割の人が", 3, "phonedesk", "【結果】同じ写真を保持したまま、幸福感の変化をテロップで出す",
-            telop="4週間で幸福感が上がった／8割『止めてよかった』"),
-        img("ペンシルベニア大学でも", 4, "timer", "【別の実験】タイマーの写真に替え、ペンシルベニア大学の制限実験を示す",
-            source="Hunt, M. G., Marx, R., Lipson, C., & Young, J. (2018). No more FOMO. Journal of Social and Clinical Psychology, 37(10), 751–768."),
-        img("こっちは孤独感が減ったわ", 5, "timer", "【結果】同じタイマー写真を保持したまま、孤独感減少をテロップで出す",
-            telop="1日30分制限・3週間: 孤独感が減少", source="ペンシルベニア大学 学生143人（2018）"),
         diagram(
-            "ちょっと待って",
-            "【半分だけ正解】SNSをやめる→少し楽になる、頭の中で比べる癖→残る、の対比を格子で見せる。"
-            "決め文「止まらないのよ」（間）まで保持する",
+            "Facebookの利用者をランダムに二組に分けて",
+            "【実験の構造】上段: 利用者を2組に→片方だけ4週間停止→幸福感が少し上昇（Allcott et al. 2020, AER 110(3)）。"
+            "下段: 学生143人→1日30分に制限→孤独感が減少（Hunt et al. 2018, JSCP 37(10)）。学生の引用文まで保持する"
+            "（v8: 写真＋テロップだけだった 2 研究を図解に）",
             sketch(
                 [
                     [
-                        cell("snsstop", icon="phonelink_erase", text="SNSをやめる", at="ちょっと待って", after="ちょっと待って"),
-                        cell("relief", icon="sentiment_satisfied", text="少し楽になる", at="ちょっと待って", after="ちょっと待って"),
+                        cell("fb_n", icon="group", text="利用者を2組に", at="Facebookの利用者をランダムに二組に分けて", after="二組に分けて"),
+                        cell("fb_op", icon="phonelink_erase", text="片方だけ4週間停止", at="Facebookの利用者をランダムに二組に分けて", after="止めてもらったの"),
+                        cell("fb_r", icon="trending_up", text="幸福感が少し上昇", at="止めた組は、幸福感が少し上がったわ", after="少し上がったわ"),
                     ],
                     [
-                        cell("bias", icon="visibility_off", text="比べる癖", at="消えないのだ", after="消えないのだ"),
-                        cell("remain", icon="repeat", text="残る", at="消えないのだ", after="消えないのだ"),
+                        cell("pa_n", icon="school", text="学生143人", at="ペンシルベニア大学でも", after="ペンシルベニア大学でも"),
+                        cell("pa_op", icon="timer", text="1日30分に制限", at="ペンシルベニア大学でも", after="3週間続けてもらったの"),
+                        cell("pa_r", icon="trending_down", text="孤独感が減少", at="こっちは孤独感が減ったわ", after="孤独感が減ったわ"),
                     ],
                 ],
-                arrows=[("snsstop", "relief"), ("bias", "remain")],
+                arrows=[("fb_n", "fb_op"), ("fb_op", "fb_r"), ("pa_n", "pa_op"), ("pa_op", "pa_r")],
+                highlight={"ids": ["fb_r", "pa_r"], "at": "こっちは孤独感が減ったわ", "after": "孤独感が減ったわ"},
+                caption={"text": "8割が『止めてよかった』", "at": "8割の人が", "after": "8割の人が"},
             ),
         ),
-        img("良い面もあるの", 6, "running", "【良い面】ランナーの後ろ姿に替え、比べることの良い面（目標）を示す"),
-        img("手が届きそうな相手なら", 7, "running", "【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット"),
+        board("ちょっと待って", "【板の進行1/2】見出し＋①（減らせば少し楽になる）を出す（v8: 台詞の写しだった格子図解を板に替え、前の図解との連続を避ける）",
+              telop="SNSをやめれば解決か\n① 減らせば、少し楽になる"),
+        board("消えないのだ", "【板の進行2/2】②（頭の中の比較は止まらない）を書き足して金色に。決め文「止まらないのよ」（間）まで保持する",
+              telop="SNSをやめれば解決か\n① 減らせば、少し楽になる\n② 頭の中の比較は、止まらない", highlight_lines=[3]),
+        img("良い面もあるの", 6, "running_gen", "【良い面】前を走る人を追うランナーの生成画像に替え、比べることの良い面（目標）を示す（v8: 単独の後ろ姿から差し替え）"),
+        img("手が届きそうな相手なら", 7, "running_gen", "【保持の分割】同じランナーの写真を保持したまま20秒超を避けるための継続カット"),
     ],
     # ---------------- S8 どうすればいいのか（2026-09-16 v7: 電車の実験を外しLiu 2023単独に） ----------------
     8: [
@@ -424,9 +452,22 @@ BEATS = {
         img("気になった相手がいたら", 3, "phone", "【夜のスマホへ】S1と同じ夜のスマホの手元に替え、気まずさの話に入る"),
         img("でも、昇進した相手に話しかけるのは", 4, "phone", "【保持の分割】同じ夜のスマホ写真を保持したまま20秒超を避けるための継続カット"),
         img("実際に一言メッセージを送ってもらったの", 5, "phone_morning", "【朝のスマホへ】S9用の朝のスマホの手元を流用し、Liu 2023の実験へ切り替える"),
-        img("予想より喜んでいたわ", 5, "phone_morning", "【結果】同じ写真を保持したまま、予想より喜ばれた結果をテロップで出す",
-            telop="久しぶりの連絡は、相手は予想より喜ぶ",
-            source="Liu, P. J., Rim, S., Min, L., & Min, K. E. (2023). The surprise of reaching out. Journal of Personality and Social Psychology, 124(4), 754–771. ピッツバーグ大学など54組（2023）"),
+        diagram(
+            "送った側は",
+            "【予想と実際】送った側の予想 5.57 点 → 相手の実際 6.17 点（7 点満点・54 組）を 2 セルで並べ、予想の方が低かったことを見せる。"
+            "「予想と逆なのだ」まで保持する（v8: 写真＋テロップだけだった箇所。Liu, Rim, Min & Min 2023, JPSP 124(4), Experiment 2）",
+            sketch(
+                [
+                    [
+                        cell("liu_pred", icon="mood", value="5.57点", text="送った側の予想", at="送った側は", after="予想していたけど"),
+                        cell("liu_real", icon="sentiment_very_satisfied", value="6.17点", text="相手の実際の喜び", at="送った側は", after="予想より喜んでいたわ"),
+                    ],
+                ],
+                arrows=[("liu_pred", "liu_real")],
+                highlight={"ids": ["liu_real"], "at": "送った側は", "after": "予想より喜んでいたわ"},
+                caption={"text": "7点満点・54組（2023）", "at": "送った側は", "after": "予想していたけど"},
+            ),
+        ),
         img("メッセージでもいいし、会う約束をして", 6, "cafe9", "【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す"),
         img("自分から動いた組は気分が下がらなかったし", 7, "cafe9", "【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す",
             source="Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488."),
