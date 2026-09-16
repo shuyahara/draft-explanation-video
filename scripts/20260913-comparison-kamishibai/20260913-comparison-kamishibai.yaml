@@ -631,14 +631,9 @@ scenes:
     expression: confused
     pause_after: 1.2
   beats:
-  - type: image
-    cut_reason: 【開幕の受け】まだ板は出さず、賑やかなパーティー写真の気配だけで開く
-    from: 1
-    slot: 1
-    credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: board
-    cut_reason: 【道しるべ】冒頭の受けの直後に板を出す（①比べる相手の選び方）
-    from: 2
+    cut_reason: '【道しるべ】章頭で板を出す（v11: 1 秒だけ出る写真をやめた）（①比べる相手の選び方）'
+    from: 1
     telop: '比較の、おかしくなっている二つ
 
       ① 相手が勝手に流れてくる
@@ -649,12 +644,12 @@ scenes:
   - type: image
     cut_reason: 【調査の場面】賑やかなパーティー写真に替え、300人への質問調査を示す
     from: 4
-    slot: 2
+    slot: 1
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じパーティー写真を保持したまま20秒超を避けるための継続カット
     from: 7
-    slot: 3
+    slot: 2
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: diagram
     cut_reason: '【調査の構造】300人に→自分と他人どちらが多く行くか→82%が『他人』、を横一列で見せる（v8: 写真＋テロップの数字だけだった箇所。Deri, Davidai & Gilovich 2017, JPSP 113(6)）。「友人の数を聞いても」で写真に戻す'
@@ -696,32 +691,32 @@ scenes:
   - type: image
     cut_reason: 【写真に戻す】図解のあとパーティー写真に戻し、他の質問でも同じだったと言う
     from: 15
-    slot: 4
+    slot: 3
     credit: 'Photo: Pavel Danilyuk / Pexels'
   - type: image
     cut_reason: 【浮かばない例】家で読書する写真に替え、思い浮かばない側の生活を示す
     from: 18
-    slot: 5
+    slot: 4
     credit: 'Photo: Monstera Production / Pexels'
   - type: image
     cut_reason: 【SNSの偏り】スクロールする手元に替え、偏った瞬間が大量に流れてくる様子を示す
     from: 21
-    slot: 6
+    slot: 5
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット
     from: 24
-    slot: 7
+    slot: 6
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じスクロール写真を保持したまま20秒超を避けるための継続カット（2）
     from: 27
-    slot: 8
+    slot: 7
     credit: 'Photo: kaboompics / Pexels'
   - type: image
     cut_reason: 【パーティーへ戻る】まとめの位置でパーティー写真に戻し、章末の問いへ渡す
     from: 28
-    slot: 9
+    slot: 8
     credit: 'Photo: Pavel Danilyuk / Pexels'
 - id: 6
   title: 眺めるだけの 10 分が、夜の気分を下げる
@@ -972,7 +967,7 @@ scenes:
           at: 11
           icon: trending_down
           text: 孤独感が減少
-          after: 孤独感が減ったわ
+          after: こっちは
       arrows:
       - from: fb_n
         to: fb_op
@@ -987,14 +982,14 @@ scenes:
         - fb_r
         - pa_r
         at: 11
-        after: 孤独感が減ったわ
+        after: こっちは
       caption:
         text: 8割が『止めてよかった』
         at: 8
         after: 8割の人が
   - type: image
-    cut_reason: 【引用文】図解を 30 秒弱で閉じ、机のスマホに戻して学生の言葉を聞かせる
-    from: 12
+    cut_reason: '【引用文のあと】学生の言葉まで図解を保持してから机のスマホに戻す（v11: 結果のセルが出た直後に切り替わっていた）'
+    from: 14
     slot: 3
     credit: 'Photo: John (Giannis) Tekeridis / Pexels'
   - type: image
@@ -1143,7 +1138,7 @@ scenes:
           icon: sentiment_very_satisfied
           value: 6.17点
           text: 相手の実際の喜び
-          after: 予想より喜んでいたわ
+          after: 受け取った側は
       arrows:
       - from: liu_pred
         to: liu_real
@@ -1151,7 +1146,7 @@ scenes:
         ids:
         - liu_real
         at: 17
-        after: 予想より喜んでいたわ
+        after: 受け取った側は
       caption:
         text: 7点満点・54組（2023）
         at: 17
