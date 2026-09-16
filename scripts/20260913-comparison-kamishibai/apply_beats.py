@@ -118,7 +118,7 @@ SOURCE_FILE = {
     "mri": "stock/s03_mri_a.jpg",
     "mri_gen": "gen/s02_mri_gen.jpg",
     "podium": "stock/s04_podium_a.jpg",
-    "podium_gen": "gen/s03_podium_gen.jpg",
+    "podium_gen": "gen/s03_podium_gen_v2_full.jpg",  # v2（2 位の落胆を強調）。クロップせず 3:2 のまま（貼り写真は縦横比を保って収まる）
     "classroom": "stock/s05_classroom_a.jpg",
     "window5": "stock/s05_window_a.jpg",
     "party": "stock/s06_party_a.jpg",
@@ -240,7 +240,7 @@ BEATS = {
     2: [
         chapter(),
         img("突然だけど、身長なら", 1, "scale", "【測れるものの例】体重計に乗る足元で開く",
-            source="Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117–140."),
+            source="Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140."),
         img("身長には数値にできる目盛りがあるわ", 2, "scale", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット"),
         img("他人を目盛りにするのだ", 3, "scale", "【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット（2）"),
         board("1954年に", "【板の進行1/3】見出し＋①（目盛りがない→他人で測る）を出す",
@@ -254,7 +254,7 @@ BEATS = {
         img("それをドイツのボン大学などの研究チームが", 4, "mri_gen",
             "【研究の出典】同じMRI写真を保持したまま、実施機関と年をテロップで出す",
             telop="ボン大学など 33人（2007）",
-            source="Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308."),
+            source="Fliessbach, K. et al. (2007). Science, 318(5854), 1305-1308."),
         diagram(
             "隣の人がもらった額も見せられるわ",
             "【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる。"
@@ -312,7 +312,7 @@ BEATS = {
         board("つらいことや落ち込んだことがあったはずよ", "【保持の分割】同じ板を保持したまま20秒超を避けるための継続ビート",
               telop=GUIDE_BOARD, highlight_lines=[3]),
         img("スタンフォード大学の研究チームが", 1, "classroom", "【調査の場面】明るい教室で話す学生たちに替え、大学生への質問調査を示す",
-            source="Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think. Personality and Social Psychology Bulletin, 37(1), 120–135."),
+            source="Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think. Personality and Social Psychology Bulletin, 37(1), 120-135."),
         img("落ち込んだ出来事の40％は", 2, "classroom",
             "【隠された割合】同じ教室写真を保持したまま、40%/13%の従テロップを出す",
             telop="落ち込みは 40％ 隠す ／ うれしさは 13％",
@@ -377,7 +377,7 @@ BEATS = {
         img("10分間、Facebookを使ってもらったのよ", 2, "laptop",
             "【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す",
             telop="ミシガン大学など 学生67人（2015）",
-            source="Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488."),
+            source="Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480-488."),
         img("その日の夜に測ったの", 3, "phone", "【時間差】S1冒頭と同じ夜のスマホの手元（顔なし）に替え、夜になって出る変化を示す"),
         img("眺めた組だけ", 4, "phone", "【結果】同じ夜のスマホの手元を保持したまま、9%低下／変化なしをテロップで出す",
             telop="眺める組: 夜の気分 約9％低下／動く組: 変化なし"),
@@ -408,7 +408,7 @@ BEATS = {
         img("スタンフォード大学とニューヨーク大学の経済学者たちが", 2, "phonedesk",
             "【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す",
             telop="スタンフォード大学・ニューヨーク大学（2020）",
-            source="Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676."),
+            source="Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629-676."),
         diagram(
             "Facebookの利用者をランダムに二組に分けて",
             "【実験の構造】上段: 利用者を2組に→片方だけ4週間停止→幸福感が少し上昇（Allcott et al. 2020, AER 110(3)）。"
@@ -471,7 +471,7 @@ BEATS = {
         ),
         img("メッセージでもいいし、会う約束をして", 6, "cafe9", "【会って聞く】カフェで向かい合って話す写真に替え、会って聞く提案を示す"),
         img("自分から動いた組は気分が下がらなかったし", 7, "cafe9", "【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す",
-            source="Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488."),
+            source="Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480-488."),
         img("SNSをやめてしまってもいいし", 8, "cafe9", "【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット"),
     ],
     # ---------------- S9 結び（なぜ比べてしまうのか。2026-09-15 v6: 全面改稿） ----------------

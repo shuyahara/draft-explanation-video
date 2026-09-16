@@ -177,7 +177,7 @@ scenes:
     cut_reason: 【測れるものの例】体重計に乗る足元で開く
     from: 1
     slot: 1
-    credit: 'Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117–140.／Photo: Annushka Ahuja / Pexels'
+    credit: 'Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140.／Photo: Annushka Ahuja / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じ体重計の写真を保持したまま20秒超を避けるための継続カット
     from: 6
@@ -226,7 +226,7 @@ scenes:
     cut_reason: 【研究の出典】同じMRI写真を保持したまま、実施機関と年をテロップで出す
     from: 29
     slot: 6
-    credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305–1308.／Image: AI generated'
+    credit: 'Fliessbach, K. et al. (2007). Science, 318(5854), 1305-1308.／Image: AI generated'
     telop: ボン大学など 33人（2007）
   - type: diagram
     cut_reason: 【実験の構造】自分の額は同じでも、相手の額の多寡で脳の反応が上下する格子を見せる。決め文「難しいのよ」（間）まで保持する
@@ -512,7 +512,7 @@ scenes:
     cut_reason: 【調査の場面】明るい教室で話す学生たちに替え、大学生への質問調査を示す
     from: 10
     slot: 1
-    credit: 'Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think. Personality and Social Psychology Bulletin, 37(1), 120–135.／Photo: RDNE Stock project / Pexels'
+    credit: 'Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., & Gross, J. J. (2011). Misery has more company than people think. Personality and Social Psychology Bulletin, 37(1), 120-135.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【隠された割合】同じ教室写真を保持したまま、40%/13%の従テロップを出す
     from: 12
@@ -799,7 +799,7 @@ scenes:
     cut_reason: 【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す
     from: 4
     slot: 2
-    credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488.／Photo: kaboompics / Pexels'
+    credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480-488.／Photo: kaboompics / Pexels'
     telop: ミシガン大学など 学生67人（2015）
   - type: image
     cut_reason: 【時間差】S1冒頭と同じ夜のスマホの手元（顔なし）に替え、夜になって出る変化を示す
@@ -935,7 +935,7 @@ scenes:
     cut_reason: 【研究の出典】同じ写真を保持したまま、実施機関と年をテロップで出す
     from: 4
     slot: 2
-    credit: 'Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629–676.／Photo: John (Giannis) Tekeridis / Pexels'
+    credit: 'Allcott, H., Braghieri, L., Eichmeyer, S., & Gentzkow, M. (2020). The welfare effects of social media. American Economic Review, 110(3), 629-676.／Photo: John (Giannis) Tekeridis / Pexels'
     telop: スタンフォード大学・ニューヨーク大学（2020）
   - type: diagram
     cut_reason: '【実験の構造】上段: 利用者を2組に→片方だけ4週間停止→幸福感が少し上昇（Allcott et al. 2020, AER 110(3)）。下段: 学生143人→1日30分に制限→孤独感が減少（Hunt et al. 2018, JSCP 37(10)）。学生の引用文まで保持する（v8: 写真＋テロップだけだった 2 研究を図解に）'
@@ -1180,7 +1180,7 @@ scenes:
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま、動いた組の出典を示す
     from: 21
     slot: 8
-    credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480–488.／Photo: RDNE Stock project / Pexels'
+    credit: 'Verduyn, P. et al. (2015). Passive Facebook usage undermines affective well-being. Journal of Experimental Psychology: General, 144(2), 480-488.／Photo: RDNE Stock project / Pexels'
   - type: image
     cut_reason: 【保持の分割】同じカフェ写真を保持したまま20秒超を避けるための継続カット
     from: 23
