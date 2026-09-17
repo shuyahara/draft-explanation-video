@@ -5,6 +5,7 @@ Issue #40。
 
 | 日時 | 版 | 動画ID | 状態 | 内容 |
 |---|---|---|---|---|
+| 2026-09-17 | v1 | VwSNZYYcDG0 | **非公開（試写用）** | 12:01（終了カード込み）。台本 v3（8 シーン・3,791 字）。レビュー 6 種＋間＋ビート適合表を反映。サムネ **A（暫定。ユーザー選択後に thumbnails.set で差し替え）**、字幕 ja、概要欄 description-v2.txt（章 8、v1 timeline）。 |
 | | | | | |
 
 - 概要欄: `description-v1.txt`（`__CHAPTERS__` はレンダ後に `fill_chapters.py` で
