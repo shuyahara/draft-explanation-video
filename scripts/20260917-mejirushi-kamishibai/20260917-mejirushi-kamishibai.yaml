@@ -685,10 +685,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: '【冒頭】たたまれた傘が積み重なる情景（ストック）で開く（2026-09-17: 旧候補は傘2本のみでほぼ空だったため、傘が並ぶ候補に差し替え）'
+    cut_reason: '【冒頭】店先の傘立てに同じ透明ビニール傘が並ぶ情景（生成）で開く（2026-09-17: 旧ストック候補は傘2本のみでほぼ空、次の候補は白黒で路上に捨てられた傘の山と暗い印象で『同じ傘を間違えないため』の場面に合わなかったため、明るい日中の傘立てに生成画像で差し替え）'
     from: 1
     slot: 1
-    credit: 'Photo: Iban Lopez Luna / Pexels'
+    credit: 'Image: AI generated'
   - type: image
     cut_reason: 【矛盾の提示】同じバッグに違う色のチャームが付いた3人の手元の生成画像に替える
     from: 5
@@ -856,6 +856,8 @@ scenes:
   readings:
   - surface: ル・マンス
     reading: ルマンス
+  - surface: ガエル・ル・マンス
+    reading: ガエルルマンス
 - id: 8
   title: 結び（商品は同じ、変わったのは周り）
   chapter_title: null

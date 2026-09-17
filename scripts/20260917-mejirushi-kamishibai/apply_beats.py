@@ -93,7 +93,7 @@ CREDIT = {
     "market": "Image: AI generated",
     "headphones": "Photo: Burst / Pexels",
     "queue": "Photo: Pixabay",
-    "umbrellas": "Photo: Iban Lopez Luna / Pexels",
+    "umbrellas": "Image: AI generated",
     "names": "Image: AI generated",
 }
 
@@ -113,7 +113,7 @@ SOURCE_FILE = {
     "market": "gen/s02_market_gen.jpg",
     "headphones": "stock/s04_headphones_2_pexels.jpg",
     "queue": "stock/s05_queue_1_pixabay.jpg",
-    "umbrellas": "stock/s06_umbrellas_2_pexels.jpg",
+    "umbrellas": "gen/s06_umbrellas_gen.jpg",
     "names": "gen/s07_names_gen.jpg",
 }
 
@@ -128,6 +128,7 @@ GLOBAL_READINGS: list[tuple[str, str]] = [
     ("UCLA", "ユーシーエルエー"),
     ("99.9%", "キュウジュウキュウテンキュウパーセント"),
     ("ル・マンス", "ルマンス"),
+    ("ガエル・ル・マンス", "ガエルルマンス"),
 ]
 EXTRA_READINGS: dict[int, list[tuple[str, str]]] = {}
 
@@ -356,8 +357,9 @@ BEATS = {
     # ---------------- S6 なぜ「目印」だったのか ----------------
     6: [
         chapter(),
-        img(None, 1, "umbrellas", "【冒頭】たたまれた傘が積み重なる情景（ストック）で開く"
-            "（2026-09-17: 旧候補は傘2本のみでほぼ空だったため、傘が並ぶ候補に差し替え）"),
+        img(None, 1, "umbrellas", "【冒頭】店先の傘立てに同じ透明ビニール傘が並ぶ情景（生成）で開く"
+            "（2026-09-17: 旧ストック候補は傘2本のみでほぼ空、次の候補は白黒で路上に捨てられた傘の山と暗い印象で"
+            "『同じ傘を間違えないため』の場面に合わなかったため、明るい日中の傘立てに生成画像で差し替え）"),
         img("全員が同じものを付けている", 2, "three_bags", "【矛盾の提示】同じバッグに違う色のチャームが付いた3人の手元の生成画像に替える"),
         img("欲しくなる理由には", 3, "three_bags", "【保持の分割】同じ写真を保持したまま20秒超を避けるための継続カット"),
         img("後ろがスノッブ効果", 4, "three_bags", "【保持の分割】同じ写真を保持したまま、命名の出典をテロップで出す",
