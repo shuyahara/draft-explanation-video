@@ -162,15 +162,15 @@ scenes:
     credit: 'Image: AI generated'
     telop: 2024年 コラボ拡大・300円に
   - type: image
-    cut_reason: 【転売の実写】フリマアプリの画面を見る手元に替え、転売の事実を実写で見せる
+    cut_reason: '【転売の実写】汎用フリマアプリの画面を見る手元（生成）に替え、転売の事実を実写で見せる（2026-09-17: ストック候補にTEMUの実在ロゴが写り込むため生成画像へ差し替え）'
     from: 12
     slot: 4
-    credit: 'LASISA（2026-05-22）／Photo: V H / Pexels'
+    credit: 'LASISA（2026-05-22）／Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じフリマアプリ写真を保持したまま、トレンド調査の出典をテロップで出す
     from: 15
     slot: 5
-    credit: 'マイナビTrepo（2026-06-01）／日本経済新聞（2026-06）／Photo: V H / Pexels'
+    credit: 'マイナビTrepo（2026-06-01）／日本経済新聞（2026-06）／Image: AI generated'
     telop: モノ部門1位・売り切れ続出（2026年6月）
   - type: image
     cut_reason: 【販売中止の実写】ガシャポン機に貼られた白紙の掲示に替え、混雑緩和での販売中止を示す
@@ -528,12 +528,12 @@ scenes:
     cut_reason: 【冒頭】行列の後ろ姿（ストック）で開く
     from: 1
     slot: 1
-    credit: 'Photo: zhang kaiyv / Pexels'
+    credit: 'Photo: Pixabay'
   - type: image
     cut_reason: 【保持の分割】同じ行列写真を保持したまま、情報カスケードの出典をテロップで出す
     from: 5
     slot: 2
-    credit: 'Bikhchandani, Hirshleifer & Welch (1992). J. Political Economy, 100(5).／Photo: zhang kaiyv / Pexels'
+    credit: 'Bikhchandani, Hirshleifer & Welch (1992). J. Political Economy, 100(5).／Photo: Pixabay'
     telop: UCLA 3人の経済学者（1992）
   - type: diagram
     cut_reason: 【カスケードの可視化】先頭から人が同じ選択に点灯していく様を横一列で見せる。行列ができる確率が99.9%を超える点をキャプションで示す
@@ -685,10 +685,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【冒頭】傘立てに並ぶ同じ色の傘（ストック）で開く
+    cut_reason: '【冒頭】たたまれた傘が積み重なる情景（ストック）で開く（2026-09-17: 旧候補は傘2本のみでほぼ空だったため、傘が並ぶ候補に差し替え）'
     from: 1
     slot: 1
-    credit: 'Photo: Jan van der Wolf / Pexels'
+    credit: 'Photo: Iban Lopez Luna / Pexels'
   - type: image
     cut_reason: 【矛盾の提示】同じバッグに違う色のチャームが付いた3人の手元の生成画像に替える
     from: 5
@@ -743,20 +743,37 @@ scenes:
     from: 20
     slot: 5
     credit: 'Berger & Heath (2008). JPSP, 95(3), 593-607.／Image: AI generated'
-  - type: image
-    cut_reason: 【保持の分割】同じ写真を保持したまま20秒超を避けるための継続カット
-    from: 22
-    slot: 6
-    credit: 'Image: AI generated'
+  - type: diagram
+    cut_reason: '【研究の結果を可視化】着用→隣の寮も着用→みんな外す、の一本鎖で離脱の結果を見せる（2026-09-17: 画像突合レポートでBerger&Heathの結果が視覚化されていないと指摘されたため追加）。『ペンシルベニア大学のジョナ・バーガーたちが』まで保持する'
+    from: 21
+    diagram:
+      type: narrative
+      layout: chain
+      items:
+      - id: wear
+        text: 同じリストバンドを着ける
+        icon: watch
+        at: 21
+        after: 隣の寮の
+      - id: copy
+        text: 隣の寮も着け始める
+        icon: group
+        at: 21
+        after: 着け始めた途端
+      - id: remove
+        text: みんな外す
+        icon: remove
+        at: 21
+        after: みんな外したの
   - type: image
     cut_reason: 【S3へ戻す】駅ナカ写真（S3と同じ）に戻し、決め文『折り返しが近いのかもしれない』（間2.0）まで保持
     from: 25
-    slot: 7
+    slot: 6
     credit: 'Image: AI generated'
   - type: image
     cut_reason: 【保持の分割】同じ駅ナカ写真を保持したまま20秒超を避けるための継続カット
     from: 27
-    slot: 8
+    slot: 7
     credit: 'Image: AI generated'
 - id: 7
   title: このブームはどうなるのか
@@ -802,10 +819,10 @@ scenes:
   - type: chapter
     cut_reason: 【章の入口】黒板に問いを書いて本題へ
   - type: image
-    cut_reason: 【冒頭】赤ちゃんの名前を考える手元（ストック）で開く
+    cut_reason: '【冒頭】両親の手元がノートに赤ちゃんの名前候補を書く情景（生成）で開く（2026-09-17: ストックの汎用ノート書き込み写真は『名前を考える』感が弱いため生成画像へ差し替え）'
     from: 1
     slot: 1
-    credit: 'Berger & Le Mens (2009). PNAS, 106(20), 8146-8150.／Photo: Artem Podrez / Pexels'
+    credit: 'Berger & Le Mens (2009). PNAS, 106(20), 8146-8150.／Image: AI generated'
   - type: diagram
     cut_reason: 【山の形の対比】左『急に上がって急に落ちる』（高く細い山）、右『ゆっくり上下』（低く広い山）を2列で見せる
     from: 4
@@ -897,7 +914,7 @@ scenes:
 
       ② 変わったのは、周りが持っているか
 
-      ③ 人は品質より、他人の選択を見る'
+      ③ 品質より、他人の選択を見る'
   - type: image
     cut_reason: 【板を外す】5個のバッグの手元（S1と同じ）に戻し、見直しの場面へ
     from: 7
