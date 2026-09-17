@@ -1,0 +1,1 @@
+取り込み元: https://github.com/iKora128/stop-ai-slop-jp （commit e09d327、2026-06-11、MIT）。取り込み日 2026-09-17。README の手順どおり <project>/.claude/skills/ に配置（.git は含めない）。更新するときは同じ commit 情報をここに書く。
