@@ -42,12 +42,12 @@ WHITE = (255, 255, 255, 255)
 GOLD = (194, 169, 112, 255)  # design-chic-tone.md の金アクセント #C2A970
 BLACK_STROKE = (10, 10, 10, 255)
 
-TITLE_TOP = "なぜ流行ったのか"
+TITLE_TOP = "めじるしチャームはなぜ流行った？"  # 採用 B（ユーザー指定 2026-09-17。旧「なぜ流行ったのか」）
 
 # (背景ファイル, 下帯の文言, 出力ファイル名, めたんの表情, ずんだもんの表情)
 VARIANTS = [
     ("bg-A.png", "6年前からあった", "thumb-A.png", "explain", "surprised"),
-    ("bg-B.png", "商品は同じだった", "thumb-B.png", "serious", "confused"),
+    ("bg-B.png", "人を惹きつける理由", "thumb-B.png", "serious", "confused"),  # 採用案（ユーザー指定「人を魅きつける理由」→ 常用の「惹」で組版。旧「商品は同じだった」）
     ("bg-C.png", "みんな同じで、私だけ違う", "thumb-C.png", "smile", "thinking"),
 ]
 
