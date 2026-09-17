@@ -1,0 +1,915 @@
+video:
+  title: めじるしアクセサリーはなぜ流行ったのか ― 6 年前からあった商品が今年売り切れた理由（めたん×ずんだもん 紙芝居版）
+  kamishibai:
+    puppet_sink_ratio: 0.12
+  characters:
+  - name: めたん
+    speaker: 四国めたん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/metan
+    side: left
+    subtitle_color: '#E8A0BE'
+    default_expression: normal
+  - name: ずんだもん
+    speaker: ずんだもん
+    sprites_dir: C:/Users/shuya/Projects/assets-kamishibai/sprites/zundamon
+    side: right
+    subtitle_color: '#8FCF7A'
+    default_expression: normal
+  bgm: ../bgm/aozora-ni-kuchibue.mp3
+  bgm_credit: BGM:「青空に口笛」のる（DOVA-SYNDROME）
+  sfx: chic
+scenes:
+- id: 1
+  title: フック（じゃら付けのずんだもん）
+  chapter_title: null
+  narration:
+  - text: めたん、見てほしいのだ。めじるしアクセサリー、5個目なのだ。
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 0.45
+  - text: 傘やバッグに付ける、あの小さなマスコットね。バッグがじゃらじゃら。それ、今朝も並んだの？
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 開店前から並んだのだ。でも、欲しいキャラは出なかったのだ…。
+    speaker: ずんだもん
+    expression: smug
+    pause_after: 0.45
+  - text: それ、6年前からカプセルトイの棚にあったの、知ってる？
+    speaker: めたん
+    expression: normal
+    pause_after: 0.8
+  - text: 6年前？ そんなに前からあったら、僕が知らないはずないのだ。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.35
+  - text: 最初は電車で見かけただけだったのに、気づいたら5個なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 2020年の6月よ。傘の目印として、200円で売られていたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 誰も並んでなかったし、誰も転売しなかった。リングもチャームも、形は今と同じよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 1.0
+  - text: 同じものなのに、なんで今になってみんな欲しがるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 答えは、商品の中にはないのよ。あなたが並んだ理由の方にあるわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.6
+  beats:
+  - type: image
+    cut_reason: 【冒頭】バッグに5個ぶら下がったチャームの手元で開く
+    from: 1
+    slot: 1
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【行列の実写】ガシャポン店前の行列に替え、朝から並んだ様子を示す
+    from: 6
+    slot: 2
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ行列写真を保持したまま20秒超を避けるための継続カット
+    from: 9
+    slot: 3
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【発売当時】傘の持ち手のチャームに替え、6年前の発売時点を示す
+    from: 12
+    slot: 4
+    credit: 'バンダイ公式商品ページ／Image: AI generated'
+    telop: 2020年6月発売・200円
+  - type: image
+    cut_reason: 【保持の分割】同じ傘チャーム写真を保持したまま20秒超を避けるための継続カット
+    from: 16
+    slot: 5
+    credit: 'Image: AI generated'
+- id: 2
+  title: 6 年間に何があったのか
+  chapter_title: 6年間に何があったのか
+  narration:
+  - text: 2020年6月、バンダイが「めじるしアクセサリー サンリオキャラクターズ」を出したの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 値段は200円。公式の商品説明には「憂鬱な梅雨も」と書いてあるわ。傘の目印ね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 傘の目印…。地味な使い道なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 同じ年の10月に第2弾。ここまでは、静かなものだったの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.6
+  - text: 2024年に入ると、お文具といっしょや、ムーミンとのコラボ商品が出てくるわ。値段は300円になった。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: そして2026年5月。マリオのヨッシー版が、メルカリで高値で転売されたの。買い占めで、販売をやめた店も出たわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.6
+  - text: そこから一気に広まったのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.45
+  - text: 6月、10代20代の女性に聞いたトレンド調査で、モノ部門の1位。日経新聞が「売り切れ続出」と書いたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 9月には、あちこちのガシャポン専門店が販売をやめたの。理由は「混雑をやわらげるため」よ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.8
+  - text: 6年で、何が変わったのだ？ 形も使い道も同じで、値段が100円上がっただけなのだ。
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: そう。商品はほとんど変わっていない。いちばん変わったのは、街で見かける数よ。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.6
+  - text: でも、みんなが持ってるなら、みんな同じ理由で欲しくなったはずなのだ。どんな人が買ってるのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.8
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【冒頭】傘の持ち手のチャーム（S1と同じ）を背景に、静かだった発売当時から始める
+    from: 1
+    slot: 1
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ傘チャーム写真を保持したまま20秒超を避けるための継続カット
+    from: 7
+    slot: 2
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ傘チャーム写真を保持したまま、コラボ拡大の事実をテロップで出す
+    from: 9
+    slot: 3
+    credit: 'Image: AI generated'
+    telop: 2024年 コラボ拡大・300円に
+  - type: image
+    cut_reason: 【転売の実写】フリマアプリの画面を見る手元に替え、転売の事実を実写で見せる
+    from: 12
+    slot: 4
+    credit: 'LASISA（2026-05-22）／Photo: V H / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じフリマアプリ写真を保持したまま、トレンド調査の出典をテロップで出す
+    from: 15
+    slot: 5
+    credit: 'マイナビTrepo（2026-06-01）／日本経済新聞（2026-06）／Photo: V H / Pexels'
+    telop: モノ部門1位・売り切れ続出（2026年6月）
+  - type: image
+    cut_reason: 【販売中止の実写】ガシャポン機に貼られた白紙の掲示に替え、混雑緩和での販売中止を示す
+    from: 17
+    slot: 6
+    credit: 'J-CAST（2026-09-15）／Image: AI generated'
+  - type: board
+    cut_reason: 【年表まとめ】板を出し、6年間の年表を4行いっぺんに示す（板だけの区間を10秒以内に収めるため、個別の書き足しではなく完成形を1回で見せる設計に変更。2026-09-17）
+    from: 18
+    telop: 'めじるしアクセサリーの6年
+
+      2020年 発売 → 2024年 拡大
+
+      2026年5-6月 転売・売り切れ
+
+      2026年9月 販売中止'
+  - type: image
+    cut_reason: 【今の街へ】電車内でチャームを付けた乗客の写真に替え、決め文『いちばん変わったのは、街で見かける数よ』を保持したまま間を聞かせる
+    from: 22
+    slot: 7
+    credit: 'バンダイ公式商品ページ／ガシャポン公式／Image: AI generated'
+  readings:
+  - surface: お文具といっしょ
+    reading: オブングトイッショ
+- id: 3
+  title: 誰が付けているのか
+  chapter_title: null
+  narration:
+  - text: 先に言っておくわね。誰が買っているかの公式な数字は、どこからも出ていないの。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: あるのは、10代20代の女性に聞いたランキングだけ。最初から若い女性にしか聞いていないのよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: じゃあ、分からないのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: 分からない。だから、ここからは世間で言われている噂よ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 報道でいちばん多いのは、Z世代の女子中高生のもの、という説。でも根拠は、若い女性だけに聞いた調査よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 若い女性に聞いたら、若い女性が出てくるのは当たり前なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そうなの。次に多いのが、平成のキャラで育った30代40代の大人。「駅のガチャの列に大人が並ぶ」という観察は、いくつも記事に出てくるわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 子どもと一緒に集めるお母さん、好きなキャラのグッズを集める推し活の延長で集める人、という説もあるわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: それから、「めじるしおばさん」。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.45
+  - text: 悪口なのだ？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.6
+  - text: SNSのXで、2026年の9月に集中して使われている言葉よ。朝から店に張り付いて何度も並び直す、買い占める、交換待ちでたむろする。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: そういう人たちを、ほかの客やファンがそう呼んでいるの。30代から50代の女性だと書く人もいれば、「その場にいたのは20代30代だった」と書く人もいるわ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 僕も朝から並んだのだ…。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.8
+  - text: どれも公式の数字の裏付けはなくて、互いに食い違っているの。「若い子のもの」と「おばさんのもの」が、同時に言われている。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 誰が買っているかで説明しようとすると、うまくいかないのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.2
+  - text: 層で決まらないなら、何で決まるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: image
+    cut_reason: 【冒頭】駅ナカのガチャコーナーに並ぶ大人たちで開く
+    from: 1
+    slot: 1
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ駅ナカ写真を保持したまま、調査の出典をテロップで出す（20秒超も回避）
+    from: 4
+    slot: 2
+    credit: 'Image: AI generated'
+    telop: 10〜20代女性1,000人の調査（2026年6月）
+  - type: board
+    cut_reason: 【噂1/3】見出し＋①Z世代の女子中高生を出す
+    from: 8
+    telop: '噂される購入層
+
+      ①Z世代の女子中高生'
+  - type: board
+    cut_reason: 【噂2/3】②30〜40代・推し活層を書き足す（台本の②③を1行に圧縮。board最大4行のため。板だけの区間が10秒超になるのを避けるため①より早く出す）
+    from: 12
+    telop: '噂される購入層
+
+      ①Z世代の女子中高生
+
+      ②30〜40代・推し活層'
+  - type: board
+    cut_reason: 【噂3/3】③『めじるしおばさん』を書き足して4行そろえる
+    from: 15
+    telop: '噂される購入層
+
+      ①Z世代の女子中高生
+
+      ②30〜40代・推し活層
+
+      ③『めじるしおばさん』'
+  - type: image
+    cut_reason: 【板を外す】板を終え、駅ナカ写真に戻す（刺激的な語を長く見せない。2026-09-17コーディネーター指示）
+    from: 19
+    slot: 3
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【S1へ戻す】行列写真（S1と同じ）に戻し、決め文『うまくいかないのよ』まで保持
+    from: 21
+    slot: 4
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ行列写真を保持したまま20秒超を避けるための継続カット
+    from: 23
+    slot: 5
+    credit: 'Image: AI generated'
+  readings:
+  - surface: Z世代
+    reading: ゼットセダイ
+  - surface: X
+    reading: エックス
+  - surface: 推し活
+    reading: オシカツ
+- id: 4
+  title: 人気は何で決まるのか
+  chapter_title: 人気は何で決まるのか
+  narration:
+  - text: それを確かめるために、実験用の音楽サイトを作った人たちがいるの。コロンビア大学のマシュー・サルガニックたち、2006年よ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 1万4千人を集めて、無名のバンドの48曲を聴かせて、気に入ったらダウンロードしてもらう。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 一部の人には、他の人が何回ダウンロードしたかを見せない。残りの人には、見せるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 見せる方は、互いに交わらない8つの「世界」に分けたわ。世界ごとに、ダウンロード数が別々に積み上がるの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.6
+  - text: 同じ48曲を、8つの世界で別々に聴くのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 数字を見せた世界では、人気が一部の曲に集中したわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: しかも、どの曲が上位になるかは、世界ごとにバラバラだったの。同じ曲が、ある世界では上位で、別の世界では下位。
+    speaker: めたん
+    expression: surprised
+    pause_after: 0.45
+  - text: 曲は同じなのに？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.6
+  - text: 曲の良さは、下限と上限を決めるだけだったの。一番良い曲が最下位にはならないし、一番悪い曲が1位にもならない。でも、その間はほぼ運よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 人気は、曲の良さより、先に押した人で決まっていたのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.8
+  - text: めじるしも、それなのだ？ 街でぶら下がってる数が、ダウンロード数なのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そういうこと。他人が選んだ数が見える、というところが同じなの。6年前は街で見かけなかった。今は、電車に乗れば見えるわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: でも、他人が押したからって、なんで自分も押すのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【冒頭】ヘッドホンで音楽を聴く人（ストック）で開く
+    from: 1
+    slot: 1
+    credit: 'Photo: Burst / Pexels'
+  - type: image
+    cut_reason: 【実験の場面】パソコン画面に曲リストが並ぶ生成画像に替え、実験用サイトを示す
+    from: 3
+    slot: 2
+    credit: 'Salganik, Dodds & Watts (2006). Science, 311(5762), 854-856.／Image: AI generated'
+    telop: コロンビア大学 14,341人・48曲（2006）
+  - type: image
+    cut_reason: 【保持の分割】同じパソコン画面の写真を保持したまま20秒超を避けるための継続カット
+    from: 6
+    slot: 3
+    credit: 'Image: AI generated'
+  - type: diagram
+    cut_reason: 【逆転の構造】数字を見せない世界（なだらか）と見せる8世界（順位バラバラ）を2列で対比し、決め文『先に押した人で決まっていたのよ』（間2.5）まで保持する
+    from: 9
+    diagram:
+      type: sketch
+      rows:
+      - - id: hide
+          at: 9
+          icon: visibility_off
+          text: 見せない世界
+          after: 数字を見せた世界では
+        - id: show
+          at: 10
+          icon: visibility
+          text: 見せる8世界
+          after: バラバラだったの
+      - - id: hide_res
+          at: 9
+          icon: trending_flat
+          text: 人気は均等
+          after: 数字を見せた世界では
+        - id: show_res
+          at: 10
+          icon: shuffle
+          text: 順位はバラバラ
+          after: バラバラだったの
+      highlight:
+        ids:
+        - show
+        - show_res
+        at: 16
+        after: 先に押した人で
+      caption:
+        text: 同じ曲でも世界で順位が違う
+        at: 16
+        after: 先に押した人で
+  - type: image
+    cut_reason: 【S2へ戻す】電車の写真（S2と同じ）に戻し、めじるしへの当てはめへつなぐ
+    from: 18
+    slot: 4
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ電車写真を保持したまま20秒超を避けるための継続カット
+    from: 21
+    slot: 5
+    credit: 'Image: AI generated'
+  readings:
+  - surface: 48曲
+    reading: ヨンジュウハッキョク
+- id: 5
+  title: なぜ他人に合わせるのか
+  chapter_title: なぜ他人に合わせるのか
+  narration:
+  - text: 他人の行動は、情報になるからよ。行列の前に立ったときのことを考えてみて。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.6
+  - text: 自分では良し悪しが分からないとき、先に並んだ人を見て決める方が、理にかなっている場面があるの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: これを数式にしたのが、UCLAの3人の経済学者よ。1992年に「情報カスケード」と名づけたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 最初の2人が同じものを選ぶと、3人目からは自分の判断を捨てて、同じものを選ぶ方が得になる。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 2人で、もう決まるのだ？
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.6
+  - text: 計算上はね。判断の材料がほとんど当てにならなくても、10人並べば、行列ができる確率は99.9%を超えるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 行列に並ぶのは、ばかにされがちだけど、材料がないときは賢い選び方なのよ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: じゃあ、材料があるときは並ばないのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 0.45
+  - text: それが、答えが見えていても、人は周りに合わせるのよ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 線の長さを答えるだけの実験があるの。1本の線と同じ長さの線を、3本の中から選ぶ。普通に答えれば、間違える人は1%もいないわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 1955年、スワースモア大学のソロモン・アッシュ教授の実験よ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: そこで、周りの全員がわざと間違った答えを言う状況を作ったのよ。本当の参加者は、1人だけ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.45
+  - text: 見えてる答えなのに？
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.6
+  - text: 123人のうち、4人に3人が、少なくとも一度は間違った答えに合わせたわ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 面白いのは人数よ。わざと間違える相手が1人なら、ほとんど引きずられない。3人になると、3割を超える。それ以上増やしても、ほぼ変わらないの。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 3人いれば十分なのだ。電車で3人が付けてたら…。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: そう。ミーハーは弱さじゃないわ。他人を情報源にするのは、人の標準装備よ。
+    speaker: めたん
+    expression: smile
+    pause_after: 1.8
+  - text: じゃあ僕は、ちいかわが好きで買ったんじゃなくて、周りに釣られただけなのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【冒頭】行列の後ろ姿（ストック）で開く
+    from: 1
+    slot: 1
+    credit: 'Photo: zhang kaiyv / Pexels'
+  - type: image
+    cut_reason: 【保持の分割】同じ行列写真を保持したまま、情報カスケードの出典をテロップで出す
+    from: 5
+    slot: 2
+    credit: 'Bikhchandani, Hirshleifer & Welch (1992). J. Political Economy, 100(5).／Photo: zhang kaiyv / Pexels'
+    telop: UCLA 3人の経済学者（1992）
+  - type: diagram
+    cut_reason: 【カスケードの可視化】先頭から人が同じ選択に点灯していく様を横一列で見せる。行列ができる確率が99.9%を超える点をキャプションで示す
+    from: 9
+    diagram:
+      type: narrative
+      layout: row
+      count: 10
+      icon: person
+      select:
+        at: 9
+        after: 10人並べば
+        lit:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+      caption:
+        text: 10人並べば99.9%超
+        at: 9
+        after: 10人並べば
+  - type: image
+    cut_reason: 【アッシュ実験の場面】机上のカードに縦線が並ぶ実験室の生成画像に替え、線の長さ課題を示す
+    from: 13
+    slot: 3
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ実験室写真を保持したまま、アッシュ実験の出典をテロップで出す
+    from: 16
+    slot: 4
+    credit: 'Asch (1955). Scientific American, 193(5), 31-35.／Image: AI generated'
+    telop: スワースモア大学 123人（1955）
+  - type: image
+    cut_reason: 【保持の分割】同じ実験室写真を保持したまま20秒超を避けるための継続カット
+    from: 18
+    slot: 5
+    credit: 'Image: AI generated'
+  - type: diagram
+    cut_reason: 【誤答率の逆転】相手の人数1〜4人と、引きずられた答えの割合（3.6%/13.6%/31.8%/35.1%）を棒で見せる。3人以降が頭打ちになる点が見どころ（動画で唯一のchart）
+    from: 21
+    diagram:
+      type: chart
+      chart: bar
+      title: 同調した割合
+      unit: '%'
+      source: Asch (1955). Scientific American, 193(5), 31-35.
+      series:
+      - color: accent
+        at: 21
+        after: 面白いのは人数よ
+        points:
+        - label: 1人
+          value: 3.6
+        - label: 2人
+          value: 13.6
+        - label: 3人
+          value: 31.8
+        - label: 4人
+          value: 35.1
+  - type: image
+    cut_reason: 【S2へ戻す】電車の写真（S2と同じ）に戻し、決め文『人の標準装備よ』（間2.5）まで保持
+    from: 26
+    slot: 6
+    credit: 'Image: AI generated'
+  readings:
+  - surface: UCLA
+    reading: ユーシーエルエー
+  - surface: 99.9%
+    reading: キュウジュウキュウテンキュウパーセント
+- id: 6
+  title: なぜ「目印」だったのか
+  chapter_title: なぜ「目印」だったのか
+  narration:
+  - text: 釣られた部分は、たぶんあるわね。でも、釣られるものなら何でもいいわけじゃないの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: めじるしは、自分の持ち物を、他人のものと区別する道具でしょう？
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 傘を間違えないための目印なのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.45
+  - text: なのに、全員が同じものを付けている。おかしいと思わない？
+    speaker: めたん
+    expression: smile
+    pause_after: 0.8
+  - text: 言われてみれば、目印にならないのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.45
+  - text: 欲しくなる理由には、二つの向きがあるの。「他人が買っているから欲しくなる」と、「他人が持っているから欲しくなくなる」。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 名づけたのは、経済学者のハーヴェイ・ライベンシュタイン。1950年よ。前がバンドワゴン効果、後ろがスノッブ効果。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 普通は、どちらかしか満たせない。でも、めじるしは同じブランドの同じ枠の中で、キャラだけが違うの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: みんなと同じでいたい気持ちと、私だけ違っていたい気持ちを、一つで両方満たせるのよ。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.45
+  - text: 僕のちいかわは、僕だけのもの。めじるしは、みんなと同じなのだ！
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 0.45
+  - text: ここは実験で確かめた話じゃなくて、商品を見て私が考えたことだけどね。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.6
+  - text: ただ、逆向きの動きなら研究があるわ。あるリストバンドを着けていた大学生たちの話よ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: 隣の寮の学生が同じものを着け始めた途端、みんな外したの。隣の寮は、周りから「ガリ勉」と見られていたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: ペンシルベニア大学のジョナ・バーガーたちが2008年に調べたの。「あの人たちと同じに見られる」と分かると、人は離れるのよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 「めじるしおばさん」って言葉も…。
+    speaker: ずんだもん
+    expression: surprised
+    pause_after: 0.6
+  - text: そうね。「ブーム、早く終わってほしい」というファンの声もあるわ。同じに見られたくない人が出てきたなら、折り返しが近いのかもしれない。
+    speaker: めたん
+    expression: serious
+    pause_after: 1.5
+  - text: じゃあ、このブームはどうなるのだ？
+    speaker: ずんだもん
+    expression: confused
+    pause_after: 1.2
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【冒頭】傘立てに並ぶ同じ色の傘（ストック）で開く
+    from: 1
+    slot: 1
+    credit: 'Photo: Jan van der Wolf / Pexels'
+  - type: image
+    cut_reason: 【矛盾の提示】同じバッグに違う色のチャームが付いた3人の手元の生成画像に替える
+    from: 5
+    slot: 2
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ写真を保持したまま20秒超を避けるための継続カット
+    from: 8
+    slot: 3
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ写真を保持したまま、命名の出典をテロップで出す
+    from: 12
+    slot: 4
+    credit: 'Leibenstein (1950). Quarterly Journal of Economics, 64(2), 183-207.／Image: AI generated'
+    telop: バンドワゴン効果／スノッブ効果（1950）
+  - type: diagram
+    cut_reason: 【両立の構造】左『みんなと同じ』右『私だけ違う』の2列から、下段『両方満たす』へ収束させる。『商品を見て私が考えたことだけどね』（推論の限定）まで保持する
+    from: 14
+    diagram:
+      type: sketch
+      rows:
+      - - id: same
+          at: 14
+          icon: group
+          text: みんなと同じ
+          after: 同じブランドの同じ枠の中で
+        - id: diff
+          at: 14
+          icon: face
+          text: 私だけ違う
+          after: キャラだけが違うの
+      - - id: both
+          at: 15
+          icon: join_inner
+          value: 300円
+          text: 両方満たす
+          after: 一つで両方満たせるのよ
+        - null
+      arrows:
+      - from: same
+        to: both
+      - from: diff
+        to: both
+      highlight:
+        ids:
+        - both
+        at: 15
+        after: 一つで両方満たせるのよ
+  - type: image
+    cut_reason: 【逆向きの研究】手首にリストバンドを着けた学生たちの生成画像に替える
+    from: 20
+    slot: 5
+    credit: 'Berger & Heath (2008). JPSP, 95(3), 593-607.／Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ写真を保持したまま20秒超を避けるための継続カット
+    from: 22
+    slot: 6
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【S3へ戻す】駅ナカ写真（S3と同じ）に戻し、決め文『折り返しが近いのかもしれない』（間2.0）まで保持
+    from: 25
+    slot: 7
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【保持の分割】同じ駅ナカ写真を保持したまま20秒超を避けるための継続カット
+    from: 27
+    slot: 8
+    credit: 'Image: AI generated'
+- id: 7
+  title: このブームはどうなるのか
+  chapter_title: このブームはどうなるのか
+  narration:
+  - text: 手がかりは、赤ちゃんの名前にあるわ。フランスとアメリカの、100年分の名前のデータを調べた研究があるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: さっきのジョナ・バーガーが、スタンフォード大学のガエル・ル・マンスと2009年に発表したものよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.35
+  - text: 急に人気が上がった名前ほど、そのあとすぐに使われなくなっていたわ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: これから親になる人は、直近で急に増えた名前を避けていたの。「一時の流行に見える」からよ。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 早く広まったものは、早く消えるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.6
+  - text: 名前の話だから、めじるしがそうなると決まったわけじゃないわ。でも、転売、買い占め、販売中止は、一気に上がった印よ。
+    speaker: めたん
+    expression: serious
+    pause_after: 0.35
+  - text: みんなが持っているから欲しかったものは、みんなが持たなくなったら、欲しくなくなるの。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: 自分の推しだから持っているものは、そのまま残るわ。
+    speaker: めたん
+    expression: smile
+    pause_after: 2.0
+  - text: 僕のは、どっちなのだ…。
+    speaker: ずんだもん
+    expression: sad
+    pause_after: 0.8
+  beats:
+  - type: chapter
+    cut_reason: 【章の入口】黒板に問いを書いて本題へ
+  - type: image
+    cut_reason: 【冒頭】赤ちゃんの名前を考える手元（ストック）で開く
+    from: 1
+    slot: 1
+    credit: 'Berger & Le Mens (2009). PNAS, 106(20), 8146-8150.／Photo: Artem Podrez / Pexels'
+  - type: diagram
+    cut_reason: 【山の形の対比】左『急に上がって急に落ちる』（高く細い山）、右『ゆっくり上下』（低く広い山）を2列で見せる
+    from: 4
+    diagram:
+      type: sketch
+      rows:
+      - - id: fast
+          at: 4
+          icon: trending_up
+          text: 急に上がり急落
+          after: 急に人気が上がった名前ほど
+        - id: slow
+          at: 5
+          icon: trending_flat
+          text: ゆっくり上下
+          after: 避けていたの
+      caption:
+        text: 山が高いほど早く沈む
+        at: 5
+        after: 避けていたの
+  - type: image
+    cut_reason: 【S2へ戻す】白紙掲示の写真（S2と同じ）に戻し、めじるしの現状を重ねる
+    from: 9
+    slot: 2
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【S1へ戻す】5個のバッグの手元（S1と同じ）に戻し、決め文『そのまま残るわ』（間2.5）まで保持
+    from: 11
+    slot: 3
+    credit: 'Image: AI generated'
+  readings:
+  - surface: ル・マンス
+    reading: ルマンス
+- id: 8
+  title: 結び（商品は同じ、変わったのは周り）
+  chapter_title: null
+  narration:
+  - text: それで、6年前と今で何が違ったか。商品はほとんど同じで、周りが持っているかどうかが違ったの。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.35
+  - text: 人は品質より、他人の選択を見て買う。誰にでもあることよ。
+    speaker: めたん
+    expression: explain
+    pause_after: 0.35
+  - text: めじるしは、そこに一番うまくはまった商品だったの。みんなと同じで、自分だけ違う。
+    speaker: めたん
+    expression: normal
+    pause_after: 0.45
+  - text: 僕のバッグの5個、見直してみるのだ。
+    speaker: ずんだもん
+    expression: thinking
+    pause_after: 0.6
+  - text: 転売で買ったのは、外すのだ。並んで出なかったのも、もう追わないのだ。
+    speaker: ずんだもん
+    expression: normal
+    pause_after: 0.35
+  - text: 本当に好きなのは、このちいかわ1個なのだ。これだけ残すのだ。
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 1.2
+  - text: それなら、6年後も付けていられるわ。頑張って、ずんだもん。
+    speaker: めたん
+    expression: smile
+    pause_after: 0.6
+  - text: 傘の目印にもなるのだ！
+    speaker: ずんだもん
+    expression: delighted
+    pause_after: 2.0
+  beats:
+  - type: board
+    cut_reason: 【結び1/3】見出しのみを出す
+    from: 1
+    telop: なぜ流行ったのか
+  - type: board
+    cut_reason: 【結び2/3】①②を書き足す（1文に両方の事実が含まれるため同時に出す）
+    from: 2
+    telop: 'なぜ流行ったのか
+
+      ① 商品は6年間ほぼ同じ
+
+      ② 変わったのは、周りが持っているか'
+  - type: board
+    cut_reason: 【結び3/3】③を書き足して4行そろえる
+    from: 3
+    telop: 'なぜ流行ったのか
+
+      ① 商品は6年間ほぼ同じ
+
+      ② 変わったのは、周りが持っているか
+
+      ③ 人は品質より、他人の選択を見る'
+  - type: image
+    cut_reason: 【板を外す】5個のバッグの手元（S1と同じ）に戻し、見直しの場面へ
+    from: 7
+    slot: 1
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【1個だけに】チャーム1個だけのバッグの生成画像に替え、本当に好きな1個だけが残る様子を示す
+    from: 11
+    slot: 2
+    credit: 'Image: AI generated'
+  - type: image
+    cut_reason: 【象徴的な最後の一枚】傘の持ち手のチャーム（S1と同じ）で終え、アウトロへつなぐ
+    from: 14
+    slot: 3
+    credit: 'Image: AI generated'

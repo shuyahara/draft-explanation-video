@@ -31,7 +31,26 @@ SOURCE_LIST_RE = re.compile(r"^##\s*出典リスト")
 DIALOGUE_RE = re.compile(r"^\*\*(めたん|ずんだもん)\*\*（([^）]+)）:\s*(.*)$")
 PAUSE_MARK_RE = re.compile(r"(.*?)\s*（間\s*([\d.]+)）\s*$")
 # 「」の後ろに補足（採用理由など）を書いた行も拾えるよう、末尾は固定しない（2026-09-12）。
-CHAPTER_CARD_RE = re.compile(r"^-\s*章カード[:：]\s*「(.+?)」")
+CHAPTER_CARD_PREFIX_RE = re.compile(r"^-\s*章カード[:：]\s*「")
+
+
+def extract_chapter_title(line: str) -> str | None:
+    """章カード行から「」内を取り出す（括弧の入れ子に対応。2026-09-17: 「なぜ「目印」だったのか」
+    のようなタイトル自身が「」を含む場合、非貪欲の単純な正規表現だと最初の」で打ち切ってしまう
+    ため、深さを数えて対応する閉じ括弧まで取る）。"""
+    m = CHAPTER_CARD_PREFIX_RE.match(line)
+    if not m:
+        return None
+    body = line[m.end():]
+    depth = 1
+    for i, ch in enumerate(body):
+        if ch == "「":
+            depth += 1
+        elif ch == "」":
+            depth -= 1
+            if depth == 0:
+                return body[:i]
+    return None
 
 # キャラクター定義（Issue #23 / タスク指示のとおり固定）
 CHARACTERS = [
@@ -157,9 +176,9 @@ def parse_markdown(md_path: Path):
 
         chapter_title = None
         for l in screen_lines:
-            m = CHAPTER_CARD_RE.match(l.strip())
-            if m:
-                chapter_title = m.group(1)
+            t = extract_chapter_title(l.strip())
+            if t is not None:
+                chapter_title = t
                 break
 
         scenes.append(
